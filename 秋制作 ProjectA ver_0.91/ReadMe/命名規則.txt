@@ -1,0 +1,33 @@
+﻿@関数名
+アッパーキャメル
+GetInput
+
+@引数
+佐藤先生ケース
+inx_
+
+@ローカル変数
+キャメルケース
+getInput
+
+@グローバル変数
+g_Input
+
+@メンバ変数
+m_Input
+
+@enum
+大文字＋スネークケース
+GET_INPUT
+
+@定数
+大文字＋スネークケース
+GET_INPUT
+
+@bool型のゲッター
+IsInput
+
+@構造体名、クラス名
+アッパーキャメル
+class HogeHoge
+struct HogeHoge

@@ -1,0 +1,18 @@
+#ifndef ROOMID_H_
+#define ROOMID_H_
+
+enum RoomID {
+
+	SPAWN_ROOM,
+	CENTER_DUCT,
+	RIGHT_DUCT,
+	LEFT_DUCT,
+	PLAYER_ROOM,
+	RIGHT_ROOM,
+	LEFT_ROOM,
+
+
+};
+
+
+#endif
