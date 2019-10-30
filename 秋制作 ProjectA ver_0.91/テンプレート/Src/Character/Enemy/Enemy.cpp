@@ -31,6 +31,7 @@ void Enemy::Init()
 {
 	m_FrameCount = 0; 
 	m_IsDeath = true;
+	m_IsPlayerKill = false;
 }
 
 void Enemy::Update()
