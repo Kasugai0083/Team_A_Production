@@ -26,7 +26,7 @@ public:
 private:
 	void Release();
 
-	Object* m_Objects[object::MAX_UI_NUM];
+	Object* m_Objects[object::MAX_OBJECT_NUM];
 };
 
 ObjectManager* UIManager();
