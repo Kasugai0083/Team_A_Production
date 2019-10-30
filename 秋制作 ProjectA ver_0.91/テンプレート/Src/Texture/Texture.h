@@ -22,6 +22,18 @@ enum TitleCategoryTextureList
 enum GameCategoryTextureList
 {
 	GameMaskTex,				//!< 背景
+	
+	//item
+	GameCandleBigTex,
+	GameCandleSmallTex,
+	GameCandleStandTex,
+	GameCandleEffectTex,
+	GameFireBigTex,
+	GameFireSmallTex,
+	GameCrystalTex,
+	GameMaskTex,
+	GameMusicBoxTex,
+
 	GameTextureMax,			//!< リスト最大数
 };
 
@@ -40,6 +52,8 @@ enum CenterCategoryTextureList {
 	GameCircle7Tex,
 	GameCircle8Tex,
 	
+
+
 	GameCenterTextureMax,			//!< リスト最大数
 };
 

@@ -5,6 +5,7 @@
 #include "../../Utility/Size.h"
 #include "../../Texture/Texture.h"
 #include "../Object.h"
+#include "ItemValue.h"
 
 class Item : public Object {
 public:
@@ -12,9 +13,9 @@ public:
 	Item();
 	~Item();
 
-	void Init();
-	void Update();
-	bool HasOnMouse();
+	void Draw()override;
+	void Update()override;
+	bool HasOnMouse()override;
 
 protected:
 	Texture* m_Tex;
