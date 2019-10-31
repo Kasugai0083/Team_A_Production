@@ -74,6 +74,7 @@ void MainRightScene()
 	TransButton()->GameEnd();
 
 	g_Manager.Update();
+	ObjManager()->Update();
 
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 
