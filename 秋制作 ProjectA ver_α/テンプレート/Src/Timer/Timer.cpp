@@ -1,7 +1,9 @@
 #include "Timer.h"
 
-static Timer g_Timer;
-Timer* TimerFunc() { return &g_Timer; };
+Timer* TimerFunc() { 
+	static Timer g_Timer;
+	return &g_Timer; 
+};
 
 void Timer::Init() {
 	Timers.m_Scene = 0;
