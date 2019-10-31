@@ -111,6 +111,8 @@ void InitMonitorScene()
 
 void MainMonitorScene()
 {
+	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
+
 
 	ObjManager()->Update();
 
@@ -148,6 +150,10 @@ void MainMonitorScene()
 			TransButton()->Change(SceneTransition::Id::Center, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
+	}
+	if (tmp_player->IsDeath() == true) {
+		TransButton()->Change(SceneTransition::Id::Clear, true);
+		ChangeSceneStep(SceneStep::EndStep);
 	}
 }
 

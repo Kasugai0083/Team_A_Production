@@ -63,8 +63,10 @@ void InitLeftScene()
 
 void MainLeftScene()
 {
+	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
 
 	TimerFunc()->Update(Timer::Id::Scene);
+	TimerFunc()->Update(Timer::Id::MusicBox);
 
 	TransButton()->GameEnd();
 
@@ -76,6 +78,10 @@ void MainLeftScene()
 			TransButton()->Change(SceneTransition::Id::Center, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
+	}
+	if (tmp_player->IsDeath() == true) {
+		TransButton()->Change(SceneTransition::Id::Clear, true);
+		ChangeSceneStep(SceneStep::EndStep);
 	}
 }
 
