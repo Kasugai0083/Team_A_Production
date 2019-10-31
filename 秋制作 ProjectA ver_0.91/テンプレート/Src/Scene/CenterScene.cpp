@@ -8,7 +8,7 @@
 #include "../Character/Enemy/Enemy.h"
 #include "..//Timer/Timer.h"
 #include "../Character/CharacterManager.h"
-
+#include "../Object/ObjectManager.h"
 
 // ゲーム本編シーンの初期化
 void InitCenterScene();
@@ -102,12 +102,26 @@ SceneId UpdateCenterScene()
 	return SceneId::CenterScene;
 }
 
+void DrawCenterItem() {
+	//キャンドル
+	ObjManager()->Draw(object::CANDLE_SMALL);
+	ObjManager()->Draw(object::FIRE_SMALL);
+	ObjManager()->Draw(object::CANDLE_STAND);
+	ObjManager()->Draw(object::CANDLE_EFFECT);
+
+	//プレイヤーのアイテム
+	ObjManager()->Draw(object::CRYSTAL);
+	ObjManager()->Draw(object::MUSICBOX);
+
+}
+
 //シーンのメイン処理
 void DrawCenterScene()
 {
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
 
+	DrawCenterItem();
 
 	DrawCircle();
 	g_Manager.Draw();
@@ -117,6 +131,8 @@ void DrawCenterScene()
 void InitCenterScene()
 {
 	TimerFunc()->Set(0 ,Timer::Id::Scene);
+
+	ObjManager()->Init();
 
 	LoadCircle();
 
@@ -139,6 +155,7 @@ void MainCenterScene()
 	TransButton()->GameEnd();
 	
 	g_Manager.Update();
+	ObjManager()->Update();
 
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 		
@@ -170,15 +187,15 @@ SceneId FinishCenterScene()
 		TransButton()->Change(SceneTransition::Id::Clear, false);
 		return SceneId::ClearScene;
 	}	
-	if (TransButton()->Research(SceneTransition::Id::Left) == true) {
+	else if (TransButton()->Research(SceneTransition::Id::Left) == true) {
 		TransButton()->Change(SceneTransition::Id::Left, false);
 		return SceneId::LeftScene;
 	}
-	if (TransButton()->Research(SceneTransition::Id::Right) == true) {
+	else if (TransButton()->Research(SceneTransition::Id::Right) == true) {
 		TransButton()->Change(SceneTransition::Id::Right, false);
 		return SceneId::RightScene;
 	}
-	if (TransButton()->Research(SceneTransition::Id::Monitor) == true) {
+	else if (TransButton()->Research(SceneTransition::Id::Monitor) == true) {
 		TransButton()->Change(SceneTransition::Id::Monitor, false);
 		return SceneId::MonitorScene;
 	}

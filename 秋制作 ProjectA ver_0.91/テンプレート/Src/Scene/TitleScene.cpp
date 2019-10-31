@@ -48,9 +48,9 @@ void DrawTitleScene()
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex));
 
-	UIManager()->Draw(object::TITLE_LOGO);
-	UIManager()->Draw(object::NEW_GAME);
-	UIManager()->Draw(object::CONTINUE);
+	ObjManager()->Draw(object::TITLE_LOGO);
+	ObjManager()->Draw(object::NEW_GAME);
+	ObjManager()->Draw(object::CONTINUE);
 
 	//UIの描画
 	//UIFunc(UI::Id::TitleLogo)->Draw();
@@ -62,7 +62,7 @@ void DrawTitleScene()
 void InitTitleScene()
 {
 	TimerFunc()->Init();
-	UIManager()->Init();
+	ObjManager()->Init();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
 
@@ -73,7 +73,7 @@ void MainTitleScene()
 {
 	TransButton()->GameEnd();
 
-	UIManager()->Update();
+	ObjManager()->Update();
 
 	//UIFunc(UI::Id::TitleLogo)->Update();
 	//UIFunc(UI::Id::NewGame)->Update();
@@ -85,7 +85,7 @@ void MainTitleScene()
 	//	}
 	//}
 
-	if (UIManager()->HasOnMouse(object::NEW_GAME) == true) {
+	if (ObjManager()->HasOnMouse(object::NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
 			ChangeSceneStep(SceneStep::EndStep);
 		}

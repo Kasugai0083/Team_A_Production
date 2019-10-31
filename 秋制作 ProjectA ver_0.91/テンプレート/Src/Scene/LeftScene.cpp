@@ -7,7 +7,7 @@
 #include "../Character/Enemy/Enemy.h"
 #include "..//Timer/Timer.h"
 #include "../Character/CharacterManager.h"
-
+#include "../Object/ObjectManager.h"
 
 // ゲーム本編シーンの初期化
 void InitLeftScene();
@@ -34,9 +34,18 @@ SceneId UpdateLeftScene()
 	return SceneId::LeftScene;
 }
 
+void DrawLeftItem() {
+	ObjManager()->Draw(object::CANDLE_BIG);
+	ObjManager()->Draw(object::FIRE_BIG);
+	ObjManager()->Draw(object::CANDLE_STAND);
+	ObjManager()->Draw(object::CANDLE_EFFECT);
+}
+
 void DrawLeftScene()
 {
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
+
+	DrawLeftItem();
 
 	g_Manager.Draw();
 }

@@ -7,6 +7,7 @@
 #include "../Character/Enemy/Enemy.h"
 #include "..//Timer/Timer.h"
 #include "../Character/CharacterManager.h"
+#include "../Object/ObjectManager.h"
 
 
 // ゲーム本編シーンの初期化
@@ -34,11 +35,20 @@ SceneId UpdateRightScene()
 	return SceneId::RightScene;
 }
 
+void DrawRightItem() {
+	ObjManager()->Draw(object::CANDLE_BIG);
+	ObjManager()->Draw(object::FIRE_BIG);
+	ObjManager()->Draw(object::CANDLE_STAND);
+	ObjManager()->Draw(object::CANDLE_EFFECT);
+}
+
 void DrawRightScene()
 {
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
 	
+	DrawRightItem();
+
 	g_Manager.Draw();
 
 }
