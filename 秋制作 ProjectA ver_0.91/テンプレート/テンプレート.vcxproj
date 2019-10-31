@@ -181,7 +181,6 @@
     <ClInclude Include="Src\Engine\Sound.h" />
     <ClInclude Include="Src\Engine\Window.h" />
     <ClInclude Include="Src\Object\Item\Id\Candle.h" />
-    <ClInclude Include="Src\Object\Item\Id\CandleBig.h" />
     <ClInclude Include="Src\Object\Item\Id\Fire.h" />
     <ClInclude Include="Src\Object\Item\Id\PlayerItem.h" />
     <ClInclude Include="Src\Object\Item\Item.h" />

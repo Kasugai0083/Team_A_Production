@@ -259,9 +259,6 @@
     <ClInclude Include="Src\Object\Item\Id\Candle.h">
       <Filter>ソース ファイル\Object\Item\Id</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Object\Item\Id\CandleBig.h">
-      <Filter>ソース ファイル\Object\Item\Id</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Object\Item\Id\Fire.h">
       <Filter>ソース ファイル\Object\Item\Id</Filter>
     </ClInclude>
