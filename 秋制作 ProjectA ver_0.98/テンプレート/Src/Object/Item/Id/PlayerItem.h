@@ -105,7 +105,7 @@ private:
 
 	}
 
-	const float MB_Pos_Adjustment_X = 50.0f;
+	const float MB_Pos_Adjustment_X = 15.0f;
 	const float MB_Pos_Adjustment_Y = 100.0f;
 
 	void DrawCircle() {
