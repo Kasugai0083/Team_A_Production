@@ -20,8 +20,5 @@ public:
 	virtual void Draw() {};
 
 protected:
-	Texture* m_Tex;
-	bool m_OnMouse;
-	Vec2 m_Pos;
-	Size m_Size;
+
 };

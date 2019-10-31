@@ -11,7 +11,7 @@ public:
 
 		m_Pos = CANDLE_BIG_POS;
 		m_Size = CANDLE_BIG_SIZE;
-		LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
+		LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 
 		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 
@@ -20,7 +20,7 @@ public:
 	void Init(Vec2 pos_) override{
 		m_Pos = pos_;
 		m_Size = CANDLE_BIG_SIZE;
-		LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
+		LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 	}
 
@@ -35,14 +35,14 @@ public:
 
 		m_Pos = CANDLE_SMALL_POS;
 		m_Size = CANDLE_SMALL_SIZE;
-		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
+		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
 
 	};
 	void Init(Vec2 pos_) override {
 		m_Pos = pos_;
 		m_Size = CANDLE_SMALL_SIZE;
-		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
+		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
 	}
 

@@ -128,14 +128,14 @@
     <ClCompile Include="Src\Object\UI\UI.cpp">
       <Filter>ソース ファイル\Object\UI</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Object\Item\Item.cpp">
-      <Filter>ソース ファイル\Object\Item</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Object\ObjectManager.cpp">
       <Filter>ソース ファイル\Object</Filter>
     </ClCompile>
     <ClCompile Include="Src\Object\ObjectID.h">
       <Filter>ソース ファイル\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Object\Item\Item.cpp">
+      <Filter>ソース ファイル\Object\Item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
