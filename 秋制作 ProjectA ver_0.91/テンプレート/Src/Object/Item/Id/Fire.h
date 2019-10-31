@@ -15,6 +15,12 @@ public:
 		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
 
 	};
+	void Init(Vec2 pos_) override {
+		m_Pos = pos_;
+		m_Size = FIRE_BIG_SIZE;
+		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+	}
 
 private:
 
@@ -31,6 +37,13 @@ public:
 		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
 
 	};
+	void Init(Vec2 pos_) override {
+		m_Pos = pos_;
+		m_Size = FIRE_SMALL_SIZE;
+		LoadTexture("Res/Game/Item/Candle_Fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+	}
+
 
 private:
 

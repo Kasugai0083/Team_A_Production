@@ -12,6 +12,7 @@ public:
 	~ObjectManager();
 
 	void Init();
+	void Init(object::ObjectId id_, Vec2 pos_);
 
 	void Update();
 
@@ -19,9 +20,9 @@ public:
 		return m_Objects[id];
 	}
 
-	void Draw(object::UserInterfaceId id);
+	void Draw(object::ObjectId id);
 
-	bool HasOnMouse(object::UserInterfaceId id);
+	bool HasOnMouse(object::ObjectId id);
 
 private:
 	void Release();
@@ -29,5 +30,5 @@ private:
 	Object* m_Objects[object::MAX_OBJECT_NUM];
 };
 
-ObjectManager* UIManager();
+ObjectManager* ObjManager();
 

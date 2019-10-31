@@ -41,13 +41,8 @@ const Vec2 CRYSTAL_POS = { 0.f,0.f };
 const Size CRYSTAL_SIZE = { 181.f,174.f };
 const Size CRYSTAL_FRAME = { 256.f,256.f };
 
-//マスク
-const Vec2 MASK_POS = { 0.f,0.f };
-const Size MASK_SIZE = { 166.f,110.f };
-const Size MASK_FRAME = { 256.f,256.f };
-
 //オルゴール
-const Vec2 MUSICBOX_POS = { 0.f,0.f };
+const Vec2 MUSICBOX_POS = { 1140.f,920.f };
 const Size MUSICBOX_SIZE = { 99.f,99.f };
 const Size MUSICBOX_FRAME = { 128.f,128.f };
 

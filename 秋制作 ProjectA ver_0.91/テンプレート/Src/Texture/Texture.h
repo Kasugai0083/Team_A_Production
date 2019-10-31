@@ -31,7 +31,6 @@ enum GameCategoryTextureList
 	GameFireBigTex,
 	GameFireSmallTex,
 	GameCrystalTex,
-	GameMaskTex,
 	GameMusicBoxTex,
 
 	GameTextureMax,			//!< リスト最大数

@@ -12,6 +12,8 @@ public:
 	~Object() {};
 
 	virtual void Init() = 0;
+	virtual void Init(Vec2 pos_) {};
+
 	virtual void Update() = 0;
 	virtual bool HasOnMouse() = 0;
 	
