@@ -24,8 +24,6 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		return 0;
 	}
 
-
-
 	while (TransButton()->Research(SceneTransition::Id::Finish) == false)
 	{
 		bool message_ret = false;
@@ -43,10 +41,12 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			{
 				TranslateMessage(&msg);
 				DispatchMessage(&msg);
+
 			}
 		}
 		else
 		{
+
 			UpdateScene();
 
 		}

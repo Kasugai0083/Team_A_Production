@@ -95,6 +95,8 @@ void UpdateKey()
 
 	// キーボードデバイスのゲッター
 	hr = g_pKeyDevice->GetDeviceState(256, KeyState);
+
+	//キーボード情報の再取得
 	if (FAILED(hr)) {
 		g_pKeyDevice->Acquire();
 		hr = g_pKeyDevice->GetDeviceState(256, KeyState);

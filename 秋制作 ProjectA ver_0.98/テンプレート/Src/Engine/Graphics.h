@@ -126,7 +126,6 @@ void PlayerDrawTexture(float x, float y, float rotate, Texture* texture_data);
 //spriteNumX,spriteNumY => 切り抜きたい画像の座標
 void DrawIntegratedTexture(float x, float y, Texture* texture_data, float tu, float tv, float spriteX, float spriteY, int spriteNumX, int spriteNumY);
 
-
 //↓松本さんの関数↓//
 
 
