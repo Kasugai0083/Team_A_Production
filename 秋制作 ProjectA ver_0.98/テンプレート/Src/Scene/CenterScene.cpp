@@ -17,72 +17,6 @@ void MainCenterScene();
 // ゲーム本編シーンの終了
 SceneId FinishCenterScene();
 
-#pragma region シーン中に使用する関数群
-
-const float MusicBox_X1 = 1140.0f;
-const float MusicBox_X2 = 1300.0f;
-const float MusicBox_Y1 = 920.0f;
-const float MusicBox_Y2 = 1080.0f;
-
-void MusicBoxHit() {
-
-	bool CountDown = false;
-
-	if (RectangleHit(GetMousePos().X, GetMousePos().Y, MusicBox_X1, MusicBox_Y1, MusicBox_X2, MusicBox_Y2) == true) {
-		if (OnMousePush(Left) == true) {
-			TimerFunc()->CountDown(Timer::Id::MusicBox);
-			CountDown = true;
-		}
-		else { CountDown = false; }
-	}
-	else { CountDown = false; }
-
-	if (CountDown == false) {
-		TimerFunc()->Update(Timer::Id::MusicBox);
-	}
-}
-
-void LoadCircle() {
-	LoadTexture("Res/Game/Center/Circle/Circle1.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle1Tex);
-	LoadTexture("Res/Game/Center/Circle/Circle2.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle2Tex);
-	LoadTexture("Res/Game/Center/Circle/Circle3.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle3Tex);
-	LoadTexture("Res/Game/Center/Circle/Circle4.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle4Tex);
-	LoadTexture("Res/Game/Center/Circle/Circle5.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle5Tex);
-	LoadTexture("Res/Game/Center/Circle/Circle6.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle6Tex);
-	LoadTexture("Res/Game/Center/Circle/Circle7.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle7Tex);
-	LoadTexture("Res/Game/Center/Circle/Circle8.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle8Tex);
-
-}
-
-const float MB_Pos_Adjustment_X = 50.0f;
-const float MB_Pos_Adjustment_Y = 100.0f;
-
-void DrawCircle() {
-
-	if (TimerFunc()->Get(Timer::Id::MusicBox) <= 100) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle1Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 200) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle2Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 300) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle3Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 400) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle4Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 500) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle5Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 600) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle6Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 700) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle7Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 800) {
-		DrawTexture((MusicBox_X1 + MB_Pos_Adjustment_X), (MusicBox_Y1 - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle8Tex));
-	}else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 900) {
-	}
-
-}
-
-//ここまで
-#pragma endregion
-
 //シーン遷移
 SceneId UpdateCenterScene()
 {
@@ -123,7 +57,6 @@ void DrawCenterScene()
 
 	DrawCenterItem();
 
-	DrawCircle();
 	g_Manager.Draw();
 
 }
@@ -133,8 +66,6 @@ void InitCenterScene()
 	TimerFunc()->Set(0 ,Timer::Id::Scene);
 
 	ObjManager()->Init();
-
-	LoadCircle();
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 
@@ -146,8 +77,6 @@ void InitCenterScene()
 void MainCenterScene()
 {
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
-
-	MusicBoxHit();
 
 	TimerFunc()->Update(Timer::Id::Scene);
 	TimerFunc()->Update(Timer::Id::Clear);

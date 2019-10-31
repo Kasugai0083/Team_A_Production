@@ -14,7 +14,7 @@ public:
 	virtual void Init() = 0;
 	virtual void Init(Vec2 pos_) {};
 
-	virtual void Update() = 0;
+	virtual void Update() {};
 	virtual bool HasOnMouse() = 0;
 	
 	virtual void Draw() {};
