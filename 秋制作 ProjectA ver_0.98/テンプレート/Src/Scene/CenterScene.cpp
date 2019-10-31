@@ -166,12 +166,12 @@ void MainCenterScene()
 
 	}
 	if (TimerFunc()->Get(Timer::Id::Clear) >= CLEAR_TIME) {
-		if(tmp_player->GetIsDeath() == false){
+		if(tmp_player->IsDeath() == false){
 			TransButton()->Change(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
-	if (tmp_player->GetIsDeath() == true) {
+	if (tmp_player->IsDeath() == true) {
 		TransButton()->Change(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}

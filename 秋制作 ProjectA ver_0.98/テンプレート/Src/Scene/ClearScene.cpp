@@ -36,7 +36,7 @@ SceneId UpdateClearScene()
 void DrawClearScene()
 {
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
-	if (tmp_player->GetIsDeath() == true) {
+	if (tmp_player->IsDeath() == true) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex));
 	}
 	else {

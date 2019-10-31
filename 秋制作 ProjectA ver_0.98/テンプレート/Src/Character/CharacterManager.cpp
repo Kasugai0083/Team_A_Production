@@ -2,18 +2,24 @@
 #include "Player/Player.h"
 #include "Enemy/Enemy.h"
 #include "CharacterID.h"
+#include "Enemy/Id/Bonnie.h"
+#include "Enemy/Id/Chica.h"
+#include "Enemy/Id/Foxy.h"
+#include "Enemy/Id/Freddy.h"
+#include "Enemy/Id/G_Freddy.h"
+#include "Enemy/Id/Puppet.h"
 
 CharacterManager g_Manager;
 
 CharacterManager::CharacterManager() {
 	m_Charas[PLAYER] = new Player;	//アルファ
 
-	m_Charas[FREDDY] = new Enemy(FREDDY);		//アルファ
-	m_Charas[BONNIE] = new Enemy(BONNIE);
-	m_Charas[CHICA]  = new Enemy(CHICA);		//アルファ
-	m_Charas[FOXY]   = new Enemy(FOXY);
-	m_Charas[G_FREDDY] = new Enemy(G_FREDDY);
-	m_Charas[PUPPET] = new Enemy(PUPPET);		//アルファ
+	m_Charas[FREDDY] = new Freddy;		//アルファ
+	m_Charas[BONNIE] = new Bonnie;
+	m_Charas[CHICA]  = new Chica;		//アルファ
+	m_Charas[FOXY]   = new Foxy;
+	m_Charas[G_FREDDY] = new G_Freddy;
+	m_Charas[PUPPET] = new Puppet;		//アルファ
 }
 
 CharacterManager::~CharacterManager() {
@@ -59,7 +65,7 @@ void CharacterManager::LoadTex(SceneId id) {
 
 bool CharacterManager::RefKill() {
 	for (int i = 0; i < ENEMY_NUM; i++) {
-		if (m_Charas[i]->GetIsKill() == true) {
+		if (m_Charas[i]->HasKill() == true) {
 			return true;
 		}
 	}

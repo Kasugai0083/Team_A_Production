@@ -18,18 +18,18 @@ public:
 
 	void Draw()override;
 
-	bool GetIsLight() override{
+	bool HasLight() override{
 		return m_IsLight;
 	}
 
-	bool GetIsMask()override{
+	bool HasMask()override{
 		return m_IsMask;
 	}
 
-	bool GetIsMonitor()override{
+	bool HasMonitor()override{
 		return m_IsMonitor;
 	}
-	bool GetIsDeath()override { return m_IsDeath; };
+	bool IsDeath()override { return m_IsDeath; };
 	void OnMask();
 
 

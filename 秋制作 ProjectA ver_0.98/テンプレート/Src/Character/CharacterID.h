@@ -18,8 +18,4 @@ enum CharacterID {
 
 };
 
-//enum CharacterNum{
-//	ENEMY_NUM = PLAYER
-//};
-
 #endif

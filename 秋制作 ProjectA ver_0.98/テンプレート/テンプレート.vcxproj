@@ -139,9 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Src\Character\Character.cpp" />
     <ClCompile Include="Src\Character\CharacterManager.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Enemy.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Bonnie.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Chica.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Foxy.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Freddy.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\G_Freddy.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Puppet.cpp" />
     <ClCompile Include="Src\Character\Player\Player.cpp" />
     <ClCompile Include="Src\Engine\Engine.cpp" />
     <ClCompile Include="Src\Engine\Graphics.cpp" />
@@ -172,6 +176,12 @@
     <ClInclude Include="Src\Character\CharacterID.h" />
     <ClInclude Include="Src\Character\CharacterManager.h" />
     <ClInclude Include="Src\Character\Enemy\Enemy.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Bonnie.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Chica.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Foxy.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Freddy.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\G_Freddy.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Puppet.h" />
     <ClInclude Include="Src\Character\Player\Player.h" />
     <ClInclude Include="Src\Engine\Engine.h" />
     <ClInclude Include="Src\Engine\Graphics.h" />

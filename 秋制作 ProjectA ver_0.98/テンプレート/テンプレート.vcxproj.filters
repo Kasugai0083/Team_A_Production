@@ -54,6 +54,9 @@
     <Filter Include="ソース ファイル\Object\Item\Id">
       <UniqueIdentifier>{a3183703-2a6d-4ad2-8086-6ea7765069a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Character\Enemy\Id">
+      <UniqueIdentifier>{3ab8e495-2ed6-4793-93dc-6de56a2efa31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Engine\Engine.cpp">
@@ -101,14 +104,8 @@
     <ClCompile Include="Src\Timer\Timer.cpp">
       <Filter>ソース ファイル\Timer</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Character\Character.cpp">
-      <Filter>ソース ファイル\Character</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Character\CharacterManager.cpp">
       <Filter>ソース ファイル\Character</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Character\Enemy\Enemy.cpp">
-      <Filter>ソース ファイル\Character\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Src\Character\Player\Player.cpp">
       <Filter>ソース ファイル\Character\Player</Filter>
@@ -136,6 +133,24 @@
     </ClCompile>
     <ClCompile Include="Src\Object\Item\Item.cpp">
       <Filter>ソース ファイル\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Character\Enemy\Id\Bonnie.cpp">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Character\Enemy\Id\Chica.cpp">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Character\Enemy\Id\Foxy.cpp">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Character\Enemy\Id\Freddy.cpp">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Character\Enemy\Id\G_Freddy.cpp">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Character\Enemy\Id\Puppet.cpp">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -264,6 +279,24 @@
     </ClInclude>
     <ClInclude Include="Src\Object\Item\Id\PlayerItem.h">
       <Filter>ソース ファイル\Object\Item\Id</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Character\Enemy\Id\Bonnie.h">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Character\Enemy\Id\Chica.h">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Character\Enemy\Id\Foxy.h">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Character\Enemy\Id\Freddy.h">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Character\Enemy\Id\G_Freddy.h">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Character\Enemy\Id\Puppet.h">
+      <Filter>ソース ファイル\Character\Enemy\Id</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

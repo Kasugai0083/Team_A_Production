@@ -5,34 +5,26 @@
 #include "../../Utility/RoomID.h"
 #include "..//..//Scene/Scene.h"
 
+
 class Enemy : public Character {
-
 public:
-	
-	Enemy(CharacterID id_) { m_Id = id_; }
-
 	~Enemy() override{}
-
-	void Init()override;
-
-	void Update()override;
 
 	RoomID GetRoomID() {
 		return m_RoomId;
 	}
 
-	bool GetIsKill()override { return m_IsPlayerKill; }
+	bool HasKill()const override { return m_HasKill; }
 
-	void Draw()override;
-	void LoadTex(SceneId id)override;
+	void LoadTex(SceneId id_)override {}
 
 private:
-
-	int m_FrameCount;
 	CharacterID m_Id;
-	bool m_IsDeath;	
-	bool m_IsPlayerKill;
+	
 	RoomID m_RoomId;
+	int	   m_iFrameCount;
+	bool   m_IsDeath;
+	bool   m_HasKill;
 };
 
 #endif
