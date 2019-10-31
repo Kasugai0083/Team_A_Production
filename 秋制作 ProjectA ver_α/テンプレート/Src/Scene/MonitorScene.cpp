@@ -161,6 +161,10 @@ SceneId FinishMonitorScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
 
+	if (TransButton()->Research(SceneTransition::Id::Clear) == true) {
+		TransButton()->Change(SceneTransition::Id::Clear, false);
+		return SceneId::ClearScene;
+	}
 	if (TransButton()->Research(SceneTransition::Id::Center) == true) {
 		TransButton()->Change(SceneTransition::Id::Center, false);
 		return SceneId::CenterScene;

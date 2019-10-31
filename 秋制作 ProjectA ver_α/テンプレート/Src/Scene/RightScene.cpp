@@ -91,7 +91,10 @@ void MainRightScene()
 SceneId FinishRightScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_RIGHT);
-
+	if (TransButton()->Research(SceneTransition::Id::Clear) == true) {
+		TransButton()->Change(SceneTransition::Id::Clear, false);
+		return SceneId::ClearScene;
+	}
 	if (TransButton()->Research(SceneTransition::Id::Center) == true) {
 		TransButton()->Change(SceneTransition::Id::Center, false);
 		return SceneId::CenterScene;
