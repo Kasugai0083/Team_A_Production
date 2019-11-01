@@ -15,6 +15,7 @@ public:
 	void Init(object::ObjectId id_, Vec2 pos_);
 
 	void Update();
+	void Update(object::ObjectId id);
 
 	Object* GetObj(int id) {
 		return m_Objects[id];

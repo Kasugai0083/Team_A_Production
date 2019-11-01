@@ -9,6 +9,7 @@
 #include "..//Timer/Timer.h"
 #include "../Character/CharacterManager.h"
 #include "../Object/ObjectManager.h"
+#include "../Object/ObjectID.h"
 
 // ゲーム本編シーンの初期化
 void InitCenterScene();
@@ -84,7 +85,9 @@ void MainCenterScene()
 	TransButton()->GameEnd();
 	
 	g_Manager.Update();
-	ObjManager()->Update();
+
+	ObjManager()->Update(object::CANDLE_STAND);
+	ObjManager()->Update(object::MUSICBOX);
 
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 		

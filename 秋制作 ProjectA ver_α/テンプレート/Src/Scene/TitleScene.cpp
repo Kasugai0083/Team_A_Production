@@ -34,14 +34,6 @@ SceneId UpdateTitleScene()
 
 	return SceneId::TitleScene;
 }
-//
-//UI* UIFunc(UI::Id id){
-//	static UI ui[UI::Id::MaxNum];
-//	
-//	ui[id].Init(id);
-//
-//	return &ui[id];
-//}
 
 void DrawTitleScene()
 {
@@ -52,16 +44,11 @@ void DrawTitleScene()
 	ObjManager()->Draw(object::NEW_GAME);
 	ObjManager()->Draw(object::CONTINUE);
 
-	//UIの描画
-	//UIFunc(UI::Id::TitleLogo)->Draw();
-	//UIFunc(UI::Id::NewGame)->Draw();
-	//UIFunc(UI::Id::Continue)->Draw();
-
 }
 
 void InitTitleScene()
 {
-	TimerFunc()->Init();
+
 	ObjManager()->Init();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
@@ -73,17 +60,8 @@ void MainTitleScene()
 {
 	TransButton()->GameEnd();
 
-	ObjManager()->Update();
-
-	//UIFunc(UI::Id::TitleLogo)->Update();
-	//UIFunc(UI::Id::NewGame)->Update();
-	//UIFunc(UI::Id::Continue)->Update();
-
-	//if (UIFunc(UI::Id::NewGame)->GetOnMouse() == true) {
-	//	if (OnMouseDown(Left) == true) {
-	//		ChangeSceneStep(SceneStep::EndStep);
-	//	}
-	//}
+	ObjManager()->Update(object::CONTINUE);
+	ObjManager()->Update(object::NEW_GAME);
 
 	if (ObjManager()->HasOnMouse(object::NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
@@ -98,7 +76,7 @@ SceneId FinishTitleScene()
 	ReleaseCategoryTexture(SceneId::TitleScene);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
 
-
+	TimerFunc()->Init();
 	g_Manager.Initialize();
 
 	// 次のシーンIDを返す

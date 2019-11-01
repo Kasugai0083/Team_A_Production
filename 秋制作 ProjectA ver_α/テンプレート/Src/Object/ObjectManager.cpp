@@ -71,6 +71,13 @@ void ObjectManager::Update()
 	}
 }
 
+void ObjectManager::Update(object::ObjectId id)
+{
+	m_Objects[id]->Update();
+}
+
+
+
 void ObjectManager::Draw(object::ObjectId id)
 {
 	m_Objects[id]->Draw();

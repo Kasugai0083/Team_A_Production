@@ -114,7 +114,9 @@ void MainMonitorScene()
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
 
 
-	ObjManager()->Update();
+	ObjManager()->Update(object::MONITOR_SPOWN);
+	ObjManager()->Update(object::LEFT_DUCT);
+	ObjManager()->Update(object::RIGHT_DUCT);
 
 	TimerFunc()->Update(Timer::Id::Scene);
 	TimerFunc()->Update(Timer::Id::MusicBox);
