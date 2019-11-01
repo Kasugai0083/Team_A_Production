@@ -23,7 +23,7 @@ void Chica::Update()
 
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 2800) {
+	if (m_IsDeath == true && m_iFrameCount >= 2900) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;

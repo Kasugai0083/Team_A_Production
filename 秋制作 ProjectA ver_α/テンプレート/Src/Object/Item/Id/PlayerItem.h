@@ -6,7 +6,7 @@
 #include "../../../Timer/Timer.h"
 #include "../../../Engine/Input.h"
 
-const int c_Magnification = 3;
+const int c_Magnification = 6;
 
 enum MusicBoxStep {
 	STEP_1 = c_Magnification * 100,
