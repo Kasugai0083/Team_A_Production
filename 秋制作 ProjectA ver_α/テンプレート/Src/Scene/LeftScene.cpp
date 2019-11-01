@@ -8,6 +8,8 @@
 #include "..//Timer/Timer.h"
 #include "../Character/CharacterManager.h"
 #include "../Object/ObjectManager.h"
+#include "../Object/ObjectID.h"
+#include "../Object/Item/ItemValue.h"
 
 // ゲーム本編シーンの初期化
 void InitLeftScene();
@@ -52,6 +54,10 @@ void DrawLeftScene()
 
 void InitLeftScene()
 {
+
+	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+	ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
+
 	TimerFunc()->Set(0, Timer::Id::Scene);
 
 	LoadTexture("Res/Game/Left/GameLeftBg.png", TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex);
@@ -71,8 +77,6 @@ void MainLeftScene()
 	TransButton()->GameEnd();
 
 	ObjManager()->Update();
-
-	//ObjManager()->Update(object::CANDLE_STAND);
 
 	g_Manager.Update();
 

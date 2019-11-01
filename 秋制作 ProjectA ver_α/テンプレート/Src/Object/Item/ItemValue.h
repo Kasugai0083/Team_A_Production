@@ -30,7 +30,7 @@ const Vec2 CANDLE_STAND_POS = { (960.f - (CANDLE_STAND_SIZE.Width / 2)), (640.f 
 //âä(ëÂ)
 const Size FIRE_BIG_SIZE = { 55.f,114.f };
 const Size FIRE_BIG_FRAME = { 256.f,256.f };
-const Vec2 FIRE_BIG_POS = { (960.f - (FIRE_BIG_SIZE.Width / 2)), (140.f - (FIRE_BIG_SIZE.Height / 2)) };
+const Vec2 FIRE_BIG_POS = { (960.f - (FIRE_BIG_SIZE.Width / 2)), (90.f - (FIRE_BIG_SIZE.Height / 2)) };
 
 //âä(è¨)
 const Size FIRE_SMALL_SIZE = { 15.f,32.f };

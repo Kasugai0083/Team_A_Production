@@ -8,7 +8,7 @@
 #include "..//Timer/Timer.h"
 #include "../Character/CharacterManager.h"
 #include "../Object/ObjectManager.h"
-
+#include "../Object/Item/ItemValue.h"
 
 // ゲーム本編シーンの初期化
 void InitRightScene();
@@ -57,6 +57,9 @@ void InitRightScene()
 {
 	TimerFunc()->Set(0, Timer::Id::Scene);
 
+	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+	ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
+
 	LoadTexture("Res/Game/Right/GameRightBg.png", TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex);
 
 	g_Manager.LoadTex(GetCurrentSceneId());
@@ -76,9 +79,6 @@ void MainRightScene()
 	g_Manager.Update();
 
 	ObjManager()->Update();
-
-	//ObjManager()->Update(object::CANDLE_STAND);
-
 
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 
