@@ -60,8 +60,9 @@ void MainTitleScene()
 {
 	TransButton()->GameEnd();
 
-	ObjManager()->Update(object::CONTINUE);
-	ObjManager()->Update(object::NEW_GAME);
+	ObjManager()->Update();
+	//ObjManager()->Update(object::CONTINUE);
+	//ObjManager()->Update(object::NEW_GAME);
 
 	if (ObjManager()->HasOnMouse(object::NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {

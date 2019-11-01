@@ -86,8 +86,10 @@ void MainCenterScene()
 	
 	g_Manager.Update();
 
-	ObjManager()->Update(object::CANDLE_STAND);
-	ObjManager()->Update(object::MUSICBOX);
+	ObjManager()->Update();
+
+	//ObjManager()->Update(object::CANDLE_STAND);
+	//ObjManager()->Update(object::MUSICBOX);
 
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 		

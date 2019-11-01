@@ -6,6 +6,20 @@
 #include "../../../Timer/Timer.h"
 #include "../../../Engine/Input.h"
 
+const int c_Magnification = 3;
+
+enum MusicBoxStep {
+	STEP_1 = c_Magnification * 100,
+	STEP_2 = c_Magnification * 200,
+	STEP_3 = c_Magnification * 300,
+	STEP_4 = c_Magnification * 400,
+	STEP_5 = c_Magnification * 500,
+	STEP_6 = c_Magnification * 600,
+	STEP_7 = c_Magnification * 700,
+	STEP_8 = c_Magnification * 800,
+	END_STEP = c_Magnification * 900,
+
+};
 
 class Crystal : public Item {
 public:
@@ -70,17 +84,21 @@ public:
 
 		static bool CountDown = false;
 
-		if (RectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
-			m_OnMouse = true;
-			if (OnMousePush(Left) == true) {
-				TimerFunc()->CountDown(Timer::Id::MusicBox);
-				CountDown = true;
-			}else { 
-				CountDown = false; 
+		if (GetCurrentSceneId() == CenterScene) {
+			if (RectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+				m_OnMouse = true;
+				if (OnMousePush(Left) == true) {
+					TimerFunc()->CountDown(Timer::Id::MusicBox);
+					CountDown = true;
+				}
+				else {
+					CountDown = false;
+				}
 			}
-		}else {
-			m_OnMouse = false;
-			CountDown = false;
+			else {
+				m_OnMouse = false;
+				CountDown = false;
+			}
 		}
 
 		if (CountDown == false) {
@@ -110,31 +128,31 @@ private:
 
 	void DrawCircle() {
 
-		if (TimerFunc()->Get(Timer::Id::MusicBox) <= 100) {
+		if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_1) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle1Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 200) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_2) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle2Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 300) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_3) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle3Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 400) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_4) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle4Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 500) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_5) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle5Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 600) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_6) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle6Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 700) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_7) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle7Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 800) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= STEP_8) {
 			DrawTexture((m_Pos.X + MB_Pos_Adjustment_X), (m_Pos.Y - MB_Pos_Adjustment_Y), GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCircle8Tex));
 		}
-		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= 900) {
+		else if (TimerFunc()->Get(Timer::Id::MusicBox) <= END_STEP) {
 		}
 
 	}

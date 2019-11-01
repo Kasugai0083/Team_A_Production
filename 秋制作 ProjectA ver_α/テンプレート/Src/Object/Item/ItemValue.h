@@ -9,33 +9,33 @@
 //ÇÎÇ§ÇªÇ≠ÅiëÂÅj
 const Size CANDLE_BIG_SIZE = { 46.f,256.f };
 const Size CANDLE_BIG_FRAME = { 256.f,256.f };
-const Vec2 CANDLE_BIG_POS = { (960.f - CANDLE_BIG_SIZE.Width / 2), (340.f) };
+const Vec2 CANDLE_BIG_POS = { (960.f - CANDLE_BIG_SIZE.Width / 2), (140.f) };
 
 
 //ÇÎÇ§ÇªÇ≠(è¨)
 const Size CANDLE_SMALL_SIZE = { 12.f,64.f };
 const Size CANDLE_SMALL_FRAME = { 64.f,64.f };
-const Vec2 CANDLE_SMALL_POS = { (960.f - CANDLE_SMALL_SIZE.Width / 2),220.f };
+const Vec2 CANDLE_SMALL_POS = { (960.f - CANDLE_SMALL_SIZE.Width / 2),320.f };
 
 //ÇÎÇ§ÇªÇ≠(ìî)
 const Size CANDLE_EFFECT_SIZE = { 118.f,118.f };
 const Size CANDLE_EFFECT_FRAME = { 128.f,128.f };
-const Vec2 CANDLE_EFFECT_POS = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),150.f };
+const Vec2 CANDLE_EFFECT_POS = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),250.f };
 
 //ÇÎÇ§ÇªÇ≠(êCë‰)
 const Size CANDLE_STAND_SIZE = { 110.f,512.f };
 const Size CANDLE_STAND_FRAME = { 256.f,512.f };
-const Vec2 CANDLE_STAND_POS = { (960.f - (CANDLE_STAND_SIZE.Width / 2)), (540.f - (CANDLE_STAND_SIZE.Height / 2)) };
+const Vec2 CANDLE_STAND_POS = { (960.f - (CANDLE_STAND_SIZE.Width / 2)), (640.f - (CANDLE_STAND_SIZE.Height / 2)) };
 
 //âä(ëÂ)
 const Size FIRE_BIG_SIZE = { 55.f,114.f };
 const Size FIRE_BIG_FRAME = { 256.f,256.f };
-const Vec2 FIRE_BIG_POS = { 960.f,540.f };
+const Vec2 FIRE_BIG_POS = { (960.f - (FIRE_BIG_SIZE.Width / 2)), (140.f - (FIRE_BIG_SIZE.Height / 2)) };
 
 //âä(è¨)
 const Size FIRE_SMALL_SIZE = { 15.f,32.f };
 const Size FIRE_SMALL_FRAME = { 64.f,64.f };
-const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SMALL_SIZE.Width / 2),190.f };
+const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SMALL_SIZE.Width / 2),290.f };
 
 //êÖèª
 const Size CRYSTAL_SIZE = { 181.f,174.f };

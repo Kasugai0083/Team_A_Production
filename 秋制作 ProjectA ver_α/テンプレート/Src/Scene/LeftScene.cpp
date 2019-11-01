@@ -70,7 +70,9 @@ void MainLeftScene()
 
 	TransButton()->GameEnd();
 
-	ObjManager()->Update(object::CANDLE_STAND);
+	ObjManager()->Update();
+
+	//ObjManager()->Update(object::CANDLE_STAND);
 
 	g_Manager.Update();
 

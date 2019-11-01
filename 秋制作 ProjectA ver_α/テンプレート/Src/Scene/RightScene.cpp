@@ -75,7 +75,9 @@ void MainRightScene()
 
 	g_Manager.Update();
 
-	ObjManager()->Update(object::CANDLE_STAND);
+	ObjManager()->Update();
+
+	//ObjManager()->Update(object::CANDLE_STAND);
 
 
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {

@@ -3,6 +3,7 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 #include "../../../Timer/Timer.h"
+#include "../../../Object/Item/Id/PlayerItem.h"
 
 void Puppet::Init()
 {
@@ -16,7 +17,7 @@ void Puppet::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && TimerFunc()->Get(Timer::Id::MusicBox) >= 900) {
+	if (m_IsDeath == true && TimerFunc()->Get(Timer::Id::MusicBox) >= END_STEP) {
 
 		m_iFrameCount = 0;
 		m_IsDeath     = false;
