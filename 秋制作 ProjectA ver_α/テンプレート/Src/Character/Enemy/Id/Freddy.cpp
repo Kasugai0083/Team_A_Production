@@ -23,7 +23,7 @@ void Freddy::Update()
 
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 500) {
+	if (m_IsDeath == true && m_iFrameCount >= 1800) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
@@ -38,7 +38,7 @@ void Freddy::Update()
 	{
 	case RoomID::SPAWN_ROOM:
 
-		if (m_iFrameCount >= 200) {
+		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
 			m_RoomId      = RoomID::CENTER_DUCT;
@@ -47,7 +47,7 @@ void Freddy::Update()
 
 	case RoomID::CENTER_DUCT:
 
-		if (m_iFrameCount >= 1000) {
+		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
 			m_RoomId      = RoomID::PLAYER_ROOM;
@@ -77,7 +77,7 @@ void Freddy::Update()
 			m_IsDeath	  = true;
 		}
 
-		if (m_iFrameCount >= 180) {
+		if (m_iFrameCount >= 300) {
 
 			m_HasKill     = true;
 		}

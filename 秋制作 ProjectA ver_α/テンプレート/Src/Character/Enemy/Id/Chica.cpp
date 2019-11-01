@@ -23,7 +23,7 @@ void Chica::Update()
 
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 1200) {
+	if (m_IsDeath == true && m_iFrameCount >= 2800) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
@@ -38,7 +38,7 @@ void Chica::Update()
 	{
 	case RoomID::SPAWN_ROOM:
 
-		if (m_iFrameCount >= 1200) {
+		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
 			m_RoomId	  = RoomID::RIGHT_DUCT;
@@ -47,7 +47,7 @@ void Chica::Update()
 
 	case RoomID::RIGHT_DUCT:
 
-		if (m_iFrameCount >= 1200) {
+		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
 			m_RoomId	  = RoomID::RIGHT_ROOM;
@@ -78,7 +78,7 @@ void Chica::Update()
 			m_IsDeath	  = true;
 		}
 
-		if (m_iFrameCount >= 120) {
+		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
 			m_HasKill	 = true;
 		}
