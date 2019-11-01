@@ -31,7 +31,7 @@ enum FontSize
 
 #define SMALL_FONT_SIZE (16)	//!< フォントサイズ(小)
 #define REGULAR_FONT_SIZE (24)	//!< フォントサイズ(中)
-#define LARGE_FONT_SIZE (32)	//!< フォントサイズ(大)
+#define LARGE_FONT_SIZE (64)	//!< フォントサイズ(大)
 
 /** @brief テクスチャデータやサイズを保持する構造体 */
 struct Texture

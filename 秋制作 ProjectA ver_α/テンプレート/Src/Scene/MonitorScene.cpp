@@ -96,6 +96,7 @@ void DrawMonitorScene()
 
 	g_Manager.Draw();
 
+	DrawFont(880.f,0.f,"êÖèª",FontSize::Large,FontColor::Red);
 }
 
 void InitMonitorScene()
