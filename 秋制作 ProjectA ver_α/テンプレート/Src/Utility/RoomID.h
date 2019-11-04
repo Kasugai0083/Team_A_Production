@@ -4,6 +4,7 @@
 enum RoomID {
 
 	SPAWN_ROOM,
+	SPAWN_ROOM_FOXY,//‰¼
 	CENTER_DUCT,
 	RIGHT_DUCT,
 	LEFT_DUCT,
