@@ -17,7 +17,7 @@ const int WIN_H = 1080;
 * @param[in] height ウィンドウの縦幅
 * @param[in] title_name タイトルバーに表示する文字列
 */
-bool InitEngine(int width, int height, const char* title_name ,bool isFull);
+bool InitEngine(int width_, int height_, const char* titleName_ ,bool isFull_);
 
 /**
 * @brief エンジン終了関数@n

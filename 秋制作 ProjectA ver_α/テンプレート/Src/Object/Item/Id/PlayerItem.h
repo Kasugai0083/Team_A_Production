@@ -6,18 +6,18 @@
 #include "../../../Timer/Timer.h"
 #include "../../../Engine/Input.h"
 
-const int c_Magnification = 6;
+const int c_iMagnification = 6;
 
 enum MusicBoxStep {
-	STEP_1 = c_Magnification * 100,
-	STEP_2 = c_Magnification * 200,
-	STEP_3 = c_Magnification * 300,
-	STEP_4 = c_Magnification * 400,
-	STEP_5 = c_Magnification * 500,
-	STEP_6 = c_Magnification * 600,
-	STEP_7 = c_Magnification * 700,
-	STEP_8 = c_Magnification * 800,
-	END_STEP = c_Magnification * 900,
+	STEP_1 = c_iMagnification * 100,
+	STEP_2 = c_iMagnification * 200,
+	STEP_3 = c_iMagnification * 300,
+	STEP_4 = c_iMagnification * 400,
+	STEP_5 = c_iMagnification * 500,
+	STEP_6 = c_iMagnification * 600,
+	STEP_7 = c_iMagnification * 700,
+	STEP_8 = c_iMagnification * 800,
+	END_STEP = c_iMagnification * 900,
 
 };
 
@@ -25,18 +25,27 @@ class Crystal : public Item {
 public:
 
 	void Init()override {
+		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
 
 		m_Pos = CRYSTAL_POS;
 		m_Size = CRYSTAL_SIZE;
-		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
 
 	};
 	void Init(Vec2 pos_) override {
+		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
+
 		m_Pos = pos_;
 		m_Size = CRYSTAL_SIZE;
-		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
 	}
 
 
@@ -48,27 +57,36 @@ class MusicBox : public Item {
 public:
 
 	void Init()override {
+		LoadTexture("Res/Game/Item/MusicBox.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
 
 		m_Pos = MUSICBOX_POS;
 		m_Size = MUSICBOX_SIZE;
-		LoadTexture("Res/Game/Item/MusicBox.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
 
 		LoadCircle();
 
 	};
 	void Init(Vec2 pos_) override {
+		LoadTexture("Res/Game/Item/MusicBox.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
+
 		m_Pos = pos_;
 		m_Size = MUSICBOX_SIZE;
-		LoadTexture("Res/Game/Item/MusicBox.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
 	
 		LoadCircle();
 
 	}
 	
 	void Draw() override {
-		DrawTexture(m_Pos.X, m_Pos.Y, m_Tex);
+		DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
 
 		Lib::Texture polygon("hoge");
 
@@ -85,7 +103,7 @@ public:
 		static bool CountDown = false;
 
 		if (GetCurrentSceneId() == CenterScene) {
-			if (RectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 				m_OnMouse = true;
 				if (OnMousePush(Left) == true) {
 					TimerFunc()->CountDown(Timer::Id::MusicBox);

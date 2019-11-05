@@ -12,53 +12,53 @@ static SceneId g_CurrentSceneId = SceneId::TitleScene;		// 動作中シーンID
 static SceneStep g_CurrentSceneStep = SceneStep::InitStep;	// 動作中シーンのステップ
 
 //シーン管理の関数群
-SceneTransition ppp;
-SceneTransition* TransButton() { return &ppp; };
+SceneTransition g_ppp;
+SceneTransition* SceneController() { return &g_ppp; };
 
-void SceneTransition::Change(Id id, bool go) {
-	switch (id) {
+void SceneTransition::SetID(Id id_, bool go_) {
+	switch (id_) {
 	case Left:
-		m_GoLeft = go;
+		m_CanLeft = go_;
 		break;
 	case Right:
-		m_GoRight = go;
+		m_CanRight = go_;
 		break;
 	case Center:
-		m_GoCenter = go;
+		m_CanCenter = go_;
 		break;
 	case Monitor:
-		m_GoMonitor = go;
+		m_CanMonitor = go_;
 		break;
 	case Clear:
-		m_GoClear = go;
+		m_CanClear = go_;
 		break;
 	case Finish:
-		m_GoFinish = go;
+		m_CanFinish = go_;
 		break;
 	default:
 		break;
 	}
 }
 
-bool SceneTransition::Research(Id id) {
-	switch (id) {
+bool SceneTransition::IsGetID(Id id_) {
+	switch (id_) {
 	case Left:
-		return m_GoLeft;
+		return m_CanLeft;
 		break;
 	case Right:
-		return m_GoRight;
+		return m_CanRight;
 		break;
 	case Center:
-		return m_GoCenter;
+		return m_CanCenter;
 		break;
 	case Monitor:
-		return m_GoMonitor;
+		return m_CanMonitor;
 		break;
 	case Clear:
-		return m_GoClear;
+		return m_CanClear;
 		break;
 	case Finish:
-		return m_GoFinish;
+		return m_CanFinish;
 		break;
 	default:
 		break;
@@ -67,13 +67,13 @@ bool SceneTransition::Research(Id id) {
 
 void SceneTransition::GameEnd() {
 	if (GetKey(ESCAPE_KEY) == true) {
-		TransButton()->Change(SceneTransition::Id::Finish, true);
+		SceneController()->SetID(SceneTransition::Id::Finish, true);
 	}
 }
 
-void SceneTransition::ChangeStep(Id id, unsigned long key) {
-	if (GetKey(key) == true) {
-		TransButton()->Change(id, true);
+void SceneTransition::ChangeStep(Id id_, unsigned long key_) {
+	if (GetKey(key_) == true) {
+		SceneController()->SetID(id_, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}
 }
@@ -81,15 +81,15 @@ void SceneTransition::ChangeStep(Id id, unsigned long key) {
 //シーン管理用の関数群ここまで
 
 //モニター管理用クラス関数
-MonitorTransition qqq;
-MonitorTransition* MonitorFunc() { return &qqq; };
+MonitorTransition g_qqq;
+MonitorTransition* MonitorFunc() { return &g_qqq; };
 
 int MonitorTransition::Get() {
 	return m_MonitorId;
 }
 
-void MonitorTransition::Set(Id id) {
-	m_MonitorId = id;
+void MonitorTransition::Set(Id id_) {
+	m_MonitorId = id_;
 }
 
 //ここまで

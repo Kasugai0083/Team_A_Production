@@ -71,24 +71,40 @@ void MainLeftScene()
 {
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
 
+	if (tmp_player == nullptr) {
+		return;
+	}
+
+	//タイマーのアップデート
 	TimerFunc()->Update(Timer::Id::Scene);
 	TimerFunc()->Update(Timer::Id::MusicBox);
 
-	TransButton()->GameEnd();
+	SceneController()->GameEnd();
 
 	ObjManager()->Update();
 
 	g_Manager.Update();
 
+	//キー入力でシーン遷移
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 
 		if (GetKey(D_KEY) == true) {
-			TransButton()->Change(SceneTransition::Id::Center, true);
+			SceneController()->SetID(SceneTransition::Id::Center, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
+
+	//クリア時間経過でシーン遷移
+	if (TimerFunc()->Get(Timer::Id::Clear) >= CLEAR_TIME) {
+		if (tmp_player->IsDeath() == false) {
+			SceneController()->SetID(SceneTransition::Id::Clear, true);
+			ChangeSceneStep(SceneStep::EndStep);
+		}
+	}
+
+	//プレイヤーの死亡でシーン遷移
 	if (tmp_player->IsDeath() == true) {
-		TransButton()->Change(SceneTransition::Id::Clear, true);
+		SceneController()->SetID(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}
 }
@@ -97,12 +113,12 @@ SceneId FinishLeftScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_LEFT);
 
-	if (TransButton()->Research(SceneTransition::Id::Clear) == true) {
-		TransButton()->Change(SceneTransition::Id::Clear, false);
+	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
+		SceneController()->SetID(SceneTransition::Id::Clear, false);
 		return SceneId::ClearScene;
 	}
-	if (TransButton()->Research(SceneTransition::Id::Center) == true) {
-		TransButton()->Change(SceneTransition::Id::Center, false);
+	else if (SceneController()->IsGetID(SceneTransition::Id::Center) == true) {
+		SceneController()->SetID(SceneTransition::Id::Center, false);
 		return SceneId::CenterScene;
 	}
 }

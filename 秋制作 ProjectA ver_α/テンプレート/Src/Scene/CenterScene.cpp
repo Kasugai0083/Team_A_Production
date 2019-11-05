@@ -79,34 +79,40 @@ void MainCenterScene()
 {
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
 
+	if (tmp_player == nullptr) {
+		return;
+	}
+
+	//タイマーのアップデート
 	TimerFunc()->Update(Timer::Id::Scene);
 	TimerFunc()->Update(Timer::Id::Clear);
 
-	TransButton()->GameEnd();
+	SceneController()->GameEnd();
 	
 	g_Manager.Update();
 
 	ObjManager()->Update();
 
-	//ObjManager()->Update(object::CANDLE_STAND);
-	//ObjManager()->Update(object::MUSICBOX);
-
+	//キー入力でシーン遷移
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 		
-		//フラグを立ててEndStepに移行
-		TransButton()->ChangeStep(SceneTransition::Id::Left, A_KEY);
-		TransButton()->ChangeStep(SceneTransition::Id::Right, D_KEY);
-		TransButton()->ChangeStep(SceneTransition::Id::Monitor, S_KEY);
+		SceneController()->ChangeStep(SceneTransition::Id::Left, A_KEY);
+		SceneController()->ChangeStep(SceneTransition::Id::Right, D_KEY);
+		SceneController()->ChangeStep(SceneTransition::Id::Monitor, S_KEY);
 
 	}
+
+	//クリア時間経過でシーン遷移
 	if (TimerFunc()->Get(Timer::Id::Clear) >= CLEAR_TIME) {
 		if(tmp_player->IsDeath() == false){
-			TransButton()->Change(SceneTransition::Id::Clear, true);
+			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
+
+	//プレイヤーの死亡でシーン遷移
 	if (tmp_player->IsDeath() == true) {
-		TransButton()->Change(SceneTransition::Id::Clear, true);
+		SceneController()->SetID(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}
 
@@ -117,20 +123,20 @@ SceneId FinishCenterScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_CENTER);
 
-	if (TransButton()->Research(SceneTransition::Id::Clear) == true) {
-		TransButton()->Change(SceneTransition::Id::Clear, false);
+	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
+		SceneController()->SetID(SceneTransition::Id::Clear, false);
 		return SceneId::ClearScene;
 	}	
-	else if (TransButton()->Research(SceneTransition::Id::Left) == true) {
-		TransButton()->Change(SceneTransition::Id::Left, false);
+	else if (SceneController()->IsGetID(SceneTransition::Id::Left) == true) {
+		SceneController()->SetID(SceneTransition::Id::Left, false);
 		return SceneId::LeftScene;
 	}
-	else if (TransButton()->Research(SceneTransition::Id::Right) == true) {
-		TransButton()->Change(SceneTransition::Id::Right, false);
+	else if (SceneController()->IsGetID(SceneTransition::Id::Right) == true) {
+		SceneController()->SetID(SceneTransition::Id::Right, false);
 		return SceneId::RightScene;
 	}
-	else if (TransButton()->Research(SceneTransition::Id::Monitor) == true) {
-		TransButton()->Change(SceneTransition::Id::Monitor, false);
+	else if (SceneController()->IsGetID(SceneTransition::Id::Monitor) == true) {
+		SceneController()->SetID(SceneTransition::Id::Monitor, false);
 		return SceneId::MonitorScene;
 	}
 }

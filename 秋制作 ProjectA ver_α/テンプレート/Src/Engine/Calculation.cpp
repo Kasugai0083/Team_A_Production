@@ -5,91 +5,91 @@
 #include "..//Engine/Input.h"
 #include <math.h>
 
-Texture* wall_tex;
-Texture* player_tex;
+Texture* g_pWallTex;
+Texture* g_pPlayerTex;
 
-Position GetPosition(float X, float Y) {
+Position GetPosition(float x_, float y_) {
 	Position PositionTmp;	
 
-	PositionTmp.m_X = X;
-	PositionTmp.m_Y = Y;
+	PositionTmp.m_X = x_;
+	PositionTmp.m_Y = y_;
 
 	return PositionTmp;
 }
 
-float GetImageRatio(float a, float b) {
-	return (a / b);
+float GetImageRatio(float a_, float b_) {
+	return (a_ / b_);
 }
 
 //2048まで対応
-float GetIntegratedImageRatio(float a, float b) {
+float GetIntegratedImageRatio(float a_, float b_) {
 
-	a *= b;
+	a_ *= b_;
 
-	if (a > 1024 && a <= 2048) {
-		return (a / 2048.0f) / b;
+	if (a_ > 1024 && a_ <= 2048) {
+		return (a_ / 2048.0f) / b_;
 	}
-	else if (a > 512 && a <= 1024) {
-		return (a / 1024) / b;
+	else if (a_ > 512 && a_ <= 1024) {
+		return (a_ / 1024) / b_;
 	}
-	else if (a > 256 && a <= 512) {
-		return (a / 512) / b;
+	else if (a_ > 256 && a_ <= 512) {
+		return (a_ / 512) / b_;
 	}
-	else if (a > 128 && a <= 256) {
-		return (a / 256) / b;
+	else if (a_ > 128 && a_ <= 256) {
+		return (a_ / 256) / b_;
 	}
-	else if (a > 64 && a <= 128) {
-		return (a / 128) / b;
+	else if (a_ > 64 && a_ <= 128) {
+		return (a_ / 128) / b_;
 	}
-	else if (a > 32 && a <= 64) {
-		return (a / 64) / b;
+	else if (a_ > 32 && a_ <= 64) {
+		return (a_ / 64) / b_;
 	}
-	else if (a > 16 && a <= 32) {
-		return (a / 32) / b;
+	else if (a_ > 16 && a_ <= 32) {
+		return (a_ / 32) / b_;
 	}
-	else if (a > 8 && a <= 16) {
-		return (a / 16) / b;
+	else if (a_ > 8 && a_ <= 16) {
+		return (a_ / 16) / b_;
 	}
-	else if (a > 4 && a <= 8) {
-		return (a / 8) / b;
+	else if (a_ > 4 && a_ <= 8) {
+		return (a_ / 8) / b_;
 	}
-	else if (a > 2 && a <= 4) {
-		return (a / 4) / b;
+	else if (a_ > 2 && a_ <= 4) {
+		return (a_ / 4) / b_;
 	}
 }
 
 //二点間のラジアンを計算
-double GetRadian(double startX, double startY, double endX, double endY) {
+double GetRadian(double startX_, double startY_, double endX_, double endY_) {
 
 	//double radian = atan2(startY - endY, startX - endX);
-	double radian = atan2(endY - startY, endX - startX);
+	double radian = atan2(endY_ - startY_, endX_ - startX_);
 
 	return radian;
 
 }
 
 //ラジアンを度数に変換
-double GetDegree(double rad) {
+double GetDegree(double rad_) {
 
-	float degree = rad * 180 / PI;
+	float degree = rad_ * 180 / PI;
 
 	return degree;
 
 }
 
-float GetVecLong(float X, float Y) {
+float GetVecLong(float x_, float y_) {
 
-	float VecLong = sqrt(pow(X, 2) + pow(Y, 2));
+	float VecLong = sqrt(pow(x_, 2) + pow(y_, 2));
 
 	return VecLong;
 }
 
 
 
-bool RectangleHit(Texture* texture_data, float X1, float X2, float Y1, float Y2) {
+bool HasRectangleHit(Texture* texture_data_, float x1_, float x2_, float y1_, float y2_) {
 
-	if (X1 >= X2 && X1 <= X2 + texture_data->Width) {
-		if (Y1 >= Y2 && Y1 <= Y2 + texture_data->Height) {
+	if (x1_ >= x2_ && x1_ <= x2_ + texture_data_->Width) {
+		if (y1_ >= y2_ && y1_ <= y2_ + texture_data_->Height) {
 			return true;
 		}
 	}
@@ -98,10 +98,10 @@ bool RectangleHit(Texture* texture_data, float X1, float X2, float Y1, float Y2)
 
 }
 
-bool RectangleHit(float X1, float Y1, float X2, float Y2, float X3, float Y3) {
+bool HasRectangleHit(float x1_, float y1_, float x2_, float y2_, float x3_, float y3_) {
 
-	if (X1 >= X2  && X1 <= X3) {
-		if (Y1 >= Y2 && Y1 <= Y3)  {
+	if (x1_ >= x2_  && x1_ <= x3_) {
+		if (y1_ >= y2_ && y1_ <= y3_)  {
 			return true;
 		}
 	}
@@ -110,15 +110,15 @@ bool RectangleHit(float X1, float Y1, float X2, float Y2, float X3, float Y3) {
 
 }
 
-bool AdvRectangleHit(float X1, float X2, float Y1, float Y2, float wide1, float wide2, float height1, float height2) {
+bool HasAdvRectangleHit(float x1_, float x2_, float y1_, float y2_, float wide1_, float wide2_, float height1_, float height2_) {
 
-	float center_x1 = X1 + (wide1 / 2);
-	float center_y1 = Y1 + (height1 / 2);
-	float center_x2 = X2 + (wide2 / 2);
-	float center_y2 = Y2 + (height2 / 2);
+	float fCenterX1 = x1_ + (wide1_ / 2);
+	float fCenterY1 = y1_ + (height1_ / 2);
+	float fCenterX2 = x2_ + (wide2_ / 2);
+	float fCenterY2 = y2_ + (height2_ / 2);
 
-	if (fabsf(center_x1 - center_x2) < ((wide1 / 2)) + (wide2 / 2)) {
-		if (fabsf(center_y1 - center_y2 ) < ((height1 / 2)) + (height2 / 2) ) {
+	if (fabsf(fCenterX1 - fCenterX2) < ((wide1_ / 2)) + (wide2_ / 2)) {
+		if (fabsf(fCenterY1 - fCenterY2 ) < ((height1_ / 2)) + (height2_ / 2) ) {
 			return true;
 		}
 	}

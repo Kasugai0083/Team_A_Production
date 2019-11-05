@@ -14,7 +14,7 @@ Item::Item() {
 
 void Item::Draw() {
 
-	DrawTexture(m_Pos.X, m_Pos.Y, m_Tex);
+	DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
 
 	Lib::Texture polygon("hoge");
 
@@ -25,7 +25,7 @@ void Item::Draw() {
 }
 
 void Item::Update() {
-	if (RectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+	if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 		m_OnMouse = true;
 	}
 	else {

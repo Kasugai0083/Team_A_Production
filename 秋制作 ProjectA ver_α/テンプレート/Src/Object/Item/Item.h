@@ -18,7 +18,7 @@ public:
 	bool HasOnMouse()override;
 
 protected:
-	Texture* m_Tex;
+	Texture* m_pTex;
 	bool m_OnMouse;
 	Vec2 m_Pos;
 	Size m_Size;

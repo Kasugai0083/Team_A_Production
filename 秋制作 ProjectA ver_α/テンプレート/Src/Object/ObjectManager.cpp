@@ -14,8 +14,6 @@
 #include "Item/Id/Fire.h"
 #include "Item/Id/PlayerItem.h"
 
-//ObjectManager g_ObjManager;
-
 ObjectManager* ObjManager() {
 	static ObjectManager obj;
 	return &obj;
@@ -23,26 +21,32 @@ ObjectManager* ObjManager() {
 
 ObjectManager::ObjectManager() {
 
-		m_Objects[object::TITLE_LOGO] = new TitleLogo;
-		m_Objects[object::NEW_GAME] = new NewGame;
-		m_Objects[object::CONTINUE] = new Continue;
-		m_Objects[object::MONITOR_SPOWN] = new MonitorSpown;
-		m_Objects[object::BLACK_MONITOR_SPOWN] = new BlackMonitorSpown;
-		m_Objects[object::LEFT_DUCT] = new LeftDuct;
-		m_Objects[object::BLACK_LEFT_DUCT] = new BlackLeftDuct;
-		m_Objects[object::RIGHT_DUCT] = new RightDuct;
-		m_Objects[object::BLACK_RIGHT_DUCT] = new BlackRightDuct;
-		m_Objects[object::PLAYER_ROOM] = new PlayerRoom;
-		m_Objects[object::CLEAR_LOGO] = new TitleLogo;
+		m_pObjects[object::TITLE_LOGO] = new TitleLogo;
+		m_pObjects[object::NEW_GAME] = new NewGame;
+		m_pObjects[object::CONTINUE] = new Continue;
+		m_pObjects[object::MONITOR_SPOWN] = new MonitorSpown;
+		m_pObjects[object::BLACK_MONITOR_SPOWN] = new BlackMonitorSpown;
+		m_pObjects[object::LEFT_DUCT] = new LeftDuct;
+		m_pObjects[object::BLACK_LEFT_DUCT] = new BlackLeftDuct;
+		m_pObjects[object::RIGHT_DUCT] = new RightDuct;
+		m_pObjects[object::BLACK_RIGHT_DUCT] = new BlackRightDuct;
+		m_pObjects[object::PLAYER_ROOM] = new PlayerRoom;
+		m_pObjects[object::CLEAR_LOGO] = new TitleLogo;
+		  
+		m_pObjects[object::CANDLE_BIG] = new CandleBig;
+		m_pObjects[object::CANDLE_SMALL] = new CandleSmall;
+		m_pObjects[object::CANDLE_EFFECT] = new CandleEffect;
+		m_pObjects[object::CANDLE_STAND] = new CandleStand;
+		m_pObjects[object::FIRE_BIG] = new FireBig;
+		m_pObjects[object::FIRE_SMALL] = new FireSmall;
+		m_pObjects[object::CRYSTAL] = new Crystal;
+		m_pObjects[object::MUSICBOX] = new MusicBox;
 
-		m_Objects[object::CANDLE_BIG] = new CandleBig;
-		m_Objects[object::CANDLE_SMALL] = new CandleSmall;
-		m_Objects[object::CANDLE_EFFECT] = new CandleEffect;
-		m_Objects[object::CANDLE_STAND] = new CandleStand;
-		m_Objects[object::FIRE_BIG] = new FireBig;
-		m_Objects[object::FIRE_SMALL] = new FireSmall;
-		m_Objects[object::CRYSTAL] = new Crystal;
-		m_Objects[object::MUSICBOX] = new MusicBox;
+		for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+			if (m_pObjects == nullptr) {
+				return;
+			}
+		}
 
 }
 
@@ -54,47 +58,47 @@ void ObjectManager::Init() {
 
 
 	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
-		m_Objects[i]->Init();
+		m_pObjects[i]->Init();
 	}
 }
 
 void ObjectManager::Init(object::ObjectId id_, Vec2 pos_) {
 
-	m_Objects[id_]->Init(pos_);
+	m_pObjects[id_]->Init(pos_);
 
 }
 
 void ObjectManager::Update()
 {
 	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
-		m_Objects[i]->Update();
+		m_pObjects[i]->Update();
 	}
 }
 
-void ObjectManager::Update(object::ObjectId id)
+void ObjectManager::Update(object::ObjectId id_)
 {
-	m_Objects[id]->Update();
+	m_pObjects[id_]->Update();
 }
 
 
 
-void ObjectManager::Draw(object::ObjectId id)
+void ObjectManager::Draw(object::ObjectId id_)
 {
-	m_Objects[id]->Draw();
+	m_pObjects[id_]->Draw();
 }
 
 
 void ObjectManager::Release()
 {
 	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
-		delete m_Objects[i];
-		m_Objects[i] = nullptr;
+		delete m_pObjects[i];
+		m_pObjects[i] = nullptr;
 	}
 }
 
-bool ObjectManager::HasOnMouse(object::ObjectId id) {
+bool ObjectManager::HasOnMouse(object::ObjectId id_) {
 
-	if (m_Objects[id]->HasOnMouse() == true) {
+	if (m_pObjects[id_]->HasOnMouse() == true) {
 		return true;
 	}
 	return false;

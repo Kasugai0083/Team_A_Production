@@ -58,12 +58,11 @@ void InitTitleScene()
 
 void MainTitleScene()
 {
-	TransButton()->GameEnd();
+	SceneController()->GameEnd();
 
 	ObjManager()->Update();
-	//ObjManager()->Update(object::CONTINUE);
-	//ObjManager()->Update(object::NEW_GAME);
-
+	
+	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouse(object::NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
 			ChangeSceneStep(SceneStep::EndStep);

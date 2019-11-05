@@ -24,7 +24,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		return 0;
 	}
 
-	while (TransButton()->Research(SceneTransition::Id::Finish) == false)
+	while (SceneController()->IsGetID(SceneTransition::Id::Finish) == false)
 	{
 		bool message_ret = false;
 		MSG msg;

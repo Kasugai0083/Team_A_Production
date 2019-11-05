@@ -15,20 +15,20 @@ public:
 	void Init(object::ObjectId id_, Vec2 pos_);
 
 	void Update();
-	void Update(object::ObjectId id);
+	void Update(object::ObjectId id_);
 
-	Object* GetObj(int id) {
-		return m_Objects[id];
+	Object* GetObj(int id_) {
+		return m_pObjects[id_];
 	}
 
-	void Draw(object::ObjectId id);
+	void Draw(object::ObjectId id_);
 
-	bool HasOnMouse(object::ObjectId id);
+	bool HasOnMouse(object::ObjectId id_);
 
 private:
 	void Release();
 
-	Object* m_Objects[object::MAX_OBJECT_NUM];
+	Object* m_pObjects[object::MAX_OBJECT_NUM];
 };
 
 ObjectManager* ObjManager();

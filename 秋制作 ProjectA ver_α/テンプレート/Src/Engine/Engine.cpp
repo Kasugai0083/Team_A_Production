@@ -4,14 +4,14 @@
 #include "../Texture/Texture.h"
 #include "Engine.h"
 
-bool InitEngine(int width, int height, const char* title_name, bool isFull)
+bool InitEngine(int width_, int height_, const char* titleName_, bool isFull_)
 {
-	if (MakeWindow(width, height, title_name) == false)
+	if (MakeWindow(width_, height_, titleName_) == false)
 	{
 		return false;
 	}
 
-	if (InitGraphics(isFull) == false)
+	if (InitGraphics(isFull_) == false)
 	{
 		return false;
 	}

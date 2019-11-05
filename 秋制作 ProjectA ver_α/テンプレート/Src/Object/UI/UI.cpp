@@ -6,7 +6,7 @@
 #include "../ObjectManager.h"
 
 
-Object* g_TitleLogo;
+Object* g_pTitleLogo;
 
 UI::UI() {
 		m_Pos = {0.f, 0.f};
@@ -27,7 +27,7 @@ void UI::Draw(){
 }
 
 void UI::Update() {
-	if (RectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+	if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 		m_OnMouse = true;
 	}
 	else {

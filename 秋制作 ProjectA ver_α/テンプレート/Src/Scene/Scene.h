@@ -36,25 +36,25 @@ public:
 	};
 
 	SceneTransition() :
-		m_GoLeft(false),
-		m_GoRight(false),
-		m_GoCenter(false),
-		m_GoMonitor(false),
-		m_GoClear(false),
-		m_GoFinish(false)
+		m_CanLeft(false),
+		m_CanRight(false),
+		m_CanCenter(false),
+		m_CanMonitor(false),
+		m_CanClear(false),
+		m_CanFinish(false)
 	{}
-	void Change(Id id, bool go);
-	bool Research(Id id);
+	void SetID(Id id_, bool go_);
+	bool IsGetID(Id id_);
 	void GameEnd();
-	void ChangeStep(Id id, unsigned long key);
+	void ChangeStep(Id id_, unsigned long key_);
 
 private:
-	bool m_GoLeft;
-	bool m_GoRight;
-	bool m_GoCenter;
-	bool m_GoMonitor;
-	bool m_GoClear;
-	bool m_GoFinish;
+	bool m_CanLeft;
+	bool m_CanRight;
+	bool m_CanCenter;
+	bool m_CanMonitor;
+	bool m_CanClear;
+	bool m_CanFinish;
 };
 
 // クラスに格納された変数や関数を操作する関数
@@ -81,7 +81,7 @@ private:
 	int m_MonitorId;
 };
 //モニターの遷移を管理するクラスここまで
-SceneTransition* TransButton();
+SceneTransition* SceneController();
 MonitorTransition* MonitorFunc();
 
 /** @brief シーンステップ */

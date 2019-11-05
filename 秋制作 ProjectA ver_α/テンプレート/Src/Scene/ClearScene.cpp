@@ -36,6 +36,12 @@ SceneId UpdateClearScene()
 void DrawClearScene()
 {
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
+	
+	if (tmp_player == nullptr) {
+		return;
+	}
+
+	//プレイヤー死亡時は背景を変更
 	if (tmp_player->IsDeath() == true) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex));
 	}
@@ -56,7 +62,7 @@ void InitClearScene()
 void MainClearScene()
 {
 
-	TransButton()->GameEnd();
+	SceneController()->GameEnd();
 
 	if (OnMouseDown(Left) == true) {
 		ChangeSceneStep(SceneStep::EndStep);

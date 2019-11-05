@@ -7,7 +7,6 @@ Timer* TimerFunc() {
 
 void Timer::Init() {
 	Timers.m_Scene = 0;
-	Timers.m_Enemy = 0;
 	Timers.m_Clear = 0;
 	Timers.m_MusicBox = 0;
 }
@@ -20,9 +19,6 @@ int Timer::Get(Id id) {
 	case Clear:
 		return Timers.m_Clear;
 		break;	
-	case Enemy:
-		return Timers.m_Enemy;
-		break;
 	case MusicBox:
 		return Timers.m_MusicBox;
 		break;
@@ -39,9 +35,6 @@ void Timer::Set(int val, Id id) {
 		break;
 	case Clear:
 		Timers.m_Clear = val;
-		break;
-	case Enemy:
-		Timers.m_Enemy = val;
 		break;
 	case MusicBox:
 		Timers.m_MusicBox = val;
@@ -60,9 +53,6 @@ void Timer::Update(Id id) {
 	case Clear:
 		Timers.m_Clear++;
 		break;
-	case Enemy:
-		Timers.m_Enemy++;
-		break;
 	case MusicBox:
 		Timers.m_MusicBox++;
 		break;
@@ -80,9 +70,6 @@ void Timer::CountDown(Id id) {
 		break;
 	case Clear:
 		Timers.m_Clear--;
-		break;
-	case Enemy:
-		Timers.m_Enemy--;
 		break;
 	case MusicBox:
 		Timers.m_MusicBox -= 2;

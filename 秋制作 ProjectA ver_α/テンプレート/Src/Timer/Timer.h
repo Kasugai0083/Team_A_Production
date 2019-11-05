@@ -8,8 +8,6 @@ public:
 		Clear,
 		MusicBox,
 
-		//‚¢‚ç‚È‚³‚»‚¤
-		Enemy,
 	};
 
 	struct TIMERS {
@@ -17,8 +15,6 @@ public:
 		int m_Clear;
 		int m_MusicBox;
 
-		//‚¢‚ç‚È‚³‚»‚¤
-		int m_Enemy;
 	};
 
 	void Init();
