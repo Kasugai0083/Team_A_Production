@@ -10,9 +10,27 @@ void Timer::Init() {
 	Timers.m_Clear = 0;
 	Timers.m_MusicBox = 0;
 }
+void Timer::Init(Id id_) {
 
-int Timer::Get(Id id) {
-	switch (id){
+	switch (id_) {
+	case Scene:
+		Timers.m_Scene = 0;	
+		break;
+	case Clear:
+		Timers.m_Clear = 0;
+		break;
+	case MusicBox:
+		Timers.m_MusicBox = 0;
+		break;
+	default:
+		return;
+		break;
+	}
+
+}
+
+int Timer::Get(Id id_) {
+	switch (id_){
 	case Scene:
 		return Timers.m_Scene;
 		break;
@@ -28,16 +46,16 @@ int Timer::Get(Id id) {
 	}
 }
 
-void Timer::Set(int val, Id id) {
-	switch (id) {
+void Timer::Set(int val_, Id id_) {
+	switch (id_) {
 	case Scene:
-		Timers.m_Scene = val;
+		Timers.m_Scene = val_;
 		break;
 	case Clear:
-		Timers.m_Clear = val;
+		Timers.m_Clear = val_;
 		break;
 	case MusicBox:
-		Timers.m_MusicBox = val;
+		Timers.m_MusicBox = val_;
 		break;
 	default:
 		break;
@@ -45,8 +63,8 @@ void Timer::Set(int val, Id id) {
 
 }
 
-void Timer::Update(Id id) {
-	switch (id) {
+void Timer::Update(Id id_) {
+	switch (id_) {
 	case Scene:
 		Timers.m_Scene++;
 		break;

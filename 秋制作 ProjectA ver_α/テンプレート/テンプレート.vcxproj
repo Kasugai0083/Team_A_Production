@@ -209,6 +209,7 @@
     <ClInclude Include="Src\Object\UI\UIvalue.h" />
     <ClInclude Include="Src\Scene\CenterScene.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
+    <ClInclude Include="Src\Scene\GameScene\GameData.h" />
     <ClInclude Include="Src\Scene\LeftScene.h" />
     <ClInclude Include="Src\Scene\MonitorScene.h" />
     <ClInclude Include="Src\Scene\RightScene.h" />

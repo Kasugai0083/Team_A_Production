@@ -10,6 +10,8 @@
 #include "../Character/CharacterManager.h"
 #include "../Object/ObjectManager.h"
 #include "../Object/ObjectID.h"
+#include "GameScene/GameData.h"
+#include "../Object/Item/ItemValue.h"
 
 // ゲーム本編シーンの初期化
 void InitCenterScene();
@@ -37,27 +39,60 @@ SceneId UpdateCenterScene()
 	return SceneId::CenterScene;
 }
 
-void DrawCenterItem() {
-	//キャンドル
-	ObjManager()->Draw(object::CANDLE_SMALL);
-	ObjManager()->Draw(object::FIRE_SMALL);
-	ObjManager()->Draw(object::CANDLE_STAND);
-	ObjManager()->Draw(object::CANDLE_EFFECT);
+#pragma region 描画関数
 
-	//プレイヤーのアイテム
-	ObjManager()->Draw(object::CRYSTAL);
-	ObjManager()->Draw(object::MUSICBOX);
+namespace Draw {
+
+	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+
+	void DrawCenterItem() {
+		//キャンドル
+		ObjManager()->Draw(object::CANDLE_SMALL);
+		ObjManager()->Draw(object::FIRE_SMALL);
+		ObjManager()->Draw(object::CANDLE_STAND);
+		ObjManager()->Draw(object::CANDLE_EFFECT);
+
+		//プレイヤーのアイテム
+		ObjManager()->Draw(object::CRYSTAL);
+		ObjManager()->Draw(object::MUSICBOX);
+
+	}
+
+	void DrawLeftItem() {
+		ObjManager()->Draw(object::CANDLE_BIG);
+		ObjManager()->Draw(object::FIRE_BIG);
+		ObjManager()->Draw(object::CANDLE_STAND);
+		ObjManager()->Draw(object::CANDLE_EFFECT, EffectPos);
+	}
+
+	void DrawRightItem() {
+		ObjManager()->Draw(object::CANDLE_BIG);
+		ObjManager()->Draw(object::FIRE_BIG);
+		ObjManager()->Draw(object::CANDLE_STAND);
+		ObjManager()->Draw(object::CANDLE_EFFECT, EffectPos);
+	}
 
 }
+#pragma endregion
 
 //シーンのメイン処理
 void DrawCenterScene()
 {
 
-	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
-
-	DrawCenterItem();
-
+	switch (PepshiMan()->CurrentViewID()) {
+	case GameData::CENTER:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
+		Draw::DrawCenterItem();
+		break;
+	case GameData::RIGHT:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
+		Draw::DrawRightItem();
+		break;
+	case GameData::LEFT:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
+		Draw::DrawLeftItem();
+		break;
+	}
 	g_Manager.Draw();
 
 }
@@ -66,11 +101,14 @@ void InitCenterScene()
 {
 	TimerFunc()->Set(0 ,Timer::Id::Scene);
 
+
 	ObjManager()->Init();
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 
 	LoadTexture("Res/Game/Center/GameCenterBg.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex);
+	LoadTexture("Res/Game/Left/GameLeftBg.png", TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex);
+	LoadTexture("Res/Game/Right/GameRightBg.png", TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex);
 
 	ChangeSceneStep(SceneStep::MainStep);
 }
@@ -95,9 +133,32 @@ void MainCenterScene()
 
 	//キー入力でシーン遷移
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
-		
-		SceneController()->ChangeStep(SceneTransition::Id::Left, A_KEY);
-		SceneController()->ChangeStep(SceneTransition::Id::Right, D_KEY);
+
+		switch (PepshiMan()->CurrentViewID()) {
+			case GameData::CENTER:
+				if (GetKey(A_KEY) == true) {
+					TimerFunc()->Init(Timer::Id::Scene);
+					PepshiMan()->SetViewID(GameData::LEFT);
+				}
+				if (GetKey(D_KEY) == true) {
+					TimerFunc()->Init(Timer::Id::Scene);
+					PepshiMan()->SetViewID(GameData::RIGHT);
+				}
+			break;
+			case GameData::RIGHT:
+				if (GetKey(A_KEY) == true) {
+					TimerFunc()->Init(Timer::Id::Scene);
+					PepshiMan()->SetViewID(GameData::CENTER);
+				}
+			break;
+			case GameData::LEFT:
+				if (GetKey(D_KEY) == true) {
+					TimerFunc()->Init(Timer::Id::Scene);
+					PepshiMan()->SetViewID(GameData::CENTER);
+				}
+			break;
+		}
+
 		SceneController()->ChangeStep(SceneTransition::Id::Monitor, S_KEY);
 
 	}

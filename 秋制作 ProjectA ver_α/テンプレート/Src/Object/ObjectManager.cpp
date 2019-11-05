@@ -87,6 +87,11 @@ void ObjectManager::Draw(object::ObjectId id_)
 	m_pObjects[id_]->Draw();
 }
 
+void ObjectManager::Draw(object::ObjectId id_, Vec2 pos_)
+{
+	m_pObjects[id_]->Draw(pos_);
+}
+
 
 void ObjectManager::Release()
 {

@@ -18,6 +18,7 @@ public:
 	virtual bool HasOnMouse() = 0;
 	
 	virtual void Draw() {};
+	virtual void Draw(Vec2 pos_) {};
 
 protected:
 

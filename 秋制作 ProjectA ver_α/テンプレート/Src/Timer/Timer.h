@@ -18,10 +18,11 @@ public:
 	};
 
 	void Init();
-	int Get(Id id);
-	void Set(int val, Id id);
-	void Update(Id id);
-	void CountDown(Id id);
+	void Init(Id id_);
+	int Get(Id id_);
+	void Set(int val_, Id id_);
+	void Update(Id id_);
+	void CountDown(Id id_);
 private:
 	TIMERS Timers;
 };

@@ -298,5 +298,8 @@
     <ClInclude Include="Src\Character\Enemy\Id\Puppet.h">
       <Filter>ソース ファイル\Character\Enemy\Id</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Scene\GameScene\GameData.h">
+      <Filter>ソース ファイル\Scene\GameScene</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -121,7 +121,17 @@ public:
 		m_Pos = pos_;
 		m_Size = CANDLE_EFFECT_SIZE;
 	}
+	void Draw(Vec2 pos_)override {
 
+		DrawTexture(pos_.X, pos_.Y, m_pTex);
+
+		Lib::Texture polygon("hoge");
+
+		if (m_OnMouse == true) {
+			DrawAlphaBox2D(polygon, pos_, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		}
+
+	}
 private:
 };
 

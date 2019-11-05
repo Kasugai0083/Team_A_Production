@@ -22,6 +22,7 @@ public:
 	}
 
 	void Draw(object::ObjectId id_);
+	void Draw(object::ObjectId id_, Vec2 pos_);
 
 	bool HasOnMouse(object::ObjectId id_);
 
