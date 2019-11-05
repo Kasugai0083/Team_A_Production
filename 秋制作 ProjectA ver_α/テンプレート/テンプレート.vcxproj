@@ -162,9 +162,7 @@
     <ClCompile Include="Src\Object\UI\UI.cpp" />
     <ClCompile Include="Src\Scene\CenterScene.cpp" />
     <ClCompile Include="Src\Scene\ClearScene.cpp" />
-    <ClCompile Include="Src\Scene\LeftScene.cpp" />
     <ClCompile Include="Src\Scene\MonitorScene.cpp" />
-    <ClCompile Include="Src\Scene\RightScene.cpp" />
     <ClCompile Include="Src\Scene\Scene.cpp" />
     <ClCompile Include="Src\Scene\TitleScene.cpp" />
     <ClCompile Include="Src\Texture\Texture.cpp" />
@@ -210,9 +208,7 @@
     <ClInclude Include="Src\Scene\CenterScene.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
     <ClInclude Include="Src\Scene\GameScene\GameData.h" />
-    <ClInclude Include="Src\Scene\LeftScene.h" />
     <ClInclude Include="Src\Scene\MonitorScene.h" />
-    <ClInclude Include="Src\Scene\RightScene.h" />
     <ClInclude Include="Src\Scene\Scene.h" />
     <ClInclude Include="Src\Scene\TitleScene.h" />
     <ClInclude Include="Src\Texture\Texture.h" />

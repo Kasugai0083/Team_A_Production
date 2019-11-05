@@ -123,12 +123,6 @@ void UpdateScene()
 	case SceneId::CenterScene:
 		scene_id = UpdateCenterScene();
 		break;
-	case SceneId::LeftScene:
-		scene_id = UpdateLeftScene();
-		break;
-	case SceneId::RightScene:
-		scene_id = UpdateRightScene();
-		break;
 	case SceneId::MonitorScene:
 		scene_id = UpdateMonitorScene();
 		break;
@@ -161,12 +155,6 @@ void DrawScene()
 			break;
 		case SceneId::CenterScene:
 			DrawCenterScene();
-			break;
-		case SceneId::LeftScene:
-			DrawLeftScene();
-			break;
-		case SceneId::RightScene:
-			DrawRightScene();
 			break;
 		case SceneId::MonitorScene:
 			DrawMonitorScene();

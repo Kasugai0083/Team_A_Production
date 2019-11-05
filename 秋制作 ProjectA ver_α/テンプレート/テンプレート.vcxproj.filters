@@ -89,13 +89,7 @@
     <ClCompile Include="Src\Scene\CenterScene.cpp">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Scene\LeftScene.cpp">
-      <Filter>ソース ファイル\Scene\GameScene</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Scene\MonitorScene.cpp">
-      <Filter>ソース ファイル\Scene\GameScene</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Scene\RightScene.cpp">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClCompile>
     <ClCompile Include="Src\Scene\ClearScene.cpp">
@@ -187,13 +181,7 @@
     <ClInclude Include="Src\Scene\CenterScene.h">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Scene\LeftScene.h">
-      <Filter>ソース ファイル\Scene\GameScene</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Scene\MonitorScene.h">
-      <Filter>ソース ファイル\Scene\GameScene</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Scene\RightScene.h">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Src\Scene\ClearScene.h">

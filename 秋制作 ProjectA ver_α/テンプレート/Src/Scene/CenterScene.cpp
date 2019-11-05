@@ -131,28 +131,35 @@ void MainCenterScene()
 
 	ObjManager()->Update();
 
+
+	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+
 	//キー入力でシーン遷移
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 
 		switch (PepshiMan()->CurrentViewID()) {
 			case GameData::CENTER:
 				if (GetKey(A_KEY) == true) {
+					ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
 					TimerFunc()->Init(Timer::Id::Scene);
 					PepshiMan()->SetViewID(GameData::LEFT);
 				}
 				if (GetKey(D_KEY) == true) {
+					ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
 					TimerFunc()->Init(Timer::Id::Scene);
 					PepshiMan()->SetViewID(GameData::RIGHT);
 				}
 			break;
 			case GameData::RIGHT:
 				if (GetKey(A_KEY) == true) {
+					ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
 					TimerFunc()->Init(Timer::Id::Scene);
 					PepshiMan()->SetViewID(GameData::CENTER);
 				}
 			break;
 			case GameData::LEFT:
 				if (GetKey(D_KEY) == true) {
+					ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
 					TimerFunc()->Init(Timer::Id::Scene);
 					PepshiMan()->SetViewID(GameData::CENTER);
 				}
@@ -188,14 +195,6 @@ SceneId FinishCenterScene()
 		SceneController()->SetID(SceneTransition::Id::Clear, false);
 		return SceneId::ClearScene;
 	}	
-	else if (SceneController()->IsGetID(SceneTransition::Id::Left) == true) {
-		SceneController()->SetID(SceneTransition::Id::Left, false);
-		return SceneId::LeftScene;
-	}
-	else if (SceneController()->IsGetID(SceneTransition::Id::Right) == true) {
-		SceneController()->SetID(SceneTransition::Id::Right, false);
-		return SceneId::RightScene;
-	}
 	else if (SceneController()->IsGetID(SceneTransition::Id::Monitor) == true) {
 		SceneController()->SetID(SceneTransition::Id::Monitor, false);
 		return SceneId::MonitorScene;
