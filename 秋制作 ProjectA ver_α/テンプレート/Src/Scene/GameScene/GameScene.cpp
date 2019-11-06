@@ -43,6 +43,8 @@ SceneId UpdateGameScene()
 
 namespace Draw {
 
+	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+
 	void DrawCenterItem() {
 		//ƒLƒƒƒ“ƒhƒ‹
 		ObjManager()->Draw(object::CANDLE_SMALL);
@@ -60,14 +62,14 @@ namespace Draw {
 		ObjManager()->Draw(object::CANDLE_BIG);
 		ObjManager()->Draw(object::FIRE_BIG);
 		ObjManager()->Draw(object::CANDLE_STAND);
-		ObjManager()->Draw(object::CANDLE_EFFECT);
+		ObjManager()->Draw(object::CANDLE_EFFECT, EffectPos);
 	}
 
 	void DrawRightItem() {
 		ObjManager()->Draw(object::CANDLE_BIG);
 		ObjManager()->Draw(object::FIRE_BIG);
 		ObjManager()->Draw(object::CANDLE_STAND);
-		ObjManager()->Draw(object::CANDLE_EFFECT);
+		ObjManager()->Draw(object::CANDLE_EFFECT, EffectPos);
 	}
 
 }
