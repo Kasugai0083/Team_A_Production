@@ -160,8 +160,8 @@
     <ClCompile Include="Src\Object\ObjectID.h" />
     <ClCompile Include="Src\Object\ObjectManager.cpp" />
     <ClCompile Include="Src\Object\UI\UI.cpp" />
-    <ClCompile Include="Src\Scene\CenterScene.cpp" />
     <ClCompile Include="Src\Scene\ClearScene.cpp" />
+    <ClCompile Include="Src\Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Src\Scene\MonitorScene.cpp" />
     <ClCompile Include="Src\Scene\Scene.cpp" />
     <ClCompile Include="Src\Scene\TitleScene.cpp" />
@@ -205,9 +205,9 @@
     <ClInclude Include="Src\Object\UI\Id\TitleLogo.h" />
     <ClInclude Include="Src\Object\UI\UI.h" />
     <ClInclude Include="Src\Object\UI\UIvalue.h" />
-    <ClInclude Include="Src\Scene\CenterScene.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
     <ClInclude Include="Src\Scene\GameScene\GameData.h" />
+    <ClInclude Include="Src\Scene\GameScene\GameScene.h" />
     <ClInclude Include="Src\Scene\MonitorScene.h" />
     <ClInclude Include="Src\Scene\Scene.h" />
     <ClInclude Include="Src\Scene\TitleScene.h" />

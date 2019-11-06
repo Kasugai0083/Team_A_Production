@@ -154,7 +154,7 @@ void MainMonitorScene()
 		}
 
 		if (GetKey(W_KEY) == true) {
-			SceneController()->SetID(SceneTransition::Id::Center, true);
+			SceneController()->SetID(SceneTransition::Id::Game, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
@@ -182,9 +182,9 @@ SceneId FinishMonitorScene()
 		SceneController()->SetID(SceneTransition::Id::Clear, false);
 		return SceneId::ClearScene;
 	}
-	else if (SceneController()->IsGetID(SceneTransition::Id::Center) == true) {
-		SceneController()->SetID(SceneTransition::Id::Center, false);
-		return SceneId::CenterScene;
+	else if (SceneController()->IsGetID(SceneTransition::Id::Game) == true) {
+		SceneController()->SetID(SceneTransition::Id::Game, false);
+		return SceneId::GameScene;
 	}
 }
 

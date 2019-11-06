@@ -80,6 +80,6 @@ SceneId FinishTitleScene()
 	g_Manager.Initialize();
 
 	// 次のシーンIDを返す
-	return SceneId::CenterScene;
+	return SceneId::GameScene;
 }
 

@@ -86,9 +86,6 @@
     <ClCompile Include="Src\Engine\Sound.cpp">
       <Filter>ソース ファイル\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Scene\CenterScene.cpp">
-      <Filter>ソース ファイル\Scene\GameScene</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Scene\MonitorScene.cpp">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClCompile>
@@ -146,6 +143,9 @@
     <ClCompile Include="Src\Character\Enemy\Id\Puppet.cpp">
       <Filter>ソース ファイル\Character\Enemy\Id</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Scene\GameScene\GameScene.cpp">
+      <Filter>ソース ファイル\Scene\GameScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Engine\Engine.h">
@@ -177,9 +177,6 @@
     </ClInclude>
     <ClInclude Include="Src\Engine\Sound.h">
       <Filter>ソース ファイル\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Scene\CenterScene.h">
-      <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Src\Scene\MonitorScene.h">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
@@ -287,6 +284,9 @@
       <Filter>ソース ファイル\Character\Enemy\Id</Filter>
     </ClInclude>
     <ClInclude Include="Src\Scene\GameScene\GameData.h">
+      <Filter>ソース ファイル\Scene\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\GameScene\GameScene.h">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
