@@ -161,6 +161,7 @@
     <ClCompile Include="Src\Object\ObjectManager.cpp" />
     <ClCompile Include="Src\Object\UI\UI.cpp" />
     <ClCompile Include="Src\Scene\ClearScene.cpp" />
+    <ClCompile Include="Src\Scene\GameScene\GameData.cpp" />
     <ClCompile Include="Src\Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Src\Scene\MonitorScene.cpp" />
     <ClCompile Include="Src\Scene\Scene.cpp" />

@@ -135,7 +135,7 @@ void MainGameScene()
 	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
 
 		switch (PepshiMan()->CurrentViewID()) {
-		case GameData::CENTER:
+		case GameData::SubGameScene::CENTER:
 			if (GetKey(A_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
 				TimerFunc()->Init(Timer::Id::Scene);

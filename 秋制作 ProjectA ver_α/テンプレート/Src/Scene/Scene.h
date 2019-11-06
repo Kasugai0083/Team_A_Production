@@ -27,6 +27,7 @@ enum SceneId
 class SceneTransition {
 public:
 	enum Id {
+		Game,
 		Left,
 		Right,
 		Center,

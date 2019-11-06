@@ -3,6 +3,7 @@
 #include "../Engine/Input.h"
 #include "TitleScene.h"
 #include "CenterScene.h"
+#include "GameScene/GameScene.h"
 #include "LeftScene.h"
 #include "RightScene.h"
 #include "MonitorScene.h"
@@ -120,8 +121,8 @@ void UpdateScene()
 	case SceneId::TitleScene:
 		scene_id = UpdateTitleScene();
 		break;
-	case SceneId::CenterScene:
-		scene_id = UpdateCenterScene();
+	case SceneId::GameScene:
+		scene_id = UpdateGameScene();
 		break;
 	case SceneId::MonitorScene:
 		scene_id = UpdateMonitorScene();
@@ -153,8 +154,8 @@ void DrawScene()
 		case SceneId::TitleScene:
 			DrawTitleScene();
 			break;
-		case SceneId::CenterScene:
-			DrawCenterScene();
+		case SceneId::GameScene:
+			DrawGameScene();
 			break;
 		case SceneId::MonitorScene:
 			DrawMonitorScene();

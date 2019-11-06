@@ -5,6 +5,7 @@
 #include "../../../Engine/Calculation.h"
 #include "../../../Timer/Timer.h"
 #include "../../../Engine/Input.h"
+#include "../../../Scene/GameScene/GameData.h"
 
 const int c_iMagnification = 6;
 
@@ -52,6 +53,7 @@ public:
 private:
 
 };
+
 
 class MusicBox : public Item {
 public:
@@ -102,20 +104,22 @@ public:
 
 		static bool CountDown = false;
 
-		if (GetCurrentSceneId() == CenterScene) {
-			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
-				m_OnMouse = true;
-				if (OnMousePush(Left) == true) {
-					TimerFunc()->CountDown(Timer::Id::MusicBox);
-					CountDown = true;
+		if (GetCurrentSceneId() == GameScene) {
+			if (PepshiMan()->CurrentViewID() == GameData::CENTER) {
+				if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+					m_OnMouse = true;
+					if (OnMousePush(Left) == true) {
+						TimerFunc()->CountDown(Timer::Id::MusicBox);
+						CountDown = true;
+					}
+					else {
+						CountDown = false;
+					}
 				}
 				else {
+					m_OnMouse = false;
 					CountDown = false;
 				}
-			}
-			else {
-				m_OnMouse = false;
-				CountDown = false;
 			}
 		}
 

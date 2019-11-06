@@ -1,4 +1,4 @@
-
+#pragma once
 
 struct GameData {
 	
@@ -23,5 +23,7 @@ struct GameData {
 	SubGameScene m_ViewID;
 
 };
-static GameData g_GameData;
-GameData* PepshiMan() { return &g_GameData; }
+
+
+
+GameData* PepshiMan();
