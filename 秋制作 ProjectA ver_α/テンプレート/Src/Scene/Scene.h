@@ -37,6 +37,7 @@ public:
 	};
 
 	SceneTransition() :
+		m_CanGame(false),
 		m_CanLeft(false),
 		m_CanRight(false),
 		m_CanCenter(false),
@@ -50,6 +51,7 @@ public:
 	void ChangeStep(Id id_, unsigned long key_);
 
 private:
+	bool m_CanGame;
 	bool m_CanLeft;
 	bool m_CanRight;
 	bool m_CanCenter;

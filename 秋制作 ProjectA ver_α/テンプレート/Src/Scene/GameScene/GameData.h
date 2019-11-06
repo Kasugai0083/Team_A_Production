@@ -24,6 +24,4 @@ struct GameData {
 
 };
 
-
-
 GameData* PepshiMan();

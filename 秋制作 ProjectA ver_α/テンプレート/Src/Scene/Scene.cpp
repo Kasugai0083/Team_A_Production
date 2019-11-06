@@ -36,6 +36,9 @@ void SceneTransition::SetID(Id id_, bool go_) {
 	case Finish:
 		m_CanFinish = go_;
 		break;
+	case Game:
+		m_CanGame = go_;
+		break;
 	default:
 		break;
 	}
@@ -60,6 +63,9 @@ bool SceneTransition::IsGetID(Id id_) {
 		break;
 	case Finish:
 		return m_CanFinish;
+		break;
+	case Game:
+		return m_CanGame;
 		break;
 	default:
 		break;

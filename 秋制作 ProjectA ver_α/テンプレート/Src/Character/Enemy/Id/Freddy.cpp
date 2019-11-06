@@ -2,6 +2,8 @@
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
+#include "../../../Scene/GameScene/GameData.h"
+
 
 void Freddy::Init()
 {
@@ -19,11 +21,12 @@ void Freddy::Update()
 
 		return;
 	}
+
 #pragma endregion
 
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 1800) {
+	if (m_IsDeath == true && m_iFrameCount >= 600) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
@@ -91,7 +94,7 @@ void Freddy::LoadTex(SceneId id_)
 {
 	switch (id_)
 	{
-	case CenterScene:
+	case GameScene:
 		LoadTexture("Res/Game/Enemy/Freddy.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy);
 		break;
 
@@ -105,6 +108,13 @@ void Freddy::LoadTex(SceneId id_)
 
 void Freddy::Draw()
 {
+	// ŽQÆ—p•Ï”
+	//GameData* pGamedate = &g_GameData;
+	//if (pGamedate == nullptr) {
+
+	//	return;
+	//}
+
 	if (m_IsDeath == true) { return; }
 	// Ž€‚ñ‚Å‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢
 
@@ -121,7 +131,8 @@ void Freddy::Draw()
 
 	case RoomID::CENTER_DUCT:
 
-		if (GetCurrentSceneId() == SceneId::CenterScene) {
+		if (PepshiMan()->CurrentViewID() == GameData::SubGameScene::CENTER
+			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
@@ -129,7 +140,8 @@ void Freddy::Draw()
 
 	case RoomID::PLAYER_ROOM:
 
-		if (GetCurrentSceneId() == SceneId::CenterScene) {
+		if (PepshiMan()->CurrentViewID() == GameData::SubGameScene::CENTER
+			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(960.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}

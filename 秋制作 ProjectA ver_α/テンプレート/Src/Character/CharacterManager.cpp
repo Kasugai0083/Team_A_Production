@@ -14,7 +14,7 @@ CharacterManager g_Manager;
 CharacterManager::CharacterManager() {
 	m_Charas[PLAYER] = new Player;	//アルファ
 
-	m_Charas[FREDDY] = new Freddy;		//アルファ
+	m_Charas[FREDDY] = new Freddy();		//アルファ
 	m_Charas[BONNIE] = new Bonnie;
 	m_Charas[CHICA]  = new Chica;		//アルファ
 	m_Charas[FOXY]   = new Foxy;
