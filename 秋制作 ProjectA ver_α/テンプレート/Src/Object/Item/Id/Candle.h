@@ -2,6 +2,9 @@
 
 #include "../Item.h"
 #include "../../../Scene/Scene.h"
+#include "../../../Scene/GameScene/GameData.h"
+#include "../../../Engine/Input.h"
+#include "../../../Engine/Calculation.h"
 
 class Candle : public Item {
 public:
@@ -108,6 +111,55 @@ public:
 			m_Size = CANDLE_EFFECT_SIZE;
 			break;
 		}
+	}
+	void Update()override {
+
+		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+			m_OnMouse = true;
+			if (OnMouseDown(Left) == true) {
+				switch (PepshiMan()->CurrentViewID()) 
+				{
+					case GameData::CENTER:
+						if (m_HasCenterCaLight == false) {
+							m_HasCenterCaLight = true;
+						}
+						else {
+							m_HasCenterCaLight = false;
+						}
+					break;
+					case GameData::RIGHT:
+						if (m_HasRightCaLight == false) {
+							m_HasRightCaLight = true;
+						}
+						else {
+							m_HasRightCaLight = false;
+						}
+					break;
+					case GameData::LEFT:
+						if (m_HasLeftCaLight == false) {
+							m_HasLeftCaLight = true;
+						}
+						else {
+							m_HasLeftCaLight = false;
+						}				
+						break;
+				}
+			}
+		}
+		else {
+			m_OnMouse = false;
+		}
+
+	}
+
+	bool HasCenterCaLight()override{
+		return m_HasCenterCaLight;
+	}
+	bool HasRightCaLight()override{
+		return m_HasRightCaLight;
+	}
+	bool HasLeftCaLight()override{
+		return m_HasLeftCaLight;
 	}
 
 private:

@@ -23,6 +23,10 @@ public:
 	virtual void Draw() {};
 	virtual void Draw(Vec2 pos_) {};
 
+	virtual bool HasCenterCaLight() {};
+	virtual bool HasRightCaLight() {};
+	virtual bool HasLeftCaLight() {};
+
 protected:
 
 };
