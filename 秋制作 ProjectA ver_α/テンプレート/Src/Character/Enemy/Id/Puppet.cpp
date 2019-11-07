@@ -17,19 +17,22 @@ void Puppet::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && TimerFunc()->Get(Timer::Id::MusicBox) >= END_STEP) {
+		Timer* pTimerInstance = Timer::GetInstance();
 
-		m_iFrameCount = 0;
-		m_IsDeath     = false;
-	}
+		if (m_IsDeath == true && pTimerInstance->GetTime(Timer::Id::MUSICBOX) >= END_STEP) {
 
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+			m_iFrameCount = 0;
+			m_IsDeath = false;
+		}
 
-	if (m_iFrameCount >= 300) {
-		// ↓ゲームオーバー処理↓ //
-		m_HasKill = true;
-	}
+		if (m_IsDeath == true) { return; }
+		// 死んでたらここより下の処理にはいかない
+
+		if (m_iFrameCount >= 300) {
+			// ↓ゲームオーバー処理↓ //
+			m_HasKill = true;
+		}
+
 }
 
 void Puppet::LoadTex(SceneId id_)

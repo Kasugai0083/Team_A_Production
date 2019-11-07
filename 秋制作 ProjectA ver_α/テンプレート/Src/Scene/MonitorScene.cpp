@@ -100,7 +100,10 @@ void DrawMonitorScene()
 
 void InitMonitorScene()
 {
-	TimerFunc()->Set(0, Timer::Id::Scene);
+
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Init(Timer::Id::SCENE);
+
 
 	LoadMonitor();
 
@@ -123,8 +126,9 @@ void MainMonitorScene()
 	ObjManager()->Update(object::RIGHT_DUCT);
 
 	//タイマーのアップデート
-	TimerFunc()->Update(Timer::Id::Scene);
-	TimerFunc()->Update(Timer::Id::MusicBox);
+
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Update();
 
 	SceneController()->GameEnd();
 
@@ -132,24 +136,24 @@ void MainMonitorScene()
 
 
 	//キー入力でシーン遷移
-	if (TimerFunc()->Get(Timer::Id::Scene) >= SCENE_WAIT) {
+	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
 		if (ObjManager()->HasOnMouse(object::MONITOR_SPOWN) == true) {
 			if (OnMouseDown(Left) == true) {
 				MonitorFunc()->Set(MonitorTransition::Id::Spown);
-				TimerFunc()->Set(0, Timer::Id::Scene);
+				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 		if (ObjManager()->HasOnMouse(object::LEFT_DUCT) == true) {
 			if (OnMouseDown(Left) == true) {
 				MonitorFunc()->Set(MonitorTransition::Id::Left_Duct);
-				TimerFunc()->Set(0, Timer::Id::Scene);
+				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 		if (ObjManager()->HasOnMouse(object::RIGHT_DUCT) == true) {
 			if (OnMouseDown(Left) == true) {
 				MonitorFunc()->Set(MonitorTransition::Id::Right_Duct);
-				TimerFunc()->Set(0, Timer::Id::Scene);
+				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 
@@ -160,7 +164,7 @@ void MainMonitorScene()
 	}
 
 	//クリア時間経過でシーン遷移
-	if (TimerFunc()->Get(Timer::Id::Clear) >= CLEAR_TIME) {
+	if (pTimerInstance->GetTime(Timer::Id::CLEAR) >= CLEAR_TIME) {
 		if (tmp_player->IsDeath() == false) {
 			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
@@ -172,6 +176,7 @@ void MainMonitorScene()
 		SceneController()->SetID(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}
+
 }
 
 SceneId FinishMonitorScene()

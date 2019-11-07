@@ -5,6 +5,7 @@
 #include "Engine/Input.h"
 #include "Engine/Graphics.h"
 #include "Engine/Lib/Lib.h"
+#include "Timer/Timer.h"
 
 
 enum WINDOW_MODE {
@@ -17,42 +18,46 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	LPSTR     lpCmpLine,
 	INT       nCmdShow)
 {
-
-	// エンジンの初期化
-	if (InitEngine(1920, 1080, "FaNF2", WINDOWED) == false)
+	Timer::CreateInstance();
 	{
-		return 0;
-	}
-
-	while (SceneController()->IsGetID(SceneTransition::Id::Finish) == false)
-	{
-		bool message_ret = false;
-		MSG msg;
-
-
-
-		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+		// エンジンの初期化
+		if (InitEngine(1920, 1080, "FaNF2", WINDOWED) == false)
 		{
-			if (msg.message == WM_QUIT)
+			return 0;
+		}
+
+		while (SceneController()->IsGetID(SceneTransition::Id::Finish) == false)
+		{
+			bool message_ret = false;
+			MSG msg;
+
+
+
+			if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 			{
-				break;
+				if (msg.message == WM_QUIT)
+				{
+					break;
+				}
+				else
+				{
+					TranslateMessage(&msg);
+					DispatchMessage(&msg);
+
+				}
 			}
 			else
 			{
-				TranslateMessage(&msg);
-				DispatchMessage(&msg);
+
+
+				UpdateScene();
+
 
 			}
 		}
-		else
-		{
-
-			UpdateScene();
-
-		}
+		EndEngine();
 	}
-	EndEngine();
-
+	Timer::DestroyInstance();
 	return 0;
 }
 

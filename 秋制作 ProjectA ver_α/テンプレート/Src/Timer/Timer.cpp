@@ -1,9 +1,12 @@
 #include "Timer.h"
 
-Timer* TimerFunc() { 
-	static Timer g_Timer;
-	return &g_Timer; 
-};
+//Timer* TimerFunc() { 
+//	static Timer g_Timer;
+//	return &g_Timer; 
+//};
+
+//staticなメンバ変数を初期化【コンストラクタではやらない】
+Timer* Timer::p_Instance = nullptr;
 
 void Timer::Init() {
 	Timers.m_Scene = 0;
@@ -13,13 +16,13 @@ void Timer::Init() {
 void Timer::Init(Id id_) {
 
 	switch (id_) {
-	case Scene:
+	case SCENE:
 		Timers.m_Scene = 0;	
 		break;
-	case Clear:
+	case CLEAR:
 		Timers.m_Clear = 0;
 		break;
-	case MusicBox:
+	case MUSICBOX:
 		Timers.m_MusicBox = 0;
 		break;
 	default:
@@ -29,15 +32,15 @@ void Timer::Init(Id id_) {
 
 }
 
-int Timer::Get(Id id_) {
+int Timer::GetTime(Id id_) {
 	switch (id_){
-	case Scene:
+	case SCENE:
 		return Timers.m_Scene;
 		break;
-	case Clear:
+	case CLEAR:
 		return Timers.m_Clear;
 		break;	
-	case MusicBox:
+	case MUSICBOX:
 		return Timers.m_MusicBox;
 		break;
 	default:
@@ -45,33 +48,23 @@ int Timer::Get(Id id_) {
 		break;
 	}
 }
+void Timer::Update() {
 
-void Timer::Set(int val_, Id id_) {
-	switch (id_) {
-	case Scene:
-		Timers.m_Scene = val_;
-		break;
-	case Clear:
-		Timers.m_Clear = val_;
-		break;
-	case MusicBox:
-		Timers.m_MusicBox = val_;
-		break;
-	default:
-		break;
-	}
+	Timers.m_Scene++;
+	Timers.m_Clear++;
+	Timers.m_MusicBox++;
 
 }
 
 void Timer::Update(Id id_) {
 	switch (id_) {
-	case Scene:
+	case SCENE:
 		Timers.m_Scene++;
 		break;
-	case Clear:
+	case CLEAR:
 		Timers.m_Clear++;
 		break;
-	case MusicBox:
+	case MUSICBOX:
 		Timers.m_MusicBox++;
 		break;
 	default:
@@ -81,22 +74,9 @@ void Timer::Update(Id id_) {
 }
 
 
-void Timer::CountDown(Id id) {
-	switch (id) {
-	case Scene:
-		Timers.m_Scene--;
-		break;
-	case Clear:
-		Timers.m_Clear--;
-		break;
-	case MusicBox:
-		Timers.m_MusicBox -= 2;
-		if (Timers.m_MusicBox < 0) {
-			Timers.m_MusicBox = 0;
-		}
-		break;
-	default:
-		break;
+void Timer::WindMusicBox() {
+	Timers.m_MusicBox -= 3;
+	if (Timers.m_MusicBox < 0) {
+		Timers.m_MusicBox = 0;
 	}
-
 }

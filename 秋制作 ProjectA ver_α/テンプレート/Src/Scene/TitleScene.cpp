@@ -76,7 +76,9 @@ SceneId FinishTitleScene()
 	ReleaseCategoryTexture(SceneId::TitleScene);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
 
-	TimerFunc()->Init();
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Init();
+
 	g_Manager.Initialize();
 
 	// 次のシーンIDを返す

@@ -52,11 +52,15 @@ void DrawClearScene()
 
 void InitClearScene()
 {
-	TimerFunc()->Init();
+
+	Timer* pTimerInstance = Timer::GetInstance();
+
+	pTimerInstance->Init();
 
 	LoadTexture("Res/End/EndBg.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex);
 	LoadTexture("Res/End/GameOver.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex);
 	ChangeSceneStep(SceneStep::MainStep);
+
 }
 
 void MainClearScene()
