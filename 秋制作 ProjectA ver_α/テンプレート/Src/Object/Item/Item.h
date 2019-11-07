@@ -24,6 +24,7 @@ protected:
 	Vec2 m_Pos;
 	Size m_Size;
 	Size m_Frame;
+
 };
 
 #endif

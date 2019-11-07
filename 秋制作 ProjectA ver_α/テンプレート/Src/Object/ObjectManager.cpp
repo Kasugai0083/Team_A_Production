@@ -33,10 +33,11 @@ ObjectManager::ObjectManager() {
 		m_pObjects[object::PLAYER_ROOM] = new PlayerRoom;
 		m_pObjects[object::CLEAR_LOGO] = new TitleLogo;
 		  
-		m_pObjects[object::CANDLE_BIG] = new CandleBig;
-		m_pObjects[object::CANDLE_SMALL] = new CandleSmall;
-		m_pObjects[object::CANDLE_EFFECT] = new CandleEffect;
-		m_pObjects[object::CANDLE_STAND] = new CandleStand;
+		m_pObjects[object::CANDLE_BIG] = new Candle;
+		m_pObjects[object::CANDLE_SMALL] = new Candle;
+		m_pObjects[object::CANDLE_EFFECT] = new Candle;
+		m_pObjects[object::CANDLE_STAND] = new Candle;
+
 		m_pObjects[object::FIRE_BIG] = new FireBig;
 		m_pObjects[object::FIRE_SMALL] = new FireSmall;
 		m_pObjects[object::CRYSTAL] = new Crystal;
@@ -55,16 +56,21 @@ ObjectManager::~ObjectManager() {
 }
 
 void ObjectManager::Init() {
-
-
 	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
 		m_pObjects[i]->Init();
 	}
+
+	m_pObjects[object::CANDLE_BIG]->Init(object::CANDLE_BIG);
+	m_pObjects[object::CANDLE_SMALL]->Init(object::CANDLE_SMALL);
+	m_pObjects[object::CANDLE_EFFECT]->Init(object::CANDLE_EFFECT);
+	m_pObjects[object::CANDLE_STAND]->Init(object::CANDLE_STAND);
+
 }
 
 void ObjectManager::Init(object::ObjectId id_, Vec2 pos_) {
 
 	m_pObjects[id_]->Init(pos_);
+	m_pObjects[id_]->Init(id_, pos_);
 
 }
 

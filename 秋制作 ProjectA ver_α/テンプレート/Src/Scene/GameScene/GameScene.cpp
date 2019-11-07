@@ -99,7 +99,6 @@ void DrawGameScene()
 void InitGameScene()
 {
 
-
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
 
@@ -135,67 +134,67 @@ void MainGameScene()
 
 	//タイマーのアップデート
 
-		Timer* pTimerInstance = Timer::GetInstance();
-		pTimerInstance->Update();
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Update();
 
-		SceneController()->GameEnd();
+	SceneController()->GameEnd();
 
-		g_Manager.Update();
+	g_Manager.Update();
 
-		ObjManager()->Update();
+	ObjManager()->Update();
 
 
-		Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
 
-		//キー入力でシーン遷移
-		if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
+	//キー入力でシーン遷移
+	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-			switch (PepshiMan()->CurrentViewID()) {
-			case GameData::SubGameScene::CENTER:
-				if (GetKey(A_KEY) == true) {
-					ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
-					pTimerInstance->Init(Timer::Id::SCENE);
-					PepshiMan()->SetViewID(GameData::LEFT);
-				}
-				if (GetKey(D_KEY) == true) {
-					ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
-					pTimerInstance->Init(Timer::Id::SCENE);
-					PepshiMan()->SetViewID(GameData::RIGHT);
-				}
-				break;
-			case GameData::RIGHT:
-				if (GetKey(A_KEY) == true) {
-					ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
-					pTimerInstance->Init(Timer::Id::SCENE);
-					PepshiMan()->SetViewID(GameData::CENTER);
-				}
-				break;
-			case GameData::LEFT:
-				if (GetKey(D_KEY) == true) {
-					ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
-					pTimerInstance->Init(Timer::Id::SCENE);
-					PepshiMan()->SetViewID(GameData::CENTER);
-				}
-				break;
+		switch (PepshiMan()->CurrentViewID()) {
+		case GameData::SubGameScene::CENTER:
+			if (GetKey(A_KEY) == true) {
+				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
+				pTimerInstance->Init(Timer::Id::SCENE);
+				PepshiMan()->SetViewID(GameData::LEFT);
 			}
-
-			SceneController()->ChangeStep(SceneTransition::Id::Monitor, S_KEY);
-
+			if (GetKey(D_KEY) == true) {
+				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
+				pTimerInstance->Init(Timer::Id::SCENE);
+				PepshiMan()->SetViewID(GameData::RIGHT);
+			}
+			break;
+		case GameData::RIGHT:
+			if (GetKey(A_KEY) == true) {
+				ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
+				pTimerInstance->Init(Timer::Id::SCENE);
+				PepshiMan()->SetViewID(GameData::CENTER);
+			}
+			break;
+		case GameData::LEFT:
+			if (GetKey(D_KEY) == true) {
+				ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
+				pTimerInstance->Init(Timer::Id::SCENE);
+				PepshiMan()->SetViewID(GameData::CENTER);
+			}
+			break;
 		}
 
-		//クリア時間経過でシーン遷移
-		if (pTimerInstance->GetTime(Timer::Id::CLEAR) >= CLEAR_TIME) {
-			if (tmp_player->IsDeath() == false) {
-				SceneController()->SetID(SceneTransition::Id::Clear, true);
-				ChangeSceneStep(SceneStep::EndStep);
-			}
-		}
+		SceneController()->ChangeStep(SceneTransition::Id::Monitor, S_KEY);
 
-		//プレイヤーの死亡でシーン遷移
-		if (tmp_player->IsDeath() == true) {
+	}
+
+	//クリア時間経過でシーン遷移
+	if (pTimerInstance->GetTime(Timer::Id::CLEAR) >= CLEAR_TIME) {
+		if (tmp_player->IsDeath() == false) {
 			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
+	}
+
+	//プレイヤーの死亡でシーン遷移
+	if (tmp_player->IsDeath() == true) {
+		SceneController()->SetID(SceneTransition::Id::Clear, true);
+		ChangeSceneStep(SceneStep::EndStep);
+	}
 
 }
 //シーンのメイン処理ここまで
