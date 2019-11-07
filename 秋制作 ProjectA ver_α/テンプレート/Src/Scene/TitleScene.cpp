@@ -44,6 +44,8 @@ void DrawTitleScene()
 	ObjManager()->Draw(object::NEW_GAME);
 	ObjManager()->Draw(object::CONTINUE);
 
+	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),100.f, 100.f);
+
 }
 
 void InitTitleScene()
@@ -52,6 +54,7 @@ void InitTitleScene()
 	ObjManager()->Init();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
+	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
 
 	ChangeSceneStep(SceneStep::MainStep);
 }

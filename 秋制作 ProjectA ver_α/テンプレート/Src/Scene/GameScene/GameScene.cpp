@@ -94,6 +94,8 @@ void DrawGameScene()
 	}
 	g_Manager.Draw();
 
+	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFreeTex), 100.f, 100.f);
+
 }
 
 void InitGameScene()
@@ -120,6 +122,7 @@ void InitGameScene()
 	LoadTexture("Res/Game/Center/GameCenterBg.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex);
 	LoadTexture("Res/Game/Left/GameLeftBg.png", TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex);
 	LoadTexture("Res/Game/Right/GameRightBg.png", TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex);
+	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFreeTex);
 
 	ChangeSceneStep(SceneStep::MainStep);
 }

@@ -23,9 +23,9 @@ public:
 	virtual void Draw() {};
 	virtual void Draw(Vec2 pos_) {};
 
-	virtual bool HasCenterCaLight() {};
-	virtual bool HasRightCaLight() {};
-	virtual bool HasLeftCaLight() {};
+	virtual bool HasCenterCaLight() { return 0; };
+	virtual bool HasRightCaLight() { return 0; };
+	virtual bool HasLeftCaLight() { return 0; };
 
 protected:
 

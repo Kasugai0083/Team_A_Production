@@ -1,6 +1,6 @@
 #pragma once
 #include "Object.h"
-
+#include "../Scene/GameScene/GameData.h"
 //キャラクタークラスの管理
 
 
