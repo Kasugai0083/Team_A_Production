@@ -46,10 +46,12 @@ namespace Draw {
 
 	void DrawCenterItem() {
 		//キャンドル
+		if (ObjManager()->HasCaLight(GameData::CENTER) == true) {
+			ObjManager()->Draw(object::FIRE_SMALL);
+			ObjManager()->Draw(object::CANDLE_EFFECT);
+		}
 		ObjManager()->Draw(object::CANDLE_SMALL);
-		ObjManager()->Draw(object::FIRE_SMALL);
 		ObjManager()->Draw(object::CANDLE_STAND);
-		ObjManager()->Draw(object::CANDLE_EFFECT);
 
 		//プレイヤーのアイテム
 		ObjManager()->Draw(object::CRYSTAL);
@@ -58,17 +60,23 @@ namespace Draw {
 	}
 
 	void DrawLeftItem() {
+		if (ObjManager()->HasCaLight(GameData::LEFT) == true) {
+			ObjManager()->Draw(object::FIRE_BIG);
+			ObjManager()->Draw(object::CANDLE_EFFECT);
+		}
 		ObjManager()->Draw(object::CANDLE_BIG);
-		ObjManager()->Draw(object::FIRE_BIG);
 		ObjManager()->Draw(object::CANDLE_STAND);
-		ObjManager()->Draw(object::CANDLE_EFFECT);
+
 	}
 
 	void DrawRightItem() {
+		if (ObjManager()->HasCaLight(GameData::RIGHT) == true) {
+			ObjManager()->Draw(object::FIRE_BIG);
+			ObjManager()->Draw(object::CANDLE_EFFECT);
+		}
 		ObjManager()->Draw(object::CANDLE_BIG);
-		ObjManager()->Draw(object::FIRE_BIG);
 		ObjManager()->Draw(object::CANDLE_STAND);
-		ObjManager()->Draw(object::CANDLE_EFFECT);
+
 	}
 
 }
@@ -77,6 +85,7 @@ namespace Draw {
 //シーンのメイン処理
 void DrawGameScene()
 {
+
 
 	switch (PepshiMan()->CurrentViewID()) {
 	case GameData::CENTER:
