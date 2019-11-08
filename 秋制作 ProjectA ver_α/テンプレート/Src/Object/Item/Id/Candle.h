@@ -6,15 +6,21 @@
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Calculation.h"
 
+struct Candller {
+	 bool CenterCaLight;
+	 bool RightCaLight;
+	 bool LeftCaLight;
+};
+
 class Candle : public Item {
 public:
 
-	Candle() :
-		m_HasCenterCaLight(false),
-		m_HasRightCaLight(false),
-		m_HasLeftCaLight(false)
-	{}
-
+	Candle() {
+		CenterCaLight = false;
+		LeftCaLight = false;
+		RightCaLight = false;
+	};
+	void Init()override {};
 	void Init(object::ObjectId id_)override{
 		switch (id_) {
 		case object::CANDLE_BIG:
@@ -123,27 +129,27 @@ public:
 				switch (PepshiMan()->CurrentViewID()) 
 				{
 					case GameData::CENTER:
-						if (m_HasCenterCaLight == false) {
-							m_HasCenterCaLight = true;
+						if (CenterCaLight == false) {
+							CenterCaLight = true;
 						}
 						else {
-							m_HasCenterCaLight = false;
+							CenterCaLight = false;
 						}
 					break;
 					case GameData::RIGHT:
-						if (m_HasRightCaLight == false) {
-							m_HasRightCaLight = true;
+						if (RightCaLight == false) {
+							RightCaLight = true;
 						}
 						else {
-							m_HasRightCaLight = false;
+							RightCaLight = false;
 						}
 					break;
 					case GameData::LEFT:
-						if (m_HasLeftCaLight == false) {
-							m_HasLeftCaLight = true;
+						if (LeftCaLight == false) {
+							LeftCaLight = true;
 						}
 						else {
-							m_HasLeftCaLight = false;
+							LeftCaLight = false;
 						}				
 						break;
 				}
@@ -155,21 +161,25 @@ public:
 
 	}
 
-	bool HasCenterCaLight()override{
+	bool* HasCenterCaLight()override{
+		m_HasCenterCaLight = &CenterCaLight;
 		return m_HasCenterCaLight;
 	}
-	bool HasRightCaLight()override{
+	bool* HasRightCaLight()override{
+		m_HasRightCaLight = &RightCaLight;
 		return m_HasRightCaLight;
 	}
-	bool HasLeftCaLight()override{
+	bool* HasLeftCaLight()override{
+		m_HasLeftCaLight = &LeftCaLight;
 		return m_HasLeftCaLight;
 	}
 
 private:
-	
-	bool m_HasCenterCaLight;
-	bool m_HasRightCaLight;
-	bool m_HasLeftCaLight;
+
+
+	bool* m_HasCenterCaLight;
+	bool* m_HasRightCaLight;
+	bool* m_HasLeftCaLight;
 
 };
 

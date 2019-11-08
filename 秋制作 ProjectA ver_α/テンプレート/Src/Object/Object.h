@@ -23,15 +23,15 @@ public:
 	virtual void Draw() {};
 	virtual void Draw(Vec2 pos_) {};
 
-	virtual bool HasCenterCaLight() { return m_HasCenterCaLight; };
-	virtual bool HasRightCaLight() { return m_HasRightCaLight; };
-	virtual bool HasLeftCaLight() { return m_HasLeftCaLight; };
+	virtual bool* HasCenterCaLight() { return m_HasCenterCaLight; };
+	virtual bool* HasRightCaLight() { return m_HasRightCaLight; };
+	virtual bool* HasLeftCaLight() { return m_HasLeftCaLight; };
 
 protected:
 
 private:
 
-	bool m_HasCenterCaLight;
-	bool m_HasRightCaLight;
-	bool m_HasLeftCaLight;
+	bool* m_HasCenterCaLight;
+	bool* m_HasRightCaLight;
+	bool* m_HasLeftCaLight;
 };
