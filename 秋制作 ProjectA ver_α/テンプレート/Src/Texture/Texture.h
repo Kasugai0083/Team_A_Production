@@ -36,6 +36,11 @@ enum GameCategoryTextureList
 	GameCrystalTex,
 	GameMusicBoxTex,
 
+	GameLeftShojiFrontTex,
+	GameLeftShojiBackTex,
+	GameRightShojiFrontTex,
+	GameRightShojiBackTex,
+
 	GameFreeTex,
 
 	GameTextureMax,			//!< リスト最大数

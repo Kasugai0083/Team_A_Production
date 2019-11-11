@@ -7,7 +7,7 @@
 #include "../../../Engine/Input.h"
 #include "../../../Scene/GameScene/GameData.h"
 
-const int c_iMagnification = 2;
+const int c_iMagnification = 20;
 
 enum MusicBoxStep {
 	STEP_1 = c_iMagnification * 100,

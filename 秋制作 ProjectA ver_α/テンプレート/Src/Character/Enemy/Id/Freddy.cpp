@@ -26,7 +26,7 @@ void Freddy::Update()
 
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 600) {
+	if (m_IsDeath == true && m_iFrameCount >= 6000) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
