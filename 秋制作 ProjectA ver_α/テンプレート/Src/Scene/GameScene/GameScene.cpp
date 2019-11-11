@@ -40,16 +40,21 @@ SceneId UpdateGameScene()
 }
 
 #pragma region •`‰æŠÖ”
+static Candller CandllerInstance = {true, true, true};
 
 namespace Draw {
 
+	
 
 	void DrawCenterItem() {
+		ObjManager()->SetCandller(CandllerInstance);
+
 		//ƒLƒƒƒ“ƒhƒ‹
-		if (ObjManager()->HasCaLight(GameData::CENTER) == true) {
+		if (CandllerInstance.CenterCaLight == true) {
 			ObjManager()->Draw(object::FIRE_SMALL);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
+
 		ObjManager()->Draw(object::CANDLE_SMALL);
 		ObjManager()->Draw(object::CANDLE_STAND);
 
@@ -60,7 +65,9 @@ namespace Draw {
 	}
 
 	void DrawLeftItem() {
-		if (ObjManager()->HasCaLight(GameData::LEFT) == true) {
+		ObjManager()->SetCandller(CandllerInstance);
+
+		if (CandllerInstance.LeftCaLight == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -70,7 +77,9 @@ namespace Draw {
 	}
 
 	void DrawRightItem() {
-		if (ObjManager()->HasCaLight(GameData::RIGHT) == true) {
+		ObjManager()->SetCandller(CandllerInstance);
+
+		if (CandllerInstance.RightCaLight == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -138,6 +147,8 @@ void InitGameScene()
 
 void MainGameScene()
 {
+	ObjManager()->SetCandller(CandllerInstance);
+
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
 
 	if (tmp_player == nullptr) {

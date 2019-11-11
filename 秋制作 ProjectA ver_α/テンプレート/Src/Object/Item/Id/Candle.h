@@ -6,19 +6,11 @@
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Calculation.h"
 
-struct Candller {
-	 bool CenterCaLight;
-	 bool RightCaLight;
-	 bool LeftCaLight;
-};
 
 class Candle : public Item {
 public:
 
 	Candle() {
-		CenterCaLight = false;
-		LeftCaLight = false;
-		RightCaLight = false;
 	};
 	void Init()override {};
 	void Init(object::ObjectId id_)override{
@@ -120,8 +112,12 @@ public:
 	}
 
 
+	void SetCandller(Candller candller_)override {
+		m_Candller = &candller_;
+	}
 
 	void Update()override {
+
 
 		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 			m_OnMouse = true;
@@ -129,27 +125,27 @@ public:
 				switch (PepshiMan()->CurrentViewID()) 
 				{
 					case GameData::CENTER:
-						if (CenterCaLight == false) {
-							CenterCaLight = true;
+						if (m_Candller->CenterCaLight == false) {
+							m_Candller->CenterCaLight = true;
 						}
 						else {
-							CenterCaLight = false;
+							m_Candller->CenterCaLight = false;
 						}
-					break;
+						break;
 					case GameData::RIGHT:
-						if (RightCaLight == false) {
-							RightCaLight = true;
+						if (m_Candller->RightCaLight == false) {
+							m_Candller->RightCaLight = true;
 						}
 						else {
-							RightCaLight = false;
+							m_Candller->RightCaLight = false;
 						}
-					break;
+						break;
 					case GameData::LEFT:
-						if (LeftCaLight == false) {
-							LeftCaLight = true;
+						if (m_Candller->LeftCaLight == false) {
+							m_Candller->LeftCaLight = true;
 						}
 						else {
-							LeftCaLight = false;
+							m_Candller->LeftCaLight = false;
 						}				
 						break;
 				}
@@ -161,25 +157,11 @@ public:
 
 	}
 
-	bool* HasCenterCaLight()override{
-		m_HasCenterCaLight = &CenterCaLight;
-		return m_HasCenterCaLight;
-	}
-	bool* HasRightCaLight()override{
-		m_HasRightCaLight = &RightCaLight;
-		return m_HasRightCaLight;
-	}
-	bool* HasLeftCaLight()override{
-		m_HasLeftCaLight = &LeftCaLight;
-		return m_HasLeftCaLight;
-	}
 
 private:
 
 
-	bool* m_HasCenterCaLight;
-	bool* m_HasRightCaLight;
-	bool* m_HasLeftCaLight;
+	Candller* m_Candller;
 
 };
 

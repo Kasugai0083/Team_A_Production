@@ -25,7 +25,8 @@ public:
 	void Draw(object::ObjectId id_, Vec2 pos_);
 
 	bool HasOnMouse(object::ObjectId id_);
-	bool HasCaLight(GameData::SubGameScene sce_);
+
+	void SetCandller(Candller candller_);
 
 private:
 	void Release();
