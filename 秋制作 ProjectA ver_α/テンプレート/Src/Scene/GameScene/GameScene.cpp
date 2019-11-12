@@ -39,15 +39,22 @@ SceneId UpdateGameScene()
 	return SceneId::GameScene;
 }
 
+
+Candller* CreateCandller() {
+	static Candller CandInstance = { true, false, true };
+	return &CandInstance;
+}
+
 #pragma region •`‰æŠÖ”
-static Candller g_CandllerInstance = {true, false, true};
 
 namespace Draw {
 
 	void DrawCenterItem() {
+		
+		Candller* CandllerInstance = CreateCandller();
 
 		//ƒLƒƒƒ“ƒhƒ‹
-		if (g_CandllerInstance.CenterCaLight == true) {
+		if (CandllerInstance->CenterCaLight == true) {
 			ObjManager()->Draw(object::FIRE_SMALL);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -63,7 +70,9 @@ namespace Draw {
 
 	void DrawLeftItem() {
 
-		if (g_CandllerInstance.LeftCaLight == true) {
+		Candller* CandllerInstance = CreateCandller();
+
+		if (CandllerInstance->LeftCaLight == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -74,7 +83,9 @@ namespace Draw {
 
 	void DrawRightItem() {
 
-		if (g_CandllerInstance.RightCaLight == true) {
+		Candller* CandllerInstance = CreateCandller();
+
+		if (CandllerInstance->RightCaLight == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -95,8 +106,6 @@ void DrawGameScene()
 	case GameData::CENTER:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
 		Draw::DrawCenterItem();
-		DrawTexture(1000.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFreeTex),500.f,500.f);
-		DrawTexture(600.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFreeTex),600.f, 600.f);
 		break;
 	case GameData::RIGHT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
@@ -161,11 +170,14 @@ void InitGameScene()
 	ChangeSceneStep(SceneStep::MainStep);
 }
 
+
+
 void MainGameScene()
 {
 	int count = 0;
+	Candller* CandllerInstance = CreateCandller();
 
-	ObjManager()->SetCandller(&g_CandllerInstance);
+	ObjManager()->SetCandller(CandllerInstance);
 	ObjManager()->SetCount(&count);
 
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
