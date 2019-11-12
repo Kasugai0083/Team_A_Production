@@ -131,22 +131,13 @@ public:
 				{
 				case GameData::CENTER:
 					if (m_Candller->CenterCaLight == false) {
-						if (*m_Count >= 1) {
-							*m_Count = 0;
-						}
-						else if (*m_Count == 0) {
+						if (*m_Count == 0) {
 							m_Candller->CenterCaLight = true;
 							*m_Count += 1;
 						}
-
-
 					}
 					else {
-
-						if (*m_Count >= 1) {
-							*m_Count = 0;
-						}
-						else if (*m_Count == 0) {
+						if (*m_Count == 0) {
 							m_Candller->CenterCaLight = false;
 							*m_Count += 1;
 						}
@@ -154,22 +145,32 @@ public:
 					break;
 				case GameData::RIGHT:
 					if (m_Candller->RightCaLight == false) {
-						m_Candller->RightCaLight = true;
-						
+						if (*m_Count == 0) {
+							m_Candller->RightCaLight = true;
+							*m_Count += 1;
+						}
 					}
 					else {
-						m_Candller->RightCaLight = false;
+						if (*m_Count == 0) {
+							m_Candller->RightCaLight = false;
+							*m_Count += 1;
+						}
 					}
 					break;
 				case GameData::LEFT:
 					if (m_Candller->LeftCaLight == false) {
-						m_Candller->LeftCaLight = true;
+						if (*m_Count == 0) {
+							m_Candller->LeftCaLight = true;
+							*m_Count += 1;
+						}
 					}
 					else {
-						m_Candller->LeftCaLight = false;
+						if (*m_Count == 0) {
+							m_Candller->LeftCaLight = false;
+							*m_Count += 1;
+						}
 					}
 					break;
-				
 				}
 			}
 		}

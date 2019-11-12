@@ -129,6 +129,8 @@ void InitGameScene()
 		break;
 	}
 
+	Vec2 CandlePos = { 9999.f ,9999.f };
+	ObjManager()->Init(object::CANDLE_BIG, CandlePos);
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 
@@ -142,7 +144,7 @@ void InitGameScene()
 
 void MainGameScene()
 {
-	static int count = 0;
+	int count = 0;
 
 	ObjManager()->SetCandller(&g_CandllerInstance);
 	ObjManager()->SetCount(&count);
@@ -167,7 +169,6 @@ void MainGameScene()
 
 	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
 	Vec2 CandlePos = { 9999.f ,9999.f };
-	ObjManager()->Init(object::CANDLE_BIG, CandlePos);
 
 
 	//キー入力でシーン遷移
