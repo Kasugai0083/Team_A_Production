@@ -219,6 +219,9 @@
     <ClInclude Include="Src\Utility\Size.h" />
     <ClInclude Include="Src\Utility\Vec.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Document\マップ図.jpg.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

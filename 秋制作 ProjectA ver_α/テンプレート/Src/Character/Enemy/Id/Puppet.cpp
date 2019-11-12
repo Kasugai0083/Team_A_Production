@@ -10,7 +10,7 @@ void Puppet::Init()
 	m_iFrameCount = 0;
 	m_IsDeath	  = true;
 	m_HasKill	  = false;
-	m_RoomId	  = RoomID::SPAWN_ROOM;
+	m_RoomId	  = RoomID::ROOM_CHILDREN;
 }
 
 void Puppet::Update()
