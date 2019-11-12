@@ -112,8 +112,11 @@ public:
 	}
 
 
-	void SetCandller(Candller candller_)override {
-		m_Candller = &candller_;
+	void SetCandller(Candller* candller_)override {
+		m_Candller = candller_;
+	}
+	void SetCount(int* count_)override {
+		m_Count = count_;
 	}
 
 	void Update()override {
@@ -122,32 +125,51 @@ public:
 		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 			m_OnMouse = true;
 			if (OnMouseDown(Left) == true) {
-				switch (PepshiMan()->CurrentViewID()) 
+
+
+				switch (PepshiMan()->CurrentViewID())
 				{
-					case GameData::CENTER:
-						if (m_Candller->CenterCaLight == false) {
+				case GameData::CENTER:
+					if (m_Candller->CenterCaLight == false) {
+						if (*m_Count >= 1) {
+							*m_Count = 0;
+						}
+						else if (*m_Count == 0) {
 							m_Candller->CenterCaLight = true;
+							*m_Count += 1;
 						}
-						else {
+
+
+					}
+					else {
+
+						if (*m_Count >= 1) {
+							*m_Count = 0;
+						}
+						else if (*m_Count == 0) {
 							m_Candller->CenterCaLight = false;
+							*m_Count += 1;
 						}
-						break;
-					case GameData::RIGHT:
-						if (m_Candller->RightCaLight == false) {
-							m_Candller->RightCaLight = true;
-						}
-						else {
-							m_Candller->RightCaLight = false;
-						}
-						break;
-					case GameData::LEFT:
-						if (m_Candller->LeftCaLight == false) {
-							m_Candller->LeftCaLight = true;
-						}
-						else {
-							m_Candller->LeftCaLight = false;
-						}				
-						break;
+					}
+					break;
+				case GameData::RIGHT:
+					if (m_Candller->RightCaLight == false) {
+						m_Candller->RightCaLight = true;
+						
+					}
+					else {
+						m_Candller->RightCaLight = false;
+					}
+					break;
+				case GameData::LEFT:
+					if (m_Candller->LeftCaLight == false) {
+						m_Candller->LeftCaLight = true;
+					}
+					else {
+						m_Candller->LeftCaLight = false;
+					}
+					break;
+				
 				}
 			}
 		}
@@ -160,7 +182,7 @@ public:
 
 private:
 
-
+	int* m_Count;
 	Candller* m_Candller;
 
 };

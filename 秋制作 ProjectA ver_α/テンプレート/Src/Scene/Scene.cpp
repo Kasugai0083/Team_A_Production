@@ -4,8 +4,6 @@
 #include "TitleScene.h"
 #include "CenterScene.h"
 #include "GameScene/GameScene.h"
-#include "LeftScene.h"
-#include "RightScene.h"
 #include "MonitorScene.h"
 #include "ClearScene.h"
 

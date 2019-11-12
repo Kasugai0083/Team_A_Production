@@ -26,7 +26,8 @@ public:
 
 	bool HasOnMouse(object::ObjectId id_);
 
-	void SetCandller(Candller candller_);
+	void SetCandller(Candller* candller_);
+	void SetCount(int* count_);
 
 private:
 	void Release();

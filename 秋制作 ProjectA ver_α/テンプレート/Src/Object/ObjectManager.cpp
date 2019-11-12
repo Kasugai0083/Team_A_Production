@@ -115,9 +115,15 @@ bool ObjectManager::HasOnMouse(object::ObjectId id_) {
 	return false;
 }
 
-void ObjectManager::SetCandller(Candller candller_) {
+void ObjectManager::SetCandller(Candller* candller_) {
 	m_pObjects[object::CANDLE_BIG]->SetCandller(candller_);
 	m_pObjects[object::CANDLE_SMALL]->SetCandller(candller_);
 	m_pObjects[object::CANDLE_EFFECT]->SetCandller(candller_);
 	m_pObjects[object::CANDLE_STAND]->SetCandller(candller_);
+}
+void ObjectManager::SetCount(int* count_) {
+	m_pObjects[object::CANDLE_BIG]->SetCount(count_);
+	m_pObjects[object::CANDLE_SMALL]->SetCount(count_);
+	m_pObjects[object::CANDLE_EFFECT]->SetCount(count_);
+	m_pObjects[object::CANDLE_STAND]->SetCount(count_);
 }

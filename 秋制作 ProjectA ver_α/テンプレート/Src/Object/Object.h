@@ -29,7 +29,8 @@ public:
 	virtual void Draw() {};
 	virtual void Draw(Vec2 pos_) {};
 
-	virtual void SetCandller(Candller candller_) { return; };
+	virtual void SetCandller(Candller* candller_) { return; };
+	virtual void SetCount(int* count_) { return; };
 protected:
 
 private:
