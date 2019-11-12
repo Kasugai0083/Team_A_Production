@@ -6,15 +6,13 @@
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Calculation.h"
 
+
 class Candle : public Item {
 public:
 
-	Candle() :
-		m_HasCenterCaLight(false),
-		m_HasRightCaLight(false),
-		m_HasLeftCaLight(false)
-	{}
-
+	Candle() {
+	};
+	void Init()override {};
 	void Init(object::ObjectId id_)override{
 		switch (id_) {
 		case object::CANDLE_BIG:
@@ -114,38 +112,65 @@ public:
 	}
 
 
+	void SetCandller(Candller* candller_)override {
+		m_Candller = candller_;
+	}
+	void SetCount(int* count_)override {
+		m_Count = count_;
+	}
 
 	void Update()override {
+
 
 		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 			m_OnMouse = true;
 			if (OnMouseDown(Left) == true) {
-				switch (PepshiMan()->CurrentViewID()) 
+
+
+				switch (PepshiMan()->CurrentViewID())
 				{
-					case GameData::CENTER:
-						if (m_HasCenterCaLight == false) {
-							m_HasCenterCaLight = true;
+				case GameData::CENTER:
+					if (m_Candller->CenterCaLight == false) {
+						if (*m_Count == 0) {
+							m_Candller->CenterCaLight = true;
+							*m_Count += 1;
 						}
-						else {
-							m_HasCenterCaLight = false;
+					}
+					else {
+						if (*m_Count == 0) {
+							m_Candller->CenterCaLight = false;
+							*m_Count += 1;
 						}
+					}
 					break;
-					case GameData::RIGHT:
-						if (m_HasRightCaLight == false) {
-							m_HasRightCaLight = true;
+				case GameData::RIGHT:
+					if (m_Candller->RightCaLight == false) {
+						if (*m_Count == 0) {
+							m_Candller->RightCaLight = true;
+							*m_Count += 1;
 						}
-						else {
-							m_HasRightCaLight = false;
+					}
+					else {
+						if (*m_Count == 0) {
+							m_Candller->RightCaLight = false;
+							*m_Count += 1;
 						}
+					}
 					break;
-					case GameData::LEFT:
-						if (m_HasLeftCaLight == false) {
-							m_HasLeftCaLight = true;
+				case GameData::LEFT:
+					if (m_Candller->LeftCaLight == false) {
+						if (*m_Count == 0) {
+							m_Candller->LeftCaLight = true;
+							*m_Count += 1;
 						}
-						else {
-							m_HasLeftCaLight = false;
-						}				
-						break;
+					}
+					else {
+						if (*m_Count == 0) {
+							m_Candller->LeftCaLight = false;
+							*m_Count += 1;
+						}
+					}
+					break;
 				}
 			}
 		}
@@ -155,21 +180,11 @@ public:
 
 	}
 
-	bool HasCenterCaLight()override{
-		return m_HasCenterCaLight;
-	}
-	bool HasRightCaLight()override{
-		return m_HasRightCaLight;
-	}
-	bool HasLeftCaLight()override{
-		return m_HasLeftCaLight;
-	}
 
 private:
-	
-	bool m_HasCenterCaLight;
-	bool m_HasRightCaLight;
-	bool m_HasLeftCaLight;
+
+	int* m_Count;
+	Candller* m_Candller;
 
 };
 

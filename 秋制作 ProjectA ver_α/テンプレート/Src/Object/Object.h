@@ -5,6 +5,12 @@
 #include "../Texture/Texture.h"
 #include "ObjectID.h"
 
+struct Candller {
+	bool CenterCaLight;
+	bool RightCaLight;
+	bool LeftCaLight;
+};
+
 
 class Object {
 public:
@@ -23,15 +29,10 @@ public:
 	virtual void Draw() {};
 	virtual void Draw(Vec2 pos_) {};
 
-	virtual bool HasCenterCaLight() { return m_HasCenterCaLight; };
-	virtual bool HasRightCaLight() { return m_HasRightCaLight; };
-	virtual bool HasLeftCaLight() { return m_HasLeftCaLight; };
-
+	virtual void SetCandller(Candller* candller_) { return; };
+	virtual void SetCount(int* count_) { return; };
 protected:
 
 private:
-
-	bool m_HasCenterCaLight;
-	bool m_HasRightCaLight;
-	bool m_HasLeftCaLight;
+	Candller* m_Candller;
 };

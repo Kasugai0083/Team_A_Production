@@ -40,16 +40,18 @@ SceneId UpdateGameScene()
 }
 
 #pragma region 描画関数
+static Candller g_CandllerInstance = {true, false, true};
 
 namespace Draw {
 
-
 	void DrawCenterItem() {
+
 		//キャンドル
-		if (ObjManager()->HasCaLight(GameData::CENTER) == true) {
+		if (g_CandllerInstance.CenterCaLight == true) {
 			ObjManager()->Draw(object::FIRE_SMALL);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
+
 		ObjManager()->Draw(object::CANDLE_SMALL);
 		ObjManager()->Draw(object::CANDLE_STAND);
 
@@ -60,7 +62,8 @@ namespace Draw {
 	}
 
 	void DrawLeftItem() {
-		if (ObjManager()->HasCaLight(GameData::LEFT) == true) {
+
+		if (g_CandllerInstance.LeftCaLight == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -70,7 +73,8 @@ namespace Draw {
 	}
 
 	void DrawRightItem() {
-		if (ObjManager()->HasCaLight(GameData::RIGHT) == true) {
+
+		if (g_CandllerInstance.RightCaLight == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -137,6 +141,8 @@ void InitGameScene()
 		break;
 	}
 
+	Vec2 CandlePos = { 9999.f ,9999.f };
+	ObjManager()->Init(object::CANDLE_BIG, CandlePos);
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 
@@ -157,6 +163,11 @@ void InitGameScene()
 
 void MainGameScene()
 {
+	int count = 0;
+
+	ObjManager()->SetCandller(&g_CandllerInstance);
+	ObjManager()->SetCount(&count);
+
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
 
 	if (tmp_player == nullptr) {
@@ -176,6 +187,8 @@ void MainGameScene()
 
 
 	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+	Vec2 CandlePos = { 9999.f ,9999.f };
+
 
 	//キー入力でシーン遷移
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
@@ -184,11 +197,19 @@ void MainGameScene()
 		case GameData::SubGameScene::CENTER:
 			if (GetKey(A_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
+
+				ObjManager()->Init(object::CANDLE_SMALL, CandlePos);
+				ObjManager()->Init(object::CANDLE_BIG, CANDLE_BIG_POS);
+
 				pTimerInstance->Init(Timer::Id::SCENE);
 				PepshiMan()->SetViewID(GameData::LEFT);
 			}
 			if (GetKey(D_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
+
+				ObjManager()->Init(object::CANDLE_SMALL, CandlePos);
+				ObjManager()->Init(object::CANDLE_BIG, CANDLE_BIG_POS);
+
 				pTimerInstance->Init(Timer::Id::SCENE);
 				PepshiMan()->SetViewID(GameData::RIGHT);
 			}
@@ -196,6 +217,10 @@ void MainGameScene()
 		case GameData::RIGHT:
 			if (GetKey(A_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
+
+				ObjManager()->Init(object::CANDLE_SMALL, CANDLE_SMALL_POS);
+				ObjManager()->Init(object::CANDLE_BIG, CandlePos);
+
 				pTimerInstance->Init(Timer::Id::SCENE);
 				PepshiMan()->SetViewID(GameData::CENTER);
 			}
@@ -203,6 +228,10 @@ void MainGameScene()
 		case GameData::LEFT:
 			if (GetKey(D_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
+
+				ObjManager()->Init(object::CANDLE_SMALL, CANDLE_SMALL_POS);
+				ObjManager()->Init(object::CANDLE_BIG, CandlePos);
+
 				pTimerInstance->Init(Timer::Id::SCENE);
 				PepshiMan()->SetViewID(GameData::CENTER);
 			}
