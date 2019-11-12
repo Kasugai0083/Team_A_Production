@@ -10,7 +10,7 @@ void Freddy::Init()
 	m_iFrameCount  = 0;
 	m_IsDeath	   = true;
 	m_HasKill	   = false;
-	m_RoomId	   = RoomID::SPAWN_ROOM;
+	m_RoomId	   = RoomID::ROOM_WORK;
 }
 
 void Freddy::Update()
@@ -30,7 +30,7 @@ void Freddy::Update()
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
-		m_RoomId	  = RoomID::SPAWN_ROOM;
+		m_RoomId	  = RoomID::ROOM_WORK;
 	}
 
 	if (m_IsDeath == true) { return; }
@@ -39,21 +39,21 @@ void Freddy::Update()
 #pragma region ƒtƒŒƒfƒB‚ÌˆÚ“®
 	switch (m_RoomId)
 	{
-	case RoomID::SPAWN_ROOM:
+	case RoomID::ROOM_WORK:
 
 		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
-			m_RoomId      = RoomID::CENTER_DUCT;
+			m_RoomId      = RoomID::ROOM_RECEPTION;
 		}
 		break;
 
-	case RoomID::CENTER_DUCT:
+	case RoomID::ROOM_RECEPTION:
 
 		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
-			m_RoomId      = RoomID::PLAYER_ROOM;
+			m_RoomId      = RoomID::ROOM_PRAYER;
 		}
 		break;
 	default:
@@ -64,7 +64,7 @@ void Freddy::Update()
 
 	switch (m_RoomId)
 	{
-	case RoomID::CENTER_DUCT:
+	case RoomID::ROOM_RECEPTION:
 
 		if (pPlayer->HasLight() == true) {
 
@@ -72,7 +72,7 @@ void Freddy::Update()
 		}
 		break;
 
-	case RoomID::PLAYER_ROOM:
+	case RoomID::ROOM_PRAYER:
 
 		if (pPlayer->HasMask() == true) {
 
@@ -120,7 +120,7 @@ void Freddy::Draw()
 
 	switch (m_RoomId)
 	{
-	case RoomID::SPAWN_ROOM:
+	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
 			&& MonitorFunc()->Get() == MonitorTransition::Id::Spown) {
@@ -129,7 +129,7 @@ void Freddy::Draw()
 		}
 		break;
 
-	case RoomID::CENTER_DUCT:
+	case RoomID::ROOM_RECEPTION:
 
 		if (PepshiMan()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
@@ -138,7 +138,7 @@ void Freddy::Draw()
 		}
 		break;
 
-	case RoomID::PLAYER_ROOM:
+	case RoomID::ROOM_PRAYER:
 
 		if (PepshiMan()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
