@@ -293,4 +293,9 @@
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Document\マップ図.jpg.png">
+      <Filter>ソース ファイル\Utility</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
