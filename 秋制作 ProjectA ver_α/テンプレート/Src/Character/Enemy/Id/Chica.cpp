@@ -8,7 +8,7 @@ void Chica::Init()
 	m_iFrameCount = 0;
 	m_IsDeath	  = true;
 	m_HasKill     = false;
-	m_RoomId      = RoomID::SPAWN_ROOM;
+	m_RoomId      = RoomID::ROOM_WORK;
 }
 
 void Chica::Update()
@@ -27,7 +27,7 @@ void Chica::Update()
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
-		m_RoomId	  = RoomID::SPAWN_ROOM;
+		m_RoomId	  = RoomID::ROOM_WORK;
 	}
 
 	if (m_IsDeath == true) { return; }
@@ -36,21 +36,21 @@ void Chica::Update()
 #pragma region ƒ`ƒJ‚ÌˆÚ“®
 	switch (m_RoomId)
 	{
-	case RoomID::SPAWN_ROOM:
+	case RoomID::ROOM_WORK:
 
 		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
-			m_RoomId	  = RoomID::RIGHT_DUCT;
+			m_RoomId	  = RoomID::RIGHT_CORRIDOR;
 		}
 		break;
 
-	case RoomID::RIGHT_DUCT:
+	case RoomID::RIGHT_CORRIDOR:
 
 		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
-			m_RoomId	  = RoomID::RIGHT_ROOM;
+			m_RoomId	  = RoomID::RIGHT_SHOJI;
 		}
 		break;
 	default:
@@ -61,7 +61,7 @@ void Chica::Update()
 
 	switch (m_RoomId)
 	{
-	case RoomID::RIGHT_DUCT:
+	case RoomID::RIGHT_CORRIDOR:
 
 		if (pPlayer->HasLight() == true) {
 
@@ -70,7 +70,7 @@ void Chica::Update()
 		}
 		break;
 
-	case RoomID::RIGHT_ROOM:
+	case RoomID::RIGHT_SHOJI:
 
 		if (pPlayer->HasMask() == true) {
 
@@ -111,7 +111,7 @@ void Chica::Draw()
 
 	switch (m_RoomId)
 	{
-	case RoomID::SPAWN_ROOM:
+	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& MonitorFunc()->Get() == MonitorTransition::Id::Spown) {
@@ -120,7 +120,7 @@ void Chica::Draw()
 		}
 		break;
 
-	case RoomID::RIGHT_DUCT:
+	case RoomID::RIGHT_CORRIDOR:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
 			&& MonitorFunc()->Get() == MonitorTransition::Id::Right_Duct) {
@@ -129,7 +129,7 @@ void Chica::Draw()
 		}
 		break;
 
-	case RoomID::RIGHT_ROOM:
+	case RoomID::RIGHT_SHOJI:
 
 		if (GetCurrentSceneId() == SceneId::RightScene) {
 
