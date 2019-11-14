@@ -45,7 +45,6 @@ void DrawTitleScene()
 	ObjManager()->Draw(object::CONTINUE);
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),100.f, 100.f);
-
 }
 
 void InitTitleScene()

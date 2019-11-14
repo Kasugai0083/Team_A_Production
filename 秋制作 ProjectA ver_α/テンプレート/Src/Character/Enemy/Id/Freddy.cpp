@@ -61,7 +61,6 @@ void Freddy::Update()
 	}
 #pragma endregion
 
-
 	switch (m_RoomId)
 	{
 	case RoomID::ROOM_RECEPTION:
