@@ -8,9 +8,7 @@
 class Character {
 public:
 
-	virtual ~Character()
-	{
-	}
+	virtual ~Character(){}
 
 	virtual void Init() = 0;
 

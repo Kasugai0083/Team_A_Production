@@ -149,6 +149,9 @@
     <ClCompile Include="Src\Scene\GameScene\GameData.cpp">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Character\Enemy\Enemy.cpp">
+      <Filter>ソース ファイル\Character\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Engine\Engine.h">

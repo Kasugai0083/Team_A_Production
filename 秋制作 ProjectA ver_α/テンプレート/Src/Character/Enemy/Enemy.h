@@ -8,15 +8,29 @@
 
 class Enemy : public Character {
 public:
-	~Enemy() override{}
+	virtual ~Enemy() override{}
 
-	RoomID GetRoomID() {
-		return m_RoomId;
-	}
+	virtual bool HasKill()const override { return m_HasKill; }
 
-	bool HasKill()const override { return m_HasKill; }
+	virtual void LoadTex(SceneId id_)override {}
 
-	void LoadTex(SceneId id_)override {}
+private:
+	// エネミーの移動用タイマークラス
+	class EnemyTimer
+	{
+	public:
+		EnemyTimer(int time_) {
+			m_Time = time_;
+		}
+
+		~EnemyTimer();
+
+		void TimeCount();
+		
+
+	private:
+		int m_Time;
+	};
 
 private:
 	CharacterID m_Id;
