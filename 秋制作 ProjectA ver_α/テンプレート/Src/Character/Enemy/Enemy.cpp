@@ -33,7 +33,7 @@ bool Enemy::EnemyTimer::SpawnTimer(Enemy& enemy_)
 bool Enemy::EnemyTimer::MoveTimer(Enemy& enemy_)
 {
 	// ‘ŠúƒŠƒ^[ƒ“
-	if (enemy_.m_IsDeath == true) { return; }
+	if (enemy_.m_IsDeath == true) { return false; }
 
 	m_Time++;
 
