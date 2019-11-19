@@ -3,6 +3,14 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 
+G_Freddy::G_Freddy()
+{
+}
+
+G_Freddy::~G_Freddy()
+{
+}
+
 void G_Freddy::Init()
 {
 	m_iFrameCount = 0;

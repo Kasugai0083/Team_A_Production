@@ -5,6 +5,14 @@
 #include "../../../Scene/GameScene/GameData.h"
 
 
+Freddy::Freddy()
+{
+}
+
+Freddy::~Freddy()
+{
+}
+
 void Freddy::Init()
 {
 	m_iFrameCount  = 0;

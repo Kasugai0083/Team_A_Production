@@ -3,6 +3,14 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 
+Foxy::Foxy()
+{
+}
+
+Foxy::~Foxy()
+{
+}
+
 void Foxy::Init()
 {
 	m_iFrameCount = 0;

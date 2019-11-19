@@ -3,6 +3,14 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 
+Chica::Chica()
+{
+}
+
+Chica::~Chica()
+{
+}
+
 void Chica::Init()
 {
 	m_iFrameCount = 0;

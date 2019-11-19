@@ -4,6 +4,14 @@
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
 
+Bonnie::Bonnie()
+{
+}
+
+Bonnie::~Bonnie()
+{
+}
+
 void Bonnie::Init()
 {
 	m_iFrameCount = 0;
