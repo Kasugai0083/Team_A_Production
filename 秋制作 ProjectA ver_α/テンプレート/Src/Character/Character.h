@@ -7,6 +7,10 @@
 
 class Character {
 public:
+	Character(bool isdeath_)
+	{
+		m_IsDeath = isdeath_;
+	}
 
 	virtual ~Character(){}
 

@@ -7,9 +7,15 @@
 class Player : public Character {
 	 
 public:
-
-	//Player(){}
-
+	/*
+		コンストラクタ
+	*/
+	Player():
+		Character(false)
+	{}
+	/*
+		デストラクタ
+	*/
 	~Player() override {}
 
 	void Init()override;
@@ -34,7 +40,6 @@ public:
 
 
 private:
-
 // フラグ
 	bool m_IsDeath;		// 生きてるかどうか(必要性あるかな？)
 	bool m_IsLight;		// ライトをつけてるかどうか

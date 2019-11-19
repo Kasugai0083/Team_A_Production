@@ -3,32 +3,18 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 
-Foxy::Foxy()
-{
-}
-
-Foxy::~Foxy()
-{
-}
-
 void Foxy::Init()
 {
-	m_iFrameCount = 0;
-	m_IsDeath     = true;
-	m_HasKill     = false;
-	m_RoomId      = RoomID::ROOM_STORAGE;
+	m_HasKill = false;
+	m_pPlayer = g_Manager.GetCharacter(PLAYER);
+	if (m_pPlayer == nullptr) {
+
+		return;
+	}
 }
 
 void Foxy::Update()
 {
-#pragma region ŽQÆ—p•Ï”
-	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
-	if (pPlayer == nullptr) {
-
-		return;
-	}
-#pragma endregion
-
 	m_iFrameCount++;
 
 	if (m_IsDeath == true && m_iFrameCount >= 300) {
@@ -79,7 +65,7 @@ void Foxy::Update()
 	case RoomID::HALL_BACK:
 	case RoomID::HALL_FRONT:
 
-		if (pPlayer->HasLight() == true) {
+		if (m_pPlayer->HasLight() == true) {
 
 			m_iFrameCount = 0;
 		}

@@ -12,8 +12,16 @@
 class Freddy : public Enemy
 {
 public:
-	Freddy();
-	virtual ~Freddy() final;
+	/*
+		コンストラクタ
+	*/
+	Freddy() :
+		Enemy(RoomID::ROOM_WORK, 0)
+	{}
+	/*
+		デストラクタ
+	*/
+	virtual ~Freddy() final{}
 	/*
 		初期化
 	*/

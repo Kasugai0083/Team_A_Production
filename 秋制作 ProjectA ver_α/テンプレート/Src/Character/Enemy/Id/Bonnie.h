@@ -12,8 +12,16 @@
 class Bonnie : public Enemy
 {
 public:
-	Bonnie();
-	virtual ~Bonnie() final;
+	/*
+		コンストラクタ
+	*/
+	Bonnie() :
+		Enemy(RoomID::ROOM_WORK, 0)
+	{}
+	/*
+		デストラクタ
+	*/
+	virtual ~Bonnie() final{}
 	/*
 		初期化
 	*/

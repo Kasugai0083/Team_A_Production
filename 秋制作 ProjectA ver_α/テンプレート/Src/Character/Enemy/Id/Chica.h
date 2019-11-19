@@ -12,8 +12,16 @@
 class Chica : public Enemy
 {
 public:
-	Chica();
-	virtual ~Chica() final;
+	/*
+		コンストラクタ
+	*/
+	Chica() :
+		Enemy(RoomID::ROOM_WORK, 0)
+	{}
+	/*
+		デストラクタ
+	*/
+	virtual ~Chica() final{}
 	/*
 		初期化
 	*/

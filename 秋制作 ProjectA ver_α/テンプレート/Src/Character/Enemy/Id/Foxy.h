@@ -12,8 +12,16 @@
 class Foxy : public Enemy
 {
 public:
-	Foxy();
-	virtual ~Foxy() final;
+	/*
+		コンストラクタ
+	*/
+	Foxy() :
+		Enemy(RoomID::ROOM_STORAGE, 0)
+	{}
+	/*
+		デストラクタ
+	*/
+	virtual ~Foxy() final{}
 	/*
 		初期化
 	*/

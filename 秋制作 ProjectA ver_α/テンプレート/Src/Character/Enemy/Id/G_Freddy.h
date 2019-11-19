@@ -12,8 +12,17 @@
 class G_Freddy : public Enemy
 {
 public:
-	G_Freddy();
-	virtual ~G_Freddy() final;
+	/*
+		コンストラクタ
+	*/
+	G_Freddy() :
+		Enemy(RoomID::ROOM_PRAYER,0)
+	{
+	}
+	/*
+		デストラクター
+	*/
+	virtual ~G_Freddy() final{}
 	/*
 		初期化
 	*/

@@ -2,21 +2,12 @@
 #include <random>
 #include <time.h>
 
-Enemy::Enemy()
-{
-	RoomID m_RoomId = RoomID::ROOM_WORK;
-	int	   m_iFrameCount = 0;
-	bool   m_HasKill = false;
-}
-
-void Enemy::Init()
-{
-
-}
-
-void Enemy::Update()
-{
-}
+//Enemy::Enemy()
+//{
+//	RoomID m_RoomId = RoomID::ROOM_WORK;
+//	int	   m_iFrameCount = 0;
+//	bool   m_HasKill = false;
+//}
 
 Enemy::EnemyTimer::~EnemyTimer()
 {

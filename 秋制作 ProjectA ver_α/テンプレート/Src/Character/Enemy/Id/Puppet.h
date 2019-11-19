@@ -12,7 +12,16 @@
 class Puppet : public Enemy
 {
 public:
-	Puppet(){}
+	/*
+		コンストラクタ
+	*/
+	Puppet() :
+		Enemy(RoomID::ROOM_CHILDREN, 0)
+	{
+	}
+	/*
+		デストラクター
+	*/
 	virtual ~Puppet() final {}
 
 	/*
