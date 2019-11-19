@@ -5,12 +5,6 @@
 
 void Foxy::Init()
 {
-	m_HasKill = false;
-	m_pPlayer = g_Manager.GetCharacter(PLAYER);
-	if (m_pPlayer == nullptr) {
-
-		return;
-	}
 }
 
 void Foxy::Update()

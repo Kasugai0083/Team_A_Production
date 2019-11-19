@@ -16,37 +16,36 @@ public:
 		コンストラクタ
 	*/
 	Puppet() :
-		Enemy(RoomID::ROOM_CHILDREN, 0)
-	{
-	}
+		Enemy(RoomID::ROOM_CHILDREN, 0, false)
+	{}
 	/*
 		デストラクター
 	*/
-	virtual ~Puppet() final {}
+	virtual ~Puppet(){}
 
 	/*
 		初期化
 	*/
-	virtual void Init() final;
+	virtual void Init() override;
 
 	/*
 		挙動
 	*/
-	virtual void Update() final;
+	virtual void Update() override;
 	/*
 		m_IsKillを返す
 	*/
-	virtual bool HasKill()const final { return m_HasKill; }
+	virtual bool HasKill()const override { return m_HasKill; }
 
 	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	virtual void LoadTex(SceneId id_) final;
+	virtual void LoadTex(SceneId id_) override;
 	/*
 		描画
 	*/
-	virtual void Draw() final;
+	virtual void Draw() override;
 
 private:
 	const CharacterID m_CharId = CharacterID::PUPPET;// キャラID定数
