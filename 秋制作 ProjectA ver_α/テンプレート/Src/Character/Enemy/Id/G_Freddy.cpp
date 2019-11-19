@@ -5,21 +5,16 @@
 
 void G_Freddy::Init()
 {
-	m_iFrameCount = 0;
-	m_IsDeath     = true;
-	m_HasKill     = false;
-	m_RoomId      = RoomID::ROOM_PRAYER;
+	m_HasKill = false;
+	m_pPlayer = g_Manager.GetCharacter(PLAYER);
+	if (m_pPlayer == nullptr) {
+
+		return;
+	}
 }
 
 void G_Freddy::Update()
 {
-#pragma region éQè∆ópïœêî
-	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
-	if (pPlayer == nullptr) {
-
-		return;
-	}
-#pragma endregion
 
 }
 

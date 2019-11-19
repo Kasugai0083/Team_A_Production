@@ -1,15 +1,34 @@
 #ifndef ENEMY_H_
 #define ENEMY_H_
+
 #include "../Character.h"
 #include "../CharacterID.h"
 #include "../../Utility/RoomID.h"
 #include "..//..//Scene/Scene.h"
 #include <random>
 
-
-class Enemy : public Character {
+class Enemy : public Character 
+{
 public:
+	/*
+		コンストラクタ
+	*/
+	Enemy(RoomID roomid_, int framecount_):
+		Character(true)
+	{
+		m_RoomId	  = roomid_; 
+		m_iFrameCount = framecount_;
+		m_HasKill	  = false;
+	}
+
+	/*
+		デストラクタ
+	*/
 	virtual ~Enemy() override{}
+
+	virtual void Init() override{}
+
+	virtual void Update() override{}
 
 	virtual bool HasKill()const override { return m_HasKill; }
 
@@ -24,6 +43,7 @@ protected:
 			コンストラクタ
 		*/
 		EnemyTimer(int time_, int min_time_, int max_time) {
+
 			m_Time = time_;
 			m_RandTime = GetRand(min_time_, max_time);
 		}
@@ -51,13 +71,11 @@ protected:
 		int m_RandTime;
 	};
 
-private:
-	CharacterID m_Id;
-	
-	RoomID m_RoomId;
-	int	   m_iFrameCount;
-	bool   m_IsDeath;
-	bool   m_HasKill;
+protected:
+	RoomID m_RoomId;		// どこの部屋にいるか変数
+	int	   m_iFrameCount;	// フレイムカウント用変数
+	bool   m_HasKill;		// 殺したかどうか   True:殺した     False:殺してない
+	Character* m_pPlayer;		// プレイヤーの参照用変数
 };
 
 #endif

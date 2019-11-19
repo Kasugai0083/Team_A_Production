@@ -2,6 +2,7 @@
 #define CHARACTERMANAGER_H_
 
 #include "Character.h"
+#include "CharacterID.h"
 
 //キャラクタークラスの管理
 class CharacterManager {

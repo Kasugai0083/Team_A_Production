@@ -13,36 +13,42 @@ class Chica : public Enemy
 {
 public:
 	/*
+		コンストラクタ
+	*/
+	Chica() :
+		Enemy(RoomID::ROOM_WORK, 0)
+	{}
+	/*
+		デストラクタ
+	*/
+	virtual ~Chica() final{}
+	/*
 		初期化
 	*/
-	void Init() override;
+	virtual void Init() final;
 
 	/*
 		挙動
 	*/
-	void Update() override;
+	virtual void Update() final;
 	/*
 		m_IsKillを返す
 	*/
-	bool HasKill()const override { return m_HasKill; }
+	virtual bool HasKill()const final { return m_HasKill; }
 
 	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	void LoadTex(SceneId id_)override;
+	virtual void LoadTex(SceneId id_) final;
 	/*
 	描画
 	*/
-	void Draw() override;
+	virtual void Draw() final;
 
 private:
 	const CharacterID m_CharId = CharacterID::CHICA;// キャラID定数
-	
-	RoomID m_RoomId;		// どこの部屋にいるか変数
-	int    m_iFrameCount;	// フレイムカウント用変数
-	bool   m_IsDeath;		// 死んでるかどうか True:死んでいる False:生きている
-	bool   m_HasKill;		// 殺したかどうか   True:殺した     False:殺してない
+
 };
 
 #endif

@@ -7,6 +7,10 @@
 
 class Character {
 public:
+	Character(bool isdeath_)
+	{
+		m_IsDeath = isdeath_;
+	}
 
 	virtual ~Character(){}
 
@@ -35,12 +39,14 @@ public:
 
 	virtual void LoadTex(SceneId id) {};
 
+protected:
+	bool m_IsDeath;
+
 private:
 	//プレイヤーの情報
 	bool m_HasMask;
 	bool m_HasLight;
 	bool m_HasMonitor;
-	bool m_IsDeath;
 
 	//エネミーの情報
 	bool m_HasKill;

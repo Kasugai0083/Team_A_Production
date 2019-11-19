@@ -4,29 +4,21 @@
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
 
-
 void Freddy::Init()
 {
-	m_iFrameCount  = 0;
-	m_IsDeath	   = true;
-	m_HasKill	   = false;
-	m_RoomId	   = RoomID::ROOM_WORK;
+	m_HasKill = false;
+	m_pPlayer = g_Manager.GetCharacter(PLAYER);
+	if (m_pPlayer == nullptr) {
+
+		return;
+	}
 }
 
 void Freddy::Update()
 {
-#pragma region ŽQÆ—p•Ï”
-	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
-	if (pPlayer == nullptr) {
-
-		return;
-	}
-
-#pragma endregion
-
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 6000) {
+	if (m_IsDeath == true && m_iFrameCount >= 200) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
@@ -65,7 +57,7 @@ void Freddy::Update()
 	{
 	case RoomID::ROOM_RECEPTION:
 
-		if (pPlayer->HasLight() == true) {
+		if (m_pPlayer->HasLight() == true) {
 
 			m_iFrameCount = 0;
 		}
@@ -73,7 +65,7 @@ void Freddy::Update()
 
 	case RoomID::ROOM_PRAYER:
 
-		if (pPlayer->HasMask() == true) {
+		if (m_pPlayer->HasMask() == true) {
 
 			m_iFrameCount = 0;
 			m_IsDeath	  = true;

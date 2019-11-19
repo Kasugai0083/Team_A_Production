@@ -5,14 +5,11 @@
 
 void Player::Init()
 {
-	m_IsDeath = false;
 	m_IsLight = false;
 	m_IsMask = false;
 	m_IsMonitor = false;
 	m_MaskAnimation = -540.f;
-
 	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex);
-
 }
 
 void Player::Update()
