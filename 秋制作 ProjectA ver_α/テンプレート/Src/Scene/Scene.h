@@ -74,7 +74,10 @@ public:
 	enum Id {
 		Spown,
 		Left_Duct,
-		Right_Duct
+		Right_Duct,
+		ROOM_STORE,
+		ROOM_RECEPTION,
+		ROOM_CHILD
 	};
 
 	int Get();

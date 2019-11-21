@@ -43,6 +43,17 @@ void DrawMonitor() {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorRightDuctTex));
 	}
 
+	//マップ
+	DrawTexture(1200.f, 400.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex));
+	//水晶
+	DrawTexture(1600.f, 430.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex));
+	DrawTexture(1375.f, 550.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex));
+	DrawTexture(1600.f, 550.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex));
+	DrawTexture(1825.f, 550.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex));
+	DrawTexture(1375.f, 700.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex));
+	DrawTexture(1720.f, 700.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex));
+
+
 	switch (MonitorFunc()->Get()) {
 	case MonitorTransition::Id::Spown:
 		//スポーン黒、左ダクト白、右ダクト白
@@ -90,8 +101,7 @@ SceneId UpdateMonitorScene()
 }
 
 void DrawMonitorScene()
-{
-
+{	
 	DrawMonitor();
 
 	g_Manager.Draw();
@@ -104,6 +114,14 @@ void InitMonitorScene()
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
 
+	LoadTexture("Res/Game/Monitor/MonitorUI/button_1.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
+	LoadTexture("Res/Game/Monitor/MonitorUI/button_2.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
+	LoadTexture("Res/Game/Monitor/MonitorUI/button_3.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
+	LoadTexture("Res/Game/Monitor/MonitorUI/button_4.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
+	LoadTexture("Res/Game/Monitor/MonitorUI/button_5.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
+	LoadTexture("Res/Game/Monitor/MonitorUI/button_6.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex);
+
+	LoadTexture("Res/Game/Monitor/MonitorUI/map.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
 
 	LoadMonitor();
 

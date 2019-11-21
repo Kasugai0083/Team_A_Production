@@ -98,6 +98,15 @@ enum MonitorCategoryTextureList {
 	GameMonitorChicaTex,
 	GameMonitorPuppetTex,
 
+	GameMonitorMapTex,
+	GameMonitorButtom1Tex,
+	GameMonitorButtom2Tex,
+	GameMonitorButtom3Tex,
+	GameMonitorButtom4Tex,
+	GameMonitorButtom5Tex,
+	GameMonitorButtom6Tex,
+
+
 	GameMonitorTextureMax,			//!< リスト最大数
 };
 
