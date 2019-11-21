@@ -3,19 +3,17 @@
 
 enum CharacterID {
 
-
-	FREDDY,		// 正面
-	BONNIE,		// 右
-	CHICA,		// 左
-	FOXY,		// 正面にいて光で撃退
-	G_FREDDY,	// カメラから戻ってきたらたまにおる
-	PUPPET,		// オルゴール
+	OHAGI,		// 正面
+	SAKURA,		// 右
+	UME,		// 左
+	RAN,		// 正面にいて光で撃退
+	BOTAN,		// カメラから戻ってきたらたまにいるやつ
+	MARGARET,	// オルゴール
 
 	PLAYER,		// プレイヤー
 	ENEMY_NUM = PLAYER,
 
-	MAX_CHARACTER
-
+	MAX_CHARACTER,
 };
 
 #endif

@@ -3,11 +3,11 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 
-void Foxy::Init()
+void Ran::Init()
 {
 }
 
-void Foxy::Update()
+void Ran::Update()
 {
 	m_iFrameCount++;
 
@@ -75,10 +75,10 @@ void Foxy::Update()
 	}
 }
 
-void Foxy::LoadTex(SceneId id_)
+void Ran::LoadTex(SceneId id_)
 {
 }
 
-void Foxy::Draw()
+void Ran::Draw()
 {
 }

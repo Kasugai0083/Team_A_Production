@@ -10,13 +10,13 @@
 /*
 	フレディ(エネミー)のクラス
 */
-class Freddy : public Enemy
+class Ohagi : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Freddy() :
+	Ohagi() :
 		Enemy(RoomID::ROOM_WORK, 0, false)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -28,7 +28,7 @@ public:
 	/*
 		デストラクタ
 	*/
-	virtual ~Freddy(){}
+	virtual ~Ohagi(){}
 	/*
 		初期化
 	*/
@@ -54,7 +54,7 @@ public:
 	virtual void Draw() override;
 
 private:
-	const CharacterID m_CharId = CharacterID::FREDDY;// キャラID定数
+	const CharacterID m_CharId = CharacterID::OHAGI;// キャラID定数
 };
 
 #endif

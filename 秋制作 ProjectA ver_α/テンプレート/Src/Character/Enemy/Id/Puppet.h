@@ -9,19 +9,19 @@
 /*
 	パペット(エネミー)のクラス
 */	
-class Puppet : public Enemy
+class Margaret : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Puppet() :
+	Margaret() :
 		Enemy(RoomID::ROOM_CHILDREN, 0, false)
 	{}
 	/*
 		デストラクター
 	*/
-	virtual ~Puppet(){}
+	virtual ~Margaret(){}
 
 	/*
 		初期化
@@ -48,7 +48,7 @@ public:
 	virtual void Draw() override;
 
 private:
-	const CharacterID m_CharId = CharacterID::PUPPET;// キャラID定数
+	const CharacterID m_CharId = CharacterID::MARGARET;// キャラID定数
 };
 
 #endif

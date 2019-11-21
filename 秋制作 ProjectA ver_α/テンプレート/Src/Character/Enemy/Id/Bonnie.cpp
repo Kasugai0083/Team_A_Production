@@ -4,19 +4,19 @@
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
 
-void Bonnie::Init()
+void Ume::Init()
 {
 
 }
 
-void Bonnie::Update()
+void Ume::Update()
 {
 }
 
-void Bonnie::LoadTex(SceneId id_)
+void Ume::LoadTex(SceneId id_)
 {
 }
 
-void Bonnie::Draw()
+void Ume::Draw()
 {
 }

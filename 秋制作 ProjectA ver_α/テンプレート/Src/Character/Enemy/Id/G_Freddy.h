@@ -10,13 +10,13 @@
 /*
 	ゴールデンフレディ(エネミー)のクラス
 */
-class G_Freddy : public Enemy
+class Botan : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	G_Freddy() :
+	Botan() :
 		Enemy(RoomID::ROOM_PRAYER,0, false)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -28,7 +28,7 @@ public:
 	/*
 		デストラクター
 	*/
-	virtual ~G_Freddy(){}
+	virtual ~Botan(){}
 	/*
 		初期化
 	*/
@@ -54,7 +54,7 @@ public:
 	virtual void Draw() override;
 
 private:
-	const CharacterID m_CharId = CharacterID::G_FREDDY;// キャラID定数
+	const CharacterID m_CharId = CharacterID::BOTAN;// キャラID定数
 };
 
 #endif

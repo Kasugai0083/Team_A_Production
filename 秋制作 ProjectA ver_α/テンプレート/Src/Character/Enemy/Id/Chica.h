@@ -10,20 +10,20 @@
 /*
 	チカ(エネミー)のクラス
 */
-class Chica : public Enemy
+class Sakura : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Chica() :
+	Sakura() :
 		Enemy(RoomID::ROOM_WORK, 0, false)
 	{
 	}
 	/*
 		デストラクタ
 	*/
-	virtual ~Chica(){}
+	virtual ~Sakura(){}
 	/*
 		初期化
 	*/
@@ -49,7 +49,7 @@ public:
 	virtual void Draw() override;
 
 private:
-	const CharacterID m_CharId = CharacterID::CHICA;// キャラID定数
+	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数
 
 };
 

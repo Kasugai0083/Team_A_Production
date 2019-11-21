@@ -4,11 +4,11 @@
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
 
-void Freddy::Init()
+void Ohagi::Init()
 {
 }
 
-void Freddy::Update()
+void Ohagi::Update()
 {
 	m_iFrameCount++;
 
@@ -75,7 +75,7 @@ void Freddy::Update()
 	}
 }
 
-void Freddy::LoadTex(SceneId id_)
+void Ohagi::LoadTex(SceneId id_)
 {
 	switch (id_)
 	{
@@ -91,7 +91,7 @@ void Freddy::LoadTex(SceneId id_)
 	}
 }
 
-void Freddy::Draw()
+void Ohagi::Draw()
 {
 	// éQè∆ópïœêî
 	//GameData* pGamedate = &g_GameData;

@@ -12,14 +12,14 @@
 CharacterManager g_Manager;
 
 CharacterManager::CharacterManager() {
-	m_Charas[PLAYER]   = new Player;
+	m_Charas[PLAYER]	= new Player;
 
-	m_Charas[FREDDY]   = new Freddy;
-	m_Charas[BONNIE]   = new Bonnie;
-	m_Charas[CHICA]    = new Chica;
-	m_Charas[FOXY]	   = new Foxy;
-	m_Charas[G_FREDDY] = new G_Freddy;
-	m_Charas[PUPPET]   = new Puppet;
+	m_Charas[OHAGI]     = new Ohagi;
+	m_Charas[UME]		= new Ume;
+	m_Charas[SAKURA]    = new Sakura;
+	m_Charas[RAN]	    = new Ran;
+	m_Charas[BOTAN]		= new Botan;
+	m_Charas[MARGARET]  = new Margaret;
 }
 
 CharacterManager::~CharacterManager() {

@@ -5,11 +5,11 @@
 #include "../../../Timer/Timer.h"
 #include "../../../Object/Item/Id/PlayerItem.h"
 
-void Puppet::Init()
+void Margaret::Init()
 {
 }
 
-void Puppet::Update()
+void Margaret::Update()
 {
 	m_iFrameCount++;
 
@@ -31,7 +31,7 @@ void Puppet::Update()
 
 }
 
-void Puppet::LoadTex(SceneId id_)
+void Margaret::LoadTex(SceneId id_)
 {
 	switch (id_)
 	{
@@ -47,7 +47,7 @@ void Puppet::LoadTex(SceneId id_)
 	}
 }
 
-void Puppet::Draw()
+void Margaret::Draw()
 {
 	if (m_IsDeath != true) { return; }
 	// ¶‚«‚Ä‚¢‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢

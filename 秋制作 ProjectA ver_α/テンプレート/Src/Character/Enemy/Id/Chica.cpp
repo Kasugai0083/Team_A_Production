@@ -4,7 +4,7 @@
 #include "../../../Texture/Texture.h"
 #include "../../CharacterManager.h"
 
-void Chica::Init()
+void Sakura::Init()
 {
 	m_HasKill = false;
 	m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -14,7 +14,7 @@ void Chica::Init()
 	}
 }
 
-void Chica::Update()
+void Sakura::Update()
 {
 	m_iFrameCount++;
 
@@ -83,7 +83,7 @@ void Chica::Update()
 	}
 }
 
-void Chica::LoadTex(SceneId id_)
+void Sakura::LoadTex(SceneId id_)
 {
 	switch (id_)
 	{
@@ -99,7 +99,7 @@ void Chica::LoadTex(SceneId id_)
 	}
 }
 
-void Chica::Draw()
+void Sakura::Draw()
 {
 	if (m_IsDeath == true) { return; }
 	// éÄÇÒÇ≈ÇΩÇÁÇ±Ç±ÇÊÇËâ∫ÇÃèàóùÇ…ÇÕÇ¢Ç©Ç»Ç¢

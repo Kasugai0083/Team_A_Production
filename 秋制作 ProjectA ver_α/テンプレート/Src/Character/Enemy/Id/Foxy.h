@@ -10,13 +10,13 @@
 /*
 	フォクシー(エネミー)のクラス
 */
-class Foxy : public Enemy
+class Ran : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Foxy() :
+	Ran() :
 		Enemy(RoomID::ROOM_STORAGE, 0, false)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -28,7 +28,7 @@ public:
 	/*
 		デストラクタ
 	*/
-	virtual ~Foxy(){}
+	virtual ~Ran(){}
 	/*
 		初期化
 	*/
@@ -54,7 +54,7 @@ public:
 	virtual void Draw() override;
 
 private:
-	const CharacterID m_CharId = CharacterID::FOXY;// キャラID定数
+	const CharacterID m_CharId = CharacterID::RAN;// キャラID定数
 };
 
 #endif 

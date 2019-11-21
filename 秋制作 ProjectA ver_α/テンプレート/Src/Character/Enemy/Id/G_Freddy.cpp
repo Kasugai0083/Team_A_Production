@@ -3,19 +3,19 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 
-void G_Freddy::Init()
+void Botan::Init()
 {
 }
 
-void G_Freddy::Update()
+void Botan::Update()
 {
 
 }
 
-void G_Freddy::LoadTex(SceneId id_)
+void Botan::LoadTex(SceneId id_)
 {
 }
 
-void G_Freddy::Draw()
+void Botan::Draw()
 {
 }

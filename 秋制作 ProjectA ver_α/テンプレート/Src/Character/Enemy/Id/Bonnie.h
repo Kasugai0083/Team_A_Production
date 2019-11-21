@@ -10,13 +10,13 @@
 /*
 	バニー(エネミー)のクラス
 */
-class Bonnie : public Enemy
+class Ume : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Bonnie():
+	Ume():
 		Enemy(RoomID::ROOM_WORK, 0, false)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -28,7 +28,7 @@ public:
 	/*
 		デストラクタ
 	*/
-	virtual ~Bonnie(){}
+	virtual ~Ume(){}
 	/*
 		初期化
 	*/
@@ -53,7 +53,7 @@ public:
 	virtual void Draw() override;
 
 private:
-	const CharacterID m_CharId = CharacterID::BONNIE;// キャラID定数
+	const CharacterID m_CharId = CharacterID::UME;// キャラID定数
 
 };
 
