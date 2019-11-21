@@ -5,12 +5,17 @@
 #include "../../Texture/Texture.h"
 #include "../Object.h"
 
+
 class UI : public Object {
 public:
-	
-	UI();
 
-	
+	UI() {};
+	UI(UIType type_, UserInterfaceID id_) {
+		m_Type = type_;
+		m_ID = id_;
+	};
+
+	void Init()override;
 
 	void Update()override;
 	void Draw()override;
@@ -21,6 +26,12 @@ protected:
 	bool m_OnMouse;
 	Vec2 m_Pos;
 	Size m_Size;
+
+private:
+
+	UIType m_Type;
+	UserInterfaceID m_ID;
+
 };
 
 #endif

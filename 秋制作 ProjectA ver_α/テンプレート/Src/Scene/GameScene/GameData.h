@@ -7,6 +7,14 @@ struct GameData {
 		LEFT,
 		RIGHT,
 	};
+	enum class MonitorView {
+		WORKSHOP_VIEW,
+		STORE_ROOM_VIEW,
+		RECEPTION_ROOM_VIEW,
+		CHILD_ROOM_VIEW,
+		RIGHT_CORRIDOR_VIEW,
+		LEFT_CORRIDOR_VIEW
+	};
 
 	GameData() :
 		m_ViewID(CENTER)
@@ -15,13 +23,17 @@ struct GameData {
 	SubGameScene CurrentViewID() {
 		return m_ViewID;
 	};
-	
+	MonitorView CurrentMonitorID() {
+		return m_MonitorID;
+	};
+
+
 	void SetViewID(SubGameScene id_) {
 		m_ViewID = id_;
 	};
 
 	SubGameScene m_ViewID;
-
+	MonitorView m_MonitorID;
 };
 
 GameData* PepshiMan();

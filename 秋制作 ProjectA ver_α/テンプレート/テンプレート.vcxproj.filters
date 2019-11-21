@@ -295,6 +295,9 @@
     <ClInclude Include="Src\Scene\GameScene\GameScene.h">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Object\UI\UIID.h">
+      <Filter>ソース ファイル\Object\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Document\マップ図.jpg.png">

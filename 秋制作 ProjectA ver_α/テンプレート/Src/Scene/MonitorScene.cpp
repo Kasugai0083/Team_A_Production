@@ -44,38 +44,14 @@ void DrawMonitor() {
 	}
 
 	//マップ
-	DrawTexture(1200.f, 400.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex));
+	ObjManager()->DrawUI(MONITOR_MAP);
 	//水晶
-	DrawTexture(1600.f, 430.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex));
-	DrawTexture(1375.f, 550.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex));
-	DrawTexture(1600.f, 550.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex));
-	DrawTexture(1825.f, 550.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex));
-	DrawTexture(1375.f, 700.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex));
-	DrawTexture(1720.f, 700.f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex));
-
-
-	switch (MonitorFunc()->Get()) {
-	case MonitorTransition::Id::Spown:
-		//スポーン黒、左ダクト白、右ダクト白
-		ObjManager()->Draw(object::BLACK_MONITOR_SPOWN);
-		ObjManager()->Draw(object::RIGHT_DUCT);
-		ObjManager()->Draw(object::LEFT_DUCT);
-		break;
-	case MonitorTransition::Id::Left_Duct:
-		//スポーン白、左ダクト黒、右ダクト白
-		ObjManager()->Draw(object::MONITOR_SPOWN);
-		ObjManager()->Draw(object::RIGHT_DUCT);
-		ObjManager()->Draw(object::BLACK_LEFT_DUCT);
-		break;
-	case MonitorTransition::Id::Right_Duct:
-		//スポーン白、左ダクト白、右ダクト黒
-		ObjManager()->Draw(object::MONITOR_SPOWN);
-		ObjManager()->Draw(object::BLACK_RIGHT_DUCT);
-		ObjManager()->Draw(object::LEFT_DUCT);
-		break;
-	default:
-		break;
-	}
+	ObjManager()->DrawUI(BUTTON_WORKSHOP);
+	ObjManager()->DrawUI(BUTTON_STORE_ROOM);
+	ObjManager()->DrawUI(BUTTON_RECEPTION_ROOM);
+	ObjManager()->DrawUI(BUTTON_CHILD_ROOM);
+	ObjManager()->DrawUI(BUTTON_RIGHT_CORRIDOR);
+	ObjManager()->DrawUI(BUTTON_LEFT_CORRIDOR);
 
 	DrawTexture(PLAYER_ROOM_UI_POS.X, PLAYER_ROOM_UI_POS.Y, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex));
 
@@ -114,14 +90,7 @@ void InitMonitorScene()
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
 
-	LoadTexture("Res/Game/Monitor/MonitorUI/button_1.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
-	LoadTexture("Res/Game/Monitor/MonitorUI/button_2.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
-	LoadTexture("Res/Game/Monitor/MonitorUI/button_3.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
-	LoadTexture("Res/Game/Monitor/MonitorUI/button_4.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
-	LoadTexture("Res/Game/Monitor/MonitorUI/button_5.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
-	LoadTexture("Res/Game/Monitor/MonitorUI/button_6.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex);
-
-	LoadTexture("Res/Game/Monitor/MonitorUI/map.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
+	ObjManager()->Init();
 
 	LoadMonitor();
 
@@ -139,9 +108,13 @@ void MainMonitorScene()
 	}
 
 	//UIのアップデート
-	ObjManager()->Update(object::MONITOR_SPOWN);
-	ObjManager()->Update(object::LEFT_DUCT);
-	ObjManager()->Update(object::RIGHT_DUCT);
+
+	ObjManager()->UpdateUI(BUTTON_WORKSHOP);
+	ObjManager()->UpdateUI(BUTTON_STORE_ROOM);
+	ObjManager()->UpdateUI(BUTTON_RECEPTION_ROOM);
+	ObjManager()->UpdateUI(BUTTON_CHILD_ROOM);
+	ObjManager()->UpdateUI(BUTTON_RIGHT_CORRIDOR);
+	ObjManager()->UpdateUI(BUTTON_LEFT_CORRIDOR);
 
 	//タイマーのアップデート
 
@@ -156,19 +129,19 @@ void MainMonitorScene()
 	//キー入力でシーン遷移
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-		if (ObjManager()->HasOnMouse(object::MONITOR_SPOWN) == true) {
+		if (ObjManager()->HasOnMouseUI(BUTTON_WORKSHOP) == true) {
 			if (OnMouseDown(Left) == true) {
 				MonitorFunc()->Set(MonitorTransition::Id::Spown);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
-		if (ObjManager()->HasOnMouse(object::LEFT_DUCT) == true) {
+		if (ObjManager()->HasOnMouseUI(BUTTON_LEFT_CORRIDOR) == true) {
 			if (OnMouseDown(Left) == true) {
 				MonitorFunc()->Set(MonitorTransition::Id::Left_Duct);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
-		if (ObjManager()->HasOnMouse(object::RIGHT_DUCT) == true) {
+		if (ObjManager()->HasOnMouseUI(BUTTON_RIGHT_CORRIDOR) == true) {
 			if (OnMouseDown(Left) == true) {
 				MonitorFunc()->Set(MonitorTransition::Id::Right_Duct);
 				pTimerInstance->Init(Timer::Id::SCENE);
@@ -200,6 +173,8 @@ void MainMonitorScene()
 SceneId FinishMonitorScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
+
+	//ObjManager()->Release();
 
 	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, false);
