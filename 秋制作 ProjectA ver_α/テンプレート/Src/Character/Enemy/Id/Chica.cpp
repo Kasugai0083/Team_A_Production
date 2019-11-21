@@ -2,6 +2,7 @@
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
+#include "../../CharacterManager.h"
 
 void Chica::Init()
 {

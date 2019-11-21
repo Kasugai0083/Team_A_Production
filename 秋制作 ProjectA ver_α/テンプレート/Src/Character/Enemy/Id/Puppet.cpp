@@ -7,7 +7,6 @@
 
 void Puppet::Init()
 {
-	m_HasKill = false;
 }
 
 void Puppet::Update()

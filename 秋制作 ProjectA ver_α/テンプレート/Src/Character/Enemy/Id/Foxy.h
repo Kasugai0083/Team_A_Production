@@ -5,6 +5,7 @@
 #include "../../CharacterID.h"
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
+#include "../../CharacterManager.h"
 
 /*
 	フォクシー(エネミー)のクラス
@@ -16,21 +17,27 @@ public:
 		コンストラクタ
 	*/
 	Foxy() :
-		Enemy(RoomID::ROOM_STORAGE, 0)
-	{}
+		Enemy(RoomID::ROOM_STORAGE, 0, false)
+	{
+		m_pPlayer = g_Manager.GetCharacter(PLAYER);
+		if (m_pPlayer == nullptr) {
+
+			return;
+		}
+	}
 	/*
 		デストラクタ
 	*/
-	virtual ~Foxy() final{}
+	virtual ~Foxy(){}
 	/*
 		初期化
 	*/
-	virtual void Init() final;
+	virtual void Init() override;
 
 	/*
 		挙動
 	*/
-	virtual void Update() final;
+	virtual void Update() override;
 	/*
 		m_IsKillを返す
 	*/
@@ -44,7 +51,7 @@ public:
 	/*
 	描画
 	*/
-	virtual void Draw() final;
+	virtual void Draw() override;
 
 private:
 	const CharacterID m_CharId = CharacterID::FOXY;// キャラID定数

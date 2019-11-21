@@ -13,12 +13,12 @@ public:
 	/*
 		コンストラクタ
 	*/
-	Enemy(RoomID roomid_, int framecount_):
+	Enemy(RoomID roomid_, int framecount_, bool haskill_):
 		Character(true)
 	{
 		m_RoomId	  = roomid_; 
 		m_iFrameCount = framecount_;
-		m_HasKill	  = false;
+		m_HasKill	  = haskill_;
 	}
 
 	/*
@@ -35,7 +35,7 @@ public:
 	virtual void LoadTex(SceneId id_)override {}
 
 protected:
-	// エネミーの移動用タイマークラス
+	// エネミーの移動用タイマークラス(未実装)
 	class EnemyTimer
 	{
 	public:
@@ -75,7 +75,8 @@ protected:
 	RoomID m_RoomId;		// どこの部屋にいるか変数
 	int	   m_iFrameCount;	// フレイムカウント用変数
 	bool   m_HasKill;		// 殺したかどうか   True:殺した     False:殺してない
-	Character* m_pPlayer;		// プレイヤーの参照用変数
+
+	Character* m_pPlayer;	// プレイヤーの参照用変数
 };
 
 #endif
