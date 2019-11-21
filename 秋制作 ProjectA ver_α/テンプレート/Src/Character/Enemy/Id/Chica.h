@@ -19,6 +19,12 @@ public:
 	Sakura() :
 		Enemy(RoomID::ROOM_WORK, 0, false)
 	{
+		m_HasKill = false;
+		m_pPlayer = g_Manager.GetCharacter(PLAYER);
+		if (m_pPlayer == nullptr) {
+
+			return;
+		}
 	}
 	/*
 		デストラクタ
