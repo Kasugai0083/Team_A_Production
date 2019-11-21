@@ -6,7 +6,6 @@
 
 void Sakura::Init()
 {
-
 }
 
 void Sakura::Update()

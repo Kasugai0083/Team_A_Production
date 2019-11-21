@@ -63,6 +63,23 @@ void Ume::Update()
 	}
 #pragma endregion
 
+	switch (m_RoomId)
+	{
+	case RoomID::LEFT_SHOJI:
+
+		if (m_pPlayer->HasMask() == true) {
+
+			m_iFrameCount = 0;
+			m_IsDeath = true;
+		}
+
+		if (m_iFrameCount >= 300) {
+			// ゲームオーバー処理
+			m_HasKill = true;
+		}
+		break;
+	}
+
 }
 
 void Ume::LoadTex(SceneId id_)
