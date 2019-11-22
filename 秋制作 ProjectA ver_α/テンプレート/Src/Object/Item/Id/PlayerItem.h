@@ -108,7 +108,7 @@ public:
 			Timer* pTimerInstance = Timer::GetInstance();
 
 			if (GetCurrentSceneId() == GameScene) {
-				if (PepshiMan()->CurrentViewID() == GameData::CENTER) {
+				if (GameView()->CurrentViewID() == GameData::CENTER) {
 					if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 						m_OnMouse = true;
 						if (OnMousePush(Left) == true) {

@@ -127,7 +127,7 @@ public:
 			if (OnMouseDown(Left) == true) {
 
 
-				switch (PepshiMan()->CurrentViewID())
+				switch (GameView()->CurrentViewID())
 				{
 				case GameData::CENTER:
 					if (m_Candller->CenterCaLight == false) {

@@ -122,7 +122,7 @@ void Ohagi::Draw()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (PepshiMan()->CurrentViewID() == GameData::SubGameScene::CENTER
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
@@ -131,7 +131,7 @@ void Ohagi::Draw()
 
 	case RoomID::ROOM_PRAYER:
 
-		if (PepshiMan()->CurrentViewID() == GameData::SubGameScene::CENTER
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(960.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
