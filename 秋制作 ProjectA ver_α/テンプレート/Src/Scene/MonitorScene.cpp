@@ -31,7 +31,6 @@ void LoadMonitor() {
 	LoadTexture("Res/Game/Monitor/child_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex);
 	LoadTexture("Res/Game/Monitor/resption_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex);
 	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
-	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFreeTex);
 
 }
 
@@ -69,7 +68,27 @@ void DrawUI() {
 	ObjManager()->DrawUI(BUTTON_RIGHT_CORRIDOR);
 	ObjManager()->DrawUI(BUTTON_LEFT_CORRIDOR);
 
-	//DrawTexture(PLAYER_ROOM_UI_POS.X, PLAYER_ROOM_UI_POS.Y, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex));
+	switch (GameView()->CurrentMonitorID()) {
+	case MonitorView::WORKSHOP_VIEW:
+		ObjManager()->DrawUI(BUTTON_ON_WORKSHOP);
+		break;
+	case MonitorView::STORE_ROOM_VIEW:
+		ObjManager()->DrawUI(BUTTON_ON_STORE_ROOM);
+		break;
+	case MonitorView::RECEPTION_ROOM_VIEW:
+		ObjManager()->DrawUI(BUTTON_ON_RECEPTION_ROOM);
+		break;
+	case MonitorView::CHILD_ROOM_VIEW:
+		ObjManager()->DrawUI(BUTTON_ON_CHILD_ROOM);
+		break;
+	case MonitorView::RIGHT_CORRIDOR_VIEW:
+		ObjManager()->DrawUI(BUTTON_ON_RIGHT_CORRIDOR);
+		break;
+	case MonitorView::LEFT_CORRIDOR_VIEW:
+		ObjManager()->DrawUI(BUTTON_ON_LEFT_CORRIDOR);
+		break;
+
+	}
 
 }
 #pragma endregion
@@ -107,8 +126,6 @@ void InitMonitorScene()
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
-
-	ObjManager()->Init();
 
 	LoadMonitor();
 
@@ -157,30 +174,35 @@ void MainMonitorScene()
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::LEFT_CORRIDOR_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
+
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_RIGHT_CORRIDOR) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::RIGHT_CORRIDOR_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
+
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_STORE_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::STORE_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
+
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_RECEPTION_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::RECEPTION_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
+
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_CHILD_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::CHILD_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
+
 			}
 		}
 
