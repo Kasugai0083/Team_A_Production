@@ -54,6 +54,8 @@ void DrawBg() {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex));
 	}
 
+	DrawFont(100.f, 900.f, "Space ‚Å –ß‚é",Large, White);
+
 }
 
 void DrawUI() {
