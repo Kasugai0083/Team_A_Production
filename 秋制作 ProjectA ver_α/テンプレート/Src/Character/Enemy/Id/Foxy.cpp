@@ -2,6 +2,7 @@
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
+#include "../../../Scene/GameScene/GameData.h"
 
 void Ran::Init()
 {
@@ -11,7 +12,7 @@ void Ran::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 3000) {
+	if (m_IsDeath == true && m_iFrameCount >= 300) {
 
 		m_iFrameCount = 0;
 		m_IsDeath     = false;
@@ -75,8 +76,63 @@ void Ran::Update()
 
 void Ran::LoadTex(SceneId id_)
 {
+	switch (id_)
+	{
+	case GameScene:
+		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex);
+		break;
+
+	case MonitorScene:
+		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex);
+		break;
+	default:
+		break;
+	}
 }
 
 void Ran::Draw()
 {
+	if (m_IsDeath == true) { return; }
+	// Ž€‚ñ‚Å‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢
+
+	switch (m_RoomId)
+	{
+	case RoomID::ROOM_STORAGE:
+
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+		}
+		break;
+
+	case RoomID::HALL_BACK:
+
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
+			&& GetCurrentSceneId() == SceneId::GameScene) {
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+		}
+		break;
+
+	case RoomID::HALL_FRONT:
+
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
+			&& GetCurrentSceneId() == SceneId::GameScene) {
+
+			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+		}
+		break;
+
+	case RoomID::ROOM_PRAYER:
+
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
+			&& GetCurrentSceneId() == SceneId::GameScene) {
+
+			DrawTexture(960.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+		}
+		break;
+	default:
+		break;
+	}
 }

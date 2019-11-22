@@ -9,6 +9,7 @@ enum EnemyCategoryTextureList
 	
 	EnemyBonnieTex,	// バニーのテクスチャー
 
+	EnemyRanNearTex,	// 近ランのテクスチャ
 
 	EnemyTextureMax,
 };

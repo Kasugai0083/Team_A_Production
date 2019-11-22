@@ -13,7 +13,7 @@ void Sakura::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 200) {
+	if (m_IsDeath == true && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
