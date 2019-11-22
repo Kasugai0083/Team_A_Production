@@ -214,7 +214,11 @@
     <ClInclude Include="Src\Scene\MonitorScene.h" />
     <ClInclude Include="Src\Scene\Scene.h" />
     <ClInclude Include="Src\Scene\TitleScene.h" />
+    <ClInclude Include="Src\Texture\EnemyTex.h" />
+    <ClInclude Include="Src\Texture\GameSceneTex.h" />
+    <ClInclude Include="Src\Texture\ResultSceneTex.h" />
     <ClInclude Include="Src\Texture\Texture.h" />
+    <ClInclude Include="Src\Texture\TitleSceneTex.h" />
     <ClInclude Include="Src\Timer\Timer.h" />
     <ClInclude Include="Src\Utility\Common.h" />
     <ClInclude Include="Src\Utility\RoomID.h" />

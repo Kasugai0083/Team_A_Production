@@ -14,6 +14,7 @@ enum SceneId
 {
 	TitleScene,			//!< タイトルシーン
 	GameScene,
+	EnemyScene,
 	CenterScene,
 	LeftScene,
 	RightScene,

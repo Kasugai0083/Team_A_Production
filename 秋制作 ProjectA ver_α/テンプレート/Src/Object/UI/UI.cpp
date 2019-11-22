@@ -4,7 +4,7 @@
 #include "../../Texture/Texture.h"
 #include "../../Engine/Graphics.h"
 #include "../ObjectManager.h"
-
+#include "UIID.h"
 
 Object* g_pTitleLogo;
 
@@ -32,37 +32,43 @@ void UI::Init(){
 	case UserInterfaceID::BUTTON_WORKSHOP:
 		m_Pos = WORKSHOP_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_2.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/button_1.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_1.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom1Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
 		break;
 	case UserInterfaceID::BUTTON_STORE_ROOM:
 		m_Pos = STORE_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_3.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/button_2.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_2.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom2Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
 		break;
 	case UserInterfaceID::BUTTON_RECEPTION_ROOM:
 		m_Pos = RECEPTION_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_4.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/button_3.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_3.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom3Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
 		break;
 	case UserInterfaceID::BUTTON_CHILD_ROOM:
 		m_Pos = CHILD_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_5.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/button_4.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_4.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom4Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
 		break;
 	case UserInterfaceID::BUTTON_RIGHT_CORRIDOR:
 		m_Pos = RIGHT_CORRIDOR_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_6.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/button_5.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_5.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom5Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
 		break;
 	case UserInterfaceID::BUTTON_LEFT_CORRIDOR:
 		m_Pos = LEFT_CORRIDOR_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
 		LoadTexture("Res/Game/Monitor/MonitorUI/button_6.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_6.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom6Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex);
 		break;
 	case UserInterfaceID::MONITOR_MAP:

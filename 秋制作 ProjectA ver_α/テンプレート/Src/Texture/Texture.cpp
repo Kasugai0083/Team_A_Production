@@ -10,6 +10,7 @@ static Texture** g_TextureList[MAX_TEXTURE_CATEGORY] = { nullptr };
 int TextureCaterogySize[] = {
 	TitleCategoryTextureList::TitleTextureMax,
 	GameCategoryTextureList::GameTextureMax,
+	EnemyCategoryTextureList::EnemyTextureMax,
 	CenterCategoryTextureList::GameCenterTextureMax,
 	LeftCategoryTextureList::GameLeftTextureMax,
 	RightCategoryTextureList::GameRightTextureMax,

@@ -31,6 +31,8 @@ void LoadMonitor() {
 	LoadTexture("Res/Game/Monitor/child_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex);
 	LoadTexture("Res/Game/Monitor/resption_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex);
 	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFreeTex);
+
 }
 
 void DrawBg() {
@@ -67,7 +69,7 @@ void DrawUI() {
 	ObjManager()->DrawUI(BUTTON_RIGHT_CORRIDOR);
 	ObjManager()->DrawUI(BUTTON_LEFT_CORRIDOR);
 
-	DrawTexture(PLAYER_ROOM_UI_POS.X, PLAYER_ROOM_UI_POS.Y, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex));
+	//DrawTexture(PLAYER_ROOM_UI_POS.X, PLAYER_ROOM_UI_POS.Y, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex));
 
 }
 #pragma endregion
