@@ -41,4 +41,4 @@ struct GameData {
 	MonitorView m_MonitorID;
 };
 
-GameData* PepshiMan();
+GameData* GameView();
