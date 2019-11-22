@@ -172,7 +172,7 @@ void MainMonitorScene()
 
 SceneId FinishMonitorScene()
 {
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
+	//ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
 
 	//ObjManager()->Release();
 
