@@ -6,12 +6,6 @@
 
 void Sakura::Init()
 {
-	m_HasKill = false;
-	m_pPlayer = g_Manager.GetCharacter(PLAYER);
-	if (m_pPlayer == nullptr) {
-
-		return;
-	}
 }
 
 void Sakura::Update()
@@ -28,10 +22,19 @@ void Sakura::Update()
 	if (m_IsDeath == true) { return; }
 	// 死んでたらここより下の処理にはいかない
 
-#pragma region チカの移動
+#pragma region サクラの移動
 	switch (m_RoomId)
 	{
 	case RoomID::ROOM_WORK:
+
+		if (m_iFrameCount >= 300) {
+
+			m_iFrameCount = 0;
+			m_RoomId	  = RoomID::ROOM_RECEPTION;
+		}
+		break;
+
+	case RoomID::ROOM_RECEPTION:
 
 		if (m_iFrameCount >= 300) {
 
@@ -45,26 +48,23 @@ void Sakura::Update()
 		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
-			m_RoomId	  = RoomID::RIGHT_SHOJI;
+			m_RoomId = RoomID::RIGHT_SHOJI;
 		}
 		break;
-	default:
+
+	case RoomID::RIGHT_SHOJI:
+
+		if (m_iFrameCount >= 300) {
+
+			m_iFrameCount = 0;
+			m_RoomId = RoomID::ROOM_RIGHT_PRAYER;
+		}
 		break;
 	}
 #pragma endregion
 
-
 	switch (m_RoomId)
 	{
-	case RoomID::RIGHT_CORRIDOR:
-
-		if (m_pPlayer->HasLight() == true) {
-
-			m_iFrameCount = 0;
-			m_IsDeath	  = true;
-		}
-		break;
-
 	case RoomID::RIGHT_SHOJI:
 
 		if (m_pPlayer->HasMask() == true) {

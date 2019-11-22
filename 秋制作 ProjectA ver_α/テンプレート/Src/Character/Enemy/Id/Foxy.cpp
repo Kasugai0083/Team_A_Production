@@ -49,8 +49,6 @@ void Ran::Update()
 			m_RoomId = RoomID::ROOM_PRAYER;
 		}
 		break;
-	default:
-		break;
 	}
 #pragma endregion
 

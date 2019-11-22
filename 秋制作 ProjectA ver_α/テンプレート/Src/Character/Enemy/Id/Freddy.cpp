@@ -22,7 +22,7 @@ void Ohagi::Update()
 	if (m_IsDeath == true) { return; }
 	// 死んでたらここより下の処理にはいかない
 
-#pragma region フレディの移動
+#pragma region オハギの移動
 	switch (m_RoomId)
 	{
 	case RoomID::ROOM_WORK:
@@ -39,24 +39,32 @@ void Ohagi::Update()
 		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
-			m_RoomId      = RoomID::ROOM_PRAYER;
+			m_RoomId      = RoomID::HALL_BACK;
 		}
 		break;
-	default:
+
+	case RoomID::HALL_BACK:
+
+		if (m_iFrameCount >= 300) {
+
+			m_iFrameCount = 0;
+			m_RoomId = RoomID::HALL_FRONT;
+		}
+		break;
+
+	case RoomID::HALL_FRONT:
+
+		if (m_iFrameCount >= 300) {
+
+			m_iFrameCount = 0;
+			m_RoomId = RoomID::ROOM_PRAYER;
+		}
 		break;
 	}
 #pragma endregion
 
 	switch (m_RoomId)
 	{
-	case RoomID::ROOM_RECEPTION:
-
-		if (m_pPlayer->HasLight() == true) {
-
-			m_iFrameCount = 0;
-		}
-		break;
-
 	case RoomID::ROOM_PRAYER:
 
 		if (m_pPlayer->HasMask() == true) {
@@ -69,8 +77,6 @@ void Ohagi::Update()
 
 			m_HasKill     = true;
 		}
-		break;
-	default:
 		break;
 	}
 }
