@@ -185,6 +185,7 @@ private:
 
 	int* m_Count;
 	Candller* m_Candller;
+	int m_Time;
 
 };
 

@@ -35,6 +35,8 @@ SceneId UpdateTitleScene()
 	return SceneId::TitleScene;
 }
 
+int y = 1.f;
+
 void DrawTitleScene()
 {
 
@@ -44,8 +46,10 @@ void DrawTitleScene()
 	ObjManager()->DrawUI(BUTTON_NEW_GAME);
 	ObjManager()->DrawUI(BUTTON_CONTINUE);
 
-	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),100.f, 100.f);
+	DrawTexture(900.0f, 500.0f + y, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),256.f, 256.f - y);
 }
+
+
 
 void InitTitleScene()
 {
@@ -53,7 +57,7 @@ void InitTitleScene()
 	ObjManager()->Init();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
-	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
+	LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
 
 	ChangeSceneStep(SceneStep::MainStep);
 }
@@ -64,6 +68,8 @@ void MainTitleScene()
 
 	ObjManager()->Update();
 	
+	y++;
+
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouseUI(BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
