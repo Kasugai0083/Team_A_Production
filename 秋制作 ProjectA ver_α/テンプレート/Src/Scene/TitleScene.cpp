@@ -40,9 +40,9 @@ void DrawTitleScene()
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex));
 
-	ObjManager()->Draw(object::TITLE_LOGO);
-	ObjManager()->Draw(object::NEW_GAME);
-	ObjManager()->Draw(object::CONTINUE);
+	ObjManager()->DrawUI(TITLE_LOGO);
+	ObjManager()->DrawUI(BUTTON_NEW_GAME);
+	ObjManager()->DrawUI(BUTTON_CONTINUE);
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),100.f, 100.f);
 }
@@ -65,7 +65,7 @@ void MainTitleScene()
 	ObjManager()->Update();
 	
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
-	if (ObjManager()->HasOnMouse(object::NEW_GAME) == true) {
+	if (ObjManager()->HasOnMouseUI(BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
 			ChangeSceneStep(SceneStep::EndStep);
 		}

@@ -4,19 +4,6 @@
 namespace object {
 
 	enum ObjectId {
-		//UI
-		TITLE_LOGO,
-		NEW_GAME,
-		CONTINUE,
-		MONITOR_SPOWN,
-		BLACK_MONITOR_SPOWN,
-		LEFT_DUCT,
-		BLACK_LEFT_DUCT,
-		RIGHT_DUCT,
-		BLACK_RIGHT_DUCT,
-		PLAYER_ROOM,
-		CLEAR_LOGO,
-
 		//Item
 		CANDLE_BIG,
 		CANDLE_SMALL,
@@ -28,7 +15,33 @@ namespace object {
 		MUSICBOX,
 
 		MAX_OBJECT_NUM
-	};
+	};	
+	//enum ObjectId {
+	//	//UI
+	//	TITLE_LOGO,
+	//	NEW_GAME,
+	//	CONTINUE,
+	//	MONITOR_SPOWN,
+	//	BLACK_MONITOR_SPOWN,
+	//	LEFT_DUCT,
+	//	BLACK_LEFT_DUCT,
+	//	RIGHT_DUCT,
+	//	BLACK_RIGHT_DUCT,
+	//	PLAYER_ROOM,
+	//	CLEAR_LOGO,
+
+	//	//Item
+	//	CANDLE_BIG,
+	//	CANDLE_SMALL,
+	//	CANDLE_EFFECT,
+	//	CANDLE_STAND,
+	//	FIRE_BIG,
+	//	FIRE_SMALL,
+	//	CRYSTAL,
+	//	MUSICBOX,
+
+	//	MAX_OBJECT_NUM
+	//};
 
 }
 #endif

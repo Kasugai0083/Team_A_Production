@@ -4,6 +4,7 @@
 #include "../Utility/Size.h"
 #include "../Texture/Texture.h"
 #include "ObjectID.h"
+#include "UI/UIID.h"
 
 struct Candller {
 	bool CenterCaLight;

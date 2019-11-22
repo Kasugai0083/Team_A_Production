@@ -206,6 +206,7 @@
     <ClInclude Include="Src\Object\UI\Id\RightDuct.h" />
     <ClInclude Include="Src\Object\UI\Id\TitleLogo.h" />
     <ClInclude Include="Src\Object\UI\UI.h" />
+    <ClInclude Include="Src\Object\UI\UIID.h" />
     <ClInclude Include="Src\Object\UI\UIvalue.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
     <ClInclude Include="Src\Scene\GameScene\GameData.h" />
@@ -213,7 +214,11 @@
     <ClInclude Include="Src\Scene\MonitorScene.h" />
     <ClInclude Include="Src\Scene\Scene.h" />
     <ClInclude Include="Src\Scene\TitleScene.h" />
+    <ClInclude Include="Src\Texture\EnemyTex.h" />
+    <ClInclude Include="Src\Texture\GameSceneTex.h" />
+    <ClInclude Include="Src\Texture\ResultSceneTex.h" />
     <ClInclude Include="Src\Texture\Texture.h" />
+    <ClInclude Include="Src\Texture\TitleSceneTex.h" />
     <ClInclude Include="Src\Timer\Timer.h" />
     <ClInclude Include="Src\Utility\Common.h" />
     <ClInclude Include="Src\Utility\RoomID.h" />
