@@ -102,7 +102,7 @@ void DrawGameScene()
 {
 
 
-	switch (PepshiMan()->CurrentViewID()) {
+	switch (GameView()->CurrentViewID()) {
 	case GameData::CENTER:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
 		Draw::DrawCenterItem();
@@ -141,7 +141,7 @@ void InitGameScene()
 	ObjManager()->Init();
 
 	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
-	switch (PepshiMan()->CurrentViewID()) {
+	switch (GameView()->CurrentViewID()) {
 	case GameData::RIGHT:
 		ObjManager()->Init(object::CANDLE_EFFECT,EffectPos);
 		break;
@@ -206,7 +206,7 @@ void MainGameScene()
 	//キー入力でシーン遷移
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-		switch (PepshiMan()->CurrentViewID()) {
+		switch (GameView()->CurrentViewID()) {
 		case GameData::SubGameScene::CENTER:
 			if (GetKey(A_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
@@ -215,7 +215,7 @@ void MainGameScene()
 				ObjManager()->Init(object::CANDLE_BIG, CANDLE_BIG_POS);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
-				PepshiMan()->SetViewID(GameData::LEFT);
+				GameView()->SetViewID(GameData::LEFT);
 			}
 			if (GetKey(D_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
@@ -224,7 +224,7 @@ void MainGameScene()
 				ObjManager()->Init(object::CANDLE_BIG, CANDLE_BIG_POS);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
-				PepshiMan()->SetViewID(GameData::RIGHT);
+				GameView()->SetViewID(GameData::RIGHT);
 			}
 			break;
 		case GameData::RIGHT:
@@ -235,7 +235,7 @@ void MainGameScene()
 				ObjManager()->Init(object::CANDLE_BIG, CandlePos);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
-				PepshiMan()->SetViewID(GameData::CENTER);
+				GameView()->SetViewID(GameData::CENTER);
 			}
 			break;
 		case GameData::LEFT:
@@ -246,7 +246,7 @@ void MainGameScene()
 				ObjManager()->Init(object::CANDLE_BIG, CandlePos);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
-				PepshiMan()->SetViewID(GameData::CENTER);
+				GameView()->SetViewID(GameData::CENTER);
 			}
 			break;
 		}

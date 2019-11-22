@@ -1,6 +1,6 @@
 #include "GameData.h"
 
-GameData* PepshiMan() {
+GameData* GameView() {
 	static GameData g_GameData;
 	return &g_GameData;
 }

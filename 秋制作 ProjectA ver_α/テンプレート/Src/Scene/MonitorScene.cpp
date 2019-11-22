@@ -36,22 +36,22 @@ void LoadMonitor() {
 }
 
 void DrawBg() {
-	if (PepshiMan()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+	if (GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorSpownBgTex));
 	}
-	else if (PepshiMan()->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
+	else if (GameView()->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorLeftDuctBgTex));
 	}
-	else if (PepshiMan()->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
+	else if (GameView()->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorRightDuctBgTex));
 	}
-	else if (PepshiMan()->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
+	else if (GameView()->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex));
 	}
-	else if (PepshiMan()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+	else if (GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex));
 	}
-	else if (PepshiMan()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
+	else if (GameView()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex));
 	}
 
@@ -149,37 +149,37 @@ void MainMonitorScene()
 
 		if (ObjManager()->HasOnMouseUI(BUTTON_WORKSHOP) == true) {
 			if (OnMouseDown(Left) == true) {
-				PepshiMan()->SetMonitorID(MonitorView::WORKSHOP_VIEW);
+				GameView()->SetMonitorID(MonitorView::WORKSHOP_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_LEFT_CORRIDOR) == true) {
 			if (OnMouseDown(Left) == true) {
-				PepshiMan()->SetMonitorID(MonitorView::LEFT_CORRIDOR_VIEW);
+				GameView()->SetMonitorID(MonitorView::LEFT_CORRIDOR_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_RIGHT_CORRIDOR) == true) {
 			if (OnMouseDown(Left) == true) {
-				PepshiMan()->SetMonitorID(MonitorView::RIGHT_CORRIDOR_VIEW);
+				GameView()->SetMonitorID(MonitorView::RIGHT_CORRIDOR_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_STORE_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
-				PepshiMan()->SetMonitorID(MonitorView::STORE_ROOM_VIEW);
+				GameView()->SetMonitorID(MonitorView::STORE_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_RECEPTION_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
-				PepshiMan()->SetMonitorID(MonitorView::RECEPTION_ROOM_VIEW);
+				GameView()->SetMonitorID(MonitorView::RECEPTION_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
 		if (ObjManager()->HasOnMouseUI(BUTTON_CHILD_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
-				PepshiMan()->SetMonitorID(MonitorView::CHILD_ROOM_VIEW);
+				GameView()->SetMonitorID(MonitorView::CHILD_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
