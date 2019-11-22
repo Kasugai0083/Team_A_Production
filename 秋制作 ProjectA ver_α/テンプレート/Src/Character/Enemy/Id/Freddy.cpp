@@ -12,7 +12,7 @@ void Ohagi::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 200) {
+	if (m_IsDeath == true && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
@@ -87,6 +87,7 @@ void Ohagi::LoadTex(SceneId id_)
 	{
 	case GameScene:
 		LoadTexture("Res/Game/Enemy/Freddy.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy);
+		LoadTexture("Res/Game/Enemy/Freddy_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex);
 		break;
 
 	case MonitorScene:
@@ -99,13 +100,6 @@ void Ohagi::LoadTex(SceneId id_)
 
 void Ohagi::Draw()
 {
-	// ŽQÆ—p•Ï”
-	//GameData* pGamedate = &g_GameData;
-	//if (pGamedate == nullptr) {
-
-	//	return;
-	//}
-
 	if (m_IsDeath == true) { return; }
 	// Ž€‚ñ‚Å‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢
 
@@ -114,13 +108,31 @@ void Ohagi::Draw()
 	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
-			&& MonitorFunc()->Get() == MonitorTransition::Id::Spown) {
+			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorFreddy));
 		}
 		break;
 
 	case RoomID::ROOM_RECEPTION:
+
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorFreddy));
+		}
+		break;
+
+	case RoomID::HALL_BACK:
+
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
+			&& GetCurrentSceneId() == SceneId::GameScene) {
+
+			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex));
+		}
+		break;
+
+	case RoomID::HALL_FRONT:
 
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {

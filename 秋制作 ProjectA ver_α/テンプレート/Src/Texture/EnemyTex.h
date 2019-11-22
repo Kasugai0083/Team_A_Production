@@ -4,8 +4,13 @@
 
 enum EnemyCategoryTextureList
 {
-	FredyTex,
-	EnemyBoonieTex,
+	FredyFarTex,	// HALL_BACKの時のテクスチャ
+	EnemyBoonieTex,	// テスト用
+	
+	EnemyBonnieTex,	// バニーのテクスチャー
+
+	EnemyRanNearTex,	// 近ランのテクスチャ
+
 	EnemyTextureMax,
 };
 

@@ -3,6 +3,7 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 #include "../../CharacterManager.h"
+#include "../../../Scene/GameScene/GameData.h"
 
 void Sakura::Init()
 {
@@ -12,7 +13,7 @@ void Sakura::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 2900) {
+	if (m_IsDeath == true && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsDeath	  = false;
@@ -72,12 +73,16 @@ void Sakura::Update()
 			m_iFrameCount = 0;
 			m_IsDeath	  = true;
 		}
+		break;
+
+	case RoomID::ROOM_RIGHT_PRAYER:
 
 		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
-			m_HasKill	 = true;
+			m_HasKill = true;
 		}
 		break;
+
 	default:
 		break;
 	}
@@ -87,7 +92,7 @@ void Sakura::LoadTex(SceneId id_)
 {
 	switch (id_)
 	{
-	case RightScene:
+	case GameScene:
 		LoadTexture("Res/Game/Enemy/Chica.png", TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightChicaTex);
 		break;
 
@@ -109,7 +114,16 @@ void Sakura::Draw()
 	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& MonitorFunc()->Get() == MonitorTransition::Id::Spown) {
+			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChicaTex));
+		}
+		break;
+
+	case RoomID::ROOM_RECEPTION:
+
+		if (GetCurrentSceneId() == SceneId::MonitorScene 
+			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChicaTex));
 		}
@@ -117,8 +131,8 @@ void Sakura::Draw()
 
 	case RoomID::RIGHT_CORRIDOR:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene 
-			&& MonitorFunc()->Get() == MonitorTransition::Id::Right_Duct) {
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
 
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChicaTex));
 		}
@@ -126,11 +140,22 @@ void Sakura::Draw()
 
 	case RoomID::RIGHT_SHOJI:
 
-		if (GetCurrentSceneId() == SceneId::RightScene) {
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
+			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightChicaTex));
+			DrawTexture(960.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightChicaTex));
 		}
 		break;
+
+	case RoomID::ROOM_RIGHT_PRAYER:
+
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
+			&& GetCurrentSceneId() == SceneId::GameScene) {
+
+			DrawTexture(0.0f, 960.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightChicaTex));
+		}
+		break;
+
 	default:
 		break;
 	}

@@ -12,7 +12,7 @@ void Ume::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 2900) {
+	if (m_IsDeath == true && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsDeath = false;
@@ -72,11 +72,16 @@ void Ume::Update()
 			m_iFrameCount = 0;
 			m_IsDeath = true;
 		}
+		break;
+
+	case RoomID::ROOM_LEFT_PRAYER:
 
 		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
 			m_HasKill = true;
 		}
+		break;
+	default:
 		break;
 	}
 
@@ -84,8 +89,72 @@ void Ume::Update()
 
 void Ume::LoadTex(SceneId id_)
 {
+	switch (id_)
+	{
+	case GameScene:
+		LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
+		break;
+
+	case MonitorScene:
+		LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
+		break;
+	default:
+		break;
+	}
 }
 
 void Ume::Draw()
 {
+	if (m_IsDeath == true) { return; }
+	// 死んでたらここより下の処理にはいかない
+
+	switch (m_RoomId)
+	{
+	case RoomID::ROOM_WORK:
+
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+		}
+		break;
+
+	case RoomID::ROOM_RECEPTION:
+
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+		}
+		break;
+
+	case RoomID::LEFT_CORRIDOR:
+
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
+
+			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+		}
+		break;
+
+	case RoomID::LEFT_SHOJI:
+
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::LEFT
+			&& GetCurrentSceneId() == SceneId::GameScene) {
+
+			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+		}
+		break;
+
+	case RoomID::ROOM_LEFT_PRAYER:
+
+		if (GameView()->CurrentViewID() == GameData::SubGameScene::LEFT
+			&& GetCurrentSceneId() == SceneId::GameScene) {
+
+			DrawTexture(960.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+		}
+		break;
+	default:
+		break;
+	}
 }
