@@ -53,7 +53,7 @@ void Margaret::Draw()
 	// ¶‚«‚Ä‚¢‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢
 
 	if (GetCurrentSceneId() == SceneId::MonitorScene 
-		&& MonitorFunc()->Get() == MonitorTransition::Id::Spown) {
+		&& GameView()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
 
 		DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPuppetTex));
 	}
