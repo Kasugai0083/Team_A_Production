@@ -80,9 +80,13 @@ enum LeftCategoryTextureList {
 };
 
 enum MonitorCategoryTextureList {
-	GameMonitorSpownTex,
-	GameMonitorLeftDuctTex,
-	GameMonitorRightDuctTex,
+	GameMonitorSpownBgTex,
+	GameMonitorLeftDuctBgTex,
+	GameMonitorRightDuctBgTex,
+
+	GameMonitorChildRoomBgTex,
+	GameMonitorResptionRoomBgTex,
+	GameMonitorStoreRoomBgTex,
 	
 	GameMonitorSpownUITex,
 	GameMonitorLeftDuctUITex,

@@ -1,19 +1,20 @@
 #pragma once
 
+enum class MonitorView {
+	WORKSHOP_VIEW,
+	STORE_ROOM_VIEW,
+	RECEPTION_ROOM_VIEW,
+	CHILD_ROOM_VIEW,
+	RIGHT_CORRIDOR_VIEW,
+	LEFT_CORRIDOR_VIEW
+};
+
 struct GameData {
 	
-	enum SubGameScene{
+	enum SubGameScene {
 		CENTER,
 		LEFT,
 		RIGHT,
-	};
-	enum class MonitorView {
-		WORKSHOP_VIEW,
-		STORE_ROOM_VIEW,
-		RECEPTION_ROOM_VIEW,
-		CHILD_ROOM_VIEW,
-		RIGHT_CORRIDOR_VIEW,
-		LEFT_CORRIDOR_VIEW
 	};
 
 	GameData() :
@@ -31,6 +32,10 @@ struct GameData {
 	void SetViewID(SubGameScene id_) {
 		m_ViewID = id_;
 	};
+
+	void SetMonitorID(MonitorView view_) {
+		m_MonitorID = view_;
+	}
 
 	SubGameScene m_ViewID;
 	MonitorView m_MonitorID;
