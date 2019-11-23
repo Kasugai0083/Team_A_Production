@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENEMYTEX_H_
+#define ENEMYTEX_H_
 
 #include "GameSceneTex.h"
 
@@ -11,7 +12,11 @@ enum EnemyCategoryTextureList
 
 	EnemyRanNearTex,	// 近ランのテクスチャ
 
+	EnemyBotanTex,	// ボタンテクスチャ
+
 	EnemyTextureMax,
 };
 
 #define TEXTURE_CATEGORY_ENEMY (SceneId::EnemyScene)				//!< ゲーム本編カテゴリー
+
+#endif

@@ -47,7 +47,6 @@ private:
 	bool m_IsMonitor;	// モニターを見ているかどうか
 	float m_MaskAnimation; // マスクのアニメーションタイマー
 
-
 };
 
 #endif

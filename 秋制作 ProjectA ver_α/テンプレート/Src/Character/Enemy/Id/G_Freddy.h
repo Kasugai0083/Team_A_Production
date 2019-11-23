@@ -44,6 +44,13 @@ public:
 	virtual bool HasKill()const override { return m_HasKill; }
 
 	/*
+		生成するかしないかの判定関数
+		プレイヤーがモニターシーンの時に使う。
+		trueで生成する
+	*/
+	bool SpawnJudgement(double probability_);
+
+	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/

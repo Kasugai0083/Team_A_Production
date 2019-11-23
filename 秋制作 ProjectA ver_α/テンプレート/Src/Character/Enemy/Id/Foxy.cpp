@@ -12,7 +12,7 @@ void Ran::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 300) {
+	if (m_IsDeath == true && m_iFrameCount >= 3000) {
 
 		m_iFrameCount = 0;
 		m_IsDeath     = false;
@@ -120,7 +120,7 @@ void Ran::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+			DrawTexture(0.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
 		}
 		break;
 

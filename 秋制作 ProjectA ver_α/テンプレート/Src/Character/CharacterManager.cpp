@@ -30,21 +30,30 @@ void CharacterManager::Initialize() {
 	
 
 	for (int i = 0; i < MAX_CHARACTER; i++) {
-		m_Charas[i]->Init();
+		if (m_Charas[i] != nullptr) {
+
+			m_Charas[i]->Init();
+		}
 	}
 }
 
 void CharacterManager::Update()
 {
 	for (int i = 0; i < MAX_CHARACTER; i++) {
-		m_Charas[i]->Update();
+		if (m_Charas[i] != nullptr) {
+
+			m_Charas[i]->Update();
+		}
 	}
 }
 
 void CharacterManager::Draw()
 {
 	for (int i = 0; i < MAX_CHARACTER; i++) {
-		m_Charas[i]->Draw();
+		if (m_Charas[i] != nullptr) {
+
+			m_Charas[i]->Draw();
+		}
 	}
 }
 
@@ -59,7 +68,10 @@ void CharacterManager::Release()
 
 void CharacterManager::LoadTex(SceneId id) {
 	for (int i = 0; i < MAX_CHARACTER; i++) {
-		m_Charas[i]->LoadTex(id);
+		if (m_Charas[i] != nullptr) {
+
+			m_Charas[i]->LoadTex(id);
+		}
 	}
 }
 

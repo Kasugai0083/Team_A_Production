@@ -39,6 +39,13 @@ void Player::Update()
 		m_IsDeath = true;
 	}
 
+	if (GetCurrentSceneId() == SceneId::MonitorScene) {
+		m_IsMonitor = true;
+	}
+	else {
+		m_IsMonitor = false;
+	}
+
 }
 
 void Player::Draw() {
