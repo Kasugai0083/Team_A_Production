@@ -16,7 +16,7 @@ void Botan::Init()
 void Botan::Update()
 {
 	if (m_pPlayer->HasMonitor() == true
-		&& SpawnJudgement(0.1) == true) {
+		&& SpawnJudgement(0.001) == true) {
 
 		m_IsDeath = false;
 	}
