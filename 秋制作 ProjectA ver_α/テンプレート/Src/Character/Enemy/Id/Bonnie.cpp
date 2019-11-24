@@ -92,11 +92,12 @@ void Ume::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
+		LoadTexture("Res/Game/Enemy/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
 		LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
+		LoadTexture("Res/Game/Enemy/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex);
 		break;
 	default:
 		break;
@@ -115,7 +116,7 @@ void Ume::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
 		break;
 
@@ -124,7 +125,7 @@ void Ume::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+			DrawTexture(540.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
 		break;
 
@@ -133,7 +134,7 @@ void Ume::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
 
-			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+			DrawTexture(560.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
 		break;
 
@@ -142,7 +143,7 @@ void Ume::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::LEFT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+			DrawTexture(960.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex));
 		}
 		break;
 

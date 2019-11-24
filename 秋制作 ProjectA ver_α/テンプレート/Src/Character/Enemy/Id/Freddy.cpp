@@ -88,10 +88,12 @@ void Ohagi::LoadTex(SceneId id_)
 	case GameScene:
 		LoadTexture("Res/Game/Enemy/Freddy.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy);
 		LoadTexture("Res/Game/Enemy/Freddy_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex);
+		LoadTexture("Res/Game/Enemy/Freddy_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Freddy.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorFreddy);
+		LoadTexture("Res/Game/Enemy/Freddy_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex);
+
 		break;
 	default:
 		break;
@@ -110,7 +112,7 @@ void Ohagi::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
 			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorFreddy));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
 		}
 		break;
 
@@ -119,7 +121,7 @@ void Ohagi::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorFreddy));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
 		}
 		break;
 
@@ -128,7 +130,7 @@ void Ohagi::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex));
+			DrawTexture(700.0f, 530.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex));
 		}
 		break;
 
@@ -137,7 +139,7 @@ void Ohagi::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(960.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(700.0f, 530.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
 		}
 		break;
 

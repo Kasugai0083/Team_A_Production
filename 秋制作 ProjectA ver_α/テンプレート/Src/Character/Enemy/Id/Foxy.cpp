@@ -12,7 +12,7 @@ void Ran::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 3000) {
+	if (m_IsDeath == true && m_iFrameCount >= 300) {
 
 		m_iFrameCount = 0;
 		m_IsDeath     = false;
@@ -79,11 +79,13 @@ void Ran::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex);
+		LoadTexture("Res/Game/Enemy/Ran.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex);
+		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
+		LoadTexture("Res/Game/Enemy/Ran_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex);
+		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
 		break;
 	default:
 		break;
@@ -102,7 +104,7 @@ void Ran::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
 		}
 		break;
 
@@ -111,7 +113,7 @@ void Ran::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+			DrawTexture(900.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex));
 		}
 		break;
 
@@ -120,16 +122,7 @@ void Ran::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(0.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
-		}
-		break;
-
-	case RoomID::ROOM_PRAYER:
-
-		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
-			&& GetCurrentSceneId() == SceneId::GameScene) {
-
-			DrawTexture(960.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyRanNearTex));
+			DrawTexture(750.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
 		}
 		break;
 	default:
