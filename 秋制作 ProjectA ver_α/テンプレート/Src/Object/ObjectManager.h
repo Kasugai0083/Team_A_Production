@@ -34,6 +34,8 @@ public:
 	void SetCandller(Candller* candller_);
 	void SetCount(int* count_);
 
+	bool HasLight(CandleLight cl_);
+
 	void Release();
 
 

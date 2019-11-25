@@ -152,6 +152,9 @@
     <ClCompile Include="Src\Character\Enemy\Enemy.cpp">
       <Filter>ソース ファイル\Character\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Object\Item\Id\Candle.cpp">
+      <Filter>ソース ファイル\Object\Item\Id</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Engine\Engine.h">

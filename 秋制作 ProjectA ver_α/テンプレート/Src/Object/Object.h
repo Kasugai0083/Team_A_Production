@@ -12,6 +12,11 @@ struct Candller {
 	bool LeftCaLight;
 };
 
+enum class CandleLight {
+	CENTER_LIGHT,
+	RIGHT_LIGHT,
+	LEFT_LIGHT,
+};
 
 class Object {
 public:
@@ -32,6 +37,7 @@ public:
 
 	virtual void SetCandller(Candller* candller_) { return; };
 	virtual void SetCount(int* count_) { return; };
+	virtual bool HasLight(CandleLight cl_) { return 0; };
 protected:
 
 private:
