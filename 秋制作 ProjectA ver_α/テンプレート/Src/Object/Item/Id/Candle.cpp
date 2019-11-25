@@ -1,6 +1,7 @@
 #include "Candle.h"
 
 Candller Candle::m_Candller = {false, false , false};
+int Candle::m_Hp = 600;
 
 void Candle::Init(object::ObjectId id_) {
 	switch (id_) {

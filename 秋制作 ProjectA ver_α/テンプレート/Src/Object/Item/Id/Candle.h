@@ -33,6 +33,7 @@ private:
 
 	int* m_Count;
 	static Candller m_Candller;
+	static int m_Hp;
 	int m_Time;
 
 };
