@@ -31,10 +31,11 @@ public:
 	bool HasOnMouse(object::ObjectId id_);
 	bool HasOnMouseUI(UserInterfaceID id_);
 
-	void SetCandller(Candller* candller_);
-	void SetCount(int* count_);
+	//void SetCandller(Candller* candller_);
+	//void SetCount(int* count_);
 
 	bool HasLight(CandleLight cl_);
+	void InitCount();
 
 	void Release();
 

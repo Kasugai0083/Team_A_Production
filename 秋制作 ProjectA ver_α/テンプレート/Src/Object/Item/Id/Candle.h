@@ -12,6 +12,7 @@ public:
 
 	Candle() {
 		m_Time = 0;
+		m_Hp = 100;
 	};
 	void Init()override {};
 	void Init(object::ObjectId id_)override;
@@ -22,8 +23,9 @@ public:
 	bool HasLight(CandleLight cl_)override;
 
 	//void SetCandller(Candller* candller_)override;
-	void SetCount(int* count_)override;
+	//void SetCount(int* count_)override;
 
+	void InitCount()override;
 	void Update()override;
 
 	void Draw() override;
@@ -31,9 +33,9 @@ public:
 
 private:
 
-	int* m_Count;
+	static int m_Count;
 	static Candller m_Candller;
-	static int m_Hp;
+	int m_Hp;
 	int m_Time;
 
 };

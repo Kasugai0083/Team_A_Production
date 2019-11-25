@@ -29,6 +29,8 @@ public:
 	virtual void Init(object::ObjectId id_) {};
 	virtual void Init(object::ObjectId id_,Vec2 pos_) {};
 
+	virtual void InitCount() {};
+
 	virtual void Update() {};
 	virtual bool HasOnMouse() = 0;
 	

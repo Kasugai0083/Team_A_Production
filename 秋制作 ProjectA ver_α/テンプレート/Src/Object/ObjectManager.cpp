@@ -43,8 +43,9 @@ ObjectManager::ObjectManager() {
 	m_pUI[PLAYER_ROOM] = new UI(UIType::NONE, PLAYER_ROOM);
 	m_pUI[CLEAR_LOGO] = new UI(UIType::NONE, CLEAR_LOGO);
 
-	m_pObjects[object::CANDLE_BIG] = new Candle;
-	m_pObjects[object::CANDLE_SMALL] = new Candle;
+	m_pObjects[object::CANDLE_RIGHT] = new Candle;
+	m_pObjects[object::CANDLE_LEFT] = new Candle;
+	m_pObjects[object::CANDLE_CENTER] = new Candle;
 	m_pObjects[object::CANDLE_EFFECT] = new Candle;
 	m_pObjects[object::CANDLE_STAND] = new Candle;
 
@@ -72,8 +73,9 @@ void ObjectManager::Init() {
 		m_pObjects[i]->Init();
 	}
 
-	m_pObjects[object::CANDLE_BIG]->Init(object::CANDLE_BIG);
-	m_pObjects[object::CANDLE_SMALL]->Init(object::CANDLE_SMALL);
+	m_pObjects[object::CANDLE_RIGHT]->Init(object::CANDLE_RIGHT);
+	m_pObjects[object::CANDLE_LEFT]->Init(object::CANDLE_LEFT);
+	m_pObjects[object::CANDLE_CENTER]->Init(object::CANDLE_CENTER);
 	m_pObjects[object::CANDLE_EFFECT]->Init(object::CANDLE_EFFECT);
 	m_pObjects[object::CANDLE_STAND]->Init(object::CANDLE_STAND);
 
@@ -164,19 +166,23 @@ bool ObjectManager::HasOnMouseUI(UserInterfaceID id_) {
 	return false;
 }
 
-void ObjectManager::SetCandller(Candller* candller_) {
-	m_pObjects[object::CANDLE_BIG]->SetCandller(candller_);
-	m_pObjects[object::CANDLE_SMALL]->SetCandller(candller_);
-	m_pObjects[object::CANDLE_EFFECT]->SetCandller(candller_);
-	m_pObjects[object::CANDLE_STAND]->SetCandller(candller_);
-}
-void ObjectManager::SetCount(int* count_) {
-	m_pObjects[object::CANDLE_BIG]->SetCount(count_);
-	m_pObjects[object::CANDLE_SMALL]->SetCount(count_);
-	m_pObjects[object::CANDLE_EFFECT]->SetCount(count_);
-	m_pObjects[object::CANDLE_STAND]->SetCount(count_);
-}
+//void ObjectManager::SetCandller(Candller* candller_) {
+//	m_pObjects[object::CANDLE_LEFT]->SetCandller(candller_);
+//	m_pObjects[object::CANDLE_CENTER]->SetCandller(candller_);
+//	m_pObjects[object::CANDLE_EFFECT]->SetCandller(candller_);
+//	m_pObjects[object::CANDLE_STAND]->SetCandller(candller_);
+//}
+//void ObjectManager::SetCount(int* count_) {
+//	m_pObjects[object::CANDLE_LEFT]->SetCount(count_);
+//	m_pObjects[object::CANDLE_CENTER]->SetCount(count_);
+//	m_pObjects[object::CANDLE_EFFECT]->SetCount(count_);
+//	m_pObjects[object::CANDLE_STAND]->SetCount(count_);
+//}
 
 bool ObjectManager::HasLight(CandleLight cl_) {
-	return m_pObjects[object::CANDLE_BIG]->HasLight(cl_);
+	return m_pObjects[object::CANDLE_LEFT]->HasLight(cl_);
+}
+
+void ObjectManager::InitCount() {
+	m_pObjects[object::CANDLE_LEFT]->InitCount();
 }

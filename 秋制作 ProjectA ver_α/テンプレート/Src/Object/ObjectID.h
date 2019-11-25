@@ -5,8 +5,9 @@ namespace object {
 
 	enum ObjectId {
 		//Item
-		CANDLE_BIG,
-		CANDLE_SMALL,
+		CANDLE_LEFT,
+		CANDLE_RIGHT,
+		CANDLE_CENTER,
 		CANDLE_EFFECT,
 		CANDLE_STAND,
 		FIRE_BIG,
