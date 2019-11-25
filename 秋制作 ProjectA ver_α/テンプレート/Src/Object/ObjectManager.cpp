@@ -43,11 +43,11 @@ ObjectManager::ObjectManager() {
 	m_pUI[PLAYER_ROOM] = new UI(UIType::NONE, PLAYER_ROOM);
 	m_pUI[CLEAR_LOGO] = new UI(UIType::NONE, CLEAR_LOGO);
 
-	m_pObjects[object::CANDLE_RIGHT] = new Candle;
-	m_pObjects[object::CANDLE_LEFT] = new Candle;
-	m_pObjects[object::CANDLE_CENTER] = new Candle;
-	m_pObjects[object::CANDLE_EFFECT] = new Candle;
-	m_pObjects[object::CANDLE_STAND] = new Candle;
+	m_pObjects[object::CANDLE_RIGHT] = new Candle(CandleType::CANDLE);
+	m_pObjects[object::CANDLE_LEFT] = new Candle(CandleType::CANDLE);
+	m_pObjects[object::CANDLE_CENTER] = new Candle(CandleType::CANDLE);
+	m_pObjects[object::CANDLE_EFFECT] = new Candle(CandleType::OTHER);
+	m_pObjects[object::CANDLE_STAND] = new Candle(CandleType::OTHER);
 
 	m_pObjects[object::FIRE_BIG] = new FireBig;
 	m_pObjects[object::FIRE_SMALL] = new FireSmall;

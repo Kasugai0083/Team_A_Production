@@ -6,11 +6,16 @@
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Calculation.h"
 
+enum class CandleType {
+	CANDLE,
+	OTHER
+};
 
 class Candle : public Item {
 public:
 
-	Candle() {
+	Candle(CandleType type_) {
+		m_Type = type_;
 		m_Time = 0;
 		m_Hp = 100;
 	};
@@ -33,6 +38,7 @@ public:
 
 private:
 
+	CandleType m_Type;
 	static int m_Count;
 	static Candller m_Candller;
 	int m_Hp;

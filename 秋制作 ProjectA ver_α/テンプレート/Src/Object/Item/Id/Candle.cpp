@@ -153,7 +153,10 @@ void Candle::InitCount() {
 
 void Candle::Update(){
 
-	m_Frame.Height--;
+	if (m_Type == CandleType::CANDLE) {
+		m_Size.Height--;
+		m_Frame.Height--;
+	}
 
 	if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 		m_OnMouse = true;
@@ -214,7 +217,7 @@ void Candle::Update(){
 
 void Candle::Draw(){
 
-	DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
+	DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, m_Frame);
 
 	Lib::Texture polygon("hoge");
 
