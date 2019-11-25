@@ -82,7 +82,7 @@ void DrawEnd();
 */
 void DrawTexture(float x, float y, Texture* texture_data);
 void DrawTexture(float x, float y, Texture* texture_data, float width_, float height_);
-
+void DrawTexture(float x, float y, Texture* texture_data, Size size_);
 
 /**
 * @brief テクスチャのUVスクロール描画関数@n

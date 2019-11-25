@@ -11,6 +11,8 @@ class Candle : public Item {
 public:
 
 	Candle() {
+		m_Time = 0;
+
 	};
 	void Init()override {};
 	void Init(object::ObjectId id_)override{
@@ -122,6 +124,7 @@ public:
 	void Update()override {
 
 
+
 		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 			m_OnMouse = true;
 			if (OnMouseDown(Left) == true) {
@@ -176,6 +179,18 @@ public:
 		}
 		else {
 			m_OnMouse = false;
+		}
+
+	}
+
+	void Draw() override{
+
+		DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, m_Size);
+
+		Lib::Texture polygon("hoge");
+
+		if (m_OnMouse == true) {
+			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
 		}
 
 	}

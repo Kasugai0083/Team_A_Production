@@ -36,6 +36,9 @@ SceneId UpdateTitleScene()
 }
 
 int y = 1.f;
+int y2 = 1.f;
+
+Size size = {256.f, 256.f};
 
 void DrawTitleScene()
 {
@@ -46,7 +49,9 @@ void DrawTitleScene()
 	ObjManager()->DrawUI(BUTTON_NEW_GAME);
 	ObjManager()->DrawUI(BUTTON_CONTINUE);
 
-	DrawTexture(900.0f, 500.0f + y, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),256.f, 256.f - y);
+	y2++;
+
+	DrawTexture(900.0f, 500.0f + y2, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),size);
 }
 
 
@@ -68,7 +73,8 @@ void MainTitleScene()
 
 	ObjManager()->Update();
 	
-	y++;
+
+	size.Height -= y;
 
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouseUI(BUTTON_NEW_GAME) == true) {
