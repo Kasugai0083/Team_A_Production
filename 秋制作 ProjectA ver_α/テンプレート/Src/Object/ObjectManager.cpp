@@ -176,3 +176,7 @@ void ObjectManager::SetCount(int* count_) {
 	m_pObjects[object::CANDLE_EFFECT]->SetCount(count_);
 	m_pObjects[object::CANDLE_STAND]->SetCount(count_);
 }
+
+bool ObjectManager::HasLight(CandleLight cl_) {
+	return m_pObjects[object::CANDLE_BIG]->HasLight(cl_);
+}

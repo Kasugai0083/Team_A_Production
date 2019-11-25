@@ -12,6 +12,7 @@
 #include "GameData.h"
 #include "GameScene.h"
 #include "../../Object/Item/ItemValue.h"
+#include "../../Object/Object.h"
 
 // ゲーム本編シーンの初期化
 void InitGameScene();
@@ -53,11 +54,11 @@ namespace Draw {
 		
 		Candller* CandllerInstance = CreateCandller();
 
-		//キャンドル
-		if (CandllerInstance->CenterCaLight == true) {
+		if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
 			ObjManager()->Draw(object::FIRE_SMALL);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
+
 
 		ObjManager()->Draw(object::CANDLE_SMALL);
 		ObjManager()->Draw(object::CANDLE_STAND);
@@ -72,7 +73,7 @@ namespace Draw {
 
 		Candller* CandllerInstance = CreateCandller();
 
-		if (CandllerInstance->LeftCaLight == true) {
+		if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -84,8 +85,7 @@ namespace Draw {
 	void DrawRightItem() {
 
 		Candller* CandllerInstance = CreateCandller();
-
-		if (CandllerInstance->RightCaLight == true) {
+		if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
 			ObjManager()->Draw(object::FIRE_BIG);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
@@ -178,7 +178,7 @@ void MainGameScene()
 	int count = 0;
 	Candller* CandllerInstance = CreateCandller();
 
-	ObjManager()->SetCandller(CandllerInstance);
+	//ObjManager()->SetCandller(CandllerInstance);
 	ObjManager()->SetCount(&count);
 
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
