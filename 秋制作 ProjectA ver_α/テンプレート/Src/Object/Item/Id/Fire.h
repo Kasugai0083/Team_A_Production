@@ -2,38 +2,97 @@
 
 #include "../Item.h"
 #include "../../../Scene/Scene.h"
+#include "Candle.h"
 
+enum class FireID {
+	CENTER_FIRE,
+	RIGHT_FIRE,
+	LEFT_FIRE,
+};
 
-class FireBig : public Item {
+class Fire : public Item {
 public:
-
+	Fire(FireID id_) {
+		m_Id = id_;
+	}
 	void Init()override {
-		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+		switch (m_Id)
+		{
+		case FireID::CENTER_FIRE:
+			LoadTexture("Res/Game/Item/Candle_Fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+			m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
 
-		if (m_pTex == nullptr) {
-			return;
+			if (m_pTex == nullptr) {
+				return;
+			}
+
+			m_Pos = FIRE_SMALL_POS;
+			m_Size = FIRE_SMALL_SIZE;
+			break;
+		case FireID::RIGHT_FIRE:
+			LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+			m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+
+			if (m_pTex == nullptr) {
+				return;
+			}
+
+			m_Pos = FIRE_BIG_POS;
+			m_Size = FIRE_BIG_SIZE;
+			break;
+		case FireID::LEFT_FIRE:
+			LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+			m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+
+			if (m_pTex == nullptr) {
+				return;
+			}
+
+			m_Pos = FIRE_BIG_POS;
+			m_Size = FIRE_BIG_SIZE;
+			break;
+		default:
+			break;
 		}
-
-		m_Pos = FIRE_BIG_POS;
-		m_Size = FIRE_BIG_SIZE;
 
 	};
 	void Init(Vec2 pos_) override {
-		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+		Init();
+		m_Pos = pos_;
 
-		if (m_pTex == nullptr) {
-			return;
+	}
+	void Update() {
+		switch (m_Id)
+		{
+		case FireID::CENTER_FIRE:
+			if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
+				m_Pos.Y += CANDLE_MELT_SMALL;
+			}
+			break;
+		case FireID::RIGHT_FIRE:
+			if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
+				m_Pos.Y += CANDLE_MELT_BIG;
+			}
+			break;
+		case FireID::LEFT_FIRE:
+			if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
+				m_Pos.Y += CANDLE_MELT_BIG;
+			}
+			break;
+		default:
+			break;
 		}
 
-		m_Pos = pos_;
-		m_Size = FIRE_BIG_SIZE;
+		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+			m_OnMouse = true;
+		}
+		else {
+			m_OnMouse = false;
+		}
 	}
 
-
 private:
-
+	FireID m_Id;
 };
 
 class FireSmall : public Item {

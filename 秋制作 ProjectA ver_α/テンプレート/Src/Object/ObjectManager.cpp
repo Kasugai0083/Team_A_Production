@@ -14,6 +14,7 @@
 #include "Item/Id/Fire.h"
 #include "Item/Id/PlayerItem.h"
 #include "UI/UIID.h"
+#include "Item/Id/Fire.h"
 
 ObjectManager* ObjManager() {
 	static ObjectManager obj;
@@ -49,8 +50,9 @@ ObjectManager::ObjectManager() {
 	m_pObjects[object::CANDLE_EFFECT] = new Candle(CandleType::OTHER);
 	m_pObjects[object::CANDLE_STAND] = new Candle(CandleType::OTHER);
 
-	m_pObjects[object::FIRE_BIG] = new FireBig;
-	m_pObjects[object::FIRE_SMALL] = new FireSmall;
+	m_pObjects[object::FIRE_CENTER] = new Fire(FireID::CENTER_FIRE);
+	m_pObjects[object::FIRE_RIGHT] = new Fire(FireID::RIGHT_FIRE);
+	m_pObjects[object::FIRE_LEFT] = new Fire(FireID::LEFT_FIRE);
 
 	m_pObjects[object::CRYSTAL] = new Crystal;
 	m_pObjects[object::MUSICBOX] = new MusicBox;
@@ -138,7 +140,9 @@ void ObjectManager::DrawUI(UserInterfaceID id_) {
 	m_pUI[id_]->Draw();
 }
 
-
+void ObjectManager::SetPosition(object::ObjectId id_, Vec2 pos_) {
+	m_pObjects[id_]->SetPosition(pos_);
+}
 
 void ObjectManager::Release()
 {
@@ -167,23 +171,10 @@ bool ObjectManager::HasOnMouseUI(UserInterfaceID id_) {
 	return false;
 }
 
-//void ObjectManager::SetCandller(Candller* candller_) {
-//	m_pObjects[object::CANDLE_LEFT]->SetCandller(candller_);
-//	m_pObjects[object::CANDLE_CENTER]->SetCandller(candller_);
-//	m_pObjects[object::CANDLE_EFFECT]->SetCandller(candller_);
-//	m_pObjects[object::CANDLE_STAND]->SetCandller(candller_);
-//}
-//void ObjectManager::SetCount(int* count_) {
-//	m_pObjects[object::CANDLE_LEFT]->SetCount(count_);
-//	m_pObjects[object::CANDLE_CENTER]->SetCount(count_);
-//	m_pObjects[object::CANDLE_EFFECT]->SetCount(count_);
-//	m_pObjects[object::CANDLE_STAND]->SetCount(count_);
-//}
-
 bool ObjectManager::HasLight(CandleLight cl_) {
-	return m_pObjects[object::CANDLE_LEFT]->HasLight(cl_);
+	return m_pObjects[object::CANDLE_CENTER]->HasLight(cl_);
 }
 
 void ObjectManager::InitCount() {
-	m_pObjects[object::CANDLE_LEFT]->InitCount();
+	m_pObjects[object::CANDLE_CENTER]->InitCount();
 }

@@ -20,7 +20,8 @@ const Vec2 CANDLE_SMALL_POS = { (960.f - CANDLE_SMALL_SIZE.Width / 2),320.f };
 //ÇÎÇ§ÇªÇ≠(ìî)
 const Size CANDLE_EFFECT_SIZE = { 118.f,118.f };
 const Size CANDLE_EFFECT_FRAME = { 128.f,128.f };
-const Vec2 CANDLE_EFFECT_POS = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),250.f };
+const Vec2 BIG_CANDLE_EFFECT_POS = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
+const Vec2 SMALL_CANDLE_EFFECT_POS = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),250.f };
 
 //ÇÎÇ§ÇªÇ≠(êCë‰)
 const Size CANDLE_STAND_SIZE = { 110.f,512.f };

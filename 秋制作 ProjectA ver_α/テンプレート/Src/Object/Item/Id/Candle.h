@@ -13,6 +13,10 @@ enum class CandleType {
 	OTHER
 };
 
+const float CANDLE_MELT_BIG = 0.2f;
+const float CANDLE_MELT_SMALL = 0.1f;
+
+
 class Candle : public Item {
 public:
 
@@ -151,7 +155,7 @@ public:
 			return;
 		}
 
-		m_Pos = CANDLE_EFFECT_POS;
+		m_Pos = BIG_CANDLE_EFFECT_POS;
 		m_Size = CANDLE_EFFECT_SIZE;
 
 	};

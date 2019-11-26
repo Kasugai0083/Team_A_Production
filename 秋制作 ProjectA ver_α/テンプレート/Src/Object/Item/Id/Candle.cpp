@@ -1,11 +1,9 @@
 #include "Candle.h"
 
-Candller Candle::m_Candller = {true, true, true};
+Candller Candle::m_Candller = {false, false, false};
 Candller Candle::m_Death = {false, false, false};
 int Candle::m_Count = 0;
 
-const float CANDLE_MELT_BIG = 0.2f;
-const float CANDLE_MELT_SMALL = 0.1f;
 
 void Candle::Init(object::ObjectId id_) {
 	switch (id_) {
@@ -66,7 +64,7 @@ void Candle::Init(object::ObjectId id_) {
 			return;
 		}
 
-		m_Pos = CANDLE_EFFECT_POS;
+		m_Pos = BIG_CANDLE_EFFECT_POS;
 		m_Size = CANDLE_EFFECT_SIZE;
 		m_Frame = CANDLE_EFFECT_FRAME;
 

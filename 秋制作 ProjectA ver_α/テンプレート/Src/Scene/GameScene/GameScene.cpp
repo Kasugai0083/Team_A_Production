@@ -55,7 +55,7 @@ namespace Draw {
 		Candller* CandllerInstance = CreateCandller();
 
 		if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
-			ObjManager()->Draw(object::FIRE_SMALL);
+			ObjManager()->Draw(object::FIRE_CENTER);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
 
@@ -74,7 +74,7 @@ namespace Draw {
 		Candller* CandllerInstance = CreateCandller();
 
 		if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
-			ObjManager()->Draw(object::FIRE_BIG);
+			ObjManager()->Draw(object::FIRE_LEFT);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
 		ObjManager()->Draw(object::CANDLE_LEFT);
@@ -86,7 +86,7 @@ namespace Draw {
 
 		Candller* CandllerInstance = CreateCandller();
 		if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
-			ObjManager()->Draw(object::FIRE_BIG);
+			ObjManager()->Draw(object::FIRE_RIGHT);
 			ObjManager()->Draw(object::CANDLE_EFFECT);
 		}
 		ObjManager()->Draw(object::CANDLE_RIGHT);
@@ -207,7 +207,7 @@ void MainGameScene()
 			if (GetKey(A_KEY) == true) {
 				ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
 
-				ObjManager()->Init(object::CANDLE_CENTER, CandlePos);
+				ObjManager()->Init(object::CANDLE_CENTER, SMALL_CANDLE_EFFECT_POS);
 				ObjManager()->Init(object::CANDLE_LEFT, CANDLE_BIG_POS);
 				ObjManager()->Init(object::CANDLE_RIGHT, CandlePos);
 
@@ -227,7 +227,7 @@ void MainGameScene()
 			break;
 		case GameData::RIGHT:
 			if (GetKey(A_KEY) == true) {
-				ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
+				ObjManager()->Init(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
 
 				ObjManager()->Init(object::CANDLE_CENTER, CANDLE_SMALL_POS);
 				ObjManager()->Init(object::CANDLE_LEFT, CandlePos);
@@ -239,7 +239,7 @@ void MainGameScene()
 			break;
 		case GameData::LEFT:
 			if (GetKey(D_KEY) == true) {
-				ObjManager()->Init(object::CANDLE_EFFECT, CANDLE_EFFECT_POS);
+				ObjManager()->Init(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
 
 				ObjManager()->Init(object::CANDLE_CENTER, CANDLE_SMALL_POS);
 				ObjManager()->Init(object::CANDLE_LEFT, CandlePos);

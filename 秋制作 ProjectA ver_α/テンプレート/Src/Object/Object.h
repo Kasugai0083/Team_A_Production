@@ -39,6 +39,7 @@ public:
 
 	virtual void SetCandller(Candller* candller_) { return; };
 	virtual void SetCount(int* count_) { return; };
+	virtual void SetPosition(Vec2 pos_) {};
 	virtual bool HasLight(CandleLight cl_) { return 0; };
 protected:
 

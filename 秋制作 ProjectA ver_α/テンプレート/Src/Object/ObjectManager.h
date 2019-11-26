@@ -31,8 +31,7 @@ public:
 	bool HasOnMouse(object::ObjectId id_);
 	bool HasOnMouseUI(UserInterfaceID id_);
 
-	//void SetCandller(Candller* candller_);
-	//void SetCount(int* count_);
+	void SetPosition(object::ObjectId id_, Vec2 pos_);
 
 	bool HasLight(CandleLight cl_);
 	void InitCount();
