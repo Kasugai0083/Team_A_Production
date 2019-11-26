@@ -6,6 +6,9 @@
 
 #pragma region ゲーム内オブジェクト
 
+//亜空間座標
+const Vec2 VOID_POS = { 9999.f, 9999.f };
+
 //ろうそく（大）
 const Size CANDLE_BIG_SIZE = { 46.f,256.f };
 const Size CANDLE_BIG_FRAME = { 256.f,256.f };

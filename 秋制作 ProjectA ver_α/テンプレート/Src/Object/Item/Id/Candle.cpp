@@ -149,9 +149,18 @@ void Candle::Update(){
 
 	if (m_Candller.CenterCaLight == true) {
 		if (m_Type == CandleType::CENTER_CANDLE) {
-			m_Size.Height -= CANDLE_MELT_SMALL;
-			m_Frame.Height -= CANDLE_MELT_SMALL;
-			m_Pos.Y += CANDLE_MELT_SMALL;
+
+			m_CandleHp -= 0.01f;
+
+			float tmp = m_CandleHp / 100;
+
+			m_Size.Height *= tmp;
+			m_Frame.Height *= tmp;
+			//m_Pos.Y *= (tmp / 100);
+
+			//m_Size.Height -= CANDLE_MELT_SMALL;
+			//m_Frame.Height -= CANDLE_MELT_SMALL;
+			//m_Pos.Y += CANDLE_MELT_SMALL;
 
 			if (m_Size.Height <= 0.0f) {
 				m_Death.CenterCaLight = true;
