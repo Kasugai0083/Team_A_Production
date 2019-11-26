@@ -4,6 +4,9 @@ Candller Candle::m_Candller = {true, true, true};
 Candller Candle::m_Death = {false, false, false};
 int Candle::m_Count = 0;
 
+const float CANDLE_MELT_BIG = 0.2f;
+const float CANDLE_MELT_SMALL = 0.1f;
+
 void Candle::Init(object::ObjectId id_) {
 	switch (id_) {
 	case object::CANDLE_LEFT:
@@ -140,14 +143,6 @@ void Candle::Init(object::ObjectId id_, Vec2 pos_) {
 	}
 }
 
-
-//void Candle::SetCandller(Candller* candller_){
-//	m_Candller = candller_;
-//}
-//void Candle::SetCount(int* count_){
-//	m_Count = count_;
-//}
-
 void Candle::InitCount() {
 	m_Count = 0;
 }
@@ -156,9 +151,9 @@ void Candle::Update(){
 
 	if (m_Candller.CenterCaLight == true) {
 		if (m_Type == CandleType::CENTER_CANDLE) {
-			m_Size.Height--;
-			m_Frame.Height--;
-			m_Pos.Y++;
+			m_Size.Height -= CANDLE_MELT_SMALL;
+			m_Frame.Height -= CANDLE_MELT_SMALL;
+			m_Pos.Y += CANDLE_MELT_SMALL;
 
 			if (m_Size.Height <= 0.0f) {
 				m_Death.CenterCaLight = true;
@@ -168,9 +163,9 @@ void Candle::Update(){
 	}
 	if (m_Candller.LeftCaLight == true) {
 		if (m_Type == CandleType::LEFT_CANDLE) {
-			m_Size.Height--;
-			m_Frame.Height--;
-			m_Pos.Y++;
+			m_Size.Height -= CANDLE_MELT_BIG;
+			m_Frame.Height -= CANDLE_MELT_BIG;
+			m_Pos.Y += CANDLE_MELT_BIG;
 			if (m_Size.Height <= 0.0f) {
 				m_Death.LeftCaLight = true;
 			}
@@ -179,9 +174,9 @@ void Candle::Update(){
 	}
 	if (m_Candller.RightCaLight == true) {
 		if (m_Type == CandleType::RIGHT_CANDLE) {
-			m_Size.Height--;
-			m_Frame.Height--;
-			m_Pos.Y++;
+			m_Size.Height -= CANDLE_MELT_BIG;
+			m_Frame.Height -= CANDLE_MELT_BIG;
+			m_Pos.Y += CANDLE_MELT_BIG;
 			if (m_Size.Height <= 0.0f) {
 				m_Death.RightCaLight = true;
 			}
