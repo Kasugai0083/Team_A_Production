@@ -12,14 +12,13 @@ void Ran::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 2000) {
+	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
-		m_IsDeath     = false;
-		m_RoomId      = RoomID::ROOM_STORAGE;
+		m_IsActive    = true;
 	}
 
-	if (m_IsDeath == true) { return; }
+	if (m_IsActive == false) { return; }
 	// 死んでたらここより下の処理にはいかない
 
 #pragma region フォクシーの移動
@@ -94,8 +93,16 @@ void Ran::LoadTex(SceneId id_)
 
 void Ran::Draw()
 {
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+	if (m_IsActive == false)
+	{
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
+
+			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
+		}
+
+		return;
+	}
 
 	switch (m_RoomId)
 	{
@@ -128,4 +135,8 @@ void Ran::Draw()
 	default:
 		break;
 	}
+}
+
+void Ran::KillAnimation()
+{
 }

@@ -13,22 +13,21 @@ void Sakura::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 2000) {
+	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
-		m_IsDeath	  = false;
-		m_RoomId	  = RoomID::ROOM_WORK;
+		m_IsActive	  = true;
 	}
 
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+	if (m_IsActive == false) { return; }
+	// アクティブじゃなかったらここより下の処理にはいかない
 
 #pragma region サクラの移動
 	switch (m_RoomId)
 	{
 	case RoomID::ROOM_WORK:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= 3000) {
 
 			m_iFrameCount = 0;
 			m_RoomId	  = RoomID::ROOM_RECEPTION;
@@ -71,7 +70,7 @@ void Sakura::Update()
 		if (m_pPlayer->HasMask() == true) {
 
 			m_iFrameCount = 0;
-			m_IsDeath	  = true;
+			m_IsActive	  = false;
 		}
 		break;
 
@@ -107,8 +106,16 @@ void Sakura::LoadTex(SceneId id_)
 
 void Sakura::Draw()
 {
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+	if (m_IsActive == false)
+	{
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+
+			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
+		}
+
+		return;
+	}
 
 	switch (m_RoomId)
 	{
@@ -160,4 +167,8 @@ void Sakura::Draw()
 	default:
 		break;
 	}
+}
+
+void Sakura::KillAnimation()
+{
 }

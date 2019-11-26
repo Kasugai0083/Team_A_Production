@@ -78,6 +78,7 @@ void CharacterManager::LoadTex(SceneId id) {
 bool CharacterManager::RefKill() {
 	for (int i = 0; i < ENEMY_NUM; i++) {
 		if (m_Charas[i]->HasKill() == true) {
+
 			return true;
 		}
 	}

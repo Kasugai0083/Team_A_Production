@@ -12,15 +12,14 @@ void Ohagi::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 2000) {
+	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
-		m_IsDeath	  = false;
-		m_RoomId	  = RoomID::ROOM_WORK;
+		m_IsActive	  = true;
 	}
 
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+	if (m_IsActive == false) { return; }
+	// アクティブじゃなかったらここより下の処理にはいかない
 
 #pragma region オハギの移動
 	switch (m_RoomId)
@@ -70,7 +69,7 @@ void Ohagi::Update()
 		if (m_pPlayer->HasMask() == true) {
 
 			m_iFrameCount = 0;
-			m_IsDeath	  = true;
+			m_IsActive	  = false;
 		}
 
 		if (m_iFrameCount >= 300) {
@@ -102,8 +101,16 @@ void Ohagi::LoadTex(SceneId id_)
 
 void Ohagi::Draw()
 {
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+	if (m_IsActive == false)
+	{
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
+		}
+
+		return;
+	}
 
 	switch (m_RoomId)
 	{
@@ -154,4 +161,8 @@ void Ohagi::Draw()
 	default:
 		break;
 	}
+}
+
+void Ohagi::KillAnimation()
+{
 }

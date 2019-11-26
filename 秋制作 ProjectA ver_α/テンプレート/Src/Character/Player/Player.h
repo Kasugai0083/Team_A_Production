@@ -35,13 +35,13 @@ public:
 	bool HasMonitor()override{
 		return m_IsMonitor;
 	}
-	bool IsDeath()override { return m_IsDeath; };
+	bool IsDeath()override { return m_IsActive; };
 	void OnMask();
 
 
 private:
 // フラグ
-	bool m_IsDeath;		// 生きてるかどうか(必要性あるかな？)
+	bool m_IsActive;		// 生きてるかどうか(必要性あるかな？)
 	bool m_IsLight;		// ライトをつけてるかどうか
 	bool m_IsMask;		// マスクをつけてるかどうか
 	bool m_IsMonitor;	// モニターを見ているかどうか

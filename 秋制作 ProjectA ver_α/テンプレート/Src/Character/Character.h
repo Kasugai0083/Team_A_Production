@@ -7,9 +7,9 @@
 
 class Character {
 public:
-	Character(bool isdeath_)
+	Character(bool is_active_)
 	{
-		m_IsDeath = isdeath_;
+		m_IsActive = is_active_;
 	}
 
 	virtual ~Character(){}
@@ -34,13 +34,13 @@ public:
 	virtual bool HasKill() const{
 		return m_HasKill;
 	}
-	virtual bool IsDeath() { return m_IsDeath; }
+	virtual bool IsDeath() { return m_IsActive; }
 	virtual void Draw() = 0;
 
 	virtual void LoadTex(SceneId id) {};
 
 protected:
-	bool m_IsDeath;
+	bool m_IsActive;
 
 private:
 	//ƒvƒŒƒCƒ„[‚Ìî•ñ

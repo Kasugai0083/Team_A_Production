@@ -36,7 +36,7 @@ void Player::Update()
 	}
 
 	if (g_Manager.RefKill() == true) {
-		m_IsDeath = true;
+		m_IsActive = true;
 	}
 
 	if (GetCurrentSceneId() == SceneId::MonitorScene) {

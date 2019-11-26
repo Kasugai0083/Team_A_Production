@@ -14,7 +14,7 @@ public:
 		コンストラクタ
 	*/
 	Enemy(RoomID roomid_, int framecount_, bool haskill_):
-		Character(true)
+		Character(false)
 	{
 		m_RoomId	  = roomid_; 
 		m_iFrameCount = framecount_;
@@ -26,13 +26,32 @@ public:
 	*/
 	virtual ~Enemy() override{}
 
+	/*
+		初期化
+	*/
 	virtual void Init() override{}
 
+	/*
+		更新
+	*/
 	virtual void Update() override{}
 
+	/*
+		エネミーがプレイヤーを殺したかどうか
+		m_HasKillを返す
+	*/
 	virtual bool HasKill()const override { return m_HasKill; }
 
+	/*
+		引数に指定したシーンのテクスチャをロードする
+	*/
 	virtual void LoadTex(SceneId id_)override {}
+
+	/*
+		純粋仮想関数
+		エネミーがプレイヤーを殺したときにするアニメーション関数
+	*/
+	virtual void KillAnimation() = 0;
 
 protected:
 	// エネミーの移動用タイマークラス(未実装)
@@ -50,7 +69,7 @@ protected:
 		/*
 			デストラクタ
 		*/
-		~EnemyTimer();
+		~EnemyTimer(){}
 
 		unsigned int GetRand(unsigned int min_val_, unsigned int max_val_);
 
