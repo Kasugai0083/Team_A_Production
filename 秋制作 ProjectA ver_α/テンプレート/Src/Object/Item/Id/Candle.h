@@ -7,7 +7,9 @@
 #include "../../../Engine/Calculation.h"
 
 enum class CandleType {
-	CANDLE,
+	CENTER_CANDLE,
+	LEFT_CANDLE,
+	RIGHT_CANDLE,
 	OTHER
 };
 
@@ -17,7 +19,7 @@ public:
 	Candle(CandleType type_) {
 		m_Type = type_;
 		m_Time = 0;
-		m_Hp = 100;
+		m_Hp = 100.f;
 	};
 	void Init()override {};
 	void Init(object::ObjectId id_)override;
@@ -41,7 +43,8 @@ private:
 	CandleType m_Type;
 	static int m_Count;
 	static Candller m_Candller;
-	int m_Hp;
+	float m_Hp;
+	static Candller m_Death;
 	int m_Time;
 
 };

@@ -43,14 +43,15 @@ ObjectManager::ObjectManager() {
 	m_pUI[PLAYER_ROOM] = new UI(UIType::NONE, PLAYER_ROOM);
 	m_pUI[CLEAR_LOGO] = new UI(UIType::NONE, CLEAR_LOGO);
 
-	m_pObjects[object::CANDLE_RIGHT] = new Candle(CandleType::CANDLE);
-	m_pObjects[object::CANDLE_LEFT] = new Candle(CandleType::CANDLE);
-	m_pObjects[object::CANDLE_CENTER] = new Candle(CandleType::CANDLE);
+	m_pObjects[object::CANDLE_RIGHT] = new Candle(CandleType::RIGHT_CANDLE);
+	m_pObjects[object::CANDLE_LEFT] = new Candle(CandleType::LEFT_CANDLE);
+	m_pObjects[object::CANDLE_CENTER] = new Candle(CandleType::CENTER_CANDLE);
 	m_pObjects[object::CANDLE_EFFECT] = new Candle(CandleType::OTHER);
 	m_pObjects[object::CANDLE_STAND] = new Candle(CandleType::OTHER);
 
 	m_pObjects[object::FIRE_BIG] = new FireBig;
 	m_pObjects[object::FIRE_SMALL] = new FireSmall;
+
 	m_pObjects[object::CRYSTAL] = new Crystal;
 	m_pObjects[object::MUSICBOX] = new MusicBox;
 

@@ -31,6 +31,7 @@ public:
 		m_Size = FIRE_BIG_SIZE;
 	}
 
+
 private:
 
 };

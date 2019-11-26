@@ -1,6 +1,7 @@
 #include "Candle.h"
 
 Candller Candle::m_Candller = {true, true, true};
+Candller Candle::m_Death = {false, false, false};
 int Candle::m_Count = 0;
 
 void Candle::Init(object::ObjectId id_) {
@@ -153,65 +154,110 @@ void Candle::InitCount() {
 
 void Candle::Update(){
 
-	if (m_Type == CandleType::CANDLE) {
-		m_Size.Height--;
-		m_Frame.Height--;
-	}
+	if (m_Candller.CenterCaLight == true) {
+		if (m_Type == CandleType::CENTER_CANDLE) {
+			m_Size.Height--;
+			m_Frame.Height--;
+			m_Pos.Y++;
 
-	if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
-		m_OnMouse = true;
-		if (OnMouseDown(Left) == true) {
-
-
-
-			switch (GameView()->CurrentViewID())
-			{
-			case GameData::CENTER:
-				if (m_Candller.CenterCaLight == false) {
-					if (m_Count == 0) {
-						m_Candller.CenterCaLight = true;
-					}
-				}
-				else {
-					if (m_Count == 0) {
-						m_Candller.CenterCaLight = false;
-					}
-				}
-				break;
-			case GameData::RIGHT:
-				if (m_Candller.RightCaLight == false) {
-					if (m_Count == 0) {
-						m_Candller.RightCaLight = true;
-					}
-				}
-				else {
-					if (m_Count == 0) {
-						m_Candller.RightCaLight = false;
-					}
-				}
-				break;
-			case GameData::LEFT:
-				if (m_Candller.LeftCaLight == false) {
-					if (m_Count == 0) {
-						m_Candller.LeftCaLight = true;
-					}
-				}
-				else {
-					if (m_Count == 0) {
-						m_Candller.LeftCaLight = false;
-					}
-				}
-				break;
+			if (m_Size.Height <= 0.0f) {
+				m_Death.CenterCaLight = true;
 			}
-
-			m_Count += 1;
 
 		}
 	}
-	else {
-		m_OnMouse = false;
+	if (m_Candller.LeftCaLight == true) {
+		if (m_Type == CandleType::LEFT_CANDLE) {
+			m_Size.Height--;
+			m_Frame.Height--;
+			m_Pos.Y++;
+			if (m_Size.Height <= 0.0f) {
+				m_Death.LeftCaLight = true;
+			}
+		}
+
+	}
+	if (m_Candller.RightCaLight == true) {
+		if (m_Type == CandleType::RIGHT_CANDLE) {
+			m_Size.Height--;
+			m_Frame.Height--;
+			m_Pos.Y++;
+			if (m_Size.Height <= 0.0f) {
+				m_Death.RightCaLight = true;
+			}
+		}
+
 	}
 
+	if (m_Death.CenterCaLight == true) {
+		m_Candller.CenterCaLight = false;
+	}
+	if (m_Death.RightCaLight == true) {
+		m_Candller.RightCaLight = false;
+	}
+	if (m_Death.LeftCaLight == true) {
+		m_Candller.LeftCaLight = false;
+	}
+
+
+		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+			m_OnMouse = true;
+			if (OnMouseDown(Left) == true) {
+				switch (GameView()->CurrentViewID())
+				{
+				case GameData::CENTER:
+					if (m_Death.CenterCaLight == false) {
+						if (m_Candller.CenterCaLight == false) {
+							if (m_Count == 0) {
+								m_Candller.CenterCaLight = true;
+							}
+						}
+						else {
+							if (m_Count == 0) {
+								m_Candller.CenterCaLight = false;
+							}
+						}
+					}
+					break;
+				case GameData::RIGHT:
+					if (m_Death.RightCaLight == false) {
+
+						if (m_Candller.RightCaLight == false) {
+							if (m_Count == 0) {
+								m_Candller.RightCaLight = true;
+							}
+						}
+						else {
+							if (m_Count == 0) {
+								m_Candller.RightCaLight = false;
+							}
+						}
+					}
+					break;
+				case GameData::LEFT:
+					if (m_Death.LeftCaLight == false) {
+
+						if (m_Candller.LeftCaLight == false) {
+							if (m_Count == 0) {
+								m_Candller.LeftCaLight = true;
+							}
+						}
+						else {
+							if (m_Count == 0) {
+								m_Candller.LeftCaLight = false;
+							}
+						}
+					}
+					break;
+				}
+
+				m_Count += 1;
+
+			}
+		}
+		else {
+			m_OnMouse = false;
+		}
 
 }
 
