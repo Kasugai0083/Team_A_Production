@@ -19,7 +19,6 @@ public:
 	Sakura() :
 		Enemy(RoomID::ROOM_WORK, 0, false)
 	{
-		m_HasKill = false;
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
 
@@ -50,9 +49,14 @@ public:
 	*/
 	virtual void LoadTex(SceneId id_) override;
 	/*
-	描画
+		描画
 	*/
 	virtual void Draw() override;
+
+	/*
+		キルアニメーション
+	*/
+	virtual void KillAnimation() override;
 
 private:
 	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数

@@ -47,6 +47,11 @@ public:
 	*/
 	virtual void Draw() override;
 
+	/*
+		キルアニメーション
+	*/
+	virtual void KillAnimation() override;
+
 private:
 	const CharacterID m_CharId = CharacterID::MARGARET;// キャラID定数
 };
