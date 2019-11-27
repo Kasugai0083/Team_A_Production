@@ -16,6 +16,9 @@ enum class CandleType {
 const float CANDLE_MELT_BIG = 0.2f;
 const float CANDLE_MELT_SMALL = 0.1f;
 
+//struct StatusSave{
+//	Size 
+//};
 
 class Candle : public Item {
 public:
@@ -24,7 +27,7 @@ public:
 	{
 		m_Type = type_;
 		m_Time = 0;
-		this->m_CandleHp = 1.f;
+		m_CandleHp = 1.f;
 	};
 	void Init()override {};
 	void Init(object::ObjectId id_)override;

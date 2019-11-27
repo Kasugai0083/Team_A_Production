@@ -192,9 +192,9 @@ void MainGameScene()
 {
 	ObjManager()->InitCount();
 
-	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (tmp_player == nullptr) {
+	if (pPlayer == nullptr) {
 		return;
 	}
 
@@ -272,14 +272,14 @@ void MainGameScene()
 
 	//クリア時間経過でシーン遷移
 	if (pTimerInstance->GetTime(Timer::Id::CLEAR) >= CLEAR_TIME) {
-		if (tmp_player->IsDeath() == false) {
+		if (pPlayer->IsDeath() == false) {
 			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
 
 	//プレイヤーの死亡でシーン遷移
-	if (tmp_player->IsDeath() == true) {
+	if (pPlayer->IsDeath() == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}

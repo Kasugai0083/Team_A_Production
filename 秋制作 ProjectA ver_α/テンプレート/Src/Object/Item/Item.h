@@ -27,6 +27,7 @@ protected:
 	Size m_Size;
 	Size m_Frame;
 
+
 };
 
 #endif

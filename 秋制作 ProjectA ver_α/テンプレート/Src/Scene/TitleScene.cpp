@@ -35,6 +35,10 @@ SceneId UpdateTitleScene()
 	return SceneId::TitleScene;
 }
 
+float g_test_ = 1.f;
+
+Size size_ = {512, 512};
+
 void DrawTitleScene()
 {
 
@@ -43,6 +47,8 @@ void DrawTitleScene()
 	ObjManager()->DrawUI(TITLE_LOGO);
 	ObjManager()->DrawUI(BUTTON_NEW_GAME);
 	ObjManager()->DrawUI(BUTTON_CONTINUE);
+
+	CandleDraw(0.0f, 512.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex), size_, g_test_);
 
 }
 
@@ -54,12 +60,15 @@ void InitTitleScene()
 	ObjManager()->Init();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
+	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
 
 	ChangeSceneStep(SceneStep::MainStep);
 }
 
 void MainTitleScene()
 {
+	g_test_ -= 0.001f;
+
 	SceneController()->GameEnd();
 
 	ObjManager()->Update();

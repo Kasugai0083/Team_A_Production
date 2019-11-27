@@ -18,6 +18,7 @@ void Candle::Init(object::ObjectId id_) {
 		m_Pos = CANDLE_BIG_POS;
 		m_Size = CANDLE_BIG_SIZE;
 		m_Frame = CANDLE_BIG_FRAME;
+
 		break;
 	case object::CANDLE_RIGHT:
 		LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
@@ -30,6 +31,7 @@ void Candle::Init(object::ObjectId id_) {
 		m_Pos = CANDLE_BIG_POS;
 		m_Size = CANDLE_BIG_SIZE;
 		m_Frame = CANDLE_BIG_FRAME;
+
 		break;
 	case object::CANDLE_CENTER:
 		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
@@ -42,6 +44,7 @@ void Candle::Init(object::ObjectId id_) {
 		m_Pos = CANDLE_SMALL_POS;
 		m_Size = CANDLE_SMALL_SIZE;
 		m_Frame = CANDLE_SMALL_FRAME;
+
 		break;
 	case object::CANDLE_STAND:
 		LoadTexture("Res/Game/Item/Candle_Stand.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandTex);
@@ -137,6 +140,7 @@ void Candle::Init(object::ObjectId id_, Vec2 pos_) {
 		m_Pos = pos_;
 		m_Size = CANDLE_EFFECT_SIZE;
 		m_Frame = CANDLE_EFFECT_FRAME;
+
 		break;
 	}
 }
@@ -151,18 +155,26 @@ void Candle::Update(){
 		if (m_Type == CandleType::CENTER_CANDLE) {
 
 			m_CandleHp -= 0.01f;
+			//
+			//float height_tmp = m_Size.Height;
 
-			float tmp = m_CandleHp / 100;
+			//m_Size.Height = CANDLE_SMALL_SIZE.Height * m_CandleHp;
 
-			m_Size.Height *= tmp;
-			m_Frame.Height *= tmp;
+			//float diff = height_tmp - m_Size.Height;
+
+			//m_Frame.Height = CANDLE_SMALL_FRAME.Height * m_CandleHp;
+
+			//m_Pos.Y -= diff;
+
+			//m_Size.Height *= m_CandleHp;
+			//m_Frame.Height *= m_CandleHp;
 			//m_Pos.Y *= (tmp / 100);
 
 			//m_Size.Height -= CANDLE_MELT_SMALL;
 			//m_Frame.Height -= CANDLE_MELT_SMALL;
-			//m_Pos.Y += CANDLE_MELT_SMALL;
 
-			if (m_Size.Height <= 0.0f) {
+
+			if (m_CandleHp <= 0.0f) {
 				m_Death.CenterCaLight = true;
 			}
 
@@ -265,7 +277,24 @@ void Candle::Update(){
 
 void Candle::Draw(){
 
-	DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, m_Frame);
+	switch (m_Type)
+	{
+	case CandleType::CENTER_CANDLE:
+		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
+		break;
+	case CandleType::LEFT_CANDLE:
+		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
+		break;
+	case CandleType::RIGHT_CANDLE:
+		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
+		break;
+	case CandleType::OTHER:
+		DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, m_Frame);
+		break;
+	default:
+		break;
+	}
+
 
 	Lib::Texture polygon("hoge");
 
