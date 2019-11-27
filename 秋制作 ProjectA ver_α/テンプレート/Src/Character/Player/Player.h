@@ -1,8 +1,8 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-
 #include "../Character.h"
+#include "../../Scene/GameScene/GameData.h"
 
 class Player : public Character {
 	 
@@ -11,7 +11,7 @@ public:
 		コンストラクタ
 	*/
 	Player():
-		Character(false)
+		Character(true)
 	{}
 	/*
 		デストラクタ
@@ -24,18 +24,23 @@ public:
 
 	void Draw()override;
 
-	bool HasLight() override{
+	bool HasLight() const override{
 		return m_IsLight;
 	}
 
-	bool HasMask()override{
+	bool HasMask() const override{
 		return m_IsMask;
 	}
 
-	bool HasMonitor()override{
+	bool HasMonitor() const override{
 		return m_IsMonitor;
 	}
-	bool IsDeath()override { return m_IsActive; };
+	bool IsDeath() override { return m_IsActive; };
+
+	MonitorView CurrentViewMonitorID() const override{
+		return m_MonitorViewID;
+	}
+
 	void OnMask();
 
 
@@ -46,6 +51,8 @@ private:
 	bool m_IsMask;		// マスクをつけてるかどうか
 	bool m_IsMonitor;	// モニターを見ているかどうか
 	float m_MaskAnimation; // マスクのアニメーションタイマー
+
+	MonitorView m_MonitorViewID; // モニターのどこを見ているか
 
 };
 

@@ -4,6 +4,7 @@
 // キャラクターの基礎となるクラス
 
 #include "..//Scene/Scene.h"
+#include "../Scene/GameScene/GameData.h"
 
 class Character {
 public:
@@ -18,16 +19,16 @@ public:
 
 	virtual void Update() = 0;
 
-	virtual bool HasLight()
+	virtual bool HasLight() const
 	{
 		return m_HasLight;
 	}
 
-	virtual bool HasMask() {
+	virtual bool HasMask() const {
 		return m_HasMask;
 	}
 
-	virtual bool HasMonitor() {
+	virtual bool HasMonitor() const {
 		return m_HasMonitor;
 	}
 
@@ -35,6 +36,11 @@ public:
 		return m_HasKill;
 	}
 	virtual bool IsDeath() { return m_IsActive; }
+
+	virtual MonitorView CurrentViewMonitorID() const{
+		return m_MonitorViewID;
+	}
+
 	virtual void Draw() = 0;
 
 	virtual void LoadTex(SceneId id) {};
@@ -47,6 +53,7 @@ private:
 	bool m_HasMask;
 	bool m_HasLight;
 	bool m_HasMonitor;
+	MonitorView m_MonitorViewID;
 
 	//エネミーの情報
 	bool m_HasKill;
