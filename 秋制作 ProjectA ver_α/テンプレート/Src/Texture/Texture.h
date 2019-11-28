@@ -11,6 +11,7 @@
 #include "TitleSceneTex.h"
 #include "GameSceneTex.h"
 #include "ResultSceneTex.h"
+#include "OpeningSceneTex.h"
 
 #define MAX_TEXTURE_CATEGORY (SceneId::SceneIdMax)				//!< カテゴリー最大
 

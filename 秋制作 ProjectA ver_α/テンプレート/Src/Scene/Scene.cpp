@@ -6,6 +6,7 @@
 #include "GameScene/GameScene.h"
 #include "MonitorScene.h"
 #include "ClearScene.h"
+#include "OpeningScene.h"
 
 static SceneId g_CurrentSceneId = SceneId::TitleScene;		// 動作中シーンID
 static SceneStep g_CurrentSceneStep = SceneStep::InitStep;	// 動作中シーンのステップ
@@ -125,6 +126,9 @@ void UpdateScene()
 	case SceneId::TitleScene:
 		scene_id = UpdateTitleScene();
 		break;
+	case SceneId::OpeningScene:
+		scene_id = UpdateOpeningScene();
+		break;
 	case SceneId::GameScene:
 		scene_id = UpdateGameScene();
 		break;
@@ -157,6 +161,9 @@ void DrawScene()
 		{
 		case SceneId::TitleScene:
 			DrawTitleScene();
+			break;
+		case SceneId::OpeningScene:
+			DrawOpeningScene();
 			break;
 		case SceneId::GameScene:
 			DrawGameScene();

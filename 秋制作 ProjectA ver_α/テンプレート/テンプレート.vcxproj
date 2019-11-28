@@ -166,6 +166,7 @@
     <ClCompile Include="Src\Scene\GameScene\GameData.cpp" />
     <ClCompile Include="Src\Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Src\Scene\MonitorScene.cpp" />
+    <ClCompile Include="Src\Scene\OpeningScene.cpp" />
     <ClCompile Include="Src\Scene\Scene.cpp" />
     <ClCompile Include="Src\Scene\TitleScene.cpp" />
     <ClCompile Include="Src\Texture\Texture.cpp" />
@@ -213,10 +214,12 @@
     <ClInclude Include="Src\Scene\GameScene\GameData.h" />
     <ClInclude Include="Src\Scene\GameScene\GameScene.h" />
     <ClInclude Include="Src\Scene\MonitorScene.h" />
+    <ClInclude Include="Src\Scene\OpeningScene.h" />
     <ClInclude Include="Src\Scene\Scene.h" />
     <ClInclude Include="Src\Scene\TitleScene.h" />
     <ClInclude Include="Src\Texture\EnemyTex.h" />
     <ClInclude Include="Src\Texture\GameSceneTex.h" />
+    <ClInclude Include="Src\Texture\OpeningSceneTex.h" />
     <ClInclude Include="Src\Texture\ResultSceneTex.h" />
     <ClInclude Include="Src\Texture\Texture.h" />
     <ClInclude Include="Src\Texture\TitleSceneTex.h" />

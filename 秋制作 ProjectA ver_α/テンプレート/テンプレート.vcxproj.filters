@@ -155,6 +155,9 @@
     <ClCompile Include="Src\Object\Item\Id\Candle.cpp">
       <Filter>ソース ファイル\Object\Item\Id</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Scene\OpeningScene.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Engine\Engine.h">
@@ -311,6 +314,12 @@
       <Filter>ソース ファイル\Texture</Filter>
     </ClInclude>
     <ClInclude Include="Src\Texture\TitleSceneTex.h">
+      <Filter>ソース ファイル\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\OpeningScene.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Texture\OpeningSceneTex.h">
       <Filter>ソース ファイル\Texture</Filter>
     </ClInclude>
   </ItemGroup>

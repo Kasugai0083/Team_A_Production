@@ -13,6 +13,7 @@ const int CLEAR_TIME = 6000;
 enum SceneId
 {
 	TitleScene,			//!< タイトルシーン
+	OpeningScene,
 	GameScene,
 	EnemyScene,
 	CenterScene,
