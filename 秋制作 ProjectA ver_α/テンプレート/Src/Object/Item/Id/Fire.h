@@ -43,6 +43,8 @@ public:
 			m_Pos = FIRE_BIG_POS;
 			m_Size = FIRE_BIG_SIZE;
 			m_Frame = FIRE_BIG_FRAME;
+			m_pObject = ObjManager()->GetObj(object::CANDLE_RIGHT);
+
 			break;
 		case FireID::LEFT_FIRE:
 			LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
@@ -55,6 +57,7 @@ public:
 			m_Pos = FIRE_BIG_POS;
 			m_Size = FIRE_BIG_SIZE;
 			m_Frame = FIRE_BIG_FRAME;
+			m_pObject = ObjManager()->GetObj(object::CANDLE_LEFT);
 
 			break;
 		default:
@@ -68,27 +71,38 @@ public:
 
 	}
 	void Update() {
+		
+		float HeightRatio = 0.0f;
+
 		switch (m_Id)
 		{
 		case FireID::CENTER_FIRE:
 			if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
-				float HeightRatio = 0.0f;
+
+			
 				if (m_pObject->GetRatio() != NULL) {
 					HeightRatio = m_pObject->GetRatio();
 				}
 
-				/*m_Pos.Y += CANDLE_MELT_SMALL;*/
 				m_Pos.Y += HeightRatio;
 			}
 			break;
 		case FireID::RIGHT_FIRE:
 			if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
-				m_Pos.Y += CANDLE_MELT_BIG;
+				if (m_pObject->GetRatio() != NULL) {
+					HeightRatio = m_pObject->GetRatio();
+				}
+
+				m_Pos.Y += HeightRatio;
 			}
 			break;
 		case FireID::LEFT_FIRE:
 			if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
-				m_Pos.Y += CANDLE_MELT_BIG;
+				if (m_pObject->GetRatio() != NULL) {
+					HeightRatio = m_pObject->GetRatio();
+				}
+
+				m_Pos.Y += HeightRatio;
 			}
 			break;
 		default:

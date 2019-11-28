@@ -140,18 +140,6 @@ void InitGameScene()
 
 	ObjManager()->Init();
 
-	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
-	switch (GameView()->CurrentViewID()) {
-	case GameData::RIGHT:
-		ObjManager()->Init(object::CANDLE_EFFECT,EffectPos);
-		break;
-	case GameData::LEFT:
-		ObjManager()->Init(object::CANDLE_EFFECT, EffectPos);
-		break;
-	}
-
-	Vec2 CandlePos = { 9999.f ,9999.f };
-	ObjManager()->Init(object::CANDLE_LEFT, CandlePos);
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 
@@ -210,31 +198,27 @@ void MainGameScene()
 	ObjManager()->Update();
 
 
-	Vec2 EffectPos = { (960.f - CANDLE_EFFECT_SIZE.Width / 2),60.f };
-	Vec2 CandlePos = { 9999.f ,9999.f };
-
-
 	//キー入力でシーン遷移
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
 		switch (GameView()->CurrentViewID()) {
 		case GameData::SubGameScene::CENTER:
 			if (GetKey(A_KEY) == true) {
-				ObjManager()->SetPosition(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
+				//ObjManager()->SetPosition(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
 
-				ObjManager()->SetPosition(object::CANDLE_CENTER, VOID_POS);
-				ObjManager()->SetPosition(object::CANDLE_LEFT, CANDLE_BIG_POS);
-				ObjManager()->SetPosition(object::CANDLE_RIGHT, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_CENTER, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_LEFT, CANDLE_BIG_POS);
+				//ObjManager()->SetPosition(object::CANDLE_RIGHT, VOID_POS);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::LEFT);
 			}
 			if (GetKey(D_KEY) == true) {
-				ObjManager()->Init(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
+				//ObjManager()->SetPosition(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
 
-				ObjManager()->Init(object::CANDLE_CENTER, VOID_POS);
-				ObjManager()->Init(object::CANDLE_RIGHT, CANDLE_BIG_POS);
-				ObjManager()->Init(object::CANDLE_LEFT, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_CENTER, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_RIGHT, CANDLE_BIG_POS);
+				//ObjManager()->SetPosition(object::CANDLE_LEFT, VOID_POS);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::RIGHT);
@@ -242,11 +226,11 @@ void MainGameScene()
 			break;
 		case GameData::RIGHT:
 			if (GetKey(A_KEY) == true) {
-				ObjManager()->Init(object::CANDLE_EFFECT, SMALL_CANDLE_EFFECT_POS);
+				//ObjManager()->SetPosition(object::CANDLE_EFFECT, SMALL_CANDLE_EFFECT_POS);
 
-				ObjManager()->Init(object::CANDLE_CENTER, CANDLE_SMALL_POS);
-				ObjManager()->Init(object::CANDLE_LEFT, VOID_POS);
-				ObjManager()->Init(object::CANDLE_RIGHT, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_CENTER, CANDLE_SMALL_POS);
+				//ObjManager()->SetPosition(object::CANDLE_LEFT, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_RIGHT, VOID_POS);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::CENTER);
@@ -254,11 +238,11 @@ void MainGameScene()
 			break;
 		case GameData::LEFT:
 			if (GetKey(D_KEY) == true) {
-				ObjManager()->Init(object::CANDLE_EFFECT, SMALL_CANDLE_EFFECT_POS);
+				//ObjManager()->SetPosition(object::CANDLE_EFFECT, SMALL_CANDLE_EFFECT_POS);
 
-				ObjManager()->Init(object::CANDLE_CENTER, CANDLE_SMALL_POS);
-				ObjManager()->Init(object::CANDLE_LEFT, VOID_POS);
-				ObjManager()->Init(object::CANDLE_RIGHT, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_CENTER, CANDLE_SMALL_POS);
+				//ObjManager()->SetPosition(object::CANDLE_LEFT, VOID_POS);
+				//ObjManager()->SetPosition(object::CANDLE_RIGHT, VOID_POS);
 
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::CENTER);

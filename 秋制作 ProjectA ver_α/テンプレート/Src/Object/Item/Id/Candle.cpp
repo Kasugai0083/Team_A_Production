@@ -151,6 +151,27 @@ void Candle::InitCount() {
 
 void Candle::Update(){
 
+	switch (GameView()->CurrentViewID())
+	{
+		case GameData::SubGameScene::CENTER:
+			m_Death.CenterCaLight = false;
+			m_Death.LeftCaLight = true;
+			m_Death.RightCaLight = true;
+			break;
+		case GameData::SubGameScene::RIGHT:
+			m_Death.CenterCaLight = true;
+			m_Death.LeftCaLight = true;
+			m_Death.RightCaLight = false;
+			break;
+		case GameData::SubGameScene::LEFT:
+			m_Death.CenterCaLight = true;
+			m_Death.LeftCaLight = false;
+			m_Death.RightCaLight = true;
+			break;
+		default:
+			break;
+	}
+
 	if (m_Candller.CenterCaLight == true) {
 		if (m_Type == CandleType::CENTER_CANDLE) {
 
@@ -168,10 +189,14 @@ void Candle::Update(){
 	}
 	if (m_Candller.LeftCaLight == true) {
 		if (m_Type == CandleType::LEFT_CANDLE) {
-			m_Size.Height -= CANDLE_MELT_BIG;
-			m_Frame.Height -= CANDLE_MELT_BIG;
-			m_Pos.Y += CANDLE_MELT_BIG;
-			if (m_Size.Height <= 0.0f) {
+
+			m_CandleHp -= MELT_RATIO;
+
+			m_HeightRatio = m_Frame.Height * MELT_RATIO;
+
+			m_Pos.Y += m_HeightRatio;
+
+			if (m_CandleHp <= 0.0f) {
 				m_Death.LeftCaLight = true;
 			}
 		}
@@ -179,10 +204,14 @@ void Candle::Update(){
 	}
 	if (m_Candller.RightCaLight == true) {
 		if (m_Type == CandleType::RIGHT_CANDLE) {
-			m_Size.Height -= CANDLE_MELT_BIG;
-			m_Frame.Height -= CANDLE_MELT_BIG;
-			m_Pos.Y += CANDLE_MELT_BIG;
-			if (m_Size.Height <= 0.0f) {
+
+			m_CandleHp -= MELT_RATIO;
+
+			m_HeightRatio = m_Frame.Height * MELT_RATIO;
+
+			m_Pos.Y += m_HeightRatio;
+
+			if (m_CandleHp <= 0.0f) {
 				m_Death.RightCaLight = true;
 			}
 		}
@@ -266,11 +295,7 @@ void Candle::Draw(){
 	switch (m_Type)
 	{
 	case CandleType::CENTER_CANDLE:
-		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
-		break;
 	case CandleType::LEFT_CANDLE:
-		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
-		break;
 	case CandleType::RIGHT_CANDLE:
 		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
 		break;
