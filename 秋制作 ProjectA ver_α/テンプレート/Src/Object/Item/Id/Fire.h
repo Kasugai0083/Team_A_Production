@@ -72,7 +72,13 @@ public:
 		{
 		case FireID::CENTER_FIRE:
 			if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
+				float HeightRatio = 0.0f;
+				if (m_pObject->GetRatio() != NULL) {
+					HeightRatio = m_pObject->GetRatio();
+				}
+
 				/*m_Pos.Y += CANDLE_MELT_SMALL;*/
+				m_Pos.Y += HeightRatio;
 			}
 			break;
 		case FireID::RIGHT_FIRE:
@@ -99,7 +105,7 @@ public:
 
 	void Draw() {
 
-		CandleDraw(m_Pos.X, m_Pos.Y + FIRE_SMALL_FRAME.Height, m_pTex, m_Frame, m_pObject->GetHp());
+		DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
 
 		Lib::Texture polygon("hoge");
 

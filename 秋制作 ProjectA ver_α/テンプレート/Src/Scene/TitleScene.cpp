@@ -37,7 +37,7 @@ SceneId UpdateTitleScene()
 
 const float MELT_RATIO = 0.001f;
 
-float ratio = 1.f;
+float Hp = 1.f;
 
 
 Size size = {512.f, 512.f};
@@ -56,7 +56,7 @@ void DrawTitleScene()
 
 	pos.Y += HeightRatio;
 
-	CandleDraw(pos.X, pos.Y, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),size, ratio);
+	CandleDraw(pos.X, pos.Y, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),size, Hp);
 
 }
 
@@ -75,7 +75,7 @@ void InitTitleScene()
 
 void MainTitleScene()
 {
-	ratio -= MELT_RATIO;
+	Hp -= MELT_RATIO;
 
 	SceneController()->GameEnd();
 
