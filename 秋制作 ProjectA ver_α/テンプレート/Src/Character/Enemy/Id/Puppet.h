@@ -17,7 +17,7 @@ public:
 		コンストラクタ
 	*/
 	Margaret() :
-		Enemy(RoomID::ROOM_CHILDREN, 300, false)
+		Enemy(RoomID::ROOM_CHILDREN, 1000, false)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {

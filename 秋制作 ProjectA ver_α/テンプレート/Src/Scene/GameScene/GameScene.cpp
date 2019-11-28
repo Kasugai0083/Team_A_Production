@@ -264,7 +264,7 @@ void MainGameScene()
 	}
 
 	//プレイヤーの死亡でシーン遷移
-	if (tmp_player->IsDeath() == true) {
+	if (tmp_player->IsDeath() == false) {
 		SceneController()->SetID(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}
