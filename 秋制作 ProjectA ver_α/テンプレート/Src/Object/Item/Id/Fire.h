@@ -3,6 +3,7 @@
 #include "../Item.h"
 #include "../../../Scene/Scene.h"
 #include "Candle.h"
+#include "../../ObjectManager.h"
 
 enum class FireID {
 	CENTER_FIRE,
@@ -28,6 +29,8 @@ public:
 
 			m_Pos = FIRE_SMALL_POS;
 			m_Size = FIRE_SMALL_SIZE;
+			m_Frame = FIRE_SMALL_FRAME;
+			m_pObject = ObjManager()->GetObj(object::CANDLE_CENTER);
 			break;
 		case FireID::RIGHT_FIRE:
 			LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
@@ -39,6 +42,7 @@ public:
 
 			m_Pos = FIRE_BIG_POS;
 			m_Size = FIRE_BIG_SIZE;
+			m_Frame = FIRE_BIG_FRAME;
 			break;
 		case FireID::LEFT_FIRE:
 			LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
@@ -50,6 +54,8 @@ public:
 
 			m_Pos = FIRE_BIG_POS;
 			m_Size = FIRE_BIG_SIZE;
+			m_Frame = FIRE_BIG_FRAME;
+
 			break;
 		default:
 			break;
@@ -66,7 +72,7 @@ public:
 		{
 		case FireID::CENTER_FIRE:
 			if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
-				m_Pos.Y += CANDLE_MELT_SMALL;
+				/*m_Pos.Y += CANDLE_MELT_SMALL;*/
 			}
 			break;
 		case FireID::RIGHT_FIRE:
@@ -91,8 +97,20 @@ public:
 		}
 	}
 
+	void Draw() {
+
+		CandleDraw(m_Pos.X, m_Pos.Y + FIRE_SMALL_FRAME.Height, m_pTex, m_Frame, m_pObject->GetHp());
+
+		Lib::Texture polygon("hoge");
+
+		if (m_OnMouse == true) {
+			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		}
+
+	}
 private:
 	FireID m_Id;
+	Object* m_pObject;
 };
 
 class FireSmall : public Item {

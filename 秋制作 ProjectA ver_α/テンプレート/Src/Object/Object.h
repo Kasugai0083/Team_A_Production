@@ -41,6 +41,8 @@ public:
 	virtual void SetCount(int* count_) { return; };
 	virtual void SetPosition(Vec2 pos_) {};
 	virtual bool HasLight(CandleLight cl_) { return 0; };
+
+	virtual float GetHp() { return 0; };
 protected:
 
 private:

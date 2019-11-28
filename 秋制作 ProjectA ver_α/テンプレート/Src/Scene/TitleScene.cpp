@@ -35,9 +35,13 @@ SceneId UpdateTitleScene()
 	return SceneId::TitleScene;
 }
 
-float g_test_ = 1.f;
+const float MELT_RATIO = 0.001f;
 
-Size size_ = {512, 512};
+float ratio = 1.f;
+
+
+Size size = {512.f, 512.f};
+Vec2 pos = { 200.0f, 200.0f };
 
 void DrawTitleScene()
 {
@@ -48,7 +52,11 @@ void DrawTitleScene()
 	ObjManager()->DrawUI(BUTTON_NEW_GAME);
 	ObjManager()->DrawUI(BUTTON_CONTINUE);
 
-	CandleDraw(0.0f, 512.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex), size_, g_test_);
+	float HeightRatio = size.Height * MELT_RATIO;
+
+	pos.Y += HeightRatio;
+
+	CandleDraw(pos.X, pos.Y, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex),size, ratio);
 
 }
 
@@ -67,7 +75,7 @@ void InitTitleScene()
 
 void MainTitleScene()
 {
-	g_test_ -= 0.001f;
+	ratio -= MELT_RATIO;
 
 	SceneController()->GameEnd();
 

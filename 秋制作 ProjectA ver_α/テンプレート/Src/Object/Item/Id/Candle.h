@@ -45,6 +45,8 @@ public:
 
 	void Draw() override;
 
+	float GetHp()override;
+
 
 private:
 

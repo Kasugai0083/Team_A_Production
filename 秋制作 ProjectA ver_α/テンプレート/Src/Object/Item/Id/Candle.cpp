@@ -154,24 +154,7 @@ void Candle::Update(){
 	if (m_Candller.CenterCaLight == true) {
 		if (m_Type == CandleType::CENTER_CANDLE) {
 
-			m_CandleHp -= 0.01f;
-			//
-			//float height_tmp = m_Size.Height;
-
-			//m_Size.Height = CANDLE_SMALL_SIZE.Height * m_CandleHp;
-
-			//float diff = height_tmp - m_Size.Height;
-
-			//m_Frame.Height = CANDLE_SMALL_FRAME.Height * m_CandleHp;
-
-			//m_Pos.Y -= diff;
-
-			//m_Size.Height *= m_CandleHp;
-			//m_Frame.Height *= m_CandleHp;
-			//m_Pos.Y *= (tmp / 100);
-
-			//m_Size.Height -= CANDLE_MELT_SMALL;
-			//m_Frame.Height -= CANDLE_MELT_SMALL;
+			m_CandleHp -= 0.001f;
 
 
 			if (m_CandleHp <= 0.0f) {
@@ -280,7 +263,7 @@ void Candle::Draw(){
 	switch (m_Type)
 	{
 	case CandleType::CENTER_CANDLE:
-		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
+		CandleDraw(m_Pos.X, m_Pos.Y + CANDLE_SMALL_SIZE.Height, m_pTex, m_Frame, m_CandleHp);
 		break;
 	case CandleType::LEFT_CANDLE:
 		CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
@@ -319,4 +302,8 @@ bool Candle::HasLight(CandleLight cl_) {
 	default:
 		break;
 	}
+}
+
+float Candle::GetHp() {
+	return m_CandleHp;
 }
