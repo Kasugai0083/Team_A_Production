@@ -37,11 +37,7 @@ public:
 
 	void Init(object::ObjectId id_, Vec2 pos_) override;
 
-
 	bool HasLight(CandleLight cl_)override;
-
-	//void SetCandller(Candller* candller_)override;
-	//void SetCount(int* count_)override;
 
 	void InitCount()override;
 	void Update()override;
