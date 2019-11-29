@@ -35,7 +35,7 @@ public:
 	bool HasMonitor() const override{
 		return m_IsMonitor;
 	}
-	bool IsDeath() override { return m_IsActive; };
+	bool IsActive() override { return m_IsActive; };
 
 	MonitorView CurrentViewMonitorID() const override{
 		return m_MonitorViewID;

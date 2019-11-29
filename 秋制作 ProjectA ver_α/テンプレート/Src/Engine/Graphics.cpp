@@ -266,67 +266,22 @@ void DrawUVScrollTexture(float x, float y, Texture* texture_data, float tu, floa
 	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
 }
 
-float center_x, center_y;
-
-void PlayerDrawTexture(float x, float y, float rotate, Texture* texture_data)
+void DrawAnimation(float x_, float y_, Texture* texture_data[],
+	int length_, int speed_, int* Counter_)
 {
+	static int Timer;
+	++Timer;
+	if (Timer > speed_) {
 
-	float RAD = 3.141592f / 180.0f; // ラジアンの初期化
+		++* Counter_;
+		if (*Counter_ > length_ - 1) {
 
-
-	CustomVertex v[4] =
-	{
-		{ x , y , 0.0f, 1.0f, 0.0f, 0.0f },
-		{ x + texture_data->Width, y, 0.0f, 1.0f, 1.0f, 0.0f },
-		{ x + texture_data->Width, y + texture_data->Height, 0.0f, 1.0f, 1.0f, 1.0f },
-		{ x , y + texture_data->Height , 0.0f, 1.0f, 0.0f, 1.0f },
-	};
-
-	D3DXMATRIX PosMatrix, RotateMatrix;
-	int i;
-
-	center_x = (v[2].X - v[0].X) / 2.0f + v[0].X;
-	center_y = (v[2].Y - v[0].Y) / 2.0f + v[0].Y;
-
-	for (int i = 0; i < 4; i++) {
-		v[i].X -= center_x;
-		v[i].Y -= center_y;
+			*Counter_ = 0;
+		}
+		Timer = 0;
 	}
 
-
-	// 行列の初期化（単位行列生成）
-	D3DXMatrixIdentity(&PosMatrix);
-	D3DXMatrixIdentity(&RotateMatrix);
-
-	// 回転行列に角度を設定
-	D3DXMatrixRotationZ(&RotateMatrix, rotate * RAD);
-
-	// 回転処理
-	for (i = 0; i < 4; i++) {
-		// 現在の頂点座標を格納
-		D3DXMatrixTranslation(&PosMatrix, v[i].X, v[i].Y, v[i].Z);
-		// 演算
-		PosMatrix *= RotateMatrix;
-		// 結果を戻す
-		v[i].X = PosMatrix._41;
-		v[i].Y = PosMatrix._42;
-		v[i].Z = PosMatrix._43;
-	}
-
-
-
-	for (int i = 0; i < 4; i++) {
-		v[i].X += center_x;
-		v[i].Y += center_y;
-	}
-
-	// 頂点構造の指定
-	g_D3DDevice->SetFVF(D3DFVF_XYZRHW | D3DFVF_TEX1);
-
-	g_D3DDevice->SetTexture(0, texture_data->TexutreData);
-
-	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
-
+	DrawTexture(x_, y_, texture_data[*Counter_]);
 }
 
 

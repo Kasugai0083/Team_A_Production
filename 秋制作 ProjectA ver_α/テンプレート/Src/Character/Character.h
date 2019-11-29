@@ -35,7 +35,7 @@ public:
 	virtual bool HasKill() const{
 		return m_HasKill;
 	}
-	virtual bool IsDeath() { return m_IsActive; }
+	virtual bool IsActive() { return m_IsActive; }
 
 	virtual MonitorView CurrentViewMonitorID() const{
 		return m_MonitorViewID;

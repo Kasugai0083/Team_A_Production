@@ -13,12 +13,12 @@ public:
 	/*
 		コンストラクタ
 	*/
-	Enemy(RoomID roomid_, int framecount_, bool haskill_):
+	Enemy(RoomID roomid_, int framecount_):
 		Character(false)
 	{
 		m_RoomId	  = roomid_; 
 		m_iFrameCount = framecount_;
-		m_HasKill	  = haskill_;
+		m_HasKill	  = false;
 		m_CanKill	  = false;
 	}
 
