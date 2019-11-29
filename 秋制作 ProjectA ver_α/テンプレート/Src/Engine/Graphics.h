@@ -11,6 +11,7 @@
 #include "../Utility/Common.h"
 #include "../Utility/Size.h"
 #include "../Utility/Vec.h"
+//#include "../Character/Enemy/Enemy.h"
 
 /** @brief フォントカラー */
 enum FontColor
@@ -40,6 +41,16 @@ struct Texture
 	int Width;						//!< 横幅
 	int Height;						//!< 縦幅
 };
+
+struct AnimationTexture
+{
+	Texture* m_TextureData[10];
+
+	int m_Speed;	// アニメションのスピード
+	int m_Length;	// アニメーションの枚数
+	int m_Counter;	// 現在何枚目かを数える変数
+};
+
 
 /**
 * @brief Graphics機能初期化関数@n
@@ -86,6 +97,11 @@ void DrawTexture(float x, float y, Texture* texture_data, float width_, float he
 void DrawTexture(float x, float y, Texture* texture_data, Size size_);
 void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_);
 
+/*
+	アニメーションの描画用関数
+*/
+void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_);
+
 /**
 * @brief テクスチャのUVスクロール描画関数@n
 * 指定された情報でテクスチャをUVスクロールして描画する@n
@@ -118,9 +134,6 @@ void DrawFont(float pos_x, float pos_y, const char* text, FontSize size, FontCol
 * @param[out] texture_data 読み込まれたテクスチャを反映するデータ
 */
 bool CreateTexture(const char* file_name, Texture* texture_data);
-
-//rotate => GetRadianを指定することで回転して描画せる
-void PlayerDrawTexture(float x, float y, float rotate, Texture* texture_data);
 
 //統合画像から切り抜き用の関数
 //全ての切り抜かれる画像の大きさが一定である必要がある

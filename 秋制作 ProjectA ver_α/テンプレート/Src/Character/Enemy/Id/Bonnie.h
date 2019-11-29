@@ -16,13 +16,21 @@ public:
 	/*
 		コンストラクタ
 	*/
-	Ume():
+	Ume() :
 		Enemy(RoomID::ROOM_WORK, 0)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
 
 			return;
+		}
+
+		m_AnimationTex.m_Counter = 0;
+		m_AnimationTex.m_Length = 3;
+		m_AnimationTex.m_Speed = 15;
+
+		for (int i = 0; i < m_AnimationTex.m_Length; i++) {
+			m_AnimationTex.m_TextureData[i] = new Texture();
 		}
 	}
 	/*
@@ -52,10 +60,6 @@ public:
 	*/
 	virtual void Draw() override;
 
-	/*
-		キルアニメーション
-	*/
-	virtual void KillAnimation() override;
 
 private:
 	const CharacterID m_CharId = CharacterID::UME;// キャラID定数

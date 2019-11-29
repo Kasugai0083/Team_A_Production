@@ -7,13 +7,16 @@
 
 void Sakura::Init()
 {
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Sakura::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 2000) {
+	if (m_IsActive == false && m_iFrameCount >= 3000) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
@@ -27,7 +30,7 @@ void Sakura::Update()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (m_iFrameCount >= 3000) {
+		if (m_iFrameCount >= 300) {
 
 			m_iFrameCount = 0;
 			m_RoomId	  = RoomID::ROOM_RECEPTION;
@@ -78,8 +81,16 @@ void Sakura::Update()
 
 		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
-			m_HasKill = true;
+			m_CanKill = true;
 		}
+
+		// キルアニメーションが終わったら殺す処理
+		if (m_AnimationTex.m_Counter >= 2) {
+			m_iFrameCount = 0;
+			m_HasKill = true;
+			m_CanKill = false;
+		}
+
 		break;
 
 	default:
@@ -167,8 +178,10 @@ void Sakura::Draw()
 	default:
 		break;
 	}
-}
 
-void Sakura::KillAnimation()
-{
+
+	if (m_CanKill == true)
+	{
+		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+	}
 }

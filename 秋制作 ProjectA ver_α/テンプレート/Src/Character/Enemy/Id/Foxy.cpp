@@ -6,13 +6,16 @@
 
 void Ran::Init()
 {
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Ran::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 2000) {
+	if (m_IsActive == false && m_iFrameCount >= 3000) {
 
 		m_iFrameCount = 0;
 		m_IsActive    = true;
@@ -64,13 +67,16 @@ void Ran::Update()
 		break;
 
 	case RoomID::ROOM_PRAYER:
+	{
+		m_CanKill = true;
 
-		if (m_iFrameCount >= 80)
-		{
+		// キルアニメーションが終わったら殺す処理
+		if (m_AnimationTex.m_Counter >= 2) {
 			m_iFrameCount = 0;
 			m_HasKill = true;
+			m_CanKill = false;
 		}
-
+	}
 		break;
 	default:
 		break;
@@ -79,13 +85,6 @@ void Ran::Update()
 
 void Ran::LoadTex(SceneId id_)
 {
-	for (int i = 0; i < 3; ++i) {
-		KillAnimationTex[i] = new Texture();
-	}
-	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/1_.png", KillAnimationTex[0]);
-	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/2_.png", KillAnimationTex[1]);
-	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/3_.png", KillAnimationTex[2]);
-
 	switch (id_)
 	{
 	case GameScene:
@@ -104,11 +103,6 @@ void Ran::LoadTex(SceneId id_)
 
 void Ran::Draw()
 {
-	if (m_RoomId == RoomID::ROOM_PRAYER)
-	{
-		KillAnimation();
-		return;
-	}
 
 	if (m_IsActive == false)
 	{
@@ -153,19 +147,8 @@ void Ran::Draw()
 		break;
 	}
 
-}
-
-void Ran::KillAnimation()
-{
-	static int Timer = 0;
-	static int Count = 0;
-	++Timer;
-	if (Timer > 5) {
-		++Count;
-		if (Count > 3 - 1) {
-			Count = 0;
-		}
-		Timer = 0;
+	if (m_CanKill == true)
+	{
+		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 	}
-	DrawTexture(0.0f, 0.0f, KillAnimationTex[Count]);
 }

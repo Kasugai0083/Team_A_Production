@@ -26,6 +26,14 @@ public:
 			return;
 		}
 
+		m_AnimationTex.m_Counter = 0;
+		m_AnimationTex.m_Length = 3;
+		m_AnimationTex.m_Speed = 15;
+
+		for (int i = 0; i < m_AnimationTex.m_Length; i++) {
+			m_AnimationTex.m_TextureData[i] = new Texture();
+		}
+
 	}
 	/*
 		デストラクタ
@@ -55,17 +63,9 @@ public:
 	*/
 	virtual void Draw() override;
 
-	/*
-		キルアニメーション
-	*/
-	virtual void KillAnimation() override;
-
 private:
 	// キャラID定数
 	const CharacterID m_CharId = CharacterID::RAN;
-	
-	// アニメーション
-	Texture* KillAnimationTex[3];
 };
 
 #endif 

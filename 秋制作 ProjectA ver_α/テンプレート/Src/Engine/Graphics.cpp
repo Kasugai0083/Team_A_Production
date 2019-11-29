@@ -4,7 +4,6 @@
 #include "Window.h"
 #include "../Utility/Size.h"
 #include "../Utility/Vec.h"
-#include "../Character/Enemy/Enemy.h"
 #include "Lib/Lib.h"
 #include "../Utility/Common.h"
 #include "../Engine/Engine.h"
@@ -151,6 +150,7 @@ void DrawTexture(Vec2 pos_, Texture* texture_data)
 
 	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
 }
+
 void DrawTexture(float x, float y, Texture* texture_data, float width_, float height_)
 {
 	CustomVertex v[4] =
@@ -266,22 +266,22 @@ void DrawUVScrollTexture(float x, float y, Texture* texture_data, float tu, floa
 	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
 }
 
-void DrawAnimation(float x_, float y_, Texture* texture_data[],
-	int length_, int speed_, int* Counter_)
+
+void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_)
 {
-	static int Timer;
+	static int Timer = 0;
 	++Timer;
-	if (Timer > speed_) {
+	if (Timer > animatinon_->m_Speed) {
 
-		++* Counter_;
-		if (*Counter_ > length_ - 1) {
+		++animatinon_->m_Counter;
+		if (animatinon_->m_Counter > animatinon_->m_Length - 1) {
 
-			*Counter_ = 0;
+			animatinon_->m_Counter = 0;
 		}
 		Timer = 0;
 	}
 
-	DrawTexture(x_, y_, texture_data[*Counter_]);
+	DrawTexture(x_, y_, animatinon_->m_TextureData[animatinon_->m_Counter]);
 }
 
 
@@ -360,6 +360,7 @@ bool CreateTexture(const char* file_name, Texture* texture_data)
 
 	return true;
 }
+
 
 
 
@@ -638,4 +639,3 @@ void DrawAlphaTex2D(
 
 	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vtx, sizeof(Vertex));
 }
-

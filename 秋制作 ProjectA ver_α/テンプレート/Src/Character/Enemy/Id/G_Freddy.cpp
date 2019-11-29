@@ -1,16 +1,16 @@
 #include "G_Freddy.h"
-#include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
-#include "../../../Scene/GameScene/GameData.h"
 #include <time.h>
-#include <stdio.h>
+//#include <iostream>
 #include <stdlib.h>
-#include <iostream>
 
 void Botan::Init()
 {
-	srand((unsigned)time(NULL));
+	srand((unsigned)time(nullptr));
+	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Botan::Update()
@@ -33,12 +33,24 @@ void Botan::Update()
 	// ボタンの攻撃処理(仮)
 	if (m_pPlayer->HasLight() == true) {
 
-		m_HasKill = true;
+		m_CanKill = true;
 	}
+
+	// もしプレイヤーがモニターを見たら
+	// 死ぬ処理を入れる
+	//
+	///////////////////////
 	
 	// ボタンの死亡処理
 	if (m_pPlayer->HasMask() == true) {
 		m_IsActive = false;
+	}
+
+	// キルアニメーションが終わったら殺す処理
+	if (m_AnimationTex.m_Counter >= 2) {
+		m_iFrameCount = 0;
+		m_HasKill = true;
+		m_CanKill = false;
 	}
 }
 
@@ -76,8 +88,10 @@ void Botan::Draw()
 
 		DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex));
 	}
-}
 
-void Botan::KillAnimation()
-{
+
+	if (m_CanKill == true)
+	{
+		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+	}
 }

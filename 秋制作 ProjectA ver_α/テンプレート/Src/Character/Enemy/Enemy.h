@@ -1,11 +1,12 @@
 #ifndef ENEMY_H_
 #define ENEMY_H_
 
-#include "../Character.h"
 #include "../CharacterID.h"
 #include "../../Utility/RoomID.h"
-#include "..//..//Scene/Scene.h"
+#include "../../Scene/Scene.h"
 #include <random>
+#include "../Character.h"
+#include "../../Engine/Graphics.h"
 
 class Enemy : public Character 
 {
@@ -48,11 +49,6 @@ public:
 	*/
 	virtual void LoadTex(SceneId id_)override {}
 
-	/*
-		純粋仮想関数
-		エネミーがプレイヤーを殺したときにするアニメーション関数
-	*/
-	virtual void KillAnimation() = 0;
 
 protected:
 	// エネミーの移動用タイマークラス(未実装)
@@ -92,12 +88,13 @@ protected:
 	};
 
 protected:
-	RoomID m_RoomId;		// どこの部屋にいるか変数
-	int	   m_iFrameCount;	// フレイムカウント用変数
-	bool   m_CanKill;		// 殺せるかどうか	True:殺せる		False:殺せない
-	bool   m_HasKill;		// 殺したかどうか   True:殺した     False:殺してない
+	RoomID     m_RoomId;				// どこの部屋にいるか変数
+	int	       m_iFrameCount;			// フレイムカウント用変数
+	bool       m_CanKill;				// 殺せるかどうか	True:殺せる		False:殺せない
+	bool       m_HasKill;				// 殺したかどうか   True:殺した     False:殺してない
+	AnimationTexture m_AnimationTex;
 
-	Character* m_pPlayer;	// プレイヤーの参照用変数
+	Character* m_pPlayer;			// プレイヤーの参照用変数
 };
 
 #endif
