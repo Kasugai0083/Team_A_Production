@@ -91,12 +91,12 @@ void Ume::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
-		LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex);
 		break;
 	default:
 		break;
@@ -105,7 +105,6 @@ void Ume::LoadTex(SceneId id_)
 
 void Ume::Draw()
 {
-
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
@@ -166,8 +165,12 @@ void Ume::Draw()
 	default:
 		break;
 	}
+
 }
 
 void Ume::KillAnimation()
 {
+
+
+
 }

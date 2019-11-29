@@ -92,12 +92,12 @@ void Sakura::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Chica.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex);
-		LoadTexture("Res/Game/Enemy/Chica_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex);
+		LoadTexture("Res/Game/Enemy/Sakura/Chica.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex);
+		LoadTexture("Res/Game/Enemy/Sakura/Chica_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Chica_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex);
+		LoadTexture("Res/Game/Enemy/Sakura/Chica_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex);
 		break;
 	default:
 		break;

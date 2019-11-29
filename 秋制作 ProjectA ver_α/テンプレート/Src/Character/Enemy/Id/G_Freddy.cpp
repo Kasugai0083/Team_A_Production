@@ -59,7 +59,7 @@ void Botan::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex);
+		LoadTexture("Res/Game/Enemy/Botan/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex);
 		break;
 	default:
 		break;

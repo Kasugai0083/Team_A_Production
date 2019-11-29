@@ -19,6 +19,7 @@ public:
 		m_RoomId	  = roomid_; 
 		m_iFrameCount = framecount_;
 		m_HasKill	  = haskill_;
+		m_CanKill	  = false;
 	}
 
 	/*
@@ -93,6 +94,7 @@ protected:
 protected:
 	RoomID m_RoomId;		// どこの部屋にいるか変数
 	int	   m_iFrameCount;	// フレイムカウント用変数
+	bool   m_CanKill;		// 殺せるかどうか	True:殺せる		False:殺せない
 	bool   m_HasKill;		// 殺したかどうか   True:殺した     False:殺してない
 
 	Character* m_pPlayer;	// プレイヤーの参照用変数

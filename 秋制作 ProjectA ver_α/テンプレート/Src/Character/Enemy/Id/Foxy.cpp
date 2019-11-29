@@ -12,7 +12,7 @@ void Ran::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 200) {
+	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsActive    = true;
@@ -65,8 +65,12 @@ void Ran::Update()
 
 	case RoomID::ROOM_PRAYER:
 
-		m_iFrameCount = 0;
-		m_HasKill = true;
+		if (m_iFrameCount >= 80)
+		{
+			m_iFrameCount = 0;
+			m_HasKill = true;
+		}
+
 		break;
 	default:
 		break;
@@ -75,16 +79,23 @@ void Ran::Update()
 
 void Ran::LoadTex(SceneId id_)
 {
+	for (int i = 0; i < 3; ++i) {
+		KillAnimationTex[i] = new Texture();
+	}
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/1_.png", KillAnimationTex[0]);
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/2_.png", KillAnimationTex[1]);
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/3_.png", KillAnimationTex[2]);
+
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Ran.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex);
-		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
-		LoadTexture("Res/Game/Enemy/Ran_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex);
+		LoadTexture("Res/Game/Enemy/Ran/Ran.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex);
+		LoadTexture("Res/Game/Enemy/Ran/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
+		LoadTexture("Res/Game/Enemy/Ran/Ran_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
+		LoadTexture("Res/Game/Enemy/Ran/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
 		break;
 	default:
 		break;
@@ -93,6 +104,12 @@ void Ran::LoadTex(SceneId id_)
 
 void Ran::Draw()
 {
+	if (m_RoomId == RoomID::ROOM_PRAYER)
+	{
+		KillAnimation();
+		return;
+	}
+
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
@@ -135,8 +152,20 @@ void Ran::Draw()
 	default:
 		break;
 	}
+
 }
 
 void Ran::KillAnimation()
 {
+	static int Timer = 0;
+	static int Count = 0;
+	++Timer;
+	if (Timer > 5) {
+		++Count;
+		if (Count > 3 - 1) {
+			Count = 0;
+		}
+		Timer = 0;
+	}
+	DrawTexture(0.0f, 0.0f, KillAnimationTex[Count]);
 }
