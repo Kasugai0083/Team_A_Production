@@ -20,6 +20,11 @@ enum GameCategoryTextureList
 	GameRightShojiFrontTex,
 	GameRightShojiBackTex,
 
+	GameMainUITex,
+	GameMaskUITex,
+	GameControlUITex,
+	GameDescriptionUITex,
+
 	GameFreeTex,
 
 	GameTextureMax,			//!< ƒŠƒXƒgÅ‘å”

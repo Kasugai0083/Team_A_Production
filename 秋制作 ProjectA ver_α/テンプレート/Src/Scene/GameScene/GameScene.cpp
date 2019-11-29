@@ -93,7 +93,9 @@ namespace Draw {
 		ObjManager()->Draw(object::CANDLE_STAND);
 
 	}
+	void DrawUI() {
 
+	}
 }
 #pragma endregion
 
