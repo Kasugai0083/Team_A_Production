@@ -6,6 +6,7 @@
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
+#include "../../../Texture/Texture.h"
 
 /*
 	フォクシー(エネミー)のクラス
@@ -24,6 +25,7 @@ public:
 
 			return;
 		}
+
 	}
 	/*
 		デストラクタ
@@ -53,8 +55,17 @@ public:
 	*/
 	virtual void Draw() override;
 
+	/*
+		キルアニメーション
+	*/
+	virtual void KillAnimation() override;
+
 private:
-	const CharacterID m_CharId = CharacterID::RAN;// キャラID定数
+	// キャラID定数
+	const CharacterID m_CharId = CharacterID::RAN;
+	
+	// アニメーション
+	Texture* KillAnimationTex[3];
 };
 
 #endif 

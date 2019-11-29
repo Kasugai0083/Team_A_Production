@@ -17,12 +17,12 @@ void Botan::Update()
 {
 	if (m_pPlayer->HasMonitor() == true
 		&& SpawnJudgement(0.00) == true) {
-
-		m_IsDeath = false;
+		
+		m_IsActive = true;
 	}
 
-	if (m_IsDeath == true) { return; }
-	// 死んでいたらここより下の処理にはいかない
+	if (m_IsActive == false) { return; }
+	// アクティブじゃなかったらここより下の処理にはいかない
 	
 	// ボタンの攻撃処理
 	//if (m_pPlayer->HasLight() == true
@@ -38,7 +38,7 @@ void Botan::Update()
 	
 	// ボタンの死亡処理
 	if (m_pPlayer->HasMask() == true) {
-		m_IsDeath = true;
+		m_IsActive = false;
 	}
 }
 
@@ -59,7 +59,7 @@ void Botan::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex);
+		LoadTexture("Res/Game/Enemy/Botan/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex);
 		break;
 	default:
 		break;
@@ -68,7 +68,7 @@ void Botan::LoadTex(SceneId id_)
 
 void Botan::Draw()
 {
-	if (m_IsDeath == true) { return; }
+	if (m_IsActive == false) { return; }
 	// 死んでいたらここより下の処理にはいかない
 
 	if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
@@ -76,4 +76,8 @@ void Botan::Draw()
 
 		DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex));
 	}
+}
+
+void Botan::KillAnimation()
+{
 }

@@ -2,17 +2,6 @@
 #include <random>
 #include <time.h>
 
-//Enemy::Enemy()
-//{
-//	RoomID m_RoomId = RoomID::ROOM_WORK;
-//	int	   m_iFrameCount = 0;
-//	bool   m_HasKill = false;
-//}
-
-Enemy::EnemyTimer::~EnemyTimer()
-{
-}
-
 unsigned int Enemy::EnemyTimer::GetRand(unsigned int min_val_, unsigned int max_val_)
 {
 	static std::mt19937_64 mt64((unsigned int)time(NULL));
@@ -25,7 +14,7 @@ unsigned int Enemy::EnemyTimer::GetRand(unsigned int min_val_, unsigned int max_
 bool Enemy::EnemyTimer::SpawnTimer(Enemy& enemy_)
 {
 	// 早期リターン
-	if (enemy_.m_IsDeath == false) { return false; }
+	if (enemy_.m_IsActive == false) { return false; }
 
 	m_Time++;
 
@@ -40,7 +29,7 @@ bool Enemy::EnemyTimer::SpawnTimer(Enemy& enemy_)
 bool Enemy::EnemyTimer::MoveTimer(Enemy& enemy_)
 {
 	// 早期リターン
-	if (enemy_.m_IsDeath == true) { return false; }
+	if (enemy_.m_IsActive == true) { return false; }
 
 	m_Time++;
 

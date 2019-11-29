@@ -12,15 +12,14 @@ void Ume::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsDeath == true && m_iFrameCount >= 2000) {
+	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
-		m_IsDeath = false;
-		m_RoomId = RoomID::ROOM_WORK;
+		m_IsActive = true;
 	}
 
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+	if (m_IsActive == false) { return; }
+	// アクティブじゃなかったらここより下の処理にはいかない
 
 #pragma region ウメの移動
 	switch (m_RoomId)
@@ -70,7 +69,7 @@ void Ume::Update()
 		if (m_pPlayer->HasMask() == true) {
 
 			m_iFrameCount = 0;
-			m_IsDeath = true;
+			m_IsActive = false;
 		}
 		break;
 
@@ -92,12 +91,12 @@ void Ume::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
-		LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex);
 		break;
 	default:
 		break;
@@ -106,8 +105,16 @@ void Ume::LoadTex(SceneId id_)
 
 void Ume::Draw()
 {
-	if (m_IsDeath == true) { return; }
-	// 死んでたらここより下の処理にはいかない
+	if (m_IsActive == false)
+	{
+		if (GetCurrentSceneId() == SceneId::MonitorScene
+			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+
+			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
+		}
+
+		return;
+	}
 
 	switch (m_RoomId)
 	{
@@ -158,4 +165,12 @@ void Ume::Draw()
 	default:
 		break;
 	}
+
+}
+
+void Ume::KillAnimation()
+{
+
+
+
 }

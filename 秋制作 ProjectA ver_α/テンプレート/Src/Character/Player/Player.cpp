@@ -14,6 +14,8 @@ void Player::Init()
 
 void Player::Update()
 {
+	m_MonitorViewID = GameView()->CurrentMonitorID();
+
 	//センターライト
 	if (GetKey(CONTROL_KEY) == true) {
 		m_IsLight = true;
@@ -26,6 +28,7 @@ void Player::Update()
 	if (GetCurrentSceneId() != MonitorScene) {
 
 		if (GetKey(UP_KEY) == true) {
+
 			m_IsMask = true;
 
 		}
@@ -36,7 +39,7 @@ void Player::Update()
 	}
 
 	if (g_Manager.RefKill() == true) {
-		m_IsDeath = true;
+		m_IsActive = false;
 	}
 
 	if (GetCurrentSceneId() == SceneId::MonitorScene) {

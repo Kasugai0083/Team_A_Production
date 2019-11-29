@@ -56,12 +56,18 @@ public:
 	*/
 	virtual void LoadTex(SceneId id_) override;
 	/*
-	描画
+		描画
 	*/
 	virtual void Draw() override;
 
+	/*
+		キルアニメーション
+	*/
+	virtual void KillAnimation() override;
+
 private:
-	const CharacterID m_CharId = CharacterID::BOTAN;// キャラID定数
+	// キャラID定数
+	const CharacterID m_CharId = CharacterID::BOTAN;
 };
 
 #endif

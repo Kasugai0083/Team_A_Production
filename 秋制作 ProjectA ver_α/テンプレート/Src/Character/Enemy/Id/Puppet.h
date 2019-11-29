@@ -5,6 +5,7 @@
 #include "../../CharacterID.h"
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
+#include "../../CharacterManager.h"
 
 /*
 	パペット(エネミー)のクラス
@@ -16,8 +17,14 @@ public:
 		コンストラクタ
 	*/
 	Margaret() :
-		Enemy(RoomID::ROOM_CHILDREN, 0, false)
-	{}
+		Enemy(RoomID::ROOM_CHILDREN, 2000, false)
+	{
+		m_pPlayer = g_Manager.GetCharacter(PLAYER);
+		if (m_pPlayer == nullptr) {
+
+			return;
+		}
+	}
 	/*
 		デストラクター
 	*/
@@ -47,8 +54,14 @@ public:
 	*/
 	virtual void Draw() override;
 
+	/*
+		キルアニメーション
+	*/
+	virtual void KillAnimation() override;
+
 private:
 	const CharacterID m_CharId = CharacterID::MARGARET;// キャラID定数
+	const int MAX_COUNT = 300;
 };
 
 #endif
