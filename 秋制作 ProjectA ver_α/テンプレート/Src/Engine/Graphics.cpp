@@ -116,19 +116,31 @@ void DrawEnd()
 
 void DrawTexture(float x, float y, Texture* texture_data)
 {
-	//CustomVertex v[4] =
-	//{
-	//	{ x, y, 0.0f, 1.0f, 1.0f, 1.0f }, //0
-	//	{ x + texture_data->Width, y, 0.0f, 1.0f, 1.0f, 0.0f }, //1
-	//	{ x + texture_data->Width, y + texture_data->Height, 0.0f, 1.0f, 1.0f, 1.0f }, //2
-	//	{ x, y + texture_data->Height, 0.0f, 1.0f, 0.0f, 1.0f }, //3
-	//};
 	CustomVertex v[4] =
 	{
 		{ x, y, 0.0f, 1.0f, 0.0f, 0.0f }, //0
 		{ x + texture_data->Width, y, 0.0f, 1.0f, 1.0f, 0.0f }, //1
 		{ x + texture_data->Width, y + texture_data->Height, 0.0f, 1.0f, 1.0f, 1.0f }, //2
 		{ x, y + texture_data->Height, 0.0f, 1.0f, 0.0f, 1.0f }, //3
+	};
+
+	// 頂点構造の指定
+	g_D3DDevice->SetFVF(D3DFVF_XYZRHW | D3DFVF_TEX1);
+
+	g_D3DDevice->SetTexture(0, texture_data->TexutreData);
+
+
+	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
+}
+
+void DrawTexture(Vec2 pos_, Texture* texture_data)
+{
+	CustomVertex v[4] =
+	{
+		{ pos_.X, pos_.Y, 0.0f, 1.0f, 0.0f, 0.0f }, //0
+		{ pos_.X + texture_data->Width, pos_.Y, 0.0f, 1.0f, 1.0f, 0.0f }, //1
+		{ pos_.X + texture_data->Width, pos_.Y + texture_data->Height, 0.0f, 1.0f, 1.0f, 1.0f }, //2
+		{ pos_.X, pos_.Y + texture_data->Height, 0.0f, 1.0f, 0.0f, 1.0f }, //3
 	};
 
 	// 頂点構造の指定

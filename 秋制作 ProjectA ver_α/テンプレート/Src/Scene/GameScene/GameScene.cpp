@@ -13,6 +13,7 @@
 #include "GameScene.h"
 #include "../../Object/Item/ItemValue.h"
 #include "../../Object/Object.h"
+#include "../../Object/UI/UIvalue.h"
 
 // ゲーム本編シーンの初期化
 void InitGameScene();
@@ -94,7 +95,10 @@ namespace Draw {
 
 	}
 	void DrawUI() {
-
+		DrawTexture(GAME_BASE_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex));
+		DrawTexture(GAME_MASK_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex));
+		DrawTexture(GAME_CONTROL_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex));
+		DrawTexture(GAME_DESCRIPTION_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex));
 	}
 }
 #pragma endregion
@@ -130,6 +134,7 @@ void DrawGameScene()
 	}
 	g_Manager.Draw();
 
+	Draw::DrawUI();
 
 
 }
@@ -156,6 +161,10 @@ void InitGameScene()
 	LoadTexture("Res/Game/Left/left_shoji_front.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex);
 	LoadTexture("Res/Game/Left/left_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex);
 
+	LoadTexture("Res/Game/UI/base_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex);
+	LoadTexture("Res/Game/UI/control_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
+	LoadTexture("Res/Game/UI/control_ui_main.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex);
+	LoadTexture("Res/Game/UI/mask_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex);
 
 
 	ChangeSceneStep(SceneStep::MainStep);

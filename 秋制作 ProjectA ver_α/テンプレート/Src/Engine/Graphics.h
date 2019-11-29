@@ -81,6 +81,7 @@ void DrawEnd();
 * @param[in] texture_data 描画で使用するテクスチャのデータ
 */
 void DrawTexture(float x, float y, Texture* texture_data);
+void DrawTexture(Vec2 pos_, Texture* texture_data);
 void DrawTexture(float x, float y, Texture* texture_data, float width_, float height_);
 void DrawTexture(float x, float y, Texture* texture_data, Size size_);
 void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_);
