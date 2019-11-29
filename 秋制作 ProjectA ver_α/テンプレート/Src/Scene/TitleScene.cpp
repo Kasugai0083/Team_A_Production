@@ -44,7 +44,6 @@ void DrawTitleScene()
 	ObjManager()->DrawUI(BUTTON_NEW_GAME);
 	ObjManager()->DrawUI(BUTTON_CONTINUE);
 
-
 }
 
 
@@ -53,6 +52,7 @@ void InitTitleScene()
 {
 
 	ObjManager()->Init();
+	ObjManager()->InitUI();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
 	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
@@ -81,6 +81,9 @@ SceneId FinishTitleScene()
 	ReleaseCategoryTexture(SceneId::TitleScene);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
 
+	ObjManager()->Release(TITLE_LOGO);
+	ObjManager()->Release(BUTTON_NEW_GAME);
+	ObjManager()->Release(BUTTON_CONTINUE);
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 

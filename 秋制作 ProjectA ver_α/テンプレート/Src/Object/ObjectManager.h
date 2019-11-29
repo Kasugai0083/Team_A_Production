@@ -35,12 +35,14 @@ public:
 
 	bool HasLight(CandleLight cl_);
 	void InitCount();
+	void InitUI();
 
 	void Release();
 
+	void Release(int id);
 
 private:
-	void InitUI();
+
 
 
 	Object* m_pObjects[object::MAX_OBJECT_NUM];

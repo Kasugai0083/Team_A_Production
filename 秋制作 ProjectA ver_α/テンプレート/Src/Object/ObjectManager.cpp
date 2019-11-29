@@ -26,6 +26,12 @@ ObjectManager::ObjectManager() {
 
 	m_pUI[BUTTON_NEW_GAME] = new UI(UIType::NONE, BUTTON_NEW_GAME);
 	m_pUI[BUTTON_CONTINUE] = new UI(UIType::NONE, BUTTON_CONTINUE);
+
+	m_pUI[GAME_BASE_UI] = new UI(UIType::NONE, GAME_BASE_UI);
+	m_pUI[BUTTON_CONTROL_UI] = new UI(UIType::NONE, BUTTON_CONTROL_UI);
+	m_pUI[MO_MASK_UI] = new UI(UIType::NONE, MO_MASK_UI);
+	m_pUI[DESCRIPTION_UI] = new UI(UIType::NONE, DESCRIPTION_UI);
+
 	m_pUI[BUTTON_WORKSHOP] = new UI(UIType::NONE, BUTTON_WORKSHOP);
 	m_pUI[BUTTON_STORE_ROOM] = new UI(UIType::NONE, BUTTON_STORE_ROOM);
 	m_pUI[BUTTON_RECEPTION_ROOM] = new UI(UIType::NONE, BUTTON_RECEPTION_ROOM);
@@ -44,6 +50,8 @@ ObjectManager::ObjectManager() {
 	m_pUI[PLAYER_ROOM] = new UI(UIType::NONE, PLAYER_ROOM);
 	m_pUI[CLEAR_LOGO] = new UI(UIType::NONE, CLEAR_LOGO);
 
+
+
 	m_pObjects[object::CANDLE_RIGHT] = new Candle(CandleType::RIGHT_CANDLE);
 	m_pObjects[object::CANDLE_LEFT] = new Candle(CandleType::LEFT_CANDLE);
 	m_pObjects[object::CANDLE_CENTER] = new Candle(CandleType::CENTER_CANDLE);
@@ -57,7 +65,8 @@ ObjectManager::ObjectManager() {
 	m_pObjects[object::CRYSTAL] = new Crystal;
 	m_pObjects[object::MUSICBOX] = new MusicBox;
 
-	InitUI();
+	/*InitUI();*/
+
 
 	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
 		if (m_pObjects == nullptr) {
@@ -85,23 +94,26 @@ void ObjectManager::Init() {
 }
 void ObjectManager::InitUI() {
 
-
 	for (int i = 0; i < MAX_UI_NUM; i++) {
-		m_pUI[i]->Init();
-	}
-
-	for (int i = 0; i < MAX_UI_NUM; i++) {
-		if (m_pUI == nullptr) {
-			return;
+		if (m_pUI[i] == nullptr) {
+			continue;
 		}
+		m_pUI[i]->Init();
 	}
 
 }
 
 void ObjectManager::Init(object::ObjectId id_, Vec2 pos_) {
 
-	m_pObjects[id_]->Init(pos_);
-	m_pObjects[id_]->Init(id_, pos_);
+	for (int i = 0; i < MAX_UI_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		m_pObjects[id_]->Init(pos_);
+		m_pObjects[id_]->Init(id_, pos_);
+	}
+
+
 
 }
 
@@ -111,70 +123,148 @@ void ObjectManager::Update()
 		m_pObjects[i]->Update();
 	}
 	for (int i = 0; i < MAX_UI_NUM; i++) {
+		if (m_pUI[i] == nullptr) {
+			continue;
+		}
 		m_pUI[i]->Update();
 	}
 }
 
 void ObjectManager::Update(object::ObjectId id_)
 {
-	m_pObjects[id_]->Update();
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		m_pObjects[id_]->Update();
+	}
 }
 
 void ObjectManager::UpdateUI(UserInterfaceID id_)
 {
-	m_pUI[id_]->Update();
+	for (int i = 0; i < MAX_UI_NUM; i++) {
+		if (m_pUI[i] == nullptr) {
+			continue;
+		}
+		m_pUI[id_]->Update();
+	}
 }
 
 
 void ObjectManager::Draw(object::ObjectId id_)
 {
-	m_pObjects[id_]->Draw();
+
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		m_pObjects[id_]->Draw();
+	}
+
+
 }
 
 void ObjectManager::Draw(object::ObjectId id_, Vec2 pos_)
 {
-	m_pObjects[id_]->Draw(pos_);
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		m_pObjects[id_]->Draw(pos_);
+	}
 }
 
 void ObjectManager::DrawUI(UserInterfaceID id_) {
-	m_pUI[id_]->Draw();
+	for (int i = 0; i < MAX_UI_NUM; i++) {
+		if (m_pUI[i] == nullptr) {
+			continue;
+		}
+		m_pUI[id_]->Draw();
+	}
 }
 
 void ObjectManager::SetPosition(object::ObjectId id_, Vec2 pos_) {
-	m_pObjects[id_]->SetPosition(pos_);
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		m_pObjects[id_]->SetPosition(pos_);
+	}
 }
+
+void ObjectManager::Release(int id) {
+
+	delete m_pUI[id];
+	m_pUI[id] = nullptr;
+}
+
 
 void ObjectManager::Release()
 {
 	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
-		delete m_pObjects[i];
-		m_pObjects[i] = nullptr;
-	}	
-	for (int i = 0; i < MAX_UI_NUM; i++) {
-		delete m_pUI[i];
-		m_pUI[i] = nullptr;
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+			delete m_pObjects[i];
+			m_pObjects[i] = nullptr;
+		}
 	}
+
+	for (int i = 0; i < MAX_UI_NUM; i++) {
+		if (m_pUI[i] == nullptr) {
+			continue;
+		}
+		for (int i = 0; i < MAX_UI_NUM; i++) {
+			delete m_pUI[i];
+			m_pUI[i] = nullptr;
+		}
+	}
+	
+
 }
 
 bool ObjectManager::HasOnMouse(object::ObjectId id_) {
 
-	if (m_pObjects[id_]->HasOnMouse() == true) {
-		return true;
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+
+		if (m_pObjects[id_]->HasOnMouse() == true) {
+			return true;
+		}
+		return false;
 	}
-	return false;
 }
 bool ObjectManager::HasOnMouseUI(UserInterfaceID id_) {
 
-	if (m_pUI[id_]->HasOnMouse() == true) {
-		return true;
+
+	for (int i = 0; i < MAX_UI_NUM; i++) {
+		if (m_pUI[i] == nullptr) {
+			continue;
+		}
+		if (m_pUI[id_]->HasOnMouse() == true) {
+			return true;
+		}
+		return false;
 	}
-	return false;
 }
 
 bool ObjectManager::HasLight(CandleLight cl_) {
-	return m_pObjects[object::CANDLE_CENTER]->HasLight(cl_);
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		return m_pObjects[object::CANDLE_CENTER]->HasLight(cl_);
+	}
 }
 
 void ObjectManager::InitCount() {
-	m_pObjects[object::CANDLE_CENTER]->InitCount();
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		m_pObjects[object::CANDLE_CENTER]->InitCount();
+	}
 }

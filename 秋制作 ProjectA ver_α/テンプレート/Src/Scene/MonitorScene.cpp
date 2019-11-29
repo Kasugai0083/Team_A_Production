@@ -117,7 +117,7 @@ void DrawMonitorScene()
 {	
 	DrawBg();
 
-	g_Manager.Draw();
+	g_Manager.Draw();///‚±‚±‚ªŒ´ˆö
 
 	DrawUI();
 
@@ -130,6 +130,10 @@ void InitMonitorScene()
 	pTimerInstance->Init(Timer::Id::SCENE);
 
 	LoadMonitor();
+
+	ObjManager()->Init();
+
+	ObjManager()->InitUI();
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 

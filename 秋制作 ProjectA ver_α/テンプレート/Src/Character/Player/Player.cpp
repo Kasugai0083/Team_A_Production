@@ -56,14 +56,18 @@ void Player::Draw() {
 }
 
 void Player::OnMask() {
+	if (GetCurrentSceneId() == SceneId::MonitorScene) {
+		return;
+	}
+
 	if (m_IsMask == true) {
-		if (m_MaskAnimation <= 540.f) {
+		if (m_MaskAnimation <= 1000.0f) {
 			m_MaskAnimation += 50.f;
-			if (m_MaskAnimation >= 540.f) {
-				m_MaskAnimation = 540.f;
+			if (m_MaskAnimation >= 1080.0f) {
+				m_MaskAnimation = 1080.0f;
 			}
 		}
-		DrawTexture(0.0f, (-540.f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex));
+		DrawTexture(0.0f, (-1080.f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex));
 	}
 	else {
 		if (m_MaskAnimation >= -1080.f) {
@@ -72,6 +76,6 @@ void Player::OnMask() {
 				m_MaskAnimation = -540.f;
 			}
 		}
-		DrawTexture(0.0f, (-540.f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex));
+		DrawTexture(0.0f, (-1080.0f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex));
 	}
 }

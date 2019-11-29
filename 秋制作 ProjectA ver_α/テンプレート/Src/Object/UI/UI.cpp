@@ -10,6 +10,7 @@ Object* g_pTitleLogo;
 
 
 void UI::Init(){
+
 	switch (m_ID) {
 	case UserInterfaceID::TITLE_LOGO:
 		m_Pos = TITLE_LOGO_POS;
@@ -27,7 +28,31 @@ void UI::Init(){
 		m_Pos = CONTINUE_UI_POS;
 		m_Size = CONTINUE_UI_SIZE;
 		LoadTexture("Res/Title/TitleMenuHelp.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);		
+		break;	
+	case UserInterfaceID::GAME_BASE_UI:
+		m_Pos = GAME_BASE_UI_POS;
+		m_Size = GAME_BASE_UI_SIZE;
+		LoadTexture("Res/Game/UI/base_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex);
+		break;
+	case UserInterfaceID::BUTTON_CONTROL_UI:
+		m_Pos = GAME_CONTROL_UI_POS;
+		m_Size = GAME_CONTROL_UI_SIZE;
+		LoadTexture("Res/Game/UI/control_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
+		break;
+	case UserInterfaceID::MO_MASK_UI:
+		m_Pos = GAME_MASK_UI_POS;
+		m_Size = GAME_MASK_UI_SIZE;
+		LoadTexture("Res/Game/UI/mask_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex);
+		break;
+	case UserInterfaceID::DESCRIPTION_UI:
+		m_Pos = GAME_DESCRIPTION_UI_POS;
+		m_Size = GAME_DESCRIPTION_UI_SIZE;
+		LoadTexture("Res/Game/UI/control_ui_main.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex);
 		break;
 	case UserInterfaceID::BUTTON_WORKSHOP:
 		m_Pos = WORKSHOP_BUTTON_POS;

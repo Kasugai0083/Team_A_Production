@@ -95,10 +95,10 @@ namespace Draw {
 
 	}
 	void DrawUI() {
-		DrawTexture(GAME_BASE_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex));
-		DrawTexture(GAME_MASK_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex));
-		DrawTexture(GAME_CONTROL_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex));
-		DrawTexture(GAME_DESCRIPTION_UI_POS, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex));
+		ObjManager()->DrawUI(GAME_BASE_UI);
+		ObjManager()->DrawUI(BUTTON_CONTROL_UI);
+		ObjManager()->DrawUI(MO_MASK_UI);
+		ObjManager()->DrawUI(DESCRIPTION_UI);
 	}
 }
 #pragma endregion
@@ -146,6 +146,7 @@ void InitGameScene()
 	pTimerInstance->Init(Timer::Id::SCENE);
 
 	ObjManager()->Init();
+	ObjManager()->InitUI();
 
 
 	g_Manager.LoadTex(GetCurrentSceneId());
@@ -160,11 +161,6 @@ void InitGameScene()
 	LoadTexture("Res/Game/Right/right_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex);
 	LoadTexture("Res/Game/Left/left_shoji_front.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex);
 	LoadTexture("Res/Game/Left/left_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex);
-
-	LoadTexture("Res/Game/UI/base_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex);
-	LoadTexture("Res/Game/UI/control_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
-	LoadTexture("Res/Game/UI/control_ui_main.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex);
-	LoadTexture("Res/Game/UI/mask_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex);
 
 
 	ChangeSceneStep(SceneStep::MainStep);
@@ -285,7 +281,7 @@ void MainGameScene()
 
 SceneId FinishGameScene()
 {
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
+	//ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
 
 	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, false);
