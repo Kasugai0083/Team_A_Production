@@ -81,9 +81,9 @@ SceneId FinishTitleScene()
 	ReleaseCategoryTexture(SceneId::TitleScene);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
 
-	ObjManager()->Release(TITLE_LOGO);
-	ObjManager()->Release(BUTTON_NEW_GAME);
-	ObjManager()->Release(BUTTON_CONTINUE);
+	//ObjManager()->Release(TITLE_LOGO);
+	//ObjManager()->Release(BUTTON_NEW_GAME);
+	//ObjManager()->Release(BUTTON_CONTINUE);
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 
