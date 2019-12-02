@@ -24,7 +24,7 @@ public:
 		return m_pObjects[id_];
 	}
 
-	void Draw();
+	void DrawUI();
 	void Draw(object::ObjectId id_);
 	void Draw(object::ObjectId id_, Vec2 pos_);
 	void DrawUI(UserInterfaceID id_);

@@ -34,28 +34,6 @@ void Item::Update() {
 	}
 }
 
-void Item::Update2() {
-
-	m_IsDeath = true;
-
-	if (GetCurrentSceneId() == SceneId::GameScene) {
-		switch (GameView()->CurrentViewID())
-		{
-		case GameData::SubGameScene::CENTER:
-
-			break;
-		case GameData::SubGameScene::LEFT:
-			
-			break;
-		case GameData::SubGameScene::RIGHT:
-			
-			break;
-		default:
-			break;
-		}
-	}
-}
-
 
 bool Item::HasOnMouse() {
 	return m_OnMouse;

@@ -164,15 +164,8 @@ void ObjectManager::Draw(object::ObjectId id_)
 }
 
 
-void ObjectManager::Draw()
+void ObjectManager::DrawUI()
 {
-
-	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
-		if (m_pObjects[i] == nullptr) {
-			continue;
-		}
-		m_pObjects[i]->Draw();
-	}
 	for (int i = 0; i < MAX_UI_NUM; i++) {
 		if (m_pUI[i] == nullptr) {
 			continue;

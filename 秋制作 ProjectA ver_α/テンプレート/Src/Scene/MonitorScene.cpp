@@ -119,7 +119,7 @@ void DrawMonitorScene()
 
 	g_Manager.Draw();///‚±‚±‚ªŒ´ˆö
 
-	ObjManager()->Draw();
+	ObjManager()->DrawUI();
 
 	//DrawUI();
 

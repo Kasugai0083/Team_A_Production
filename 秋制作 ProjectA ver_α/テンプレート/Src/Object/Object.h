@@ -33,8 +33,6 @@ public:
 
 	virtual void Update() {};
 
-	virtual void Update2() {};
-
 	virtual bool HasOnMouse() = 0;
 	
 	virtual void Draw() {};

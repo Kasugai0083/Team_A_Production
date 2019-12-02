@@ -40,7 +40,7 @@ void DrawTitleScene()
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex));
 
-	ObjManager()->Draw();
+	ObjManager()->DrawUI();
 
 	//ObjManager()->DrawUI(TITLE_LOGO);
 	//ObjManager()->DrawUI(BUTTON_NEW_GAME);
