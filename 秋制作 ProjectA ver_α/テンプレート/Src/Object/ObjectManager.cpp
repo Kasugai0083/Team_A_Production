@@ -50,8 +50,6 @@ ObjectManager::ObjectManager() {
 	m_pUI[PLAYER_ROOM] = new UI(UIType::NONE, PLAYER_ROOM);
 	m_pUI[CLEAR_LOGO] = new UI(UIType::NONE, CLEAR_LOGO);
 
-
-
 	m_pObjects[object::CANDLE_RIGHT] = new Candle(CandleType::RIGHT_CANDLE);
 	m_pObjects[object::CANDLE_LEFT] = new Candle(CandleType::LEFT_CANDLE);
 	m_pObjects[object::CANDLE_CENTER] = new Candle(CandleType::CENTER_CANDLE);
@@ -92,6 +90,7 @@ void ObjectManager::Init() {
 	m_pObjects[object::CANDLE_STAND]->Init(object::CANDLE_STAND);
 
 }
+
 void ObjectManager::InitUI() {
 
 	for (int i = 0; i < MAX_UI_NUM; i++) {
@@ -161,6 +160,25 @@ void ObjectManager::Draw(object::ObjectId id_)
 		m_pObjects[id_]->Draw();
 	}
 
+
+}
+
+
+void ObjectManager::Draw()
+{
+
+	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pObjects[i] == nullptr) {
+			continue;
+		}
+		m_pObjects[i]->Draw();
+	}
+	for (int i = 0; i < MAX_UI_NUM; i++) {
+		if (m_pUI[i] == nullptr) {
+			continue;
+		}
+		m_pUI[i]->Draw();
+	}
 
 }
 

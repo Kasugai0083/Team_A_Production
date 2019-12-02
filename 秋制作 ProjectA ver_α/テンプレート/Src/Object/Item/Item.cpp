@@ -25,6 +25,7 @@ void Item::Draw() {
 }
 
 void Item::Update() {
+
 	if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 		m_OnMouse = true;
 	}
@@ -32,6 +33,29 @@ void Item::Update() {
 		m_OnMouse = false;
 	}
 }
+
+void Item::Update2() {
+
+	m_IsDeath = true;
+
+	if (GetCurrentSceneId() == SceneId::GameScene) {
+		switch (GameView()->CurrentViewID())
+		{
+		case GameData::SubGameScene::CENTER:
+
+			break;
+		case GameData::SubGameScene::LEFT:
+			
+			break;
+		case GameData::SubGameScene::RIGHT:
+			
+			break;
+		default:
+			break;
+		}
+	}
+}
+
 
 bool Item::HasOnMouse() {
 	return m_OnMouse;

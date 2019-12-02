@@ -11,6 +11,8 @@ Object* g_pTitleLogo;
 
 void UI::Init(){
 
+	m_IsDeath = true;
+
 	switch (m_ID) {
 	case UserInterfaceID::TITLE_LOGO:
 		m_Pos = TITLE_LOGO_POS;
@@ -151,22 +153,167 @@ void UI::Init(){
 
 void UI::Draw(){
 
-	DrawTexture(m_Pos.X, m_Pos.Y, m_Tex);
+	if (m_IsDeath == false) {
+		DrawTexture(m_Pos.X, m_Pos.Y, m_Tex);
 
-	Lib::Texture polygon("hoge");
+		Lib::Texture polygon("hoge");
 
-	if (m_OnMouse == true) {
-		DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		if (m_OnMouse == true) {
+			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		}
 	}
 		
 }
 
 void UI::Update() {
-	if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
-		m_OnMouse = true;
+
+
+	if (GetCurrentSceneId() == SceneId::TitleScene) {
+		switch (m_ID)
+		{
+		case TITLE_LOGO:
+		case BUTTON_NEW_GAME:
+		case BUTTON_CONTINUE:
+			m_IsDeath = false;
+			break;
+		default:
+			m_IsDeath = true;
+			break;
+		}
 	}
-	else {
-		m_OnMouse = false;
+	else if(GetCurrentSceneId() == SceneId::GameScene){
+		switch (m_ID)
+		{
+		case GAME_BASE_UI:
+		case BUTTON_CONTROL_UI:
+		case MO_MASK_UI:
+		case DESCRIPTION_UI:
+			m_IsDeath = false;
+			break;
+		default:
+			m_IsDeath = true;
+			break;
+		}
+	}
+	else if (GetCurrentSceneId() == SceneId::MonitorScene) {
+		switch (m_ID)
+		{
+		case BUTTON_WORKSHOP:
+		case BUTTON_STORE_ROOM:
+		case BUTTON_RECEPTION_ROOM:
+		case BUTTON_CHILD_ROOM:
+		case BUTTON_RIGHT_CORRIDOR:
+		case BUTTON_LEFT_CORRIDOR:
+		case BUTTON_ON_WORKSHOP:
+		case BUTTON_ON_STORE_ROOM:
+		case BUTTON_ON_RECEPTION_ROOM:
+		case BUTTON_ON_CHILD_ROOM:
+		case BUTTON_ON_RIGHT_CORRIDOR:
+		case BUTTON_ON_LEFT_CORRIDOR:
+		case MONITOR_MAP:
+			m_IsDeath = false;
+			break;
+		default:
+			m_IsDeath = true;
+			break;
+		}
+
+		switch (GameView()->CurrentMonitorID())
+		{
+		case MonitorView::WORKSHOP_VIEW:
+
+			switch (m_ID)
+			{
+			case BUTTON_ON_STORE_ROOM:
+			case BUTTON_ON_RECEPTION_ROOM:
+			case BUTTON_ON_CHILD_ROOM:
+			case BUTTON_ON_RIGHT_CORRIDOR:
+			case BUTTON_ON_LEFT_CORRIDOR:
+				m_IsDeath = true;
+				break;
+			default:
+				break;
+			}
+			break;
+		case MonitorView::STORE_ROOM_VIEW:
+			switch (m_ID)
+			{
+			case BUTTON_ON_WORKSHOP:
+			case BUTTON_ON_RECEPTION_ROOM:
+			case BUTTON_ON_CHILD_ROOM:
+			case BUTTON_ON_RIGHT_CORRIDOR:
+			case BUTTON_ON_LEFT_CORRIDOR:
+				m_IsDeath = true;
+				break;
+			default:
+				break;
+			}
+			break;
+		case MonitorView::RECEPTION_ROOM_VIEW:
+			switch (m_ID)
+			{
+			case BUTTON_ON_WORKSHOP:
+			case BUTTON_ON_STORE_ROOM:
+			case BUTTON_ON_CHILD_ROOM:
+			case BUTTON_ON_RIGHT_CORRIDOR:
+			case BUTTON_ON_LEFT_CORRIDOR:
+				m_IsDeath = true;
+			default:
+				break;
+			}
+			break;
+		case MonitorView::CHILD_ROOM_VIEW:
+			switch (m_ID)
+			{
+			case BUTTON_ON_WORKSHOP:
+			case BUTTON_ON_STORE_ROOM:
+			case BUTTON_ON_RECEPTION_ROOM:
+			case BUTTON_ON_RIGHT_CORRIDOR:
+			case BUTTON_ON_LEFT_CORRIDOR:
+				m_IsDeath = true;
+			default:
+				break;
+			}
+			break;
+		case MonitorView::RIGHT_CORRIDOR_VIEW:
+			switch (m_ID)
+			{
+			case BUTTON_ON_WORKSHOP:
+			case BUTTON_ON_STORE_ROOM:
+			case BUTTON_ON_RECEPTION_ROOM:
+			case BUTTON_ON_CHILD_ROOM:
+			case BUTTON_ON_LEFT_CORRIDOR:
+				m_IsDeath = true;
+			default:
+				break;
+			}
+			break;
+		case MonitorView::LEFT_CORRIDOR_VIEW:
+			switch (m_ID)
+			{
+			case BUTTON_ON_WORKSHOP:
+			case BUTTON_ON_STORE_ROOM:
+			case BUTTON_ON_RECEPTION_ROOM:
+			case BUTTON_ON_CHILD_ROOM:
+			case BUTTON_ON_RIGHT_CORRIDOR:
+				m_IsDeath = true;
+			default:
+				break;
+			}
+			break;
+		default:
+			break;
+		}
+
+	}
+
+	if (m_IsDeath == false) {
+		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+			m_OnMouse = true;
+		}
+		else {
+			m_OnMouse = false;
+		}
 	}
 }
 

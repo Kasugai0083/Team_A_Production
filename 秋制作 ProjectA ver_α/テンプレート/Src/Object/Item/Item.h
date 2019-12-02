@@ -16,6 +16,9 @@ public:
 
 	void Draw()override;
 	void Update()override;
+
+	void Update2()override;
+
 	bool HasOnMouse()override;
 	
 	void SetPosition(Vec2 pos_)override;

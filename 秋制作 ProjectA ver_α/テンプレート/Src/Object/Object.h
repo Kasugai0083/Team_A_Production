@@ -32,6 +32,9 @@ public:
 	virtual void InitCount() {};
 
 	virtual void Update() {};
+
+	virtual void Update2() {};
+
 	virtual bool HasOnMouse() = 0;
 	
 	virtual void Draw() {};
@@ -46,6 +49,8 @@ public:
 	virtual float GetHp() { return 0; };
 	virtual float GetRatio() { return 0; };
 protected:
+
+	bool m_IsDeath;
 
 private:
 	Candller* m_Candller;

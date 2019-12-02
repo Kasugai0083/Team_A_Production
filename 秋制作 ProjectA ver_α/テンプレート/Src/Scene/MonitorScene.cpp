@@ -119,7 +119,9 @@ void DrawMonitorScene()
 
 	g_Manager.Draw();///ここが原因
 
-	DrawUI();
+	ObjManager()->Draw();
+
+	//DrawUI();
 
 }
 
@@ -150,12 +152,14 @@ void MainMonitorScene()
 
 	//UIのアップデート
 
-	ObjManager()->UpdateUI(BUTTON_WORKSHOP);
-	ObjManager()->UpdateUI(BUTTON_STORE_ROOM);
-	ObjManager()->UpdateUI(BUTTON_RECEPTION_ROOM);
-	ObjManager()->UpdateUI(BUTTON_CHILD_ROOM);
-	ObjManager()->UpdateUI(BUTTON_RIGHT_CORRIDOR);
-	ObjManager()->UpdateUI(BUTTON_LEFT_CORRIDOR);
+	ObjManager()->Update();
+
+	//ObjManager()->UpdateUI(BUTTON_WORKSHOP);
+	//ObjManager()->UpdateUI(BUTTON_STORE_ROOM);
+	//ObjManager()->UpdateUI(BUTTON_RECEPTION_ROOM);
+	//ObjManager()->UpdateUI(BUTTON_CHILD_ROOM);
+	//ObjManager()->UpdateUI(BUTTON_RIGHT_CORRIDOR);
+	//ObjManager()->UpdateUI(BUTTON_LEFT_CORRIDOR);
 
 	//タイマーのアップデート
 

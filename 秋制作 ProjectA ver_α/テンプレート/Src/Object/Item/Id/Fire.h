@@ -71,7 +71,7 @@ public:
 
 	}
 	void Update() {
-		
+
 		float HeightRatio = 0.0f;
 
 		switch (m_Id)

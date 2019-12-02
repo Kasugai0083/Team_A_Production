@@ -113,14 +113,14 @@ void DrawEnd()
 }
 
 
-void DrawTexture(float x, float y, Texture* texture_data)
+void DrawTexture(float x, float y, Texture* texture_data, float z_)
 {
 	CustomVertex v[4] =
 	{
-		{ x, y, 0.0f, 1.0f, 0.0f, 0.0f }, //0
-		{ x + texture_data->Width, y, 0.0f, 1.0f, 1.0f, 0.0f }, //1
-		{ x + texture_data->Width, y + texture_data->Height, 0.0f, 1.0f, 1.0f, 1.0f }, //2
-		{ x, y + texture_data->Height, 0.0f, 1.0f, 0.0f, 1.0f }, //3
+		{ x, y, z_, 1.0f, 0.0f, 0.0f }, //0
+		{ x + texture_data->Width, y, z_, 1.0f, 1.0f, 0.0f }, //1
+		{ x + texture_data->Width, y + texture_data->Height, z_, 1.0f, 1.0f, 1.0f }, //2
+		{ x, y + texture_data->Height, z_, 1.0f, 0.0f, 1.0f }, //3
 	};
 
 	// 頂点構造の指定
