@@ -3,6 +3,7 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
+#include "../../../Object/ObjectManager.h"
 
 void Ran::Init()
 {
@@ -60,7 +61,7 @@ void Ran::Update()
 	case RoomID::HALL_BACK:
 	case RoomID::HALL_FRONT:
 
-		if (m_pPlayer->HasLight() == true) {
+		if (ObjectManager().HasLight(CandleLight::CENTER_LIGHT)) {
 
 			m_iFrameCount = 0;
 		}
