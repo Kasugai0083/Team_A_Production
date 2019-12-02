@@ -31,6 +31,7 @@ public:
 		m_Time = 0;
 		m_CandleHp = 1.f;
 		m_HeightRatio = NULL;
+
 	};
 	void Init()override {};
 	void Init(object::ObjectId id_)override;

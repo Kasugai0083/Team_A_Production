@@ -79,12 +79,12 @@ public:
 		case FireID::CENTER_FIRE:
 			if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
 
-			
+	
 				if (m_pObject->GetRatio() != NULL) {
 					HeightRatio = m_pObject->GetRatio();
 				}
 
-				m_Pos.Y += HeightRatio;
+				m_Pos.Y = FIRE_SMALL_POS.Y + HeightRatio;
 			}
 			break;
 		case FireID::RIGHT_FIRE:
