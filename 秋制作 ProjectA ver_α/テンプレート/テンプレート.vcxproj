@@ -158,6 +158,7 @@
     <ClCompile Include="Src\Engine\Window.cpp" />
     <ClCompile Include="Src\Main.cpp" />
     <ClCompile Include="Src\Object\Item\Id\Candle.cpp" />
+    <ClCompile Include="Src\Object\Item\Id\Fire.cpp" />
     <ClCompile Include="Src\Object\Item\Item.cpp" />
     <ClCompile Include="Src\Object\ObjectID.h" />
     <ClCompile Include="Src\Object\ObjectManager.cpp" />

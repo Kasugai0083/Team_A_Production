@@ -158,6 +158,9 @@
     <ClCompile Include="Src\Scene\OpeningScene.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Object\Item\Id\Fire.cpp">
+      <Filter>ソース ファイル\Object\Item\Id</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Engine\Engine.h">
