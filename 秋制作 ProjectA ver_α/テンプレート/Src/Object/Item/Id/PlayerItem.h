@@ -44,11 +44,16 @@ public:
 	void Update() {
 
 		if (GetCurrentSceneId() == GameScene) {
-			m_IsDeath = false;
+
+			if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {
+				m_IsDeath = false;
+			}
+			else {
+				m_IsDeath = true;
+
+			}
 		}
-		else {
-			m_IsDeath = true;
-		}
+
 		if (m_IsDeath == false) {
 			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 				m_OnMouse = true;

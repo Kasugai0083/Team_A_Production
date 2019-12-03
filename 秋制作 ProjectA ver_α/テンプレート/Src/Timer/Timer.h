@@ -44,7 +44,6 @@ public:
 		int m_Scene;
 		int m_Clear;
 		int m_MusicBox;
-
 	};
 
 	void Init();
