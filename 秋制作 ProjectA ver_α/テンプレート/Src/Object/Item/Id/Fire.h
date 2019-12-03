@@ -72,7 +72,7 @@ public:
 	}
 	void Update() {
 
-		float HeightRatio = 0.0f;
+		float HeightRatio;
 
 		switch (m_Id)
 		{
@@ -93,7 +93,9 @@ public:
 					HeightRatio = m_pObject->GetRatio();
 				}
 
-				m_Pos.Y += HeightRatio;
+				//m_Pos.Y += HeightRatio;[
+				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
+
 			}
 			break;
 		case FireID::LEFT_FIRE:
@@ -101,8 +103,8 @@ public:
 				if (m_pObject->GetRatio() != NULL) {
 					HeightRatio = m_pObject->GetRatio();
 				}
+				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
 
-				m_Pos.Y += HeightRatio;
 			}
 			break;
 		default:

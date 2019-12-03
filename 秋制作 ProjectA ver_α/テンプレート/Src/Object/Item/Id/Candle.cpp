@@ -40,8 +40,12 @@ void Candle::Init(object::ObjectId id_) {
 		if (m_pTex == nullptr) {
 			return;
 		}
-
 		m_Pos = CANDLE_SMALL_POS;
+
+		m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
+
+		m_Pos.Y = CANDLE_SMALL_POS.Y + m_HeightRatio;
+
 		m_Size = CANDLE_SMALL_SIZE;
 		m_Frame = CANDLE_SMALL_FRAME;
 
@@ -181,6 +185,7 @@ void Candle::Update(){
 
 			m_Pos.Y = CANDLE_SMALL_POS.Y + m_HeightRatio;
 
+
 			if (m_CandleHp <= 0.0f) {
 				m_Death.CenterCaLight = true;
 			}
@@ -192,9 +197,14 @@ void Candle::Update(){
 
 			m_CandleHp -= MELT_RATIO;
 
-			m_HeightRatio = m_Frame.Height * MELT_RATIO;
 
-			m_Pos.Y += m_HeightRatio;
+			m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
+
+			m_Pos.Y = CANDLE_BIG_POS.Y + m_HeightRatio;
+
+			//m_HeightRatio = m_Frame.Height * MELT_RATIO;
+
+			//m_Pos.Y += m_HeightRatio;
 
 			if (m_CandleHp <= 0.0f) {
 				m_Death.LeftCaLight = true;
