@@ -337,8 +337,14 @@ void UI::UpdateGameUI() {
 		case ObjID::DESCRIPTION_UI:
 			if (HasPull == true) {
 				m_IsDeath = false;
-			}
 
+				if (m_Pos.Y >= GAME_DESCRIPTION_UI_POS.Y) {
+					m_Pos.Y -= 10.f;
+				}
+			}
+			else {
+				m_Pos.Y = GAME_DESCRIPTION_UI_POS.Y + 256.f;
+			}
 			break;
 		}
 	}
@@ -355,8 +361,14 @@ void UI::UpdateGameUI() {
 		case ObjID::DESCRIPTION_UI:
 			if (HasPull == true) {
 				m_IsDeath = false;
-			}
 
+				if (m_Pos.Y >= GAME_DESCRIPTION_UI_POS.Y) {
+					m_Pos.Y -= 10.f;
+				}
+			}
+			else {
+				m_Pos.Y = GAME_DESCRIPTION_UI_POS.Y + 256.f;
+			}
 			break;
 		}
 
