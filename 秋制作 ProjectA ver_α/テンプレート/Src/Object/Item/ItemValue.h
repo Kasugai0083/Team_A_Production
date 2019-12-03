@@ -39,7 +39,7 @@ const Vec2 FIRE_BIG_POS = { (960.f - (FIRE_BIG_SIZE.Width / 2)), (90.f - (FIRE_B
 //âä(è¨)
 const Size FIRE_SMALL_SIZE = { 15.f,32.f };
 const Size FIRE_SMALL_FRAME = { 64.f,64.f };
-const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SMALL_SIZE.Width / 2),290.f };
+const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SMALL_SIZE.Width / 2), 290.f };
 
 //êÖèª
 const Size CRYSTAL_SIZE = { 181.f,174.f };

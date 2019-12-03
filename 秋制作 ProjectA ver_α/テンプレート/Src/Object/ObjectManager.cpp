@@ -119,6 +119,10 @@ void ObjectManager::Init(object::ObjectId id_, Vec2 pos_) {
 void ObjectManager::Update()
 {
 	for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
+		if (m_pUI[i] == nullptr) {
+
+			continue;
+		}
 		m_pObjects[i]->Update();
 	}
 	for (int i = 0; i < MAX_UI_NUM; i++) {

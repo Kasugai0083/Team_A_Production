@@ -85,6 +85,7 @@ public:
 				}
 
 				m_Pos.Y = FIRE_SMALL_POS.Y + HeightRatio;
+				//m_Pos.Y += HeightRatio; 
 			}
 			break;
 		case FireID::RIGHT_FIRE:
@@ -94,7 +95,7 @@ public:
 				}
 
 				//m_Pos.Y += HeightRatio;[
-				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
+				//m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
 
 			}
 			break;
@@ -103,7 +104,7 @@ public:
 				if (m_pObject->GetRatio() != NULL) {
 					HeightRatio = m_pObject->GetRatio();
 				}
-				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
+				//m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
 
 			}
 			break;
@@ -134,36 +135,3 @@ private:
 	FireID m_Id;
 	Object* m_pObject;
 };
-
-class FireSmall : public Item {
-public:
-
-	void Init()override {
-		LoadTexture("Res/Game/Item/Candle_Fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
-
-		if (m_pTex == nullptr) {
-			return;
-		}
-
-		m_Pos = FIRE_SMALL_POS;
-		m_Size = FIRE_SMALL_SIZE;
-
-	};
-	void Init(Vec2 pos_) override {
-		LoadTexture("Res/Game/Item/Candle_Fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
-
-		if (m_pTex == nullptr) {
-			return;
-		}
-
-		m_Pos = pos_;
-		m_Size = FIRE_SMALL_SIZE;
-	}
-
-
-private:
-
-};
-
