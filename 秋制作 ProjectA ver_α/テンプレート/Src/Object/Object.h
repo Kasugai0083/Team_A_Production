@@ -24,10 +24,6 @@ public:
 	~Object() {};
 
 	virtual void Init() {};
-	//virtual void Init(Vec2 pos_) {};
-	//virtual void Init(object::ObjectId id_) {};
-	//virtual void Init(object::ObjectId id_,Vec2 pos_) {};
-
 	virtual void InitCount() {};
 
 	virtual void Update() {};
@@ -35,7 +31,6 @@ public:
 	virtual bool HasOnMouse() = 0;
 	
 	virtual void Draw() {};
-	//virtual void Draw(Vec2 pos_) {};
 
 	virtual void SetCandller(Candller* candller_) { return; };
 	virtual void SetCount(int* count_) { return; };
@@ -45,6 +40,7 @@ public:
 	virtual Vec2 GetPos() { return m_Pos; };
 	virtual float GetHp() { return 0; };
 	virtual float GetRatio() { return 0; };
+	virtual bool HasCaLight() { return 0; };
 
 	virtual bool HasMask() { return 0; };
 protected:

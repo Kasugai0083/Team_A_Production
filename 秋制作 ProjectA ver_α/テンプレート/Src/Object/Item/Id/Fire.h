@@ -5,16 +5,11 @@
 #include "Candle.h"
 #include "../../ObjectManager.h"
 
-enum class FireID {
-	CENTER_FIRE,
-	RIGHT_FIRE,
-	LEFT_FIRE,
-};
-
 class Fire : public Item {
 public:
-	Fire(FireID id_) {
+	Fire(ObjID id_) {
 		m_Id = id_;
+		m_IsDeath = true;
 	}
 	void Init()override;
 	void Update()override;
@@ -22,6 +17,8 @@ public:
 	void Draw()override;
 
 private:
-	FireID m_Id;
+	void SceneDeath();
+	void FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_);
+
 	Object* m_pObject;
 };

@@ -3,7 +3,7 @@
 void Fire::Init() {
 	switch (m_Id)
 	{
-	case FireID::CENTER_FIRE:
+	case ObjID::FIRE_CENTER:
 		LoadTexture("Res/Game/Item/Candle_Fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
 
@@ -16,7 +16,7 @@ void Fire::Init() {
 		m_Frame = FIRE_SMALL_FRAME;
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 		break;
-	case FireID::RIGHT_FIRE:
+	case ObjID::FIRE_RIGHT:
 		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
 
@@ -30,7 +30,7 @@ void Fire::Init() {
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
 
 		break;
-	case FireID::LEFT_FIRE:
+	case ObjID::FIRE_LEFT:
 		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
 
@@ -50,61 +50,100 @@ void Fire::Init() {
 
 };
 
+void Fire::FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_) {
+		switch (m_Id)
+		{
+		case ObjID::FIRE_CENTER:
+			m_IsDeath = center_switch_;
+			break;
+		case ObjID::FIRE_LEFT:
+			m_IsDeath = left_switch_;
+			break;
+		case ObjID::FIRE_RIGHT:
+			m_IsDeath = right_switch_;
+			break;
+		}
 
+}
+
+void Fire::SceneDeath() {
+	if (GetCurrentSceneId() == GameScene) {
+		switch (GameView()->CurrentViewID())
+		{
+		case GameData::SubGameScene::CENTER:
+			FireSwitch(false, true, true);
+			break;
+		case GameData::SubGameScene::RIGHT:
+			FireSwitch(true, true, false);
+			break;
+		case GameData::SubGameScene::LEFT:
+			FireSwitch(true, false, true);
+			break;
+		}
+
+	}
+}
 
 void Fire::Update() {
 	float HeightRatio = 0.f;
 
-	switch (m_Id)
-	{
-	case FireID::CENTER_FIRE:
-		if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
+	SceneDeath();
 
-			if (m_pObject->GetRatio() != NULL) {
-				HeightRatio = m_pObject->GetRatio();
+	if (m_IsDeath == false) {
+		switch (m_Id)
+		{
+		case ObjID::FIRE_CENTER:
+			if (m_pObject->HasCaLight() == true) {
+
+				if (m_pObject->GetRatio() != NULL) {
+					HeightRatio = m_pObject->GetRatio();
+				}
+
+				m_Pos.Y = FIRE_SMALL_POS.Y + HeightRatio;
 			}
+			break;
+		case ObjID::FIRE_RIGHT:
+			if (m_pObject->HasCaLight() == true) {
+				if (m_pObject->GetRatio() != NULL) {
+					HeightRatio = m_pObject->GetRatio();
+				}
 
-			m_Pos.Y = FIRE_SMALL_POS.Y + HeightRatio;
-		}
-		break;
-	case FireID::RIGHT_FIRE:
-		if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
-			if (m_pObject->GetRatio() != NULL) {
-				HeightRatio = m_pObject->GetRatio();
+				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
+
 			}
+			break;
+		case ObjID::FIRE_LEFT:
+			if (m_pObject->HasCaLight() == true) {
+				if (m_pObject->GetRatio() != NULL) {
+					HeightRatio = m_pObject->GetRatio();
+				}
+				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
 
-			m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
-
-		}
-		break;
-	case FireID::LEFT_FIRE:
-		if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
-			if (m_pObject->GetRatio() != NULL) {
-				HeightRatio = m_pObject->GetRatio();
 			}
-			m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
-
+			break;
+		default:
+			break;
 		}
-		break;
-	default:
-		break;
-	}
 
-	if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
-		m_OnMouse = true;
-	}
-	else {
-		m_OnMouse = false;
+		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+			m_OnMouse = true;
+		}
+		else {
+			m_OnMouse = false;
+		}
+
 	}
 }
 
 void Fire::Draw() {
-	DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
+	if (m_pObject->HasCaLight() == true && m_IsDeath == false) {
+		DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
 
-	Lib::Texture polygon("hoge");
+		Lib::Texture polygon("hoge");
 
-	if (m_OnMouse == true) {
-		DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		if (m_OnMouse == true) {
+			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		}
+
 	}
-
 }

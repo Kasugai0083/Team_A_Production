@@ -26,7 +26,6 @@ public:
 	void Draw();
 
 	bool HasOnMouse(ObjID id_);
-	bool HasLight(CandleLight cl_);
 	void InitCount();
 
 

@@ -29,9 +29,9 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT)]				= new Candle(ObjID::CANDLE_EFFECT);
 	m_pObjects[static_cast<int>(ObjID::CANDLE_STAND)]				= new Candle(ObjID::CANDLE_STAND);
 
-	m_pObjects[static_cast<int>(ObjID::FIRE_CENTER)]				= new Fire(FireID::CENTER_FIRE);
-	m_pObjects[static_cast<int>(ObjID::FIRE_RIGHT)]					= new Fire(FireID::RIGHT_FIRE);
-	m_pObjects[static_cast<int>(ObjID::FIRE_LEFT)]					= new Fire(FireID::LEFT_FIRE);
+	m_pObjects[static_cast<int>(ObjID::FIRE_CENTER)]				= new Fire(ObjID::FIRE_CENTER);
+	m_pObjects[static_cast<int>(ObjID::FIRE_RIGHT)]					= new Fire(ObjID::FIRE_RIGHT);
+	m_pObjects[static_cast<int>(ObjID::FIRE_LEFT)]					= new Fire(ObjID::FIRE_LEFT);
 		
 	m_pObjects[static_cast<int>(ObjID::CRYSTAL)]					= new Crystal;
 
@@ -62,20 +62,12 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::PLAYER_ROOM)]				= new UI(ObjID::PLAYER_ROOM);
 	m_pObjects[static_cast<int>(ObjID::CLEAR_LOGO)]					= new UI(ObjID::CLEAR_LOGO);
 
-	/*InitUI();*/
-
 
 	for (auto& objects : m_pObjects) {
 		if (objects == nullptr) {
 			return;
 		}
 	}
-
-	//for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
-	//	if (m_pObjects == nullptr) {
-	//		return;
-	//	}
-	//}
 
 }
 
@@ -84,15 +76,6 @@ ObjectManager::~ObjectManager() {
 }
 
 void ObjectManager::Init() {
-	//for (int i = 0; i < object::MAX_OBJECT_NUM; i++) {
-	//	m_pObjects[i]->Init();
-	//}
-
-	//m_pObjects[object::CANDLE_RIGHT]->Init(object::CANDLE_RIGHT);
-	//m_pObjects[object::CANDLE_LEFT]->Init(object::CANDLE_LEFT);
-	//m_pObjects[object::CANDLE_CENTER]->Init(object::CANDLE_CENTER);
-	//m_pObjects[object::CANDLE_EFFECT]->Init(object::CANDLE_EFFECT);
-	//m_pObjects[object::CANDLE_STAND]->Init(object::CANDLE_STAND);
 
 	for (auto& objects : m_pObjects) {
 		if (objects == nullptr) {
@@ -149,11 +132,6 @@ bool ObjectManager::HasOnMouse(ObjID id_) {
 	return false;
 }
 
-bool ObjectManager::HasLight(CandleLight cl_) {
-
-	return m_pObjects[static_cast<int>(ObjID::CANDLE_CENTER)]->HasLight(cl_);
-
-}
 
 void ObjectManager::InitCount() {
 

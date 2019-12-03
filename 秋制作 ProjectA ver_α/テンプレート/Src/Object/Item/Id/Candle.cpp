@@ -182,32 +182,12 @@ void Candle::Update(){
 
 	SceneDeath();
 
-	if (m_IsDeath == false || m_CandleHp > 0.f) {
+	if (m_IsDeath == false && m_CandleHp > 0.f) {
 
 
 		MeltCandle(ObjID::CANDLE_CENTER);
 		MeltCandle(ObjID::CANDLE_LEFT);
 		MeltCandle(ObjID::CANDLE_RIGHT);
-
-		//if (m_Candller.CenterCaLight == true) {
-		//	MeltCandle(ObjID::CANDLE_CENTER);
-		//}
-		//if (m_Candller.LeftCaLight == true) {
-		//	MeltCandle(ObjID::CANDLE_LEFT);
-		//}
-		//if (m_Candller.RightCaLight == true) {
-		//	MeltCandle(ObjID::CANDLE_RIGHT);
-		//}
-
-		//if (m_Death.CenterCaLight == true) {
-		//	m_Candller.CenterCaLight = false;
-		//}
-		//if (m_Death.RightCaLight == true) {
-		//	m_Candller.RightCaLight = false;
-		//}
-		//if (m_Death.LeftCaLight == true) {
-		//	m_Candller.LeftCaLight = false;
-		//}
 
 		if (OnMousePush(Right) == true) {
 			switch (GameView()->CurrentViewID())
@@ -241,6 +221,9 @@ void Candle::Update(){
 			m_OnMouse = false;
 		}
 	}
+	else {
+		m_HasCaLight = false;
+	}
 }
 
 void Candle::Draw(){
@@ -271,22 +254,6 @@ void Candle::Draw(){
 	}
 }
 
-bool Candle::HasLight(CandleLight cl_) {
-	switch (cl_)
-	{
-	case CandleLight::CENTER_LIGHT:
-		return m_Candller.CenterCaLight;
-		break;
-	case CandleLight::RIGHT_LIGHT:
-		return m_Candller.RightCaLight;
-		break;
-	case CandleLight::LEFT_LIGHT:
-		return m_Candller.LeftCaLight;
-		break;
-	default:
-		break;
-	}
-}
 
 Vec2 Candle::GetPos() {
 	return m_Pos;
@@ -296,4 +263,7 @@ float Candle::GetHp() {
 }
 float Candle::GetRatio() {
 	return m_HeightRatio;
+}
+bool Candle::HasCaLight() {
+	return m_HasCaLight;
 }

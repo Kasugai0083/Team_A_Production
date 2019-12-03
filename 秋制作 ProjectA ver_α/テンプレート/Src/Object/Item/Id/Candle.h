@@ -36,8 +36,6 @@ public:
 	};
 	void Init()override;
 
-	bool HasLight(CandleLight cl_)override;
-
 	void InitCount()override;
 	void Update()override;
 
@@ -46,6 +44,7 @@ public:
 	Vec2 GetPos()override;
 	float GetHp()override;
 	float GetRatio()override;
+	bool HasCaLight()override;
 
 private:
 
