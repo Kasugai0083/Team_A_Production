@@ -25,18 +25,16 @@ const float MELT_RATIO = 0.001f;
 class Candle : public Item {
 public:
 
-	Candle(CandleType type_)
+	Candle(ObjID id_)
 	{
-		m_Type = type_;
-		m_Time = 0;
-		m_CandleHp = 1.f;
+		m_Id = id_;
+		m_IsDeath = true;
 		m_HeightRatio = NULL;
+		m_HasCaLight = false;
+		m_CandleHp = 1.f;
 
 	};
-	void Init()override {};
-	void Init(object::ObjectId id_)override;
-
-	void Init(object::ObjectId id_, Vec2 pos_) override;
+	void Init()override;
 
 	bool HasLight(CandleLight cl_)override;
 
@@ -51,15 +49,19 @@ public:
 
 private:
 
-	CandleType m_Type;
+	void SceneDeath();
+	void CandleSwitch(bool center_switch_, bool left_switch_, bool right_switch_);
+	void MeltCandle(ObjID id_);
+
 	static int m_Count;
 	static Candller m_Candller;
+
+	bool m_HasCaLight;
 
 	float m_CandleHp;
 	float m_HeightRatio;
 
 	static Candller m_Death;
-	int m_Time;
 
 };
 

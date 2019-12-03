@@ -17,7 +17,6 @@ public:
 		m_Id = id_;
 	}
 	void Init()override;
-	void Init(Vec2 pos_) override;
 	void Update()override;
 
 	void Draw()override;

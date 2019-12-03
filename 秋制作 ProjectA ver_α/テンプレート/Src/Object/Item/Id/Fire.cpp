@@ -14,7 +14,7 @@ void Fire::Init() {
 		m_Pos = FIRE_SMALL_POS;
 		m_Size = FIRE_SMALL_SIZE;
 		m_Frame = FIRE_SMALL_FRAME;
-		m_pObject = ObjManager()->GetObj(object::CANDLE_CENTER);
+		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 		break;
 	case FireID::RIGHT_FIRE:
 		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
@@ -27,7 +27,7 @@ void Fire::Init() {
 		m_Pos = FIRE_BIG_POS;
 		m_Size = FIRE_BIG_SIZE;
 		m_Frame = FIRE_BIG_FRAME;
-		m_pObject = ObjManager()->GetObj(object::CANDLE_RIGHT);
+		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
 
 		break;
 	case FireID::LEFT_FIRE:
@@ -41,7 +41,7 @@ void Fire::Init() {
 		m_Pos = FIRE_BIG_POS;
 		m_Size = FIRE_BIG_SIZE;
 		m_Frame = FIRE_BIG_FRAME;
-		m_pObject = ObjManager()->GetObj(object::CANDLE_LEFT);
+		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
 
 		break;
 	default:
@@ -50,10 +50,7 @@ void Fire::Init() {
 
 };
 
-void Fire::Init(Vec2 pos_) {
-	Init();
-	m_Pos = pos_;
-}
+
 
 void Fire::Update() {
 	float HeightRatio = 0.f;

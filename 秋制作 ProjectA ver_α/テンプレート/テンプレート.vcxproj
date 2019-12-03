@@ -209,7 +209,6 @@
     <ClInclude Include="Src\Object\UI\Id\RightDuct.h" />
     <ClInclude Include="Src\Object\UI\Id\TitleLogo.h" />
     <ClInclude Include="Src\Object\UI\UI.h" />
-    <ClInclude Include="Src\Object\UI\UIID.h" />
     <ClInclude Include="Src\Object\UI\UIvalue.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
     <ClInclude Include="Src\Scene\GameScene\GameData.h" />

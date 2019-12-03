@@ -58,41 +58,41 @@ void DrawBg() {
 
 }
 
-void DrawUI() {
-
-	//マップ
-	ObjManager()->DrawUI(MONITOR_MAP);
-	//水晶
-	ObjManager()->DrawUI(BUTTON_WORKSHOP);
-	ObjManager()->DrawUI(BUTTON_STORE_ROOM);
-	ObjManager()->DrawUI(BUTTON_RECEPTION_ROOM);
-	ObjManager()->DrawUI(BUTTON_CHILD_ROOM);
-	ObjManager()->DrawUI(BUTTON_RIGHT_CORRIDOR);
-	ObjManager()->DrawUI(BUTTON_LEFT_CORRIDOR);
-
-	switch (GameView()->CurrentMonitorID()) {
-	case MonitorView::WORKSHOP_VIEW:
-		ObjManager()->DrawUI(BUTTON_ON_WORKSHOP);
-		break;
-	case MonitorView::STORE_ROOM_VIEW:
-		ObjManager()->DrawUI(BUTTON_ON_STORE_ROOM);
-		break;
-	case MonitorView::RECEPTION_ROOM_VIEW:
-		ObjManager()->DrawUI(BUTTON_ON_RECEPTION_ROOM);
-		break;
-	case MonitorView::CHILD_ROOM_VIEW:
-		ObjManager()->DrawUI(BUTTON_ON_CHILD_ROOM);
-		break;
-	case MonitorView::RIGHT_CORRIDOR_VIEW:
-		ObjManager()->DrawUI(BUTTON_ON_RIGHT_CORRIDOR);
-		break;
-	case MonitorView::LEFT_CORRIDOR_VIEW:
-		ObjManager()->DrawUI(BUTTON_ON_LEFT_CORRIDOR);
-		break;
-
-	}
-
-}
+//void DrawUI() {
+//
+//	//マップ
+//	ObjManager()->DrawUI(MONITOR_MAP);
+//	//水晶
+//	ObjManager()->DrawUI(BUTTON_WORKSHOP);
+//	ObjManager()->DrawUI(BUTTON_STORE_ROOM);
+//	ObjManager()->DrawUI(BUTTON_RECEPTION_ROOM);
+//	ObjManager()->DrawUI(BUTTON_CHILD_ROOM);
+//	ObjManager()->DrawUI(BUTTON_RIGHT_CORRIDOR);
+//	ObjManager()->DrawUI(BUTTON_LEFT_CORRIDOR);
+//
+//	switch (GameView()->CurrentMonitorID()) {
+//	case MonitorView::WORKSHOP_VIEW:
+//		ObjManager()->DrawUI(BUTTON_ON_WORKSHOP);
+//		break;
+//	case MonitorView::STORE_ROOM_VIEW:
+//		ObjManager()->DrawUI(BUTTON_ON_STORE_ROOM);
+//		break;
+//	case MonitorView::RECEPTION_ROOM_VIEW:
+//		ObjManager()->DrawUI(BUTTON_ON_RECEPTION_ROOM);
+//		break;
+//	case MonitorView::CHILD_ROOM_VIEW:
+//		ObjManager()->DrawUI(BUTTON_ON_CHILD_ROOM);
+//		break;
+//	case MonitorView::RIGHT_CORRIDOR_VIEW:
+//		ObjManager()->DrawUI(BUTTON_ON_RIGHT_CORRIDOR);
+//		break;
+//	case MonitorView::LEFT_CORRIDOR_VIEW:
+//		ObjManager()->DrawUI(BUTTON_ON_LEFT_CORRIDOR);
+//		break;
+//
+//	}
+//
+//}
 #pragma endregion
 
 SceneId UpdateMonitorScene()
@@ -119,9 +119,8 @@ void DrawMonitorScene()
 
 	g_Manager.Draw();///ここが原因
 
-	ObjManager()->DrawUI();
+	ObjManager()->Draw();
 
-	//DrawUI();
 
 }
 
@@ -134,8 +133,6 @@ void InitMonitorScene()
 	LoadMonitor();
 
 	ObjManager()->Init();
-
-	ObjManager()->InitUI();
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 
@@ -174,41 +171,41 @@ void MainMonitorScene()
 	//キー入力でシーン遷移
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-		if (ObjManager()->HasOnMouseUI(BUTTON_WORKSHOP) == true) {
+		if (ObjManager()->HasOnMouse(ObjID::BUTTON_WORKSHOP) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::WORKSHOP_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 			}
 		}
-		if (ObjManager()->HasOnMouseUI(BUTTON_LEFT_CORRIDOR) == true) {
+		if (ObjManager()->HasOnMouse(ObjID::BUTTON_LEFT_CORRIDOR) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::LEFT_CORRIDOR_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 
 			}
 		}
-		if (ObjManager()->HasOnMouseUI(BUTTON_RIGHT_CORRIDOR) == true) {
+		if (ObjManager()->HasOnMouse(ObjID::BUTTON_RIGHT_CORRIDOR) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::RIGHT_CORRIDOR_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 
 			}
 		}
-		if (ObjManager()->HasOnMouseUI(BUTTON_STORE_ROOM) == true) {
+		if (ObjManager()->HasOnMouse(ObjID::BUTTON_STORE_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::STORE_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 
 			}
 		}
-		if (ObjManager()->HasOnMouseUI(BUTTON_RECEPTION_ROOM) == true) {
+		if (ObjManager()->HasOnMouse(ObjID::BUTTON_RECEPTION_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::RECEPTION_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);
 
 			}
 		}
-		if (ObjManager()->HasOnMouseUI(BUTTON_CHILD_ROOM) == true) {
+		if (ObjManager()->HasOnMouse(ObjID::BUTTON_CHILD_ROOM) == true) {
 			if (OnMouseDown(Left) == true) {
 				GameView()->SetMonitorID(MonitorView::CHILD_ROOM_VIEW);
 				pTimerInstance->Init(Timer::Id::SCENE);

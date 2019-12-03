@@ -40,7 +40,7 @@ void DrawTitleScene()
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex));
 
-	ObjManager()->DrawUI();
+	ObjManager()->Draw();
 
 	//ObjManager()->DrawUI(TITLE_LOGO);
 	//ObjManager()->DrawUI(BUTTON_NEW_GAME);
@@ -54,7 +54,6 @@ void InitTitleScene()
 {
 
 	ObjManager()->Init();
-	ObjManager()->InitUI();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
 	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
@@ -70,7 +69,7 @@ void MainTitleScene()
 	ObjManager()->Update();
 	
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
-	if (ObjManager()->HasOnMouseUI(BUTTON_NEW_GAME) == true) {
+	if (ObjManager()->HasOnMouse(ObjID::BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
 			ChangeSceneStep(SceneStep::EndStep);
 		}

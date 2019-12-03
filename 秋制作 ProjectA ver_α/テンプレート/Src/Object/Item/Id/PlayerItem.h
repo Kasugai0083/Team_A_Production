@@ -25,6 +25,9 @@ enum MusicBoxStep {
 class Crystal : public Item {
 public:
 
+	Crystal() { m_IsDeath = true; };
+	~Crystal() {};
+
 	void Init()override {
 		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
@@ -37,18 +40,24 @@ public:
 		m_Size = CRYSTAL_SIZE;
 
 	};
-	void Init(Vec2 pos_) override {
-		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
 
-		if (m_pTex == nullptr) {
-			return;
+	void Update() {
+
+		if (GetCurrentSceneId() == GameScene) {
+			m_IsDeath = false;
 		}
-
-		m_Pos = pos_;
-		m_Size = CRYSTAL_SIZE;
+		else {
+			m_IsDeath = true;
+		}
+		if (m_IsDeath == false) {
+			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+				m_OnMouse = true;
+			}
+			else {
+				m_OnMouse = false;
+			}
+		}
 	}
-
 
 private:
 
@@ -72,20 +81,7 @@ public:
 		LoadCircle();
 
 	};
-	void Init(Vec2 pos_) override {
-		LoadTexture("Res/Game/Item/MusicBox.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMusicBoxTex);
 
-		if (m_pTex == nullptr) {
-			return;
-		}
-
-		m_Pos = pos_;
-		m_Size = MUSICBOX_SIZE;
-	
-		LoadCircle();
-
-	}
 	
 	void Draw() override {
 		DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
