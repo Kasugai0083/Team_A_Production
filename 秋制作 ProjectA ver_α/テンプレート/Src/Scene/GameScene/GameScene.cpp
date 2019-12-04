@@ -132,6 +132,10 @@ void DrawGameScene()
 
 	g_Manager.Draw();
 
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Draw();
+
+	
 }
 
 void InitGameScene()

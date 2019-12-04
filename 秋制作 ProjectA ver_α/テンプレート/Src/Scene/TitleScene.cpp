@@ -52,6 +52,9 @@ void DrawTitleScene()
 
 void InitTitleScene()
 {
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Init(Timer::Id::CLEAR);
+
 
 	ObjManager()->Init();
 

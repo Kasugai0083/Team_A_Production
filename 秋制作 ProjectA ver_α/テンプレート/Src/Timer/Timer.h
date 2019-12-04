@@ -50,6 +50,8 @@ public:
 	void Init(Id id_);
 	int GetTime(Id id_);
 
+	void Draw();
+
 	void Update();
 	void Update(Id id_);
 
