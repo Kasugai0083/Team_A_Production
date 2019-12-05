@@ -69,6 +69,10 @@ private:
 	//–{—ˆg‚¢‚½‚¢•Ï”ŒQ
 	TIMERS Timers;
 	int m_HourCount;
+
+	std::string m_Minute, m_Hour, m_Sample;
+
+
 };
 
 

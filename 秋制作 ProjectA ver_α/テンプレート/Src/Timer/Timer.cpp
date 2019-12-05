@@ -55,11 +55,6 @@ void Timer::Update() {
 	Timers.m_Clear++;
 	Timers.m_MusicBox++;
 
-}
-
-
-void Timer::Draw() {
-
 	// ここで時間の調整
 	int TIME = Timers.m_Clear / TIME_MAGNIFICATION;
 
@@ -68,10 +63,8 @@ void Timer::Draw() {
 		m_HourCount++;
 	}
 
-	std::string m_Minute = "0", m_Hour = "00";
-
 	//左上のサンプル
-	std::string timer = std::to_string(TIME);
+	m_Sample = std::to_string(TIME);
 
 	//左下のデジタル時計表示
 	m_Hour = std::to_string(m_HourCount);
@@ -81,6 +74,13 @@ void Timer::Draw() {
 		std::string zero_plus = "0";
 		m_Minute = zero_plus + m_Minute;
 	}
+
+}
+
+
+void Timer::Draw() {
+	//サンプル描画
+	DrawFont(100.f, 100.f, m_Sample.c_str(), Large, White);
 
 	DrawFont(30.f,1014.f, "AM", Large, Black);
 	DrawFont(130.f,1014.f, m_Hour.c_str(), Large, Black);
