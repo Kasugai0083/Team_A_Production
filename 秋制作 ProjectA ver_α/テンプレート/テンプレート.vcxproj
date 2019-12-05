@@ -231,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Document\マップ図.jpg.png" />
+    <Image Include="参考\title01_UI.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

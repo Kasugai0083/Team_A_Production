@@ -327,5 +327,8 @@
     <Image Include="Res\Document\マップ図.jpg.png">
       <Filter>ソース ファイル\Utility</Filter>
     </Image>
+    <Image Include="参考\title01_UI.png">
+      <Filter>リソース ファイル</Filter>
+    </Image>
   </ItemGroup>
 </Project>
