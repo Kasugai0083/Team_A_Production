@@ -1,6 +1,9 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
+#include <string>
+
+
 class Timer {
 
 	//シングルトンデザインパターン
@@ -66,7 +69,7 @@ private:
 private:
 	//本来使いたい変数群
 	TIMERS Timers;
-
+	int m_HourCount;
 };
 
 

@@ -14,6 +14,7 @@ void Timer::Init() {
 	Timers.m_Scene = 0;
 	Timers.m_Clear = 0;
 	Timers.m_MusicBox = 0;
+	m_HourCount = 0;
 }
 void Timer::Init(Id id_) {
 
@@ -59,40 +60,59 @@ void Timer::Update() {
 }
 
 void UnitedStrings(int counter_, char strings_[20]) {
-	for (int i = 0; i < 20; ++i) {
-		if (strings_[i] == NULL) {
-			if (counter_ >= 1000) {
-				strings_[i] = '0' + (counter_ / 1000);
-				strings_[i + 1] = '0' + (counter_ % 1000 / 100);
-				strings_[i + 2] = '0' + (counter_ % 1000 %100 / 10);
-				strings_[i + 3] = '0' + (counter_ % 1000 % 100 % 10);
-			}
-			else if (counter_ >= 1000 && counter_ >= 100) {
-				strings_[i] = '0' + (counter_ / 100);
-				strings_[i + 1] = '0' + (counter_ % 100 / 10);
-				strings_[i + 2] = '0' + (counter_ % 100 % 10);
-			}
-			else if (counter_ >= 100 && counter_ >= 10) {
-				strings_[i] = '0' + (counter_ / 10);
-				strings_[i + 1] = '0' + (counter_ % 10);
-			}
-			else {
-				strings_[i] = '0' + (counter_ % 1000 % 100 % 10);
-			}
 
-		}
+	counter_ /= 60;
+
+	if (counter_ >= 1000) {
+		strings_[0] = '0' + (counter_ / 1000);
+		strings_[1] = '0' + (counter_ % 1000 / 100);
+		strings_[2] = '0' + (counter_ % 1000 %100 / 10);
+		strings_[3] = '0' + (counter_ % 1000 % 100 % 10);
 	}
+	else if (counter_ >= 1000 && counter_ >= 100) {
+		strings_[0] = '0' + (counter_ / 100);
+		strings_[1] = '0' + (counter_ % 100 / 10);
+		strings_[2] = '0' + (counter_ % 100 % 10);
+	}
+	else if (counter_ >= 100 && counter_ >= 10) {
+		strings_[0] = '0' + (counter_ / 10);
+		strings_[1] = '0' + (counter_ % 10);
+	}
+	else {
+		strings_[0] = '0' + (counter_ % 1000 % 100 % 10);
+	}
+
 }
 
 void Timer::Draw() {
 
-	char Clock2[4] = {NULL,NULL,NULL,NULL};
+	int TIME = Timers.m_Clear / 10;
 
-	UnitedStrings(Timers.m_Clear,Clock2);
+	if (TIME == 60) {
+		Timers.m_Clear = 0;
+		m_HourCount++;
+	}
 
-	char* Clock = Clock2;
+	std::string m_Minute = "0", m_Hour = "00";
 
-	DrawFont(100.f,1010.f, Clock, Large, Black);
+	//左上のサンプル
+	std::string timer = std::to_string(TIME);
+
+	//左下のデジタル時計表示
+	m_Hour = std::to_string(m_HourCount);
+	m_Minute = std::to_string(TIME);
+
+	if (TIME < 10) {
+		std::string zero_plus = "0";
+		m_Minute = zero_plus + m_Minute;
+	}
+
+
+
+	DrawFont(100.f,100.f, timer.c_str(), Large, White);
+	DrawFont(100.f,1014.f, m_Hour.c_str(), Large, Black);
+	DrawFont(132.f,1014.f, ":", Large, Black);
+	DrawFont(164.f,1014.f, m_Minute.c_str(), Large, Black);
 
 }
 
