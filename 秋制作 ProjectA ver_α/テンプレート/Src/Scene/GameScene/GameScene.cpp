@@ -130,10 +130,11 @@ void DrawGameScene()
 	}
 	ObjManager()->Draw();
 
-	g_Manager.Draw();
-
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Draw();
+
+	g_Manager.Draw();
+
 
 	
 }
@@ -236,7 +237,7 @@ void MainGameScene()
 	}
 
 	//クリア時間経過でシーン遷移
-	if (pTimerInstance->GetTime(Timer::Id::CLEAR) >= CLEAR_TIME) {
+	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
 			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
 	}

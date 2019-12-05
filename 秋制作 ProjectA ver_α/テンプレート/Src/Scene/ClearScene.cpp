@@ -15,6 +15,8 @@ void MainClearScene();
 // ゲームオーバーシーンの終了
 SceneId FinishClearScene();
 
+int g_ClearCount = 0;
+
 SceneId UpdateClearScene()
 {
 	switch (GetCurrentSceneStep())
@@ -54,8 +56,12 @@ void InitClearScene()
 {
 
 	Timer* pTimerInstance = Timer::GetInstance();
-
 	pTimerInstance->Init();
+
+	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
+	if (tmp_player->IsActive() == true) {
+		g_ClearCount++;
+	}
 
 	LoadTexture("Res/End/EndBg.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex);
 	LoadTexture("Res/End/GameOver.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex);
@@ -67,6 +73,7 @@ void MainClearScene()
 {
 
 	SceneController()->GameEnd();
+
 
 	if (OnMouseDown(Left) == true) {
 		ChangeSceneStep(SceneStep::EndStep);

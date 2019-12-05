@@ -56,9 +56,8 @@ public:
 	void Draw();
 
 	void Update();
-	void Update(Id id_);
 
-	void WindMusicBox();
+	int GetClearTime() { return m_HourCount; };
 
 private:
 	Timer() {}	//コンストラクタ抑制
