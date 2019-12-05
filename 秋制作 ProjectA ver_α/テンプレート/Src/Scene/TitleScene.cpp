@@ -42,10 +42,6 @@ void DrawTitleScene()
 
 	ObjManager()->Draw();
 
-	//ObjManager()->DrawUI(TITLE_LOGO);
-	//ObjManager()->DrawUI(BUTTON_NEW_GAME);
-	//ObjManager()->DrawUI(BUTTON_CONTINUE);
-
 }
 
 
