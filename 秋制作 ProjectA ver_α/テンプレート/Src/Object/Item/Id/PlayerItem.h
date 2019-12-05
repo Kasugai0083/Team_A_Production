@@ -41,7 +41,7 @@ public:
 
 	};
 
-	void Update() {
+	void Update()override {
 
 		if (GetCurrentSceneId() == GameScene) {
 
@@ -52,6 +52,9 @@ public:
 				m_IsDeath = true;
 
 			}
+		}
+		else {
+			m_IsDeath = true;
 		}
 
 		if (m_IsDeath == false) {
