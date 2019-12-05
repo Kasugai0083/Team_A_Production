@@ -10,9 +10,9 @@ class UI : public Object {
 public:
 
 	UI() {};
-	UI(UIType type_, UserInterfaceID id_) {
-		m_Type = type_;
-		m_ID = id_;
+	UI(ObjID id_) {
+		m_Id = id_;
+		m_HasMask = false;
 	};
 
 	void Init()override;
@@ -20,6 +20,7 @@ public:
 	void Update()override;
 	void Draw()override;
 	bool HasOnMouse()override;
+	bool HasMask()override;
 
 protected:
 	Texture* m_Tex;
@@ -29,9 +30,9 @@ protected:
 
 private:
 
-	UIType m_Type;
-	UserInterfaceID m_ID;
+	void UpdateGameUI();
 
+	bool m_HasMask;
 };
 
 #endif

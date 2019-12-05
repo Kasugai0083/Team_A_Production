@@ -158,6 +158,9 @@
     <ClCompile Include="Src\Scene\OpeningScene.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Object\Item\Id\Fire.cpp">
+      <Filter>ソース ファイル\Object\Item\Id</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Engine\Engine.h">
@@ -301,9 +304,6 @@
     <ClInclude Include="Src\Scene\GameScene\GameScene.h">
       <Filter>ソース ファイル\Scene\GameScene</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Object\UI\UIID.h">
-      <Filter>ソース ファイル\Object\UI</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Texture\EnemyTex.h">
       <Filter>ソース ファイル\Texture</Filter>
     </ClInclude>
@@ -326,6 +326,9 @@
   <ItemGroup>
     <Image Include="Res\Document\マップ図.jpg.png">
       <Filter>ソース ファイル\Utility</Filter>
+    </Image>
+    <Image Include="参考\title01_UI.png">
+      <Filter>リソース ファイル</Filter>
     </Image>
   </ItemGroup>
 </Project>

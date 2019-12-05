@@ -163,6 +163,10 @@ void UpdateKey()
 		{
 			g_InputState.now |= CONTROL_KEY;
 		}
+		if (KeyState[DIK_SPACE] & 0x80)
+		{
+			g_InputState.now |= SPACE_KEY;
+		}
 
 		g_InputState.trg = (g_InputState.now & (~old));	// トリガー情報取得
 		g_InputState.ntrg = (~g_InputState.now) & old;	// 逆トリガー情報取得

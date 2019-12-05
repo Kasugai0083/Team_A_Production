@@ -7,7 +7,7 @@
 
 
 const int SCENE_WAIT = 10;
-const int CLEAR_TIME = 6000;
+const int CLEAR_TIME = 6;
 
 /** @brief シーンID */
 enum SceneId

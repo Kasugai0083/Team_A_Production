@@ -15,6 +15,10 @@ void Ran::Init()
 void Ran::Update()
 {
 	m_iFrameCount++;
+	
+	//í«â¡íÜÅI
+	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
+
 
 	if (m_IsActive == false && m_iFrameCount >= 3000) {
 
@@ -60,12 +64,15 @@ void Ran::Update()
 	{
 	case RoomID::HALL_BACK:
 	case RoomID::HALL_FRONT:
+		//Ç±Ç±ïœÇ¶ÇΩÇ¢ÅI//
 
-		if (ObjectManager().HasLight(CandleLight::CENTER_LIGHT)) {
+		if (pCenterCandle->HasCaLight() == true) {
 
 			m_iFrameCount = 0;
 		}
 		break;
+		//Ç±Ç±ïœÇ¶ÇΩÇ¢ÅI//
+
 
 	case RoomID::ROOM_PRAYER:
 	{

@@ -2,6 +2,7 @@
 #include "../../Src/Engine/Input.h"
 #include "../../Texture/Texture.h"
 #include "../CharacterManager.h"
+#include "..//..//Object/ObjectManager.h"
 
 void Player::Init()
 {
@@ -14,6 +15,8 @@ void Player::Init()
 
 void Player::Update()
 {
+	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
+
 	m_MonitorViewID = GameView()->CurrentMonitorID();
 
 	//センターライト
@@ -22,6 +25,14 @@ void Player::Update()
 	}
 	else if (GetKeyUp(CONTROL_KEY) == true) {
 		m_IsLight = false;
+	}
+
+	//マスク被る
+	if (pMaskUI->HasMask() == true) {
+		m_IsMask = true;
+	}
+	else {
+		m_IsMask = false;
 	}
 
 	//マスク被る

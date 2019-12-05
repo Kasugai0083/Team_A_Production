@@ -50,56 +50,56 @@ Candller* CreateCandller() {
 #pragma region 描画関数
 
 namespace Draw {
-
-	void DrawCenterItem() {
-		
-		Candller* CandllerInstance = CreateCandller();
-
-		if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
-			ObjManager()->Draw(object::FIRE_CENTER);
-			ObjManager()->Draw(object::CANDLE_EFFECT);
-		}
-
-
-		ObjManager()->Draw(object::CANDLE_CENTER);
-		ObjManager()->Draw(object::CANDLE_STAND);
-
-		//プレイヤーのアイテム
-		ObjManager()->Draw(object::CRYSTAL);
-		ObjManager()->Draw(object::MUSICBOX);
-
-	}
-
-	void DrawLeftItem() {
-
-		Candller* CandllerInstance = CreateCandller();
-
-		if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
-			ObjManager()->Draw(object::FIRE_LEFT);
-			ObjManager()->Draw(object::CANDLE_EFFECT);
-		}
-		ObjManager()->Draw(object::CANDLE_LEFT);
-		ObjManager()->Draw(object::CANDLE_STAND);
-
-	}
-
-	void DrawRightItem() {
-
-		Candller* CandllerInstance = CreateCandller();
-		if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
-			ObjManager()->Draw(object::FIRE_RIGHT);
-			ObjManager()->Draw(object::CANDLE_EFFECT);
-		}
-		ObjManager()->Draw(object::CANDLE_RIGHT);
-		ObjManager()->Draw(object::CANDLE_STAND);
-
-	}
-	void DrawUI() {
-		ObjManager()->DrawUI(GAME_BASE_UI);
-		ObjManager()->DrawUI(BUTTON_CONTROL_UI);
-		ObjManager()->DrawUI(MO_MASK_UI);
-		ObjManager()->DrawUI(DESCRIPTION_UI);
-	}
+//
+//	void DrawCenterItem() {
+//		
+//		Candller* CandllerInstance = CreateCandller();
+//
+//		if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
+//			ObjManager()->Draw(object::FIRE_CENTER);
+//			ObjManager()->Draw(object::CANDLE_EFFECT);
+//		}
+//
+//
+//		ObjManager()->Draw(object::CANDLE_CENTER);
+//		ObjManager()->Draw(object::CANDLE_STAND);
+//
+//		//プレイヤーのアイテム
+//		ObjManager()->Draw(object::CRYSTAL);
+//		ObjManager()->Draw(object::MUSICBOX);
+//
+//	}
+//
+//	void DrawLeftItem() {
+//
+//		Candller* CandllerInstance = CreateCandller();
+//
+//		if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
+//			ObjManager()->Draw(object::FIRE_LEFT);
+//			ObjManager()->Draw(object::CANDLE_EFFECT);
+//		}
+//		ObjManager()->Draw(object::CANDLE_LEFT);
+//		ObjManager()->Draw(object::CANDLE_STAND);
+//
+//	}
+//
+//	void DrawRightItem() {
+//
+//		Candller* CandllerInstance = CreateCandller();
+//		if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
+//			ObjManager()->Draw(object::FIRE_RIGHT);
+//			ObjManager()->Draw(object::CANDLE_EFFECT);
+//		}
+//		ObjManager()->Draw(object::CANDLE_RIGHT);
+//		ObjManager()->Draw(object::CANDLE_STAND);
+//
+//	}
+//	void DrawUI() {
+//		ObjManager()->DrawUI(GAME_BASE_UI);
+//		ObjManager()->DrawUI(BUTTON_CONTROL_UI);
+//		ObjManager()->DrawUI(MO_MASK_UI);
+//		ObjManager()->DrawUI(DESCRIPTION_UI);
+//	}
 }
 #pragma endregion
 
@@ -111,32 +111,32 @@ void DrawGameScene()
 	switch (GameView()->CurrentViewID()) {
 	case GameData::CENTER:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
-		Draw::DrawCenterItem();
+		//Draw::DrawCenterItem();
 		break;
 	case GameData::RIGHT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
-		Draw::DrawRightItem();
-		DrawTexture(760.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBoonieTex), 356.f, 356.f);
-
+		//Draw::DrawRightItem();
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex));
 
 		break;
 	case GameData::LEFT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
-		Draw::DrawLeftItem();
-		DrawTexture(760.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFreeTex), 300.f, 300.f);
-
+		//Draw::DrawLeftItem();
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex));
 
 		break;
 	}
+	ObjManager()->Draw();
+
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Draw();
+
 	g_Manager.Draw();
 
-	Draw::DrawUI();
 
-
+	
 }
 
 void InitGameScene()
@@ -146,7 +146,6 @@ void InitGameScene()
 	pTimerInstance->Init(Timer::Id::SCENE);
 
 	ObjManager()->Init();
-	ObjManager()->InitUI();
 
 
 	g_Manager.LoadTex(GetCurrentSceneId());
@@ -211,58 +210,34 @@ void MainGameScene()
 		switch (GameView()->CurrentViewID()) {
 		case GameData::SubGameScene::CENTER:
 			if (GetKey(A_KEY) == true) {
-				//ObjManager()->SetPosition(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
-
-				//ObjManager()->SetPosition(object::CANDLE_CENTER, VOID_POS);
-				//ObjManager()->SetPosition(object::CANDLE_LEFT, CANDLE_BIG_POS);
-				//ObjManager()->SetPosition(object::CANDLE_RIGHT, VOID_POS);
-
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::LEFT);
 			}
 			if (GetKey(D_KEY) == true) {
-				//ObjManager()->SetPosition(object::CANDLE_EFFECT, BIG_CANDLE_EFFECT_POS);
-
-				//ObjManager()->SetPosition(object::CANDLE_CENTER, VOID_POS);
-				//ObjManager()->SetPosition(object::CANDLE_RIGHT, CANDLE_BIG_POS);
-				//ObjManager()->SetPosition(object::CANDLE_LEFT, VOID_POS);
-
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::RIGHT);
 			}
 			break;
 		case GameData::RIGHT:
 			if (GetKey(A_KEY) == true) {
-				//ObjManager()->SetPosition(object::CANDLE_EFFECT, SMALL_CANDLE_EFFECT_POS);
-
-				//ObjManager()->SetPosition(object::CANDLE_CENTER, CANDLE_SMALL_POS);
-				//ObjManager()->SetPosition(object::CANDLE_LEFT, VOID_POS);
-				//ObjManager()->SetPosition(object::CANDLE_RIGHT, VOID_POS);
-
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::CENTER);
 			}
 			break;
 		case GameData::LEFT:
 			if (GetKey(D_KEY) == true) {
-				//ObjManager()->SetPosition(object::CANDLE_EFFECT, SMALL_CANDLE_EFFECT_POS);
-
-				//ObjManager()->SetPosition(object::CANDLE_CENTER, CANDLE_SMALL_POS);
-				//ObjManager()->SetPosition(object::CANDLE_LEFT, VOID_POS);
-				//ObjManager()->SetPosition(object::CANDLE_RIGHT, VOID_POS);
-
 				pTimerInstance->Init(Timer::Id::SCENE);
 				GameView()->SetViewID(GameData::CENTER);
 			}
 			break;
 		}
 
-		SceneController()->ChangeStep(SceneTransition::Id::Monitor, S_KEY);
+		SceneController()->ChangeStep(SceneTransition::Id::Monitor, SPACE_KEY);
 
 	}
 
 	//クリア時間経過でシーン遷移
-	if (pTimerInstance->GetTime(Timer::Id::CLEAR) >= CLEAR_TIME) {
+	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
 			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
 	}

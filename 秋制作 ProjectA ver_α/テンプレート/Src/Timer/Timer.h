@@ -1,6 +1,9 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
+#include <string>
+
+
 class Timer {
 
 	//シングルトンデザインパターン
@@ -44,17 +47,17 @@ public:
 		int m_Scene;
 		int m_Clear;
 		int m_MusicBox;
-
 	};
 
 	void Init();
 	void Init(Id id_);
 	int GetTime(Id id_);
 
-	void Update();
-	void Update(Id id_);
+	void Draw();
 
-	void WindMusicBox();
+	void Update();
+
+	int GetClearTime() { return m_HourCount; };
 
 private:
 	Timer() {}	//コンストラクタ抑制
@@ -65,6 +68,10 @@ private:
 private:
 	//本来使いたい変数群
 	TIMERS Timers;
+	int m_HourCount;
+
+	std::string m_Minute, m_Hour, m_Sample;
+
 
 };
 

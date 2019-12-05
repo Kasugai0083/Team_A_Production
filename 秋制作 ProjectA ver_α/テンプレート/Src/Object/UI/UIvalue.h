@@ -6,16 +6,16 @@
 #pragma region タイトルシーンのUI
 
 //ゲームタイトルの値
-const Vec2 TITLE_LOGO_POS = { 0.f,0.f };
-const Size TITLE_LOGO_SIZE = { 1024.f,512.f };
+const Vec2 TITLE_LOGO_POS = { 1564.f,28.f };
+const Size TITLE_LOGO_SIZE = { 256.f,1024.f };
 
 //ニューゲームUIの値
-const Vec2 NEWGAME_UI_POS = { 200.f,600.f };
-const Size NEWGAME_UI_SIZE = { 498.f,146.f };
+const Vec2 NEWGAME_UI_POS = { 456.f, 284.f };
+const Size NEWGAME_UI_SIZE = { 256.f, 512.f };
 
 //コンテニューUIの値
-const Vec2 CONTINUE_UI_POS = { 200.f,800.f };
-const Size CONTINUE_UI_SIZE = { 498.f,146.f };
+const Vec2 CONTINUE_UI_POS = { 200.f, 284.f };
+const Size CONTINUE_UI_SIZE = { 256.f, 512.f };
 
 #pragma endregion
 
