@@ -58,41 +58,6 @@ void DrawBg() {
 
 }
 
-//void DrawUI() {
-//
-//	//マップ
-//	ObjManager()->DrawUI(MONITOR_MAP);
-//	//水晶
-//	ObjManager()->DrawUI(BUTTON_WORKSHOP);
-//	ObjManager()->DrawUI(BUTTON_STORE_ROOM);
-//	ObjManager()->DrawUI(BUTTON_RECEPTION_ROOM);
-//	ObjManager()->DrawUI(BUTTON_CHILD_ROOM);
-//	ObjManager()->DrawUI(BUTTON_RIGHT_CORRIDOR);
-//	ObjManager()->DrawUI(BUTTON_LEFT_CORRIDOR);
-//
-//	switch (GameView()->CurrentMonitorID()) {
-//	case MonitorView::WORKSHOP_VIEW:
-//		ObjManager()->DrawUI(BUTTON_ON_WORKSHOP);
-//		break;
-//	case MonitorView::STORE_ROOM_VIEW:
-//		ObjManager()->DrawUI(BUTTON_ON_STORE_ROOM);
-//		break;
-//	case MonitorView::RECEPTION_ROOM_VIEW:
-//		ObjManager()->DrawUI(BUTTON_ON_RECEPTION_ROOM);
-//		break;
-//	case MonitorView::CHILD_ROOM_VIEW:
-//		ObjManager()->DrawUI(BUTTON_ON_CHILD_ROOM);
-//		break;
-//	case MonitorView::RIGHT_CORRIDOR_VIEW:
-//		ObjManager()->DrawUI(BUTTON_ON_RIGHT_CORRIDOR);
-//		break;
-//	case MonitorView::LEFT_CORRIDOR_VIEW:
-//		ObjManager()->DrawUI(BUTTON_ON_LEFT_CORRIDOR);
-//		break;
-//
-//	}
-//
-//}
 #pragma endregion
 
 SceneId UpdateMonitorScene()
@@ -151,13 +116,6 @@ void MainMonitorScene()
 
 	ObjManager()->Update();
 
-	//ObjManager()->UpdateUI(BUTTON_WORKSHOP);
-	//ObjManager()->UpdateUI(BUTTON_STORE_ROOM);
-	//ObjManager()->UpdateUI(BUTTON_RECEPTION_ROOM);
-	//ObjManager()->UpdateUI(BUTTON_CHILD_ROOM);
-	//ObjManager()->UpdateUI(BUTTON_RIGHT_CORRIDOR);
-	//ObjManager()->UpdateUI(BUTTON_LEFT_CORRIDOR);
-
 	//タイマーのアップデート
 
 	Timer* pTimerInstance = Timer::GetInstance();
@@ -213,14 +171,14 @@ void MainMonitorScene()
 			}
 		}
 
-		if (GetKey(W_KEY) == true) {
+		if (GetKey(SPACE_KEY) == true) {
 			SceneController()->SetID(SceneTransition::Id::Game, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
 
 	//クリア時間経過でシーン遷移
-	if (pTimerInstance->GetTime(Timer::Id::CLEAR) >= CLEAR_TIME) {
+	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
 		if (tmp_player->IsActive() == false) {
 			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);

@@ -22,6 +22,7 @@
 #define D_KEY		0x0100		// Dキー
 #define ESCAPE_KEY	0x0200		// ESCキー
 #define CONTROL_KEY	0x0400		// ESCキー
+#define SPACE_KEY	0x0800		// Spaceキー
 
 
 /** @brief マウスボタンの種類 */

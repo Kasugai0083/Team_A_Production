@@ -232,7 +232,7 @@ void MainGameScene()
 			break;
 		}
 
-		SceneController()->ChangeStep(SceneTransition::Id::Monitor, S_KEY);
+		SceneController()->ChangeStep(SceneTransition::Id::Monitor, SPACE_KEY);
 
 	}
 
