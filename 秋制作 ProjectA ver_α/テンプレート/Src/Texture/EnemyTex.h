@@ -25,6 +25,17 @@ enum EnemyCategoryTextureList
 
 	EnemyBotanTex,	// ボタンテクスチャ
 
+	MargaretEyeUITex,	// マーガレットの目のUI
+	MargaretPiza1,
+	MargaretPiza2,
+	MargaretPiza3,
+	MargaretPiza4,
+	MargaretPiza5,
+	MargaretPiza6,
+	MargaretPiza7,
+	MargaretPiza8,
+	MargaretPiza9,
+
 	EnemyTextureMax,
 };
 

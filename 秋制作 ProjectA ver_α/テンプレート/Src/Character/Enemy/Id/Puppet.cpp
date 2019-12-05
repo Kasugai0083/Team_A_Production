@@ -10,6 +10,18 @@ void Margaret::Init()
 	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
 	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
+
+	// 目のUI
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/UI_me_64.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretEyeUITex);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_1.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza1);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_2.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza2);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_3.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza3);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_4.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza4);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_5.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza5);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_6.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza6);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_7.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza7);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_8.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza8);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_9.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretPiza9);
 }
 
 void Margaret::Update()
@@ -28,18 +40,41 @@ void Margaret::Update()
 		m_iFrameCount--;
 	}
 
-	Timer* pTimerInstance = Timer::GetInstance();
-
-	if (m_IsActive == false && pTimerInstance->GetTime(Timer::Id::MUSICBOX) >= END_STEP) {
-
-		m_iFrameCount = 0;
-		m_IsActive = true;
+	if (m_iFrameCount >= 800) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza1;
 	}
+	else if (m_iFrameCount < 800 && m_iFrameCount > 700) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza2;
+	}
+	else if (m_iFrameCount < 700 && m_iFrameCount > 600) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza3;
+	}
+	else if (m_iFrameCount < 600 && m_iFrameCount > 500) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza4;
+	}
+	else if (m_iFrameCount < 500 && m_iFrameCount > 400) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza5;
+	}
+	else if (m_iFrameCount < 400 && m_iFrameCount > 300) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza6;
+	}
+	else if (m_iFrameCount < 300 && m_iFrameCount > 200) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza7;
+	}
+	else if (m_iFrameCount < 200 && m_iFrameCount > 100) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza8;
+	}
+	else if (m_iFrameCount < 100 && m_iFrameCount > 0) {
+		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza9;
+	}
+
+
 
 	if (m_iFrameCount == 0) {
 
 		m_IsActive = true;
 	}
+
 
 	if (m_IsActive == false) { return; }
 	// アクティブじゃなかったらここより下の処理にはいかない
@@ -69,6 +104,8 @@ void Margaret::LoadTex(SceneId id_)
 	case MonitorScene:
 		LoadTexture("Res/Game/Enemy/Margaret/mag_camera_base.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterPuppet);
 		LoadTexture("Res/Game/Enemy/Margaret/mag_camera_eye.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPuppetTex);
+
+
 		break;
 	default:
 		break;
@@ -84,8 +121,13 @@ void Margaret::Draw()
 
 			DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPuppetTex));
 			DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterPuppet));
+		
+			DrawTexture(1000.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretEyeUITex));
+			DrawTexture(1000.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, m_TextureCategory));
 		}
 	}
+
+
 
 
 	if (m_CanKill == true)

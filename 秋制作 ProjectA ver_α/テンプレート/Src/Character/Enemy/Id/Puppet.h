@@ -7,6 +7,7 @@
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
+#include "../../../Texture/EnemyTex.h"
 
 
 /*
@@ -19,7 +20,7 @@ public:
 		コンストラクタ
 	*/
 	Margaret() :
-		Enemy(RoomID::ROOM_CHILDREN, 30000)
+		Enemy(RoomID::ROOM_CHILDREN, 100000)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
@@ -67,6 +68,8 @@ public:
 private:
 	const CharacterID m_CharId = CharacterID::MARGARET;// キャラID定数
 	const int MAX_COUNT = 300;
+
+	int m_TextureCategory = EnemyCategoryTextureList::MargaretPiza9;
 };
 
 #endif
