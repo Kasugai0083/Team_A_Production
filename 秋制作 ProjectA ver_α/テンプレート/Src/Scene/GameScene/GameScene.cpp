@@ -205,36 +205,7 @@ void MainGameScene()
 
 
 	//キー入力でシーン遷移
-	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
-
-		switch (GameView()->CurrentViewID()) {
-		case GameData::SubGameScene::CENTER:
-			if (GetKey(A_KEY) == true) {
-				pTimerInstance->Init(Timer::Id::SCENE);
-				GameView()->SetViewID(GameData::LEFT);
-			}
-			if (GetKey(D_KEY) == true) {
-				pTimerInstance->Init(Timer::Id::SCENE);
-				GameView()->SetViewID(GameData::RIGHT);
-			}
-			break;
-		case GameData::RIGHT:
-			if (GetKey(A_KEY) == true) {
-				pTimerInstance->Init(Timer::Id::SCENE);
-				GameView()->SetViewID(GameData::CENTER);
-			}
-			break;
-		case GameData::LEFT:
-			if (GetKey(D_KEY) == true) {
-				pTimerInstance->Init(Timer::Id::SCENE);
-				GameView()->SetViewID(GameData::CENTER);
-			}
-			break;
-		}
-
-		SceneController()->ChangeStep(SceneTransition::Id::Monitor, SPACE_KEY);
-
-	}
+	pPlayer->ControlGameScene();
 
 	//クリア時間経過でシーン遷移
 	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {

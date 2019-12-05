@@ -77,11 +77,14 @@ void SceneTransition::GameEnd() {
 	}
 }
 
-void SceneTransition::ChangeStep(Id id_, unsigned long key_) {
+bool SceneTransition::ChangeStep(Id id_, unsigned long key_) {
 	if (GetKey(key_) == true) {
 		SceneController()->SetID(id_, true);
 		ChangeSceneStep(SceneStep::EndStep);
+
+		return true;
 	}
+	return false;
 }
 
 //シーン管理用の関数群ここまで

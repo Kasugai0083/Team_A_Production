@@ -3,14 +3,92 @@
 #include "../../Texture/Texture.h"
 #include "../CharacterManager.h"
 #include "..//..//Object/ObjectManager.h"
+#include "..//..//Timer/Timer.h"
 
 void Player::Init()
 {
-	m_IsLight = false;
 	m_IsMask = false;
-	m_IsMonitor = false;
 	m_MaskAnimation = -540.f;
 	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex);
+}
+
+// T1 => どのボタンを触れたか
+// T2 => どの MonitorView に移動するか
+// 糞ずるい気がするので変更する予定
+template <class T1, class T2>
+void ButtonPush(T1 button_, T2 view_) {
+	Timer* pTimerInstance = Timer::GetInstance();
+
+	if (ObjManager()->HasOnMouse(button_) == true) {
+		if (OnMouseDown(Left) == true) {
+			GameView()->SetMonitorID(view_);
+			pTimerInstance->Init(Timer::Id::SCENE);
+		}
+	}
+}
+
+void Player::ControlMonitor() {
+
+	Timer* pTimerInstance = Timer::GetInstance();
+	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
+
+		ButtonPush(ObjID::BUTTON_WORKSHOP, MonitorView::WORKSHOP_VIEW);
+		ButtonPush(ObjID::BUTTON_LEFT_CORRIDOR, MonitorView::LEFT_CORRIDOR_VIEW);
+		ButtonPush(ObjID::BUTTON_RIGHT_CORRIDOR, MonitorView::RIGHT_CORRIDOR_VIEW);
+		ButtonPush(ObjID::BUTTON_STORE_ROOM, MonitorView::STORE_ROOM_VIEW);
+		ButtonPush(ObjID::BUTTON_RECEPTION_ROOM, MonitorView::RECEPTION_ROOM_VIEW);
+		ButtonPush(ObjID::BUTTON_CHILD_ROOM, MonitorView::CHILD_ROOM_VIEW);
+
+		if (GetKey(SPACE_KEY) == true) {
+			SceneController()->SetID(SceneTransition::Id::Game, true);
+			ChangeSceneStep(SceneStep::EndStep);
+
+			m_HasGFreddySpown = false;
+
+		}
+	}
+}
+
+// T1 => どのボタンを触れたか
+// T2 => どの ViewScene に移動するか
+// 糞ずるい気がするので変更する予定
+template <class T1, class T2>
+void KeyPush(T1 button_, T2 view_) {
+	Timer* pTimerInstance = Timer::GetInstance();
+
+	if (GetKey(button_) == true) {
+		pTimerInstance->Init(Timer::Id::SCENE);
+		GameView()->SetViewID(view_);
+	}
+}
+
+void Player::ControlGameScene() {
+	Timer* pTimerInstance = Timer::GetInstance();
+	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
+
+		switch (GameView()->CurrentViewID()) {
+		case GameData::SubGameScene::CENTER:
+
+			KeyPush(A_KEY, GameData::LEFT);
+			KeyPush(D_KEY, GameData::RIGHT);
+
+			break;
+		case GameData::RIGHT:
+
+			KeyPush(A_KEY, GameData::CENTER);
+
+			break;
+		case GameData::LEFT:
+
+			KeyPush(D_KEY, GameData::CENTER);
+
+			break;
+		}
+
+		if (SceneController()->ChangeStep(SceneTransition::Id::Monitor, SPACE_KEY) == true ) {
+			m_HasGFreddySpown = true;
+		}
+	}
 }
 
 void Player::Update()
@@ -19,15 +97,7 @@ void Player::Update()
 
 	m_MonitorViewID = GameView()->CurrentMonitorID();
 
-	//センターライト
-	if (GetKey(CONTROL_KEY) == true) {
-		m_IsLight = true;
-	}
-	else if (GetKeyUp(CONTROL_KEY) == true) {
-		m_IsLight = false;
-	}
-
-	//マスク被る
+	//マスク被る・被らない
 	if (pMaskUI->HasMask() == true) {
 		m_IsMask = true;
 	}
@@ -35,29 +105,9 @@ void Player::Update()
 		m_IsMask = false;
 	}
 
-	//マスク被る
-	if (GetCurrentSceneId() != MonitorScene) {
-
-		if (GetKey(UP_KEY) == true) {
-
-			m_IsMask = true;
-
-		}
-		else if (GetKeyUp(UP_KEY) == true)
-		{
-			m_IsMask = false;
-		}
-	}
-
+	//エネミーが参照する値を変更
 	if (g_Manager.RefKill() == true) {
 		m_IsActive = false;
-	}
-
-	if (GetCurrentSceneId() == SceneId::MonitorScene) {
-		m_IsMonitor = true;
-	}
-	else {
-		m_IsMonitor = false;
 	}
 
 }
@@ -72,7 +122,7 @@ void Player::OnMask() {
 	}
 
 	if (m_IsMask == true) {
-		if (m_MaskAnimation <= 1000.0f) {
+		if (m_MaskAnimation <= 1100.0f) {
 			m_MaskAnimation += 50.f;
 			if (m_MaskAnimation >= 1080.0f) {
 				m_MaskAnimation = 1080.0f;
