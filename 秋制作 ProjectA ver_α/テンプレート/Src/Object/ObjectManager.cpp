@@ -2,13 +2,6 @@
 #include "UI/UI.h"
 #include "Item/Item.h"
 #include "ObjectID.h"
-#include "UI/Id/TitleLogo.h"
-#include "UI/Id/RightDuct.h"
-#include "UI/Id/LeftDuct.h"
-#include "UI/Id/NewGame.h"
-#include "UI/Id/Continue.h"
-#include "UI/Id/MonitorSpown.h"
-#include "UI/Id/PlayerRoom.h"
 #include "../Engine/Input.h"
 #include "Item/Id/Candle.h"
 #include "Item/Id/Fire.h"
@@ -45,7 +38,10 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::BUTTON_CONTINUE)]			= new UI(ObjID::BUTTON_CONTINUE);
 		
 	m_pObjects[static_cast<int>(ObjID::GAME_BASE_UI)]				= new UI(ObjID::GAME_BASE_UI);
+
 	m_pObjects[static_cast<int>(ObjID::BUTTON_CONTROL_UI)]			= new UI(ObjID::BUTTON_CONTROL_UI);
+	m_pObjects[static_cast<int>(ObjID::BUTTON_ON_CONTROL_UI)]			= new UI(ObjID::BUTTON_ON_CONTROL_UI);
+	
 	m_pObjects[static_cast<int>(ObjID::MO_MASK_UI)]					= new UI(ObjID::MO_MASK_UI);
 	m_pObjects[static_cast<int>(ObjID::DESCRIPTION_UI)]				= new UI(ObjID::DESCRIPTION_UI);
 			

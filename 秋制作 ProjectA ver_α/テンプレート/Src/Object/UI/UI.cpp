@@ -44,6 +44,12 @@ void UI::Init(){
 		LoadTexture("Res/Game/UI/control_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
 		break;
+	case ObjID::BUTTON_ON_CONTROL_UI:
+		m_Pos = GAME_CONTROL_UI_POS;
+		m_Size = GAME_CONTROL_UI_SIZE;
+		LoadTexture("Res/Game/UI/onhit_control_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitControlUITex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitControlUITex);
+		break;
 	case ObjID::MO_MASK_UI:
 		m_Pos = GAME_MASK_UI_POS;
 		m_Size = GAME_MASK_UI_SIZE;
@@ -337,21 +343,13 @@ void UI::UpdateGameUI() {
 		case ObjID::DESCRIPTION_UI:
 			if (HasPull == true) {
 				m_IsDeath = false;
-
-				if (m_Pos.Y >= GAME_DESCRIPTION_UI_POS.Y) {
-					m_Pos.Y -= 10.f;
-				}
+				break;
 			}
-			else {
-				m_Pos.Y = GAME_DESCRIPTION_UI_POS.Y + 256.f;
-			}
-			break;
 		}
-	}
-	else {
+	}else {
 
 		switch (m_Id)
-			{
+		{
 		case ObjID::BUTTON_CONTROL_UI:
 			HasPull = false;
 			break;
@@ -361,16 +359,9 @@ void UI::UpdateGameUI() {
 		case ObjID::DESCRIPTION_UI:
 			if (HasPull == true) {
 				m_IsDeath = false;
+				break;
+			}
 
-				if (m_Pos.Y >= GAME_DESCRIPTION_UI_POS.Y) {
-					m_Pos.Y -= 10.f;
-				}
-			}
-			else {
-				m_Pos.Y = GAME_DESCRIPTION_UI_POS.Y + 256.f;
-			}
-			break;
 		}
-
 	}
 }

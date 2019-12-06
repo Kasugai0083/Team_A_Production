@@ -42,9 +42,6 @@
     <Filter Include="ソース ファイル\Object\UI">
       <UniqueIdentifier>{030ea35a-dc90-43c3-9b89-650d78d9f5c0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Object\UI\Id">
-      <UniqueIdentifier>{4f1a6e51-f2a3-41bb-8923-26b00e7311fa}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Scene">
       <UniqueIdentifier>{0c01be10-5a39-4a13-a546-3392bdd52cb0}</UniqueIdentifier>
     </Filter>
@@ -252,30 +249,6 @@
     </ClInclude>
     <ClInclude Include="Src\Object\ObjectManager.h">
       <Filter>ソース ファイル\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\ClearLogo.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\Continue.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\LeftDuct.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\MonitorSpown.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\NewGame.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\PlayerRoom.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\RightDuct.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Object\UI\Id\TitleLogo.h">
-      <Filter>ソース ファイル\Object\UI\Id</Filter>
     </ClInclude>
     <ClInclude Include="Src\Object\Item\Id\Candle.h">
       <Filter>ソース ファイル\Object\Item\Id</Filter>

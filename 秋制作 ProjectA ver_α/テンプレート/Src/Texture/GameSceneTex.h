@@ -32,7 +32,10 @@ enum GameCategoryTextureList
 
 	GameMainUITex,
 	GameMaskUITex,
+
 	GameControlUITex,
+	GameOnHitControlUITex,
+
 	GameDescriptionUITex,
 
 	GameFreeTex,
