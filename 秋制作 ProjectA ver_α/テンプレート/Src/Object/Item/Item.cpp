@@ -35,8 +35,3 @@ void Item::Update() {
 		m_OnMouse = false;
 	}
 }
-
-
-bool Item::HasOnMouse() {
-	return m_OnMouse;
-}
