@@ -1,7 +1,7 @@
 #pragma once
 
 /**
-* オブジェクトの葉（最終継承先）\n
+* オブジェクトの葉（最終継承先）@n
 * 蝋燭を管理するクラスを格納
 */
 
@@ -11,18 +11,18 @@
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Calculation.h"
 
-const float MELT_RATIO = 0.001f; //!< 蝋燭が溶ける速度
+const float MELT_RATIO = 0.001f; //!< @brief 蝋燭が溶ける速度
 
 /**
-* @brief 蝋燭に纏わるオブイェクトをを管理するクラス\n
-*		 蝋燭、燭台、蝋燭のエフェクト\n
+* @brief 蝋燭に纏わるオブジェクトを管理するクラス@n
+* 蝋燭、燭台、蝋燭のエフェクト@n
 */
 class Candle : public Item {
 public:
 
 	/**
-	* @fn void Candle(ObjID id_)
-	* @brief コンストラクタ\n各種メンバ変数の初期化\n
+	* @fn Candle(ObjID id_)
+	* @brief コンストラクタ@n各種メンバ変数の初期化@n
 	* @param[in] id_ で指定された ObjID を代入
 	*/
 	Candle(ObjID id_)
@@ -37,22 +37,23 @@ public:
 
 	/**
 	* @fn void Init()
-	* @brief 各種データを m_Id に基づいて初期化\n
-	*		 画像読み込み\n座標の指定\nアイテムの大きさを設定\n画像の大きさを設定\n
+	* @brief 各種データを m_Id に基づいて初期化@n
+	* 画像読み込み@n座標の指定@nアイテムの大きさを設定@n画像の大きさを設定@n
 	*/
 	void Init()override;
 
 	/**
 	* @fn void Update()
-	* @brief 蝋燭の更新\n蝋燭の生死管理\nキャンドル明滅の管理\n
+	* @brief 蝋燭の更新@n蝋燭の生死管理@nキャンドル明滅の管理@n
+	* キャンドルが溶けて座標が下がる処理
 	*/
 	void Update()override;
 
 	/**
 	* @fn void Draw()
-	* @brief m_Id に基づいて描画\n
-	*		 蝋燭の場合 => ヘルスに応じて溶けるように描画される\n
-	*		 それ以外   => 指定された座標とサイズで描画
+	* @brief m_Id に基づいて描画@n
+	* 蝋燭の場合 => ヘルスに応じて溶けるように描画される@n
+	* それ以外   => 指定された座標とサイズで描画
 	*/
 	void Draw() override;
 
@@ -84,8 +85,8 @@ private:
 
 	/**
 	* @fn void SceneDeath()
-	* @brief GameScene 以外でキャンドルを死亡させる\n
-	*		 GameView 情報によってキャンドルの生死を管理する\n
+	* @brief GameScene 以外でキャンドルを死亡させる@n
+	* GameView 情報によってキャンドルの生死を管理する@n
 	*/
 	void SceneDeath();
 
@@ -113,9 +114,9 @@ private:
 
 private:
 	
-	bool m_HasCaLight; //!< キャンドルが点灯情報
-	float m_CandleHp; //!< キャンドルのHP
-	float m_HeightRatio; //!< キャンドルの高さ比率
+	bool m_HasCaLight; //!< @brief キャンドルが点灯情報
+	float m_CandleHp; //!< @brief キャンドルのHP
+	float m_HeightRatio; //!< @brief キャンドルの高さ比率
 
 };
 
