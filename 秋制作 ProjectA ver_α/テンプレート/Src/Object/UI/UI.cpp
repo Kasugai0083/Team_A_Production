@@ -374,11 +374,3 @@ void UI::UpdateGameUI() {
 
 	}
 }
-
-bool UI::HasOnMouse() {
-	return m_OnMouse;
-}
-
-bool UI::HasMask() {
-	return m_HasMask;
-}
