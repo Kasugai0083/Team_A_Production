@@ -41,93 +41,40 @@ SceneId UpdateGameScene()
 	return SceneId::GameScene;
 }
 
-
-Candller* CreateCandller() {
-	static Candller CandInstance = { true, false, true };
-	return &CandInstance;
-}
-
-#pragma region 描画関数
-
-namespace Draw {
-//
-//	void DrawCenterItem() {
-//		
-//		Candller* CandllerInstance = CreateCandller();
-//
-//		if (ObjManager()->HasLight(CandleLight::CENTER_LIGHT) == true) {
-//			ObjManager()->Draw(object::FIRE_CENTER);
-//			ObjManager()->Draw(object::CANDLE_EFFECT);
-//		}
-//
-//
-//		ObjManager()->Draw(object::CANDLE_CENTER);
-//		ObjManager()->Draw(object::CANDLE_STAND);
-//
-//		//プレイヤーのアイテム
-//		ObjManager()->Draw(object::CRYSTAL);
-//		ObjManager()->Draw(object::MUSICBOX);
-//
-//	}
-//
-//	void DrawLeftItem() {
-//
-//		Candller* CandllerInstance = CreateCandller();
-//
-//		if (ObjManager()->HasLight(CandleLight::LEFT_LIGHT) == true) {
-//			ObjManager()->Draw(object::FIRE_LEFT);
-//			ObjManager()->Draw(object::CANDLE_EFFECT);
-//		}
-//		ObjManager()->Draw(object::CANDLE_LEFT);
-//		ObjManager()->Draw(object::CANDLE_STAND);
-//
-//	}
-//
-//	void DrawRightItem() {
-//
-//		Candller* CandllerInstance = CreateCandller();
-//		if (ObjManager()->HasLight(CandleLight::RIGHT_LIGHT) == true) {
-//			ObjManager()->Draw(object::FIRE_RIGHT);
-//			ObjManager()->Draw(object::CANDLE_EFFECT);
-//		}
-//		ObjManager()->Draw(object::CANDLE_RIGHT);
-//		ObjManager()->Draw(object::CANDLE_STAND);
-//
-//	}
-//	void DrawUI() {
-//		ObjManager()->DrawUI(GAME_BASE_UI);
-//		ObjManager()->DrawUI(BUTTON_CONTROL_UI);
-//		ObjManager()->DrawUI(MO_MASK_UI);
-//		ObjManager()->DrawUI(DESCRIPTION_UI);
-//	}
-}
-#pragma endregion
-
 //シーンのメイン処理
 void DrawGameScene()
 {
+	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
+
 
 
 	switch (GameView()->CurrentViewID()) {
 	case GameData::CENTER:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
-		//Draw::DrawCenterItem();
+
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterDeskTex));
+
+		if (pCenterCandle->HasCaLight() == false) {
+			DrawTexture(710.0f, 365.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex));
+		}
+
 		break;
 	case GameData::RIGHT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
-		//Draw::DrawRightItem();
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex));
 
 		break;
 	case GameData::LEFT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
-		//Draw::DrawLeftItem();
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex));
 
 		break;
 	}
+
+	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
+
 	ObjManager()->Draw();
 
 	Timer* pTimerInstance = Timer::GetInstance();
@@ -150,14 +97,21 @@ void InitGameScene()
 
 	g_Manager.LoadTex(GetCurrentSceneId());
 
+	//ゲームシーン背景
 	LoadTexture("Res/Game/Center/GameCenterBg.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex);
 	LoadTexture("Res/Game/Left/GameLeftBg.png", TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex);
 	LoadTexture("Res/Game/Right/GameRightBg.png", TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex);
 
-	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBoonieTex);
-	
+	//センターシーン
+	LoadTexture("Res/Game/Center/fence_black_texture.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex);
+	LoadTexture("Res/Game/Center/all_black_texture.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFilterTex);
+	LoadTexture("Res/Game/Center/desk.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterDeskTex);
+	LoadTexture("Res/Game/Center/black_texture_center.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex);
+
+	//右シーン
 	LoadTexture("Res/Game/Right/right_shoji_front.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex);
 	LoadTexture("Res/Game/Right/right_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex);
+	//左シーン
 	LoadTexture("Res/Game/Left/left_shoji_front.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex);
 	LoadTexture("Res/Game/Left/left_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex);
 

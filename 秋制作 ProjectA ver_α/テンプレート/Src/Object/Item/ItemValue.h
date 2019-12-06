@@ -42,9 +42,9 @@ const Size FIRE_SMALL_FRAME = { 64.f,64.f };
 const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SMALL_SIZE.Width / 2), 290.f };
 
 //êÖèª
-const Size CRYSTAL_SIZE = { 181.f,174.f };
+const Size CRYSTAL_SIZE = { 256.f, 256.f };
 const Size CRYSTAL_FRAME = { 256.f,256.f };
-const Vec2 CRYSTAL_POS = { (660.f - CRYSTAL_SIZE.Width / 2), (920.f - CRYSTAL_SIZE.Height / 2) };
+const Vec2 CRYSTAL_POS = { (960.f - CRYSTAL_SIZE.Width / 2), (770.f) };
 
 //ÉIÉãÉSÅ[Éã
 const Size MUSICBOX_SIZE = { 99.f,99.f };

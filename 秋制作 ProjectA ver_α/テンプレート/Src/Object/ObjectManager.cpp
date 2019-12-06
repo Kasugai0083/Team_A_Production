@@ -24,9 +24,14 @@ ObjectManager::ObjectManager() {
 
 
 	m_pObjects[static_cast<int>(ObjID::CANDLE_RIGHT)]				= new Candle(ObjID::CANDLE_RIGHT);
+	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT_RIGHT)]		= new Candle(ObjID::CANDLE_EFFECT_RIGHT);
+
 	m_pObjects[static_cast<int>(ObjID::CANDLE_LEFT)]				= new Candle(ObjID::CANDLE_LEFT);
+	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT_LEFT)]			= new Candle(ObjID::CANDLE_EFFECT_LEFT);
+
 	m_pObjects[static_cast<int>(ObjID::CANDLE_CENTER)]				= new Candle(ObjID::CANDLE_CENTER);
-	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT)]				= new Candle(ObjID::CANDLE_EFFECT);
+	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT_CENTER)]		= new Candle(ObjID::CANDLE_EFFECT_CENTER);
+
 	m_pObjects[static_cast<int>(ObjID::CANDLE_STAND)]				= new Candle(ObjID::CANDLE_STAND);
 
 	m_pObjects[static_cast<int>(ObjID::FIRE_CENTER)]				= new Fire(ObjID::FIRE_CENTER);

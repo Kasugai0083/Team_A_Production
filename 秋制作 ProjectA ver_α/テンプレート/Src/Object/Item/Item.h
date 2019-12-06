@@ -19,8 +19,6 @@ public:
 
 	bool HasOnMouse()override;
 	
-	void SetPosition(Vec2 pos_)override;
-
 protected:
 	Texture* m_pTex;
 	bool m_OnMouse;

@@ -51,6 +51,7 @@ private:
 	void SceneDeath();
 	void CandleSwitch(bool center_switch_, bool left_switch_, bool right_switch_);
 	void MeltCandle(ObjID id_);
+	void EffectUpdate();
 
 	static int m_Count;
 	static Candller m_Candller;
