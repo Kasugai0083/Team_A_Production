@@ -1,10 +1,6 @@
 #include "Candle.h"
 #include "..//..//ObjectManager.h"
 
-Candller Candle::m_Candller = {false, false, false};
-Candller Candle::m_Death = {false, false, false};
-int Candle::m_Count = 0;
-
 
 void Candle::Init() {
 	switch (m_Id) {
@@ -115,10 +111,6 @@ void Candle::Init() {
 
 		break;
 	}
-}
-
-void Candle::InitCount() {
-	m_Count = 0;
 }
 
 void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_switch_) {
@@ -312,27 +304,5 @@ void Candle::Draw(){
 		default:
 			break;
 		}
-
-
-		Lib::Texture polygon("hoge");
-
-		if (m_OnMouse == true) {
-			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
-		}
-
 	}
-}
-
-
-Vec2 Candle::GetPos() {
-	return m_Pos;
-}
-float Candle::GetHp() {
-	return m_CandleHp;
-}
-float Candle::GetRatio() {
-	return m_HeightRatio;
-}
-bool Candle::HasCaLight() {
-	return m_HasCaLight;
 }

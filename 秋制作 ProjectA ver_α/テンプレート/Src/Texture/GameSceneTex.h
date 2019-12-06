@@ -19,7 +19,10 @@ enum GameCategoryTextureList
 	
 	GameFireBigTex,
 	GameFireSmallTex,
+
 	GameCrystalTex,
+	GameOnHitCrystalTex,
+	
 	GameMusicBoxTex,
 
 	GameLeftShojiFrontTex,
