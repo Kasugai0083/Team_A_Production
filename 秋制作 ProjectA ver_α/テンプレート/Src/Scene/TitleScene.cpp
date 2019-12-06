@@ -9,6 +9,7 @@
 #include "../Engine/Lib/Lib.h"
 #include "../Object/ObjectManager.h"
 #include "../Object/ObjectID.h"
+#include "../Engine/Audio/Audio.h"
 
 // タイトルシーンの初期化
 void InitTitleScene();
@@ -57,6 +58,12 @@ void InitTitleScene()
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
 	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
 
+
+	// オーディオ
+	auto audio = AudioPlayer::GetInstance(GetWindowHandle());
+	audio->Load("Title", "Sound/nayu_dra.wav");
+	audio->Play("Title");
+
 	ChangeSceneStep(SceneStep::MainStep);
 }
 
@@ -86,6 +93,12 @@ SceneId FinishTitleScene()
 	//ObjManager()->Release(BUTTON_CONTINUE);
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
+
+	//	オーディオ
+	auto audio = AudioPlayer::GetInstance();
+	audio->Stop("Title");
+	audio->Release("Title");
+
 
 	g_Manager.Initialize();
 
