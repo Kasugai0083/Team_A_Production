@@ -57,6 +57,9 @@
     <Filter Include="ソース ファイル\Character\Enemy\Id">
       <UniqueIdentifier>{3ab8e495-2ed6-4793-93dc-6de56a2efa31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scene\Days">
+      <UniqueIdentifier>{97b5257f-c60a-4f3a-bbd4-3c102d7627c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Engine\Engine.cpp">
@@ -160,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="Src\Object\Item\Id\Fire.cpp">
       <Filter>ソース ファイル\Object\Item\Id</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\Days\DayController.cpp">
+      <Filter>ソース ファイル\Scene\Days</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -321,6 +327,9 @@
     </ClInclude>
     <ClInclude Include="Src\Texture\OpeningSceneTex.h">
       <Filter>ソース ファイル\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Days\DayController.h">
+      <Filter>ソース ファイル\Scene\Days</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
