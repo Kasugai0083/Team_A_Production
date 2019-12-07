@@ -35,12 +35,3 @@ void Item::Update() {
 		m_OnMouse = false;
 	}
 }
-
-
-bool Item::HasOnMouse() {
-	return m_OnMouse;
-}
-
-void Item::SetPosition(Vec2 pos_) {
-	m_Pos = pos_;
-}

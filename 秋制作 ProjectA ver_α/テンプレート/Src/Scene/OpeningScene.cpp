@@ -7,6 +7,34 @@
 #include "../Character/Player/Player.h"
 #include "../Character/CharacterManager.h"
 #include "../Character/CharacterID.h"
+#include "Days/DayController.h"
+
+class OpController {
+public:
+	OpController() {};
+	~OpController() {};
+
+	void Init() { 
+		m_Count = 0;
+	};
+	void Update() {
+		Timer* pTimerInstance = Timer::GetInstance();
+		pTimerInstance->Update();
+
+		if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
+			if (OnMouseDown(Left) == true) {
+				m_Count++;
+			}
+		}
+	};
+
+	int GetCount() { return m_Count; };
+private:
+
+	int m_Count;
+};
+
+static OpController OpCon;
 
 // ゲームオーバーシーンの初期化
 void InitOpeningScene();
@@ -33,21 +61,20 @@ SceneId UpdateOpeningScene()
 	return SceneId::OpeningScene;
 }
 
-enum class Days {
-	DAY_0,
-	DAY_1,
-	DAY_2,
-	DAY_3,
-};
-
-Days days = Days::DAY_0;
 
 void DrawOpeningScene()
 {
-	switch (days)
+	DayController DayCon;
+
+	switch (DayCon.GetCurrentDays())
 	{
 	case Days::DAY_0:
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiaryTex));
+		if (OpCon.GetCount() == 0) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex));
+		}
+		else if (OpCon.GetCount() == 1) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex));
+		}
 		break;
 	case Days::DAY_1:
 		break;
@@ -63,16 +90,25 @@ void DrawOpeningScene()
 
 void InitOpeningScene()
 {
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Init(Timer::Id::SCENE);
 
-	LoadTexture("Res/Opening/diary.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiaryTex);
+	OpCon.Init();
+
+	LoadTexture("Res/Opening/operation_scene.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex);
+	LoadTexture("Res/Opening/operation_scene2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex);
+
 	ChangeSceneStep(SceneStep::MainStep);
 
 }
 
 void MainOpeningScene()
 {
+	SceneController()->GameEnd();
 
-	if (OnMouseDown(Left) == true) {
+	OpCon.Update();
+
+	if (OpCon.GetCount() == 2) {
 		ChangeSceneStep(SceneStep::EndStep);
 	}
 }
@@ -80,6 +116,9 @@ void MainOpeningScene()
 SceneId FinishOpeningScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_OPENING);
+
+	Timer* pTimerInstance = Timer::GetInstance();
+	pTimerInstance->Init();
 
 	return SceneId::GameScene;
 }

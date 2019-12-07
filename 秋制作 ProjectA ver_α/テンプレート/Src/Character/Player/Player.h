@@ -12,7 +12,9 @@ public:
 	*/
 	Player():
 		Character(true)
-	{}
+	{
+		m_HasGFreddySpown = false;
+	}
 	/*
 		デストラクタ
 	*/
@@ -24,33 +26,33 @@ public:
 
 	void Draw()override;
 
-	bool HasLight() const override{
-		return m_IsLight;
-	}
-
 	bool HasMask() const override{
 		return m_IsMask;
 	}
 
-	bool HasMonitor() const override{
-		return m_IsMonitor;
-	}
 	bool IsActive() override { return m_IsActive; };
 
 	MonitorView CurrentViewMonitorID() const override{
 		return m_MonitorViewID;
 	}
 
-	void OnMask();
+	//モニターシーン遷移を管理する関数
+	void ControlMonitor() override;
+	//ゲームシーン遷移を管理する関数
+	void ControlGameScene() override;
+
+	//ゴールデンフレディのフラグを取得
+	bool HasGFreddySpown() override { return m_HasGFreddySpown; };
 
 
 private:
-// フラグ
+	void OnMask();
+
+private:
 	bool m_IsActive;		// 生きてるかどうか(必要性あるかな？)
-	bool m_IsLight;		// ライトをつけてるかどうか
 	bool m_IsMask;		// マスクをつけてるかどうか
-	bool m_IsMonitor;	// モニターを見ているかどうか
 	float m_MaskAnimation; // マスクのアニメーションタイマー
+	bool m_HasGFreddySpown; //ゴールデンフレディのフラグが立っているかどうか
 
 	MonitorView m_MonitorViewID; // モニターのどこを見ているか
 

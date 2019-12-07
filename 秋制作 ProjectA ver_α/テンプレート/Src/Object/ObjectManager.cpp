@@ -2,13 +2,6 @@
 #include "UI/UI.h"
 #include "Item/Item.h"
 #include "ObjectID.h"
-#include "UI/Id/TitleLogo.h"
-#include "UI/Id/RightDuct.h"
-#include "UI/Id/LeftDuct.h"
-#include "UI/Id/NewGame.h"
-#include "UI/Id/Continue.h"
-#include "UI/Id/MonitorSpown.h"
-#include "UI/Id/PlayerRoom.h"
 #include "../Engine/Input.h"
 #include "Item/Id/Candle.h"
 #include "Item/Id/Fire.h"
@@ -24,9 +17,14 @@ ObjectManager::ObjectManager() {
 
 
 	m_pObjects[static_cast<int>(ObjID::CANDLE_RIGHT)]				= new Candle(ObjID::CANDLE_RIGHT);
+	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT_RIGHT)]		= new Candle(ObjID::CANDLE_EFFECT_RIGHT);
+
 	m_pObjects[static_cast<int>(ObjID::CANDLE_LEFT)]				= new Candle(ObjID::CANDLE_LEFT);
+	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT_LEFT)]			= new Candle(ObjID::CANDLE_EFFECT_LEFT);
+
 	m_pObjects[static_cast<int>(ObjID::CANDLE_CENTER)]				= new Candle(ObjID::CANDLE_CENTER);
-	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT)]				= new Candle(ObjID::CANDLE_EFFECT);
+	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT_CENTER)]		= new Candle(ObjID::CANDLE_EFFECT_CENTER);
+
 	m_pObjects[static_cast<int>(ObjID::CANDLE_STAND)]				= new Candle(ObjID::CANDLE_STAND);
 
 	m_pObjects[static_cast<int>(ObjID::FIRE_CENTER)]				= new Fire(ObjID::FIRE_CENTER);
@@ -40,7 +38,10 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::BUTTON_CONTINUE)]			= new UI(ObjID::BUTTON_CONTINUE);
 		
 	m_pObjects[static_cast<int>(ObjID::GAME_BASE_UI)]				= new UI(ObjID::GAME_BASE_UI);
+
 	m_pObjects[static_cast<int>(ObjID::BUTTON_CONTROL_UI)]			= new UI(ObjID::BUTTON_CONTROL_UI);
+	m_pObjects[static_cast<int>(ObjID::BUTTON_ON_CONTROL_UI)]			= new UI(ObjID::BUTTON_ON_CONTROL_UI);
+	
 	m_pObjects[static_cast<int>(ObjID::MO_MASK_UI)]					= new UI(ObjID::MO_MASK_UI);
 	m_pObjects[static_cast<int>(ObjID::DESCRIPTION_UI)]				= new UI(ObjID::DESCRIPTION_UI);
 			

@@ -5,14 +5,24 @@ enum GameCategoryTextureList
 {
 	GameMaskTex,				//!< 背景
 
+	GameBlackFanceTex,	//!< 黒フィルター
+	GameBlackFilterTex, //!< 黒フィルター(全体)
+
 	//item
 	GameCandleBigTex,
 	GameCandleSmallTex,
 	GameCandleStandTex,
-	GameCandleEffectTex,
+
+	GameCandleCenterEffectTex,
+	GameCandleLeftEffectTex,
+	GameCandleRightEffectTex,
+	
 	GameFireBigTex,
 	GameFireSmallTex,
+
 	GameCrystalTex,
+	GameOnHitCrystalTex,
+	
 	GameMusicBoxTex,
 
 	GameLeftShojiFrontTex,
@@ -22,7 +32,10 @@ enum GameCategoryTextureList
 
 	GameMainUITex,
 	GameMaskUITex,
+
 	GameControlUITex,
+	GameOnHitControlUITex,
+
 	GameDescriptionUITex,
 
 	GameFreeTex,
@@ -32,6 +45,9 @@ enum GameCategoryTextureList
 
 enum CenterCategoryTextureList {
 	GameCenterBgTex,
+
+	GameCenterDeskTex,	//!< センターシーンのデスク
+	GameCenterBlackTex,	//!< センターシーンの黒テクスチャ
 
 	GameCenterFreddy,
 	GameCenterPuppet,
@@ -64,6 +80,9 @@ enum LeftCategoryTextureList {
 };
 
 enum MonitorCategoryTextureList {
+
+	GameMonitorDustTex,	//!< ダスト
+
 	GameMonitorSpownBgTex,
 	GameMonitorLeftDuctBgTex,
 	GameMonitorRightDuctBgTex,

@@ -1,8 +1,5 @@
 #include "Candle.h"
-
-Candller Candle::m_Candller = {false, false, false};
-Candller Candle::m_Death = {false, false, false};
-int Candle::m_Count = 0;
+#include "..//..//ObjectManager.h"
 
 
 void Candle::Init() {
@@ -74,9 +71,35 @@ void Candle::Init() {
 		m_Frame = CANDLE_STAND_FRAME;
 
 		break;
-	case ObjID::CANDLE_EFFECT:
-		LoadTexture("Res/Game/Item/Candle_Right_Effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleEffectTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleEffectTex);
+	case ObjID::CANDLE_EFFECT_CENTER:
+		LoadTexture("Res/Game/Item/candle_effect_center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleCenterEffectTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleCenterEffectTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
+
+		m_Pos = { 0.0f, 0.0f };
+		m_Size = {0.f, 0.f};
+		m_Frame = { 2048.f, 2048.f };
+
+		break;
+	case ObjID::CANDLE_EFFECT_RIGHT:
+		LoadTexture("Res/Game/Item/Candle_Right_Effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleRightEffectTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleRightEffectTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
+
+		m_Pos = BIG_CANDLE_EFFECT_POS;
+		m_Size = CANDLE_EFFECT_SIZE;
+		m_Frame = CANDLE_EFFECT_FRAME;
+
+		break;
+	case ObjID::CANDLE_EFFECT_LEFT:
+		LoadTexture("Res/Game/Item/Candle_Right_Effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleLeftEffectTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleLeftEffectTex);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -88,10 +111,6 @@ void Candle::Init() {
 
 		break;
 	}
-}
-
-void Candle::InitCount() {
-	m_Count = 0;
 }
 
 void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_switch_) {
@@ -114,9 +133,6 @@ void Candle::SceneDeath() {
 
 		switch (m_Id)
 		{
-		case ObjID::CANDLE_EFFECT:
-			m_IsDeath = false;
-			break;
 		case ObjID::CANDLE_STAND:
 			m_IsDeath = false;
 			break;
@@ -178,9 +194,50 @@ void Candle::MeltCandle(ObjID id_) {
 
 }
 
+void Candle::EffectUpdate() {
+	Object* CenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
+	Object* LeftCandle = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
+	Object* RightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
+
+	if (CenterCandle->HasCaLight() == true) {
+		if (m_Id == ObjID::CANDLE_EFFECT_CENTER) {
+			m_IsDeath = false;
+		}
+	}
+	else {
+		if (m_Id == ObjID::CANDLE_EFFECT_CENTER) {
+			m_IsDeath = true;
+		}
+	}
+
+	if (LeftCandle->HasCaLight() == true) {
+		if (m_Id == ObjID::CANDLE_EFFECT_LEFT) {
+			m_IsDeath = false;
+		}
+	}
+	else {
+		if (m_Id == ObjID::CANDLE_EFFECT_LEFT) {
+			m_IsDeath = true;
+		}
+	}
+
+	if (RightCandle->HasCaLight() == true) {
+		if (m_Id == ObjID::CANDLE_EFFECT_RIGHT) {
+			m_IsDeath = false;
+		}
+	}
+	else {
+		if (m_Id == ObjID::CANDLE_EFFECT_RIGHT) {
+			m_IsDeath = true;
+		}
+	}
+}
+
 void Candle::Update(){
 
 	SceneDeath();
+
+	EffectUpdate();
 
 	if (m_IsDeath == false && m_CandleHp > 0.f) {
 
@@ -196,11 +253,13 @@ void Candle::Update(){
 				if (m_Id == ObjID::CANDLE_CENTER) {
 					m_HasCaLight = true;
 				}
+
 				break;
 			case GameData::RIGHT:
 				if (m_Id == ObjID::CANDLE_RIGHT) {
 					m_HasCaLight = true;
 				}
+
 				break;
 			case GameData::LEFT:
 				if (m_Id == ObjID::CANDLE_LEFT) {
@@ -236,34 +295,14 @@ void Candle::Draw(){
 		case ObjID::CANDLE_RIGHT:
 			CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
 			break;
-		case ObjID::CANDLE_EFFECT:
+		case ObjID::CANDLE_EFFECT_CENTER:
+		case ObjID::CANDLE_EFFECT_LEFT:
+		case ObjID::CANDLE_EFFECT_RIGHT:
 		case ObjID::CANDLE_STAND:
 			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, m_Frame);
 			break;
 		default:
 			break;
 		}
-
-
-		Lib::Texture polygon("hoge");
-
-		if (m_OnMouse == true) {
-			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
-		}
-
 	}
-}
-
-
-Vec2 Candle::GetPos() {
-	return m_Pos;
-}
-float Candle::GetHp() {
-	return m_CandleHp;
-}
-float Candle::GetRatio() {
-	return m_HeightRatio;
-}
-bool Candle::HasCaLight() {
-	return m_HasCaLight;
 }

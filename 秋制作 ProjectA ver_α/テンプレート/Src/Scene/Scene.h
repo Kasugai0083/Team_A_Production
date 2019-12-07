@@ -50,7 +50,7 @@ public:
 	void SetID(Id id_, bool go_);
 	bool IsGetID(Id id_);
 	void GameEnd();
-	void ChangeStep(Id id_, unsigned long key_);
+	bool ChangeStep(Id id_, unsigned long key_);
 
 private:
 	bool m_CanGame;

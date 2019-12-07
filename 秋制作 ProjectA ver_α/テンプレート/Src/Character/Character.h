@@ -45,6 +45,12 @@ public:
 
 	virtual void LoadTex(SceneId id) {};
 
+
+	// 2019/12/05’Ç‰Á
+	virtual void ControlMonitor() {};
+	virtual void ControlGameScene() {};
+	virtual bool HasGFreddySpown() { return 0; };
+
 protected:
 	bool m_IsActive;
 

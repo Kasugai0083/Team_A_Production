@@ -3,7 +3,8 @@
 /** @brief ゲーム本編用テクスチャのリスト */
 enum OpeningCategoryTextureList
 {
-	OpeningDiaryTex,				//!< 背景
+	OpeningDiary1Tex,				//!< 背景
+	OpeningDiary2Tex,				//!< 背景
 
 	OpeningDay1Tex,
 	OpeningDay2Tex,

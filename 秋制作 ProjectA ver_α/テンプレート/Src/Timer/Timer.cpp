@@ -3,7 +3,7 @@
 #include "..//Engine/Graphics.h"
 
 //ここで時間の進みを変更
-const int TIME_MAGNIFICATION = 1;
+const int TIME_MAGNIFICATION = 2;
 
 //staticなメンバ変数を初期化【コンストラクタではやらない】
 Timer* Timer::p_Instance = nullptr;

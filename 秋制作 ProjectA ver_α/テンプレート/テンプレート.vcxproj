@@ -165,6 +165,7 @@
     <ClCompile Include="Src\Object\ObjectManager.cpp" />
     <ClCompile Include="Src\Object\UI\UI.cpp" />
     <ClCompile Include="Src\Scene\ClearScene.cpp" />
+    <ClCompile Include="Src\Scene\Days\DayController.cpp" />
     <ClCompile Include="Src\Scene\GameScene\GameData.cpp" />
     <ClCompile Include="Src\Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Src\Scene\MonitorScene.cpp" />
@@ -202,17 +203,10 @@
     <ClInclude Include="Src\Object\Item\ItemValue.h" />
     <ClInclude Include="Src\Object\Object.h" />
     <ClInclude Include="Src\Object\ObjectManager.h" />
-    <ClInclude Include="Src\Object\UI\Id\ClearLogo.h" />
-    <ClInclude Include="Src\Object\UI\Id\Continue.h" />
-    <ClInclude Include="Src\Object\UI\Id\LeftDuct.h" />
-    <ClInclude Include="Src\Object\UI\Id\MonitorSpown.h" />
-    <ClInclude Include="Src\Object\UI\Id\NewGame.h" />
-    <ClInclude Include="Src\Object\UI\Id\PlayerRoom.h" />
-    <ClInclude Include="Src\Object\UI\Id\RightDuct.h" />
-    <ClInclude Include="Src\Object\UI\Id\TitleLogo.h" />
     <ClInclude Include="Src\Object\UI\UI.h" />
     <ClInclude Include="Src\Object\UI\UIvalue.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
+    <ClInclude Include="Src\Scene\Days\DayController.h" />
     <ClInclude Include="Src\Scene\GameScene\GameData.h" />
     <ClInclude Include="Src\Scene\GameScene\GameScene.h" />
     <ClInclude Include="Src\Scene\MonitorScene.h" />

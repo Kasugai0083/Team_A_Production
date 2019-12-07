@@ -31,6 +31,7 @@ void LoadMonitor() {
 	LoadTexture("Res/Game/Monitor/child_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex);
 	LoadTexture("Res/Game/Monitor/resption_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex);
 	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	LoadTexture("Res/Game/Monitor/dust.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex);
 
 }
 
@@ -53,6 +54,8 @@ void DrawBg() {
 	else if (GameView()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex));
 	}
+
+	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
 
 	DrawFont(100.f, 900.f, "Space で 戻る",Large, White);
 
@@ -106,9 +109,9 @@ void InitMonitorScene()
 
 void MainMonitorScene()
 {
-	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (tmp_player == nullptr) {
+	if (pPlayer == nullptr) {
 		return;
 	}
 
@@ -127,66 +130,19 @@ void MainMonitorScene()
 
 
 	//キー入力でシーン遷移
-	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
+	pPlayer->ControlMonitor();
 
-		if (ObjManager()->HasOnMouse(ObjID::BUTTON_WORKSHOP) == true) {
-			if (OnMouseDown(Left) == true) {
-				GameView()->SetMonitorID(MonitorView::WORKSHOP_VIEW);
-				pTimerInstance->Init(Timer::Id::SCENE);
-			}
-		}
-		if (ObjManager()->HasOnMouse(ObjID::BUTTON_LEFT_CORRIDOR) == true) {
-			if (OnMouseDown(Left) == true) {
-				GameView()->SetMonitorID(MonitorView::LEFT_CORRIDOR_VIEW);
-				pTimerInstance->Init(Timer::Id::SCENE);
-
-			}
-		}
-		if (ObjManager()->HasOnMouse(ObjID::BUTTON_RIGHT_CORRIDOR) == true) {
-			if (OnMouseDown(Left) == true) {
-				GameView()->SetMonitorID(MonitorView::RIGHT_CORRIDOR_VIEW);
-				pTimerInstance->Init(Timer::Id::SCENE);
-
-			}
-		}
-		if (ObjManager()->HasOnMouse(ObjID::BUTTON_STORE_ROOM) == true) {
-			if (OnMouseDown(Left) == true) {
-				GameView()->SetMonitorID(MonitorView::STORE_ROOM_VIEW);
-				pTimerInstance->Init(Timer::Id::SCENE);
-
-			}
-		}
-		if (ObjManager()->HasOnMouse(ObjID::BUTTON_RECEPTION_ROOM) == true) {
-			if (OnMouseDown(Left) == true) {
-				GameView()->SetMonitorID(MonitorView::RECEPTION_ROOM_VIEW);
-				pTimerInstance->Init(Timer::Id::SCENE);
-
-			}
-		}
-		if (ObjManager()->HasOnMouse(ObjID::BUTTON_CHILD_ROOM) == true) {
-			if (OnMouseDown(Left) == true) {
-				GameView()->SetMonitorID(MonitorView::CHILD_ROOM_VIEW);
-				pTimerInstance->Init(Timer::Id::SCENE);
-
-			}
-		}
-
-		if (GetKey(SPACE_KEY) == true) {
-			SceneController()->SetID(SceneTransition::Id::Game, true);
-			ChangeSceneStep(SceneStep::EndStep);
-		}
-	}
 
 	//クリア時間経過でシーン遷移
 	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
-		if (tmp_player->IsActive() == false) {
+		if (pPlayer->IsActive() == false) {
 			SceneController()->SetID(SceneTransition::Id::Clear, true);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
 
 	//プレイヤーの死亡でシーン遷移
-	if (tmp_player->IsActive() == true) {
+	if (pPlayer->IsActive() == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}
