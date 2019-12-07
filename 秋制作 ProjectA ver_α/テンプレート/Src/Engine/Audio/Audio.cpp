@@ -87,7 +87,7 @@ AudioPlayer::~AudioPlayer()
 			continue;
 		}
 		psound->Release();
-		m_SoundData.erase(data.first);	// ここでエラーが起こる
+		//m_SoundData.erase(data.first);	// ここでエラーが起こる
 	}
 	m_SoundData.clear();
 
