@@ -27,7 +27,7 @@ void ButtonPush(T1 button_, T2 view_) {
 	}
 }
 
-void Player::ControlMonitor() {
+bool Player::ControlMonitor() {
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
@@ -40,13 +40,14 @@ void Player::ControlMonitor() {
 		ButtonPush(ObjID::BUTTON_CHILD_ROOM, MonitorView::CHILD_ROOM_VIEW);
 
 		if (GetKey(SPACE_KEY) == true) {
-			SceneController()->SetID(SceneTransition::Id::Game, true);
-			ChangeSceneStep(SceneStep::EndStep);
 
-			m_HasGFreddySpown = false;
+			//一旦コメントアウト
+			//m_HasGFreddySpown = true;
 
+			return true;
 		}
 	}
+	return false;
 }
 
 // T1 => どのボタンを触れたか
@@ -62,7 +63,7 @@ void KeyPush(T1 button_, T2 view_) {
 	}
 }
 
-void Player::ControlGameScene() {
+bool Player::ControlGameScene() {
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
@@ -85,10 +86,14 @@ void Player::ControlGameScene() {
 			break;
 		}
 
-		if (SceneController()->ChangeStep(SceneTransition::Id::Monitor, SPACE_KEY) == true ) {
+		if (GetKey(SPACE_KEY) == true) {
+
 			m_HasGFreddySpown = true;
+
+			return true;
 		}
 	}
+	return false;
 }
 
 void Player::Update()

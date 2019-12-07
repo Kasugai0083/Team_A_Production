@@ -47,8 +47,8 @@ public:
 
 
 	// 2019/12/05’Ç‰Á
-	virtual void ControlMonitor() {};
-	virtual void ControlGameScene() {};
+	virtual bool ControlMonitor() { return 0; };
+	virtual bool ControlGameScene() { return 0; };
 	virtual bool HasGFreddySpown() { return 0; };
 
 protected:

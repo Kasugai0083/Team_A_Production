@@ -37,9 +37,9 @@ public:
 	}
 
 	//モニターシーン遷移を管理する関数
-	void ControlMonitor() override;
+	bool ControlMonitor() override;
 	//ゲームシーン遷移を管理する関数
-	void ControlGameScene() override;
+	bool ControlGameScene() override;
 
 	//ゴールデンフレディのフラグを取得
 	bool HasGFreddySpown() override { return m_HasGFreddySpown; };

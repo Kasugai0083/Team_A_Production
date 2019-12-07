@@ -159,7 +159,10 @@ void MainGameScene()
 
 
 	//キー入力でシーン遷移
-	pPlayer->ControlGameScene();
+	if (pPlayer->ControlGameScene() == true) {
+		SceneController()->SetID(SceneTransition::Id::Monitor, true);
+		ChangeSceneStep(SceneStep::EndStep);
+	}
 
 	//クリア時間経過でシーン遷移
 	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
