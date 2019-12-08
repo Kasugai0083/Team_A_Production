@@ -50,9 +50,9 @@ void DrawGameScene()
 
 	switch (GameView()->CurrentViewID()) {
 	case GameData::CENTER:
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
+		DrawTexture(0.0f, 10.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
 
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterDeskTex));
+		DrawTexture(0.0f, 10.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterDeskTex));
 
 		if (pCenterCandle->HasCaLight() == false) {
 			DrawTexture(710.0f, 365.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex));

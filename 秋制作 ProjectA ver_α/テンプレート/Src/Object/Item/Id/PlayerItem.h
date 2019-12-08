@@ -107,7 +107,7 @@ public:
 
 	/**
 	*@fn void Init()
-	*@brief 水晶の初期化\n
+	*@brief 時計の初期化\n
 	*		テクスチャの読み込み\n
 	*		座標の指定\n
 	*		オブジェクトサイズの指定
@@ -115,10 +115,10 @@ public:
 	void Init()override {
 
 		LoadTexture("Res/Game/Item/pocket_watch.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameWatchTex);
-		LoadTexture("Res/Game/Item/pocket_watch.pngl_effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitWatchlTex);
+		LoadTexture("Res/Game/Item/pocket_watch_effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitWatchTex);
 
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameWatchTex);
-		m_pOnHitTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitWatchlTex);
+		m_pOnHitTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitWatchTex);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -131,7 +131,7 @@ public:
 
 	/**
 	*@fn void Update()
-	*@brief 水晶の更新\n
+	*@brief 時計の更新\n
 	*		ゲームシーン以外では死亡\n
 	*		死んでいなければ当たり判定を取る\n
 	*/
@@ -164,7 +164,7 @@ public:
 
 	/**
 	*@fn void Draw()
-	*@brief 水晶の描画\n
+	*@brief 時計の描画\n
 	*		死亡していなければ描画\n
 	*		マウスオーバーでエフェクトの追加\n
 	*/

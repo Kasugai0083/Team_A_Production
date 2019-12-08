@@ -48,12 +48,12 @@ const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SMALL_SIZE.Width / 2), 290.f };
 //!< …»
 const Size CRYSTAL_SIZE = { 256.f, 256.f };
 const Size CRYSTAL_FRAME = { 256.f,256.f };
-const Vec2 CRYSTAL_POS = { (760.f - CRYSTAL_SIZE.Width / 2), (770.f) };
+const Vec2 CRYSTAL_POS = { (710.f - CRYSTAL_SIZE.Width / 2), (770.f) };
 
 //!< …»
 const Size WATCH_SIZE = { 256.f, 256.f };
 const Size WATCH_FRAME = { 256.f,256.f };
-const Vec2 WATCH_POS = { (1160.f - CRYSTAL_SIZE.Width / 2), (770.f) };
+const Vec2 WATCH_POS = { (1210.f - CRYSTAL_SIZE.Width / 2), (770.f) };
 
 #pragma endregion
 
