@@ -1,6 +1,7 @@
 #include "Timer.h"
 #include "..//Scene/Scene.h"
 #include "..//Engine/Graphics.h"
+#include "../Object/ObjectManager.h"
 
 //ここで時間の進みを変更
 const int TIME_MAGNIFICATION = 2;
@@ -51,6 +52,7 @@ int Timer::GetTime(Id id_) {
 }
 void Timer::Update() {
 
+
 	Timers.m_Scene++;
 	Timers.m_Clear++;
 	Timers.m_MusicBox++;
@@ -79,13 +81,23 @@ void Timer::Update() {
 
 
 void Timer::Draw() {
+	Object* WatchInstance = ObjManager()->GetObj(ObjID::POCKET_WATCH);
+
 	//サンプル描画
 	DrawFont(100.f, 100.f, m_Sample.c_str(), Large, White);
 
-	DrawFont(30.f,1014.f, "AM", Large, Black);
-	DrawFont(130.f,1014.f, m_Hour.c_str(), Large, Black);
-	DrawFont(162.f,1014.f, ":", Large, Black);
-	DrawFont(194.f,1014.f, m_Minute.c_str(), Large, Black);
+	if (WatchInstance->HasOnMouse() == true) {
+		DrawFont(30.f, 1014.f, "AM", Large, Black);
+		DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Black);
+		DrawFont(162.f, 1014.f, ":", Large, Black);
+		DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Black);
+	}
+	else {
+		DrawFont(30.f, 1014.f, "@#", Large, Black);
+		DrawFont(130.f, 1014.f, "*", Large, Black);
+		DrawFont(162.f, 1014.f, ";", Large, Black);
+		DrawFont(194.f, 1014.f, "?=", Large, Black);
+	}
 
 }
 
