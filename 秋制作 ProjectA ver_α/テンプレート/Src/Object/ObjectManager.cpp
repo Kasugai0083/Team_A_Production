@@ -32,6 +32,7 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::FIRE_LEFT)]					= new Fire(ObjID::FIRE_LEFT);
 		
 	m_pObjects[static_cast<int>(ObjID::CRYSTAL)]					= new Crystal;
+	m_pObjects[static_cast<int>(ObjID::POCKET_WATCH)]				= new Watch;
 
 	m_pObjects[static_cast<int>(ObjID::TITLE_LOGO)]					= new UI(ObjID::TITLE_LOGO);
 	m_pObjects[static_cast<int>(ObjID::BUTTON_NEW_GAME)]			= new UI(ObjID::BUTTON_NEW_GAME);
@@ -40,7 +41,7 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::GAME_BASE_UI)]				= new UI(ObjID::GAME_BASE_UI);
 
 	m_pObjects[static_cast<int>(ObjID::BUTTON_CONTROL_UI)]			= new UI(ObjID::BUTTON_CONTROL_UI);
-	m_pObjects[static_cast<int>(ObjID::BUTTON_ON_CONTROL_UI)]			= new UI(ObjID::BUTTON_ON_CONTROL_UI);
+	m_pObjects[static_cast<int>(ObjID::BUTTON_ON_CONTROL_UI)]		= new UI(ObjID::BUTTON_ON_CONTROL_UI);
 	
 	m_pObjects[static_cast<int>(ObjID::MO_MASK_UI)]					= new UI(ObjID::MO_MASK_UI);
 	m_pObjects[static_cast<int>(ObjID::DESCRIPTION_UI)]				= new UI(ObjID::DESCRIPTION_UI);

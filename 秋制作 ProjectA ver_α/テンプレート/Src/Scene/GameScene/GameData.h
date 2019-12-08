@@ -18,24 +18,16 @@ struct GameData {
 	};
 
 	GameData() :
-		m_ViewID(CENTER)
+		m_ViewID(CENTER),
+		m_MonitorID(MonitorView::WORKSHOP_VIEW)
 	{}
 
-	SubGameScene CurrentViewID() {
-		return m_ViewID;
-	};
-	MonitorView CurrentMonitorID() {
-		return m_MonitorID;
-	};
+	SubGameScene CurrentViewID() { return m_ViewID;	};
+	MonitorView CurrentMonitorID() { return m_MonitorID;};
 
+	void SetViewID(SubGameScene id_) {	m_ViewID = id_;	};
 
-	void SetViewID(SubGameScene id_) {
-		m_ViewID = id_;
-	};
-
-	void SetMonitorID(MonitorView view_) {
-		m_MonitorID = view_;
-	}
+	void SetMonitorID(MonitorView view_) {	m_MonitorID = view_; }
 
 	SubGameScene m_ViewID;
 	MonitorView m_MonitorID;
