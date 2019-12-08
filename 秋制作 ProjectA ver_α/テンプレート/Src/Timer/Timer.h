@@ -1,9 +1,16 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
+/**
+* シーンやエネミーを制御するためのタイマーをオブジェクト化
+*/
+
 #include <string>
 
-
+/**
+* @brief シーンやエネミーを制御するためのタイマークラス@n
+* 試験的に佐藤先生のシングルトンを導入
+*/
 class Timer {
 
 	//シングルトンデザインパターン
@@ -36,7 +43,10 @@ public:
 public:
 	//本来やりたい関数群
 
-	enum Id {
+	/**
+	* 構造体 TIMERS の識別番号
+	*/
+	enum class Id {
 		SCENE,
 		CLEAR,
 		MUSICBOX,
@@ -44,19 +54,50 @@ public:
 	};
 
 	struct TIMERS {
-		int m_Scene;
-		int m_Clear;
-		int m_MusicBox;
+		int m_Scene;	//!< シーン切り替えのクールタイム
+		int m_Clear;	//!< クリア時間を制御
+		int m_MusicBox; //!< パペットの起動を制御
 	};
 
+	/**
+	* @fn void Init()
+	* @brief TIMERS と m_HourCount を初期化
+	*/
 	void Init();
+
+	/**
+	* @fn void Init(Id id_)
+	* @brief 識別番号で指定されたメンバ変数を初期化
+	* param[in] id_ 識別番号
+	*/
 	void Init(Id id_);
+
+	/**
+	* @fn int GetTime(Id id_)
+	* @brief 識別番号で指定されたメンバ変数を取得
+	* @param[in] id_ 識別番号
+	* @return 識別番号で指定されたメンバ変数の値
+	*/
 	int GetTime(Id id_);
 
+
+	/**
+	* @fn void Draw()
+	* @brief m_Clear を描画@npocket_watchをマウスオーバーしている場合に時間が表示される
+	*/
 	void Draw();
 
+	/** 
+	* @fn void Update()
+	* @brief メンバ変数の更新@nDraw 用に m_Minute, m_Hour, m_Sample に文字列を代入
+	*/
 	void Update();
 
+	/**
+	* @fn int GetClearTime()
+	* @brief シーン遷移に必要な値を取得
+	* @return m_HourCount の値を取得
+	*/
 	int GetClearTime() { return m_HourCount; };
 
 private:
@@ -67,10 +108,10 @@ private:
 	static Timer* p_Instance;	//自分自身の唯一の実体
 private:
 	//本来使いたい変数群
-	TIMERS Timers;
-	int m_HourCount;
+	TIMERS Timers;		//!< 各変数をまとめた構造体
+	int m_HourCount;	//!< クリアに必要なカウント
 
-	std::string m_Minute, m_Hour, m_Sample;
+	std::string m_Minute, m_Hour, m_Sample; //!< デジタル時計風の描画に必要な文字列
 
 
 };

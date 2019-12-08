@@ -18,13 +18,13 @@ void Timer::Init() {
 void Timer::Init(Id id_) {
 
 	switch (id_) {
-	case SCENE:
+	case Id::SCENE:
 		Timers.m_Scene = 0;	
 		break;
-	case CLEAR:
+	case Id::CLEAR:
 		Timers.m_Clear = 0;
 		break;
-	case MUSICBOX:
+	case Id::MUSICBOX:
 		Timers.m_MusicBox = 0;
 		break;
 	default:
@@ -36,13 +36,13 @@ void Timer::Init(Id id_) {
 
 int Timer::GetTime(Id id_) {
 	switch (id_){
-	case SCENE:
+	case Id::SCENE:
 		return Timers.m_Scene;
 		break;
-	case CLEAR:
+	case Id::CLEAR:
 		return Timers.m_Clear;
 		break;	
-	case MUSICBOX:
+	case Id::MUSICBOX:
 		return Timers.m_MusicBox;
 		break;
 	default:
