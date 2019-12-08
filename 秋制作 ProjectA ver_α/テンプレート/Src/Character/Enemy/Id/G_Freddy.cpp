@@ -15,10 +15,14 @@ void Botan::Init()
 
 void Botan::Update()
 {
-	if (m_pPlayer->HasMonitor() == true
-		&& SpawnJudgement(0.00) == true) {
-		
-		m_IsActive = true;
+	if (m_pPlayer->HasGFreddySpown() == true) {
+		if (SpawnJudgement(0.00) == true) {
+			m_IsActive = true;
+		}
+		m_SpawnJudgement = true;
+	}
+	else {
+		m_SpawnJudgement = false;
 	}
 
 	if (m_IsActive == false) { return; }

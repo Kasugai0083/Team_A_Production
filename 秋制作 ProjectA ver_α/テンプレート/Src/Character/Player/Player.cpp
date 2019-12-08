@@ -42,7 +42,7 @@ bool Player::ControlMonitor() {
 		if (GetKey(SPACE_KEY) == true) {
 
 			//一旦コメントアウト
-			//m_HasGFreddySpown = true;
+			m_HasGFreddySpown = true;
 
 			return true;
 		}
@@ -88,7 +88,7 @@ bool Player::ControlGameScene() {
 
 		if (GetKey(SPACE_KEY) == true) {
 
-			m_HasGFreddySpown = true;
+		//	m_HasGFreddySpown = true;
 
 			return true;
 		}
@@ -113,6 +113,13 @@ void Player::Update()
 	//エネミーが参照する値を変更
 	if (g_Manager.RefKill() == true) {
 		m_IsActive = false;
+	}
+
+
+	// 試しに追加
+	Character* pBotan = g_Manager.GetCharacter(CharacterID::BOTAN);
+	if (pBotan->SpawnJudgement() == true) {
+		m_HasGFreddySpown = false;
 	}
 
 }

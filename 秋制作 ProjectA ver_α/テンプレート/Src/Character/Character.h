@@ -51,6 +51,9 @@ public:
 	virtual bool ControlGameScene() { return 0; };
 	virtual bool HasGFreddySpown() { return 0; };
 
+	// ééÇµÇ…í«â¡ÇµÇ‹Ç∑ÅB
+	virtual bool SpawnJudgement() const { return 0; }
+
 protected:
 	bool m_IsActive;
 

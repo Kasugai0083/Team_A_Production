@@ -57,6 +57,9 @@ public:
 	*/
 	bool SpawnJudgement(double probability_);
 
+	// m_SpawnJudgementを返す
+	bool SpawnJudgement() const override { return m_SpawnJudgement; }
+
 	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
@@ -70,6 +73,10 @@ public:
 private:
 	// キャラID定数
 	const CharacterID m_CharId = CharacterID::BOTAN;
+
+	// 試しに作ってみた
+	// SpawnJudgement関数を使ったかどうか
+	bool m_SpawnJudgement;
 };
 
 #endif
