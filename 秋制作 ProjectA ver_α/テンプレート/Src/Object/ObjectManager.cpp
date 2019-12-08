@@ -132,10 +132,3 @@ bool ObjectManager::HasOnMouse(ObjID id_) {
 	}
 	return false;
 }
-
-
-void ObjectManager::InitCount() {
-
-	m_pObjects[static_cast<int>(ObjID::CANDLE_CENTER)]->InitCount();
-	
-}

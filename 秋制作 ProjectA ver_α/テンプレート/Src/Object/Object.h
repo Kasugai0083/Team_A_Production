@@ -1,40 +1,31 @@
 #pragma once
 
+/**
+* オブジェクトの親(派生元)@n
+* UI や Item に派生するクラスを格納
+*/
+
 #include "../Utility/Vec.h"
 #include "../Utility/Size.h"
 #include "../Texture/Texture.h"
 #include "ObjectID.h"
 
-struct Candller {
-	bool CenterCaLight;
-	bool RightCaLight;
-	bool LeftCaLight;
-};
-
-enum class CandleLight {
-	CENTER_LIGHT,
-	RIGHT_LIGHT,
-	LEFT_LIGHT,
-};
-
+/**
+* @brief オブジェクトを管理するクラス
+*/
 class Object {
 public:
 
-	Object() {};
-	~Object() {};
+	Object() {}; //!< コンストラクタ
+	~Object() {}; //!< デストラクタ
 
-	virtual void Init() {};
-	virtual void InitCount() {};
+	virtual void Init() = 0; //!< Init の仮想関数
 
-	virtual void Update() {};
+	virtual void Update() = 0;
 
 	virtual bool HasOnMouse() = 0;
 	
-	virtual void Draw() {};
-
-	virtual void SetCandller(Candller* candller_) { return; };
-	virtual void SetCount(int* count_) { return; };
-	virtual bool HasLight(CandleLight cl_) { return 0; };
+	virtual void Draw() = 0;
 
 	virtual Vec2 GetPos() { return m_Pos; };
 	virtual float GetHp() { return 0; };
@@ -48,6 +39,5 @@ protected:
 	ObjID m_Id;
 
 private:
-	Candller* m_Candller;
 	Vec2 m_Pos;
 };

@@ -164,9 +164,24 @@ void UI::Draw(){
 
 		Lib::Texture polygon("hoge");
 
-		if (m_OnMouse == true) {
-			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		switch (m_Id) {
+		case ObjID::BUTTON_NEW_GAME:
+			if (m_OnMouse == true) {
+				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			}
+			break;
+		case ObjID::BUTTON_CONTINUE:
+			if (m_OnMouse == true) {
+				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			}
+			break;
+		case ObjID::MO_MASK_UI:
+			if (m_OnMouse == true) {
+				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			}
+			break;
 		}
+
 	}
 		
 }
@@ -329,39 +344,44 @@ void UI::UpdateGameUI() {
 	static bool HasPull = false;
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (m_OnMouse == true) {
-		switch (m_Id)
-		{
-		case ObjID::BUTTON_CONTROL_UI:
-			if (OnMouseDown(Left) == true) {
-				HasPull = true;
-			}
-			break;
-		case ObjID::MO_MASK_UI:
-			m_HasMask = true;
-			break;
-		case ObjID::DESCRIPTION_UI:
-			if (HasPull == true) {
+	if (GetCurrentSceneId() == SceneId::GameScene) {
+
+		if (HasPull == true) {
+			switch (m_Id) {
+			case ObjID::BUTTON_ON_CONTROL_UI:
+				m_IsDeath = false;
+				break;
+			case ObjID::DESCRIPTION_UI:
 				m_IsDeath = false;
 				break;
 			}
 		}
-	}else {
 
-		switch (m_Id)
-		{
-		case ObjID::BUTTON_CONTROL_UI:
-			HasPull = false;
-			break;
-		case ObjID::MO_MASK_UI:
-			m_HasMask = false;
-			break;
-		case ObjID::DESCRIPTION_UI:
-			if (HasPull == true) {
-				m_IsDeath = false;
+		if (m_OnMouse == true) {
+			switch (m_Id)
+			{
+			case ObjID::BUTTON_CONTROL_UI:
+				if (OnMouseDown(Left) == true) {
+					HasPull = true;
+				}
+				break;
+			case ObjID::MO_MASK_UI:
+				m_HasMask = true;
+				break;
+
+			}
+		}
+		else {
+
+			switch (m_Id)
+			{
+			case ObjID::BUTTON_CONTROL_UI:
+				HasPull = false;
+				break;
+			case ObjID::MO_MASK_UI:
+				m_HasMask = false;
 				break;
 			}
-
 		}
 	}
 }

@@ -138,8 +138,6 @@ bool HasSceneChange(GameData::SubGameScene scene_) {
 
 void MainGameScene()
 {
-	ObjManager()->InitCount();
-
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
 	if (pPlayer == nullptr) {
