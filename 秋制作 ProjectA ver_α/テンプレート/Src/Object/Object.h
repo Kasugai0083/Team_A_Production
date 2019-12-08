@@ -16,28 +16,49 @@
 class Object {
 public:
 
-	Object() {}; //!< コンストラクタ
-	~Object() {}; //!< デストラクタ
+	Object() {};	//!< コンストラクタ
+	~Object() {};	//!< デストラクタ
 
-	virtual void Init() = 0; //!< Init の仮想関数
+	virtual void Init() = 0;		//!< Init の純仮想関数
 
-	virtual void Update() = 0;
+	virtual void Update() = 0;		//!< Update の純仮想関数
 
-	virtual bool HasOnMouse() = 0;
+	virtual bool HasOnMouse() = 0;	//!< HasOnMouse の純仮想関数
 	
-	virtual void Draw() = 0;
+	virtual void Draw() = 0;		//!< Draw の純仮想関数
 
-	virtual Vec2 GetPos() { return m_Pos; };
-	virtual float GetHp() { return 0; };
+	/**
+	* @fn float GetHp()
+	* @brief Candle クラスで使用する GaetHp() の仮想関数
+	* Candle をインスタンス化して使用する
+	*/
+	virtual float GetHp() { return 0; }; 
+
+	/**
+	* @fn float GetHp()
+	* @brief Candle クラスで使用する GaetHp() の仮想関数
+	* Candle をインスタンス化して使用する
+	*/
 	virtual float GetRatio() { return 0; };
+
+	/**
+	* @fn float HasCaLight()
+	* @brief Candle クラスで使用する HasCaLight() の仮想関数
+	* Candle をインスタンス化して使用する
+	*/
 	virtual bool HasCaLight() { return 0; };
 
+	/**
+	* @fn bool HasMas()
+	* @brief UI クラスで使用する HasMask() の仮想関数
+	* UI をインスタンス化して使用する
+	*/
 	virtual bool HasMask() { return 0; };
 protected:
 
-	bool m_IsDeath;
-	ObjID m_Id;
+	bool m_IsDeath; //!< オブジェクトの生存情報
+	ObjID m_Id;		//!< オブジェクトの識別番号
 
 private:
-	Vec2 m_Pos;
+
 };

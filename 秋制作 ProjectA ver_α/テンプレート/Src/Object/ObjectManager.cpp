@@ -60,9 +60,6 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::BUTTON_ON_LEFT_CORRIDOR)]	= new UI(ObjID::BUTTON_ON_LEFT_CORRIDOR);
 	
 	m_pObjects[static_cast<int>(ObjID::MONITOR_MAP)]				= new UI(ObjID::MONITOR_MAP);
-	m_pObjects[static_cast<int>(ObjID::PLAYER_ROOM)]				= new UI(ObjID::PLAYER_ROOM);
-	m_pObjects[static_cast<int>(ObjID::CLEAR_LOGO)]					= new UI(ObjID::CLEAR_LOGO);
-
 
 	for (auto& objects : m_pObjects) {
 		if (objects == nullptr) {
@@ -108,10 +105,10 @@ void ObjectManager::Draw()
 
 }
 
-void ObjectManager::Release(int id) {
+void ObjectManager::Release(int id_) {
 
-	delete m_pObjects[id];
-	m_pObjects[id] = nullptr;
+	delete m_pObjects[id_];
+	m_pObjects[id_] = nullptr;
 }
 
 

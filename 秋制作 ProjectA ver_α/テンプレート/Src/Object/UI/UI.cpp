@@ -139,20 +139,7 @@ void UI::Init(){
 		m_Size = {0.f,0.f};
 		LoadTexture("Res/Game/Monitor/MonitorUI/map.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
-		break;
-	case ObjID::PLAYER_ROOM:
-		m_Pos = PLAYER_ROOM_UI_POS;
-		m_Size = {0.f,0.f};
-		LoadTexture("Res/Game/Monitor/MonitorUI/PlayerRoomUI.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex);
-		break;
-	case ObjID::CLEAR_LOGO:
-		m_Pos = TITLE_LOGO_POS;
-		m_Size = TITLE_LOGO_SIZE;
-		LoadTexture("Res/Title/TitleMenuHelp.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);
-		break;
-	
+		break;	
 	}
 
 };
