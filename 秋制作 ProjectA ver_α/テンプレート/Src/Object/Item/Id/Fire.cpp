@@ -1,46 +1,47 @@
 #include "Fire.h"
+#include "../ItemValue.h"
 
 void Fire::Init() {
 	switch (m_Id)
 	{
 	case ObjID::FIRE_CENTER:
-		LoadTexture("Res/Game/Item/Candle_Fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+		LoadTexture("Res/Game/Item/candle_fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
 		m_Pos = FIRE_SMALL_POS;
-		m_Size = FIRE_SMALL_SIZE;
-		m_Frame = FIRE_SMALL_FRAME;
+		m_Size = FIRE_SIZE;
+		m_Frame = FIRE_FRAME;
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 		break;
 	case ObjID::FIRE_RIGHT:
-		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+		LoadTexture("Res/Game/Item/candle_fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
-		m_Pos = FIRE_BIG_POS;
-		m_Size = FIRE_BIG_SIZE;
-		m_Frame = FIRE_BIG_FRAME;
+		m_Pos = FIRE_BIG_RIGHT_POS;
+		m_Size = FIRE_SIZE;
+		m_Frame = FIRE_FRAME;
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
 
 		break;
 	case ObjID::FIRE_LEFT:
-		LoadTexture("Res/Game/Item/Candle_Fire_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireBigTex);
+		LoadTexture("Res/Game/Item/candle_fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
-		m_Pos = FIRE_BIG_POS;
-		m_Size = FIRE_BIG_SIZE;
-		m_Frame = FIRE_BIG_FRAME;
+		m_Pos = FIRE_BIG_LEFT_POS;
+		m_Size = FIRE_SIZE;
+		m_Frame = FIRE_FRAME;
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
 
 		break;
@@ -108,7 +109,7 @@ void Fire::Update() {
 					HeightRatio = m_pObject->GetRatio();
 				}
 
-				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
+				m_Pos.Y = FIRE_BIG_RIGHT_POS.Y + HeightRatio;
 
 			}
 			break;
@@ -117,7 +118,7 @@ void Fire::Update() {
 				if (m_pObject->GetRatio() != NULL) {
 					HeightRatio = m_pObject->GetRatio();
 				}
-				m_Pos.Y = FIRE_BIG_POS.Y + HeightRatio;
+				m_Pos.Y = FIRE_BIG_LEFT_POS.Y + HeightRatio;
 
 			}
 			break;

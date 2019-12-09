@@ -1,40 +1,40 @@
 #include "Candle.h"
 #include "..//..//ObjectManager.h"
-
+#include "../ItemValue.h"
 
 void Candle::Init() {
 	switch (m_Id) {
 	case ObjID::CANDLE_LEFT:
-		LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
+		LoadTexture("Res/Game/Item/candle_big.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
-		m_Pos = CANDLE_BIG_POS;
+		m_Pos = CANDLE_BIG_LEFT_POS;
 
 		m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
 
-		m_Pos.Y = CANDLE_BIG_POS.Y + m_HeightRatio;
+		m_Pos.Y = CANDLE_BIG_LEFT_POS.Y + m_HeightRatio;
 
 		m_Size = CANDLE_BIG_SIZE;
 		m_Frame = CANDLE_BIG_FRAME;
 
 		break;
 	case ObjID::CANDLE_RIGHT:
-		LoadTexture("Res/Game/Item/Candle_Center_Right_Left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
+		LoadTexture("Res/Game/Item/candle_big.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
-		m_Pos = CANDLE_BIG_POS;
+		m_Pos = { (735.f - CANDLE_BIG_SIZE.Width / 2), (612.5f) };
 
 		m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
 
-		m_Pos.Y = CANDLE_BIG_POS.Y + m_HeightRatio;
+		m_Pos.Y = (612.5f) + m_HeightRatio;
 
 
 		m_Size = CANDLE_BIG_SIZE;
@@ -58,17 +58,43 @@ void Candle::Init() {
 		m_Frame = CANDLE_SMALL_FRAME;
 
 		break;
-	case ObjID::CANDLE_STAND:
-		LoadTexture("Res/Game/Item/Candle_Stand.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandTex);
+	case ObjID::CANDLE_STAND_CENTER:
+		LoadTexture("Res/Game/Item/candle_stand_center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandCenterTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandCenterTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
-		m_Pos = CANDLE_STAND_POS;
-		m_Size = CANDLE_STAND_SIZE;
-		m_Frame = CANDLE_STAND_FRAME;
+		m_Pos = CANDLE_STAND_CENTER_POS;
+		m_Size = CANDLE_STAND_CENTER_SIZE;
+		m_Frame = CANDLE_STAND_CENTER_FRAME;
+
+		break;
+	case ObjID::CANDLE_STAND_RIGHT:
+		LoadTexture("Res/Game/Item/candle_stand_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
+
+		m_Pos = {(720.f - (CANDLE_STAND_RIGHT_SIZE.Width / 2)), (930.f - (CANDLE_STAND_RIGHT_SIZE.Height / 2))};
+		m_Size = CANDLE_STAND_RIGHT_SIZE;
+		m_Frame = CANDLE_STAND_RIGHT_FRAME;
+
+		break;
+	case ObjID::CANDLE_STAND_LEFT:
+		LoadTexture("Res/Game/Item/candle_stand_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
+
+		if (m_pTex == nullptr) {
+			return;
+		}
+
+		m_Pos = CANDLE_STAND_LEFT_POS;
+		m_Size = CANDLE_STAND_LEFT_SIZE;
+		m_Frame = CANDLE_STAND_LEFT_FRAME;
 
 		break;
 	case ObjID::CANDLE_EFFECT_CENTER:
@@ -105,7 +131,7 @@ void Candle::Init() {
 			return;
 		}
 
-		m_Pos = { 0.0f, 0.0f };
+		m_Pos = { 128.0f, 0.0f };
 		m_Size = { 0.f, 0.f };
 		m_Frame = { 2048.f, 2048.f };
 
@@ -131,22 +157,42 @@ void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_swi
 void Candle::SceneDeath() {
 	if (GetCurrentSceneId() == GameScene) {
 
-		switch (m_Id)
-		{
-		case ObjID::CANDLE_STAND:
-			m_IsDeath = false;
-			break;
-		}
+		//switch (m_Id)
+		//{
+		//case ObjID::CANDLE_STAND_CENTER:
+		//	m_IsDeath = false;
+		//	break;
+		//case ObjID::CANDLE_STAND_SIDE:
+		//	m_IsDeath = false;
+		//	break;
+		//}
 
 		switch (GameView()->CurrentViewID())
 		{
 		case GameData::SubGameScene::CENTER:
+			if (m_Id == ObjID::CANDLE_STAND_CENTER) {
+				m_IsDeath = false;
+			}
+			else if (m_Id == ObjID::CANDLE_STAND_LEFT || m_Id == ObjID::CANDLE_STAND_RIGHT) {
+				m_IsDeath = true;
+			}
 			CandleSwitch(false, true, true);
 			break;
 		case GameData::SubGameScene::RIGHT:
+			if (m_Id == ObjID::CANDLE_STAND_RIGHT) {
+				m_IsDeath = false;
+			}else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_LEFT) {
+				m_IsDeath = true;
+			}
 			CandleSwitch(true, true, false);
 			break;
 		case GameData::SubGameScene::LEFT:
+			if (m_Id == ObjID::CANDLE_STAND_LEFT) {
+				m_IsDeath = false;
+			}
+			else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_RIGHT) {
+				m_IsDeath = true;
+			}
 			CandleSwitch(true, false, true);
 			break;
 		}
@@ -168,7 +214,7 @@ void Candle::MeltCandle(ObjID id_) {
 
 			m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
 
-			m_Pos.Y = CANDLE_BIG_POS.Y + m_HeightRatio;
+			m_Pos.Y = CANDLE_BIG_LEFT_POS.Y + m_HeightRatio;
 
 			break;
 		case ObjID::CANDLE_RIGHT:
@@ -177,7 +223,7 @@ void Candle::MeltCandle(ObjID id_) {
 
 			m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
 
-			m_Pos.Y = CANDLE_BIG_POS.Y + m_HeightRatio;
+			m_Pos.Y = CANDLE_BIG_RIGHT_POS.Y + m_HeightRatio;
 
 			break;
 		case ObjID::CANDLE_CENTER:
@@ -298,7 +344,9 @@ void Candle::Draw(){
 		case ObjID::CANDLE_EFFECT_CENTER:
 		case ObjID::CANDLE_EFFECT_LEFT:
 		case ObjID::CANDLE_EFFECT_RIGHT:
-		case ObjID::CANDLE_STAND:
+		case ObjID::CANDLE_STAND_CENTER:
+		case ObjID::CANDLE_STAND_LEFT:
+		case ObjID::CANDLE_STAND_RIGHT:
 			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, m_Frame);
 			break;
 		default:
