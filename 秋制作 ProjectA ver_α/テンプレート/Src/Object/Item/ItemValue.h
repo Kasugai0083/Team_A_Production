@@ -17,7 +17,7 @@ const Vec2 VOID_POS = { 9999.f, 9999.f };
 const Size CANDLE_BIG_SIZE = { 46.f,256.f };
 const Size CANDLE_BIG_FRAME = { 256.f,256.f };
 const Vec2 CANDLE_BIG_LEFT_POS = { (1215.f - CANDLE_BIG_SIZE.Width / 2), (612.5f) };
-const Vec2 CANDLE_BIG_RIGHT_POS = { (730.f - CANDLE_BIG_SIZE.Width / 2), (612.5f) };
+const Vec2 CANDLE_BIG_RIGHT_POS = { (705.f - CANDLE_BIG_SIZE.Width / 2), (612.5f) };
 
 
 //!< ‚ë‚¤‚»‚­(¬)

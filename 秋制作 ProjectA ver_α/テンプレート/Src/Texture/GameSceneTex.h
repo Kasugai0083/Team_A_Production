@@ -22,7 +22,7 @@ enum GameCategoryTextureList
 	GameFireTex,
 	GameFireBigTex,
 	GameFireSmallTex,
-
+	
 	GameCrystalTex,
 	GameOnHitCrystalTex,
 
