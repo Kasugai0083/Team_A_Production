@@ -19,6 +19,7 @@ enum FontColor
 	Black,			//!< 黒
 	White,			//!< 白
 	Red,			//!< 赤
+	Yellow,
 };
 
 // @brief フォントサイズ */

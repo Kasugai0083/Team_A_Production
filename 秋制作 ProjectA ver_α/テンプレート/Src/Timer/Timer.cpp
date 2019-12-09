@@ -87,16 +87,16 @@ void Timer::Draw() {
 	DrawFont(100.f, 100.f, m_Sample.c_str(), Large, White);
 
 	if (WatchInstance->HasOnMouse() == true) {
-		DrawFont(30.f, 1014.f, "AM", Large, Black);
-		DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Black);
-		DrawFont(162.f, 1014.f, ":", Large, Black);
-		DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Black);
+		DrawFont(30.f, 1014.f, "AM", Large, Yellow);
+		DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Yellow);
+		DrawFont(162.f, 1014.f, ":", Large, Yellow);
+		DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Yellow);
 	}
 	else {
-		DrawFont(30.f, 1014.f, "@#", Large, Black);
-		DrawFont(130.f, 1014.f, "*", Large, Black);
-		DrawFont(162.f, 1014.f, ";", Large, Black);
-		DrawFont(194.f, 1014.f, "?=", Large, Black);
+		DrawFont(30.f, 1014.f, "@#", Large, Yellow);
+		DrawFont(130.f, 1014.f, "*", Large, Yellow);
+		DrawFont(162.f, 1014.f, ";", Large, Yellow);
+		DrawFont(194.f, 1014.f, "?=", Large, Yellow);
 	}
 
 }

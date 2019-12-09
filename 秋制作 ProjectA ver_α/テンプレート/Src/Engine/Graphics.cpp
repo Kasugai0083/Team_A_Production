@@ -308,6 +308,12 @@ void DrawFont(float pos_x, float pos_y, const char* text, FontSize font_type, Fo
 		r = 255;
 		g = b = 0;
 	}
+	else if (color == FontColor::Yellow)
+	{
+		r = 255;
+		g = 215;
+		b = 20;
+	}
 
 	g_FontList[font_type]->DrawTextA(
 		NULL,
