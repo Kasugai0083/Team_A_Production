@@ -1,0 +1,5 @@
+<map id="InitTexture" name="InitTexture">
+<area shape="rect" id="node1" title="テクスチャデータ初期化関数 ゲームで使用するテクスチャデータを保存出来るようにする" alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node2" href="$_texture_8cpp.html#adf7bc429a7737bcf34789952fa0f8b90" title="テクスチャの全解放 読み込んでいるすべてのテクスチャを解放する ※この関数はEndEngineで使用されているので開発側で呼ぶ必要はない" alt="" coords="136,5,263,32"/>
+<area shape="rect" id="node3" href="$_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725" title="カテゴリー単位のテクスチャ解放関数 引数で指定されたカテゴリーのテクスチャを全て解放する" alt="" coords="311,5,475,32"/>
+</map>

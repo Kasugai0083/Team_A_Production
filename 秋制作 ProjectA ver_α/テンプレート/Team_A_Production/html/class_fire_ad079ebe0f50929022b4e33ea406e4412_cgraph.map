@@ -1,0 +1,7 @@
+<map id="Fire::Draw" name="Fire::Draw">
+<area shape="rect" id="node1" title="蝋燭の点灯情報と自身の生存情報に基づいて描画" alt="" coords="5,56,87,83"/>
+<area shape="rect" id="node2" href="$_graphics_8cpp.html#a77681abc93f8cf102f7b432c93b2b345" title=" " alt="" coords="141,5,263,32"/>
+<area shape="rect" id="node4" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="155,56,249,83"/>
+<area shape="rect" id="node5" href="$class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="135,107,269,133"/>
+<area shape="rect" id="node3" href="$_graphics_8cpp.html#a81a99b59b0e7a9febaf04ed8a7cc0384" title=" " alt="" coords="317,5,416,32"/>
+</map>

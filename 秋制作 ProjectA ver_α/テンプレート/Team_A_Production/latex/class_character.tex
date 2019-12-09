@@ -1,0 +1,433 @@
+\hypertarget{class_character}{}\doxysection{Character クラス}
+\label{class_character}\index{Character@{Character}}
+
+
+{\ttfamily \#include $<$Character.\+h$>$}
+
+
+
+Character の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_character_a5f5f0769ae4cfc315bf1bd040b0f6802}{Character}} (bool is\+\_\+active\+\_\+)
+\item 
+virtual \mbox{\hyperlink{class_character_af3ec409c562122c4464e8a9d3be5f6d2}{$\sim$\+Character}} ()
+\item 
+virtual void \mbox{\hyperlink{class_character_ac3776b55752f328ee74fd1282331f872}{Init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_character_a554d31593b3eee38178bd7c7804ef7fb}{Update}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{class_character_a168bdd7e64b9c433de77b13311bfec1d}{Has\+Light}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_character_a77ebebf9e06dbb8edf710f52c7e1b237}{Has\+Mask}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_character_a4f08c22210951f1af772f589658593f2}{Has\+Monitor}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_character_a6d21402c4c0ebe6b50caeb9346edaa09}{Has\+Kill}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_character_a10ef1a073e930eda4cab2c555d05c52f}{Is\+Active}} ()
+\item 
+virtual \mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} \mbox{\hyperlink{class_character_a1ac0ae4900eb16be01a4fd6261b3061f}{Current\+View\+Monitor\+ID}} () const
+\item 
+virtual void \mbox{\hyperlink{class_character_a051c409115c689480f0246f6a4743474}{Draw}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_character_abc549f5b4ebc1f79253bb1e25cd630a6}{Load\+Tex}} (\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} id)
+\item 
+virtual bool \mbox{\hyperlink{class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54}{Control\+Monitor}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_character_a7f64f261c8d7eda3895df7f1d083eb4c}{Control\+Game\+Scene}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_character_aede2cfdfe20b765329f14773803c4363}{Has\+G\+Freddy\+Spown}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_character_afe7e471ead90b669f83a5d69ed5279ef}{Spawn\+Judgement}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_character_a0dee035b9de6807947e2049c992d8159}{m\+\_\+\+Is\+Active}}
+\end{DoxyCompactItemize}
+\doxysubsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_character_a7625d8d90e93ffed8ba03061bf91aa08}{m\+\_\+\+Has\+Mask}}
+\item 
+bool \mbox{\hyperlink{class_character_a192bb39fbb31cc6f8945bb3e4feca55e}{m\+\_\+\+Has\+Light}}
+\item 
+bool \mbox{\hyperlink{class_character_a18604627713d4b0d62f3857fca364d3b}{m\+\_\+\+Has\+Monitor}}
+\item 
+\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} \mbox{\hyperlink{class_character_a040ee7d0c5c472e6bcaba862b9292c8a}{m\+\_\+\+Monitor\+View\+ID}}
+\item 
+bool \mbox{\hyperlink{class_character_a56eddba73c39defe9933a942dec08bde}{m\+\_\+\+Has\+Kill}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+
+
+ Character.\+h の 9 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_character_a5f5f0769ae4cfc315bf1bd040b0f6802}\label{class_character_a5f5f0769ae4cfc315bf1bd040b0f6802}} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+active\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Character.\+h の 11 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_af3ec409c562122c4464e8a9d3be5f6d2}\label{class_character_af3ec409c562122c4464e8a9d3be5f6d2}} 
+\index{Character@{Character}!````~Character@{$\sim$Character}}
+\index{````~Character@{$\sim$Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{$\sim$Character()}{~Character()}}
+{\footnotesize\ttfamily virtual Character\+::$\sim$\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+ Character.\+h の 16 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_character_a7f64f261c8d7eda3895df7f1d083eb4c}\label{class_character_a7f64f261c8d7eda3895df7f1d083eb4c}} 
+\index{Character@{Character}!ControlGameScene@{ControlGameScene}}
+\index{ControlGameScene@{ControlGameScene}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{ControlGameScene()}{ControlGameScene()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Control\+Game\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_ab1961f4cf35c15516d1f19372586e197}{Player}}で再実装されています。
+
+
+
+ Character.\+h の 51 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a7f64f261c8d7eda3895df7f1d083eb4c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54}\label{class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54}} 
+\index{Character@{Character}!ControlMonitor@{ControlMonitor}}
+\index{ControlMonitor@{ControlMonitor}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{ControlMonitor()}{ControlMonitor()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Control\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b}{Player}}で再実装されています。
+
+
+
+ Character.\+h の 50 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a1ac0ae4900eb16be01a4fd6261b3061f}\label{class_character_a1ac0ae4900eb16be01a4fd6261b3061f}} 
+\index{Character@{Character}!CurrentViewMonitorID@{CurrentViewMonitorID}}
+\index{CurrentViewMonitorID@{CurrentViewMonitorID}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{CurrentViewMonitorID()}{CurrentViewMonitorID()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} Character\+::\+Current\+View\+Monitor\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a58c7d859f120c314adb6125cb4c5d29a}{Player}}で再実装されています。
+
+
+
+ Character.\+h の 40 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a1ac0ae4900eb16be01a4fd6261b3061f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a051c409115c689480f0246f6a4743474}\label{class_character_a051c409115c689480f0246f6a4743474}} 
+\index{Character@{Character}!Draw@{Draw}}
+\index{Draw@{Draw}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void Character\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_botan_ad255867f0c175804588e424917e7a9dc}{Botan}}, \mbox{\hyperlink{class_margaret_a9f235ef92d78e08b067afa1778bf7c86}{Margaret}}, \mbox{\hyperlink{class_ran_a6fb3b82ff6f6585f72c60bb341a146a3}{Ran}}, \mbox{\hyperlink{class_sakura_a8200f9a5944764ba38e1d0dd6ce709e2}{Sakura}}, \mbox{\hyperlink{class_ohagi_a2ccb7e8eb90221f8bc8ddc1e1a822461}{Ohagi}}, \mbox{\hyperlink{class_ume_ad1efe4fe6e94575a8b83f683fd5fc6a6}{Ume}}, \mbox{\hyperlink{class_player_a5b60ad157bb1e8debca89ed6903ca2a4}{Player}}で実装されています。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a051c409115c689480f0246f6a4743474_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_aede2cfdfe20b765329f14773803c4363}\label{class_character_aede2cfdfe20b765329f14773803c4363}} 
+\index{Character@{Character}!HasGFreddySpown@{HasGFreddySpown}}
+\index{HasGFreddySpown@{HasGFreddySpown}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{HasGFreddySpown()}{HasGFreddySpown()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Has\+G\+Freddy\+Spown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a02d7ccd26184ddceec7162756b49a0e6}{Player}}で再実装されています。
+
+
+
+ Character.\+h の 52 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_character_aede2cfdfe20b765329f14773803c4363_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a6d21402c4c0ebe6b50caeb9346edaa09}\label{class_character_a6d21402c4c0ebe6b50caeb9346edaa09}} 
+\index{Character@{Character}!HasKill@{HasKill}}
+\index{HasKill@{HasKill}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{HasKill()}{HasKill()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Has\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_margaret_acbeed64e7fcd254062f962e8861a5ad7}{Margaret}}, \mbox{\hyperlink{class_sakura_a00051eefcf19bfe872cef16d4227b243}{Sakura}}, \mbox{\hyperlink{class_ohagi_a4acd787f0da3a86dd464cd91aeb91cb0}{Ohagi}}, \mbox{\hyperlink{class_botan_a2557a86441aba61cfa171c0b32e0b9bc}{Botan}}, \mbox{\hyperlink{class_enemy_ab7b752c2b8898f5dbffd6df567b2b965}{Enemy}}, \mbox{\hyperlink{class_ran_a8bddf8979238ee78509607f926007971}{Ran}}, \mbox{\hyperlink{class_ume_a5d2e4290b16b8d130dcbcda91f7c18c1}{Ume}}で再実装されています。
+
+
+
+ Character.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_a168bdd7e64b9c433de77b13311bfec1d}\label{class_character_a168bdd7e64b9c433de77b13311bfec1d}} 
+\index{Character@{Character}!HasLight@{HasLight}}
+\index{HasLight@{HasLight}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{HasLight()}{HasLight()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Has\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+ Character.\+h の 22 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_a77ebebf9e06dbb8edf710f52c7e1b237}\label{class_character_a77ebebf9e06dbb8edf710f52c7e1b237}} 
+\index{Character@{Character}!HasMask@{HasMask}}
+\index{HasMask@{HasMask}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{HasMask()}{HasMask()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Has\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a5ddd7cb248e9df3ab709b380cd55a6d7}{Player}}で再実装されています。
+
+
+
+ Character.\+h の 27 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_character_a77ebebf9e06dbb8edf710f52c7e1b237_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a4f08c22210951f1af772f589658593f2}\label{class_character_a4f08c22210951f1af772f589658593f2}} 
+\index{Character@{Character}!HasMonitor@{HasMonitor}}
+\index{HasMonitor@{HasMonitor}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{HasMonitor()}{HasMonitor()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Has\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a62494252632d69105bcc774d08265814}{Player}}で再実装されています。
+
+
+
+ Character.\+h の 31 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_character_a4f08c22210951f1af772f589658593f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_ac3776b55752f328ee74fd1282331f872}\label{class_character_ac3776b55752f328ee74fd1282331f872}} 
+\index{Character@{Character}!Init@{Init}}
+\index{Init@{Init}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void Character\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_margaret_a66940c15047eb5278c306a90db53e93f}{Margaret}}, \mbox{\hyperlink{class_ran_a36fd770659304e2ce03da0ca05cdbd76}{Ran}}, \mbox{\hyperlink{class_ume_a5d6c5ece2ac1bda798a151e111bc30c7}{Ume}}, \mbox{\hyperlink{class_sakura_abbdf3093407faf7ed36aef17205abce4}{Sakura}}, \mbox{\hyperlink{class_ohagi_aefd06d07f829365ba425727cf2425e1c}{Ohagi}}, \mbox{\hyperlink{class_botan_ac8ed8694fbeb1b27221f4878487c08a1}{Botan}}, \mbox{\hyperlink{class_enemy_a2b56a302d65e9a32cf37aed8949164e6}{Enemy}}, \mbox{\hyperlink{class_player_a4eaaeb9d0967fef59baac319b9cc8d60}{Player}}で実装されています。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_ac3776b55752f328ee74fd1282331f872_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a10ef1a073e930eda4cab2c555d05c52f}\label{class_character_a10ef1a073e930eda4cab2c555d05c52f}} 
+\index{Character@{Character}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_player_a4ec9eb479cf249fe8dc2e7613b09d437}{Player}}で再実装されています。
+
+
+
+ Character.\+h の 38 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a10ef1a073e930eda4cab2c555d05c52f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_abc549f5b4ebc1f79253bb1e25cd630a6}\label{class_character_abc549f5b4ebc1f79253bb1e25cd630a6}} 
+\index{Character@{Character}!LoadTex@{LoadTex}}
+\index{LoadTex@{LoadTex}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
+{\footnotesize\ttfamily virtual void Character\+::\+Load\+Tex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_botan_a3c6375b593e9e88f6f31f25ea2ae361f}{Botan}}, \mbox{\hyperlink{class_margaret_ac4b6364a66fb32eee51ab1a614f80f3e}{Margaret}}, \mbox{\hyperlink{class_sakura_a6ae0a88c3f2c6302441d57c32a3dc505}{Sakura}}, \mbox{\hyperlink{class_ohagi_a1ca34f2fc6eb3f0131292e01a16667de}{Ohagi}}, \mbox{\hyperlink{class_ume_a3ce61db2365a3d54b8a11ddd86be51a1}{Ume}}, \mbox{\hyperlink{class_enemy_a5eb22e7d02bdb2772afd42dbbd65a881}{Enemy}}, \mbox{\hyperlink{class_ran_acbb522be78b4115a9cc818a01824587e}{Ran}}で再実装されています。
+
+
+
+ Character.\+h の 46 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_abc549f5b4ebc1f79253bb1e25cd630a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_afe7e471ead90b669f83a5d69ed5279ef}\label{class_character_afe7e471ead90b669f83a5d69ed5279ef}} 
+\index{Character@{Character}!SpawnJudgement@{SpawnJudgement}}
+\index{SpawnJudgement@{SpawnJudgement}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{SpawnJudgement()}{SpawnJudgement()}}
+{\footnotesize\ttfamily virtual bool Character\+::\+Spawn\+Judgement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_botan_aacd89bafe01fdc37e5a68cebbccc30e1}{Botan}}で再実装されています。
+
+
+
+ Character.\+h の 55 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_character_afe7e471ead90b669f83a5d69ed5279ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_character_a554d31593b3eee38178bd7c7804ef7fb}\label{class_character_a554d31593b3eee38178bd7c7804ef7fb}} 
+\index{Character@{Character}!Update@{Update}}
+\index{Update@{Update}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Character\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_margaret_a825c0221ca252a9488cde4cb74a119f6}{Margaret}}, \mbox{\hyperlink{class_ran_a002243e1837061ed361c62f68a189aac}{Ran}}, \mbox{\hyperlink{class_ume_a2a1a52519b647ddd20c85f7d467596c2}{Ume}}, \mbox{\hyperlink{class_sakura_a60c98cd32641685d33e983aa1f2b16d9}{Sakura}}, \mbox{\hyperlink{class_ohagi_a831e45b2b288c9ad862fc766989238fd}{Ohagi}}, \mbox{\hyperlink{class_botan_a7e9c22e468535d2c0b206c7d1e5a48d9}{Botan}}, \mbox{\hyperlink{class_enemy_ad880b3aa85d38ee61d3bf1352163f3c6}{Enemy}}, \mbox{\hyperlink{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}{Player}}で実装されています。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_a554d31593b3eee38178bd7c7804ef7fb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_character_a56eddba73c39defe9933a942dec08bde}\label{class_character_a56eddba73c39defe9933a942dec08bde}} 
+\index{Character@{Character}!m\_HasKill@{m\_HasKill}}
+\index{m\_HasKill@{m\_HasKill}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_HasKill}{m\_HasKill}}
+{\footnotesize\ttfamily bool Character\+::m\+\_\+\+Has\+Kill\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Character.\+h の 68 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_a192bb39fbb31cc6f8945bb3e4feca55e}\label{class_character_a192bb39fbb31cc6f8945bb3e4feca55e}} 
+\index{Character@{Character}!m\_HasLight@{m\_HasLight}}
+\index{m\_HasLight@{m\_HasLight}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_HasLight}{m\_HasLight}}
+{\footnotesize\ttfamily bool Character\+::m\+\_\+\+Has\+Light\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Character.\+h の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_a7625d8d90e93ffed8ba03061bf91aa08}\label{class_character_a7625d8d90e93ffed8ba03061bf91aa08}} 
+\index{Character@{Character}!m\_HasMask@{m\_HasMask}}
+\index{m\_HasMask@{m\_HasMask}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_HasMask}{m\_HasMask}}
+{\footnotesize\ttfamily bool Character\+::m\+\_\+\+Has\+Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Character.\+h の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_a18604627713d4b0d62f3857fca364d3b}\label{class_character_a18604627713d4b0d62f3857fca364d3b}} 
+\index{Character@{Character}!m\_HasMonitor@{m\_HasMonitor}}
+\index{m\_HasMonitor@{m\_HasMonitor}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_HasMonitor}{m\_HasMonitor}}
+{\footnotesize\ttfamily bool Character\+::m\+\_\+\+Has\+Monitor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Character.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_a0dee035b9de6807947e2049c992d8159}\label{class_character_a0dee035b9de6807947e2049c992d8159}} 
+\index{Character@{Character}!m\_IsActive@{m\_IsActive}}
+\index{m\_IsActive@{m\_IsActive}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_IsActive}{m\_IsActive}}
+{\footnotesize\ttfamily bool Character\+::m\+\_\+\+Is\+Active\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ Character.\+h の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_character_a040ee7d0c5c472e6bcaba862b9292c8a}\label{class_character_a040ee7d0c5c472e6bcaba862b9292c8a}} 
+\index{Character@{Character}!m\_MonitorViewID@{m\_MonitorViewID}}
+\index{m\_MonitorViewID@{m\_MonitorViewID}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{m\_MonitorViewID}{m\_MonitorViewID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} Character\+::m\+\_\+\+Monitor\+View\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Character.\+h の 65 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Src/\+Character/\mbox{\hyperlink{_character_8h}{Character.\+h}}\end{DoxyCompactItemize}

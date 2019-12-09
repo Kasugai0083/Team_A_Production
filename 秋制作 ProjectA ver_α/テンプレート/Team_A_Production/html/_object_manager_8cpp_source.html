@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Object/ObjectManager.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_object_manager_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ObjectManager.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_object_manager_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_object_manager_8h.html">ObjectManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_i_8h.html">UI/UI.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_item_8h.html">Item/Item.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_object_i_d_8h.html">ObjectID.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Engine/Input.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_candle_8h.html">Item/Id/Candle.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_fire_8h.html">Item/Id/Fire.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_player_item_8h.html">Item/Id/PlayerItem.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_fire_8h.html">Item/Id/Fire.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="_object_manager_8h.html#a98f0c5ac7f5990ffad58461f1d23f0a9">   11</a></span>&#160;<a class="code" href="class_object_manager.html">ObjectManager</a>* <a class="code" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a>() {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_object_manager.html">ObjectManager</a> obj;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> &amp;obj;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_object_manager.html#a6fa9372c7c3a8da88412f4158ca3dfd9">   16</a></span>&#160;<a class="code" href="class_object_manager.html#a6fa9372c7c3a8da88412f4158ca3dfd9">ObjectManager::ObjectManager</a>() {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>)]               = <span class="keyword">new</span> <a class="code" href="class_candle.html">Candle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a>)]        = <span class="keyword">new</span> <a class="code" href="class_candle.html">Candle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>)]                = <span class="keyword">new</span> <a class="code" href="class_candle.html">Candle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a>)]         = <span class="keyword">new</span> <a class="code" href="class_candle.html">Candle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>)]              = <span class="keyword">new</span> <a class="code" href="class_candle.html">Candle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a>)]       = <span class="keyword">new</span> <a class="code" href="class_candle.html">Candle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a>)]               = <span class="keyword">new</span> <a class="code" href="class_candle.html">Candle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221acc913a008e0e9fa1686f71a8af068e77">ObjID::FIRE_CENTER</a>)]                = <span class="keyword">new</span> <a class="code" href="class_fire.html">Fire</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221acc913a008e0e9fa1686f71a8af068e77">ObjID::FIRE_CENTER</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a54dd3bb364c8257986e6b16b769d8d54">ObjID::FIRE_RIGHT</a>)]                 = <span class="keyword">new</span> <a class="code" href="class_fire.html">Fire</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a54dd3bb364c8257986e6b16b769d8d54">ObjID::FIRE_RIGHT</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a67c8b07ba00979e7f9853c397b93fd0a">ObjID::FIRE_LEFT</a>)]                  = <span class="keyword">new</span> <a class="code" href="class_fire.html">Fire</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a67c8b07ba00979e7f9853c397b93fd0a">ObjID::FIRE_LEFT</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a37fdc56efd7bfd2cf16bf2a7dbef8495">ObjID::CRYSTAL</a>)]                    = <span class="keyword">new</span> <a class="code" href="class_crystal.html">Crystal</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4">ObjID::POCKET_WATCH</a>)]               = <span class="keyword">new</span> <a class="code" href="class_watch.html">Watch</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a2514681d6b4053162156d04e5c20060a">ObjID::TITLE_LOGO</a>)]                 = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a2514681d6b4053162156d04e5c20060a">ObjID::TITLE_LOGO</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a44b4831eacc09eaaa46e09ec9914ecaa">ObjID::BUTTON_NEW_GAME</a>)]            = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a44b4831eacc09eaaa46e09ec9914ecaa">ObjID::BUTTON_NEW_GAME</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221adb9515f637d0aead3c98f9facf8e03d4">ObjID::BUTTON_CONTINUE</a>)]            = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221adb9515f637d0aead3c98f9facf8e03d4">ObjID::BUTTON_CONTINUE</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a28484f064ad989b508b77a81ca9ace8b">ObjID::GAME_BASE_UI</a>)]               = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a28484f064ad989b508b77a81ca9ace8b">ObjID::GAME_BASE_UI</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab47e640a8ea3495c9ec8eb023498cb98">ObjID::BUTTON_CONTROL_UI</a>)]          = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab47e640a8ea3495c9ec8eb023498cb98">ObjID::BUTTON_CONTROL_UI</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a53d59f70322325079b0643961c2f74fe">ObjID::BUTTON_ON_CONTROL_UI</a>)]       = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a53d59f70322325079b0643961c2f74fe">ObjID::BUTTON_ON_CONTROL_UI</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7420fa6a2730661af1a6fa866972de98">ObjID::MO_MASK_UI</a>)]                 = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7420fa6a2730661af1a6fa866972de98">ObjID::MO_MASK_UI</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab2f606a018b008376dd2d951d80031c6">ObjID::DESCRIPTION_UI</a>)]             = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab2f606a018b008376dd2d951d80031c6">ObjID::DESCRIPTION_UI</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aca81e7f6f2e3132b31774795c08746b5">ObjID::BUTTON_WORKSHOP</a>)]            = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aca81e7f6f2e3132b31774795c08746b5">ObjID::BUTTON_WORKSHOP</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a1f8eeb647190b87f20c2de470f2f1c45">ObjID::BUTTON_STORE_ROOM</a>)]          = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a1f8eeb647190b87f20c2de470f2f1c45">ObjID::BUTTON_STORE_ROOM</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab58d919bb1090ac6d60ea269cb5ae65c">ObjID::BUTTON_RECEPTION_ROOM</a>)]      = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab58d919bb1090ac6d60ea269cb5ae65c">ObjID::BUTTON_RECEPTION_ROOM</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a448f4b4f87fa55d276d62071913664fb">ObjID::BUTTON_CHILD_ROOM</a>)]          = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a448f4b4f87fa55d276d62071913664fb">ObjID::BUTTON_CHILD_ROOM</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6186425fea94004ecbe088015c8eeba3">ObjID::BUTTON_RIGHT_CORRIDOR</a>)]      = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6186425fea94004ecbe088015c8eeba3">ObjID::BUTTON_RIGHT_CORRIDOR</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6c032e1832d3d94e70fe772446e8a226">ObjID::BUTTON_LEFT_CORRIDOR</a>)]       = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6c032e1832d3d94e70fe772446e8a226">ObjID::BUTTON_LEFT_CORRIDOR</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a8a5d8ff61a9a6499f2fa7db7676fdb77">ObjID::BUTTON_ON_WORKSHOP</a>)]         = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a8a5d8ff61a9a6499f2fa7db7676fdb77">ObjID::BUTTON_ON_WORKSHOP</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a9a2585242a75ff909d5c49994ccc2ff8">ObjID::BUTTON_ON_STORE_ROOM</a>)]       = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a9a2585242a75ff909d5c49994ccc2ff8">ObjID::BUTTON_ON_STORE_ROOM</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aad6c894a7a63c0c7174a3eceb652bb34">ObjID::BUTTON_ON_RECEPTION_ROOM</a>)]   = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aad6c894a7a63c0c7174a3eceb652bb34">ObjID::BUTTON_ON_RECEPTION_ROOM</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a49fcc6728a046537b46f3bba6692fb1f">ObjID::BUTTON_ON_CHILD_ROOM</a>)]       = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a49fcc6728a046537b46f3bba6692fb1f">ObjID::BUTTON_ON_CHILD_ROOM</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac603d7cc2fb6a70be82caf89a9a6741d">ObjID::BUTTON_ON_RIGHT_CORRIDOR</a>)]   = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac603d7cc2fb6a70be82caf89a9a6741d">ObjID::BUTTON_ON_RIGHT_CORRIDOR</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a4394ae71d66bb9b413f86e334ba58ce1">ObjID::BUTTON_ON_LEFT_CORRIDOR</a>)]    = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a4394ae71d66bb9b413f86e334ba58ce1">ObjID::BUTTON_ON_LEFT_CORRIDOR</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa1de6c4a59db7861f8bb027956dcabaa">ObjID::MONITOR_MAP</a>)]                = <span class="keyword">new</span> <a class="code" href="class_u_i.html">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa1de6c4a59db7861f8bb027956dcabaa">ObjID::MONITOR_MAP</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; objects : <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (objects == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_object_manager.html#a25b057e6d1e60c9cbeb29d41923d8c2c">   73</a></span>&#160;<a class="code" href="class_object_manager.html#a25b057e6d1e60c9cbeb29d41923d8c2c">ObjectManager::~ObjectManager</a>() {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24">Release</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_object_manager.html#a9771f5f3c34b9ce12c50dfd9900de191">   77</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_object_manager.html#a9771f5f3c34b9ce12c50dfd9900de191">ObjectManager::Init</a>() {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; objects : <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (objects == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        objects-&gt;Init();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_object_manager.html#a43507b10b7356870fc39147a259b97fa">   87</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_object_manager.html#a43507b10b7356870fc39147a259b97fa">ObjectManager::Update</a>()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; objects : <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (objects == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        objects-&gt;Update();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_object_manager.html#ad30e438f05942a753d4eb7770ad069f3">   97</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_object_manager.html#ad30e438f05942a753d4eb7770ad069f3">ObjectManager::Draw</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; objects : <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (objects == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        objects-&gt;Draw();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_object_manager.html#a7b4b2b1c1c45f2174b9c06462b53c92d">  109</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24">ObjectManager::Release</a>(<span class="keywordtype">int</span> id_) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[id_];</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[id_] = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24">  116</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24">ObjectManager::Release</a>()</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; objects : <a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">if</span> (objects == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">delete</span> objects;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        objects = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_object_manager.html#abb5e7ea962ab0200b87077775e111ada">  127</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_object_manager.html#abb5e7ea962ab0200b87077775e111ada">ObjectManager::HasOnMouse</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a>[static_cast&lt;int&gt;(id_)]-&gt;<a class="code" href="class_object_manager.html#abb5e7ea962ab0200b87077775e111ada">HasOnMouse</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a44b4831eacc09eaaa46e09ec9914ecaa"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a44b4831eacc09eaaa46e09ec9914ecaa">ObjID::BUTTON_NEW_GAME</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a6186425fea94004ecbe088015c8eeba3"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6186425fea94004ecbe088015c8eeba3">ObjID::BUTTON_RIGHT_CORRIDOR</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_a81ab616ed15c75581c27f6e3ac77ee24"><div class="ttname"><a href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24">ObjectManager::Release</a></div><div class="ttdeci">void Release()</div><div class="ttdoc">全ての m_pObjects を解放する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00116">ObjectManager.cpp:116</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a7420fa6a2730661af1a6fa866972de98"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7420fa6a2730661af1a6fa866972de98">ObjID::MO_MASK_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a49fcc6728a046537b46f3bba6692fb1f"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a49fcc6728a046537b46f3bba6692fb1f">ObjID::BUTTON_ON_CHILD_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a54dd3bb364c8257986e6b16b769d8d54"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a54dd3bb364c8257986e6b16b769d8d54">ObjID::FIRE_RIGHT</a></div></div>
+<div class="ttc" id="a_object_manager_8h_html"><div class="ttname"><a href="_object_manager_8h.html">ObjectManager.h</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a67c8b07ba00979e7f9853c397b93fd0a"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a67c8b07ba00979e7f9853c397b93fd0a">ObjID::FIRE_LEFT</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_ad30e438f05942a753d4eb7770ad069f3"><div class="ttname"><a href="class_object_manager.html#ad30e438f05942a753d4eb7770ad069f3">ObjectManager::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdoc">全ての m_pObjects を描画する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00097">ObjectManager.cpp:97</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_a24a33e2bf54521fe8b4de729b1f498be"><div class="ttname"><a href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">ObjectManager::m_pObjects</a></div><div class="ttdeci">Object * m_pObjects[static_cast&lt; int &gt;(ObjID::MAX_OBJECT_NUM)]</div><div class="ttdoc">ObjectID.h で指定された識別番号分、インスタンス化する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8h_source.html#l00084">ObjectManager.h:84</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_a9771f5f3c34b9ce12c50dfd9900de191"><div class="ttname"><a href="class_object_manager.html#a9771f5f3c34b9ce12c50dfd9900de191">ObjectManager::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">全ての m_pObjects を初期化する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00077">ObjectManager.cpp:77</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221acc913a008e0e9fa1686f71a8af068e77"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221acc913a008e0e9fa1686f71a8af068e77">ObjID::FIRE_CENTER</a></div></div>
+<div class="ttc" id="a_item_8h_html"><div class="ttname"><a href="_item_8h.html">Item.h</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a></div></div>
+<div class="ttc" id="a_u_i_8h_html"><div class="ttname"><a href="_u_i_8h.html">UI.h</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html"><div class="ttname"><a href="_object_i_d_8h.html">ObjectID.h</a></div></div>
+<div class="ttc" id="aclass_candle_html"><div class="ttname"><a href="class_candle.html">Candle</a></div><div class="ttdoc">蝋燭に纏わるオブジェクトを管理するクラス 蝋燭、燭台、蝋燭のエフェクト</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8h_source.html#l00020">Candle.h:20</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a8a5d8ff61a9a6499f2fa7db7676fdb77"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a8a5d8ff61a9a6499f2fa7db7676fdb77">ObjID::BUTTON_ON_WORKSHOP</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a28484f064ad989b508b77a81ca9ace8b"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a28484f064ad989b508b77a81ca9ace8b">ObjID::GAME_BASE_UI</a></div></div>
+<div class="ttc" id="a_player_item_8h_html"><div class="ttname"><a href="_player_item_8h.html">PlayerItem.h</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a37fdc56efd7bfd2cf16bf2a7dbef8495"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a37fdc56efd7bfd2cf16bf2a7dbef8495">ObjID::CRYSTAL</a></div></div>
+<div class="ttc" id="aclass_watch_html"><div class="ttname"><a href="class_watch.html">Watch</a></div><div class="ttdoc">時計を管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_player_item_8h_source.html#l00106">PlayerItem.h:106</a></div></div>
+<div class="ttc" id="a_candle_8h_html"><div class="ttname"><a href="_candle_8h.html">Candle.h</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a1f8eeb647190b87f20c2de470f2f1c45"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a1f8eeb647190b87f20c2de470f2f1c45">ObjID::BUTTON_STORE_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab47e640a8ea3495c9ec8eb023498cb98"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab47e640a8ea3495c9ec8eb023498cb98">ObjID::BUTTON_CONTROL_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_abb5e7ea962ab0200b87077775e111ada"><div class="ttname"><a href="class_object_manager.html#abb5e7ea962ab0200b87077775e111ada">ObjectManager::HasOnMouse</a></div><div class="ttdeci">bool HasOnMouse(ObjID id_)</div><div class="ttdoc">指定された m_pObjects の HasOnMouse を取得</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00127">ObjectManager.cpp:127</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a53d59f70322325079b0643961c2f74fe"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a53d59f70322325079b0643961c2f74fe">ObjID::BUTTON_ON_CONTROL_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aa1de6c4a59db7861f8bb027956dcabaa"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa1de6c4a59db7861f8bb027956dcabaa">ObjID::MONITOR_MAP</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a6c032e1832d3d94e70fe772446e8a226"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6c032e1832d3d94e70fe772446e8a226">ObjID::BUTTON_LEFT_CORRIDOR</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a448f4b4f87fa55d276d62071913664fb"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a448f4b4f87fa55d276d62071913664fb">ObjID::BUTTON_CHILD_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a2514681d6b4053162156d04e5c20060a"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a2514681d6b4053162156d04e5c20060a">ObjID::TITLE_LOGO</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_a43507b10b7356870fc39147a259b97fa"><div class="ttname"><a href="class_object_manager.html#a43507b10b7356870fc39147a259b97fa">ObjectManager::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">全ての m_pObjects を更新する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00087">ObjectManager.cpp:87</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aca81e7f6f2e3132b31774795c08746b5"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aca81e7f6f2e3132b31774795c08746b5">ObjID::BUTTON_WORKSHOP</a></div></div>
+<div class="ttc" id="a_fire_8h_html"><div class="ttname"><a href="_fire_8h.html">Fire.h</a></div></div>
+<div class="ttc" id="aclass_object_manager_html"><div class="ttname"><a href="class_object_manager.html">ObjectManager</a></div><div class="ttdoc">オブジェクトを管理するマネージャークラス</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8h_source.html#l00014">ObjectManager.h:14</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a></div><div class="ttdeci">ObjID</div><div class="ttdef"><b>Definition:</b> <a href="_object_i_d_8h_source.html#l00008">ObjectID.h:8</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a4394ae71d66bb9b413f86e334ba58ce1"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a4394ae71d66bb9b413f86e334ba58ce1">ObjID::BUTTON_ON_LEFT_CORRIDOR</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_a6fa9372c7c3a8da88412f4158ca3dfd9"><div class="ttname"><a href="class_object_manager.html#a6fa9372c7c3a8da88412f4158ca3dfd9">ObjectManager::ObjectManager</a></div><div class="ttdeci">ObjectManager()</div><div class="ttdoc">コンストラクタ m_pObjects に各種オブジェクトをインスタンス化</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00016">ObjectManager.cpp:16</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aad6c894a7a63c0c7174a3eceb652bb34"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aad6c894a7a63c0c7174a3eceb652bb34">ObjID::BUTTON_ON_RECEPTION_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab58d919bb1090ac6d60ea269cb5ae65c"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab58d919bb1090ac6d60ea269cb5ae65c">ObjID::BUTTON_RECEPTION_ROOM</a></div></div>
+<div class="ttc" id="aclass_u_i_html"><div class="ttname"><a href="class_u_i.html">UI</a></div><div class="ttdoc">UIを管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00016">UI.h:16</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_a25b057e6d1e60c9cbeb29d41923d8c2c"><div class="ttname"><a href="class_object_manager.html#a25b057e6d1e60c9cbeb29d41923d8c2c">ObjectManager::~ObjectManager</a></div><div class="ttdeci">~ObjectManager()</div><div class="ttdoc">デストラクタ@nm_pObjects を delete する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00073">ObjectManager.cpp:73</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ac603d7cc2fb6a70be82caf89a9a6741d"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac603d7cc2fb6a70be82caf89a9a6741d">ObjID::BUTTON_ON_RIGHT_CORRIDOR</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4">ObjID::POCKET_WATCH</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a9a2585242a75ff909d5c49994ccc2ff8"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a9a2585242a75ff909d5c49994ccc2ff8">ObjID::BUTTON_ON_STORE_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab2f606a018b008376dd2d951d80031c6"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab2f606a018b008376dd2d951d80031c6">ObjID::DESCRIPTION_UI</a></div></div>
+<div class="ttc" id="aclass_crystal_html"><div class="ttname"><a href="class_crystal.html">Crystal</a></div><div class="ttdoc">水晶を管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_player_item_8h_source.html#l00018">PlayerItem.h:18</a></div></div>
+<div class="ttc" id="a_object_manager_8cpp_html_a98f0c5ac7f5990ffad58461f1d23f0a9"><div class="ttname"><a href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a></div><div class="ttdeci">ObjectManager * ObjManager()</div><div class="ttdoc">疑似的なシングルトンをプロトタイプ宣言</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00011">ObjectManager.cpp:11</a></div></div>
+<div class="ttc" id="aclass_fire_html"><div class="ttname"><a href="class_fire.html">Fire</a></div><div class="ttdoc">蝋燭の火を管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_fire_8h_source.html#l00016">Fire.h:16</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221adb9515f637d0aead3c98f9facf8e03d4"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221adb9515f637d0aead3c98f9facf8e03d4">ObjID::BUTTON_CONTINUE</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_a1b83057247c09cdb8dec7926d827fb9.html">Object</a></li><li class="navelem"><a class="el" href="_object_manager_8cpp.html">ObjectManager.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

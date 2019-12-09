@@ -1,0 +1,6 @@
+<map id="SetUpViewPort" name="SetUpViewPort">
+<area shape="rect" id="node1" title=" " alt="" coords="392,5,503,32"/>
+<area shape="rect" id="node2" href="$_graphics_8h.html#ace3c754311ada58c64c01066ea702b13" title="Graphics機能初期化関数 描画関連を使用可能にするための初期化を行う ※Engine.cppのInitEngineで実行しているので 　使用者は自分たちで使う必要はない" alt="" coords="253,5,344,32"/>
+<area shape="rect" id="node3" href="$_engine_8h.html#a793ba90ca8458f8323c7cee0eb545d60" title="エンジン初期化関数 ゲームで使うエンジン部分(描画、入力)の初期化とウィンドウの作成を行う ※この関数はゲームループ開始前に１度だけ実行する" alt="" coords="127,5,205,32"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,5,79,32"/>
+</map>

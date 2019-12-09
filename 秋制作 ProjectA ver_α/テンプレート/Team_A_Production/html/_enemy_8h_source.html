@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Character/Enemy/Enemy.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_enemy_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Enemy.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_enemy_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ENEMY_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ENEMY_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../CharacterID.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../Utility/RoomID.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../Scene/Scene.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Character.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../Engine/Graphics.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_enemy.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_enemy.html">Enemy</a> : <span class="keyword">public</span> <a class="code" href="class_character.html">Character</a> </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">        コンストラクタ</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_enemy.html#a126d9db8f0d942ed1b18ed8c3478a0b3">   17</a></span>&#160;    <a class="code" href="class_enemy.html#a126d9db8f0d942ed1b18ed8c3478a0b3">Enemy</a>(<a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a> roomid_, <span class="keywordtype">int</span> framecount_):</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_character.html">Character</a>(false)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_enemy.html#a733fde9467d45c90f171acc87454ab46">m_RoomId</a>      = roomid_; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_enemy.html#a0fab5c77908c0e2c168d4155127323b2">m_iFrameCount</a> = framecount_;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">m_HasKill</a>     = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_enemy.html#ae6e8d6ac8e9c86e538d7ca09afe4defe">m_CanKill</a>     = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">        デストラクタ</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_enemy.html#afdaf1b7e3700767d0fdb994436808427">   29</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_enemy.html#afdaf1b7e3700767d0fdb994436808427">~Enemy</a>()<span class="keyword"> override</span>{}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">        初期化</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_enemy.html#a2b56a302d65e9a32cf37aed8949164e6">   34</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a2b56a302d65e9a32cf37aed8949164e6">Init</a>()<span class="keyword"> override</span>{}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">        更新</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_enemy.html#ad880b3aa85d38ee61d3bf1352163f3c6">   39</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#ad880b3aa85d38ee61d3bf1352163f3c6">Update</a>()<span class="keyword"> override</span>{}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">        エネミーがプレイヤーを殺したかどうか</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">        m_HasKillを返す</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_enemy.html#ab7b752c2b8898f5dbffd6df567b2b965">   45</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_enemy.html#ab7b752c2b8898f5dbffd6df567b2b965">HasKill</a>()<span class="keyword">const override </span>{ <span class="keywordflow">return</span> <a class="code" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">m_HasKill</a>; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">        引数に指定したシーンのテクスチャをロードする</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_enemy.html#a5eb22e7d02bdb2772afd42dbbd65a881">   50</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_enemy.html#a5eb22e7d02bdb2772afd42dbbd65a881">LoadTex</a>(<a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> id_)<span class="keyword">override </span>{}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// エネミーの移動用タイマークラス(未実装)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_enemy_1_1_enemy_timer.html">   55</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_enemy_1_1_enemy_timer.html">EnemyTimer</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">            コンストラクタ</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_enemy_1_1_enemy_timer.html#a213188c4994fa7283fef2d06b780171d">   61</a></span>&#160;        <a class="code" href="class_enemy_1_1_enemy_timer.html#a213188c4994fa7283fef2d06b780171d">EnemyTimer</a>(<span class="keywordtype">int</span> time_, <span class="keywordtype">int</span> min_time_, <span class="keywordtype">int</span> max_time) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_enemy_1_1_enemy_timer.html#a0ac6f451f68698e5d867072c081d8d80">m_Time</a> = time_;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_enemy_1_1_enemy_timer.html#a5e3d1763a981eae0edefe98ca93da3a8">m_RandTime</a> = <a class="code" href="class_enemy_1_1_enemy_timer.html#a60cc56de07fe476672039faa80785fd9">GetRand</a>(min_time_, max_time);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">            デストラクタ</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_enemy_1_1_enemy_timer.html#a9f5d85c6b6e626989fae82bb924ff90d">   69</a></span>&#160;        <a class="code" href="class_enemy_1_1_enemy_timer.html#a9f5d85c6b6e626989fae82bb924ff90d">~EnemyTimer</a>(){}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_enemy_1_1_enemy_timer.html#a60cc56de07fe476672039faa80785fd9">GetRand</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> min_val_, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_val_);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">            スポーン用のタイマー関数</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">            特定の時間になるとTrueが返る</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_enemy_1_1_enemy_timer.html#a58193fe741326efb5d14d4385276b6c2">SpawnTimer</a>(<a class="code" href="class_enemy.html">Enemy</a>&amp; enemy_);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">            移動用のタイマー関数</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">            特定の時間になるとTrueが返る</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_enemy_1_1_enemy_timer.html#a93826a8b788aa2699e580372e2e7bc4d">MoveTimer</a>(<a class="code" href="class_enemy.html">Enemy</a>&amp; enemy_);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_enemy_1_1_enemy_timer.html#a0ac6f451f68698e5d867072c081d8d80">   86</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_enemy_1_1_enemy_timer.html#a0ac6f451f68698e5d867072c081d8d80">m_Time</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_enemy_1_1_enemy_timer.html#a5e3d1763a981eae0edefe98ca93da3a8">   87</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_enemy_1_1_enemy_timer.html#a5e3d1763a981eae0edefe98ca93da3a8">m_RandTime</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_enemy.html#a733fde9467d45c90f171acc87454ab46">   91</a></span>&#160;    <a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a>     <a class="code" href="class_enemy.html#a733fde9467d45c90f171acc87454ab46">m_RoomId</a>;                <span class="comment">// どこの部屋にいるか変数</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_enemy.html#a0fab5c77908c0e2c168d4155127323b2">   92</a></span>&#160;    <span class="keywordtype">int</span>        <a class="code" href="class_enemy.html#a0fab5c77908c0e2c168d4155127323b2">m_iFrameCount</a>;           <span class="comment">// フレイムカウント用変数</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_enemy.html#ae6e8d6ac8e9c86e538d7ca09afe4defe">   93</a></span>&#160;    <span class="keywordtype">bool</span>       <a class="code" href="class_enemy.html#ae6e8d6ac8e9c86e538d7ca09afe4defe">m_CanKill</a>;               <span class="comment">// 殺せるかどうか   True:殺せる     False:殺せない</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">   94</a></span>&#160;    <span class="keywordtype">bool</span>       <a class="code" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">m_HasKill</a>;               <span class="comment">// 殺したかどうか   True:殺した     False:殺してない</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">   95</a></span>&#160;    <a class="code" href="struct_animation_texture.html">AnimationTexture</a> <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">   97</a></span>&#160;    <a class="code" href="class_character.html">Character</a>* <a class="code" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">m_pPlayer</a>;           <span class="comment">// プレイヤーの参照用変数</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_enemy_html_ad880b3aa85d38ee61d3bf1352163f3c6"><div class="ttname"><a href="class_enemy.html#ad880b3aa85d38ee61d3bf1352163f3c6">Enemy::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00039">Enemy.h:39</a></div></div>
+<div class="ttc" id="aclass_enemy_html_afdaf1b7e3700767d0fdb994436808427"><div class="ttname"><a href="class_enemy.html#afdaf1b7e3700767d0fdb994436808427">Enemy::~Enemy</a></div><div class="ttdeci">virtual ~Enemy() override</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00029">Enemy.h:29</a></div></div>
+<div class="ttc" id="aclass_character_html"><div class="ttname"><a href="class_character.html">Character</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_8h_source.html#l00009">Character.h:9</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a></div><div class="ttdeci">SceneId</div><div class="ttdoc">シーンID</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00013">Scene.h:13</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html_a60cc56de07fe476672039faa80785fd9"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html#a60cc56de07fe476672039faa80785fd9">Enemy::EnemyTimer::GetRand</a></div><div class="ttdeci">unsigned int GetRand(unsigned int min_val_, unsigned int max_val_)</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8cpp_source.html#l00005">Enemy.cpp:5</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html">Enemy::EnemyTimer</a></div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00055">Enemy.h:55</a></div></div>
+<div class="ttc" id="aclass_enemy_html_ae6e8d6ac8e9c86e538d7ca09afe4defe"><div class="ttname"><a href="class_enemy.html#ae6e8d6ac8e9c86e538d7ca09afe4defe">Enemy::m_CanKill</a></div><div class="ttdeci">bool m_CanKill</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00093">Enemy.h:93</a></div></div>
+<div class="ttc" id="astruct_animation_texture_html"><div class="ttname"><a href="struct_animation_texture.html">AnimationTexture</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00046">Graphics.h:46</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html_a5e3d1763a981eae0edefe98ca93da3a8"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html#a5e3d1763a981eae0edefe98ca93da3a8">Enemy::EnemyTimer::m_RandTime</a></div><div class="ttdeci">int m_RandTime</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00087">Enemy.h:87</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a308fa05ba03d104b5679dea6f2a7f072"><div class="ttname"><a href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">Enemy::m_pPlayer</a></div><div class="ttdeci">Character * m_pPlayer</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00097">Enemy.h:97</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html_a0ac6f451f68698e5d867072c081d8d80"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html#a0ac6f451f68698e5d867072c081d8d80">Enemy::EnemyTimer::m_Time</a></div><div class="ttdeci">int m_Time</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00086">Enemy.h:86</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html_a58193fe741326efb5d14d4385276b6c2"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html#a58193fe741326efb5d14d4385276b6c2">Enemy::EnemyTimer::SpawnTimer</a></div><div class="ttdeci">bool SpawnTimer(Enemy &amp;enemy_)</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8cpp_source.html#l00014">Enemy.cpp:14</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a733fde9467d45c90f171acc87454ab46"><div class="ttname"><a href="class_enemy.html#a733fde9467d45c90f171acc87454ab46">Enemy::m_RoomId</a></div><div class="ttdeci">RoomID m_RoomId</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00091">Enemy.h:91</a></div></div>
+<div class="ttc" id="a_room_i_d_8h_html_aca771d9fb131dc58ebb0da000e692126"><div class="ttname"><a href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a></div><div class="ttdeci">RoomID</div><div class="ttdef"><b>Definition:</b> <a href="_room_i_d_8h_source.html#l00004">RoomID.h:4</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html_a213188c4994fa7283fef2d06b780171d"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html#a213188c4994fa7283fef2d06b780171d">Enemy::EnemyTimer::EnemyTimer</a></div><div class="ttdeci">EnemyTimer(int time_, int min_time_, int max_time)</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00061">Enemy.h:61</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a5eb22e7d02bdb2772afd42dbbd65a881"><div class="ttname"><a href="class_enemy.html#a5eb22e7d02bdb2772afd42dbbd65a881">Enemy::LoadTex</a></div><div class="ttdeci">virtual void LoadTex(SceneId id_) override</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00050">Enemy.h:50</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html_a93826a8b788aa2699e580372e2e7bc4d"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html#a93826a8b788aa2699e580372e2e7bc4d">Enemy::EnemyTimer::MoveTimer</a></div><div class="ttdeci">bool MoveTimer(Enemy &amp;enemy_)</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8cpp_source.html#l00029">Enemy.cpp:29</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a126d9db8f0d942ed1b18ed8c3478a0b3"><div class="ttname"><a href="class_enemy.html#a126d9db8f0d942ed1b18ed8c3478a0b3">Enemy::Enemy</a></div><div class="ttdeci">Enemy(RoomID roomid_, int framecount_)</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00017">Enemy.h:17</a></div></div>
+<div class="ttc" id="aclass_enemy_html_acc03ba884acb782253aaea4a83b2cf1c"><div class="ttname"><a href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">Enemy::m_AnimationTex</a></div><div class="ttdeci">AnimationTexture m_AnimationTex</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00095">Enemy.h:95</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a2b56a302d65e9a32cf37aed8949164e6"><div class="ttname"><a href="class_enemy.html#a2b56a302d65e9a32cf37aed8949164e6">Enemy::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00034">Enemy.h:34</a></div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00011">Enemy.h:11</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a6dda06fe77a15ec4d9c0da0ad1359a4d"><div class="ttname"><a href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">Enemy::m_HasKill</a></div><div class="ttdeci">bool m_HasKill</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00094">Enemy.h:94</a></div></div>
+<div class="ttc" id="aclass_enemy_1_1_enemy_timer_html_a9f5d85c6b6e626989fae82bb924ff90d"><div class="ttname"><a href="class_enemy_1_1_enemy_timer.html#a9f5d85c6b6e626989fae82bb924ff90d">Enemy::EnemyTimer::~EnemyTimer</a></div><div class="ttdeci">~EnemyTimer()</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00069">Enemy.h:69</a></div></div>
+<div class="ttc" id="aclass_enemy_html_ab7b752c2b8898f5dbffd6df567b2b965"><div class="ttname"><a href="class_enemy.html#ab7b752c2b8898f5dbffd6df567b2b965">Enemy::HasKill</a></div><div class="ttdeci">virtual bool HasKill() const override</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00045">Enemy.h:45</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a0fab5c77908c0e2c168d4155127323b2"><div class="ttname"><a href="class_enemy.html#a0fab5c77908c0e2c168d4155127323b2">Enemy::m_iFrameCount</a></div><div class="ttdeci">int m_iFrameCount</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00092">Enemy.h:92</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_0af6d3c849582bafbf696c6668bb065a.html">Character</a></li><li class="navelem"><a class="el" href="dir_1a6826e49dcbd70d4d52780a342c33b0.html">Enemy</a></li><li class="navelem"><a class="el" href="_enemy_8h.html">Enemy.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="UI" name="UI">
+<area shape="rect" id="node1" title="UIを管理するクラス" alt="" coords="16,80,55,107"/>
+<area shape="rect" id="node2" href="$class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
+</map>

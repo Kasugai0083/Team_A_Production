@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Object/Item/Id/Candle.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_candle_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Candle.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_candle_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_candle_8h.html">Candle.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;..//..//ObjectManager.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_candle.html#a5bd211fe2840d31a0d82578f7fdcfa9c">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_candle.html#a5bd211fe2840d31a0d82578f7fdcfa9c">Candle::Init</a>() {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a>) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/Game/Item/Candle_Center_Right_Left.png&quot;</span>, <a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa7f214640d53646e452a7556c8f89facd">GameCategoryTextureList::GameCandleBigTex</a>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa7f214640d53646e452a7556c8f89facd">GameCategoryTextureList::GameCandleBigTex</a>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#a5be47dc05ae12cf703915f09ffdb5945">CANDLE_BIG_POS</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a> = (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> - (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> * <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a>));</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = <a class="code" href="_item_value_8h.html#a5be47dc05ae12cf703915f09ffdb5945">CANDLE_BIG_POS</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">CANDLE_BIG_SIZE</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a> = <a class="code" href="_item_value_8h.html#ab6d4d86af247ac7e70cc5c176ba623a3">CANDLE_BIG_FRAME</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/Game/Item/Candle_Center_Right_Left.png&quot;</span>, <a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa7f214640d53646e452a7556c8f89facd">GameCategoryTextureList::GameCandleBigTex</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa7f214640d53646e452a7556c8f89facd">GameCategoryTextureList::GameCandleBigTex</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#a5be47dc05ae12cf703915f09ffdb5945">CANDLE_BIG_POS</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a> = (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> - (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> * <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a>));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = <a class="code" href="_item_value_8h.html#a5be47dc05ae12cf703915f09ffdb5945">CANDLE_BIG_POS</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">CANDLE_BIG_SIZE</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a> = <a class="code" href="_item_value_8h.html#ab6d4d86af247ac7e70cc5c176ba623a3">CANDLE_BIG_FRAME</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/Game/Item/Candle_Center.png&quot;</span>, <a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa3dea83927f8f9321baa4b60b8678e774">GameCategoryTextureList::GameCandleSmallTex</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa3dea83927f8f9321baa4b60b8678e774">GameCategoryTextureList::GameCandleSmallTex</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#adc638530b534bc7076dc4493ec0562cc">CANDLE_SMALL_POS</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a> = (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> - (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> * <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a>));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = <a class="code" href="_item_value_8h.html#adc638530b534bc7076dc4493ec0562cc">CANDLE_SMALL_POS</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#a836fb70628abbc3f01523e99767dfc50">CANDLE_SMALL_SIZE</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a> = <a class="code" href="_item_value_8h.html#aee1d04a6a8d6caa039879e5bf86d31c6">CANDLE_SMALL_FRAME</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/Game/Item/Candle_Stand.png&quot;</span>, <a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aafd77acdae670e7c5736540a7ebfb4e66">GameCategoryTextureList::GameCandleStandTex</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aafd77acdae670e7c5736540a7ebfb4e66">GameCategoryTextureList::GameCandleStandTex</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#acdde381a9d2a5c4c2cd28b02bb2077ea">CANDLE_STAND_POS</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#a419a7c9e7b500914e1e9450fa6938920">CANDLE_STAND_SIZE</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a> = <a class="code" href="_item_value_8h.html#a23f9f18c267eb06121ced25a0327aa77">CANDLE_STAND_FRAME</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/Game/Item/candle_effect_center.png&quot;</span>, <a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa72742ee353a2c659567e3533c1f4802b">GameCategoryTextureList::GameCandleCenterEffectTex</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa72742ee353a2c659567e3533c1f4802b">GameCategoryTextureList::GameCandleCenterEffectTex</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = { 0.0f, 0.0f };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = {0.f, 0.f};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a> = { 2048.f, 2048.f };</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/Game/Item/Candle_Right_Effect.png&quot;</span>, <a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aab388b6adf43afe121bce4d6d0bef8f11">GameCategoryTextureList::GameCandleRightEffectTex</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aab388b6adf43afe121bce4d6d0bef8f11">GameCategoryTextureList::GameCandleRightEffectTex</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#a78f36bdcc1027b2e4dfb71d470428987">BIG_CANDLE_EFFECT_POS</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">CANDLE_EFFECT_SIZE</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a> = <a class="code" href="_item_value_8h.html#a9a2a95a07fe25ca2aae4f85d33687901">CANDLE_EFFECT_FRAME</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/Game/Item/Candle_Right_Effect.png&quot;</span>, <a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa43de3ba19c8956ed79d5facd07444577">GameCategoryTextureList::GameCandleLeftEffectTex</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a>, <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa43de3ba19c8956ed79d5facd07444577">GameCategoryTextureList::GameCandleLeftEffectTex</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#a78f36bdcc1027b2e4dfb71d470428987">BIG_CANDLE_EFFECT_POS</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">CANDLE_EFFECT_SIZE</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a> = <a class="code" href="_item_value_8h.html#a9a2a95a07fe25ca2aae4f85d33687901">CANDLE_EFFECT_FRAME</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7">  116</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7">Candle::CandleSwitch</a>(<span class="keywordtype">bool</span> center_switch_, <span class="keywordtype">bool</span> left_switch_, <span class="keywordtype">bool</span> right_switch_) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a>)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = left_switch_;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = right_switch_;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = center_switch_;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d">  131</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d">Candle::SceneDeath</a>() {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746">GetCurrentSceneId</a>() == <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">GameScene</a>) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a>)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a>:</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746">GameView</a>()-&gt;CurrentViewID())</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">case</span> GameData::SubGameScene::CENTER:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <a class="code" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7">CandleSwitch</a>(<span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">case</span> GameData::SubGameScene::RIGHT:</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <a class="code" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7">CandleSwitch</a>(<span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">case</span> GameData::SubGameScene::LEFT:</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <a class="code" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7">CandleSwitch</a>(<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">  161</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">Candle::MeltCandle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">m_HasCaLight</a> == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a>)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a> -= <a class="code" href="_candle_8h.html#afc59682f30f6d01b5fd6eb4d5bc1953f">MELT_RATIO</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a> = (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> - (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> * <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a>));</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = <a class="code" href="_item_value_8h.html#a5be47dc05ae12cf703915f09ffdb5945">CANDLE_BIG_POS</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>:</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a> -= <a class="code" href="_candle_8h.html#afc59682f30f6d01b5fd6eb4d5bc1953f">MELT_RATIO</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a> = (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> - (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> * <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a>));</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = <a class="code" href="_item_value_8h.html#a5be47dc05ae12cf703915f09ffdb5945">CANDLE_BIG_POS</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>:</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a> -= <a class="code" href="_candle_8h.html#afc59682f30f6d01b5fd6eb4d5bc1953f">MELT_RATIO</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a> = (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> - (<a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> * <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a>));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = <a class="code" href="_item_value_8h.html#adc638530b534bc7076dc4493ec0562cc">CANDLE_SMALL_POS</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="class_candle.html#a5bebb511757ff21039189bca77a5cfee">  197</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_candle.html#a5bebb511757ff21039189bca77a5cfee">Candle::EffectUpdate</a>() {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="class_object.html">Object</a>* CenterCandle = <a class="code" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a>()-&gt;<a class="code" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">GetObj</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="class_object.html">Object</a>* LeftCandle = <a class="code" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a>()-&gt;<a class="code" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">GetObj</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="class_object.html">Object</a>* RightCandle = <a class="code" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a>()-&gt;<a class="code" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">GetObj</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span> (CenterCandle-&gt;<a class="code" href="class_object.html#a56b5956cea5204d55183a444a01a30d6">HasCaLight</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a>) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a>) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">if</span> (LeftCandle-&gt;<a class="code" href="class_object.html#a56b5956cea5204d55183a444a01a30d6">HasCaLight</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a>) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a>) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">if</span> (RightCandle-&gt;<a class="code" href="class_object.html#a56b5956cea5204d55183a444a01a30d6">HasCaLight</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a>) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a>) {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405">  236</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405">Candle::Update</a>(){</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d">SceneDeath</a>();</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="class_candle.html#a5bebb511757ff21039189bca77a5cfee">EffectUpdate</a>();</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> == <span class="keyword">false</span> &amp;&amp; <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a> &gt; 0.f) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <a class="code" href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">MeltCandle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <a class="code" href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">MeltCandle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">MeltCandle</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="_input_8cpp.html#af896c535cd0c69ae56fdf3d71564fb92">OnMousePush</a>(<a class="code" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711ad48f7af8c070184f3774c8e85854eb66">Right</a>) == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordflow">switch</span> (<a class="code" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746">GameView</a>()-&gt;CurrentViewID())</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="struct_game_data.html#afb8e91137fade7c0ebae2e3058d5cdfda84bb252fa164b2e23c8d0ba24b32c1ee">GameData::CENTER</a>:</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>) {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    <a class="code" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">m_HasCaLight</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="struct_game_data.html#afb8e91137fade7c0ebae2e3058d5cdfda050185c9c85317242f10dfd9fa06cb9a">GameData::RIGHT</a>:</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    <a class="code" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">m_HasCaLight</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="struct_game_data.html#afb8e91137fade7c0ebae2e3058d5cdfda65eb09ead1c6833d725712c9fa3533c0">GameData::LEFT</a>:</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> == <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>) {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    <a class="code" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">m_HasCaLight</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <a class="code" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">m_HasCaLight</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac">HasRectangleHit</a>(<a class="code" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a>().X, <a class="code" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a>().Y, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>, (<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> + <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a>), (<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a>)) == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <a class="code" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">m_HasCaLight</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="class_candle.html#af893fbe070f2e749eb5b397fd18d37ca">  288</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_candle.html#af893fbe070f2e749eb5b397fd18d37ca">Candle::Draw</a>(){</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">switch</span> (<a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a>)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a>:</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a>:</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a>:</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <a class="code" href="_graphics_8cpp.html#ad61dd9d1b71c35e0486dd004e99021a1">CandleDraw</a>(<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>, <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a>, <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>, <a class="code" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a>:</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a>:</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a>:</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a>:</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <a class="code" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72">DrawTexture</a>(<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>, <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a>, <a class="code" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_item_value_8h_html_aa7a0af99cd860c5313966c41a70336a6"><div class="ttname"><a href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">CANDLE_BIG_SIZE</a></div><div class="ttdeci">const Size CANDLE_BIG_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00017">ItemValue.h:17</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_ab555a1fa81787321e2d28314fcb11a69"><div class="ttname"><a href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a></div><div class="ttdeci">bool LoadTexture(const char *file_name, int id, int texture_id)</div><div class="ttdoc">テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00071">Texture.cpp:71</a></div></div>
+<div class="ttc" id="astruct_vec2_html_a9538442ffef888d4cd3008a4533b029a"><div class="ttname"><a href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">Vec2::X</a></div><div class="ttdeci">float X</div><div class="ttdoc">X値</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00041">Vec.h:41</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_ab8389a24369e4f9beb1d4f21e344e885"><div class="ttname"><a href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a></div><div class="ttdeci">Texture * GetTexture(int category_id, int texture_id)</div><div class="ttdoc">テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00081">Texture.cpp:81</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acabe78a54b8de7a3dc59c97ac2d2355aa3dea83927f8f9321baa4b60b8678e774"><div class="ttname"><a href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa3dea83927f8f9321baa4b60b8678e774">GameCandleSmallTex</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00013">GameSceneTex.h:13</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">GameScene</a></div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00017">Scene.h:17</a></div></div>
+<div class="ttc" id="aclass_candle_html_adabb5c093e584562d9338e82b89c41fa"><div class="ttname"><a href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">Candle::m_HeightRatio</a></div><div class="ttdeci">float m_HeightRatio</div><div class="ttdoc">キャンドルの高さ比率</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8h_source.html#l00123">Candle.h:123</a></div></div>
+<div class="ttc" id="astruct_size_html_a47cc60893b761b6d96be2d979be7e136"><div class="ttname"><a href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Size::Height</a></div><div class="ttdeci">float Height</div><div class="ttdoc">縦幅</div><div class="ttdef"><b>Definition:</b> <a href="_size_8h_source.html#l00042">Size.h:42</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_a001b09417d2ae4943177e4e8025dd0b4"><div class="ttname"><a href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">CANDLE_EFFECT_SIZE</a></div><div class="ttdeci">const Size CANDLE_EFFECT_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00028">ItemValue.h:28</a></div></div>
+<div class="ttc" id="a_scene_8cpp_html_a9900ed42962250f87c2a65188751c746"><div class="ttname"><a href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746">GetCurrentSceneId</a></div><div class="ttdeci">SceneId GetCurrentSceneId()</div><div class="ttdoc">現在実行中のシーンIDの取得関数</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00106">Scene.cpp:106</a></div></div>
+<div class="ttc" id="aclass_candle_html_af893fbe070f2e749eb5b397fd18d37ca"><div class="ttname"><a href="class_candle.html#af893fbe070f2e749eb5b397fd18d37ca">Candle::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdoc">m_Id に基づいて描画 蝋燭の場合 =&gt; ヘルスに応じて溶けるように描画される それ以外 =&gt; 指定された座標とサイズで描画</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8cpp_source.html#l00288">Candle.cpp:288</a></div></div>
+<div class="ttc" id="astruct_game_data_html_afb8e91137fade7c0ebae2e3058d5cdfda050185c9c85317242f10dfd9fa06cb9a"><div class="ttname"><a href="struct_game_data.html#afb8e91137fade7c0ebae2e3058d5cdfda050185c9c85317242f10dfd9fa06cb9a">GameData::RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_data_8h_source.html#l00017">GameData.h:17</a></div></div>
+<div class="ttc" id="a_input_8cpp_html_af896c535cd0c69ae56fdf3d71564fb92"><div class="ttname"><a href="_input_8cpp.html#af896c535cd0c69ae56fdf3d71564fb92">OnMousePush</a></div><div class="ttdeci">bool OnMousePush(MouseButton button_type)</div><div class="ttdoc">クリック中判定関数 指定したマウスのボタンがクリック中かどうかを判定する</div><div class="ttdef"><b>Definition:</b> <a href="_input_8cpp_source.html#l00209">Input.cpp:209</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acabe78a54b8de7a3dc59c97ac2d2355aa43de3ba19c8956ed79d5facd07444577"><div class="ttname"><a href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa43de3ba19c8956ed79d5facd07444577">GameCandleLeftEffectTex</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00017">GameSceneTex.h:17</a></div></div>
+<div class="ttc" id="a_input_8h_html_ac1ec3647c005eacad401b06e7e18f711ad48f7af8c070184f3774c8e85854eb66"><div class="ttname"><a href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711ad48f7af8c070184f3774c8e85854eb66">Right</a></div><div class="ttdoc">右</div><div class="ttdef"><b>Definition:</b> <a href="_input_8h_source.html#l00032">Input.h:32</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_aca955b0566805077fa3910ebb2ec8335"><div class="ttname"><a href="_game_scene_tex_8h.html#aca955b0566805077fa3910ebb2ec8335">TEXTURE_CATEGORY_GAME</a></div><div class="ttdeci">#define TEXTURE_CATEGORY_GAME</div><div class="ttdoc">ゲーム本編カテゴリー</div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00131">GameSceneTex.h:131</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_adc638530b534bc7076dc4493ec0562cc"><div class="ttname"><a href="_item_value_8h.html#adc638530b534bc7076dc4493ec0562cc">CANDLE_SMALL_POS</a></div><div class="ttdeci">const Vec2 CANDLE_SMALL_POS</div><div class="ttdoc">ろうそく(灯)</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00025">ItemValue.h:25</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_a5be47dc05ae12cf703915f09ffdb5945"><div class="ttname"><a href="_item_value_8h.html#a5be47dc05ae12cf703915f09ffdb5945">CANDLE_BIG_POS</a></div><div class="ttdeci">const Vec2 CANDLE_BIG_POS</div><div class="ttdoc">ろうそく(小)</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00019">ItemValue.h:19</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a></div></div>
+<div class="ttc" id="aclass_candle_html_ad1c90d9b6a6df8cfb7063c3837cd5405"><div class="ttname"><a href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405">Candle::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8cpp_source.html#l00236">Candle.cpp:236</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_a419a7c9e7b500914e1e9450fa6938920"><div class="ttname"><a href="_item_value_8h.html#a419a7c9e7b500914e1e9450fa6938920">CANDLE_STAND_SIZE</a></div><div class="ttdeci">const Size CANDLE_STAND_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00034">ItemValue.h:34</a></div></div>
+<div class="ttc" id="a_candle_8h_html_afc59682f30f6d01b5fd6eb4d5bc1953f"><div class="ttname"><a href="_candle_8h.html#afc59682f30f6d01b5fd6eb4d5bc1953f">MELT_RATIO</a></div><div class="ttdeci">const float MELT_RATIO</div><div class="ttdoc">蝋燭が溶ける速度</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8h_source.html#l00014">Candle.h:14</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acabe78a54b8de7a3dc59c97ac2d2355aab388b6adf43afe121bce4d6d0bef8f11"><div class="ttname"><a href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aab388b6adf43afe121bce4d6d0bef8f11">GameCandleRightEffectTex</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00018">GameSceneTex.h:18</a></div></div>
+<div class="ttc" id="aclass_candle_html_a6c7bc43a788f20e29b5963f08a935b8d"><div class="ttname"><a href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d">Candle::SceneDeath</a></div><div class="ttdeci">void SceneDeath()</div><div class="ttdoc">GameScene 以外でキャンドルを死亡させる GameView 情報によってキャンドルの生死を管理する</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8cpp_source.html#l00131">Candle.cpp:131</a></div></div>
+<div class="ttc" id="a_game_data_8cpp_html_ae547a3bb0f32ebf53a09a612c1147746"><div class="ttname"><a href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746">GameView</a></div><div class="ttdeci">GameData * GameView()</div><div class="ttdef"><b>Definition:</b> <a href="_game_data_8cpp_source.html#l00003">GameData.cpp:3</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_acb889688c7374c0ed461dfcbabd4a1e0"><div class="ttname"><a href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">ObjectManager::GetObj</a></div><div class="ttdeci">Object * GetObj(ObjID id_)</div><div class="ttdoc">m_pObjects の インスタンス情報を取得する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8h_source.html#l00037">ObjectManager.h:37</a></div></div>
+<div class="ttc" id="aclass_item_html_a4d4d0ce9428fdf80b009eef5e3e1fbc0"><div class="ttname"><a href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">Item::m_Size</a></div><div class="ttdeci">Size m_Size</div><div class="ttdoc">サイズ情報</div><div class="ttdef"><b>Definition:</b> <a href="_item_8h_source.html#l00055">Item.h:55</a></div></div>
+<div class="ttc" id="aclass_item_html_af4b2ff8eb3a824b5e134a3285beca8d3"><div class="ttname"><a href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">Item::m_OnMouse</a></div><div class="ttdeci">bool m_OnMouse</div><div class="ttdoc">マウスが重なったとき true</div><div class="ttdef"><b>Definition:</b> <a href="_item_8h_source.html#l00051">Item.h:51</a></div></div>
+<div class="ttc" id="aclass_item_html_a9795d2dcfff5c45255cb4136d82f1d0a"><div class="ttname"><a href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">Item::m_pTex</a></div><div class="ttdeci">Texture * m_pTex</div><div class="ttdoc">テクスチャの情報を格納</div><div class="ttdef"><b>Definition:</b> <a href="_item_8h_source.html#l00045">Item.h:45</a></div></div>
+<div class="ttc" id="aclass_candle_html_a5bd211fe2840d31a0d82578f7fdcfa9c"><div class="ttname"><a href="class_candle.html#a5bd211fe2840d31a0d82578f7fdcfa9c">Candle::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8cpp_source.html#l00005">Candle.cpp:5</a></div></div>
+<div class="ttc" id="astruct_game_data_html_afb8e91137fade7c0ebae2e3058d5cdfda65eb09ead1c6833d725712c9fa3533c0"><div class="ttname"><a href="struct_game_data.html#afb8e91137fade7c0ebae2e3058d5cdfda65eb09ead1c6833d725712c9fa3533c0">GameData::LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_data_8h_source.html#l00016">GameData.h:16</a></div></div>
+<div class="ttc" id="a_candle_8h_html"><div class="ttname"><a href="_candle_8h.html">Candle.h</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acabe78a54b8de7a3dc59c97ac2d2355aa7f214640d53646e452a7556c8f89facd"><div class="ttname"><a href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa7f214640d53646e452a7556c8f89facd">GameCandleBigTex</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00012">GameSceneTex.h:12</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_a23f9f18c267eb06121ced25a0327aa77"><div class="ttname"><a href="_item_value_8h.html#a23f9f18c267eb06121ced25a0327aa77">CANDLE_STAND_FRAME</a></div><div class="ttdeci">const Size CANDLE_STAND_FRAME</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00035">ItemValue.h:35</a></div></div>
+<div class="ttc" id="aclass_object_html_a7a93bec1c230d962620b5ae62e581f91"><div class="ttname"><a href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">Object::m_IsDeath</a></div><div class="ttdeci">bool m_IsDeath</div><div class="ttdoc">オブジェクトの生存情報</div><div class="ttdef"><b>Definition:</b> <a href="_object_8h_source.html#l00061">Object.h:61</a></div></div>
+<div class="ttc" id="aclass_candle_html_a0534ae18084e1ee7f3876710a53cf3e7"><div class="ttname"><a href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7">Candle::CandleSwitch</a></div><div class="ttdeci">void CandleSwitch(bool center_switch_, bool left_switch_, bool right_switch_)</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8cpp_source.html#l00116">Candle.cpp:116</a></div></div>
+<div class="ttc" id="aclass_candle_html_aca48afd771e7270ae4afc329dff47c6f"><div class="ttname"><a href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">Candle::MeltCandle</a></div><div class="ttdeci">void MeltCandle(ObjID id_)</div><div class="ttdoc">キャンドルを溶かすために計算する関数</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8cpp_source.html#l00161">Candle.cpp:161</a></div></div>
+<div class="ttc" id="astruct_vec2_html_a38e42d6a69d43b831e2a434acd41d5af"><div class="ttname"><a href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Vec2::Y</a></div><div class="ttdeci">float Y</div><div class="ttdoc">Y値</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00042">Vec.h:42</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">オブジェクトを管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_object_8h_source.html#l00016">Object.h:16</a></div></div>
+<div class="ttc" id="aclass_candle_html_a5bebb511757ff21039189bca77a5cfee"><div class="ttname"><a href="class_candle.html#a5bebb511757ff21039189bca77a5cfee">Candle::EffectUpdate</a></div><div class="ttdeci">void EffectUpdate()</div><div class="ttdoc">キャンドルエフェクトの生死情報を管理</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8cpp_source.html#l00197">Candle.cpp:197</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a></div></div>
+<div class="ttc" id="a_calculation_8cpp_html_a676a15e82a69de27580e90985f2de4ac"><div class="ttname"><a href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac">HasRectangleHit</a></div><div class="ttdeci">bool HasRectangleHit(Texture *texture_data_, float x1_, float x2_, float y1_, float y2_)</div><div class="ttdef"><b>Definition:</b> <a href="_calculation_8cpp_source.html#l00089">Calculation.cpp:89</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_acdde381a9d2a5c4c2cd28b02bb2077ea"><div class="ttname"><a href="_item_value_8h.html#acdde381a9d2a5c4c2cd28b02bb2077ea">CANDLE_STAND_POS</a></div><div class="ttdeci">const Vec2 CANDLE_STAND_POS</div><div class="ttdoc">炎(大)</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00036">ItemValue.h:36</a></div></div>
+<div class="ttc" id="aclass_candle_html_a718c156f6a336e25e81e1ea3832909ee"><div class="ttname"><a href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">Candle::m_CandleHp</a></div><div class="ttdeci">float m_CandleHp</div><div class="ttdoc">キャンドルのHP</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8h_source.html#l00120">Candle.h:120</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a></div><div class="ttdeci">ObjID</div><div class="ttdef"><b>Definition:</b> <a href="_object_i_d_8h_source.html#l00008">ObjectID.h:8</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_a78f36bdcc1027b2e4dfb71d470428987"><div class="ttname"><a href="_item_value_8h.html#a78f36bdcc1027b2e4dfb71d470428987">BIG_CANDLE_EFFECT_POS</a></div><div class="ttdeci">const Vec2 BIG_CANDLE_EFFECT_POS</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00030">ItemValue.h:30</a></div></div>
+<div class="ttc" id="a_graphics_8cpp_html_ad61dd9d1b71c35e0486dd004e99021a1"><div class="ttname"><a href="_graphics_8cpp.html#ad61dd9d1b71c35e0486dd004e99021a1">CandleDraw</a></div><div class="ttdeci">void CandleDraw(float x, float y, Texture *texture_data, Size size_, float hp_)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cpp_source.html#l00189">Graphics.cpp:189</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_ab6d4d86af247ac7e70cc5c176ba623a3"><div class="ttname"><a href="_item_value_8h.html#ab6d4d86af247ac7e70cc5c176ba623a3">CANDLE_BIG_FRAME</a></div><div class="ttdeci">const Size CANDLE_BIG_FRAME</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00018">ItemValue.h:18</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acabe78a54b8de7a3dc59c97ac2d2355aafd77acdae670e7c5736540a7ebfb4e66"><div class="ttname"><a href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aafd77acdae670e7c5736540a7ebfb4e66">GameCandleStandTex</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00014">GameSceneTex.h:14</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_a836fb70628abbc3f01523e99767dfc50"><div class="ttname"><a href="_item_value_8h.html#a836fb70628abbc3f01523e99767dfc50">CANDLE_SMALL_SIZE</a></div><div class="ttdeci">const Size CANDLE_SMALL_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00023">ItemValue.h:23</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acabe78a54b8de7a3dc59c97ac2d2355aa72742ee353a2c659567e3533c1f4802b"><div class="ttname"><a href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa72742ee353a2c659567e3533c1f4802b">GameCandleCenterEffectTex</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00016">GameSceneTex.h:16</a></div></div>
+<div class="ttc" id="a_input_8cpp_html_aa276e0dd5c42af1f1baa54558df126ee"><div class="ttname"><a href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a></div><div class="ttdeci">Vec2 GetMousePos()</div><div class="ttdoc">マウスの座標取得関数</div><div class="ttdef"><b>Definition:</b> <a href="_input_8cpp_source.html#l00245">Input.cpp:245</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_aee1d04a6a8d6caa039879e5bf86d31c6"><div class="ttname"><a href="_item_value_8h.html#aee1d04a6a8d6caa039879e5bf86d31c6">CANDLE_SMALL_FRAME</a></div><div class="ttdeci">const Size CANDLE_SMALL_FRAME</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00024">ItemValue.h:24</a></div></div>
+<div class="ttc" id="aclass_item_html_a7cc11af00ea7b0cc7441f94403301cb3"><div class="ttname"><a href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">Item::m_Frame</a></div><div class="ttdeci">Size m_Frame</div><div class="ttdoc">画像サイズ情報</div><div class="ttdef"><b>Definition:</b> <a href="_item_8h_source.html#l00057">Item.h:57</a></div></div>
+<div class="ttc" id="astruct_game_data_html_afb8e91137fade7c0ebae2e3058d5cdfda84bb252fa164b2e23c8d0ba24b32c1ee"><div class="ttname"><a href="struct_game_data.html#afb8e91137fade7c0ebae2e3058d5cdfda84bb252fa164b2e23c8d0ba24b32c1ee">GameData::CENTER</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_data_8h_source.html#l00015">GameData.h:15</a></div></div>
+<div class="ttc" id="aclass_object_html_a9f06f75335ce0023e49bd4b79afcc1a4"><div class="ttname"><a href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">Object::m_Id</a></div><div class="ttdeci">ObjID m_Id</div><div class="ttdoc">オブジェクトの識別番号</div><div class="ttdef"><b>Definition:</b> <a href="_object_8h_source.html#l00066">Object.h:66</a></div></div>
+<div class="ttc" id="aclass_candle_html_a68ec2526e66e9d7d8b647b48106087c0"><div class="ttname"><a href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">Candle::m_HasCaLight</a></div><div class="ttdeci">bool m_HasCaLight</div><div class="ttdoc">キャンドルが点灯情報</div><div class="ttdef"><b>Definition:</b> <a href="_candle_8h_source.html#l00117">Candle.h:117</a></div></div>
+<div class="ttc" id="astruct_size_html_a2d7b2c630483f984447eb428002fff44"><div class="ttname"><a href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Size::Width</a></div><div class="ttdeci">float Width</div><div class="ttdoc">横幅</div><div class="ttdef"><b>Definition:</b> <a href="_size_8h_source.html#l00041">Size.h:41</a></div></div>
+<div class="ttc" id="a_item_value_8h_html_a9a2a95a07fe25ca2aae4f85d33687901"><div class="ttname"><a href="_item_value_8h.html#a9a2a95a07fe25ca2aae4f85d33687901">CANDLE_EFFECT_FRAME</a></div><div class="ttdeci">const Size CANDLE_EFFECT_FRAME</div><div class="ttdef"><b>Definition:</b> <a href="_item_value_8h_source.html#l00029">ItemValue.h:29</a></div></div>
+<div class="ttc" id="aclass_item_html_ad6dc1fe14c2a56351fe35fb32b322b0f"><div class="ttname"><a href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">Item::m_Pos</a></div><div class="ttdeci">Vec2 m_Pos</div><div class="ttdoc">座標情報</div><div class="ttdef"><b>Definition:</b> <a href="_item_8h_source.html#l00053">Item.h:53</a></div></div>
+<div class="ttc" id="a_object_manager_8cpp_html_a98f0c5ac7f5990ffad58461f1d23f0a9"><div class="ttname"><a href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a></div><div class="ttdeci">ObjectManager * ObjManager()</div><div class="ttdoc">疑似的なシングルトンをプロトタイプ宣言</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00011">ObjectManager.cpp:11</a></div></div>
+<div class="ttc" id="aclass_object_html_a56b5956cea5204d55183a444a01a30d6"><div class="ttname"><a href="class_object.html#a56b5956cea5204d55183a444a01a30d6">Object::HasCaLight</a></div><div class="ttdeci">virtual bool HasCaLight()</div><div class="ttdoc">Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する</div><div class="ttdef"><b>Definition:</b> <a href="_object_8h_source.html#l00054">Object.h:54</a></div></div>
+<div class="ttc" id="a_graphics_8cpp_html_ae127ebbc405f6d4a791de7e8bf392e72"><div class="ttname"><a href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72">DrawTexture</a></div><div class="ttdeci">void DrawTexture(float x, float y, Texture *texture_data, float z_)</div><div class="ttdoc">テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cpp_source.html#l00116">Graphics.cpp:116</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_a1b83057247c09cdb8dec7926d827fb9.html">Object</a></li><li class="navelem"><a class="el" href="dir_dac628b53bacca635db8af31ad04590e.html">Item</a></li><li class="navelem"><a class="el" href="dir_520a77a6ef4591b625d74b2dc33694a8.html">Id</a></li><li class="navelem"><a class="el" href="_candle_8cpp.html">Candle.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

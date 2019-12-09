@@ -1,0 +1,16 @@
+<map id="OnMouseDown" name="OnMouseDown">
+<area shape="rect" id="node1" title="クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する" alt="" coords="860,107,971,133"/>
+<area shape="rect" id="node2" href="$_player_8cpp.html#a7f61ea99962e61af0d060ea9796a7355" title=" " alt="" coords="695,5,786,32"/>
+<area shape="rect" id="node4" href="$_clear_scene_8cpp.html#a95287bf1c183d14fc2136121b75001ee" title=" " alt="" coords="682,56,799,83"/>
+<area shape="rect" id="node8" href="$_title_scene_8cpp.html#a0161153381653a144cc6141ac2e8fdcb" title=" " alt="" coords="491,107,601,133"/>
+<area shape="rect" id="node10" href="$class_op_controller.html#a2bfe4fac77701dbc8b51b24238af0efa" title=" " alt="" coords="669,157,812,184"/>
+<area shape="rect" id="node13" href="$class_u_i.html#aab645726b1de7528bb8563d962886900" title="GameScene で使われている UI の更新処理" alt="" coords="675,208,806,235"/>
+<area shape="rect" id="node3" href="$class_player.html#a99b56ee3bc81fa207b1b15f9397e5c2b" title=" " alt="" coords="471,5,621,32"/>
+<area shape="rect" id="node5" href="$_clear_scene_8h.html#ad87d3394130984bbd676d78e680a2b83" title="ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される" alt="" coords="283,56,414,83"/>
+<area shape="rect" id="node6" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,107,227,133"/>
+<area shape="rect" id="node7" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,107,79,133"/>
+<area shape="rect" id="node9" href="$_title_scene_8h.html#a63f9414cad6abe8e97e3ddf336d7e166" title="タイトルシーンの更新関数 タイトルシーンの仕様が実行される" alt="" coords="287,107,411,133"/>
+<area shape="rect" id="node11" href="$_opening_scene_8cpp.html#a20db958d76742e662cf4c24efc1022dd" title=" " alt="" coords="479,157,613,184"/>
+<area shape="rect" id="node12" href="$_opening_scene_8h.html#a130a9d710956b3d6031a82fd31ac5c9e" title="ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される" alt="" coords="275,157,423,184"/>
+<area shape="rect" id="node14" href="$class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d" title="UIの生存情報の更新 GameScene に実装されている UI の処理" alt="" coords="505,208,587,235"/>
+</map>

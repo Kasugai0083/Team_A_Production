@@ -1,0 +1,460 @@
+\hypertarget{class_timer}{}\doxysection{Timer クラス}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+シーンやエネミーを制御するためのタイマークラス~\newline
+試験的に佐藤先生のシングルトンを導入  
+
+
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+
+
+Timer 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{class_timer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}}
+\begin{DoxyCompactList}\small\item\em タイマー変数をまとめた構造体 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}{Id}} \{ \mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698}{Id\+::\+S\+C\+E\+NE}}, 
+\mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec}{Id\+::\+C\+L\+E\+AR}}, 
+\mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c}{Id\+::\+M\+U\+S\+I\+C\+B\+OX}}, 
+\mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026ca39927116a38955fbcf1ee79fc8943c3d}{Id\+::\+M\+A\+X\+\_\+\+T\+I\+M\+E\+RS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_timer_ae2ada8383290c09b3101be48f7e0016e}{Init}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}} と m\+\_\+\+Hour\+Count を初期化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_timer_a670a5a366b4ec3091d70fa6a97e347f0}{Init}} (\mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}{Id}} id\+\_\+)
+\begin{DoxyCompactList}\small\item\em 識別番号で指定されたメンバ変数を初期化 param\mbox{[}in\mbox{]} id\+\_\+ 識別番号 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_timer_af07492f9694ecb54ac6c04ccc0408b9d}{Get\+Time}} (\mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}{Id}} id\+\_\+)
+\begin{DoxyCompactList}\small\item\em 識別番号で指定されたメンバ変数を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_timer_aaf1ad0dc8e82d81bca9271b577cd9f78}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em m\+\_\+\+Clear を描画@npocket\+\_\+watchをマウスオーバーしている場合に時間が表示される \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_timer_a77a6595649759e7236d1b43c2c10e16b}{Update}} ()
+\begin{DoxyCompactList}\small\item\em メンバ変数の更新@n\+Draw 用に m\+\_\+\+Minute, m\+\_\+\+Hour, m\+\_\+\+Sample に文字列を代入 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_timer_a546bcc8cb8606044f528a75953836f93}{Get\+Clear\+Time}} ()
+\begin{DoxyCompactList}\small\item\em シーン遷移に必要な値を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_timer_ae1512242c972be0676f39323ad26989f}{Create\+Instance}} ()
+\item 
+static void \mbox{\hyperlink{class_timer_a06eae1c66c8f64982ddf0fc0a93147ed}{Destroy\+Instance}} ()
+\item 
+static bool \mbox{\hyperlink{class_timer_a81c46ceb692e55250110201387b797a0}{Is\+Null}} ()
+\item 
+static \mbox{\hyperlink{class_timer}{Timer}} $\ast$ \mbox{\hyperlink{class_timer_aa415b575ccc6e9cac69d0f8ed541b082}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}} ()
+\item 
+\mbox{\hyperlink{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}{$\sim$\+Timer}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}} \mbox{\hyperlink{class_timer_a7bbbd270ded3f0278d08776adc0c0b34}{Timers}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}} のインスタンス \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_timer_a002e680e9f8fb77e550de53e7ecc303e}{m\+\_\+\+Hour\+Count}}
+\begin{DoxyCompactList}\small\item\em クリアに必要なカウント \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_timer_adc596e7ca5eba91b91c275fddacebb8e}{m\+\_\+\+Minute}}
+\begin{DoxyCompactList}\small\item\em デジタル時計風の描画に必要な文字列 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_timer_ae92734d6bbe446ea49a6d5fd661f19b2}{m\+\_\+\+Hour}}
+\item 
+std\+::string \mbox{\hyperlink{class_timer_a4700b26c7aa5ee9004b8a3b1a7492256}{m\+\_\+\+Sample}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_timer}{Timer}} $\ast$ \mbox{\hyperlink{class_timer_a333c9669327fac7cdcfd7c48d6116f7a}{p\+\_\+\+Instance}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+シーンやエネミーを制御するためのタイマークラス~\newline
+試験的に佐藤先生のシングルトンを導入 
+
+シーンやエネミーを制御するためのタイマーをオブジェクト化 
+
+ Timer.\+h の 14 行目に定義があります。
+
+
+
+\doxysubsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}\label{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}} 
+\index{Timer@{Timer}!Id@{Id}}
+\index{Id@{Id}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Id}{Id}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}{Timer\+::\+Id}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+構造体 \mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}} の識別番号 \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCENE@{SCENE}!Timer@{Timer}}\index{Timer@{Timer}!SCENE@{SCENE}}}\mbox{\Hypertarget{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698}\label{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698}} 
+S\+C\+E\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLEAR@{CLEAR}!Timer@{Timer}}\index{Timer@{Timer}!CLEAR@{CLEAR}}}\mbox{\Hypertarget{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec}\label{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec}} 
+C\+L\+E\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MUSICBOX@{MUSICBOX}!Timer@{Timer}}\index{Timer@{Timer}!MUSICBOX@{MUSICBOX}}}\mbox{\Hypertarget{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c}\label{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c}} 
+M\+U\+S\+I\+C\+B\+OX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_TIMERS@{MAX\_TIMERS}!Timer@{Timer}}\index{Timer@{Timer}!MAX\_TIMERS@{MAX\_TIMERS}}}\mbox{\Hypertarget{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026ca39927116a38955fbcf1ee79fc8943c3d}\label{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026ca39927116a38955fbcf1ee79fc8943c3d}} 
+M\+A\+X\+\_\+\+T\+I\+M\+E\+RS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Timer.\+h の 49 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_timer_a5f16e8da27d2a5a5242dead46de05d97}\label{class_timer_a5f16e8da27d2a5a5242dead46de05d97}} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+ Timer.\+h の 108 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_a5f16e8da27d2a5a5242dead46de05d97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}\label{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}} 
+\index{Timer@{Timer}!````~Timer@{$\sim$Timer}}
+\index{````~Timer@{$\sim$Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Timer()}{~Timer()}}
+{\footnotesize\ttfamily Timer\+::$\sim$\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+ Timer.\+h の 109 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_timer_ae1512242c972be0676f39323ad26989f}\label{class_timer_ae1512242c972be0676f39323ad26989f}} 
+\index{Timer@{Timer}!CreateInstance@{CreateInstance}}
+\index{CreateInstance@{CreateInstance}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{CreateInstance()}{CreateInstance()}}
+{\footnotesize\ttfamily static void Timer\+::\+Create\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+ Timer.\+h の 20 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_timer_ae1512242c972be0676f39323ad26989f_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{class_timer_ae1512242c972be0676f39323ad26989f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_a06eae1c66c8f64982ddf0fc0a93147ed}\label{class_timer_a06eae1c66c8f64982ddf0fc0a93147ed}} 
+\index{Timer@{Timer}!DestroyInstance@{DestroyInstance}}
+\index{DestroyInstance@{DestroyInstance}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{DestroyInstance()}{DestroyInstance()}}
+{\footnotesize\ttfamily static void Timer\+::\+Destroy\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+ Timer.\+h の 27 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_timer_a06eae1c66c8f64982ddf0fc0a93147ed_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_timer_a06eae1c66c8f64982ddf0fc0a93147ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_aaf1ad0dc8e82d81bca9271b577cd9f78}\label{class_timer_aaf1ad0dc8e82d81bca9271b577cd9f78}} 
+\index{Timer@{Timer}!Draw@{Draw}}
+\index{Draw@{Draw}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Timer\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+m\+\_\+\+Clear を描画@npocket\+\_\+watchをマウスオーバーしている場合に時間が表示される 
+
+
+
+ Timer.\+cpp の 83 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{class_timer_aaf1ad0dc8e82d81bca9271b577cd9f78_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_aaf1ad0dc8e82d81bca9271b577cd9f78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_a546bcc8cb8606044f528a75953836f93}\label{class_timer_a546bcc8cb8606044f528a75953836f93}} 
+\index{Timer@{Timer}!GetClearTime@{GetClearTime}}
+\index{GetClearTime@{GetClearTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{GetClearTime()}{GetClearTime()}}
+{\footnotesize\ttfamily int Timer\+::\+Get\+Clear\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+シーン遷移に必要な値を取得 
+
+\begin{DoxyReturn}{戻り値}
+m\+\_\+\+Hour\+Count の値を取得 
+\end{DoxyReturn}
+
+
+ Timer.\+h の 105 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_a546bcc8cb8606044f528a75953836f93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_aa415b575ccc6e9cac69d0f8ed541b082}\label{class_timer_aa415b575ccc6e9cac69d0f8ed541b082}} 
+\index{Timer@{Timer}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_timer}{Timer}}$\ast$ Timer\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+ Timer.\+h の 39 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_aa415b575ccc6e9cac69d0f8ed541b082_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_af07492f9694ecb54ac6c04ccc0408b9d}\label{class_timer_af07492f9694ecb54ac6c04ccc0408b9d}} 
+\index{Timer@{Timer}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{GetTime()}{GetTime()}}
+{\footnotesize\ttfamily int Timer\+::\+Get\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}{Id}}}]{id\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+識別番号で指定されたメンバ変数を取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em id\+\_\+} & 識別番号 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+識別番号で指定されたメンバ変数の値 
+\end{DoxyReturn}
+
+
+ Timer.\+cpp の 37 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_af07492f9694ecb54ac6c04ccc0408b9d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_ae2ada8383290c09b3101be48f7e0016e}\label{class_timer_ae2ada8383290c09b3101be48f7e0016e}} 
+\index{Timer@{Timer}!Init@{Init}}
+\index{Init@{Init}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Timer\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}} と m\+\_\+\+Hour\+Count を初期化 
+
+
+
+ Timer.\+cpp の 12 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_ae2ada8383290c09b3101be48f7e0016e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_a670a5a366b4ec3091d70fa6a97e347f0}\label{class_timer_a670a5a366b4ec3091d70fa6a97e347f0}} 
+\index{Timer@{Timer}!Init@{Init}}
+\index{Init@{Init}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Timer\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_timer_a8e68d73b43cbc6fd3f335fbc6fef026c}{Id}}}]{id\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+識別番号で指定されたメンバ変数を初期化 param\mbox{[}in\mbox{]} id\+\_\+ 識別番号 
+
+
+
+ Timer.\+cpp の 18 行目に定義があります。
+
+\mbox{\Hypertarget{class_timer_a81c46ceb692e55250110201387b797a0}\label{class_timer_a81c46ceb692e55250110201387b797a0}} 
+\index{Timer@{Timer}!IsNull@{IsNull}}
+\index{IsNull@{IsNull}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{IsNull()}{IsNull()}}
+{\footnotesize\ttfamily static bool Timer\+::\+Is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+ Timer.\+h の 34 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_a81c46ceb692e55250110201387b797a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_timer_a77a6595649759e7236d1b43c2c10e16b}\label{class_timer_a77a6595649759e7236d1b43c2c10e16b}} 
+\index{Timer@{Timer}!Update@{Update}}
+\index{Update@{Update}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Timer\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+メンバ変数の更新@n\+Draw 用に m\+\_\+\+Minute, m\+\_\+\+Hour, m\+\_\+\+Sample に文字列を代入 
+
+
+
+ Timer.\+cpp の 53 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_timer_a77a6595649759e7236d1b43c2c10e16b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_timer_ae92734d6bbe446ea49a6d5fd661f19b2}\label{class_timer_ae92734d6bbe446ea49a6d5fd661f19b2}} 
+\index{Timer@{Timer}!m\_Hour@{m\_Hour}}
+\index{m\_Hour@{m\_Hour}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{m\_Hour}{m\_Hour}}
+{\footnotesize\ttfamily std\+::string Timer\+::m\+\_\+\+Hour\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Timer.\+h の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_timer_a002e680e9f8fb77e550de53e7ecc303e}\label{class_timer_a002e680e9f8fb77e550de53e7ecc303e}} 
+\index{Timer@{Timer}!m\_HourCount@{m\_HourCount}}
+\index{m\_HourCount@{m\_HourCount}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{m\_HourCount}{m\_HourCount}}
+{\footnotesize\ttfamily int Timer\+::m\+\_\+\+Hour\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+クリアに必要なカウント 
+
+
+
+ Timer.\+h の 119 行目に定義があります。
+
+\mbox{\Hypertarget{class_timer_adc596e7ca5eba91b91c275fddacebb8e}\label{class_timer_adc596e7ca5eba91b91c275fddacebb8e}} 
+\index{Timer@{Timer}!m\_Minute@{m\_Minute}}
+\index{m\_Minute@{m\_Minute}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{m\_Minute}{m\_Minute}}
+{\footnotesize\ttfamily std\+::string Timer\+::m\+\_\+\+Minute\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+デジタル時計風の描画に必要な文字列 
+
+
+
+ Timer.\+h の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_timer_a4700b26c7aa5ee9004b8a3b1a7492256}\label{class_timer_a4700b26c7aa5ee9004b8a3b1a7492256}} 
+\index{Timer@{Timer}!m\_Sample@{m\_Sample}}
+\index{m\_Sample@{m\_Sample}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{m\_Sample}{m\_Sample}}
+{\footnotesize\ttfamily std\+::string Timer\+::m\+\_\+\+Sample\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ Timer.\+h の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_timer_a333c9669327fac7cdcfd7c48d6116f7a}\label{class_timer_a333c9669327fac7cdcfd7c48d6116f7a}} 
+\index{Timer@{Timer}!p\_Instance@{p\_Instance}}
+\index{p\_Instance@{p\_Instance}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{p\_Instance}{p\_Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timer}{Timer}} $\ast$ Timer\+::p\+\_\+\+Instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+ Timer.\+h の 112 行目に定義があります。
+
+\mbox{\Hypertarget{class_timer_a7bbbd270ded3f0278d08776adc0c0b34}\label{class_timer_a7bbbd270ded3f0278d08776adc0c0b34}} 
+\index{Timer@{Timer}!Timers@{Timers}}
+\index{Timers@{Timers}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Timers}{Timers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}} Timer\+::\+Timers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{struct_timer_1_1_t_i_m_e_r_s}{T\+I\+M\+E\+RS}} のインスタンス 
+
+
+
+ Timer.\+h の 117 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Src/\+Timer/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\item 
+Src/\+Timer/\mbox{\hyperlink{_timer_8cpp}{Timer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="InitGraphics" name="InitGraphics">
+<area shape="rect" id="node1" title="Graphics機能初期化関数 描画関連を使用可能にするための初期化を行う ※Engine.cppのInitEngineで実行しているので 　使用者は自分たちで使う必要はない" alt="" coords="5,81,96,108"/>
+<area shape="rect" id="node2" href="$_graphics_8cpp.html#a131fd321b209503403f8048de1ab66d9" title=" " alt="" coords="163,5,287,32"/>
+<area shape="rect" id="node3" href="$_graphics_8cpp.html#ae90987c1e8fc14bfa7f147cd03594bcb" title=" " alt="" coords="149,56,300,83"/>
+<area shape="rect" id="node4" href="$_graphics_8cpp.html#a66ece1ccb40619a36760028147584afd" title=" " alt="" coords="144,107,305,133"/>
+<area shape="rect" id="node5" href="$_graphics_8cpp.html#a553be0fa2cc1a0e0d59befeb2b5eb9ee" title=" " alt="" coords="169,157,280,184"/>
+</map>

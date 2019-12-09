@@ -1,0 +1,9 @@
+<map id="Object" name="Object">
+<area shape="rect" id="node1" title="オブジェクトを管理するクラス" alt="" coords="165,5,225,32"/>
+<area shape="rect" id="node2" href="$class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="139,80,185,107"/>
+<area shape="rect" id="node7" href="$class_u_i.html" title="UIを管理するクラス" alt="" coords="209,80,248,107"/>
+<area shape="rect" id="node3" href="$class_candle.html" title="蝋燭に纏わるオブジェクトを管理するクラス 蝋燭、燭台、蝋燭のエフェクト" alt="" coords="5,155,68,181"/>
+<area shape="rect" id="node4" href="$class_crystal.html" title="水晶を管理するクラス" alt="" coords="92,155,155,181"/>
+<area shape="rect" id="node5" href="$class_fire.html" title="蝋燭の火を管理するクラス" alt="" coords="179,155,223,181"/>
+<area shape="rect" id="node6" href="$class_watch.html" title="時計を管理するクラス" alt="" coords="247,155,307,181"/>
+</map>

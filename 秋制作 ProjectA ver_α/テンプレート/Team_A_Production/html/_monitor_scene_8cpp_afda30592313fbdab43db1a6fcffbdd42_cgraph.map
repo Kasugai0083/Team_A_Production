@@ -1,0 +1,8 @@
+<map id="LoadMonitor" name="LoadMonitor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,99,83"/>
+<area shape="rect" id="node2" href="$class_object_manager.html#a9771f5f3c34b9ce12c50dfd9900de191" title="全ての m_pObjects を初期化する" alt="" coords="147,5,281,32"/>
+<area shape="rect" id="node3" href="$_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="167,56,261,83"/>
+<area shape="rect" id="node6" href="$_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="168,107,260,133"/>
+<area shape="rect" id="node4" href="$_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="357,31,460,57"/>
+<area shape="rect" id="node5" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="329,81,488,108"/>
+</map>
