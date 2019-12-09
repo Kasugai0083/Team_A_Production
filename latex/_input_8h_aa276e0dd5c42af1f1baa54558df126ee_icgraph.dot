@@ -1,0 +1,20 @@
+digraph "GetMousePos"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="GetMousePos",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="マウスの座標取得関数"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Item::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_item.html#a93dd04b3c6bd57e9bf255abc2dfd70a5",tooltip="マウスが画像情報に重なった場合、黒ポリゴンを重ねる"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="UI::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d",tooltip="UIの生存情報の更新 GameScene に実装されている UI の処理"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Fire::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fire.html#a98dc82aa5d04562e3f298deda6c37a9a",tooltip="蝋燭の点灯情報に基づいて、火を更新 火の生死管理 蝋燭が溶けて火の座標が下がる処理"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Candle::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405",tooltip="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Crystal::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_crystal.html#ab48cd1bfbae2b0b10454edf2aec45e22",tooltip="水晶の更新 ゲームシーン以外では死亡 死んでいなければ当たり判定を取る"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Watch::Update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_watch.html#af9d38be1512f05cad910968e7e8aba5d",tooltip="時計の更新 ゲームシーン以外では死亡 死んでいなければ当たり判定を取る"];
+}

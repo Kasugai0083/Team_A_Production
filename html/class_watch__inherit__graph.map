@@ -1,0 +1,5 @@
+<map id="Watch" name="Watch">
+<area shape="rect" id="node1" title="時計を管理するクラス" alt="" coords="5,155,65,181"/>
+<area shape="rect" id="node2" href="$class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="12,80,59,107"/>
+<area shape="rect" id="node3" href="$class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
+</map>

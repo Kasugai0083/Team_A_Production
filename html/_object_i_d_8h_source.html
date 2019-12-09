@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Object/ObjectID.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_object_i_d_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ObjectID.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_object_i_d_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OBJECT_ID_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OBJECT_ID_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">    8</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//Item</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">CANDLE_RIGHT</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">CANDLE_EFFECT_RIGHT</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">CANDLE_LEFT</a>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">CANDLE_EFFECT_LEFT</a>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">CANDLE_CENTER</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">CANDLE_EFFECT_CENTER</a>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">CANDLE_STAND</a>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221acc913a008e0e9fa1686f71a8af068e77">FIRE_CENTER</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a54dd3bb364c8257986e6b16b769d8d54">FIRE_RIGHT</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a67c8b07ba00979e7f9853c397b93fd0a">FIRE_LEFT</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a37fdc56efd7bfd2cf16bf2a7dbef8495">CRYSTAL</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4">POCKET_WATCH</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//UI</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a2514681d6b4053162156d04e5c20060a">TITLE_LOGO</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a44b4831eacc09eaaa46e09ec9914ecaa">BUTTON_NEW_GAME</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221adb9515f637d0aead3c98f9facf8e03d4">BUTTON_CONTINUE</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a28484f064ad989b508b77a81ca9ace8b">GAME_BASE_UI</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab47e640a8ea3495c9ec8eb023498cb98">BUTTON_CONTROL_UI</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a53d59f70322325079b0643961c2f74fe">BUTTON_ON_CONTROL_UI</a>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7420fa6a2730661af1a6fa866972de98">MO_MASK_UI</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab2f606a018b008376dd2d951d80031c6">DESCRIPTION_UI</a>,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa1de6c4a59db7861f8bb027956dcabaa">MONITOR_MAP</a>,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aca81e7f6f2e3132b31774795c08746b5">BUTTON_WORKSHOP</a>,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a1f8eeb647190b87f20c2de470f2f1c45">BUTTON_STORE_ROOM</a>,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab58d919bb1090ac6d60ea269cb5ae65c">BUTTON_RECEPTION_ROOM</a>,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a448f4b4f87fa55d276d62071913664fb">BUTTON_CHILD_ROOM</a>,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6186425fea94004ecbe088015c8eeba3">BUTTON_RIGHT_CORRIDOR</a>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6c032e1832d3d94e70fe772446e8a226">BUTTON_LEFT_CORRIDOR</a>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a8a5d8ff61a9a6499f2fa7db7676fdb77">BUTTON_ON_WORKSHOP</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a9a2585242a75ff909d5c49994ccc2ff8">BUTTON_ON_STORE_ROOM</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aad6c894a7a63c0c7174a3eceb652bb34">BUTTON_ON_RECEPTION_ROOM</a>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a49fcc6728a046537b46f3bba6692fb1f">BUTTON_ON_CHILD_ROOM</a>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac603d7cc2fb6a70be82caf89a9a6741d">BUTTON_ON_RIGHT_CORRIDOR</a>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a4394ae71d66bb9b413f86e334ba58ce1">BUTTON_ON_LEFT_CORRIDOR</a>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a74028881a3471004ebc1d3a812e02a37">MAX_OBJECT_NUM</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a821f1df754f3ad90e7659c4dfc1beb95">ObjID::CANDLE_STAND</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a44b4831eacc09eaaa46e09ec9914ecaa"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a44b4831eacc09eaaa46e09ec9914ecaa">ObjID::BUTTON_NEW_GAME</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a6186425fea94004ecbe088015c8eeba3"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6186425fea94004ecbe088015c8eeba3">ObjID::BUTTON_RIGHT_CORRIDOR</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a7420fa6a2730661af1a6fa866972de98"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7420fa6a2730661af1a6fa866972de98">ObjID::MO_MASK_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a49fcc6728a046537b46f3bba6692fb1f"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a49fcc6728a046537b46f3bba6692fb1f">ObjID::BUTTON_ON_CHILD_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a54dd3bb364c8257986e6b16b769d8d54"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a54dd3bb364c8257986e6b16b769d8d54">ObjID::FIRE_RIGHT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a67c8b07ba00979e7f9853c397b93fd0a"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a67c8b07ba00979e7f9853c397b93fd0a">ObjID::FIRE_LEFT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ad092304bf5c6d4513943cebfbaa3f9cf">ObjID::CANDLE_CENTER</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a7daa40f792e56a1892fe5e19a4c796f7">ObjID::CANDLE_EFFECT_RIGHT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221acc913a008e0e9fa1686f71a8af068e77"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221acc913a008e0e9fa1686f71a8af068e77">ObjID::FIRE_CENTER</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a116b89ba8cdafb28a8149193de1452c0">ObjID::CANDLE_EFFECT_CENTER</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a8a5d8ff61a9a6499f2fa7db7676fdb77"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a8a5d8ff61a9a6499f2fa7db7676fdb77">ObjID::BUTTON_ON_WORKSHOP</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a28484f064ad989b508b77a81ca9ace8b"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a28484f064ad989b508b77a81ca9ace8b">ObjID::GAME_BASE_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a37fdc56efd7bfd2cf16bf2a7dbef8495"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a37fdc56efd7bfd2cf16bf2a7dbef8495">ObjID::CRYSTAL</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a1f8eeb647190b87f20c2de470f2f1c45"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a1f8eeb647190b87f20c2de470f2f1c45">ObjID::BUTTON_STORE_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab47e640a8ea3495c9ec8eb023498cb98"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab47e640a8ea3495c9ec8eb023498cb98">ObjID::BUTTON_CONTROL_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab5c36f60668d975d8ba6d106a2d48ec6">ObjID::CANDLE_LEFT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a53d59f70322325079b0643961c2f74fe"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a53d59f70322325079b0643961c2f74fe">ObjID::BUTTON_ON_CONTROL_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aa1de6c4a59db7861f8bb027956dcabaa"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa1de6c4a59db7861f8bb027956dcabaa">ObjID::MONITOR_MAP</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a6c032e1832d3d94e70fe772446e8a226"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a6c032e1832d3d94e70fe772446e8a226">ObjID::BUTTON_LEFT_CORRIDOR</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a448f4b4f87fa55d276d62071913664fb"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a448f4b4f87fa55d276d62071913664fb">ObjID::BUTTON_CHILD_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab1096e9e0e0950e254749f3d7226defa">ObjID::CANDLE_RIGHT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a2514681d6b4053162156d04e5c20060a"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a2514681d6b4053162156d04e5c20060a">ObjID::TITLE_LOGO</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aca81e7f6f2e3132b31774795c08746b5"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aca81e7f6f2e3132b31774795c08746b5">ObjID::BUTTON_WORKSHOP</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac4f6e1907d4bec66e91f6a56b3c75e8c">ObjID::CANDLE_EFFECT_LEFT</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a></div><div class="ttdeci">ObjID</div><div class="ttdef"><b>Definition:</b> <a href="_object_i_d_8h_source.html#l00008">ObjectID.h:8</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a4394ae71d66bb9b413f86e334ba58ce1"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a4394ae71d66bb9b413f86e334ba58ce1">ObjID::BUTTON_ON_LEFT_CORRIDOR</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aad6c894a7a63c0c7174a3eceb652bb34"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aad6c894a7a63c0c7174a3eceb652bb34">ObjID::BUTTON_ON_RECEPTION_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab58d919bb1090ac6d60ea269cb5ae65c"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab58d919bb1090ac6d60ea269cb5ae65c">ObjID::BUTTON_RECEPTION_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ac603d7cc2fb6a70be82caf89a9a6741d"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ac603d7cc2fb6a70be82caf89a9a6741d">ObjID::BUTTON_ON_RIGHT_CORRIDOR</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4">ObjID::POCKET_WATCH</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a9a2585242a75ff909d5c49994ccc2ff8"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a9a2585242a75ff909d5c49994ccc2ff8">ObjID::BUTTON_ON_STORE_ROOM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221ab2f606a018b008376dd2d951d80031c6"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221ab2f606a018b008376dd2d951d80031c6">ObjID::DESCRIPTION_UI</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221a74028881a3471004ebc1d3a812e02a37"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a74028881a3471004ebc1d3a812e02a37">ObjID::MAX_OBJECT_NUM</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221adb9515f637d0aead3c98f9facf8e03d4"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221adb9515f637d0aead3c98f9facf8e03d4">ObjID::BUTTON_CONTINUE</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_a1b83057247c09cdb8dec7926d827fb9.html">Object</a></li><li class="navelem"><a class="el" href="_object_i_d_8h.html">ObjectID.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

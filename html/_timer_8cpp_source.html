@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Timer/Timer.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_timer_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Timer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_timer_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_timer_8h.html">Timer.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;..//Scene/Scene.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;..//Engine/Graphics.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Object/ObjectManager.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//ここで時間の進みを変更</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="_timer_8cpp.html#a554bcb9ef59f066c0da01402e9bee254">    7</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_timer_8cpp.html#a554bcb9ef59f066c0da01402e9bee254">TIME_MAGNIFICATION</a> = 2;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//staticなメンバ変数を初期化【コンストラクタではやらない】</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="class_timer.html">Timer</a>* <a class="code" href="class_timer.html#a333c9669327fac7cdcfd7c48d6116f7a">Timer::p_Instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">Timer::Init</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ac8a8065a536ef87351f7f5da9e2136bb">m_Scene</a> = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">m_Clear</a> = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#aa8fd2dbe8eb57d62b00827d5522c1814">m_MusicBox</a> = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_timer.html#a002e680e9f8fb77e550de53e7ecc303e">m_HourCount</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_timer.html#a670a5a366b4ec3091d70fa6a97e347f0">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">Timer::Init</a>(<a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Id</a> id_) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">switch</span> (id_) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698">Id::SCENE</a>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ac8a8065a536ef87351f7f5da9e2136bb">m_Scene</a> = 0; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec">Id::CLEAR</a>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">m_Clear</a> = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c">Id::MUSICBOX</a>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#aa8fd2dbe8eb57d62b00827d5522c1814">m_MusicBox</a> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_timer.html#af07492f9694ecb54ac6c04ccc0408b9d">   37</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_timer.html#af07492f9694ecb54ac6c04ccc0408b9d">Timer::GetTime</a>(<a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Id</a> id_) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">switch</span> (id_){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698">Id::SCENE</a>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ac8a8065a536ef87351f7f5da9e2136bb">m_Scene</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec">Id::CLEAR</a>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">m_Clear</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">break</span>;  </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c">Id::MUSICBOX</a>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#aa8fd2dbe8eb57d62b00827d5522c1814">m_MusicBox</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_timer.html#a77a6595649759e7236d1b43c2c10e16b">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_timer.html#a77a6595649759e7236d1b43c2c10e16b">Timer::Update</a>() {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ac8a8065a536ef87351f7f5da9e2136bb">m_Scene</a>++;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">m_Clear</a>++;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#aa8fd2dbe8eb57d62b00827d5522c1814">m_MusicBox</a>++;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// ここで時間の調整</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> TIME = <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">m_Clear</a> / <a class="code" href="_timer_8cpp.html#a554bcb9ef59f066c0da01402e9bee254">TIME_MAGNIFICATION</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (TIME == 60) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timers</a>.<a class="code" href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">m_Clear</a> = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="class_timer.html#a002e680e9f8fb77e550de53e7ecc303e">m_HourCount</a>++;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">//左上のサンプル</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_timer.html#a4700b26c7aa5ee9004b8a3b1a7492256">m_Sample</a> = std::to_string(TIME);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//左下のデジタル時計表示</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_timer.html#ae92734d6bbe446ea49a6d5fd661f19b2">m_Hour</a> = std::to_string(<a class="code" href="class_timer.html#a002e680e9f8fb77e550de53e7ecc303e">m_HourCount</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_timer.html#adc596e7ca5eba91b91c275fddacebb8e">m_Minute</a> = std::to_string(TIME);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (TIME &lt; 10) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::string zero_plus = <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_timer.html#adc596e7ca5eba91b91c275fddacebb8e">m_Minute</a> = zero_plus + <a class="code" href="class_timer.html#adc596e7ca5eba91b91c275fddacebb8e">m_Minute</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_timer.html#aaf1ad0dc8e82d81bca9271b577cd9f78">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_timer.html#aaf1ad0dc8e82d81bca9271b577cd9f78">Timer::Draw</a>() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="class_object.html">Object</a>* WatchInstance = <a class="code" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a>()-&gt;<a class="code" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">GetObj</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4">ObjID::POCKET_WATCH</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//サンプル描画</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(100.f, 100.f, <a class="code" href="class_timer.html#a4700b26c7aa5ee9004b8a3b1a7492256">m_Sample</a>.c_str(), <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ab548046646b36c12aa6ba841de500094">White</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (WatchInstance-&gt;<a class="code" href="class_object.html#af936fbfd0a49fbc6311205cd7d8eff19">HasOnMouse</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(30.f, 1014.f, <span class="stringliteral">&quot;AM&quot;</span>, <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(130.f, 1014.f, <a class="code" href="class_timer.html#ae92734d6bbe446ea49a6d5fd661f19b2">m_Hour</a>.c_str(), <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(162.f, 1014.f, <span class="stringliteral">&quot;:&quot;</span>, <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(194.f, 1014.f, <a class="code" href="class_timer.html#adc596e7ca5eba91b91c275fddacebb8e">m_Minute</a>.c_str(), <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(30.f, 1014.f, <span class="stringliteral">&quot;@#&quot;</span>, <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(130.f, 1014.f, <span class="stringliteral">&quot;*&quot;</span>, <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(162.f, 1014.f, <span class="stringliteral">&quot;;&quot;</span>, <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a>(194.f, 1014.f, <span class="stringliteral">&quot;?=&quot;</span>, <a class="code" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, <a class="code" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_object_html_af936fbfd0a49fbc6311205cd7d8eff19"><div class="ttname"><a href="class_object.html#af936fbfd0a49fbc6311205cd7d8eff19">Object::HasOnMouse</a></div><div class="ttdeci">virtual bool HasOnMouse()=0</div><div class="ttdoc">HasOnMouse の純仮想関数</div></div>
+<div class="ttc" id="aclass_timer_html_a77a6595649759e7236d1b43c2c10e16b"><div class="ttname"><a href="class_timer.html#a77a6595649759e7236d1b43c2c10e16b">Timer::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">メンバ変数の更新@nDraw 用に m_Minute, m_Hour, m_Sample に文字列を代入</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cpp_source.html#l00053">Timer.cpp:53</a></div></div>
+<div class="ttc" id="astruct_timer_1_1_t_i_m_e_r_s_html_ab853d71f552c8e7f981ec2a19f52953a"><div class="ttname"><a href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">Timer::TIMERS::m_Clear</a></div><div class="ttdeci">int m_Clear</div><div class="ttdoc">クリア時間を制御</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00061">Timer.h:61</a></div></div>
+<div class="ttc" id="aclass_timer_html_ae2ada8383290c09b3101be48f7e0016e"><div class="ttname"><a href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">Timer::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">TIMERS と m_HourCount を初期化</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cpp_source.html#l00012">Timer.cpp:12</a></div></div>
+<div class="ttc" id="aclass_timer_html_a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698"><div class="ttname"><a href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698">Timer::Id::SCENE</a></div></div>
+<div class="ttc" id="aclass_timer_html_a4700b26c7aa5ee9004b8a3b1a7492256"><div class="ttname"><a href="class_timer.html#a4700b26c7aa5ee9004b8a3b1a7492256">Timer::m_Sample</a></div><div class="ttdeci">std::string m_Sample</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00122">Timer.h:122</a></div></div>
+<div class="ttc" id="a_graphics_8h_html_a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd"><div class="ttname"><a href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a></div><div class="ttdoc">黒</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00019">Graphics.h:19</a></div></div>
+<div class="ttc" id="aclass_timer_html_a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c"><div class="ttname"><a href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c">Timer::Id::MUSICBOX</a></div></div>
+<div class="ttc" id="astruct_timer_1_1_t_i_m_e_r_s_html_ac8a8065a536ef87351f7f5da9e2136bb"><div class="ttname"><a href="struct_timer_1_1_t_i_m_e_r_s.html#ac8a8065a536ef87351f7f5da9e2136bb">Timer::TIMERS::m_Scene</a></div><div class="ttdeci">int m_Scene</div><div class="ttdoc">シーン切り替えのクールタイム</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00059">Timer.h:59</a></div></div>
+<div class="ttc" id="a_timer_8h_html"><div class="ttname"><a href="_timer_8h.html">Timer.h</a></div></div>
+<div class="ttc" id="aclass_object_manager_html_acb889688c7374c0ed461dfcbabd4a1e0"><div class="ttname"><a href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">ObjectManager::GetObj</a></div><div class="ttdeci">Object * GetObj(ObjID id_)</div><div class="ttdoc">m_pObjects の インスタンス情報を取得する</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8h_source.html#l00037">ObjectManager.h:37</a></div></div>
+<div class="ttc" id="aclass_timer_html_a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec"><div class="ttname"><a href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec">Timer::Id::CLEAR</a></div></div>
+<div class="ttc" id="a_graphics_8h_html_a38781c7178610f85215f87793e99ed51ab548046646b36c12aa6ba841de500094"><div class="ttname"><a href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ab548046646b36c12aa6ba841de500094">White</a></div><div class="ttdoc">白</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00020">Graphics.h:20</a></div></div>
+<div class="ttc" id="aclass_timer_html_ae92734d6bbe446ea49a6d5fd661f19b2"><div class="ttname"><a href="class_timer.html#ae92734d6bbe446ea49a6d5fd661f19b2">Timer::m_Hour</a></div><div class="ttdeci">std::string m_Hour</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00122">Timer.h:122</a></div></div>
+<div class="ttc" id="aclass_timer_html_af07492f9694ecb54ac6c04ccc0408b9d"><div class="ttname"><a href="class_timer.html#af07492f9694ecb54ac6c04ccc0408b9d">Timer::GetTime</a></div><div class="ttdeci">int GetTime(Id id_)</div><div class="ttdoc">識別番号で指定されたメンバ変数を取得</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cpp_source.html#l00037">Timer.cpp:37</a></div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">オブジェクトを管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_object_8h_source.html#l00016">Object.h:16</a></div></div>
+<div class="ttc" id="aclass_timer_html_a002e680e9f8fb77e550de53e7ecc303e"><div class="ttname"><a href="class_timer.html#a002e680e9f8fb77e550de53e7ecc303e">Timer::m_HourCount</a></div><div class="ttdeci">int m_HourCount</div><div class="ttdoc">クリアに必要なカウント</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00119">Timer.h:119</a></div></div>
+<div class="ttc" id="aclass_timer_html_a333c9669327fac7cdcfd7c48d6116f7a"><div class="ttname"><a href="class_timer.html#a333c9669327fac7cdcfd7c48d6116f7a">Timer::p_Instance</a></div><div class="ttdeci">static Timer * p_Instance</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00112">Timer.h:112</a></div></div>
+<div class="ttc" id="a_timer_8cpp_html_a554bcb9ef59f066c0da01402e9bee254"><div class="ttname"><a href="_timer_8cpp.html#a554bcb9ef59f066c0da01402e9bee254">TIME_MAGNIFICATION</a></div><div class="ttdeci">const int TIME_MAGNIFICATION</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cpp_source.html#l00007">Timer.cpp:7</a></div></div>
+<div class="ttc" id="a_graphics_8h_html_a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38"><div class="ttname"><a href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a></div><div class="ttdoc">大</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00029">Graphics.h:29</a></div></div>
+<div class="ttc" id="aclass_timer_html_a8e68d73b43cbc6fd3f335fbc6fef026c"><div class="ttname"><a href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Timer::Id</a></div><div class="ttdeci">Id</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00049">Timer.h:49</a></div></div>
+<div class="ttc" id="a_graphics_8cpp_html_ade225ed20c7379123ec2622e7b635374"><div class="ttname"><a href="_graphics_8cpp.html#ade225ed20c7379123ec2622e7b635374">DrawFont</a></div><div class="ttdeci">void DrawFont(float pos_x, float pos_y, const char *text, FontSize font_type, FontColor color)</div><div class="ttdoc">フォント描画関数 指定された位置にフォントを描画する</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cpp_source.html#l00289">Graphics.cpp:289</a></div></div>
+<div class="ttc" id="aclass_timer_html_aaf1ad0dc8e82d81bca9271b577cd9f78"><div class="ttname"><a href="class_timer.html#aaf1ad0dc8e82d81bca9271b577cd9f78">Timer::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdoc">m_Clear を描画@npocket_watchをマウスオーバーしている場合に時間が表示される</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cpp_source.html#l00083">Timer.cpp:83</a></div></div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">シーンやエネミーを制御するためのタイマークラス 試験的に佐藤先生のシングルトンを導入</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00014">Timer.h:14</a></div></div>
+<div class="ttc" id="astruct_timer_1_1_t_i_m_e_r_s_html_aa8fd2dbe8eb57d62b00827d5522c1814"><div class="ttname"><a href="struct_timer_1_1_t_i_m_e_r_s.html#aa8fd2dbe8eb57d62b00827d5522c1814">Timer::TIMERS::m_MusicBox</a></div><div class="ttdeci">int m_MusicBox</div><div class="ttdoc">パペットの起動を制御</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00063">Timer.h:63</a></div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221aa0d0175487a7a58f4658a3b36ff7e1f4">ObjID::POCKET_WATCH</a></div></div>
+<div class="ttc" id="a_object_manager_8cpp_html_a98f0c5ac7f5990ffad58461f1d23f0a9"><div class="ttname"><a href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9">ObjManager</a></div><div class="ttdeci">ObjectManager * ObjManager()</div><div class="ttdoc">疑似的なシングルトンをプロトタイプ宣言</div><div class="ttdef"><b>Definition:</b> <a href="_object_manager_8cpp_source.html#l00011">ObjectManager.cpp:11</a></div></div>
+<div class="ttc" id="aclass_timer_html_a7bbbd270ded3f0278d08776adc0c0b34"><div class="ttname"><a href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timer::Timers</a></div><div class="ttdeci">TIMERS Timers</div><div class="ttdoc">TIMERS のインスタンス</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00117">Timer.h:117</a></div></div>
+<div class="ttc" id="aclass_timer_html_adc596e7ca5eba91b91c275fddacebb8e"><div class="ttname"><a href="class_timer.html#adc596e7ca5eba91b91c275fddacebb8e">Timer::m_Minute</a></div><div class="ttdeci">std::string m_Minute</div><div class="ttdoc">デジタル時計風の描画に必要な文字列</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00122">Timer.h:122</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_0612e28d658b49d4db3b95ea0fcadb51.html">Timer</a></li><li class="navelem"><a class="el" href="_timer_8cpp.html">Timer.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

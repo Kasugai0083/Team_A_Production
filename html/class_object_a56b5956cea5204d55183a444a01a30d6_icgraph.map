@@ -1,0 +1,12 @@
+<map id="Object::HasCaLight" name="Object::HasCaLight">
+<area shape="rect" id="node1" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="625,107,760,133"/>
+<area shape="rect" id="node2" href="$class_fire.html#ad079ebe0f50929022b4e33ea406e4412" title="蝋燭の点灯情報と自身の生存情報に基づいて描画" alt="" coords="465,5,546,32"/>
+<area shape="rect" id="node3" href="$_game_scene_8h.html#a758cda2c7e70579e62ec2a9b4f4b7aa6" title=" " alt="" coords="444,56,567,83"/>
+<area shape="rect" id="node7" href="$class_candle.html#a5bebb511757ff21039189bca77a5cfee" title="キャンドルエフェクトの生死情報を管理" alt="" coords="433,107,577,133"/>
+<area shape="rect" id="node9" href="$class_fire.html#a98dc82aa5d04562e3f298deda6c37a9a" title="蝋燭の点灯情報に基づいて、火を更新 火の生死管理 蝋燭が溶けて火の座標が下がる処理" alt="" coords="459,157,552,184"/>
+<area shape="rect" id="node10" href="$class_ran.html#a002243e1837061ed361c62f68a189aac" title=" " alt="" coords="458,208,553,235"/>
+<area shape="rect" id="node4" href="$_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="286,56,374,83"/>
+<area shape="rect" id="node5" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,56,227,83"/>
+<area shape="rect" id="node6" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,56,79,83"/>
+<area shape="rect" id="node8" href="$class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="275,107,385,133"/>
+</map>

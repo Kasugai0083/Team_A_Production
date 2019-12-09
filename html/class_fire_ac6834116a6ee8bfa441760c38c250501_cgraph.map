@@ -1,0 +1,6 @@
+<map id="Fire::SceneDeath" name="Fire::SceneDeath">
+<area shape="rect" id="node1" title="GameView 情報から生存情報を管理" alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node2" href="$class_fire.html#a516fbe2b9263e9b85d3f2b46eab3e9f8" title="生存情報を引数によって管理" alt="" coords="185,5,299,32"/>
+<area shape="rect" id="node3" href="$_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="199,56,285,83"/>
+<area shape="rect" id="node4" href="$_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="176,107,308,133"/>
+</map>

@@ -1,0 +1,132 @@
+\hypertarget{class_enemy_1_1_enemy_timer}{}\doxysection{Enemy\+::Enemy\+Timer クラス}
+\label{class_enemy_1_1_enemy_timer}\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+
+
+{\ttfamily \#include $<$Enemy.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_1_1_enemy_timer_a213188c4994fa7283fef2d06b780171d}{Enemy\+Timer}} (int time\+\_\+, int min\+\_\+time\+\_\+, int max\+\_\+time)
+\item 
+\mbox{\hyperlink{class_enemy_1_1_enemy_timer_a9f5d85c6b6e626989fae82bb924ff90d}{$\sim$\+Enemy\+Timer}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_enemy_1_1_enemy_timer_a60cc56de07fe476672039faa80785fd9}{Get\+Rand}} (unsigned int min\+\_\+val\+\_\+, unsigned int max\+\_\+val\+\_\+)
+\item 
+bool \mbox{\hyperlink{class_enemy_1_1_enemy_timer_a58193fe741326efb5d14d4385276b6c2}{Spawn\+Timer}} (\mbox{\hyperlink{class_enemy}{Enemy}} \&enemy\+\_\+)
+\item 
+bool \mbox{\hyperlink{class_enemy_1_1_enemy_timer_a93826a8b788aa2699e580372e2e7bc4d}{Move\+Timer}} (\mbox{\hyperlink{class_enemy}{Enemy}} \&enemy\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_enemy_1_1_enemy_timer_a0ac6f451f68698e5d867072c081d8d80}{m\+\_\+\+Time}}
+\item 
+int \mbox{\hyperlink{class_enemy_1_1_enemy_timer_a5e3d1763a981eae0edefe98ca93da3a8}{m\+\_\+\+Rand\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+
+
+ Enemy.\+h の 55 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_enemy_1_1_enemy_timer_a213188c4994fa7283fef2d06b780171d}\label{class_enemy_1_1_enemy_timer_a213188c4994fa7283fef2d06b780171d}} 
+\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}!EnemyTimer@{EnemyTimer}}
+\index{EnemyTimer@{EnemyTimer}!Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+\doxysubsubsection{\texorpdfstring{EnemyTimer()}{EnemyTimer()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy\+Timer\+::\+Enemy\+Timer (\begin{DoxyParamCaption}\item[{int}]{time\+\_\+,  }\item[{int}]{min\+\_\+time\+\_\+,  }\item[{int}]{max\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Enemy.\+h の 61 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_enemy_1_1_enemy_timer_a213188c4994fa7283fef2d06b780171d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_enemy_1_1_enemy_timer_a9f5d85c6b6e626989fae82bb924ff90d}\label{class_enemy_1_1_enemy_timer_a9f5d85c6b6e626989fae82bb924ff90d}} 
+\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}!````~EnemyTimer@{$\sim$EnemyTimer}}
+\index{````~EnemyTimer@{$\sim$EnemyTimer}!Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+\doxysubsubsection{\texorpdfstring{$\sim$EnemyTimer()}{~EnemyTimer()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy\+Timer\+::$\sim$\+Enemy\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Enemy.\+h の 69 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_enemy_1_1_enemy_timer_a60cc56de07fe476672039faa80785fd9}\label{class_enemy_1_1_enemy_timer_a60cc56de07fe476672039faa80785fd9}} 
+\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}!GetRand@{GetRand}}
+\index{GetRand@{GetRand}!Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+\doxysubsubsection{\texorpdfstring{GetRand()}{GetRand()}}
+{\footnotesize\ttfamily unsigned int Enemy\+::\+Enemy\+Timer\+::\+Get\+Rand (\begin{DoxyParamCaption}\item[{unsigned int}]{min\+\_\+val\+\_\+,  }\item[{unsigned int}]{max\+\_\+val\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+ Enemy.\+cpp の 5 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_enemy_1_1_enemy_timer_a60cc56de07fe476672039faa80785fd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_enemy_1_1_enemy_timer_a93826a8b788aa2699e580372e2e7bc4d}\label{class_enemy_1_1_enemy_timer_a93826a8b788aa2699e580372e2e7bc4d}} 
+\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}!MoveTimer@{MoveTimer}}
+\index{MoveTimer@{MoveTimer}!Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+\doxysubsubsection{\texorpdfstring{MoveTimer()}{MoveTimer()}}
+{\footnotesize\ttfamily bool Enemy\+::\+Enemy\+Timer\+::\+Move\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy}{Enemy}} \&}]{enemy\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+ Enemy.\+cpp の 29 行目に定義があります。
+
+\mbox{\Hypertarget{class_enemy_1_1_enemy_timer_a58193fe741326efb5d14d4385276b6c2}\label{class_enemy_1_1_enemy_timer_a58193fe741326efb5d14d4385276b6c2}} 
+\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}!SpawnTimer@{SpawnTimer}}
+\index{SpawnTimer@{SpawnTimer}!Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+\doxysubsubsection{\texorpdfstring{SpawnTimer()}{SpawnTimer()}}
+{\footnotesize\ttfamily bool Enemy\+::\+Enemy\+Timer\+::\+Spawn\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy}{Enemy}} \&}]{enemy\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+ Enemy.\+cpp の 14 行目に定義があります。
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_enemy_1_1_enemy_timer_a5e3d1763a981eae0edefe98ca93da3a8}\label{class_enemy_1_1_enemy_timer_a5e3d1763a981eae0edefe98ca93da3a8}} 
+\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}!m\_RandTime@{m\_RandTime}}
+\index{m\_RandTime@{m\_RandTime}!Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+\doxysubsubsection{\texorpdfstring{m\_RandTime}{m\_RandTime}}
+{\footnotesize\ttfamily int Enemy\+::\+Enemy\+Timer\+::m\+\_\+\+Rand\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ Enemy.\+h の 87 行目に定義があります。
+
+\mbox{\Hypertarget{class_enemy_1_1_enemy_timer_a0ac6f451f68698e5d867072c081d8d80}\label{class_enemy_1_1_enemy_timer_a0ac6f451f68698e5d867072c081d8d80}} 
+\index{Enemy::EnemyTimer@{Enemy::EnemyTimer}!m\_Time@{m\_Time}}
+\index{m\_Time@{m\_Time}!Enemy::EnemyTimer@{Enemy::EnemyTimer}}
+\doxysubsubsection{\texorpdfstring{m\_Time}{m\_Time}}
+{\footnotesize\ttfamily int Enemy\+::\+Enemy\+Timer\+::m\+\_\+\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ Enemy.\+h の 86 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Src/\+Character/\+Enemy/\mbox{\hyperlink{_enemy_8h}{Enemy.\+h}}\item 
+Src/\+Character/\+Enemy/\mbox{\hyperlink{_enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}

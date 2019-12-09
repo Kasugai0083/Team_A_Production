@@ -1,0 +1,21 @@
+<map id="UpdateClearScene" name="UpdateClearScene">
+<area shape="rect" id="node1" title="ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される" alt="" coords="5,157,136,184"/>
+<area shape="rect" id="node2" href="$_clear_scene_8cpp.html#a78ed8b4184e46b5412f14a64f5b6443c" title=" " alt="" coords="197,31,321,57"/>
+<area shape="rect" id="node4" href="$_scene_8cpp.html#a9127a02a504755a923f76ef9108d53b0" title="現在実行中のシーンステップの取得関数" alt="" coords="184,132,333,159"/>
+<area shape="rect" id="node5" href="$_clear_scene_8cpp.html#a275bde985124cedd4fcfd1e3003bc1a4" title=" " alt="" coords="205,183,312,209"/>
+<area shape="rect" id="node14" href="$_clear_scene_8cpp.html#a95287bf1c183d14fc2136121b75001ee" title=" " alt="" coords="200,360,317,387"/>
+<area shape="rect" id="node3" href="$_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725" title="カテゴリー単位のテクスチャ解放関数 引数で指定されたカテゴリーのテクスチャを全て解放する" alt="" coords="406,5,570,32"/>
+<area shape="rect" id="node6" href="$_scene_8cpp.html#a9124bba4e4cb32fe152389f21623d827" title="シーンステップ変更関数 引数で指定したステップに切り替える" alt="" coords="423,309,553,336"/>
+<area shape="rect" id="node7" href="$class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777" title=" " alt="" coords="381,56,595,83"/>
+<area shape="rect" id="node8" href="$class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082" title=" " alt="" coords="422,107,554,133"/>
+<area shape="rect" id="node9" href="$class_timer.html#ae2ada8383290c09b3101be48f7e0016e" title="TIMERS と m_HourCount を初期化" alt="" coords="449,157,527,184"/>
+<area shape="rect" id="node10" href="$class_character.html#a10ef1a073e930eda4cab2c555d05c52f" title=" " alt="" coords="423,208,553,235"/>
+<area shape="rect" id="node11" href="$_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="441,259,535,285"/>
+<area shape="rect" id="node12" href="$_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="671,208,773,235"/>
+<area shape="rect" id="node13" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="643,259,801,285"/>
+<area shape="rect" id="node15" href="$class_scene_transition.html#a24fd0d8bf1dc606777a8e63b0b02df00" title=" " alt="" coords="397,360,579,387"/>
+<area shape="rect" id="node17" href="$_scene_8cpp.html#a9abc5a8b2132504a6a3abae9a46cc228" title=" " alt="" coords="665,411,779,437"/>
+<area shape="rect" id="node19" href="$_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02" title="クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する" alt="" coords="433,461,543,488"/>
+<area shape="rect" id="node16" href="$_input_8cpp.html#a3dac7d6291b5adaef424f722ca35c786" title=" " alt="" coords="689,309,755,336"/>
+<area shape="rect" id="node18" href="$class_scene_transition.html#aebcdfddd31193d3dadc50049723336df" title=" " alt="" coords="645,360,799,387"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="Enemy" name="Enemy">
+<area shape="rect" id="node1" title=" " alt="" coords="218,80,281,107"/>
+<area shape="rect" id="node3" href="$class_botan.html" title=" " alt="" coords="5,155,61,181"/>
+<area shape="rect" id="node4" href="$class_margaret.html" title=" " alt="" coords="86,155,159,181"/>
+<area shape="rect" id="node5" href="$class_ohagi.html" title=" " alt="" coords="184,155,240,181"/>
+<area shape="rect" id="node6" href="$class_ran.html" title=" " alt="" coords="264,155,309,181"/>
+<area shape="rect" id="node7" href="$class_sakura.html" title=" " alt="" coords="334,155,397,181"/>
+<area shape="rect" id="node8" href="$class_ume.html" title=" " alt="" coords="421,155,470,181"/>
+<area shape="rect" id="node2" href="$class_character.html" title=" " alt="" coords="210,5,289,32"/>
+</map>
