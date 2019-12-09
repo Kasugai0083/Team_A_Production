@@ -80,10 +80,10 @@ public:
 
 private:
 
-	//!< ObjectID.h で指定された識別番号分、インスタンス化する
+	//! ObjectID.h で指定された識別番号分、インスタンス化する
 	Object* m_pObjects[static_cast<int>(ObjID::MAX_OBJECT_NUM)];
 
 };
-
-ObjectManager* ObjManager(); //!< 疑似的なシングルトンをプロトタイプ宣言
+//! 疑似的なシングルトンをプロトタイプ宣言
+ObjectManager* ObjManager(); 
 

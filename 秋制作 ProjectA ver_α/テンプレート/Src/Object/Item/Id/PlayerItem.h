@@ -17,15 +17,17 @@
 */
 class Crystal : public Item {
 public:
-	Crystal() { m_IsDeath = true; };	//!< コンストラクタ
-	~Crystal() {};						//!< デストラクタ
+	//! コンストラクタ
+	Crystal() { m_IsDeath = true; };
+	//! デストラクタ
+	~Crystal() {};						
 
 	/**
 	*@fn void Init()
-	*@brief 水晶の初期化\n
-	*		テクスチャの読み込み\n
-	*		座標の指定\n
-	*		オブジェクトサイズの指定
+	*@brief 水晶の初期化@n
+	*テクスチャの読み込み@n
+	*座標の指定@n
+	*オブジェクトサイズの指定
 	*/
 	void Init()override {
 
@@ -47,8 +49,8 @@ public:
 	/**
 	*@fn void Update()
 	*@brief 水晶の更新\n
-	*		ゲームシーン以外では死亡\n
-	*		死んでいなければ当たり判定を取る\n
+	*ゲームシーン以外では死亡\n
+	*死んでいなければ当たり判定を取る\n
 	*/
 	void Update()override {
 
@@ -80,8 +82,8 @@ public:
 	/**
 	*@fn void Draw()
 	*@brief 水晶の描画\n
-	*		死亡していなければ描画\n
-	*		マウスオーバーでエフェクトの追加\n
+	*死亡していなければ描画\n
+	*マウスオーバーでエフェクトの追加\n
 	*/
 	void Draw()override {
 
@@ -94,6 +96,7 @@ public:
 	}
 
 private:
+	//! マウスオーバー時の画像
 	Texture* m_pOnHitTex;
 };
 
@@ -102,15 +105,17 @@ private:
 */
 class Watch : public Item {
 public:
-	Watch() { m_IsDeath = true; };	//!< コンストラクタ
-	~Watch() {};						//!< デストラクタ
+	//! コンストラクタ
+	Watch() { m_IsDeath = true; };
+	//! デストラクタ
+	~Watch() {};					
 
 	/**
 	*@fn void Init()
 	*@brief 時計の初期化\n
-	*		テクスチャの読み込み\n
-	*		座標の指定\n
-	*		オブジェクトサイズの指定
+	*テクスチャの読み込み\n
+	*座標の指定\n
+	*オブジェクトサイズの指定
 	*/
 	void Init()override {
 
@@ -132,8 +137,8 @@ public:
 	/**
 	*@fn void Update()
 	*@brief 時計の更新\n
-	*		ゲームシーン以外では死亡\n
-	*		死んでいなければ当たり判定を取る\n
+	*ゲームシーン以外では死亡\n
+	*死んでいなければ当たり判定を取る\n
 	*/
 	void Update()override {
 
@@ -165,8 +170,8 @@ public:
 	/**
 	*@fn void Draw()
 	*@brief 時計の描画\n
-	*		死亡していなければ描画\n
-	*		マウスオーバーでエフェクトの追加\n
+	*死亡していなければ描画\n
+	*マウスオーバーでエフェクトの追加\n
 	*/
 	void Draw()override {
 
@@ -179,6 +184,7 @@ public:
 	}
 
 private:
+	//! マウスオーバー時の画像
 	Texture* m_pOnHitTex;
 };
 

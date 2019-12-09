@@ -15,17 +15,22 @@
 */
 class Object {
 public:
+	//! コンストラクタ
+	Object() {};	
+	//! デストラクタ
+	~Object() {};	
 
-	Object() {};	//!< コンストラクタ
-	~Object() {};	//!< デストラクタ
+	//! Init の純仮想関数
+	virtual void Init() = 0;		
 
-	virtual void Init() = 0;		//!< Init の純仮想関数
+	//! Update の純仮想関数
+	virtual void Update() = 0;		
 
-	virtual void Update() = 0;		//!< Update の純仮想関数
-
-	virtual bool HasOnMouse() = 0;	//!< HasOnMouse の純仮想関数
+	//! HasOnMouse の純仮想関数
+	virtual bool HasOnMouse() = 0;	
 	
-	virtual void Draw() = 0;		//!< Draw の純仮想関数
+	//! Draw の純仮想関数
+	virtual void Draw() = 0;		
 
 	/**
 	* @fn float GetHp()
@@ -55,9 +60,10 @@ public:
 	*/
 	virtual bool HasMask() { return 0; };
 protected:
-
-	bool m_IsDeath; //!< オブジェクトの生存情報
-	ObjID m_Id;		//!< オブジェクトの識別番号
+	//! オブジェクトの生存情報
+	bool m_IsDeath;
+	//! オブジェクトの識別番号
+	ObjID m_Id;		
 
 private:
 

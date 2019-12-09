@@ -59,5 +59,6 @@ private:
 	//! ¶‘¶î•ñ‚ğˆø”‚É‚æ‚Á‚ÄŠÇ—
 	void FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_);
 private:
-	Object* m_pObject;	//!< @brief ˜XCî•ñ‚Ìæ“¾—p•Ï”
+	//! @brief ˜XCî•ñ‚Ìæ“¾—p•Ï”
+	Object* m_pObject;	
 };

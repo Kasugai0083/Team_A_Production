@@ -53,10 +53,14 @@ public:
 		MAX_TIMERS
 	};
 
+	//! タイマー変数をまとめた構造体
 	struct TIMERS {
-		int m_Scene;	//!< シーン切り替えのクールタイム
-		int m_Clear;	//!< クリア時間を制御
-		int m_MusicBox; //!< パペットの起動を制御
+		//! シーン切り替えのクールタイム
+		int m_Scene;	
+		//! クリア時間を制御
+		int m_Clear;	
+		//! パペットの起動を制御
+		int m_MusicBox;
 	};
 
 	/**
@@ -108,11 +112,14 @@ private:
 	static Timer* p_Instance;	//自分自身の唯一の実体
 private:
 	//本来使いたい変数群
-	TIMERS Timers;		//!< 各変数をまとめた構造体
-	int m_HourCount;	//!< クリアに必要なカウント
 
-	std::string m_Minute, m_Hour, m_Sample; //!< デジタル時計風の描画に必要な文字列
+	//! TIMERS のインスタンス
+	TIMERS Timers;		
+	//! クリアに必要なカウント
+	int m_HourCount;	
 
+	//! デジタル時計風の描画に必要な文字列
+	std::string m_Minute, m_Hour, m_Sample; 
 
 };
 

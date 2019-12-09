@@ -113,10 +113,13 @@ private:
 	void EffectUpdate();
 
 private:
-	
-	bool m_HasCaLight; //!< @brief キャンドルが点灯情報
-	float m_CandleHp; //!< @brief キャンドルのHP
-	float m_HeightRatio; //!< @brief キャンドルの高さ比率
+	//! @brief キャンドルが点灯情報
+	bool m_HasCaLight;
 
+	//! @brief キャンドルのHP
+	float m_CandleHp; 
+
+	//! @brief キャンドルの高さ比率
+	float m_HeightRatio; 
 };
 

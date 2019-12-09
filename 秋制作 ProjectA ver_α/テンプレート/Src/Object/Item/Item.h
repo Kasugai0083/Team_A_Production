@@ -18,9 +18,10 @@
 */
 class Item : public Object {
 public:
-
-	Item();		//!< コンストラクタ
-	~Item();	//!< デストラクタ
+	//! コンストラクタ
+	Item();	
+	//! デストラクタ
+	~Item();	
 
 	/**
 	* @fn void Draw()
@@ -44,11 +45,16 @@ public:
 	bool HasOnMouse()override { return m_OnMouse; };
 	
 protected:
-	Texture* m_pTex;	//!< テクスチャの情報を格納
-	bool m_OnMouse;		//!< マウスが重なったとき true
-	Vec2 m_Pos;			//!< 座標情報
-	Size m_Size;		//!< サイズ情報
-	Size m_Frame;		//!< 画像サイズ情報
+	//! テクスチャの情報を格納
+	Texture* m_pTex;	
+	//! マウスが重なったとき true
+	bool m_OnMouse;
+	//! 座標情報
+	Vec2 m_Pos;
+	//! サイズ情報
+	Size m_Size;		
+	//! 画像サイズ情報
+	Size m_Frame;		
 };
 
 #endif
