@@ -1,0 +1,208 @@
+\hypertarget{_monitor_scene_8cpp}{}\doxysection{Src/\+Scene/\+Monitor\+Scene.cpp ファイル}
+\label{_monitor_scene_8cpp}\index{Src/Scene/MonitorScene.cpp@{Src/Scene/MonitorScene.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Texture/\+Texture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Calculation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Player/\+Player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Enemy/\+Enemy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..//\+Timer/\+Timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Character\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Object/\+Object\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Object/\+U\+I/\+U\+Ivalue.\+h\char`\"{}}\newline
+Monitor\+Scene.\+cpp の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_monitor_scene_8cpp_a733fdf79f0d2d3190dfc349350d5e9df}{Init\+Monitor\+Scene}} ()
+\item 
+void \mbox{\hyperlink{_monitor_scene_8cpp_aebcee0a0a21b4af3c111191089b2b70e}{Main\+Monitor\+Scene}} ()
+\item 
+\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_monitor_scene_8cpp_a7cab58798cdc132659aab72b1040fe7c}{Finish\+Monitor\+Scene}} ()
+\item 
+void \mbox{\hyperlink{_monitor_scene_8cpp_afda30592313fbdab43db1a6fcffbdd42}{Load\+Monitor}} ()
+\item 
+void \mbox{\hyperlink{_monitor_scene_8cpp_ae5053d91a6e4f5b872b4228b8d29feca}{Draw\+Bg}} ()
+\item 
+\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_monitor_scene_8cpp_a502ddcf70f16f597857a74a4c5b0aff8}{Update\+Monitor\+Scene}} ()
+\item 
+void \mbox{\hyperlink{_monitor_scene_8cpp_a47e3106c0904c38712b612ed7ffa92bf}{Draw\+Monitor\+Scene}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_monitor_scene_8cpp_ae5053d91a6e4f5b872b4228b8d29feca}\label{_monitor_scene_8cpp_ae5053d91a6e4f5b872b4228b8d29feca}} 
+\index{MonitorScene.cpp@{MonitorScene.cpp}!DrawBg@{DrawBg}}
+\index{DrawBg@{DrawBg}!MonitorScene.cpp@{MonitorScene.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawBg()}{DrawBg()}}
+{\footnotesize\ttfamily void Draw\+Bg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Monitor\+Scene.\+cpp の 38 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_ae5053d91a6e4f5b872b4228b8d29feca_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_ae5053d91a6e4f5b872b4228b8d29feca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_monitor_scene_8cpp_a47e3106c0904c38712b612ed7ffa92bf}\label{_monitor_scene_8cpp_a47e3106c0904c38712b612ed7ffa92bf}} 
+\index{MonitorScene.cpp@{MonitorScene.cpp}!DrawMonitorScene@{DrawMonitorScene}}
+\index{DrawMonitorScene@{DrawMonitorScene}!MonitorScene.cpp@{MonitorScene.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawMonitorScene()}{DrawMonitorScene()}}
+{\footnotesize\ttfamily void Draw\+Monitor\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+ここが原因
+
+ Monitor\+Scene.\+cpp の 84 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_a47e3106c0904c38712b612ed7ffa92bf_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_a47e3106c0904c38712b612ed7ffa92bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_monitor_scene_8cpp_a7cab58798cdc132659aab72b1040fe7c}\label{_monitor_scene_8cpp_a7cab58798cdc132659aab72b1040fe7c}} 
+\index{MonitorScene.cpp@{MonitorScene.cpp}!FinishMonitorScene@{FinishMonitorScene}}
+\index{FinishMonitorScene@{FinishMonitorScene}!MonitorScene.cpp@{MonitorScene.cpp}}
+\doxysubsubsection{\texorpdfstring{FinishMonitorScene()}{FinishMonitorScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} Finish\+Monitor\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Monitor\+Scene.\+cpp の 154 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{_monitor_scene_8cpp_a7cab58798cdc132659aab72b1040fe7c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_a7cab58798cdc132659aab72b1040fe7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_monitor_scene_8cpp_a733fdf79f0d2d3190dfc349350d5e9df}\label{_monitor_scene_8cpp_a733fdf79f0d2d3190dfc349350d5e9df}} 
+\index{MonitorScene.cpp@{MonitorScene.cpp}!InitMonitorScene@{InitMonitorScene}}
+\index{InitMonitorScene@{InitMonitorScene}!MonitorScene.cpp@{MonitorScene.cpp}}
+\doxysubsubsection{\texorpdfstring{InitMonitorScene()}{InitMonitorScene()}}
+{\footnotesize\ttfamily void Init\+Monitor\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Monitor\+Scene.\+cpp の 95 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_a733fdf79f0d2d3190dfc349350d5e9df_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_a733fdf79f0d2d3190dfc349350d5e9df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_monitor_scene_8cpp_afda30592313fbdab43db1a6fcffbdd42}\label{_monitor_scene_8cpp_afda30592313fbdab43db1a6fcffbdd42}} 
+\index{MonitorScene.cpp@{MonitorScene.cpp}!LoadMonitor@{LoadMonitor}}
+\index{LoadMonitor@{LoadMonitor}!MonitorScene.cpp@{MonitorScene.cpp}}
+\doxysubsubsection{\texorpdfstring{LoadMonitor()}{LoadMonitor()}}
+{\footnotesize\ttfamily void Load\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Monitor\+Scene.\+cpp の 24 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_afda30592313fbdab43db1a6fcffbdd42_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_afda30592313fbdab43db1a6fcffbdd42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_monitor_scene_8cpp_aebcee0a0a21b4af3c111191089b2b70e}\label{_monitor_scene_8cpp_aebcee0a0a21b4af3c111191089b2b70e}} 
+\index{MonitorScene.cpp@{MonitorScene.cpp}!MainMonitorScene@{MainMonitorScene}}
+\index{MainMonitorScene@{MainMonitorScene}!MonitorScene.cpp@{MonitorScene.cpp}}
+\doxysubsubsection{\texorpdfstring{MainMonitorScene()}{MainMonitorScene()}}
+{\footnotesize\ttfamily void Main\+Monitor\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Monitor\+Scene.\+cpp の 110 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_aebcee0a0a21b4af3c111191089b2b70e_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_aebcee0a0a21b4af3c111191089b2b70e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_monitor_scene_8cpp_a502ddcf70f16f597857a74a4c5b0aff8}\label{_monitor_scene_8cpp_a502ddcf70f16f597857a74a4c5b0aff8}} 
+\index{MonitorScene.cpp@{MonitorScene.cpp}!UpdateMonitorScene@{UpdateMonitorScene}}
+\index{UpdateMonitorScene@{UpdateMonitorScene}!MonitorScene.cpp@{MonitorScene.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateMonitorScene()}{UpdateMonitorScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} Update\+Monitor\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Monitor\+Scene.\+cpp の 66 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_a502ddcf70f16f597857a74a4c5b0aff8_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_monitor_scene_8cpp_a502ddcf70f16f597857a74a4c5b0aff8_icgraph}
+\end{center}
+\end{figure}

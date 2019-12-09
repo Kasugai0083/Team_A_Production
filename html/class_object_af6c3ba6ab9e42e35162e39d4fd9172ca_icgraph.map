@@ -1,0 +1,4 @@
+<map id="Object::GetRatio" name="Object::GetRatio">
+<area shape="rect" id="node1" title=" " alt="" coords="147,5,265,32"/>
+<area shape="rect" id="node2" href="$class_fire.html#a98dc82aa5d04562e3f298deda6c37a9a" title="蝋燭の点灯情報に基づいて、火を更新 火の生死管理 蝋燭が溶けて火の座標が下がる処理" alt="" coords="5,5,99,32"/>
+</map>

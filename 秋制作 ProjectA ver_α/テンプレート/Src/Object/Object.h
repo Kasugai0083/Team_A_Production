@@ -1,53 +1,70 @@
 #pragma once
 
+/**
+* オブジェクトの親(派生元)@n
+* UI や Item に派生するクラスを格納
+*/
+
 #include "../Utility/Vec.h"
 #include "../Utility/Size.h"
 #include "../Texture/Texture.h"
 #include "ObjectID.h"
 
-struct Candller {
-	bool CenterCaLight;
-	bool RightCaLight;
-	bool LeftCaLight;
-};
-
-enum class CandleLight {
-	CENTER_LIGHT,
-	RIGHT_LIGHT,
-	LEFT_LIGHT,
-};
-
+/**
+* @brief オブジェクトを管理するクラス
+*/
 class Object {
 public:
+	//! コンストラクタ
+	Object() {};	
+	//! デストラクタ
+	~Object() {};	
 
-	Object() {};
-	~Object() {};
+	//! Init の純仮想関数
+	virtual void Init() = 0;		
 
-	virtual void Init() {};
-	virtual void InitCount() {};
+	//! Update の純仮想関数
+	virtual void Update() = 0;		
 
-	virtual void Update() {};
-
-	virtual bool HasOnMouse() = 0;
+	//! HasOnMouse の純仮想関数
+	virtual bool HasOnMouse() = 0;	
 	
-	virtual void Draw() {};
+	//! Draw の純仮想関数
+	virtual void Draw() = 0;		
 
-	virtual void SetCandller(Candller* candller_) { return; };
-	virtual void SetCount(int* count_) { return; };
-	virtual bool HasLight(CandleLight cl_) { return 0; };
+	/**
+	* @fn float GetHp()
+	* @brief Candle クラスで使用する GaetHp() の仮想関数
+	* Candle をインスタンス化して使用する
+	*/
+	virtual float GetHp() { return 0; }; 
 
-	virtual Vec2 GetPos() { return m_Pos; };
-	virtual float GetHp() { return 0; };
+	/**
+	* @fn float GetHp()
+	* @brief Candle クラスで使用する GaetHp() の仮想関数
+	* Candle をインスタンス化して使用する
+	*/
 	virtual float GetRatio() { return 0; };
+
+	/**
+	* @fn float HasCaLight()
+	* @brief Candle クラスで使用する HasCaLight() の仮想関数
+	* Candle をインスタンス化して使用する
+	*/
 	virtual bool HasCaLight() { return 0; };
 
+	/**
+	* @fn bool HasMas()
+	* @brief UI クラスで使用する HasMask() の仮想関数
+	* UI をインスタンス化して使用する
+	*/
 	virtual bool HasMask() { return 0; };
 protected:
-
+	//! オブジェクトの生存情報
 	bool m_IsDeath;
-	ObjID m_Id;
+	//! オブジェクトの識別番号
+	ObjID m_Id;		
 
 private:
-	Candller* m_Candller;
-	Vec2 m_Pos;
+
 };

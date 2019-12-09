@@ -1,0 +1,27 @@
+<map id="DrawTexture" name="DrawTexture">
+<area shape="rect" id="node1" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="759,461,853,488"/>
+<area shape="rect" id="node2" href="$class_item.html#a02e91fb9fffeb259442662ed220869c5" title="座標と画像情報に基づいて描画 マウスが重なったら黒ポリゴンを重ねる" alt="" coords="611,5,695,32"/>
+<area shape="rect" id="node3" href="$class_u_i.html#ab1403cfb83132a7815e11fd3ece8fc85" title="生存情報に基づいて描画 マウスが重なっている場合、黒ポリゴンを重ねる" alt="" coords="617,56,688,83"/>
+<area shape="rect" id="node4" href="$class_fire.html#ad079ebe0f50929022b4e33ea406e4412" title="蝋燭の点灯情報と自身の生存情報に基づいて描画" alt="" coords="612,107,693,133"/>
+<area shape="rect" id="node5" href="$class_candle.html#af893fbe070f2e749eb5b397fd18d37ca" title="m_Id に基づいて描画 蝋燭の場合 =&gt; ヘルスに応じて溶けるように描画される それ以外 =&gt; 指定された座標とサイズで描画" alt="" coords="603,157,702,184"/>
+<area shape="rect" id="node6" href="$class_ume.html#ad1efe4fe6e94575a8b83f683fd5fc6a6" title=" " alt="" coords="435,212,522,239"/>
+<area shape="rect" id="node7" href="$class_sakura.html#a8200f9a5944764ba38e1d0dd6ce709e2" title=" " alt="" coords="429,288,529,315"/>
+<area shape="rect" id="node8" href="$class_ohagi.html#a2ccb7e8eb90221f8bc8ddc1e1a822461" title=" " alt="" coords="432,351,525,377"/>
+<area shape="rect" id="node9" href="$class_ran.html#a6fb3b82ff6f6585f72c60bb341a146a3" title=" " alt="" coords="437,408,520,435"/>
+<area shape="rect" id="node10" href="$class_margaret.html#a9f235ef92d78e08b067afa1778bf7c86" title=" " alt="" coords="423,461,534,488"/>
+<area shape="rect" id="node11" href="$class_botan.html#ad255867f0c175804588e424917e7a9dc" title=" " alt="" coords="432,512,525,539"/>
+<area shape="rect" id="node12" href="$class_crystal.html#aaf8b7a71371dddc43e0d3e86a85df252" title="水晶の描画 死亡していなければ描画 マウスオーバーでエフェクトの追加" alt="" coords="603,563,703,589"/>
+<area shape="rect" id="node13" href="$class_watch.html#a69bfb791c78e56c1b145161442af887f" title="時計の描画 死亡していなければ描画 マウスオーバーでエフェクトの追加" alt="" coords="604,613,701,640"/>
+<area shape="rect" id="node14" href="$_graphics_8h.html#a8ae2a02cc1037867ead7f9318b195af0" title=" " alt="" coords="598,360,707,387"/>
+<area shape="rect" id="node15" href="$_monitor_scene_8cpp.html#ae5053d91a6e4f5b872b4228b8d29feca" title=" " alt="" coords="619,715,686,741"/>
+<area shape="rect" id="node20" href="$_clear_scene_8h.html#a154e4ba3962b084e7552af3a805726a0" title="ゲームオーバーシーンの描画関数 ゲームオーバーシーンのオブジェクトを描画するための関数" alt="" coords="419,765,538,792"/>
+<area shape="rect" id="node21" href="$_game_scene_8h.html#a758cda2c7e70579e62ec2a9b4f4b7aa6" title=" " alt="" coords="417,816,540,843"/>
+<area shape="rect" id="node22" href="$_opening_scene_8h.html#afafa0ea856d6013bbf2a3f749f5fab45" title="ゲームオーバーシーンの描画関数 ゲームオーバーシーンのオブジェクトを描画するための関数" alt="" coords="411,867,547,893"/>
+<area shape="rect" id="node23" href="$_title_scene_8h.html#a9ad700561ba709cf53cc96ea1e9833a6" title="タイトルシーンの描画関数 タイトルシーンのオブジェクトを描画する関数" alt="" coords="597,664,709,691"/>
+<area shape="rect" id="node24" href="$class_player.html#ace614875aaf28c64727890bc29f52dbd" title=" " alt="" coords="595,917,711,944"/>
+<area shape="rect" id="node16" href="$_monitor_scene_8h.html#a47e3106c0904c38712b612ed7ffa92bf" title=" " alt="" coords="413,715,544,741"/>
+<area shape="rect" id="node17" href="$_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="275,765,363,792"/>
+<area shape="rect" id="node18" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,765,227,792"/>
+<area shape="rect" id="node19" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,765,79,792"/>
+<area shape="rect" id="node25" href="$class_player.html#a5b60ad157bb1e8debca89ed6903ca2a4" title=" " alt="" coords="431,917,527,944"/>
+</map>

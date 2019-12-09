@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Scene/ClearScene.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_clear_scene_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ClearScene.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_clear_scene_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../Engine/Graphics.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../Engine/Input.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../Texture/Texture.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_clear_scene_8h.html">ClearScene.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Engine/Calculation.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;..//Timer/Timer.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Character/Player/Player.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Character/CharacterManager.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../Character/CharacterID.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// ゲームオーバーシーンの初期化</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_clear_scene_8cpp.html#a275bde985124cedd4fcfd1e3003bc1a4">InitClearScene</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// ゲームオーバーシーンのメイン</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_clear_scene_8cpp.html#a95287bf1c183d14fc2136121b75001ee">MainClearScene</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// ゲームオーバーシーンの終了</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> <a class="code" href="_clear_scene_8cpp.html#a78ed8b4184e46b5412f14a64f5b6443c">FinishClearScene</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_clear_scene_8cpp.html#a4aca29e2df2ec63c0aea72680c7444d3">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_clear_scene_8cpp.html#a4aca29e2df2ec63c0aea72680c7444d3">g_ClearCount</a> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_clear_scene_8h.html#ad87d3394130984bbd676d78e680a2b83">   20</a></span>&#160;<a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> <a class="code" href="_clear_scene_8cpp.html#ad87d3394130984bbd676d78e680a2b83">UpdateClearScene</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="_scene_8cpp.html#a9127a02a504755a923f76ef9108d53b0">GetCurrentSceneStep</a>())</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1">SceneStep::InitStep</a>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="_clear_scene_8cpp.html#a275bde985124cedd4fcfd1e3003bc1a4">InitClearScene</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13">SceneStep::MainStep</a>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="_clear_scene_8cpp.html#a95287bf1c183d14fc2136121b75001ee">MainClearScene</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09">SceneStep::EndStep</a>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="_clear_scene_8cpp.html#a78ed8b4184e46b5412f14a64f5b6443c">FinishClearScene</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423ae99b265f95d22fcdb3ffedb6d482d261">SceneId::ClearScene</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_clear_scene_8h.html#a154e4ba3962b084e7552af3a805726a0">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_clear_scene_8cpp.html#a154e4ba3962b084e7552af3a805726a0">DrawClearScene</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_character.html">Character</a>* tmp_player = <a class="code" href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a>.<a class="code" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">GetCharacter</a>(<a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (tmp_player == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//プレイヤー死亡時は背景を変更</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (tmp_player-&gt;<a class="code" href="class_character.html#a10ef1a073e930eda4cab2c555d05c52f">IsActive</a>() == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72">DrawTexture</a>(0.0f, 0.0f, <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_result_scene_tex_8h.html#a98984cb7714e32a8fec8ca61654d1cbf">TEXTURE_CATEGORY_CLEAR</a>, <a class="code" href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9ab7de3293345cbd5da4addc93e554b763">ClearCategoryTextureList::ClearGameOverTex</a>));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72">DrawTexture</a>(0.0f, 0.0f, <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_result_scene_tex_8h.html#a98984cb7714e32a8fec8ca61654d1cbf">TEXTURE_CATEGORY_CLEAR</a>, <a class="code" href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9a4b9d412cba08cd05e73ec1e6e598e591">ClearCategoryTextureList::ClearBgTex</a>));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="_clear_scene_8cpp.html#a275bde985124cedd4fcfd1e3003bc1a4">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_clear_scene_8cpp.html#a275bde985124cedd4fcfd1e3003bc1a4">InitClearScene</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_timer.html">Timer</a>* pTimerInstance = <a class="code" href="class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082">Timer::GetInstance</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    pTimerInstance-&gt;<a class="code" href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">Init</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_character.html">Character</a>* tmp_player = <a class="code" href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a>.<a class="code" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">GetCharacter</a>(<a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (tmp_player-&gt;<a class="code" href="class_character.html#a10ef1a073e930eda4cab2c555d05c52f">IsActive</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="_clear_scene_8cpp.html#a4aca29e2df2ec63c0aea72680c7444d3">g_ClearCount</a>++;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/End/EndBg.png&quot;</span>, <a class="code" href="_result_scene_tex_8h.html#a98984cb7714e32a8fec8ca61654d1cbf">TEXTURE_CATEGORY_CLEAR</a>, <a class="code" href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9a4b9d412cba08cd05e73ec1e6e598e591">ClearCategoryTextureList::ClearBgTex</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="stringliteral">&quot;Res/End/GameOver.png&quot;</span>, <a class="code" href="_result_scene_tex_8h.html#a98984cb7714e32a8fec8ca61654d1cbf">TEXTURE_CATEGORY_CLEAR</a>, <a class="code" href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9ab7de3293345cbd5da4addc93e554b763">ClearCategoryTextureList::ClearGameOverTex</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="_scene_8cpp.html#a9124bba4e4cb32fe152389f21623d827">ChangeSceneStep</a>(<a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13">SceneStep::MainStep</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_clear_scene_8cpp.html#a95287bf1c183d14fc2136121b75001ee">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_clear_scene_8cpp.html#a95287bf1c183d14fc2136121b75001ee">MainClearScene</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="_scene_8cpp.html#a9abc5a8b2132504a6a3abae9a46cc228">SceneController</a>()-&gt;<a class="code" href="class_scene_transition.html#a24fd0d8bf1dc606777a8e63b0b02df00">GameEnd</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02">OnMouseDown</a>(<a class="code" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711a9d4d8b0b72fc2659da772d761a3c5ecb">Left</a>) == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="_scene_8cpp.html#a9124bba4e4cb32fe152389f21623d827">ChangeSceneStep</a>(<a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09">SceneStep::EndStep</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="_clear_scene_8cpp.html#a78ed8b4184e46b5412f14a64f5b6443c">   83</a></span>&#160;<a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> <a class="code" href="_clear_scene_8cpp.html#a78ed8b4184e46b5412f14a64f5b6443c">FinishClearScene</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725">ReleaseCategoryTexture</a>(<a class="code" href="_result_scene_tex_8h.html#a98984cb7714e32a8fec8ca61654d1cbf">TEXTURE_CATEGORY_CLEAR</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168">SceneId::TitleScene</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_texture_8cpp_html_ab555a1fa81787321e2d28314fcb11a69"><div class="ttname"><a href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a></div><div class="ttdeci">bool LoadTexture(const char *file_name, int id, int texture_id)</div><div class="ttdoc">テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00071">Texture.cpp:71</a></div></div>
+<div class="ttc" id="aclass_character_manager_html_a2db27469d39061f5e9cb4e55359d8777"><div class="ttname"><a href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">CharacterManager::GetCharacter</a></div><div class="ttdeci">Character * GetCharacter(int id)</div><div class="ttdef"><b>Definition:</b> <a href="_character_manager_8h_source.html#l00033">CharacterManager.h:33</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_ab8389a24369e4f9beb1d4f21e344e885"><div class="ttname"><a href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a></div><div class="ttdeci">Texture * GetTexture(int category_id, int texture_id)</div><div class="ttdoc">テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00081">Texture.cpp:81</a></div></div>
+<div class="ttc" id="a_clear_scene_8h_html"><div class="ttname"><a href="_clear_scene_8h.html">ClearScene.h</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13"><div class="ttname"><a href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13">MainStep</a></div><div class="ttdoc">メイン</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00099">Scene.h:99</a></div></div>
+<div class="ttc" id="aclass_character_html"><div class="ttname"><a href="class_character.html">Character</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_8h_source.html#l00009">Character.h:9</a></div></div>
+<div class="ttc" id="aclass_character_html_a10ef1a073e930eda4cab2c555d05c52f"><div class="ttname"><a href="class_character.html#a10ef1a073e930eda4cab2c555d05c52f">Character::IsActive</a></div><div class="ttdeci">virtual bool IsActive()</div><div class="ttdef"><b>Definition:</b> <a href="_character_8h_source.html#l00038">Character.h:38</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a></div><div class="ttdeci">SceneId</div><div class="ttdoc">シーンID</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00013">Scene.h:13</a></div></div>
+<div class="ttc" id="aclass_timer_html_ae2ada8383290c09b3101be48f7e0016e"><div class="ttname"><a href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">Timer::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">TIMERS と m_HourCount を初期化</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8cpp_source.html#l00012">Timer.cpp:12</a></div></div>
+<div class="ttc" id="a_scene_8cpp_html_a9124bba4e4cb32fe152389f21623d827"><div class="ttname"><a href="_scene_8cpp.html#a9124bba4e4cb32fe152389f21623d827">ChangeSceneStep</a></div><div class="ttdeci">void ChangeSceneStep(SceneStep next_step)</div><div class="ttdoc">シーンステップ変更関数 引数で指定したステップに切り替える</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00116">Scene.cpp:116</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168">TitleScene</a></div><div class="ttdoc">タイトルシーン</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00015">Scene.h:15</a></div></div>
+<div class="ttc" id="a_character_manager_8cpp_html_a95d8eb3e05890c267a200c30fd25791a"><div class="ttname"><a href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a></div><div class="ttdeci">CharacterManager g_Manager</div><div class="ttdef"><b>Definition:</b> <a href="_character_manager_8cpp_source.html#l00012">CharacterManager.cpp:12</a></div></div>
+<div class="ttc" id="a_scene_8cpp_html_a9abc5a8b2132504a6a3abae9a46cc228"><div class="ttname"><a href="_scene_8cpp.html#a9abc5a8b2132504a6a3abae9a46cc228">SceneController</a></div><div class="ttdeci">SceneTransition * SceneController()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00015">Scene.cpp:15</a></div></div>
+<div class="ttc" id="a_input_8cpp_html_a4f135e5f514d0fef704afaec9be02c02"><div class="ttname"><a href="_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02">OnMouseDown</a></div><div class="ttdeci">bool OnMouseDown(MouseButton button_type)</div><div class="ttdoc">クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する</div><div class="ttdef"><b>Definition:</b> <a href="_input_8cpp_source.html#l00198">Input.cpp:198</a></div></div>
+<div class="ttc" id="aclass_scene_transition_html_a24fd0d8bf1dc606777a8e63b0b02df00"><div class="ttname"><a href="class_scene_transition.html#a24fd0d8bf1dc606777a8e63b0b02df00">SceneTransition::GameEnd</a></div><div class="ttdeci">void GameEnd()</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00073">Scene.cpp:73</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_ab0c2b786fbd4f64be1269a9e37291725"><div class="ttname"><a href="_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725">ReleaseCategoryTexture</a></div><div class="ttdeci">void ReleaseCategoryTexture(int release_category)</div><div class="ttdoc">カテゴリー単位のテクスチャ解放関数 引数で指定されたカテゴリーのテクスチャを全て解放する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00041">Texture.cpp:41</a></div></div>
+<div class="ttc" id="a_clear_scene_8cpp_html_a78ed8b4184e46b5412f14a64f5b6443c"><div class="ttname"><a href="_clear_scene_8cpp.html#a78ed8b4184e46b5412f14a64f5b6443c">FinishClearScene</a></div><div class="ttdeci">SceneId FinishClearScene()</div><div class="ttdef"><b>Definition:</b> <a href="_clear_scene_8cpp_source.html#l00083">ClearScene.cpp:83</a></div></div>
+<div class="ttc" id="a_result_scene_tex_8h_html_ad134ebd7a574bce103168ff645f1a3e9ab7de3293345cbd5da4addc93e554b763"><div class="ttname"><a href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9ab7de3293345cbd5da4addc93e554b763">ClearGameOverTex</a></div><div class="ttdef"><b>Definition:</b> <a href="_result_scene_tex_8h_source.html#l00006">ResultSceneTex.h:6</a></div></div>
+<div class="ttc" id="a_scene_8cpp_html_a9127a02a504755a923f76ef9108d53b0"><div class="ttname"><a href="_scene_8cpp.html#a9127a02a504755a923f76ef9108d53b0">GetCurrentSceneStep</a></div><div class="ttdeci">SceneStep GetCurrentSceneStep()</div><div class="ttdoc">現在実行中のシーンステップの取得関数</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8cpp_source.html#l00111">Scene.cpp:111</a></div></div>
+<div class="ttc" id="a_result_scene_tex_8h_html_ad134ebd7a574bce103168ff645f1a3e9a4b9d412cba08cd05e73ec1e6e598e591"><div class="ttname"><a href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9a4b9d412cba08cd05e73ec1e6e598e591">ClearBgTex</a></div><div class="ttdoc">背景</div><div class="ttdef"><b>Definition:</b> <a href="_result_scene_tex_8h_source.html#l00005">ResultSceneTex.h:5</a></div></div>
+<div class="ttc" id="a_clear_scene_8cpp_html_a275bde985124cedd4fcfd1e3003bc1a4"><div class="ttname"><a href="_clear_scene_8cpp.html#a275bde985124cedd4fcfd1e3003bc1a4">InitClearScene</a></div><div class="ttdeci">void InitClearScene()</div><div class="ttdef"><b>Definition:</b> <a href="_clear_scene_8cpp_source.html#l00055">ClearScene.cpp:55</a></div></div>
+<div class="ttc" id="a_clear_scene_8cpp_html_ad87d3394130984bbd676d78e680a2b83"><div class="ttname"><a href="_clear_scene_8cpp.html#ad87d3394130984bbd676d78e680a2b83">UpdateClearScene</a></div><div class="ttdeci">SceneId UpdateClearScene()</div><div class="ttdoc">ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される</div><div class="ttdef"><b>Definition:</b> <a href="_clear_scene_8cpp_source.html#l00020">ClearScene.cpp:20</a></div></div>
+<div class="ttc" id="a_clear_scene_8cpp_html_a4aca29e2df2ec63c0aea72680c7444d3"><div class="ttname"><a href="_clear_scene_8cpp.html#a4aca29e2df2ec63c0aea72680c7444d3">g_ClearCount</a></div><div class="ttdeci">int g_ClearCount</div><div class="ttdef"><b>Definition:</b> <a href="_clear_scene_8cpp_source.html#l00018">ClearScene.cpp:18</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09"><div class="ttname"><a href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09">EndStep</a></div><div class="ttdoc">終了</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00100">Scene.h:100</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423ae99b265f95d22fcdb3ffedb6d482d261"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423ae99b265f95d22fcdb3ffedb6d482d261">ClearScene</a></div><div class="ttdoc">ゲームオーバーシーン</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00023">Scene.h:23</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1"><div class="ttname"><a href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1">InitStep</a></div><div class="ttdoc">初期化</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00098">Scene.h:98</a></div></div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">シーンやエネミーを制御するためのタイマークラス 試験的に佐藤先生のシングルトンを導入</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00014">Timer.h:14</a></div></div>
+<div class="ttc" id="a_clear_scene_8cpp_html_a154e4ba3962b084e7552af3a805726a0"><div class="ttname"><a href="_clear_scene_8cpp.html#a154e4ba3962b084e7552af3a805726a0">DrawClearScene</a></div><div class="ttdeci">void DrawClearScene()</div><div class="ttdoc">ゲームオーバーシーンの描画関数 ゲームオーバーシーンのオブジェクトを描画するための関数</div><div class="ttdef"><b>Definition:</b> <a href="_clear_scene_8cpp_source.html#l00038">ClearScene.cpp:38</a></div></div>
+<div class="ttc" id="a_result_scene_tex_8h_html_a98984cb7714e32a8fec8ca61654d1cbf"><div class="ttname"><a href="_result_scene_tex_8h.html#a98984cb7714e32a8fec8ca61654d1cbf">TEXTURE_CATEGORY_CLEAR</a></div><div class="ttdeci">#define TEXTURE_CATEGORY_CLEAR</div><div class="ttdoc">ヘルプカテゴリー</div><div class="ttdef"><b>Definition:</b> <a href="_result_scene_tex_8h_source.html#l00010">ResultSceneTex.h:10</a></div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_i_d_8h_source.html#l00013">CharacterID.h:13</a></div></div>
+<div class="ttc" id="a_input_8h_html_ac1ec3647c005eacad401b06e7e18f711a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711a9d4d8b0b72fc2659da772d761a3c5ecb">Left</a></div><div class="ttdoc">左</div><div class="ttdef"><b>Definition:</b> <a href="_input_8h_source.html#l00031">Input.h:31</a></div></div>
+<div class="ttc" id="a_clear_scene_8cpp_html_a95287bf1c183d14fc2136121b75001ee"><div class="ttname"><a href="_clear_scene_8cpp.html#a95287bf1c183d14fc2136121b75001ee">MainClearScene</a></div><div class="ttdeci">void MainClearScene()</div><div class="ttdef"><b>Definition:</b> <a href="_clear_scene_8cpp_source.html#l00072">ClearScene.cpp:72</a></div></div>
+<div class="ttc" id="a_graphics_8cpp_html_ae127ebbc405f6d4a791de7e8bf392e72"><div class="ttname"><a href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72">DrawTexture</a></div><div class="ttdeci">void DrawTexture(float x, float y, Texture *texture_data, float z_)</div><div class="ttdoc">テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cpp_source.html#l00116">Graphics.cpp:116</a></div></div>
+<div class="ttc" id="aclass_timer_html_aa415b575ccc6e9cac69d0f8ed541b082"><div class="ttname"><a href="class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082">Timer::GetInstance</a></div><div class="ttdeci">static Timer * GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="_timer_8h_source.html#l00039">Timer.h:39</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_bb4b684037018be5ca8f0f26e1152e7c.html">Scene</a></li><li class="navelem"><a class="el" href="_clear_scene_8cpp.html">ClearScene.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

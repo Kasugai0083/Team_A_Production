@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Texture/Texture.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_texture_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Texture.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_texture_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;d3dx9.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_texture_8h.html">Texture.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// カテゴリごとのテクスチャ保存用配列</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">    6</a></span>&#160;<span class="keyword">static</span> <a class="code" href="struct_texture.html">Texture</a>** <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[<a class="code" href="_texture_8h.html#a42477f314fae4e6db57014c0f554b0d6">MAX_TEXTURE_CATEGORY</a>] = { <span class="keyword">nullptr</span> };</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// カテゴリのテクスチャ最大サイズの配列</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// シーン追加時に記入を忘れないように</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_texture_8cpp.html#abf39bb2394475ba0a3d12a6ec070133d">   10</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_texture_8cpp.html#abf39bb2394475ba0a3d12a6ec070133d">TextureCaterogySize</a>[] = {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="_title_scene_tex_8h.html#af0cc055ad29f9d538ed31bb44ffd7b1ba9bcf7c60000628be6e22a3f6efd073c8">TitleCategoryTextureList::TitleTextureMax</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="_opening_scene_tex_8h.html#af5b628c5b7a2b8406dfe279d87d89ff6ad980a29b3e6651f8b9b2aabc112d9e26">OpeningCategoryTextureList::OpeningTextureMax</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa2eb76f007e8ef256923d88e03637fc28">GameCategoryTextureList::GameTextureMax</a>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9e99923610c331d6bd02559f467f6d71">EnemyCategoryTextureList::EnemyTextureMax</a>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="_game_scene_tex_8h.html#ac327258d7d7a7973892ebafc9c1dad97a1b2b563e85b655fdc12d04b8e0ec6e76">CenterCategoryTextureList::GameCenterTextureMax</a>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="_game_scene_tex_8h.html#acd588cfc8c3e2692b74a1dbfd692f91aabe295bd137a875fb92479912edbd281c">LeftCategoryTextureList::GameLeftTextureMax</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="_game_scene_tex_8h.html#a2c31e3fa2e6103d75cea41dd6fd70821a58da5a29e4ba1f6203817ca2a3971d7c">RightCategoryTextureList::GameRightTextureMax</a>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="_game_scene_tex_8h.html#a5877861909aeba929e33206da752ca9ba573e937bb0ec79c82a6800302433377c">MonitorCategoryTextureList::GameMonitorTextureMax</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9a1aeb38362d72faa1ac6fc95329ea9582">ClearCategoryTextureList::ClearTextureMax</a>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// IDチェック</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be">IsCategoryRangeCheck</a>(<span class="keywordtype">int</span> category_id, <span class="keywordtype">int</span> texture_id);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_texture_8h.html#ad684ebdecadeaa3a348be34505a8f68a">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_texture_8cpp.html#ad684ebdecadeaa3a348be34505a8f68a">InitTexture</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="_texture_8cpp.html#adf7bc429a7737bcf34789952fa0f8b90">AllReleaseTexture</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="_texture_8h.html#a42477f314fae4e6db57014c0f554b0d6">MAX_TEXTURE_CATEGORY</a>; i++)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[i] = (<a class="code" href="struct_texture.html">Texture</a> * *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_texture.html">Texture</a>*) * <a class="code" href="_texture_8cpp.html#abf39bb2394475ba0a3d12a6ec070133d">TextureCaterogySize</a>[i]);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="_texture_8cpp.html#abf39bb2394475ba0a3d12a6ec070133d">TextureCaterogySize</a>[i]; j++)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[i][j] = (<a class="code" href="struct_texture.html">Texture</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_texture.html">Texture</a>));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[i][j]-&gt;<a class="code" href="struct_texture.html#a14c6c1545ed820b1635590f4b4db6d55">TexutreData</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_texture_8h.html#a3308f207820dd8cf2964fffeb2a34cb8">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725">ReleaseCategoryTexture</a>(<span class="keywordtype">int</span> release_category)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[release_category] == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="_texture_8cpp.html#abf39bb2394475ba0a3d12a6ec070133d">TextureCaterogySize</a>[release_category]; i++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[release_category][i]-&gt;TexutreData == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[release_category][i]-&gt;<a class="code" href="struct_texture.html#a14c6c1545ed820b1635590f4b4db6d55">TexutreData</a>-&gt;Release();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[release_category][i]-&gt;<a class="code" href="struct_texture.html#a14c6c1545ed820b1635590f4b4db6d55">TexutreData</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="_texture_8h.html#adf7bc429a7737bcf34789952fa0f8b90">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_texture_8cpp.html#adf7bc429a7737bcf34789952fa0f8b90">AllReleaseTexture</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="_texture_8h.html#a42477f314fae4e6db57014c0f554b0d6">MAX_TEXTURE_CATEGORY</a>; i++)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725">ReleaseCategoryTexture</a>(i);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        free(<a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[i]);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[i] = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="_texture_8h.html#a765e9a08f1a6a5b0ee1cdf44d67037e6">   71</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* file_name, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> texture_id)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be">IsCategoryRangeCheck</a>(<span class="keywordtype">id</span>, texture_id) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21">CreateTexture</a>(file_name, <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[<span class="keywordtype">id</span>][texture_id]);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="_texture_8h.html#ab8389a24369e4f9beb1d4f21e344e885">   81</a></span>&#160;<a class="code" href="struct_texture.html">Texture</a>* <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<span class="keywordtype">int</span> category_id, <span class="keywordtype">int</span> texture_id)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be">IsCategoryRangeCheck</a>(category_id, texture_id) == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a>[category_id][texture_id];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be">   90</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be">IsCategoryRangeCheck</a>(<span class="keywordtype">int</span> category_id, <span class="keywordtype">int</span> texture_id)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (category_id &lt;= -1 ||</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        category_id &gt;= <a class="code" href="_texture_8h.html#a42477f314fae4e6db57014c0f554b0d6">MAX_TEXTURE_CATEGORY</a>)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (texture_id &lt;= -1 ||</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        texture_id &gt;= <a class="code" href="_texture_8cpp.html#abf39bb2394475ba0a3d12a6ec070133d">TextureCaterogySize</a>[category_id])</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_texture_8cpp_html_ab555a1fa81787321e2d28314fcb11a69"><div class="ttname"><a href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69">LoadTexture</a></div><div class="ttdeci">bool LoadTexture(const char *file_name, int id, int texture_id)</div><div class="ttdoc">テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00071">Texture.cpp:71</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_a6e2ee2f8a6b73d5dd110a6deb43b64be"><div class="ttname"><a href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be">IsCategoryRangeCheck</a></div><div class="ttdeci">bool IsCategoryRangeCheck(int category_id, int texture_id)</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00090">Texture.cpp:90</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_ab8389a24369e4f9beb1d4f21e344e885"><div class="ttname"><a href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a></div><div class="ttdeci">Texture * GetTexture(int category_id, int texture_id)</div><div class="ttdoc">テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00081">Texture.cpp:81</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_adf7bc429a7737bcf34789952fa0f8b90"><div class="ttname"><a href="_texture_8cpp.html#adf7bc429a7737bcf34789952fa0f8b90">AllReleaseTexture</a></div><div class="ttdeci">void AllReleaseTexture()</div><div class="ttdoc">テクスチャの全解放 読み込んでいるすべてのテクスチャを解放する ※この関数はEndEngineで使用されているので開発側で呼ぶ必要はない</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00060">Texture.cpp:60</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acd588cfc8c3e2692b74a1dbfd692f91aabe295bd137a875fb92479912edbd281c"><div class="ttname"><a href="_game_scene_tex_8h.html#acd588cfc8c3e2692b74a1dbfd692f91aabe295bd137a875fb92479912edbd281c">GameLeftTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00080">GameSceneTex.h:80</a></div></div>
+<div class="ttc" id="a_graphics_8cpp_html_a23eb2b43afea51b17b043323ac582b21"><div class="ttname"><a href="_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21">CreateTexture</a></div><div class="ttdeci">bool CreateTexture(const char *file_name, Texture *texture_data)</div><div class="ttdoc">テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8cpp_source.html#l00322">Graphics.cpp:322</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_aafe8b45105b7f218d8e31696bed2dd02"><div class="ttname"><a href="_texture_8cpp.html#aafe8b45105b7f218d8e31696bed2dd02">g_TextureList</a></div><div class="ttdeci">static Texture ** g_TextureList[MAX_TEXTURE_CATEGORY]</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00006">Texture.cpp:6</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_ab0c2b786fbd4f64be1269a9e37291725"><div class="ttname"><a href="_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725">ReleaseCategoryTexture</a></div><div class="ttdeci">void ReleaseCategoryTexture(int release_category)</div><div class="ttdoc">カテゴリー単位のテクスチャ解放関数 引数で指定されたカテゴリーのテクスチャを全て解放する</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00041">Texture.cpp:41</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_ac327258d7d7a7973892ebafc9c1dad97a1b2b563e85b655fdc12d04b8e0ec6e76"><div class="ttname"><a href="_game_scene_tex_8h.html#ac327258d7d7a7973892ebafc9c1dad97a1b2b563e85b655fdc12d04b8e0ec6e76">GameCenterTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00067">GameSceneTex.h:67</a></div></div>
+<div class="ttc" id="a_result_scene_tex_8h_html_ad134ebd7a574bce103168ff645f1a3e9a1aeb38362d72faa1ac6fc95329ea9582"><div class="ttname"><a href="_result_scene_tex_8h.html#ad134ebd7a574bce103168ff645f1a3e9a1aeb38362d72faa1ac6fc95329ea9582">ClearTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_result_scene_tex_8h_source.html#l00007">ResultSceneTex.h:7</a></div></div>
+<div class="ttc" id="astruct_texture_html"><div class="ttname"><a href="struct_texture.html">Texture</a></div><div class="ttdoc">テクスチャデータやサイズを保持する構造体</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00038">Graphics.h:38</a></div></div>
+<div class="ttc" id="a_texture_8h_html_a42477f314fae4e6db57014c0f554b0d6"><div class="ttname"><a href="_texture_8h.html#a42477f314fae4e6db57014c0f554b0d6">MAX_TEXTURE_CATEGORY</a></div><div class="ttdeci">#define MAX_TEXTURE_CATEGORY</div><div class="ttdoc">カテゴリー最大</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8h_source.html#l00016">Texture.h:16</a></div></div>
+<div class="ttc" id="a_opening_scene_tex_8h_html_af5b628c5b7a2b8406dfe279d87d89ff6ad980a29b3e6651f8b9b2aabc112d9e26"><div class="ttname"><a href="_opening_scene_tex_8h.html#af5b628c5b7a2b8406dfe279d87d89ff6ad980a29b3e6651f8b9b2aabc112d9e26">OpeningTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_opening_scene_tex_8h_source.html#l00013">OpeningSceneTex.h:13</a></div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a9e99923610c331d6bd02559f467f6d71"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9e99923610c331d6bd02559f467f6d71">EnemyTextureMax</a></div><div class="ttdef"><b>Definition:</b> <a href="_enemy_tex_8h_source.html#l00039">EnemyTex.h:39</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_acabe78a54b8de7a3dc59c97ac2d2355aa2eb76f007e8ef256923d88e03637fc28"><div class="ttname"><a href="_game_scene_tex_8h.html#acabe78a54b8de7a3dc59c97ac2d2355aa2eb76f007e8ef256923d88e03637fc28">GameTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00044">GameSceneTex.h:44</a></div></div>
+<div class="ttc" id="a_texture_8h_html"><div class="ttname"><a href="_texture_8h.html">Texture.h</a></div><div class="ttdoc">テクスチャの読み込み、解放など、テクスチャに関する関数、定数の宣言</div></div>
+<div class="ttc" id="a_title_scene_tex_8h_html_af0cc055ad29f9d538ed31bb44ffd7b1ba9bcf7c60000628be6e22a3f6efd073c8"><div class="ttname"><a href="_title_scene_tex_8h.html#af0cc055ad29f9d538ed31bb44ffd7b1ba9bcf7c60000628be6e22a3f6efd073c8">TitleTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_title_scene_tex_8h_source.html#l00012">TitleSceneTex.h:12</a></div></div>
+<div class="ttc" id="astruct_texture_html_a14c6c1545ed820b1635590f4b4db6d55"><div class="ttname"><a href="struct_texture.html#a14c6c1545ed820b1635590f4b4db6d55">Texture::TexutreData</a></div><div class="ttdeci">LPDIRECT3DTEXTURE9 TexutreData</div><div class="ttdoc">テクスチャデータ</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00040">Graphics.h:40</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_a2c31e3fa2e6103d75cea41dd6fd70821a58da5a29e4ba1f6203817ca2a3971d7c"><div class="ttname"><a href="_game_scene_tex_8h.html#a2c31e3fa2e6103d75cea41dd6fd70821a58da5a29e4ba1f6203817ca2a3971d7c">GameRightTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00075">GameSceneTex.h:75</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_abf39bb2394475ba0a3d12a6ec070133d"><div class="ttname"><a href="_texture_8cpp.html#abf39bb2394475ba0a3d12a6ec070133d">TextureCaterogySize</a></div><div class="ttdeci">int TextureCaterogySize[]</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00010">Texture.cpp:10</a></div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html_a5877861909aeba929e33206da752ca9ba573e937bb0ec79c82a6800302433377c"><div class="ttname"><a href="_game_scene_tex_8h.html#a5877861909aeba929e33206da752ca9ba573e937bb0ec79c82a6800302433377c">GameMonitorTextureMax</a></div><div class="ttdoc">リスト最大数</div><div class="ttdef"><b>Definition:</b> <a href="_game_scene_tex_8h_source.html#l00128">GameSceneTex.h:128</a></div></div>
+<div class="ttc" id="a_texture_8cpp_html_ad684ebdecadeaa3a348be34505a8f68a"><div class="ttname"><a href="_texture_8cpp.html#ad684ebdecadeaa3a348be34505a8f68a">InitTexture</a></div><div class="ttdeci">void InitTexture()</div><div class="ttdoc">テクスチャデータ初期化関数 ゲームで使用するテクスチャデータを保存出来るようにする</div><div class="ttdef"><b>Definition:</b> <a href="_texture_8cpp_source.html#l00025">Texture.cpp:25</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_de6d28e78d50d11862011f8f40d704f3.html">Texture</a></li><li class="navelem"><a class="el" href="_texture_8cpp.html">Texture.cpp</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 #define ITEM_VALUE_H_
 
 /**
-* item の座標情報、画像情報、アイテムの大きさを設定
+* item の座標情報、画像サイズ、アイテムの大きさを設定
 */
 
 #include "../../Utility/Vec.h"
@@ -48,12 +48,12 @@ const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SMALL_SIZE.Width / 2), 290.f };
 //!< 水晶
 const Size CRYSTAL_SIZE = { 256.f, 256.f };
 const Size CRYSTAL_FRAME = { 256.f,256.f };
-const Vec2 CRYSTAL_POS = { (960.f - CRYSTAL_SIZE.Width / 2), (770.f) };
+const Vec2 CRYSTAL_POS = { (710.f - CRYSTAL_SIZE.Width / 2), (770.f) };
 
-//!< オルゴール
-const Size MUSICBOX_SIZE = { 99.f,99.f };
-const Size MUSICBOX_FRAME = { 128.f,128.f };
-const Vec2 MUSICBOX_POS = { (1240.f - MUSICBOX_SIZE.Height / 2),(920.f - MUSICBOX_SIZE.Height / 2) };
+//!< 水晶
+const Size WATCH_SIZE = { 256.f, 256.f };
+const Size WATCH_FRAME = { 256.f,256.f };
+const Vec2 WATCH_POS = { (1210.f - CRYSTAL_SIZE.Width / 2), (770.f) };
 
 #pragma endregion
 

@@ -139,20 +139,7 @@ void UI::Init(){
 		m_Size = {0.f,0.f};
 		LoadTexture("Res/Game/Monitor/MonitorUI/map.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
-		break;
-	case ObjID::PLAYER_ROOM:
-		m_Pos = PLAYER_ROOM_UI_POS;
-		m_Size = {0.f,0.f};
-		LoadTexture("Res/Game/Monitor/MonitorUI/PlayerRoomUI.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPlayerRoomUITex);
-		break;
-	case ObjID::CLEAR_LOGO:
-		m_Pos = TITLE_LOGO_POS;
-		m_Size = TITLE_LOGO_SIZE;
-		LoadTexture("Res/Title/TitleMenuHelp.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);
-		break;
-	
+		break;	
 	}
 
 };
@@ -164,9 +151,24 @@ void UI::Draw(){
 
 		Lib::Texture polygon("hoge");
 
-		if (m_OnMouse == true) {
-			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+		switch (m_Id) {
+		case ObjID::BUTTON_NEW_GAME:
+			if (m_OnMouse == true) {
+				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			}
+			break;
+		case ObjID::BUTTON_CONTINUE:
+			if (m_OnMouse == true) {
+				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			}
+			break;
+		case ObjID::MO_MASK_UI:
+			if (m_OnMouse == true) {
+				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			}
+			break;
 		}
+
 	}
 		
 }
@@ -329,39 +331,44 @@ void UI::UpdateGameUI() {
 	static bool HasPull = false;
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (m_OnMouse == true) {
-		switch (m_Id)
-		{
-		case ObjID::BUTTON_CONTROL_UI:
-			if (OnMouseDown(Left) == true) {
-				HasPull = true;
-			}
-			break;
-		case ObjID::MO_MASK_UI:
-			m_HasMask = true;
-			break;
-		case ObjID::DESCRIPTION_UI:
-			if (HasPull == true) {
+	if (GetCurrentSceneId() == SceneId::GameScene) {
+
+		if (HasPull == true) {
+			switch (m_Id) {
+			case ObjID::BUTTON_ON_CONTROL_UI:
+				m_IsDeath = false;
+				break;
+			case ObjID::DESCRIPTION_UI:
 				m_IsDeath = false;
 				break;
 			}
 		}
-	}else {
 
-		switch (m_Id)
-		{
-		case ObjID::BUTTON_CONTROL_UI:
-			HasPull = false;
-			break;
-		case ObjID::MO_MASK_UI:
-			m_HasMask = false;
-			break;
-		case ObjID::DESCRIPTION_UI:
-			if (HasPull == true) {
-				m_IsDeath = false;
+		if (m_OnMouse == true) {
+			switch (m_Id)
+			{
+			case ObjID::BUTTON_CONTROL_UI:
+				if (OnMouseDown(Left) == true) {
+					HasPull = true;
+				}
+				break;
+			case ObjID::MO_MASK_UI:
+				m_HasMask = true;
+				break;
+
+			}
+		}
+		else {
+
+			switch (m_Id)
+			{
+			case ObjID::BUTTON_CONTROL_UI:
+				HasPull = false;
+				break;
+			case ObjID::MO_MASK_UI:
+				m_HasMask = false;
 				break;
 			}
-
 		}
 	}
 }

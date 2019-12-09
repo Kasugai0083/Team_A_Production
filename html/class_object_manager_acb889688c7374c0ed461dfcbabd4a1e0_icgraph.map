@@ -1,0 +1,13 @@
+<map id="ObjectManager::GetObj" name="ObjectManager::GetObj">
+<area shape="rect" id="node1" title="m_pObjects の インスタンス情報を取得する" alt="" coords="773,132,932,159"/>
+<area shape="rect" id="node2" href="$class_timer.html#aaf1ad0dc8e82d81bca9271b577cd9f78" title="m_Clear を描画@npocket_watchをマウスオーバーしている場合に時間が表示される" alt="" coords="608,5,699,32"/>
+<area shape="rect" id="node3" href="$_game_scene_8h.html#a758cda2c7e70579e62ec2a9b4f4b7aa6" title=" " alt="" coords="411,31,533,57"/>
+<area shape="rect" id="node7" href="$class_candle.html#a5bebb511757ff21039189bca77a5cfee" title="キャンドルエフェクトの生死情報を管理" alt="" coords="581,107,725,133"/>
+<area shape="rect" id="node9" href="$class_fire.html#a8097c9cbafd7d794fa4dfd8fc996f870" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定 m_Id に基づいて Candle をインスタンス化" alt="" coords="619,157,688,184"/>
+<area shape="rect" id="node10" href="$class_player.html#a5e17be3418fa0ac0192c05efaf3dc8bd" title=" " alt="" coords="599,208,707,235"/>
+<area shape="rect" id="node11" href="$class_ran.html#a002243e1837061ed361c62f68a189aac" title=" " alt="" coords="606,259,701,285"/>
+<area shape="rect" id="node4" href="$_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="275,31,363,57"/>
+<area shape="rect" id="node5" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,31,227,57"/>
+<area shape="rect" id="node6" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,31,79,57"/>
+<area shape="rect" id="node8" href="$class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="417,107,527,133"/>
+</map>

@@ -75,12 +75,16 @@ private:
 	void UpdateGameUI();
 
 private:
-	Texture* m_Tex;		//!< テクスチャの情報を格納
-	bool m_HasMask;		//!< マスク着脱情報
-	bool m_OnMouse;		//!< マウスが重なったとき true
-	Vec2 m_Pos;			//!< 座標情報
-	Size m_Size;		//!< サイズ情報
-
+	//! テクスチャの情報を格納
+	Texture* m_Tex;		
+	//! マスク着脱情報
+	bool m_HasMask;	
+	//! マウスが重なったとき true
+	bool m_OnMouse;		
+	//! 座標情報
+	Vec2 m_Pos;			
+	//! サイズ情報
+	Size m_Size;		
 
 };
 

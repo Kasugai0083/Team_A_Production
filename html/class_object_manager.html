@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: ObjectManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_object_manager.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_object_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ObjectManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>オブジェクトを管理するマネージャークラス  
+ <a href="class_object_manager.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_object_manager_8h_source.html">ObjectManager.h</a>&gt;</code></p>
+<div class="dynheader">
+ObjectManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_manager__coll__graph.png" border="0" usemap="#_object_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="_object_manager_coll__map" id="_object_manager_coll__map">
+<area shape="rect" title="オブジェクトを管理するマネージャークラス" alt="" coords="5,95,116,121"/>
+<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="31,5,91,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6fa9372c7c3a8da88412f4158ca3dfd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#a6fa9372c7c3a8da88412f4158ca3dfd9">ObjectManager</a> ()</td></tr>
+<tr class="memdesc:a6fa9372c7c3a8da88412f4158ca3dfd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ<br  />
+m_pObjects に各種オブジェクトをインスタンス化<br  />
+ <a href="class_object_manager.html#a6fa9372c7c3a8da88412f4158ca3dfd9">[詳解]</a><br /></td></tr>
+<tr class="separator:a6fa9372c7c3a8da88412f4158ca3dfd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25b057e6d1e60c9cbeb29d41923d8c2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#a25b057e6d1e60c9cbeb29d41923d8c2c">~ObjectManager</a> ()</td></tr>
+<tr class="memdesc:a25b057e6d1e60c9cbeb29d41923d8c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ@nm_pObjects を delete する  <a href="class_object_manager.html#a25b057e6d1e60c9cbeb29d41923d8c2c">[詳解]</a><br /></td></tr>
+<tr class="separator:a25b057e6d1e60c9cbeb29d41923d8c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb889688c7374c0ed461dfcbabd4a1e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">GetObj</a> (<a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_)</td></tr>
+<tr class="memdesc:acb889688c7374c0ed461dfcbabd4a1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_pObjects の インスタンス情報を取得する  <a href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">[詳解]</a><br /></td></tr>
+<tr class="separator:acb889688c7374c0ed461dfcbabd4a1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9771f5f3c34b9ce12c50dfd9900de191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#a9771f5f3c34b9ce12c50dfd9900de191">Init</a> ()</td></tr>
+<tr class="memdesc:a9771f5f3c34b9ce12c50dfd9900de191"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての m_pObjects を初期化する  <a href="class_object_manager.html#a9771f5f3c34b9ce12c50dfd9900de191">[詳解]</a><br /></td></tr>
+<tr class="separator:a9771f5f3c34b9ce12c50dfd9900de191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43507b10b7356870fc39147a259b97fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#a43507b10b7356870fc39147a259b97fa">Update</a> ()</td></tr>
+<tr class="memdesc:a43507b10b7356870fc39147a259b97fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての m_pObjects を更新する  <a href="class_object_manager.html#a43507b10b7356870fc39147a259b97fa">[詳解]</a><br /></td></tr>
+<tr class="separator:a43507b10b7356870fc39147a259b97fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ab616ed15c75581c27f6e3ac77ee24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24">Release</a> ()</td></tr>
+<tr class="memdesc:a81ab616ed15c75581c27f6e3ac77ee24"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての m_pObjects を解放する  <a href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24">[詳解]</a><br /></td></tr>
+<tr class="separator:a81ab616ed15c75581c27f6e3ac77ee24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4b2b1c1c45f2174b9c06462b53c92d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#a7b4b2b1c1c45f2174b9c06462b53c92d">Release</a> (int id_)</td></tr>
+<tr class="memdesc:a7b4b2b1c1c45f2174b9c06462b53c92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された m_pObjects を解放する  <a href="class_object_manager.html#a7b4b2b1c1c45f2174b9c06462b53c92d">[詳解]</a><br /></td></tr>
+<tr class="separator:a7b4b2b1c1c45f2174b9c06462b53c92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30e438f05942a753d4eb7770ad069f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#ad30e438f05942a753d4eb7770ad069f3">Draw</a> ()</td></tr>
+<tr class="memdesc:ad30e438f05942a753d4eb7770ad069f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての m_pObjects を描画する  <a href="class_object_manager.html#ad30e438f05942a753d4eb7770ad069f3">[詳解]</a><br /></td></tr>
+<tr class="separator:ad30e438f05942a753d4eb7770ad069f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5e7ea962ab0200b87077775e111ada"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#abb5e7ea962ab0200b87077775e111ada">HasOnMouse</a> (<a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_)</td></tr>
+<tr class="memdesc:abb5e7ea962ab0200b87077775e111ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された m_pObjects の HasOnMouse を取得  <a href="class_object_manager.html#abb5e7ea962ab0200b87077775e111ada">[詳解]</a><br /></td></tr>
+<tr class="separator:abb5e7ea962ab0200b87077775e111ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a24a33e2bf54521fe8b4de729b1f498be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">m_pObjects</a> [static_cast&lt; int &gt;(<a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a74028881a3471004ebc1d3a812e02a37">ObjID::MAX_OBJECT_NUM</a>)]</td></tr>
+<tr class="memdesc:a24a33e2bf54521fe8b4de729b1f498be"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="_object_i_d_8h.html">ObjectID.h</a> で指定された識別番号分、インスタンス化する  <a href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">[詳解]</a><br /></td></tr>
+<tr class="separator:a24a33e2bf54521fe8b4de729b1f498be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>オブジェクトを管理するマネージャークラス </p>
+<p>オブジェクトを管理するマネージャークラスを定義 </p>
+
+<p class="definition"> <a class="el" href="_object_manager_8h_source.html">ObjectManager.h</a> の <a class="el" href="_object_manager_8h_source.html#l00014">14</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a6fa9372c7c3a8da88412f4158ca3dfd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa9372c7c3a8da88412f4158ca3dfd9">&#9670;&nbsp;</a></span>ObjectManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectManager::ObjectManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ<br  />
+m_pObjects に各種オブジェクトをインスタンス化<br  />
+</p>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00016">16</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a25b057e6d1e60c9cbeb29d41923d8c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25b057e6d1e60c9cbeb29d41923d8c2c">&#9670;&nbsp;</a></span>~ObjectManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectManager::~ObjectManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デストラクタ@nm_pObjects を delete する </p>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00073">73</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c_cgraph.png" border="0" usemap="#class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c_cgraph" alt=""/></div>
+<map name="class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c_cgraph" id="class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c_cgraph">
+<area shape="rect" title="デストラクタ@nm_pObjects を delete する" alt="" coords="5,5,220,32"/>
+<area shape="rect" href="class_object_manager.html#a81ab616ed15c75581c27f6e3ac77ee24" title="全ての m_pObjects を解放する" alt="" coords="268,5,433,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ad30e438f05942a753d4eb7770ad069f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30e438f05942a753d4eb7770ad069f3">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectManager::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全ての m_pObjects を描画する </p>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_manager_ad30e438f05942a753d4eb7770ad069f3_icgraph.png" border="0" usemap="#class_object_manager_ad30e438f05942a753d4eb7770ad069f3_icgraph" alt=""/></div>
+<map name="class_object_manager_ad30e438f05942a753d4eb7770ad069f3_icgraph" id="class_object_manager_ad30e438f05942a753d4eb7770ad069f3_icgraph">
+<area shape="rect" title="全ての m_pObjects を描画する" alt="" coords="589,56,736,83"/>
+<area shape="rect" href="_game_scene_8h.html#a758cda2c7e70579e62ec2a9b4f4b7aa6" title=" " alt="" coords="415,5,537,32"/>
+<area shape="rect" href="_monitor_scene_8h.html#a47e3106c0904c38712b612ed7ffa92bf" title=" " alt="" coords="411,56,541,83"/>
+<area shape="rect" href="_title_scene_8h.html#a9ad700561ba709cf53cc96ea1e9833a6" title="タイトルシーンの描画関数 タイトルシーンのオブジェクトを描画する関数" alt="" coords="420,107,532,133"/>
+<area shape="rect" href="_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="275,56,363,83"/>
+<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,56,227,83"/>
+<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,56,79,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acb889688c7374c0ed461dfcbabd4a1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb889688c7374c0ed461dfcbabd4a1e0">&#9670;&nbsp;</a></span>GetObj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_object.html">Object</a> * ObjectManager::GetObj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a>&#160;</td>
+          <td class="paramname"><em>id_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>m_pObjects の インスタンス情報を取得する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id_</td><td>m_pObjects の識別番号を指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>指定されたインスタンスのアドレスが取得される </dd></dl>
+
+<p class="definition"> <a class="el" href="_object_manager_8h_source.html">ObjectManager.h</a> の <a class="el" href="_object_manager_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_manager_acb889688c7374c0ed461dfcbabd4a1e0_icgraph.png" border="0" usemap="#class_object_manager_acb889688c7374c0ed461dfcbabd4a1e0_icgraph" alt=""/></div>
+<map name="class_object_manager_acb889688c7374c0ed461dfcbabd4a1e0_icgraph" id="class_object_manager_acb889688c7374c0ed461dfcbabd4a1e0_icgraph">
+<area shape="rect" title="m_pObjects の インスタンス情報を取得する" alt="" coords="773,132,932,159"/>
+<area shape="rect" href="class_timer.html#aaf1ad0dc8e82d81bca9271b577cd9f78" title="m_Clear を描画@npocket_watchをマウスオーバーしている場合に時間が表示される" alt="" coords="608,5,699,32"/>
+<area shape="rect" href="_game_scene_8h.html#a758cda2c7e70579e62ec2a9b4f4b7aa6" title=" " alt="" coords="411,31,533,57"/>
+<area shape="rect" href="class_candle.html#a5bebb511757ff21039189bca77a5cfee" title="キャンドルエフェクトの生死情報を管理" alt="" coords="581,107,725,133"/>
+<area shape="rect" href="class_fire.html#a8097c9cbafd7d794fa4dfd8fc996f870" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定 m_Id に基づいて Candle をインスタンス化" alt="" coords="619,157,688,184"/>
+<area shape="rect" href="class_player.html#a5e17be3418fa0ac0192c05efaf3dc8bd" title=" " alt="" coords="599,208,707,235"/>
+<area shape="rect" href="class_ran.html#a002243e1837061ed361c62f68a189aac" title=" " alt="" coords="606,259,701,285"/>
+<area shape="rect" href="_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="275,31,363,57"/>
+<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,31,227,57"/>
+<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,31,79,57"/>
+<area shape="rect" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="417,107,527,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb5e7ea962ab0200b87077775e111ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5e7ea962ab0200b87077775e111ada">&#9670;&nbsp;</a></span>HasOnMouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectManager::HasOnMouse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a>&#160;</td>
+          <td class="paramname"><em>id_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定された m_pObjects の HasOnMouse を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id_　m_pObjects</td><td>の識別番号を指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>m_pObjects にマウスが触れている場合 true<br  />
+m_pObjects にマウスが触れていない場合 false<br  />
+</dd></dl>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00127">127</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9771f5f3c34b9ce12c50dfd9900de191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9771f5f3c34b9ce12c50dfd9900de191">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectManager::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全ての m_pObjects を初期化する </p>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00077">77</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_manager_a9771f5f3c34b9ce12c50dfd9900de191_icgraph.png" border="0" usemap="#class_object_manager_a9771f5f3c34b9ce12c50dfd9900de191_icgraph" alt=""/></div>
+<map name="class_object_manager_a9771f5f3c34b9ce12c50dfd9900de191_icgraph" id="class_object_manager_a9771f5f3c34b9ce12c50dfd9900de191_icgraph">
+<area shape="rect" title="全ての m_pObjects を初期化する" alt="" coords="796,81,931,108"/>
+<area shape="rect" href="_game_scene_8cpp.html#a1ece36617d8acd26e8fee2f8c8a56613" title=" " alt="" coords="637,5,748,32"/>
+<area shape="rect" href="_monitor_scene_8cpp.html#a733fdf79f0d2d3190dfc349350d5e9df" title=" " alt="" coords="468,81,587,108"/>
+<area shape="rect" href="_title_scene_8cpp.html#a58517aaaaec3180ec82317777dd3a060" title=" " alt="" coords="643,157,743,184"/>
+<area shape="rect" href="_monitor_scene_8cpp.html#afda30592313fbdab43db1a6fcffbdd42" title=" " alt="" coords="646,107,739,133"/>
+<area shape="rect" href="_game_scene_8h.html#aaa0f133f9ce54fe2b94a1ed07d922be8" title=" " alt="" coords="279,24,413,51"/>
+<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,81,227,108"/>
+<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,81,79,108"/>
+<area shape="rect" href="_monitor_scene_8h.html#a502ddcf70f16f597857a74a4c5b0aff8" title=" " alt="" coords="275,81,417,108"/>
+<area shape="rect" href="_title_scene_8h.html#a63f9414cad6abe8e97e3ddf336d7e166" title="タイトルシーンの更新関数 タイトルシーンの仕様が実行される" alt="" coords="465,144,589,171"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a81ab616ed15c75581c27f6e3ac77ee24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ab616ed15c75581c27f6e3ac77ee24">&#9670;&nbsp;</a></span>Release() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectManager::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全ての m_pObjects を解放する </p>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00116">116</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_manager_a81ab616ed15c75581c27f6e3ac77ee24_icgraph.png" border="0" usemap="#class_object_manager_a81ab616ed15c75581c27f6e3ac77ee24_icgraph" alt=""/></div>
+<map name="class_object_manager_a81ab616ed15c75581c27f6e3ac77ee24_icgraph" id="class_object_manager_a81ab616ed15c75581c27f6e3ac77ee24_icgraph">
+<area shape="rect" title="全ての m_pObjects を解放する" alt="" coords="268,5,433,32"/>
+<area shape="rect" href="class_object_manager.html#a25b057e6d1e60c9cbeb29d41923d8c2c" title="デストラクタ@nm_pObjects を delete する" alt="" coords="5,5,220,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b4b2b1c1c45f2174b9c06462b53c92d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4b2b1c1c45f2174b9c06462b53c92d">&#9670;&nbsp;</a></span>Release() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ObjectManager::Release </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定された m_pObjects を解放する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id_</td><td>m_pObjects の識別番号を指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00109">109</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a43507b10b7356870fc39147a259b97fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43507b10b7356870fc39147a259b97fa">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectManager::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全ての m_pObjects を更新する </p>
+
+<p class="definition"> <a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a> の <a class="el" href="_object_manager_8cpp_source.html#l00087">87</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_manager_a43507b10b7356870fc39147a259b97fa_icgraph.png" border="0" usemap="#class_object_manager_a43507b10b7356870fc39147a259b97fa_icgraph" alt=""/></div>
+<map name="class_object_manager_a43507b10b7356870fc39147a259b97fa_icgraph" id="class_object_manager_a43507b10b7356870fc39147a259b97fa_icgraph">
+<area shape="rect" title="全ての m_pObjects を更新する" alt="" coords="644,56,803,83"/>
+<area shape="rect" href="_game_scene_8cpp.html#ae5041f4f90cb0d4b1d83b4e738fc1d73" title=" " alt="" coords="469,5,592,32"/>
+<area shape="rect" href="_monitor_scene_8cpp.html#aebcee0a0a21b4af3c111191089b2b70e" title=" " alt="" coords="465,56,596,83"/>
+<area shape="rect" href="_title_scene_8cpp.html#a0161153381653a144cc6141ac2e8fdcb" title=" " alt="" coords="475,107,586,133"/>
+<area shape="rect" href="_game_scene_8h.html#aaa0f133f9ce54fe2b94a1ed07d922be8" title=" " alt="" coords="279,5,413,32"/>
+<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,56,227,83"/>
+<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,56,79,83"/>
+<area shape="rect" href="_monitor_scene_8h.html#a502ddcf70f16f597857a74a4c5b0aff8" title=" " alt="" coords="275,56,417,83"/>
+<area shape="rect" href="_title_scene_8h.html#a63f9414cad6abe8e97e3ddf336d7e166" title="タイトルシーンの更新関数 タイトルシーンの仕様が実行される" alt="" coords="284,107,408,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a24a33e2bf54521fe8b4de729b1f498be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a33e2bf54521fe8b4de729b1f498be">&#9670;&nbsp;</a></span>m_pObjects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_object.html">Object</a>* ObjectManager::m_pObjects[static_cast&lt; int &gt;(<a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221a74028881a3471004ebc1d3a812e02a37">ObjID::MAX_OBJECT_NUM</a>)]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="_object_i_d_8h.html">ObjectID.h</a> で指定された識別番号分、インスタンス化する </p>
+
+<p class="definition"> <a class="el" href="_object_manager_8h_source.html">ObjectManager.h</a> の <a class="el" href="_object_manager_8h_source.html#l00084">84</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Src/Object/<a class="el" href="_object_manager_8h_source.html">ObjectManager.h</a></li>
+<li>Src/Object/<a class="el" href="_object_manager_8cpp_source.html">ObjectManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_object_manager.html">ObjectManager</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

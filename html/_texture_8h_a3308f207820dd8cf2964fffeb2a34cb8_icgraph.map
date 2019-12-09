@@ -1,0 +1,15 @@
+<map id="ReleaseCategoryTexture" name="ReleaseCategoryTexture">
+<area shape="rect" id="node1" title="カテゴリー単位のテクスチャ解放関数 引数で指定されたカテゴリーのテクスチャを全て解放する" alt="" coords="661,132,825,159"/>
+<area shape="rect" id="node2" href="$_texture_8h.html#adf7bc429a7737bcf34789952fa0f8b90" title="テクスチャの全解放 読み込んでいるすべてのテクスチャを解放する ※この関数はEndEngineで使用されているので開発側で呼ぶ必要はない" alt="" coords="479,56,605,83"/>
+<area shape="rect" id="node7" href="$_clear_scene_8cpp.html#a78ed8b4184e46b5412f14a64f5b6443c" title=" " alt="" coords="480,107,604,133"/>
+<area shape="rect" id="node10" href="$_opening_scene_8cpp.html#a6d5d359869a9a22dcfa3b4615dcaa20e" title=" " alt="" coords="471,157,613,184"/>
+<area shape="rect" id="node12" href="$_title_scene_8cpp.html#afc2a10c9ed9e0597ad498b3e29e5e00b" title=" " alt="" coords="483,208,601,235"/>
+<area shape="rect" id="node3" href="$_engine_8h.html#af4b15df747f927b772f15ef93493aad7" title="エンジン終了関数 ゲーム終了後にエンジン部分の終了を行う ※この関数はゲームループ終了後に１度だけ実行する" alt="" coords="134,5,219,32"/>
+<area shape="rect" id="node5" href="$_texture_8h.html#ad684ebdecadeaa3a348be34505a8f68a" title="テクスチャデータ初期化関数 ゲームで使用するテクスチャデータを保存出来るようにする" alt="" coords="307,56,390,83"/>
+<area shape="rect" id="node4" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,56,79,83"/>
+<area shape="rect" id="node6" href="$_engine_8h.html#a793ba90ca8458f8323c7cee0eb545d60" title="エンジン初期化関数 ゲームで使うエンジン部分(描画、入力)の初期化とウィンドウの作成を行う ※この関数はゲームループ開始前に１度だけ実行する" alt="" coords="137,56,216,83"/>
+<area shape="rect" id="node8" href="$_clear_scene_8h.html#ad87d3394130984bbd676d78e680a2b83" title="ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される" alt="" coords="283,107,414,133"/>
+<area shape="rect" id="node9" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,132,227,159"/>
+<area shape="rect" id="node11" href="$_opening_scene_8h.html#a130a9d710956b3d6031a82fd31ac5c9e" title="ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される" alt="" coords="275,157,423,184"/>
+<area shape="rect" id="node13" href="$_title_scene_8h.html#a63f9414cad6abe8e97e3ddf336d7e166" title="タイトルシーンの更新関数 タイトルシーンの仕様が実行される" alt="" coords="287,208,411,235"/>
+</map>

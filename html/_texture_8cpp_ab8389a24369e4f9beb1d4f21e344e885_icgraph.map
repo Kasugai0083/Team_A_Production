@@ -1,0 +1,25 @@
+<map id="GetTexture" name="GetTexture">
+<area shape="rect" id="node1" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="759,411,845,437"/>
+<area shape="rect" id="node2" href="$class_ume.html#ad1efe4fe6e94575a8b83f683fd5fc6a6" title=" " alt="" coords="609,5,696,32"/>
+<area shape="rect" id="node3" href="$class_sakura.html#a8200f9a5944764ba38e1d0dd6ce709e2" title=" " alt="" coords="603,56,703,83"/>
+<area shape="rect" id="node4" href="$class_ohagi.html#a2ccb7e8eb90221f8bc8ddc1e1a822461" title=" " alt="" coords="606,107,699,133"/>
+<area shape="rect" id="node5" href="$class_ran.html#a6fb3b82ff6f6585f72c60bb341a146a3" title=" " alt="" coords="611,157,694,184"/>
+<area shape="rect" id="node6" href="$class_margaret.html#a9f235ef92d78e08b067afa1778bf7c86" title=" " alt="" coords="597,208,708,235"/>
+<area shape="rect" id="node7" href="$class_botan.html#ad255867f0c175804588e424917e7a9dc" title=" " alt="" coords="606,259,699,285"/>
+<area shape="rect" id="node8" href="$_monitor_scene_8cpp.html#ae5053d91a6e4f5b872b4228b8d29feca" title=" " alt="" coords="619,309,686,336"/>
+<area shape="rect" id="node13" href="$_clear_scene_8h.html#a154e4ba3962b084e7552af3a805726a0" title="ゲームオーバーシーンの描画関数 ゲームオーバーシーンのオブジェクトを描画するための関数" alt="" coords="419,360,538,387"/>
+<area shape="rect" id="node14" href="$_game_scene_8h.html#a758cda2c7e70579e62ec2a9b4f4b7aa6" title=" " alt="" coords="417,411,540,437"/>
+<area shape="rect" id="node15" href="$_opening_scene_8h.html#afafa0ea856d6013bbf2a3f749f5fab45" title="ゲームオーバーシーンの描画関数 ゲームオーバーシーンのオブジェクトを描画するための関数" alt="" coords="411,461,547,488"/>
+<area shape="rect" id="node16" href="$_title_scene_8h.html#a9ad700561ba709cf53cc96ea1e9833a6" title="タイトルシーンの描画関数 タイトルシーンのオブジェクトを描画する関数" alt="" coords="423,512,535,539"/>
+<area shape="rect" id="node17" href="$class_crystal.html#ae53513bca380eedc662918a7164dbd68" title="水晶の初期化 テクスチャの読み込み 座標の指定 オブジェクトサイズの指定" alt="" coords="609,563,697,589"/>
+<area shape="rect" id="node18" href="$class_u_i.html#ace720e810124ecde6db91865b4f5b8b2" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定" alt="" coords="623,613,682,640"/>
+<area shape="rect" id="node19" href="$class_fire.html#a8097c9cbafd7d794fa4dfd8fc996f870" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定 m_Id に基づいて Candle をインスタンス化" alt="" coords="618,664,687,691"/>
+<area shape="rect" id="node20" href="$class_candle.html#a5bd211fe2840d31a0d82578f7fdcfa9c" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定" alt="" coords="609,715,696,741"/>
+<area shape="rect" id="node21" href="$class_watch.html#a92a6fe78df72c5dfa66b1d672af9c284" title="時計の初期化 テクスチャの読み込み 座標の指定 オブジェクトサイズの指定" alt="" coords="610,765,695,792"/>
+<area shape="rect" id="node22" href="$class_player.html#ace614875aaf28c64727890bc29f52dbd" title=" " alt="" coords="595,816,711,843"/>
+<area shape="rect" id="node9" href="$_monitor_scene_8h.html#a47e3106c0904c38712b612ed7ffa92bf" title=" " alt="" coords="413,309,544,336"/>
+<area shape="rect" id="node10" href="$_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="275,411,363,437"/>
+<area shape="rect" id="node11" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,411,227,437"/>
+<area shape="rect" id="node12" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,411,79,437"/>
+<area shape="rect" id="node23" href="$class_player.html#a5b60ad157bb1e8debca89ed6903ca2a4" title=" " alt="" coords="431,816,527,843"/>
+</map>

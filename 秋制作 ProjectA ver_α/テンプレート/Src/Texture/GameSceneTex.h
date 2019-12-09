@@ -22,9 +22,10 @@ enum GameCategoryTextureList
 
 	GameCrystalTex,
 	GameOnHitCrystalTex,
-	
-	GameMusicBoxTex,
 
+	GameWatchTex,
+	GameOnHitWatchTex,
+	
 	GameLeftShojiFrontTex,
 	GameLeftShojiBackTex,
 	GameRightShojiFrontTex,

@@ -136,14 +136,17 @@ void Fire::Update() {
 }
 
 void Fire::Draw() {
-	if (m_pObject->HasCaLight() == true && m_IsDeath == false) {
-		DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
+	
+	if (m_pObject != nullptr) {
+		if (m_pObject->HasCaLight() == true && m_IsDeath == false) {
+			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
 
-		Lib::Texture polygon("hoge");
+			Lib::Texture polygon("hoge");
 
-		if (m_OnMouse == true) {
-			DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			if (m_OnMouse == true) {
+				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
+			}
+
 		}
-
 	}
 }

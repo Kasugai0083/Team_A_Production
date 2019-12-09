@@ -1,0 +1,4 @@
+<map id="ObjectManager" name="ObjectManager">
+<area shape="rect" id="node1" title="オブジェクトを管理するマネージャークラス" alt="" coords="5,95,116,121"/>
+<area shape="rect" id="node2" href="$class_object.html" title="オブジェクトを管理するクラス" alt="" coords="31,5,91,32"/>
+</map>

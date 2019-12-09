@@ -1,0 +1,4 @@
+<map id="ObjectManager::Release" name="ObjectManager::Release">
+<area shape="rect" id="node1" title="全ての m_pObjects を解放する" alt="" coords="268,5,433,32"/>
+<area shape="rect" id="node2" href="$class_object_manager.html#a25b057e6d1e60c9cbeb29d41923d8c2c" title="デストラクタ@nm_pObjects を delete する" alt="" coords="5,5,220,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="UI::UpdateGameUI" name="UI::UpdateGameUI">
+<area shape="rect" id="node1" title="GameScene で使われている UI の更新処理" alt="" coords="5,56,136,83"/>
+<area shape="rect" id="node2" href="$class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777" title=" " alt="" coords="184,5,397,32"/>
+<area shape="rect" id="node3" href="$_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="225,56,357,83"/>
+<area shape="rect" id="node4" href="$_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02" title="クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する" alt="" coords="235,107,346,133"/>
+</map>

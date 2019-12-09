@@ -137,10 +137,8 @@ void MainMonitorScene()
 
 	//クリア時間経過でシーン遷移
 	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
-		if (pPlayer->IsActive() == false) {
-			SceneController()->SetID(SceneTransition::Id::Clear, true);
-			ChangeSceneStep(SceneStep::EndStep);
-		}
+		SceneController()->SetID(SceneTransition::Id::Clear, true);
+		ChangeSceneStep(SceneStep::EndStep);
 	}
 
 	//プレイヤーの死亡でシーン遷移

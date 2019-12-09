@@ -1,0 +1,7 @@
+<map id="Candle::Init" name="Candle::Init">
+<area shape="rect" id="node1" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定" alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="143,5,230,32"/>
+<area shape="rect" id="node4" href="$_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="140,56,233,83"/>
+<area shape="rect" id="node3" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="281,5,440,32"/>
+<area shape="rect" id="node5" href="$_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="309,56,412,83"/>
+</map>
