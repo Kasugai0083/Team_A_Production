@@ -85,11 +85,9 @@ void DrawMonitorScene()
 {	
 	DrawBg();
 
-	g_Manager.Draw();///ここが原因
-
 	ObjManager()->Draw();
 
-
+	g_Manager.Draw();///ここが原因
 }
 
 void InitMonitorScene()
@@ -146,7 +144,7 @@ void MainMonitorScene()
 	}
 
 	//プレイヤーの死亡でシーン遷移
-	if (pPlayer->IsActive() == true) {
+	if (pPlayer->IsActive() == false) {
 		SceneController()->SetID(SceneTransition::Id::Clear, true);
 		ChangeSceneStep(SceneStep::EndStep);
 	}

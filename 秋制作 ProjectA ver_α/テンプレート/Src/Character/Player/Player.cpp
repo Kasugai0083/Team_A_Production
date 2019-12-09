@@ -110,11 +110,17 @@ void Player::Update()
 		m_IsMask = false;
 	}
 
+	if (GetCurrentSceneId() == SceneId::MonitorScene) {
+		m_HasMonitor = true;
+	}
+	else {
+		m_HasMonitor = false;
+	}
+
 	//エネミーが参照する値を変更
 	if (g_Manager.RefKill() == true) {
 		m_IsActive = false;
 	}
-
 
 	// 試しに追加
 	Character* pBotan = g_Manager.GetCharacter(CharacterID::BOTAN);

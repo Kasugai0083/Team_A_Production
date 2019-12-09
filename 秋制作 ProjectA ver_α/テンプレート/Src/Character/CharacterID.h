@@ -3,6 +3,7 @@
 
 enum CharacterID {
 
+	PLAYER,		// プレイヤー
 	OHAGI,		// 正面
 	SAKURA,		// 右
 	UME,		// 左
@@ -10,8 +11,7 @@ enum CharacterID {
 	BOTAN,		// カメラから戻ってきたらたまにいるやつ
 	MARGARET,	// オルゴール
 
-	PLAYER,		// プレイヤー
-	ENEMY_NUM = PLAYER,
+	ENEMY_NUM = MARGARET,
 
 	MAX_CHARACTER,
 };

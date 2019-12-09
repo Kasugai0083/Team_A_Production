@@ -30,6 +30,10 @@ public:
 		return m_IsMask;
 	}
 
+	bool HasMonitor() const override {
+		return m_HasMonitor;
+	}
+
 	bool IsActive() override { return m_IsActive; };
 
 	MonitorView CurrentViewMonitorID() const override{
@@ -53,6 +57,7 @@ private:
 	bool m_IsMask;		// マスクをつけてるかどうか
 	float m_MaskAnimation; // マスクのアニメーションタイマー
 	bool m_HasGFreddySpown; //ゴールデンフレディのフラグが立っているかどうか
+	bool m_HasMonitor;		// モニターを見ているかどうか
 
 	MonitorView m_MonitorViewID; // モニターのどこを見ているか
 

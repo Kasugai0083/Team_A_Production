@@ -4,6 +4,7 @@
 #include <time.h>
 //#include <iostream>
 #include <stdlib.h>
+#include "../../../Object/ObjectManager.h"
 
 void Botan::Init()
 {
@@ -35,7 +36,9 @@ void Botan::Update()
 	//}
 
 	// ƒ{ƒ^ƒ“‚ÌUŒ‚ˆ—(‰¼)
-	if (m_pPlayer->HasLight() == true) {
+	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
+	if (pCenterCandle->HasCaLight() == true
+		|| m_pPlayer->HasMonitor() == true) {
 
 		m_CanKill = true;
 	}
