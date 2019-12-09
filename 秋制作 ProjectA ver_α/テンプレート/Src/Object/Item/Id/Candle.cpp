@@ -85,29 +85,29 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_EFFECT_RIGHT:
-		LoadTexture("Res/Game/Item/Candle_Right_Effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleRightEffectTex);
+		LoadTexture("Res/Game/Item/candle_effect_right.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleRightEffectTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleRightEffectTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
-		m_Pos = BIG_CANDLE_EFFECT_POS;
-		m_Size = CANDLE_EFFECT_SIZE;
-		m_Frame = CANDLE_EFFECT_FRAME;
+		m_Pos = { 0.0f, 0.0f };
+		m_Size = { 0.f, 0.f };
+		m_Frame = { 2048.f, 2048.f };
 
 		break;
 	case ObjID::CANDLE_EFFECT_LEFT:
-		LoadTexture("Res/Game/Item/Candle_Right_Effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleLeftEffectTex);
+		LoadTexture("Res/Game/Item/candle_effect_left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleLeftEffectTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleLeftEffectTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
-		m_Pos = BIG_CANDLE_EFFECT_POS;
-		m_Size = CANDLE_EFFECT_SIZE;
-		m_Frame = CANDLE_EFFECT_FRAME;
+		m_Pos = { 0.0f, 0.0f };
+		m_Size = { 0.f, 0.f };
+		m_Frame = { 2048.f, 2048.f };
 
 		break;
 	}
