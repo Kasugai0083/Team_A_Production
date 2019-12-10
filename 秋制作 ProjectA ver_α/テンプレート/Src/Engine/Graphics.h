@@ -97,6 +97,8 @@ void DrawTexture(Vec2 pos_, Texture* texture_data);
 void DrawTexture(float x, float y, Texture* texture_data, float width_, float height_);
 void DrawTexture(float x, float y, Texture* texture_data, Size size_);
 void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_);
+void CandleDraw(float x, float y, Texture* texture_data, Size size_, Size flame_, float hp_);
+
 
 void DrawUVMappingTexture(float x, float y, Texture* texture_data, float texture_x, float texture_y, float rect_width, float rect_height);
 

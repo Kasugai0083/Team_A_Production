@@ -204,6 +204,26 @@ void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_)
 
 	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
 }
+void CandleDraw(float x, float y, Texture* texture_data, Size size_, Size flame_, float hp_)
+{
+
+	float meltpos = size_.Height / flame_.Height;
+
+	CustomVertex v[4] =
+	{
+		{ x, y, 0.0f, 1.0f, 0.0f, 0.0f },
+		{ x + flame_.Width, y, 0.0f, 1.0f, 1.0f , 0.0f },
+		{ x + flame_.Width, y + size_.Height * hp_, 0.0f, 1.0f, 1.0f, meltpos * hp_ },
+		{ x, y + size_.Height * hp_, 0.0f, 1.0f, 0.0f, meltpos * hp_ },
+	};
+
+	// 頂点構造の指定
+	g_D3DDevice->SetFVF(D3DFVF_XYZRHW | D3DFVF_TEX1);
+
+	g_D3DDevice->SetTexture(0, texture_data->TexutreData);
+
+	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
+}
 
 void DrawUVMappingTexture(float x, float y, Texture* texture_data, float texture_x, float texture_y, float rect_width, float rect_height)
 {

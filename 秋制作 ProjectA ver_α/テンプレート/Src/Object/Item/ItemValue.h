@@ -57,7 +57,7 @@ const Vec2 FIRE_BIG_RIGHT_POS = { (730.f - (FIRE_SIZE.Width / 2)), (565.f) };
 //!< ‰Š(¶)
 const Vec2 FIRE_BIG_LEFT_POS = { (1210.f - (FIRE_SIZE.Width / 2)), (565.f) };
 //!< ‰Š(¬)
-const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SIZE.Width / 2), 640 - FIRE_SIZE.Height };
+const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SIZE.Width / 2), 620.f - FIRE_SIZE.Height };
 
 //!< …»
 const Size CRYSTAL_SIZE = { 256.f, 256.f };

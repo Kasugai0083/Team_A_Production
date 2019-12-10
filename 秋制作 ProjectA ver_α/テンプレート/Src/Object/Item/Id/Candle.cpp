@@ -343,6 +343,8 @@ void Candle::Draw(){
 		switch (m_Id)
 		{
 		case ObjID::CANDLE_CENTER:
+			CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Size, m_Frame, m_CandleHp);
+			break;
 		case ObjID::CANDLE_LEFT:
 		case ObjID::CANDLE_RIGHT:
 			CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
