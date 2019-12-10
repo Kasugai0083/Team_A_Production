@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Player クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_player.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_player-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Player クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_player_8h_source.html">Player.h</a>&gt;</code></p>
+<div class="dynheader">
+Player の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player__inherit__graph.png" border="0" usemap="#_player_inherit__map" alt="Inheritance graph"/></div>
+<map name="_player_inherit__map" id="_player_inherit__map">
+<area shape="rect" title=" " alt="" coords="15,80,74,107"/>
+<area shape="rect" href="class_character.html" title=" " alt="" coords="5,5,84,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+Player 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player__coll__graph.png" border="0" usemap="#_player_coll__map" alt="Collaboration graph"/></div>
+<map name="_player_coll__map" id="_player_coll__map">
+<area shape="rect" title=" " alt="" coords="15,80,74,107"/>
+<area shape="rect" href="class_character.html" title=" " alt="" coords="5,5,84,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
+<tr class="separator:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed544987af18de0e6b2932206bf1186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a8ed544987af18de0e6b2932206bf1186">~Player</a> () override</td></tr>
+<tr class="separator:a8ed544987af18de0e6b2932206bf1186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eaaeb9d0967fef59baac319b9cc8d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4eaaeb9d0967fef59baac319b9cc8d60">Init</a> () override</td></tr>
+<tr class="separator:a4eaaeb9d0967fef59baac319b9cc8d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e17be3418fa0ac0192c05efaf3dc8bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5e17be3418fa0ac0192c05efaf3dc8bd">Update</a> () override</td></tr>
+<tr class="separator:a5e17be3418fa0ac0192c05efaf3dc8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b60ad157bb1e8debca89ed6903ca2a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5b60ad157bb1e8debca89ed6903ca2a4">Draw</a> () override</td></tr>
+<tr class="separator:a5b60ad157bb1e8debca89ed6903ca2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddd7cb248e9df3ab709b380cd55a6d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5ddd7cb248e9df3ab709b380cd55a6d7">HasMask</a> () const override</td></tr>
+<tr class="separator:a5ddd7cb248e9df3ab709b380cd55a6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62494252632d69105bcc774d08265814"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a62494252632d69105bcc774d08265814">HasMonitor</a> () const override</td></tr>
+<tr class="separator:a62494252632d69105bcc774d08265814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec9eb479cf249fe8dc2e7613b09d437"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4ec9eb479cf249fe8dc2e7613b09d437">IsActive</a> () override</td></tr>
+<tr class="separator:a4ec9eb479cf249fe8dc2e7613b09d437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c7d859f120c314adb6125cb4c5d29a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a58c7d859f120c314adb6125cb4c5d29a">CurrentViewMonitorID</a> () const override</td></tr>
+<tr class="separator:a58c7d859f120c314adb6125cb4c5d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b56ee3bc81fa207b1b15f9397e5c2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a99b56ee3bc81fa207b1b15f9397e5c2b">ControlMonitor</a> () override</td></tr>
+<tr class="separator:a99b56ee3bc81fa207b1b15f9397e5c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1961f4cf35c15516d1f19372586e197"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab1961f4cf35c15516d1f19372586e197">ControlGameScene</a> () override</td></tr>
+<tr class="separator:ab1961f4cf35c15516d1f19372586e197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d7ccd26184ddceec7162756b49a0e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a02d7ccd26184ddceec7162756b49a0e6">HasGFreddySpown</a> () override</td></tr>
+<tr class="separator:a02d7ccd26184ddceec7162756b49a0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_character"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_character')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_character.html">Character</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a5f5f0769ae4cfc315bf1bd040b0f6802 inherit pub_methods_class_character"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a5f5f0769ae4cfc315bf1bd040b0f6802">Character</a> (bool is_active_)</td></tr>
+<tr class="separator:a5f5f0769ae4cfc315bf1bd040b0f6802 inherit pub_methods_class_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ec409c562122c4464e8a9d3be5f6d2 inherit pub_methods_class_character"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#af3ec409c562122c4464e8a9d3be5f6d2">~Character</a> ()</td></tr>
+<tr class="separator:af3ec409c562122c4464e8a9d3be5f6d2 inherit pub_methods_class_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168bdd7e64b9c433de77b13311bfec1d inherit pub_methods_class_character"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a168bdd7e64b9c433de77b13311bfec1d">HasLight</a> () const</td></tr>
+<tr class="separator:a168bdd7e64b9c433de77b13311bfec1d inherit pub_methods_class_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d21402c4c0ebe6b50caeb9346edaa09 inherit pub_methods_class_character"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a6d21402c4c0ebe6b50caeb9346edaa09">HasKill</a> () const</td></tr>
+<tr class="separator:a6d21402c4c0ebe6b50caeb9346edaa09 inherit pub_methods_class_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc549f5b4ebc1f79253bb1e25cd630a6 inherit pub_methods_class_character"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#abc549f5b4ebc1f79253bb1e25cd630a6">LoadTex</a> (<a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> id)</td></tr>
+<tr class="separator:abc549f5b4ebc1f79253bb1e25cd630a6 inherit pub_methods_class_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7e471ead90b669f83a5d69ed5279ef inherit pub_methods_class_character"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#afe7e471ead90b669f83a5d69ed5279ef">SpawnJudgement</a> () const</td></tr>
+<tr class="separator:afe7e471ead90b669f83a5d69ed5279ef inherit pub_methods_class_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:ace614875aaf28c64727890bc29f52dbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ace614875aaf28c64727890bc29f52dbd">OnMask</a> ()</td></tr>
+<tr class="separator:ace614875aaf28c64727890bc29f52dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ac493eddeb061ee315b64f76d81e70ce5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac493eddeb061ee315b64f76d81e70ce5">m_IsActive</a></td></tr>
+<tr class="separator:ac493eddeb061ee315b64f76d81e70ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13140f5b3928d63f89fa0cb8a8156fe9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a13140f5b3928d63f89fa0cb8a8156fe9">m_IsMask</a></td></tr>
+<tr class="separator:a13140f5b3928d63f89fa0cb8a8156fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac520dcedabe371d93eafb6d6327eb36b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac520dcedabe371d93eafb6d6327eb36b">m_MaskAnimation</a></td></tr>
+<tr class="separator:ac520dcedabe371d93eafb6d6327eb36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634da39cf9822d140a81c3b0c32c4bc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a634da39cf9822d140a81c3b0c32c4bc1">m_HasGFreddySpown</a></td></tr>
+<tr class="separator:a634da39cf9822d140a81c3b0c32c4bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04dc629e1839fe686acc2315ca78952"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac04dc629e1839fe686acc2315ca78952">m_HasMonitor</a></td></tr>
+<tr class="separator:ac04dc629e1839fe686acc2315ca78952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6f9774b938944cabc3c447327326ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3a6f9774b938944cabc3c447327326ec">m_MonitorViewID</a></td></tr>
+<tr class="separator:a3a6f9774b938944cabc3c447327326ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_character"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_character')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_character.html">Character</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a0dee035b9de6807947e2049c992d8159 inherit pro_attribs_class_character"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a0dee035b9de6807947e2049c992d8159">m_IsActive</a></td></tr>
+<tr class="separator:a0dee035b9de6807947e2049c992d8159 inherit pro_attribs_class_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00007">7</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">&#9670;&nbsp;</a></span>Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8ed544987af18de0e6b2932206bf1186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed544987af18de0e6b2932206bf1186">&#9670;&nbsp;</a></span>~Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::~Player </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ab1961f4cf35c15516d1f19372586e197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1961f4cf35c15516d1f19372586e197">&#9670;&nbsp;</a></span>ControlGameScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::ControlGameScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#a7f64f261c8d7eda3895df7f1d083eb4c">Character</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8cpp_source.html">Player.cpp</a> の <a class="el" href="_player_8cpp_source.html#l00066">66</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_ab1961f4cf35c15516d1f19372586e197_cgraph.png" border="0" usemap="#class_player_ab1961f4cf35c15516d1f19372586e197_cgraph" alt=""/></div>
+<map name="class_player_ab1961f4cf35c15516d1f19372586e197_cgraph" id="class_player_ab1961f4cf35c15516d1f19372586e197_cgraph">
+<area shape="rect" title=" " alt="" coords="5,132,185,159"/>
+<area shape="rect" href="struct_game_data.html#a171a81a1cadcad80890a9bdd39fc2d73" title=" " alt="" coords="233,5,408,32"/>
+<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="489,56,575,83"/>
+<area shape="rect" href="class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082" title=" " alt="" coords="466,107,598,133"/>
+<area shape="rect" href="_input_8cpp.html#a3dac7d6291b5adaef424f722ca35c786" title=" " alt="" coords="499,259,565,285"/>
+<area shape="rect" href="class_timer.html#af07492f9694ecb54ac6c04ccc0408b9d" title="識別番号で指定されたメンバ変数を取得" alt="" coords="265,259,376,285"/>
+<area shape="rect" href="_player_8cpp.html#aa8f6698b8e24a5e92afd6ecab67b0172" title=" " alt="" coords="283,157,358,184"/>
+<area shape="rect" href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e" title="TIMERS と m_HourCount を初期化" alt="" coords="493,208,571,235"/>
+<area shape="rect" href="struct_game_data.html#a22f391f0305ad66ff3aa026e4c32d6f5" title=" " alt="" coords="456,157,608,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a99b56ee3bc81fa207b1b15f9397e5c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b56ee3bc81fa207b1b15f9397e5c2b">&#9670;&nbsp;</a></span>ControlMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::ControlMonitor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#aa7db1f1fbceb865d5e3905c3f4f0ae54">Character</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8cpp_source.html">Player.cpp</a> の <a class="el" href="_player_8cpp_source.html#l00030">30</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a99b56ee3bc81fa207b1b15f9397e5c2b_cgraph.png" border="0" usemap="#class_player_a99b56ee3bc81fa207b1b15f9397e5c2b_cgraph" alt=""/></div>
+<map name="class_player_a99b56ee3bc81fa207b1b15f9397e5c2b_cgraph" id="class_player_a99b56ee3bc81fa207b1b15f9397e5c2b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,132,156,159"/>
+<area shape="rect" href="_player_8cpp.html#a7f61ea99962e61af0d060ea9796a7355" title=" " alt="" coords="214,107,305,133"/>
+<area shape="rect" href="class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082" title=" " alt="" coords="380,5,512,32"/>
+<area shape="rect" href="_input_8cpp.html#a3dac7d6291b5adaef424f722ca35c786" title=" " alt="" coords="226,157,293,184"/>
+<area shape="rect" href="class_timer.html#af07492f9694ecb54ac6c04ccc0408b9d" title="識別番号で指定されたメンバ変数を取得" alt="" coords="204,208,315,235"/>
+<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="403,56,489,83"/>
+<area shape="rect" href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e" title="TIMERS と m_HourCount を初期化" alt="" coords="407,107,485,133"/>
+<area shape="rect" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="400,157,492,184"/>
+<area shape="rect" href="_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02" title="クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する" alt="" coords="391,208,501,235"/>
+<area shape="rect" href="struct_game_data.html#a77036e7bab0e7c6b72b299eab90ae0f4" title=" " alt="" coords="363,259,529,285"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a58c7d859f120c314adb6125cb4c5d29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c7d859f120c314adb6125cb4c5d29a">&#9670;&nbsp;</a></span>CurrentViewMonitorID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a> Player::CurrentViewMonitorID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#a1ac0ae4900eb16be01a4fd6261b3061f">Character</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5b60ad157bb1e8debca89ed6903ca2a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b60ad157bb1e8debca89ed6903ca2a4">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#a051c409115c689480f0246f6a4743474">Character</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8cpp_source.html">Player.cpp</a> の <a class="el" href="_player_8cpp_source.html#l00133">133</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a5b60ad157bb1e8debca89ed6903ca2a4_cgraph.png" border="0" usemap="#class_player_a5b60ad157bb1e8debca89ed6903ca2a4_cgraph" alt=""/></div>
+<map name="class_player_a5b60ad157bb1e8debca89ed6903ca2a4_cgraph" id="class_player_a5b60ad157bb1e8debca89ed6903ca2a4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,101,83"/>
+<area shape="rect" href="class_player.html#ace614875aaf28c64727890bc29f52dbd" title=" " alt="" coords="149,56,265,83"/>
+<area shape="rect" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="332,5,427,32"/>
+<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="313,56,445,83"/>
+<area shape="rect" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="336,107,423,133"/>
+<area shape="rect" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="493,107,652,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02d7ccd26184ddceec7162756b49a0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d7ccd26184ddceec7162756b49a0e6">&#9670;&nbsp;</a></span>HasGFreddySpown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::HasGFreddySpown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#aede2cfdfe20b765329f14773803c4363">Character</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5ddd7cb248e9df3ab709b380cd55a6d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ddd7cb248e9df3ab709b380cd55a6d7">&#9670;&nbsp;</a></span>HasMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::HasMask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#a77ebebf9e06dbb8edf710f52c7e1b237">Character</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a62494252632d69105bcc774d08265814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62494252632d69105bcc774d08265814">&#9670;&nbsp;</a></span>HasMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::HasMonitor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#a4f08c22210951f1af772f589658593f2">Character</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4eaaeb9d0967fef59baac319b9cc8d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eaaeb9d0967fef59baac319b9cc8d60">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#ac3776b55752f328ee74fd1282331f872">Character</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8cpp_source.html">Player.cpp</a> の <a class="el" href="_player_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a4eaaeb9d0967fef59baac319b9cc8d60_cgraph.png" border="0" usemap="#class_player_a4eaaeb9d0967fef59baac319b9cc8d60_cgraph" alt=""/></div>
+<map name="class_player_a4eaaeb9d0967fef59baac319b9cc8d60_cgraph" id="class_player_a4eaaeb9d0967fef59baac319b9cc8d60_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,89,57"/>
+<area shape="rect" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="137,31,231,57"/>
+<area shape="rect" href="_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="307,5,409,32"/>
+<area shape="rect" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="279,56,437,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ec9eb479cf249fe8dc2e7613b09d437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec9eb479cf249fe8dc2e7613b09d437">&#9670;&nbsp;</a></span>IsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::IsActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#a10ef1a073e930eda4cab2c555d05c52f">Character</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ace614875aaf28c64727890bc29f52dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace614875aaf28c64727890bc29f52dbd">&#9670;&nbsp;</a></span>OnMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::OnMask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8cpp_source.html">Player.cpp</a> の <a class="el" href="_player_8cpp_source.html#l00137">137</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_ace614875aaf28c64727890bc29f52dbd_cgraph.png" border="0" usemap="#class_player_ace614875aaf28c64727890bc29f52dbd_cgraph" alt=""/></div>
+<map name="class_player_ace614875aaf28c64727890bc29f52dbd_cgraph" id="class_player_ace614875aaf28c64727890bc29f52dbd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,121,83"/>
+<area shape="rect" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="188,5,283,32"/>
+<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="169,56,301,83"/>
+<area shape="rect" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="192,107,279,133"/>
+<area shape="rect" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="349,107,508,133"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_ace614875aaf28c64727890bc29f52dbd_icgraph.png" border="0" usemap="#class_player_ace614875aaf28c64727890bc29f52dbd_icgraph" alt=""/></div>
+<map name="class_player_ace614875aaf28c64727890bc29f52dbd_icgraph" id="class_player_ace614875aaf28c64727890bc29f52dbd_icgraph">
+<area shape="rect" title=" " alt="" coords="149,5,265,32"/>
+<area shape="rect" href="class_player.html#a5b60ad157bb1e8debca89ed6903ca2a4" title=" " alt="" coords="5,5,101,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5e17be3418fa0ac0192c05efaf3dc8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e17be3418fa0ac0192c05efaf3dc8bd">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_character.html#a554d31593b3eee38178bd7c7804ef7fb">Character</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="_player_8cpp_source.html">Player.cpp</a> の <a class="el" href="_player_8cpp_source.html#l00099">99</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a5e17be3418fa0ac0192c05efaf3dc8bd_cgraph.png" border="0" usemap="#class_player_a5e17be3418fa0ac0192c05efaf3dc8bd_cgraph" alt=""/></div>
+<map name="class_player_a5e17be3418fa0ac0192c05efaf3dc8bd_cgraph" id="class_player_a5e17be3418fa0ac0192c05efaf3dc8bd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,208,113,235"/>
+<area shape="rect" href="struct_game_data.html#a9b7f6126ec48bc74a3fadc8407927674" title=" " alt="" coords="173,5,363,32"/>
+<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="225,56,311,83"/>
+<area shape="rect" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777" title=" " alt="" coords="161,107,375,133"/>
+<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="202,157,334,184"/>
+<area shape="rect" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0" title="m_pObjects の インスタンス情報を取得する" alt="" coords="189,208,347,235"/>
+<area shape="rect" href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7" title=" " alt="" coords="207,259,329,285"/>
+<area shape="rect" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="222,309,314,336"/>
+<area shape="rect" href="class_character_manager.html#aca153fee451451cf61ee4803f6518f11" title=" " alt="" coords="181,360,355,387"/>
+<area shape="rect" href="class_character.html#afe7e471ead90b669f83a5d69ed5279ef" title=" " alt="" coords="174,411,362,437"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a634da39cf9822d140a81c3b0c32c4bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634da39cf9822d140a81c3b0c32c4bc1">&#9670;&nbsp;</a></span>m_HasGFreddySpown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::m_HasGFreddySpown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00059">59</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac04dc629e1839fe686acc2315ca78952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac04dc629e1839fe686acc2315ca78952">&#9670;&nbsp;</a></span>m_HasMonitor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::m_HasMonitor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac493eddeb061ee315b64f76d81e70ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac493eddeb061ee315b64f76d81e70ce5">&#9670;&nbsp;</a></span>m_IsActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::m_IsActive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a13140f5b3928d63f89fa0cb8a8156fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13140f5b3928d63f89fa0cb8a8156fe9">&#9670;&nbsp;</a></span>m_IsMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::m_IsMask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac520dcedabe371d93eafb6d6327eb36b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac520dcedabe371d93eafb6d6327eb36b">&#9670;&nbsp;</a></span>m_MaskAnimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Player::m_MaskAnimation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3a6f9774b938944cabc3c447327326ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6f9774b938944cabc3c447327326ec">&#9670;&nbsp;</a></span>m_MonitorViewID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a> Player::m_MonitorViewID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_player_8h_source.html">Player.h</a> の <a class="el" href="_player_8h_source.html#l00062">62</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Src/Character/Player/<a class="el" href="_player_8h_source.html">Player.h</a></li>
+<li>Src/Character/Player/<a class="el" href="_player_8cpp_source.html">Player.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_player.html">Player</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

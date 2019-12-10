@@ -55,7 +55,7 @@ void DrawGameScene()
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterDeskTex));
 
 		if (pCenterCandle->HasCaLight() == false) {
-			DrawTexture(710.0f, 365.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex));
 		}
 
 		break;

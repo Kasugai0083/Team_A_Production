@@ -1,0 +1,7 @@
+<map id="EndInput" name="EndInput">
+<area shape="rect" id="node1" title="Input機能終了関数 Input機能を終了させる ※EndEngineで実行されるので開発側が実行する必要はない" alt="" coords="375,31,448,57"/>
+<area shape="rect" id="node2" href="$_engine_8h.html#af4b15df747f927b772f15ef93493aad7" title="エンジン終了関数 ゲーム終了後にエンジン部分の終了を行う ※この関数はゲームループ終了後に１度だけ実行する" alt="" coords="127,5,212,32"/>
+<area shape="rect" id="node4" href="$_input_8h.html#ab38988ebf6ab3808447c491d4f5874e0" title="Input機能初期化関数 デバイスの入力取得に必要な初期化を行う ※InitEngineで実行されるので開発側が実行する必要はない" alt="" coords="260,56,327,83"/>
+<area shape="rect" id="node3" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,31,79,57"/>
+<area shape="rect" id="node5" href="$_engine_8h.html#a793ba90ca8458f8323c7cee0eb545d60" title="エンジン初期化関数 ゲームで使うエンジン部分(描画、入力)の初期化とウィンドウの作成を行う ※この関数はゲームループ開始前に１度だけ実行する" alt="" coords="130,56,209,83"/>
+</map>

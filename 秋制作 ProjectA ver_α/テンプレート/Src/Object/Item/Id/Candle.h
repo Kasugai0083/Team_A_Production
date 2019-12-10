@@ -11,6 +11,7 @@
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Calculation.h"
 
+
 const float MELT_RATIO = 0.001f; //!< @brief ˜XC‚ª—n‚¯‚é‘¬“x
 
 /**
@@ -121,5 +122,6 @@ private:
 
 	//! @brief ƒLƒƒƒ“ƒhƒ‹‚Ì‚‚³”ä—¦
 	float m_HeightRatio; 
+
 };
 

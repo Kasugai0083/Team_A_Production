@@ -1,0 +1,6 @@
+<map id="DrawAlphaBox2D" name="DrawAlphaBox2D">
+<area shape="rect" id="node1" title=" " alt="" coords="137,56,260,83"/>
+<area shape="rect" id="node2" href="$class_item.html#a02e91fb9fffeb259442662ed220869c5" title="座標と画像情報に基づいて描画 マウスが重なったら黒ポリゴンを重ねる" alt="" coords="5,5,89,32"/>
+<area shape="rect" id="node3" href="$class_u_i.html#ab1403cfb83132a7815e11fd3ece8fc85" title="生存情報に基づいて描画 マウスが重なっている場合、黒ポリゴンを重ねる" alt="" coords="12,56,83,83"/>
+<area shape="rect" id="node4" href="$class_fire.html#ad079ebe0f50929022b4e33ea406e4412" title="蝋燭の点灯情報と自身の生存情報に基づいて描画" alt="" coords="7,107,88,133"/>
+</map>

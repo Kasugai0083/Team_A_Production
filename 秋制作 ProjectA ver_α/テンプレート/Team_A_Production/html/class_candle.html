@@ -1,0 +1,835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Candle クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_candle.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_candle-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Candle クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>蝋燭に纏わるオブジェクトを管理するクラス<br  />
+蝋燭、燭台、蝋燭のエフェクト<br  />
+ 
+ <a href="class_candle.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_candle_8h_source.html">Candle.h</a>&gt;</code></p>
+<div class="dynheader">
+Candle の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle__inherit__graph.png" border="0" usemap="#_candle_inherit__map" alt="Inheritance graph"/></div>
+<map name="_candle_inherit__map" id="_candle_inherit__map">
+<area shape="rect" title="蝋燭に纏わるオブジェクトを管理するクラス 蝋燭、燭台、蝋燭のエフェクト" alt="" coords="5,155,68,181"/>
+<area shape="rect" href="class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="13,80,60,107"/>
+<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="7,5,67,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+Candle 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle__coll__graph.png" border="0" usemap="#_candle_coll__map" alt="Collaboration graph"/></div>
+<map name="_candle_coll__map" id="_candle_coll__map">
+<area shape="rect" title="蝋燭に纏わるオブジェクトを管理するクラス 蝋燭、燭台、蝋燭のエフェクト" alt="" coords="121,185,184,212"/>
+<area shape="rect" href="class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="129,109,176,136"/>
+<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
+<area shape="rect" href="struct_vec2.html" title="Vector用構造体(2D版)" alt="" coords="89,5,141,32"/>
+<area shape="rect" href="struct_size.html" title="サイズデータ用構造体" alt="" coords="167,5,215,32"/>
+<area shape="rect" href="struct_texture.html" title="テクスチャデータやサイズを保持する構造体" alt="" coords="245,5,311,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a19c8fcb9549e1d8b9c25f58cb5c1edc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a19c8fcb9549e1d8b9c25f58cb5c1edc2">Candle</a> (<a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_)</td></tr>
+<tr class="memdesc:a19c8fcb9549e1d8b9c25f58cb5c1edc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ<br  />
+各種メンバ変数の初期化<br  />
+ <a href="class_candle.html#a19c8fcb9549e1d8b9c25f58cb5c1edc2">[詳解]</a><br /></td></tr>
+<tr class="separator:a19c8fcb9549e1d8b9c25f58cb5c1edc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd211fe2840d31a0d82578f7fdcfa9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a5bd211fe2840d31a0d82578f7fdcfa9c">Init</a> () override</td></tr>
+<tr class="memdesc:a5bd211fe2840d31a0d82578f7fdcfa9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種データを m_Id に基づいて初期化<br  />
+画像読み込み<br  />
+座標の指定<br  />
+アイテムの大きさを設定<br  />
+画像の大きさを設定<br  />
+ <a href="class_candle.html#a5bd211fe2840d31a0d82578f7fdcfa9c">[詳解]</a><br /></td></tr>
+<tr class="separator:a5bd211fe2840d31a0d82578f7fdcfa9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c90d9b6a6df8cfb7063c3837cd5405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405">Update</a> () override</td></tr>
+<tr class="memdesc:ad1c90d9b6a6df8cfb7063c3837cd5405"><td class="mdescLeft">&#160;</td><td class="mdescRight">蝋燭の更新<br  />
+蝋燭の生死管理<br  />
+キャンドル明滅の管理<br  />
+キャンドルが溶けて座標が下がる処理  <a href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405">[詳解]</a><br /></td></tr>
+<tr class="separator:ad1c90d9b6a6df8cfb7063c3837cd5405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af893fbe070f2e749eb5b397fd18d37ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#af893fbe070f2e749eb5b397fd18d37ca">Draw</a> () override</td></tr>
+<tr class="memdesc:af893fbe070f2e749eb5b397fd18d37ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_Id に基づいて描画<br  />
+蝋燭の場合 =&gt; ヘルスに応じて溶けるように描画される<br  />
+それ以外 =&gt; 指定された座標とサイズで描画  <a href="class_candle.html#af893fbe070f2e749eb5b397fd18d37ca">[詳解]</a><br /></td></tr>
+<tr class="separator:af893fbe070f2e749eb5b397fd18d37ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e84e4577dbeb6daf559cb57ab476b71"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a8e84e4577dbeb6daf559cb57ab476b71">GetHp</a> () override</td></tr>
+<tr class="memdesc:a8e84e4577dbeb6daf559cb57ab476b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス化して利用する  <a href="class_candle.html#a8e84e4577dbeb6daf559cb57ab476b71">[詳解]</a><br /></td></tr>
+<tr class="separator:a8e84e4577dbeb6daf559cb57ab476b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a52af571ba5ad324312c9112028331c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a0a52af571ba5ad324312c9112028331c">GetRatio</a> () override</td></tr>
+<tr class="memdesc:a0a52af571ba5ad324312c9112028331c"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス化して利用する  <a href="class_candle.html#a0a52af571ba5ad324312c9112028331c">[詳解]</a><br /></td></tr>
+<tr class="separator:a0a52af571ba5ad324312c9112028331c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72eb25514569ad0212901422574c77af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a72eb25514569ad0212901422574c77af">HasCaLight</a> () override</td></tr>
+<tr class="memdesc:a72eb25514569ad0212901422574c77af"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンス化して利用する  <a href="class_candle.html#a72eb25514569ad0212901422574c77af">[詳解]</a><br /></td></tr>
+<tr class="separator:a72eb25514569ad0212901422574c77af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_item"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_item')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_item.html">Item</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a297720c02984eab37332ae795d22189d inherit pub_methods_class_item"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a297720c02984eab37332ae795d22189d">Item</a> ()</td></tr>
+<tr class="memdesc:a297720c02984eab37332ae795d22189d inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_item.html#a297720c02984eab37332ae795d22189d">[詳解]</a><br /></td></tr>
+<tr class="separator:a297720c02984eab37332ae795d22189d inherit pub_methods_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11663c84075b78c3ae5e30fdfcd7c458 inherit pub_methods_class_item"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">~Item</a> ()</td></tr>
+<tr class="memdesc:a11663c84075b78c3ae5e30fdfcd7c458 inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">[詳解]</a><br /></td></tr>
+<tr class="separator:a11663c84075b78c3ae5e30fdfcd7c458 inherit pub_methods_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e91fb9fffeb259442662ed220869c5 inherit pub_methods_class_item"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a02e91fb9fffeb259442662ed220869c5">Draw</a> () override</td></tr>
+<tr class="memdesc:a02e91fb9fffeb259442662ed220869c5 inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標と画像情報に基づいて描画<br  />
+マウスが重なったら黒ポリゴンを重ねる  <a href="class_item.html#a02e91fb9fffeb259442662ed220869c5">[詳解]</a><br /></td></tr>
+<tr class="separator:a02e91fb9fffeb259442662ed220869c5 inherit pub_methods_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93dd04b3c6bd57e9bf255abc2dfd70a5 inherit pub_methods_class_item"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a93dd04b3c6bd57e9bf255abc2dfd70a5">Update</a> () override</td></tr>
+<tr class="memdesc:a93dd04b3c6bd57e9bf255abc2dfd70a5 inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスが画像情報に重なった場合、黒ポリゴンを重ねる  <a href="class_item.html#a93dd04b3c6bd57e9bf255abc2dfd70a5">[詳解]</a><br /></td></tr>
+<tr class="separator:a93dd04b3c6bd57e9bf255abc2dfd70a5 inherit pub_methods_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50da07e72d764fab667bc52d05c0cde3 inherit pub_methods_class_item"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a50da07e72d764fab667bc52d05c0cde3">HasOnMouse</a> () override</td></tr>
+<tr class="memdesc:a50da07e72d764fab667bc52d05c0cde3 inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_OnMouseを取得する  <a href="class_item.html#a50da07e72d764fab667bc52d05c0cde3">[詳解]</a><br /></td></tr>
+<tr class="separator:a50da07e72d764fab667bc52d05c0cde3 inherit pub_methods_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_object')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_object.html">Object</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a40860402e64d8008fb42329df7097cdb inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a40860402e64d8008fb42329df7097cdb">Object</a> ()</td></tr>
+<tr class="memdesc:a40860402e64d8008fb42329df7097cdb inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="class_object.html#a40860402e64d8008fb42329df7097cdb">[詳解]</a><br /></td></tr>
+<tr class="separator:a40860402e64d8008fb42329df7097cdb inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f5483f459e46687bd01e6f9977afd3 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#ae8f5483f459e46687bd01e6f9977afd3">~Object</a> ()</td></tr>
+<tr class="memdesc:ae8f5483f459e46687bd01e6f9977afd3 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_object.html#ae8f5483f459e46687bd01e6f9977afd3">[詳解]</a><br /></td></tr>
+<tr class="separator:ae8f5483f459e46687bd01e6f9977afd3 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd4b731f381df03c9aa9f5afcbd73c7 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7">HasMask</a> ()</td></tr>
+<tr class="separator:a3fd4b731f381df03c9aa9f5afcbd73c7 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6c7bc43a788f20e29b5963f08a935b8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d">SceneDeath</a> ()</td></tr>
+<tr class="memdesc:a6c7bc43a788f20e29b5963f08a935b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameScene 以外でキャンドルを死亡させる<br  />
+GameView 情報によってキャンドルの生死を管理する<br  />
+ <a href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c7bc43a788f20e29b5963f08a935b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0534ae18084e1ee7f3876710a53cf3e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7">CandleSwitch</a> (bool center_switch_, bool left_switch_, bool right_switch_)</td></tr>
+<tr class="separator:a0534ae18084e1ee7f3876710a53cf3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca48afd771e7270ae4afc329dff47c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">MeltCandle</a> (<a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_)</td></tr>
+<tr class="memdesc:aca48afd771e7270ae4afc329dff47c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャンドルを溶かすために計算する関数  <a href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f">[詳解]</a><br /></td></tr>
+<tr class="separator:aca48afd771e7270ae4afc329dff47c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bebb511757ff21039189bca77a5cfee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a5bebb511757ff21039189bca77a5cfee">EffectUpdate</a> ()</td></tr>
+<tr class="memdesc:a5bebb511757ff21039189bca77a5cfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャンドルエフェクトの生死情報を管理  <a href="class_candle.html#a5bebb511757ff21039189bca77a5cfee">[詳解]</a><br /></td></tr>
+<tr class="separator:a5bebb511757ff21039189bca77a5cfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a68ec2526e66e9d7d8b647b48106087c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">m_HasCaLight</a></td></tr>
+<tr class="memdesc:a68ec2526e66e9d7d8b647b48106087c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャンドルが点灯情報  <a href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">[詳解]</a><br /></td></tr>
+<tr class="separator:a68ec2526e66e9d7d8b647b48106087c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718c156f6a336e25e81e1ea3832909ee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">m_CandleHp</a></td></tr>
+<tr class="memdesc:a718c156f6a336e25e81e1ea3832909ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャンドルのHP  <a href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">[詳解]</a><br /></td></tr>
+<tr class="separator:a718c156f6a336e25e81e1ea3832909ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabb5c093e584562d9338e82b89c41fa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">m_HeightRatio</a></td></tr>
+<tr class="memdesc:adabb5c093e584562d9338e82b89c41fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャンドルの高さ比率  <a href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">[詳解]</a><br /></td></tr>
+<tr class="separator:adabb5c093e584562d9338e82b89c41fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_item"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_item')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_item.html">Item</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a9795d2dcfff5c45255cb4136d82f1d0a inherit pro_attribs_class_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a></td></tr>
+<tr class="memdesc:a9795d2dcfff5c45255cb4136d82f1d0a inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャの情報を格納  <a href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">[詳解]</a><br /></td></tr>
+<tr class="separator:a9795d2dcfff5c45255cb4136d82f1d0a inherit pro_attribs_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b2ff8eb3a824b5e134a3285beca8d3 inherit pro_attribs_class_item"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a></td></tr>
+<tr class="memdesc:af4b2ff8eb3a824b5e134a3285beca8d3 inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスが重なったとき true  <a href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">[詳解]</a><br /></td></tr>
+<tr class="separator:af4b2ff8eb3a824b5e134a3285beca8d3 inherit pro_attribs_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6dc1fe14c2a56351fe35fb32b322b0f inherit pro_attribs_class_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a></td></tr>
+<tr class="memdesc:ad6dc1fe14c2a56351fe35fb32b322b0f inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標情報  <a href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">[詳解]</a><br /></td></tr>
+<tr class="separator:ad6dc1fe14c2a56351fe35fb32b322b0f inherit pro_attribs_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4d0ce9428fdf80b009eef5e3e1fbc0 inherit pro_attribs_class_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a></td></tr>
+<tr class="memdesc:a4d4d0ce9428fdf80b009eef5e3e1fbc0 inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ情報  <a href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">[詳解]</a><br /></td></tr>
+<tr class="separator:a4d4d0ce9428fdf80b009eef5e3e1fbc0 inherit pro_attribs_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc11af00ea7b0cc7441f94403301cb3 inherit pro_attribs_class_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">m_Frame</a></td></tr>
+<tr class="memdesc:a7cc11af00ea7b0cc7441f94403301cb3 inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像サイズ情報  <a href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">[詳解]</a><br /></td></tr>
+<tr class="separator:a7cc11af00ea7b0cc7441f94403301cb3 inherit pro_attribs_class_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_object')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_object.html">Object</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a7a93bec1c230d962620b5ae62e581f91 inherit pro_attribs_class_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a></td></tr>
+<tr class="memdesc:a7a93bec1c230d962620b5ae62e581f91 inherit pro_attribs_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトの生存情報  <a href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a93bec1c230d962620b5ae62e581f91 inherit pro_attribs_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f06f75335ce0023e49bd4b79afcc1a4 inherit pro_attribs_class_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a></td></tr>
+<tr class="memdesc:a9f06f75335ce0023e49bd4b79afcc1a4 inherit pro_attribs_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトの識別番号  <a href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">[詳解]</a><br /></td></tr>
+<tr class="separator:a9f06f75335ce0023e49bd4b79afcc1a4 inherit pro_attribs_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>蝋燭に纏わるオブジェクトを管理するクラス<br  />
+蝋燭、燭台、蝋燭のエフェクト<br  />
+</p>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00020">20</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a19c8fcb9549e1d8b9c25f58cb5c1edc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c8fcb9549e1d8b9c25f58cb5c1edc2">&#9670;&nbsp;</a></span>Candle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Candle::Candle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a>&#160;</td>
+          <td class="paramname"><em>id_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ<br  />
+各種メンバ変数の初期化<br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id_</td><td>で指定された ObjID を代入 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0534ae18084e1ee7f3876710a53cf3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0534ae18084e1ee7f3876710a53cf3e7">&#9670;&nbsp;</a></span>CandleSwitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Candle::CandleSwitch </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>center_switch_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>left_switch_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>right_switch_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_candle_8cpp_source.html">Candle.cpp</a> の <a class="el" href="_candle_8cpp_source.html#l00116">116</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_a0534ae18084e1ee7f3876710a53cf3e7_icgraph.png" border="0" usemap="#class_candle_a0534ae18084e1ee7f3876710a53cf3e7_icgraph" alt=""/></div>
+<map name="class_candle_a0534ae18084e1ee7f3876710a53cf3e7_icgraph" id="class_candle_a0534ae18084e1ee7f3876710a53cf3e7_icgraph">
+<area shape="rect" title=" " alt="" coords="353,5,503,32"/>
+<area shape="rect" href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d" title="GameScene 以外でキャンドルを死亡させる GameView 情報によってキャンドルの生死を管理する" alt="" coords="164,5,305,32"/>
+<area shape="rect" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="5,5,116,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af893fbe070f2e749eb5b397fd18d37ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af893fbe070f2e749eb5b397fd18d37ca">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Candle::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>m_Id に基づいて描画<br  />
+蝋燭の場合 =&gt; ヘルスに応じて溶けるように描画される<br  />
+それ以外 =&gt; 指定された座標とサイズで描画 </p>
+
+<p><a class="el" href="class_object.html#acbd787db750bc1be296d152b324acf20">Object</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="_candle_8cpp_source.html">Candle.cpp</a> の <a class="el" href="_candle_8cpp_source.html#l00288">288</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_af893fbe070f2e749eb5b397fd18d37ca_cgraph.png" border="0" usemap="#class_candle_af893fbe070f2e749eb5b397fd18d37ca_cgraph" alt=""/></div>
+<map name="class_candle_af893fbe070f2e749eb5b397fd18d37ca_cgraph" id="class_candle_af893fbe070f2e749eb5b397fd18d37ca_cgraph">
+<area shape="rect" title="m_Id に基づいて描画 蝋燭の場合 =&gt; ヘルスに応じて溶けるように描画される それ以外 =&gt; 指定された座標とサイズで描画" alt="" coords="5,31,104,57"/>
+<area shape="rect" href="_graphics_8cpp.html#ad61dd9d1b71c35e0486dd004e99021a1" title=" " alt="" coords="154,5,245,32"/>
+<area shape="rect" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="152,56,247,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5bebb511757ff21039189bca77a5cfee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bebb511757ff21039189bca77a5cfee">&#9670;&nbsp;</a></span>EffectUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Candle::EffectUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>キャンドルエフェクトの生死情報を管理 </p>
+
+<p class="definition"> <a class="el" href="_candle_8cpp_source.html">Candle.cpp</a> の <a class="el" href="_candle_8cpp_source.html#l00197">197</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_a5bebb511757ff21039189bca77a5cfee_cgraph.png" border="0" usemap="#class_candle_a5bebb511757ff21039189bca77a5cfee_cgraph" alt=""/></div>
+<map name="class_candle_a5bebb511757ff21039189bca77a5cfee_cgraph" id="class_candle_a5bebb511757ff21039189bca77a5cfee_cgraph">
+<area shape="rect" title="キャンドルエフェクトの生死情報を管理" alt="" coords="5,56,149,83"/>
+<area shape="rect" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0" title="m_pObjects の インスタンス情報を取得する" alt="" coords="197,5,356,32"/>
+<area shape="rect" href="class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="209,56,344,83"/>
+<area shape="rect" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="231,107,323,133"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_a5bebb511757ff21039189bca77a5cfee_icgraph.png" border="0" usemap="#class_candle_a5bebb511757ff21039189bca77a5cfee_icgraph" alt=""/></div>
+<map name="class_candle_a5bebb511757ff21039189bca77a5cfee_icgraph" id="class_candle_a5bebb511757ff21039189bca77a5cfee_icgraph">
+<area shape="rect" title="キャンドルエフェクトの生死情報を管理" alt="" coords="164,5,308,32"/>
+<area shape="rect" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="5,5,116,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e84e4577dbeb6daf559cb57ab476b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e84e4577dbeb6daf559cb57ab476b71">&#9670;&nbsp;</a></span>GetHp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Candle::GetHp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス化して利用する </p>
+<dl class="section return"><dt>戻り値</dt><dd>float インスタンスの m_CandleHp を返す </dd></dl>
+
+<p><a class="el" href="class_object.html#a67dac0d49f2c9a8e4b86b2572238adb2">Object</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00065">65</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0a52af571ba5ad324312c9112028331c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a52af571ba5ad324312c9112028331c">&#9670;&nbsp;</a></span>GetRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Candle::GetRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス化して利用する </p>
+<dl class="section return"><dt>戻り値</dt><dd>float インスタンスの m_HeightRatio を返す </dd></dl>
+
+<p><a class="el" href="class_object.html#af6c3ba6ab9e42e35162e39d4fd9172ca">Object</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00072">72</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a72eb25514569ad0212901422574c77af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72eb25514569ad0212901422574c77af">&#9670;&nbsp;</a></span>HasCaLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Candle::HasCaLight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インスタンス化して利用する </p>
+<dl class="section return"><dt>戻り値</dt><dd>float インスタンスの m_HasCaLight を返す </dd></dl>
+
+<p><a class="el" href="class_object.html#a56b5956cea5204d55183a444a01a30d6">Object</a>を再実装しています。</p>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00079">79</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5bd211fe2840d31a0d82578f7fdcfa9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd211fe2840d31a0d82578f7fdcfa9c">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Candle::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>各種データを m_Id に基づいて初期化<br  />
+画像読み込み<br  />
+座標の指定<br  />
+アイテムの大きさを設定<br  />
+画像の大きさを設定<br  />
+</p>
+
+<p><a class="el" href="class_object.html#a7254c74e9926c9c9e5076b606dbfc962">Object</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="_candle_8cpp_source.html">Candle.cpp</a> の <a class="el" href="_candle_8cpp_source.html#l00005">5</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c_cgraph.png" border="0" usemap="#class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c_cgraph" alt=""/></div>
+<map name="class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c_cgraph" id="class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c_cgraph">
+<area shape="rect" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定" alt="" coords="5,31,92,57"/>
+<area shape="rect" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="143,5,230,32"/>
+<area shape="rect" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="140,56,233,83"/>
+<area shape="rect" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="281,5,440,32"/>
+<area shape="rect" href="_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="309,56,412,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aca48afd771e7270ae4afc329dff47c6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca48afd771e7270ae4afc329dff47c6f">&#9670;&nbsp;</a></span>MeltCandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Candle::MeltCandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a>&#160;</td>
+          <td class="paramname"><em>id_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>キャンドルを溶かすために計算する関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id_</td><td>指定したキャンドルを溶かす </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_candle_8cpp_source.html">Candle.cpp</a> の <a class="el" href="_candle_8cpp_source.html#l00161">161</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_aca48afd771e7270ae4afc329dff47c6f_icgraph.png" border="0" usemap="#class_candle_aca48afd771e7270ae4afc329dff47c6f_icgraph" alt=""/></div>
+<map name="class_candle_aca48afd771e7270ae4afc329dff47c6f_icgraph" id="class_candle_aca48afd771e7270ae4afc329dff47c6f_icgraph">
+<area shape="rect" title="キャンドルを溶かすために計算する関数" alt="" coords="164,5,299,32"/>
+<area shape="rect" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="5,5,116,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6c7bc43a788f20e29b5963f08a935b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c7bc43a788f20e29b5963f08a935b8d">&#9670;&nbsp;</a></span>SceneDeath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Candle::SceneDeath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GameScene 以外でキャンドルを死亡させる<br  />
+GameView 情報によってキャンドルの生死を管理する<br  />
+</p>
+<p>キャンドルの生死を管理するスイッチ</p>
+<p>Update内で使用される関数群</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">center_switch_</td><td>true だと CANDLE_CENTER 生存 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left_switch_</td><td>true だと CANDLE_LEFT 生存 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right_switch_</td><td>true だと CANDLE_RIGHT 生存 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_candle_8cpp_source.html">Candle.cpp</a> の <a class="el" href="_candle_8cpp_source.html#l00131">131</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_a6c7bc43a788f20e29b5963f08a935b8d_cgraph.png" border="0" usemap="#class_candle_a6c7bc43a788f20e29b5963f08a935b8d_cgraph" alt=""/></div>
+<map name="class_candle_a6c7bc43a788f20e29b5963f08a935b8d_cgraph" id="class_candle_a6c7bc43a788f20e29b5963f08a935b8d_cgraph">
+<area shape="rect" title="GameScene 以外でキャンドルを死亡させる GameView 情報によってキャンドルの生死を管理する" alt="" coords="5,56,147,83"/>
+<area shape="rect" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7" title=" " alt="" coords="195,5,344,32"/>
+<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="227,56,312,83"/>
+<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="203,107,335,133"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_a6c7bc43a788f20e29b5963f08a935b8d_icgraph.png" border="0" usemap="#class_candle_a6c7bc43a788f20e29b5963f08a935b8d_icgraph" alt=""/></div>
+<map name="class_candle_a6c7bc43a788f20e29b5963f08a935b8d_icgraph" id="class_candle_a6c7bc43a788f20e29b5963f08a935b8d_icgraph">
+<area shape="rect" title="GameScene 以外でキャンドルを死亡させる GameView 情報によってキャンドルの生死を管理する" alt="" coords="164,5,305,32"/>
+<area shape="rect" href="class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="5,5,116,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad1c90d9b6a6df8cfb7063c3837cd5405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c90d9b6a6df8cfb7063c3837cd5405">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Candle::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>蝋燭の更新<br  />
+蝋燭の生死管理<br  />
+キャンドル明滅の管理<br  />
+キャンドルが溶けて座標が下がる処理 </p>
+
+<p><a class="el" href="class_object.html#a5ee5c17a09981cbd7c469370e210b4ff">Object</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="_candle_8cpp_source.html">Candle.cpp</a> の <a class="el" href="_candle_8cpp_source.html#l00236">236</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405_cgraph.png" border="0" usemap="#class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405_cgraph" alt=""/></div>
+<map name="class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405_cgraph" id="class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405_cgraph">
+<area shape="rect" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="5,208,116,235"/>
+<area shape="rect" href="class_candle.html#a5bebb511757ff21039189bca77a5cfee" title="キャンドルエフェクトの生死情報を管理" alt="" coords="164,56,308,83"/>
+<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="393,220,478,247"/>
+<area shape="rect" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee" title="マウスの座標取得関数" alt="" coords="183,157,289,184"/>
+<area shape="rect" href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac" title=" " alt="" coords="177,208,295,235"/>
+<area shape="rect" href="class_candle.html#aca48afd771e7270ae4afc329dff47c6f" title="キャンドルを溶かすために計算する関数" alt="" coords="169,259,303,285"/>
+<area shape="rect" href="_input_8cpp.html#af896c535cd0c69ae56fdf3d71564fb92" title="クリック中判定関数 指定したマウスのボタンがクリック中かどうかを判定する" alt="" coords="182,309,290,336"/>
+<area shape="rect" href="class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d" title="GameScene 以外でキャンドルを死亡させる GameView 情報によってキャンドルの生死を管理する" alt="" coords="165,360,307,387"/>
+<area shape="rect" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0" title="m_pObjects の インスタンス情報を取得する" alt="" coords="356,5,515,32"/>
+<area shape="rect" href="class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="368,56,503,83"/>
+<area shape="rect" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="389,107,481,133"/>
+<area shape="rect" href="class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7" title=" " alt="" coords="361,335,510,361"/>
+<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="369,385,501,412"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a718c156f6a336e25e81e1ea3832909ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718c156f6a336e25e81e1ea3832909ee">&#9670;&nbsp;</a></span>m_CandleHp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Candle::m_CandleHp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>キャンドルのHP </p>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00120">120</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a68ec2526e66e9d7d8b647b48106087c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ec2526e66e9d7d8b647b48106087c0">&#9670;&nbsp;</a></span>m_HasCaLight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Candle::m_HasCaLight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>キャンドルが点灯情報 </p>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00117">117</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adabb5c093e584562d9338e82b89c41fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabb5c093e584562d9338e82b89c41fa">&#9670;&nbsp;</a></span>m_HeightRatio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Candle::m_HeightRatio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>キャンドルの高さ比率 </p>
+
+<p class="definition"> <a class="el" href="_candle_8h_source.html">Candle.h</a> の <a class="el" href="_candle_8h_source.html#l00123">123</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Src/Object/Item/Id/<a class="el" href="_candle_8h_source.html">Candle.h</a></li>
+<li>Src/Object/Item/Id/<a class="el" href="_candle_8cpp_source.html">Candle.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_candle.html">Candle</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

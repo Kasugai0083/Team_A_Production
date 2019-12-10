@@ -1,0 +1,15 @@
+<map id="Candle::Update" name="Candle::Update">
+<area shape="rect" id="node1" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="5,208,116,235"/>
+<area shape="rect" id="node2" href="$class_candle.html#a5bebb511757ff21039189bca77a5cfee" title="キャンドルエフェクトの生死情報を管理" alt="" coords="164,56,308,83"/>
+<area shape="rect" id="node6" href="$_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="393,220,478,247"/>
+<area shape="rect" id="node7" href="$_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee" title="マウスの座標取得関数" alt="" coords="183,157,289,184"/>
+<area shape="rect" id="node8" href="$_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac" title=" " alt="" coords="177,208,295,235"/>
+<area shape="rect" id="node9" href="$class_candle.html#aca48afd771e7270ae4afc329dff47c6f" title="キャンドルを溶かすために計算する関数" alt="" coords="169,259,303,285"/>
+<area shape="rect" id="node10" href="$_input_8cpp.html#af896c535cd0c69ae56fdf3d71564fb92" title="クリック中判定関数 指定したマウスのボタンがクリック中かどうかを判定する" alt="" coords="182,309,290,336"/>
+<area shape="rect" id="node11" href="$class_candle.html#a6c7bc43a788f20e29b5963f08a935b8d" title="GameScene 以外でキャンドルを死亡させる GameView 情報によってキャンドルの生死を管理する" alt="" coords="165,360,307,387"/>
+<area shape="rect" id="node3" href="$class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0" title="m_pObjects の インスタンス情報を取得する" alt="" coords="356,5,515,32"/>
+<area shape="rect" id="node4" href="$class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="368,56,503,83"/>
+<area shape="rect" id="node5" href="$_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="389,107,481,133"/>
+<area shape="rect" id="node12" href="$class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7" title=" " alt="" coords="361,335,510,361"/>
+<area shape="rect" id="node13" href="$_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="369,385,501,412"/>
+</map>

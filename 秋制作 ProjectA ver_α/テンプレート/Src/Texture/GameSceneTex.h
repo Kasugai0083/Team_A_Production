@@ -11,15 +11,18 @@ enum GameCategoryTextureList
 	//item
 	GameCandleBigTex,
 	GameCandleSmallTex,
-	GameCandleStandTex,
+
+	GameCandleStandCenterTex,
+	GameCandleStandSideTex,
 
 	GameCandleCenterEffectTex,
 	GameCandleLeftEffectTex,
 	GameCandleRightEffectTex,
 	
+	GameFireTex,
 	GameFireBigTex,
 	GameFireSmallTex,
-
+	
 	GameCrystalTex,
 	GameOnHitCrystalTex,
 

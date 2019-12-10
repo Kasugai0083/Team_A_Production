@@ -1,0 +1,26 @@
+<map id="UpdateTitleScene" name="UpdateTitleScene">
+<area shape="rect" id="node1" title="タイトルシーンの更新関数 タイトルシーンの仕様が実行される" alt="" coords="5,259,129,285"/>
+<area shape="rect" id="node2" href="$_title_scene_8cpp.html#afc2a10c9ed9e0597ad498b3e29e5e00b" title=" " alt="" coords="193,132,311,159"/>
+<area shape="rect" id="node9" href="$_scene_8cpp.html#a9127a02a504755a923f76ef9108d53b0" title="現在実行中のシーンステップの取得関数" alt="" coords="177,233,327,260"/>
+<area shape="rect" id="node10" href="$_title_scene_8cpp.html#a58517aaaaec3180ec82317777dd3a060" title=" " alt="" coords="202,284,302,311"/>
+<area shape="rect" id="node18" href="$_title_scene_8cpp.html#a0161153381653a144cc6141ac2e8fdcb" title=" " alt="" coords="197,512,307,539"/>
+<area shape="rect" id="node3" href="$class_audio_player.html#add329a1de7de948b1327db5e28933cb2" title=" " alt="" coords="381,107,551,133"/>
+<area shape="rect" id="node4" href="$class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082" title=" " alt="" coords="400,157,532,184"/>
+<area shape="rect" id="node5" href="$class_timer.html#ae2ada8383290c09b3101be48f7e0016e" title="TIMERS と m_HourCount を初期化" alt="" coords="427,208,505,235"/>
+<area shape="rect" id="node6" href="$class_character_manager.html#a288e498a7ac239e17b85370b5122bdce" title=" " alt="" coords="375,5,557,32"/>
+<area shape="rect" id="node8" href="$_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725" title="カテゴリー単位のテクスチャ解放関数 引数で指定されたカテゴリーのテクスチャを全て解放する" alt="" coords="384,56,548,83"/>
+<area shape="rect" id="node7" href="$class_character.html#ac3776b55752f328ee74fd1282331f872" title=" " alt="" coords="633,5,736,32"/>
+<area shape="rect" id="node11" href="$_scene_8cpp.html#a9124bba4e4cb32fe152389f21623d827" title="シーンステップ変更関数 引数で指定したステップに切り替える" alt="" coords="401,411,531,437"/>
+<area shape="rect" id="node12" href="$_window_8cpp.html#ae7ae4278fb0e290f6cfb32e7db4f4aa7" title=" " alt="" coords="401,259,531,285"/>
+<area shape="rect" id="node13" href="$class_object_manager.html#a9771f5f3c34b9ce12c50dfd9900de191" title="全ての m_pObjects を初期化する" alt="" coords="399,309,533,336"/>
+<area shape="rect" id="node14" href="$_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="419,360,513,387"/>
+<area shape="rect" id="node17" href="$_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="420,461,512,488"/>
+<area shape="rect" id="node15" href="$_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="633,335,736,361"/>
+<area shape="rect" id="node16" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="605,385,764,412"/>
+<area shape="rect" id="node19" href="$class_scene_transition.html#a24fd0d8bf1dc606777a8e63b0b02df00" title=" " alt="" coords="375,613,557,640"/>
+<area shape="rect" id="node21" href="$_scene_8cpp.html#a9abc5a8b2132504a6a3abae9a46cc228" title=" " alt="" coords="627,664,742,691"/>
+<area shape="rect" id="node23" href="$_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02" title="クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する" alt="" coords="411,512,521,539"/>
+<area shape="rect" id="node24" href="$class_object_manager.html#a43507b10b7356870fc39147a259b97fa" title="全ての m_pObjects を更新する" alt="" coords="387,563,545,589"/>
+<area shape="rect" id="node20" href="$_input_8cpp.html#a3dac7d6291b5adaef424f722ca35c786" title=" " alt="" coords="651,563,718,589"/>
+<area shape="rect" id="node22" href="$class_scene_transition.html#aebcdfddd31193d3dadc50049723336df" title=" " alt="" coords="607,613,762,640"/>
+</map>

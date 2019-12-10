@@ -1,0 +1,5 @@
+<map id="Crystal" name="Crystal">
+<area shape="rect" id="node1" title="水晶を管理するクラス" alt="" coords="5,155,68,181"/>
+<area shape="rect" id="node2" href="$class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="13,80,60,107"/>
+<area shape="rect" id="node3" href="$class_object.html" title="オブジェクトを管理するクラス" alt="" coords="7,5,67,32"/>
+</map>

@@ -1,0 +1,243 @@
+\hypertarget{_texture_8h}{}\doxysection{Src/\+Texture/\+Texture.h ファイル}
+\label{_texture_8h}\index{Src/Texture/Texture.h@{Src/Texture/Texture.h}}
+
+
+テクスチャの読み込み、解放など、テクスチャに関する関数、定数の宣言  
+
+
+{\ttfamily \#include \char`\"{}../\+Scene/\+Scene.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Enemy\+Tex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Title\+Scene\+Tex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Scene\+Tex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Result\+Scene\+Tex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Opening\+Scene\+Tex.\+h\char`\"{}}\newline
+Texture.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_texture_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_texture_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_texture_8h_a42477f314fae4e6db57014c0f554b0d6}{M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+A\+T\+E\+G\+O\+RY}}~(\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf}{Scene\+Id\+::\+Scene\+Id\+Max}})
+\begin{DoxyCompactList}\small\item\em カテゴリー最大 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_texture_8h_ad684ebdecadeaa3a348be34505a8f68a}{Init\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em テクスチャデータ初期化関数~\newline
+ゲームで使用するテクスチャデータを保存出来るようにする \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_texture_8h_a3308f207820dd8cf2964fffeb2a34cb8}{Release\+Category\+Texture}} (int category\+\_\+id)
+\begin{DoxyCompactList}\small\item\em カテゴリー単位のテクスチャ解放関数~\newline
+引数で指定されたカテゴリーのテクスチャを全て解放する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_texture_8h_adf7bc429a7737bcf34789952fa0f8b90}{All\+Release\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em テクスチャの全解放~\newline
+読み込んでいるすべてのテクスチャを解放する~\newline
+※この関数は\+End\+Engineで使用されているので開発側で呼ぶ必要はない \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_texture_8h_a765e9a08f1a6a5b0ee1cdf44d67037e6}{Load\+Texture}} (const char $\ast$file\+\_\+name, int category\+\_\+id, int texture\+\_\+id)
+\begin{DoxyCompactList}\small\item\em テクスチャの読み込み~\newline
+指定したされたパスのテクスチャを読み込み、カテゴリに登録する \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_texture}{Texture}} $\ast$ \mbox{\hyperlink{_texture_8h_ab8389a24369e4f9beb1d4f21e344e885}{Get\+Texture}} (int category\+\_\+id, int texture\+\_\+id)
+\begin{DoxyCompactList}\small\item\em テクスチャデータの取得~\newline
+指定されたカテゴリのテクスチャデータを取得する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+テクスチャの読み込み、解放など、テクスチャに関する関数、定数の宣言 
+
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{_texture_8h_a42477f314fae4e6db57014c0f554b0d6}\label{_texture_8h_a42477f314fae4e6db57014c0f554b0d6}} 
+\index{Texture.h@{Texture.h}!MAX\_TEXTURE\_CATEGORY@{MAX\_TEXTURE\_CATEGORY}}
+\index{MAX\_TEXTURE\_CATEGORY@{MAX\_TEXTURE\_CATEGORY}!Texture.h@{Texture.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_TEXTURE\_CATEGORY}{MAX\_TEXTURE\_CATEGORY}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+A\+T\+E\+G\+O\+RY~(\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf}{Scene\+Id\+::\+Scene\+Id\+Max}})}
+
+
+
+カテゴリー最大 
+
+
+
+ Texture.\+h の 16 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_texture_8h_adf7bc429a7737bcf34789952fa0f8b90}\label{_texture_8h_adf7bc429a7737bcf34789952fa0f8b90}} 
+\index{Texture.h@{Texture.h}!AllReleaseTexture@{AllReleaseTexture}}
+\index{AllReleaseTexture@{AllReleaseTexture}!Texture.h@{Texture.h}}
+\doxysubsubsection{\texorpdfstring{AllReleaseTexture()}{AllReleaseTexture()}}
+{\footnotesize\ttfamily void All\+Release\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+テクスチャの全解放~\newline
+読み込んでいるすべてのテクスチャを解放する~\newline
+※この関数は\+End\+Engineで使用されているので開発側で呼ぶ必要はない 
+
+
+
+ Texture.\+cpp の 60 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_texture_8h_adf7bc429a7737bcf34789952fa0f8b90_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_texture_8h_adf7bc429a7737bcf34789952fa0f8b90_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_texture_8h_ab8389a24369e4f9beb1d4f21e344e885}\label{_texture_8h_ab8389a24369e4f9beb1d4f21e344e885}} 
+\index{Texture.h@{Texture.h}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!Texture.h@{Texture.h}}
+\doxysubsubsection{\texorpdfstring{GetTexture()}{GetTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}}$\ast$ Get\+Texture (\begin{DoxyParamCaption}\item[{int}]{category\+\_\+id,  }\item[{int}]{texture\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+テクスチャデータの取得~\newline
+指定されたカテゴリのテクスチャデータを取得する 
+
+\begin{DoxyReturn}{戻り値}
+テクスチャデータ(取得失敗時はnullptr) 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em 取得したいテクスチャのカテゴリ} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em 取得したいテクスチャの\+ID} & \\
+\hline
+\end{DoxyParams}
+
+
+ Texture.\+cpp の 81 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{_texture_8h_ab8389a24369e4f9beb1d4f21e344e885_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_texture_8h_ab8389a24369e4f9beb1d4f21e344e885_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_texture_8h_ad684ebdecadeaa3a348be34505a8f68a}\label{_texture_8h_ad684ebdecadeaa3a348be34505a8f68a}} 
+\index{Texture.h@{Texture.h}!InitTexture@{InitTexture}}
+\index{InitTexture@{InitTexture}!Texture.h@{Texture.h}}
+\doxysubsubsection{\texorpdfstring{InitTexture()}{InitTexture()}}
+{\footnotesize\ttfamily void Init\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+テクスチャデータ初期化関数~\newline
+ゲームで使用するテクスチャデータを保存出来るようにする 
+
+
+
+ Texture.\+cpp の 25 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_texture_8h_ad684ebdecadeaa3a348be34505a8f68a_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{_texture_8h_ad684ebdecadeaa3a348be34505a8f68a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_texture_8h_a765e9a08f1a6a5b0ee1cdf44d67037e6}\label{_texture_8h_a765e9a08f1a6a5b0ee1cdf44d67037e6}} 
+\index{Texture.h@{Texture.h}!LoadTexture@{LoadTexture}}
+\index{LoadTexture@{LoadTexture}!Texture.h@{Texture.h}}
+\doxysubsubsection{\texorpdfstring{LoadTexture()}{LoadTexture()}}
+{\footnotesize\ttfamily bool Load\+Texture (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{int}]{category\+\_\+id,  }\item[{int}]{texture\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+テクスチャの読み込み~\newline
+指定したされたパスのテクスチャを読み込み、カテゴリに登録する 
+
+\begin{DoxyReturn}{戻り値}
+読み込み結果(成功はtrue) 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & 読み込むテクスチャ名(パス込み) \\
+\hline
+\mbox{\texttt{ in}}  & {\em category\+\_\+id} & 登録するカテゴリー \\
+\hline
+\mbox{\texttt{ in}}  & {\em texture\+\_\+id} & カテゴリー内のテクスチャ\+ID \\
+\hline
+\end{DoxyParams}
+
+
+ Texture.\+cpp の 71 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{_texture_8h_a765e9a08f1a6a5b0ee1cdf44d67037e6_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_texture_8h_a765e9a08f1a6a5b0ee1cdf44d67037e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_texture_8h_a3308f207820dd8cf2964fffeb2a34cb8}\label{_texture_8h_a3308f207820dd8cf2964fffeb2a34cb8}} 
+\index{Texture.h@{Texture.h}!ReleaseCategoryTexture@{ReleaseCategoryTexture}}
+\index{ReleaseCategoryTexture@{ReleaseCategoryTexture}!Texture.h@{Texture.h}}
+\doxysubsubsection{\texorpdfstring{ReleaseCategoryTexture()}{ReleaseCategoryTexture()}}
+{\footnotesize\ttfamily void Release\+Category\+Texture (\begin{DoxyParamCaption}\item[{int}]{category\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+カテゴリー単位のテクスチャ解放関数~\newline
+引数で指定されたカテゴリーのテクスチャを全て解放する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em category\+\_\+id} & 解放カテゴリー \\
+\hline
+\end{DoxyParams}
+
+
+ Texture.\+cpp の 41 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_texture_8h_a3308f207820dd8cf2964fffeb2a34cb8_icgraph}
+\end{center}
+\end{figure}

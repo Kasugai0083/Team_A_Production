@@ -192,9 +192,9 @@ void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_)
 	CustomVertex v[4] =
 	{
 		{ x, y, 0.0f, 1.0f, 0.0f, 0.0f },
-		{ x + size_.Width, y, 0.0f, 1.0f, 1.0f, 0.0f },
-		{ x + size_.Width, y + size_.Height * hp_, 0.0f, 1.0f, 1.0f, 1.0f },
-		{ x, y + size_.Height * hp_, 0.0f, 1.0f, 0.0f, 1.0f },
+		{ x + size_.Width, y, 0.0f, 1.0f, 1.0f , 0.0f },
+		{ x + size_.Width, y + size_.Height * hp_, 0.0f, 1.0f, 1.0f, 1.0f * hp_ },
+		{ x, y + size_.Height * hp_, 0.0f, 1.0f, 0.0f, 1.0f * hp_ },
 	};
 
 	// 頂点構造の指定
@@ -205,25 +205,28 @@ void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_)
 	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
 }
 
-//void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_)
-//{
-//
-//	CustomVertex v[4] =
-//	{
-//		{ x, y - size_.Height * hp_, 0.0f, 1.0f, 0.0f, 0.0f },
-//		{ x + size_.Width, y - size_.Height * hp_, 0.0f, 1.0f, 1.0f, 0.0f },
-//		{ x + size_.Width, y , 0.0f, 1.0f, 1.0f, 1.0f },
-//		{ x, y, 0.0f, 1.0f, 0.0f, 1.0f },	
-//	};
-//
-//	// 頂点構造の指定
-//	g_D3DDevice->SetFVF(D3DFVF_XYZRHW | D3DFVF_TEX1);
-//
-//	g_D3DDevice->SetTexture(0, texture_data->TexutreData);
-//
-//	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
-//}
-//
+void DrawUVMappingTexture(float x, float y, Texture* texture_data, float texture_x, float texture_y, float rect_width, float rect_height)
+{
+	float uv_left = texture_x / texture_data->Width;
+	float uv_right = (texture_x + rect_width) / texture_data->Width;
+	float uv_top = texture_y / texture_data->Height;
+	float uv_bottom = (texture_y + rect_height) / texture_data->Height;
+
+	CustomVertex v[4] =
+	{
+		{ x, y, 0.0f, 1.0f, uv_left, uv_top },
+		{ x + rect_width, y, 0.0f, 1.0f, uv_right, uv_top },
+		{ x + rect_width, y + rect_height, 0.0f, 1.0f, uv_right, uv_bottom },
+		{ x, y + rect_height, 0.0f, 1.0f, uv_left, uv_bottom },
+	};
+
+	// 頂点構造の指定
+	g_D3DDevice->SetFVF(D3DFVF_XYZRHW | D3DFVF_TEX1);
+
+	g_D3DDevice->SetTexture(0, texture_data->TexutreData);
+
+	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, v, sizeof(CustomVertex));
+}
 
 //統合画像切り抜き用
 void DrawIntegratedTexture(float x, float y, Texture* texture_data, float tu, float tv, float spriteX, float spriteY, int spriteNumX, int spriteNumY)

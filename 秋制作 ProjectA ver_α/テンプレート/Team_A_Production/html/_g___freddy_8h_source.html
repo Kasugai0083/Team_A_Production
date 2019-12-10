@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Character/Enemy/Id/G_Freddy.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_g___freddy_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">G_Freddy.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_g___freddy_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef G_FREDDY_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define G_FREDDY_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../Enemy/Enemy.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../../Utility/RoomID.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../../Scene/Scene.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../CharacterManager.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    ゴールデンフレディ(エネミー)のクラス</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_botan.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_botan.html">Botan</a> : <span class="keyword">public</span> <a class="code" href="class_enemy.html">Enemy</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">        コンストラクタ</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_botan.html#acbb3b0f3925137c53619c6ffe4f37edc">   18</a></span>&#160;    <a class="code" href="class_botan.html#acbb3b0f3925137c53619c6ffe4f37edc">Botan</a>() :</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_enemy.html">Enemy</a>(<a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a>::<a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126ad5029c43ee453967b2b1576fa6495dcb">ROOM_PRAYER</a>, 0)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">m_pPlayer</a> = <a class="code" href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a>.<a class="code" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">GetCharacter</a>(<a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">m_pPlayer</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">m_Counter</a> = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">m_Length</a> = 3;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#a83a381fb07290a2b687571300aecc2a6">m_Speed</a> = 15;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">m_Length</a>; i++) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#ad14d528206f82506eff7051c9c6bb554">m_TextureData</a>[i] = <span class="keyword">new</span> <a class="code" href="struct_texture.html">Texture</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">        デストラクター</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_botan.html#a78242c296df4f5c7c17557ff6fe3db05">   38</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_botan.html#a78242c296df4f5c7c17557ff6fe3db05">~Botan</a>(){}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">        初期化</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_botan.html#ac8ed8694fbeb1b27221f4878487c08a1">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        挙動</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_botan.html#a7e9c22e468535d2c0b206c7d1e5a48d9">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        m_IsKillを返す</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_botan.html#a2557a86441aba61cfa171c0b32e0b9bc">   51</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_botan.html#a2557a86441aba61cfa171c0b32e0b9bc">HasKill</a>()<span class="keyword">const override </span>{ <span class="keywordflow">return</span> <a class="code" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">m_HasKill</a>; }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">        生成するかしないかの判定関数</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">        プレイヤーがモニターシーンの時に使う。</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">        trueで生成する</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_botan.html#aacd89bafe01fdc37e5a68cebbccc30e1">SpawnJudgement</a>(<span class="keywordtype">double</span> probability_);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// m_SpawnJudgementを返す</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_botan.html#aacd89bafe01fdc37e5a68cebbccc30e1">   61</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_botan.html#aacd89bafe01fdc37e5a68cebbccc30e1">SpawnJudgement</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <a class="code" href="class_botan.html#add0a33b75b0ceeee3b484b93f243a0b6">m_SpawnJudgement</a>; }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">        引数に現在のシーンを入れる</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">        テクスチャのロード</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_botan.html#a3c6375b593e9e88f6f31f25ea2ae361f">LoadTex</a>(<a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> id_) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">        描画</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_botan.html#ad255867f0c175804588e424917e7a9dc">Draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// キャラID定数</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_botan.html#af1ec18d2aa48b2008c3214c67f84a9a7">   75</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7f">CharacterID</a> <a class="code" href="class_botan.html#af1ec18d2aa48b2008c3214c67f84a9a7">m_CharId</a> = <a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fabe178ed03874feef23396b196d23866d">CharacterID::BOTAN</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// 試しに作ってみた</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// SpawnJudgement関数を使ったかどうか</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_botan.html#add0a33b75b0ceeee3b484b93f243a0b6">   79</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_botan.html#add0a33b75b0ceeee3b484b93f243a0b6">m_SpawnJudgement</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_botan_html"><div class="ttname"><a href="class_botan.html">Botan</a></div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8h_source.html#l00012">G_Freddy.h:12</a></div></div>
+<div class="ttc" id="aclass_character_manager_html_a2db27469d39061f5e9cb4e55359d8777"><div class="ttname"><a href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">CharacterManager::GetCharacter</a></div><div class="ttdeci">Character * GetCharacter(int id)</div><div class="ttdef"><b>Definition:</b> <a href="_character_manager_8h_source.html#l00033">CharacterManager.h:33</a></div></div>
+<div class="ttc" id="a_room_i_d_8h_html_aca771d9fb131dc58ebb0da000e692126ad5029c43ee453967b2b1576fa6495dcb"><div class="ttname"><a href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126ad5029c43ee453967b2b1576fa6495dcb">ROOM_PRAYER</a></div><div class="ttdef"><b>Definition:</b> <a href="_room_i_d_8h_source.html#l00018">RoomID.h:18</a></div></div>
+<div class="ttc" id="aclass_botan_html_a7e9c22e468535d2c0b206c7d1e5a48d9"><div class="ttname"><a href="class_botan.html#a7e9c22e468535d2c0b206c7d1e5a48d9">Botan::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8cpp_source.html#l00017">G_Freddy.cpp:17</a></div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a></div><div class="ttdeci">SceneId</div><div class="ttdoc">シーンID</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8h_source.html#l00013">Scene.h:13</a></div></div>
+<div class="ttc" id="aclass_botan_html_acbb3b0f3925137c53619c6ffe4f37edc"><div class="ttname"><a href="class_botan.html#acbb3b0f3925137c53619c6ffe4f37edc">Botan::Botan</a></div><div class="ttdeci">Botan()</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8h_source.html#l00018">G_Freddy.h:18</a></div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7f"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7f">CharacterID</a></div><div class="ttdeci">CharacterID</div><div class="ttdef"><b>Definition:</b> <a href="_character_i_d_8h_source.html#l00004">CharacterID.h:4</a></div></div>
+<div class="ttc" id="a_character_manager_8cpp_html_a95d8eb3e05890c267a200c30fd25791a"><div class="ttname"><a href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a></div><div class="ttdeci">CharacterManager g_Manager</div><div class="ttdef"><b>Definition:</b> <a href="_character_manager_8cpp_source.html#l00012">CharacterManager.cpp:12</a></div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7fabe178ed03874feef23396b196d23866d"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fabe178ed03874feef23396b196d23866d">BOTAN</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_i_d_8h_source.html#l00011">CharacterID.h:11</a></div></div>
+<div class="ttc" id="aclass_botan_html_a3c6375b593e9e88f6f31f25ea2ae361f"><div class="ttname"><a href="class_botan.html#a3c6375b593e9e88f6f31f25ea2ae361f">Botan::LoadTex</a></div><div class="ttdeci">virtual void LoadTex(SceneId id_) override</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8cpp_source.html#l00076">G_Freddy.cpp:76</a></div></div>
+<div class="ttc" id="aclass_botan_html_a78242c296df4f5c7c17557ff6fe3db05"><div class="ttname"><a href="class_botan.html#a78242c296df4f5c7c17557ff6fe3db05">Botan::~Botan</a></div><div class="ttdeci">virtual ~Botan()</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8h_source.html#l00038">G_Freddy.h:38</a></div></div>
+<div class="ttc" id="aclass_botan_html_aacd89bafe01fdc37e5a68cebbccc30e1"><div class="ttname"><a href="class_botan.html#aacd89bafe01fdc37e5a68cebbccc30e1">Botan::SpawnJudgement</a></div><div class="ttdeci">bool SpawnJudgement() const override</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8h_source.html#l00061">G_Freddy.h:61</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a308fa05ba03d104b5679dea6f2a7f072"><div class="ttname"><a href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">Enemy::m_pPlayer</a></div><div class="ttdeci">Character * m_pPlayer</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00097">Enemy.h:97</a></div></div>
+<div class="ttc" id="astruct_texture_html"><div class="ttname"><a href="struct_texture.html">Texture</a></div><div class="ttdoc">テクスチャデータやサイズを保持する構造体</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00039">Graphics.h:39</a></div></div>
+<div class="ttc" id="a_room_i_d_8h_html_aca771d9fb131dc58ebb0da000e692126"><div class="ttname"><a href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a></div><div class="ttdeci">RoomID</div><div class="ttdef"><b>Definition:</b> <a href="_room_i_d_8h_source.html#l00004">RoomID.h:4</a></div></div>
+<div class="ttc" id="aclass_botan_html_ac8ed8694fbeb1b27221f4878487c08a1"><div class="ttname"><a href="class_botan.html#ac8ed8694fbeb1b27221f4878487c08a1">Botan::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8cpp_source.html#l00009">G_Freddy.cpp:9</a></div></div>
+<div class="ttc" id="astruct_animation_texture_html_aa581ccad534d577baf1b5c5f9047ddfc"><div class="ttname"><a href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">AnimationTexture::m_Length</a></div><div class="ttdeci">int m_Length</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00051">Graphics.h:51</a></div></div>
+<div class="ttc" id="aclass_botan_html_ad255867f0c175804588e424917e7a9dc"><div class="ttname"><a href="class_botan.html#ad255867f0c175804588e424917e7a9dc">Botan::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8cpp_source.html#l00088">G_Freddy.cpp:88</a></div></div>
+<div class="ttc" id="aclass_enemy_html_acc03ba884acb782253aaea4a83b2cf1c"><div class="ttname"><a href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">Enemy::m_AnimationTex</a></div><div class="ttdeci">AnimationTexture m_AnimationTex</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00095">Enemy.h:95</a></div></div>
+<div class="ttc" id="astruct_animation_texture_html_a83a381fb07290a2b687571300aecc2a6"><div class="ttname"><a href="struct_animation_texture.html#a83a381fb07290a2b687571300aecc2a6">AnimationTexture::m_Speed</a></div><div class="ttdeci">int m_Speed</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00050">Graphics.h:50</a></div></div>
+<div class="ttc" id="aclass_botan_html_af1ec18d2aa48b2008c3214c67f84a9a7"><div class="ttname"><a href="class_botan.html#af1ec18d2aa48b2008c3214c67f84a9a7">Botan::m_CharId</a></div><div class="ttdeci">const CharacterID m_CharId</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8h_source.html#l00075">G_Freddy.h:75</a></div></div>
+<div class="ttc" id="astruct_animation_texture_html_acac6207a7d4d396730ff54f172ea28a4"><div class="ttname"><a href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">AnimationTexture::m_Counter</a></div><div class="ttdeci">int m_Counter</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00052">Graphics.h:52</a></div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00011">Enemy.h:11</a></div></div>
+<div class="ttc" id="aclass_botan_html_add0a33b75b0ceeee3b484b93f243a0b6"><div class="ttname"><a href="class_botan.html#add0a33b75b0ceeee3b484b93f243a0b6">Botan::m_SpawnJudgement</a></div><div class="ttdeci">bool m_SpawnJudgement</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8h_source.html#l00079">G_Freddy.h:79</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a6dda06fe77a15ec4d9c0da0ad1359a4d"><div class="ttname"><a href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">Enemy::m_HasKill</a></div><div class="ttdeci">bool m_HasKill</div><div class="ttdef"><b>Definition:</b> <a href="_enemy_8h_source.html#l00094">Enemy.h:94</a></div></div>
+<div class="ttc" id="aclass_botan_html_a2557a86441aba61cfa171c0b32e0b9bc"><div class="ttname"><a href="class_botan.html#a2557a86441aba61cfa171c0b32e0b9bc">Botan::HasKill</a></div><div class="ttdeci">virtual bool HasKill() const override</div><div class="ttdef"><b>Definition:</b> <a href="_g___freddy_8h_source.html#l00051">G_Freddy.h:51</a></div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_i_d_8h_source.html#l00006">CharacterID.h:6</a></div></div>
+<div class="ttc" id="astruct_animation_texture_html_ad14d528206f82506eff7051c9c6bb554"><div class="ttname"><a href="struct_animation_texture.html#ad14d528206f82506eff7051c9c6bb554">AnimationTexture::m_TextureData</a></div><div class="ttdeci">Texture * m_TextureData[10]</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00048">Graphics.h:48</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_0af6d3c849582bafbf696c6668bb065a.html">Character</a></li><li class="navelem"><a class="el" href="dir_1a6826e49dcbd70d4d52780a342c33b0.html">Enemy</a></li><li class="navelem"><a class="el" href="dir_b8948a70f4c7b996ca7b2eea4ff6c866.html">Id</a></li><li class="navelem"><a class="el" href="_g___freddy_8h.html">G_Freddy.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

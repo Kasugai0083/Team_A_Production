@@ -1,0 +1,4 @@
+<map id="UI::UpdateGameUI" name="UI::UpdateGameUI">
+<area shape="rect" id="node1" title="GameScene で使われている UI の更新処理" alt="" coords="136,5,267,32"/>
+<area shape="rect" id="node2" href="$class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d" title="UIの生存情報の更新 GameScene に実装されている UI の処理" alt="" coords="5,5,88,32"/>
+</map>

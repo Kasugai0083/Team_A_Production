@@ -1,0 +1,248 @@
+\hypertarget{class_item}{}\doxysection{Item クラス}
+\label{class_item}\index{Item@{Item}}
+
+
+最終継承先に使えそうな関数や変数を格納するクラス  
+
+
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+
+
+Item の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_item__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Item 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{class_item__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_item_a297720c02984eab37332ae795d22189d}{Item}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_item_a11663c84075b78c3ae5e30fdfcd7c458}{$\sim$\+Item}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_item_a02e91fb9fffeb259442662ed220869c5}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 座標と画像情報に基づいて描画~\newline
+マウスが重なったら黒ポリゴンを重ねる \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_item_a93dd04b3c6bd57e9bf255abc2dfd70a5}{Update}} () override
+\begin{DoxyCompactList}\small\item\em マウスが画像情報に重なった場合、黒ポリゴンを重ねる \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_item_a50da07e72d764fab667bc52d05c0cde3}{Has\+On\+Mouse}} () override
+\begin{DoxyCompactList}\small\item\em m\+\_\+\+On\+Mouseを取得する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_texture}{Texture}} $\ast$ \mbox{\hyperlink{class_item_a9795d2dcfff5c45255cb4136d82f1d0a}{m\+\_\+p\+Tex}}
+\begin{DoxyCompactList}\small\item\em テクスチャの情報を格納 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_item_af4b2ff8eb3a824b5e134a3285beca8d3}{m\+\_\+\+On\+Mouse}}
+\begin{DoxyCompactList}\small\item\em マウスが重なったとき true \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vec2}{Vec2}} \mbox{\hyperlink{class_item_ad6dc1fe14c2a56351fe35fb32b322b0f}{m\+\_\+\+Pos}}
+\begin{DoxyCompactList}\small\item\em 座標情報 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_size}{Size}} \mbox{\hyperlink{class_item_a4d4d0ce9428fdf80b009eef5e3e1fbc0}{m\+\_\+\+Size}}
+\begin{DoxyCompactList}\small\item\em サイズ情報 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_size}{Size}} \mbox{\hyperlink{class_item_a7cc11af00ea7b0cc7441f94403301cb3}{m\+\_\+\+Frame}}
+\begin{DoxyCompactList}\small\item\em 画像サイズ情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+最終継承先に使えそうな関数や変数を格納するクラス 
+
+オブジェクトの継承クラス~\newline
+\mbox{\hyperlink{class_candle}{Candle}}, \mbox{\hyperlink{class_fire}{Fire}}, Player\+Item class に派生 
+
+ Item.\+h の 19 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_item_a297720c02984eab37332ae795d22189d}\label{class_item_a297720c02984eab37332ae795d22189d}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+
+ Item.\+cpp の 9 行目に定義があります。
+
+\mbox{\Hypertarget{class_item_a11663c84075b78c3ae5e30fdfcd7c458}\label{class_item_a11663c84075b78c3ae5e30fdfcd7c458}} 
+\index{Item@{Item}!````~Item@{$\sim$Item}}
+\index{````~Item@{$\sim$Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{$\sim$Item()}{~Item()}}
+{\footnotesize\ttfamily Item\+::$\sim$\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_item_a02e91fb9fffeb259442662ed220869c5}\label{class_item_a02e91fb9fffeb259442662ed220869c5}} 
+\index{Item@{Item}!Draw@{Draw}}
+\index{Draw@{Draw}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Item\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+座標と画像情報に基づいて描画~\newline
+マウスが重なったら黒ポリゴンを重ねる 
+
+
+
+\mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{Object}}を実装しています。
+
+
+
+ Item.\+cpp の 15 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_item_a02e91fb9fffeb259442662ed220869c5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_a50da07e72d764fab667bc52d05c0cde3}\label{class_item_a50da07e72d764fab667bc52d05c0cde3}} 
+\index{Item@{Item}!HasOnMouse@{HasOnMouse}}
+\index{HasOnMouse@{HasOnMouse}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{HasOnMouse()}{HasOnMouse()}}
+{\footnotesize\ttfamily void Item\+::\+Has\+On\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+m\+\_\+\+On\+Mouseを取得する 
+
+\begin{DoxyReturn}{戻り値}
+マウスが重なっていた時 true~\newline
+マウスが重なっていない時 false 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_object_af936fbfd0a49fbc6311205cd7d8eff19}{Object}}を実装しています。
+
+
+
+ Item.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_item_a93dd04b3c6bd57e9bf255abc2dfd70a5}\label{class_item_a93dd04b3c6bd57e9bf255abc2dfd70a5}} 
+\index{Item@{Item}!Update@{Update}}
+\index{Update@{Update}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Item\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マウスが画像情報に重なった場合、黒ポリゴンを重ねる 
+
+
+
+\mbox{\hyperlink{class_object_a5ee5c17a09981cbd7c469370e210b4ff}{Object}}を実装しています。
+
+
+
+ Item.\+cpp の 29 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_item_a93dd04b3c6bd57e9bf255abc2dfd70a5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_item_a7cc11af00ea7b0cc7441f94403301cb3}\label{class_item_a7cc11af00ea7b0cc7441f94403301cb3}} 
+\index{Item@{Item}!m\_Frame@{m\_Frame}}
+\index{m\_Frame@{m\_Frame}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_Frame}{m\_Frame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_size}{Size}} Item\+::m\+\_\+\+Frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+画像サイズ情報 
+
+
+
+ Item.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_item_af4b2ff8eb3a824b5e134a3285beca8d3}\label{class_item_af4b2ff8eb3a824b5e134a3285beca8d3}} 
+\index{Item@{Item}!m\_OnMouse@{m\_OnMouse}}
+\index{m\_OnMouse@{m\_OnMouse}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_OnMouse}{m\_OnMouse}}
+{\footnotesize\ttfamily bool Item\+::m\+\_\+\+On\+Mouse\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+マウスが重なったとき true 
+
+
+
+ Item.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_item_ad6dc1fe14c2a56351fe35fb32b322b0f}\label{class_item_ad6dc1fe14c2a56351fe35fb32b322b0f}} 
+\index{Item@{Item}!m\_Pos@{m\_Pos}}
+\index{m\_Pos@{m\_Pos}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_Pos}{m\_Pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vec2}{Vec2}} Item\+::m\+\_\+\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+座標情報 
+
+
+
+ Item.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_item_a9795d2dcfff5c45255cb4136d82f1d0a}\label{class_item_a9795d2dcfff5c45255cb4136d82f1d0a}} 
+\index{Item@{Item}!m\_pTex@{m\_pTex}}
+\index{m\_pTex@{m\_pTex}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_pTex}{m\_pTex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}}$\ast$ Item\+::m\+\_\+p\+Tex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+テクスチャの情報を格納 
+
+
+
+ Item.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_item_a4d4d0ce9428fdf80b009eef5e3e1fbc0}\label{class_item_a4d4d0ce9428fdf80b009eef5e3e1fbc0}} 
+\index{Item@{Item}!m\_Size@{m\_Size}}
+\index{m\_Size@{m\_Size}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{m\_Size}{m\_Size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_size}{Size}} Item\+::m\+\_\+\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+サイズ情報 
+
+
+
+ Item.\+h の 55 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Src/\+Object/\+Item/\mbox{\hyperlink{_item_8h}{Item.\+h}}\item 
+Src/\+Object/\+Item/\mbox{\hyperlink{_item_8cpp}{Item.\+cpp}}\end{DoxyCompactItemize}
