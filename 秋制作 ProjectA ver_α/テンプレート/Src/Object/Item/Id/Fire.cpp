@@ -18,30 +18,30 @@ void Fire::Init() {
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 		break;
 	case ObjID::FIRE_RIGHT:
-		LoadTexture("Res/Game/Item/candle_fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
+		LoadTexture("Res/Game/Item/candle_fire_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
 		m_Pos = FIRE_BIG_RIGHT_POS;
-		m_Size = FIRE_SIZE;
-		m_Frame = FIRE_FRAME;
+		m_Size = FIRE_SIDE_SIZE;
+		m_Frame = FIRE_SIDE_FRAME;
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
 
 		break;
 	case ObjID::FIRE_LEFT:
-		LoadTexture("Res/Game/Item/candle_fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
+		LoadTexture("Res/Game/Item/candle_fire_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
 
 		if (m_pTex == nullptr) {
 			return;
 		}
 
 		m_Pos = FIRE_BIG_LEFT_POS;
-		m_Size = FIRE_SIZE;
-		m_Frame = FIRE_FRAME;
+		m_Size = FIRE_SIDE_SIZE;
+		m_Frame = FIRE_SIDE_FRAME;
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
 
 		break;

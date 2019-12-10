@@ -205,8 +205,6 @@ void Candle::SceneDeath() {
 	}
 }
 
-float x = 0.f;
-
 void Candle::MeltCandle(ObjID id_) {
 
 	if (m_HasCaLight == true) {
@@ -215,7 +213,7 @@ void Candle::MeltCandle(ObjID id_) {
 		case ObjID::CANDLE_LEFT:
 			m_CandleHp -= MELT_RATIO;
 
-			m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
+			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
 
 			m_Pos.Y = CANDLE_BIG_LEFT_POS.Y + m_HeightRatio;
 
@@ -224,12 +222,13 @@ void Candle::MeltCandle(ObjID id_) {
 
 			m_CandleHp -= MELT_RATIO;
 
-			m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
+			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
 
 			m_Pos.Y = CANDLE_BIG_RIGHT_POS.Y + m_HeightRatio;
 
 			break;
 		case ObjID::CANDLE_CENTER:
+
 			m_CandleHp -= MELT_RATIO;
 
 			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
@@ -344,8 +343,6 @@ void Candle::Draw(){
 		switch (m_Id)
 		{
 		case ObjID::CANDLE_CENTER:
-			CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
-			break;
 		case ObjID::CANDLE_LEFT:
 		case ObjID::CANDLE_RIGHT:
 			CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);

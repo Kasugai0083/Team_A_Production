@@ -2,6 +2,9 @@
 SIZE => 13 * 32
 FRAME => 32 * 32
 
+SIZE => 18 * 44
+FRAME => 32 * 128
+
 C‘äi‘åj
 SIZE => 84 * 162
 FRAME => 128 * 256

@@ -49,10 +49,13 @@ const Vec2 CANDLE_STAND_LEFT_POS = { (1200.f - (CANDLE_STAND_LEFT_SIZE.Width / 2
 const Size FIRE_SIZE = { 12.f, 32.f };
 const Size FIRE_FRAME = { 32.f, 32.f };
 
+const Size FIRE_SIDE_SIZE = { 18.f, 44.f };
+const Size FIRE_SIDE_FRAME = { 32.f, 128.f };
+
 //!< ‰Š(‰E)
-const Vec2 FIRE_BIG_RIGHT_POS = { (730.f - (FIRE_SIZE.Width / 2)), (510.f) };
+const Vec2 FIRE_BIG_RIGHT_POS = { (730.f - (FIRE_SIZE.Width / 2)), (565.f) };
 //!< ‰Š(¶)
-const Vec2 FIRE_BIG_LEFT_POS = { (1210.f - (FIRE_SIZE.Width / 2)), (510.f) };
+const Vec2 FIRE_BIG_LEFT_POS = { (1210.f - (FIRE_SIZE.Width / 2)), (565.f) };
 //!< ‰Š(¬)
 const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SIZE.Width / 2), 640 - FIRE_SIZE.Height };
 
