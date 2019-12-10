@@ -51,7 +51,7 @@ void Candle::Init() {
 		if (m_pTex == nullptr) {
 			return;
 		}
-		m_Pos = CANDLE_SMALL_POS;
+		m_Pos = { (960.f - CANDLE_SMALL_SIZE.Width / 2), 640.f };
 
 		m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
 

@@ -12,7 +12,7 @@ void Fire::Init() {
 			return;
 		}
 
-		m_Pos = FIRE_SMALL_POS;
+		m_Pos = { (960.f - FIRE_SIZE.Width / 2), 632.5f - FIRE_SIZE.Height };
 		m_Size = FIRE_SIZE;
 		m_Frame = FIRE_FRAME;
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
