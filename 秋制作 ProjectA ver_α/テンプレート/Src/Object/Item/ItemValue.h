@@ -23,7 +23,7 @@ const Vec2 CANDLE_BIG_RIGHT_POS = { (705.f - CANDLE_BIG_SIZE.Width / 2), (612.5f
 //!< ‚ë‚¤‚»‚­(¬)
 const Size CANDLE_SMALL_SIZE = { 12.f,77.f };
 const Size CANDLE_SMALL_FRAME = { 32.f,128.f };
-const Vec2 CANDLE_SMALL_POS = { (960.f - CANDLE_SMALL_SIZE.Width / 2), 645.f };
+const Vec2 CANDLE_SMALL_POS = { (960.f - CANDLE_SMALL_SIZE.Width / 2), 635.f };
 
 //!< ‚ë‚¤‚»‚­(“”)
 const Size CANDLE_EFFECT_SIZE = { 118.f,118.f };
@@ -53,9 +53,8 @@ const Size FIRE_FRAME = { 32.f, 32.f };
 const Vec2 FIRE_BIG_RIGHT_POS = { (730.f - (FIRE_SIZE.Width / 2)), (510.f) };
 //!< ‰Š(¶)
 const Vec2 FIRE_BIG_LEFT_POS = { (1210.f - (FIRE_SIZE.Width / 2)), (510.f) };
-
 //!< ‰Š(¬)
-const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SIZE.Width / 2), 645 - FIRE_SIZE.Height };
+const Vec2 FIRE_SMALL_POS = { (960.f - FIRE_SIZE.Width / 2), 640 - FIRE_SIZE.Height };
 
 //!< …»
 const Size CRYSTAL_SIZE = { 256.f, 256.f };

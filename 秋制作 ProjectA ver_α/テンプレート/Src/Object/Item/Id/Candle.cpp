@@ -42,6 +42,9 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_CENTER:
+
+
+
 		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
 
@@ -202,7 +205,7 @@ void Candle::SceneDeath() {
 	}
 }
 
-
+float x = 0.f;
 
 void Candle::MeltCandle(ObjID id_) {
 
@@ -229,7 +232,7 @@ void Candle::MeltCandle(ObjID id_) {
 		case ObjID::CANDLE_CENTER:
 			m_CandleHp -= MELT_RATIO;
 
-			m_HeightRatio = (m_Frame.Height - (m_Frame.Height * m_CandleHp));
+			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
 
 			m_Pos.Y = CANDLE_SMALL_POS.Y + m_HeightRatio;
 
@@ -333,10 +336,16 @@ void Candle::Update(){
 
 void Candle::Draw(){
 
+	Size test = m_Frame;
+
+	test.Height *= m_CandleHp;
+
 	if (m_IsDeath == false) {
 		switch (m_Id)
 		{
 		case ObjID::CANDLE_CENTER:
+			CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);
+			break;
 		case ObjID::CANDLE_LEFT:
 		case ObjID::CANDLE_RIGHT:
 			CandleDraw(m_Pos.X, m_Pos.Y, m_pTex, m_Frame, m_CandleHp);

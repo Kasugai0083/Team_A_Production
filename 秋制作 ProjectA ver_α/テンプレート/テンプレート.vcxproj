@@ -156,6 +156,7 @@
     <ClCompile Include="Src\Engine\Lib\Device.cpp" />
     <ClCompile Include="Src\Engine\Lib\M_Texture.cpp" />
     <ClCompile Include="Src\Engine\Calculation.cpp" />
+    <ClCompile Include="Src\Engine\Slider\Slider.cpp" />
     <ClCompile Include="Src\Engine\Window.cpp" />
     <ClCompile Include="Src\Main.cpp" />
     <ClCompile Include="Src\Object\Item\Id\Candle.cpp" />
@@ -195,6 +196,7 @@
     <ClInclude Include="Src\Engine\Input.h" />
     <ClInclude Include="Src\Engine\Lib\Lib.h" />
     <ClInclude Include="Src\Engine\Calculation.h" />
+    <ClInclude Include="Src\Engine\Slider\Slider.h" />
     <ClInclude Include="Src\Engine\Window.h" />
     <ClInclude Include="Src\Object\Item\Id\Candle.h" />
     <ClInclude Include="Src\Object\Item\Id\Fire.h" />
