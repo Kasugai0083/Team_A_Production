@@ -1,6 +1,7 @@
 #include "Candle.h"
 #include "..//..//ObjectManager.h"
 #include "../ItemValue.h"
+#include "../../../Character/CharacterManager.h"
 
 void Candle::Init() {
 	switch (m_Id) {
@@ -283,11 +284,13 @@ void Candle::EffectUpdate() {
 
 void Candle::Update(){
 
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
 	SceneDeath();
 
 	EffectUpdate();
 
-	if (m_IsDeath == false && m_CandleHp > 0.f) {
+	if (m_IsDeath == false && m_CandleHp > 0.f && pPlayer->HasMask() == false) {
 
 
 		MeltCandle(ObjID::CANDLE_CENTER);

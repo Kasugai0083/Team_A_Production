@@ -27,15 +27,15 @@ const Size CONTINUE_UI_SIZE = { 256.f, 512.f };
 
 //ゲームUIのベース
 const Size GAME_BASE_UI_SIZE = { 1920.f, 64.f };
-const Vec2 GAME_BASE_UI_POS = {1920.f - GAME_BASE_UI_SIZE.Width, 1080.f - GAME_BASE_UI_SIZE.Height};
+const Vec2 GAME_BASE_UI_POS = {1920.f - GAME_BASE_UI_SIZE.Width, 1072.f - GAME_BASE_UI_SIZE.Height};
 
 //マスクUI
 const Size GAME_MASK_UI_SIZE = { 1024.f, 64.f };
-const Vec2 GAME_MASK_UI_POS = {(1920.f / 2.f) - (GAME_MASK_UI_SIZE.Width / 2.f), 1080.f - GAME_MASK_UI_SIZE.Height};
+const Vec2 GAME_MASK_UI_POS = {(1920.f / 2.f) - (GAME_MASK_UI_SIZE.Width / 2.f), 1072.f - GAME_MASK_UI_SIZE.Height};
 
 //操作ボタン
 const Size GAME_CONTROL_UI_SIZE = { 256.f, 64.f };
-const Vec2 GAME_CONTROL_UI_POS = {1920.f - (GAME_CONTROL_UI_SIZE.Width + 32.f), 1080.f - GAME_CONTROL_UI_SIZE.Height};
+const Vec2 GAME_CONTROL_UI_POS = {1920.f - (GAME_CONTROL_UI_SIZE.Width + 32.f), 1072.f - GAME_CONTROL_UI_SIZE.Height};
 
 //操作説明
 const Size GAME_DESCRIPTION_UI_SIZE = { 1920.f, 1080.f };
