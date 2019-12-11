@@ -57,8 +57,6 @@ void DrawBg() {
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
 
-	DrawFont(100.f, 900.f, "Space ‚Å –ß‚é",Large, White);
-
 }
 
 #pragma endregion
@@ -88,6 +86,8 @@ void DrawMonitorScene()
 	g_Manager.Draw();///‚±‚±‚ªŒ´ˆö
 
 	ObjManager()->Draw();
+
+	DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
 }
 
 void InitMonitorScene()

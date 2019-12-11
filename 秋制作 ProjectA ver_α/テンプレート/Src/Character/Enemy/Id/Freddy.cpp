@@ -119,7 +119,7 @@ void Ohagi::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
 
 		return;
@@ -134,7 +134,7 @@ void Ohagi::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
 			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
 		break;
 
