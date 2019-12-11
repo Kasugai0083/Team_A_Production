@@ -149,7 +149,7 @@ public:
 			}
 			else {
 				m_IsDeath = true;
-
+				m_OnMouse = false;
 			}
 		}
 		else {
@@ -157,13 +157,16 @@ public:
 		}
 
 		if (m_IsDeath == false) {
+
 			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
 				m_OnMouse = true;
 			}
 			else {
 				m_OnMouse = false;
 			}
+			
 		}
+
 	}
 
 
