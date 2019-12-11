@@ -85,9 +85,9 @@ void DrawMonitorScene()
 {	
 	DrawBg();
 
-	ObjManager()->Draw();
-
 	g_Manager.Draw();///‚±‚±‚ªŒ´ˆö
+
+	ObjManager()->Draw();
 }
 
 void InitMonitorScene()

@@ -45,8 +45,7 @@ SceneId UpdateGameScene()
 void DrawGameScene()
 {
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
-
-
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
 	switch (GameView()->CurrentViewID()) {
 	case GameData::CENTER:
@@ -54,35 +53,50 @@ void DrawGameScene()
 
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterDeskTex));
 
+		g_Manager.Draw();
+
 		if (pCenterCandle->HasCaLight() == false) {
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex));
 		}
+
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
+
+		ObjManager()->Draw();
+
+		pPlayer->Draw();
+
 
 		break;
 	case GameData::RIGHT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex));
+		
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
+
+		g_Manager.Draw();
+
+		ObjManager()->Draw();
+
 
 		break;
 	case GameData::LEFT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex));
+		
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
+
+		ObjManager()->Draw();
+
+		g_Manager.Draw();
 
 		break;
 	}
 
-	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
-
-	ObjManager()->Draw();
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Draw();
-
-	g_Manager.Draw();
-
-
 	
 }
 

@@ -102,12 +102,12 @@ void Ume::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
-		LoadTexture("Res/Game/Enemy/Ume/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
+		LoadTexture("Res/Game/Enemy/Sakura/Chica_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
+		LoadTexture("Res/Game/Enemy/Sakura/Chica.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex);
+		LoadTexture("Res/Game/Enemy/Sakura/Chica_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex);
 		break;
 	default:
 		break;
@@ -143,7 +143,7 @@ void Ume::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 
-			DrawTexture(540.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
+			DrawTexture(50.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
 		break;
 
@@ -152,7 +152,7 @@ void Ume::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
 
-			DrawTexture(560.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
+			DrawTexture(670.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
 		}
 		break;
 
@@ -161,7 +161,7 @@ void Ume::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::LEFT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(960.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex));
+			DrawTexture(820.0f, 490.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex));
 		}
 		break;
 
@@ -170,7 +170,7 @@ void Ume::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::LEFT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(960.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+			DrawTexture(1360.0f, 440.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
 		}
 		break;
 	default:

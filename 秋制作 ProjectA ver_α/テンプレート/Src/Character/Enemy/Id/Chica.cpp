@@ -103,12 +103,12 @@ void Sakura::LoadTex(SceneId id_)
 	switch (id_)
 	{
 	case GameScene:
-		LoadTexture("Res/Game/Enemy/Sakura/Chica.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex);
-		LoadTexture("Res/Game/Enemy/Sakura/Chica_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex);
 		break;
 
 	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Sakura/Chica_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex);
+		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex);
 		break;
 	default:
 		break;
@@ -144,7 +144,7 @@ void Sakura::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
 			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 
-			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
+			DrawTexture(1050.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
 		break;
 
@@ -153,7 +153,7 @@ void Sakura::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
 
-			DrawTexture(1060.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
+			DrawTexture(800.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex));
 		}
 		break;
 
@@ -162,7 +162,7 @@ void Sakura::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(760.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex));
+			DrawTexture(700.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex));
 		}
 		break;
 
@@ -171,7 +171,7 @@ void Sakura::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(200.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex));
+			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
 		break;
 

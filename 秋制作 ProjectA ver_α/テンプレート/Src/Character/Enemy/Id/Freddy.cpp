@@ -3,6 +3,8 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
+#include "../../../Object/Object.h"
+#include "../../../Object/ObjectManager.h"
 
 void Ohagi::Init()
 {
@@ -117,11 +119,13 @@ void Ohagi::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
 
 		return;
 	}
+
+	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 
 	switch (m_RoomId)
 	{
@@ -130,7 +134,7 @@ void Ohagi::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
 			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
 		break;
 
@@ -146,18 +150,20 @@ void Ohagi::Draw()
 	case RoomID::HALL_BACK:
 
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
-			&& GetCurrentSceneId() == SceneId::GameScene) {
+			&& GetCurrentSceneId() == SceneId::GameScene
+			&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(700.0f, 530.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex));
+			DrawTexture(530.0f, 420.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex));
 		}
 		break;
 
 	case RoomID::HALL_FRONT:
 
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
-			&& GetCurrentSceneId() == SceneId::GameScene) {
+			&& GetCurrentSceneId() == SceneId::GameScene
+				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(700.0f, 530.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
+			DrawTexture(850.0f, 320.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
 		break;
 
@@ -166,7 +172,7 @@ void Ohagi::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(960.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
 		}
 		break;
 	default:

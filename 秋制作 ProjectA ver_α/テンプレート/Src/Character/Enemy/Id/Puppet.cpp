@@ -119,11 +119,11 @@ void Margaret::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
 
-			DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPuppetTex));
-			DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterPuppet));
+			DrawTexture(500.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPuppetTex));
+			DrawTexture(500.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterPuppet));
 		
-			DrawTexture(1000.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretEyeUITex));
-			DrawTexture(1000.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, m_TextureCategory));
+			DrawTexture(1200.0f, 700.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MargaretEyeUITex));
+			DrawTexture(1200.0f, 800.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, m_TextureCategory));
 		}
 	}
 

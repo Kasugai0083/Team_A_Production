@@ -19,7 +19,6 @@ void Ran::Update()
 	//’Ç‰Á’†I
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 
-
 	if (m_IsActive == false && m_iFrameCount >= 3000) {
 
 		m_iFrameCount = 0;
@@ -111,7 +110,6 @@ void Ran::LoadTex(SceneId id_)
 
 void Ran::Draw()
 {
-
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
@@ -122,6 +120,8 @@ void Ran::Draw()
 
 		return;
 	}
+
+	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 
 	switch (m_RoomId)
 	{
@@ -137,9 +137,10 @@ void Ran::Draw()
 	case RoomID::HALL_BACK:
 
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
-			&& GetCurrentSceneId() == SceneId::GameScene) {
+			&& GetCurrentSceneId() == SceneId::GameScene
+				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(900.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex));
+			DrawTexture(650.0f, 340.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex));
 		}
 		break;
 
@@ -148,7 +149,7 @@ void Ran::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(750.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
+			DrawTexture(750.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex));
 		}
 		break;
 	default:
