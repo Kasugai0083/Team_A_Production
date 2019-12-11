@@ -149,12 +149,11 @@ public:
 			}
 			else {
 				m_IsDeath = true;
-
+				m_OnMouse = false;
 			}
 		}
 		else {
 			m_IsDeath = true;
-			m_OnMouse = false;
 		}
 
 		if (m_IsDeath == false) {
