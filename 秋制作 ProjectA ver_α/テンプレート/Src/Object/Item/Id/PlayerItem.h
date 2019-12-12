@@ -11,6 +11,7 @@
 #include "../../../Timer/Timer.h"
 #include "../../../Engine/Input.h"
 #include "../../../Scene/GameScene/GameData.h"
+#include "../../../Character/CharacterManager.h"
 
 /**
 * @brief …»‚ğŠÇ—‚·‚éƒNƒ‰ƒX
@@ -142,6 +143,8 @@ public:
 	*/
 	void Update()override {
 
+		Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
 		if (GetCurrentSceneId() == GameScene) {
 
 			if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {
@@ -165,6 +168,10 @@ public:
 				m_OnMouse = false;
 			}
 			
+		}
+
+		if (pPlayer->HasMask() == true) {
+			m_OnMouse = false;
 		}
 
 	}
