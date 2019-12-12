@@ -165,9 +165,10 @@ void Ran::Draw()
 	case RoomID::HALL_FRONT:
 
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
-			&& GetCurrentSceneId() == SceneId::GameScene) {
-
-			DrawTexture(750.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex));
+			&& GetCurrentSceneId() == SceneId::GameScene
+				&& pCenterCandle->HasCaLight() == true) {
+				
+			DrawTexture(750.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex));
 		}
 		break;
 	default:
