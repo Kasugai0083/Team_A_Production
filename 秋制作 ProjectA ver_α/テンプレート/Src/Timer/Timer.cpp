@@ -82,6 +82,7 @@ void Timer::Update() {
 
 void Timer::Draw() {
 	Object* WatchInstance = ObjManager()->GetObj(ObjID::POCKET_WATCH);
+	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
 
 	//ƒTƒ“ƒvƒ‹•`‰æ
 	DrawFont(100.f, 100.f, m_Sample.c_str(), Large, White);

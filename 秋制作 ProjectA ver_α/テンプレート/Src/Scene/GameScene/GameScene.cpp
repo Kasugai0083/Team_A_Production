@@ -46,6 +46,8 @@ void DrawGameScene()
 {
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+	Timer* pTimerInstance = Timer::GetInstance();
+
 
 	switch (GameView()->CurrentViewID()) {
 	case GameData::CENTER:
@@ -63,6 +65,8 @@ void DrawGameScene()
 
 		ObjManager()->Draw();
 
+		pTimerInstance->Draw();
+
 		pPlayer->Draw();
 
 
@@ -73,6 +77,9 @@ void DrawGameScene()
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex));
 		
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
+
+
+		pTimerInstance->Draw();
 
 		g_Manager.Draw();
 
@@ -89,14 +96,14 @@ void DrawGameScene()
 
 		ObjManager()->Draw();
 
+		pTimerInstance->Draw();
+
 		g_Manager.Draw();
 
 		break;
 	}
 
 
-	Timer* pTimerInstance = Timer::GetInstance();
-	pTimerInstance->Draw();
 	
 }
 
