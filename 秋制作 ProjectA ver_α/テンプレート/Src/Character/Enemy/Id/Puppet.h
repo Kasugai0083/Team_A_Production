@@ -20,7 +20,7 @@ public:
 		コンストラクタ
 	*/
 	Margaret() :
-		Enemy(RoomID::ROOM_CHILDREN, 10000)
+		Enemy(RoomID::ROOM_CHILDREN, 3600)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
@@ -67,7 +67,7 @@ public:
 
 private:
 	const CharacterID m_CharId = CharacterID::MARGARET;// キャラID定数
-	const int MAX_COUNT = 300;
+	const int MAX_COUNT = 3600;
 
 	int m_TextureCategory = EnemyCategoryTextureList::MargaretPiza9;
 };
