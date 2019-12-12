@@ -17,10 +17,11 @@ void Ohagi::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 3000) {
+	if (m_IsActive == false && m_iFrameCount >= 300) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
+		m_RoomId	  = RoomID::ROOM_WORK;
 	}
 
 	if (m_IsActive == false) { return; }

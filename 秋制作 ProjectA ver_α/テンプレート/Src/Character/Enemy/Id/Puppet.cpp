@@ -32,7 +32,7 @@ void Margaret::Update()
 
 		m_iFrameCount++;
 		// ãŒÀ’l‚É‚È‚Á‚½‚çãŒÀ’l‚ð‚¢‚ê‚é
-		if (m_iFrameCount == MAX_COUNT) {
+		if (m_iFrameCount >= MAX_COUNT) {
 			m_iFrameCount = MAX_COUNT;
 		}
 	}
@@ -40,37 +40,37 @@ void Margaret::Update()
 		m_iFrameCount--;
 	}
 
-	if (m_iFrameCount >= 800) {
+	if (m_iFrameCount >= 3600) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza1;
 	}
-	else if (m_iFrameCount < 800 && m_iFrameCount > 700) {
+	else if (m_iFrameCount < 3600 && m_iFrameCount > 3200) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza2;
 	}
-	else if (m_iFrameCount < 700 && m_iFrameCount > 600) {
+	else if (m_iFrameCount < 2800 && m_iFrameCount > 2400) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza3;
 	}
-	else if (m_iFrameCount < 600 && m_iFrameCount > 500) {
+	else if (m_iFrameCount < 2400 && m_iFrameCount > 2000) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza4;
 	}
-	else if (m_iFrameCount < 500 && m_iFrameCount > 400) {
+	else if (m_iFrameCount < 2000 && m_iFrameCount > 1600) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza5;
 	}
-	else if (m_iFrameCount < 400 && m_iFrameCount > 300) {
+	else if (m_iFrameCount < 1600 && m_iFrameCount > 1200) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza6;
 	}
-	else if (m_iFrameCount < 300 && m_iFrameCount > 200) {
+	else if (m_iFrameCount < 1200 && m_iFrameCount > 800) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza7;
 	}
-	else if (m_iFrameCount < 200 && m_iFrameCount > 100) {
+	else if (m_iFrameCount < 800 && m_iFrameCount > 400) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza8;
 	}
-	else if (m_iFrameCount < 100 && m_iFrameCount > 0) {
+	else if (m_iFrameCount < 400 && m_iFrameCount > 0) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza9;
 	}
 
 
 
-	if (m_iFrameCount == 0) {
+	if (m_iFrameCount <= 0) {
 
 		m_IsActive = true;
 	}

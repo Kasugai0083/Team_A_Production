@@ -19,10 +19,11 @@ void Ran::Update()
 	//í«â¡íÜÅI
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 
-	if (m_IsActive == false && m_iFrameCount >= 3000) {
+	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsActive    = true;
+		m_RoomId = RoomID::ROOM_STORAGE;
 	}
 
 	if (m_IsActive == false) { return; }
@@ -63,15 +64,22 @@ void Ran::Update()
 	{
 	case RoomID::HALL_BACK:
 	case RoomID::HALL_FRONT:
+	{
 		//Ç±Ç±ïœÇ¶ÇΩÇ¢ÅI//
-
+		static int ActiveTimer = 0;
 		if (pCenterCandle->HasCaLight() == true) {
 
 			m_iFrameCount = 0;
 		}
+		if (ActiveTimer >= 1200) {
+
+			m_IsActive = false;
+		}
+		ActiveTimer++;
+
 		break;
 		//Ç±Ç±ïœÇ¶ÇΩÇ¢ÅI//
-
+	}
 
 	case RoomID::ROOM_PRAYER:
 	{
