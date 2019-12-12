@@ -45,6 +45,9 @@ SceneId UpdateGameScene()
 void DrawGameScene()
 {
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
+	Object* pLeftCandle = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
+	Object* pRightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
+
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 	Timer* pTimerInstance = Timer::GetInstance();
 
@@ -76,6 +79,11 @@ void DrawGameScene()
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex));
 		
+		//カーテン
+		if (pRightCandle->HasCaLight() == false) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightBlackTex));
+		}
+
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 
 
@@ -88,10 +96,15 @@ void DrawGameScene()
 
 		break;
 	case GameData::LEFT:
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
+		DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex));
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex));
-		
+
+		//カーテン
+		if (pLeftCandle->HasCaLight() == false) {
+			DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftBlackTex));
+		}
+
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 
 		ObjManager()->Draw();
@@ -132,9 +145,11 @@ void InitGameScene()
 	//右シーン
 	LoadTexture("Res/Game/Right/right_shoji_front.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex);
 	LoadTexture("Res/Game/Right/right_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex);
+	LoadTexture("Res/Game/Right/black_texture_right.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightBlackTex);
 	//左シーン
 	LoadTexture("Res/Game/Left/left_shoji_front.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex);
 	LoadTexture("Res/Game/Left/left_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex);
+	LoadTexture("Res/Game/Left/black_texture_left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftBlackTex);
 
 
 	ChangeSceneStep(SceneStep::MainStep);
