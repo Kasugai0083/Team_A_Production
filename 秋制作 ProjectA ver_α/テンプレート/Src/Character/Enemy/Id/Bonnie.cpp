@@ -3,6 +3,7 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
+#include "../../../Engine/Input.h"
 
 void Ume::Init()
 {
@@ -15,12 +16,22 @@ void Ume::Update()
 {
 	m_iFrameCount++;
 
+	if (GetKeyDown(TWO_KEY)) {
+
+		m_iFrameCount = 0;
+		m_IsActive = true;
+		m_RoomId = RoomID::ROOM_WORK;
+	}
+
+
+#if 0
 	if (m_IsActive == false && m_iFrameCount >= 5000) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
 		m_RoomId      = RoomID::ROOM_WORK;
 	}
+#endif
 
 	if (m_IsActive == false) { return; }
 	// アクティブじゃなかったらここより下の処理にはいかない

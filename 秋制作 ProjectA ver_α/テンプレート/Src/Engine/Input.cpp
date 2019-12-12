@@ -167,6 +167,30 @@ void UpdateKey()
 		{
 			g_InputState.now |= SPACE_KEY;
 		}
+		if (KeyState[DIK_1] & 0x80)
+		{
+			g_InputState.now |= ONE_KEY;
+		}
+		if (KeyState[DIK_2] & 0x80)
+		{
+			g_InputState.now |= TWO_KEY;
+		}
+		if (KeyState[DIK_3] & 0x80)
+		{
+			g_InputState.now |= THREE_KEY;
+		}
+		if (KeyState[DIK_4] & 0x80)
+		{
+			g_InputState.now |= FOUR_KEY;
+		}
+		if (KeyState[DIK_5] & 0x80)
+		{
+			g_InputState.now |= FIVE_KEY;
+		}
+		if (KeyState[DIK_6] & 0x80)
+		{
+			g_InputState.now |= SIX_KEY;
+		}
 
 		g_InputState.trg = (g_InputState.now & (~old));	// トリガー情報取得
 		g_InputState.ntrg = (~g_InputState.now) & old;	// 逆トリガー情報取得

@@ -2,9 +2,9 @@
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 #include <time.h>
-//#include <iostream>
 #include <stdlib.h>
 #include "../../../Object/ObjectManager.h"
+#include "../../../Engine/Input.h"
 
 void Botan::Init()
 {
@@ -16,6 +16,18 @@ void Botan::Init()
 
 void Botan::Update()
 {
+
+	if (m_pPlayer->HasGFreddySpown() == true) {
+		if (GetKey(FIVE_KEY)) {
+			m_IsActive = true;
+		}
+		m_SpawnJudgement = true;
+	}
+	else {
+		m_SpawnJudgement = false;
+	}
+
+#if 0
 	if (m_pPlayer->HasGFreddySpown() == true) {
 		if (SpawnJudgement(0.00) == true) {
 			m_IsActive = true;
@@ -25,6 +37,7 @@ void Botan::Update()
 	else {
 		m_SpawnJudgement = false;
 	}
+#endif
 
 	if (m_IsActive == false) { return; }
 	// アクティブじゃなかったらここより下の処理にはいかない
@@ -93,7 +106,7 @@ void Botan::Draw()
 	if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
 		&& GetCurrentSceneId() == SceneId::GameScene) {
 
-		DrawTexture(1000.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex));
+		DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex));
 	}
 
 
