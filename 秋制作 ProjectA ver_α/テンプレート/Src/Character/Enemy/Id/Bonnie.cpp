@@ -4,6 +4,8 @@
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
 #include "../../../Engine/Input.h"
+#include "../../../Object/Object.h"
+#include "../../../Object/ObjectManager.h"
 
 void Ume::Init()
 {
@@ -90,6 +92,12 @@ void Ume::Update()
 
 	case RoomID::ROOM_LEFT_PRAYER:
 
+		if (m_pPlayer->HasMask() == true) {
+
+			m_iFrameCount = 0;
+			m_IsActive = false;
+		}
+
 		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
 			m_CanKill = true;
@@ -129,6 +137,8 @@ void Ume::LoadTex(SceneId id_)
 
 void Ume::Draw()
 {
+	Object* pLeftCandle = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
+
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
@@ -172,7 +182,8 @@ void Ume::Draw()
 	case RoomID::LEFT_SHOJI:
 
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::LEFT
-			&& GetCurrentSceneId() == SceneId::GameScene) {
+			&& GetCurrentSceneId() == SceneId::GameScene
+				&& pLeftCandle->HasCaLight() == true) {
 
 			DrawTexture(820.0f, 490.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex));
 		}

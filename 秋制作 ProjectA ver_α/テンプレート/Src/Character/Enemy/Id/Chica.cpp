@@ -5,6 +5,8 @@
 #include "../../CharacterManager.h"
 #include "../../../Scene/GameScene/GameData.h"
 #include "../../../Engine/Input.h"
+#include "../../../Object/Object.h"
+#include "../../../Object/ObjectManager.h"
 
 void Sakura::Init()
 {
@@ -90,6 +92,12 @@ void Sakura::Update()
 
 	case RoomID::ROOM_RIGHT_PRAYER:
 
+		if (m_pPlayer->HasMask() == true) {
+
+			m_iFrameCount = 0;
+			m_IsActive = false;
+		}
+
 		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
 			m_CanKill = true;
@@ -129,6 +137,8 @@ void Sakura::LoadTex(SceneId id_)
 
 void Sakura::Draw()
 {
+	static Object* pRightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
+
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
@@ -172,7 +182,8 @@ void Sakura::Draw()
 	case RoomID::RIGHT_SHOJI:
 
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
-			&& GetCurrentSceneId() == SceneId::GameScene) {
+			&& GetCurrentSceneId() == SceneId::GameScene
+				&& pRightCandle->HasCaLight() == true) {
 
 			DrawTexture(700.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex));
 		}
