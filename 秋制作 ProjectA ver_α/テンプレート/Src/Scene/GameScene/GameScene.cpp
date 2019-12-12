@@ -77,14 +77,10 @@ void DrawGameScene()
 		
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 
-<<<<<<< HEAD
-
 		pTimerInstance->Draw();
 
 		g_Manager.Draw();
 
-=======
->>>>>>> Enemy
 		ObjManager()->Draw();
 
 		g_Manager.Draw();

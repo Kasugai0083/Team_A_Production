@@ -17,7 +17,7 @@ void Ohagi::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 200) {
+	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
