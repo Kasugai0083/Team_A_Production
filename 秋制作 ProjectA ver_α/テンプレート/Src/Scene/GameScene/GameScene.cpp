@@ -108,6 +108,8 @@ void DrawGameScene()
 
 		ObjManager()->Draw();
 
+		pPlayer->Draw();
+
 		pTimerInstance->Draw();
 
 		g_Manager.Draw();
