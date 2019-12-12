@@ -4,6 +4,7 @@
 #include "../../../Texture/Texture.h"
 #include "../../../Scene/GameScene/GameData.h"
 #include "../../../Object/ObjectManager.h"
+#include "../../../Engine/Input.h"
 
 void Ran::Init()
 {
@@ -19,12 +20,21 @@ void Ran::Update()
 	//’Ç‰Á’†I
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 
+	if (GetKeyDown(FOUR_KEY)) {
+
+		m_iFrameCount = 0;
+		m_IsActive = true;
+		m_RoomId = RoomID::ROOM_STORAGE;
+	}
+
+#if 0
 	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsActive    = true;
 		m_RoomId = RoomID::ROOM_STORAGE;
 	}
+#endif
 
 	if (m_IsActive == false) { return; }
 	// €‚ñ‚Å‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢

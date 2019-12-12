@@ -5,6 +5,7 @@
 #include "../../../Scene/GameScene/GameData.h"
 #include "../../../Object/Object.h"
 #include "../../../Object/ObjectManager.h"
+#include "../../../Engine/Input.h"
 
 void Ohagi::Init()
 {
@@ -17,12 +18,21 @@ void Ohagi::Update()
 {
 	m_iFrameCount++;
 
+	if (GetKeyDown(ONE_KEY)) {
+
+		m_iFrameCount = 0;
+		m_IsActive = true;
+		m_RoomId = RoomID::ROOM_WORK;
+	}
+
+#if 0
 	if (m_IsActive == false && m_iFrameCount >= 2000) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
 		m_RoomId	  = RoomID::ROOM_WORK;
 	}
+#endif
 
 	if (m_IsActive == false) { return; }
 	// アクティブじゃなかったらここより下の処理にはいかない

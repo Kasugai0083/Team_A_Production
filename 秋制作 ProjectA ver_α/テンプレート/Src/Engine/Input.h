@@ -24,6 +24,15 @@
 #define CONTROL_KEY	0x0400		// ESCキー
 #define SPACE_KEY	0x0800		// Spaceキー
 
+// デバック用
+#define ONE_KEY		0x1000		// 1キー
+#define TWO_KEY		0x2000		// 2キー
+#define THREE_KEY	0x4000		// 3キー
+#define FOUR_KEY	0x8000		// 4キー
+#define FIVE_KEY	0x10000		// 5キー
+#define SIX_KEY		0x20000		// 6キー
+
+
 
 /** @brief マウスボタンの種類 */
 enum MouseButton
