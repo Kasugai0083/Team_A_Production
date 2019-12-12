@@ -17,7 +17,7 @@ void Botan::Init()
 void Botan::Update()
 {
 	if (m_pPlayer->HasGFreddySpown() == true) {
-		if (SpawnJudgement(0.10) == true) {
+		if (SpawnJudgement(0.00) == true) {
 			m_IsActive = true;
 		}
 		m_SpawnJudgement = true;

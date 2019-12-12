@@ -17,7 +17,7 @@ void Ohagi::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 300) {
+	if (m_IsActive == false && m_iFrameCount >= 200) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
@@ -102,6 +102,7 @@ void Ohagi::LoadTex(SceneId id_)
 		LoadTexture("Res/Game/Enemy/Ohagi/Freddy.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy);
 		LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex);
 		LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex);
+		LoadTexture("Res/Game/Enemy/Ohagi/FreddyAAA.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyPlayerTex);
 		break;
 
 	case MonitorScene:
@@ -144,7 +145,7 @@ void Ohagi::Draw()
 		if (GetCurrentSceneId() == SceneId::MonitorScene
 			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
+			DrawTexture(100.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
 		break;
 
@@ -164,7 +165,7 @@ void Ohagi::Draw()
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(850.0f, 320.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(850.0f, 350.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyPlayerTex));
 		}
 		break;
 

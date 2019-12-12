@@ -16,7 +16,7 @@ void Sakura::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 900) {
+	if (m_IsActive == false && m_iFrameCount >= 5000) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
@@ -106,6 +106,7 @@ void Sakura::LoadTex(SceneId id_)
 	case GameScene:
 		LoadTexture("Res/Game/Enemy/Ume/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex);
 		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex);
+		LoadTexture("Res/Game/Enemy/Ume/右エネミー.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaNearTex);
 		break;
 
 	case MonitorScene:
@@ -172,14 +173,13 @@ void Sakura::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
+			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaNearTex));
 		}
 		break;
 
 	default:
 		break;
 	}
-
 
 	if (m_CanKill == true)
 	{

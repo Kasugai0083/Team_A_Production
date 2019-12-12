@@ -69,7 +69,6 @@ void DrawGameScene()
 
 		pPlayer->Draw();
 
-
 		break;
 	case GameData::RIGHT:
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
@@ -78,13 +77,17 @@ void DrawGameScene()
 		
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 
+<<<<<<< HEAD
 
 		pTimerInstance->Draw();
 
 		g_Manager.Draw();
 
+=======
+>>>>>>> Enemy
 		ObjManager()->Draw();
 
+		g_Manager.Draw();
 
 		break;
 	case GameData::LEFT:

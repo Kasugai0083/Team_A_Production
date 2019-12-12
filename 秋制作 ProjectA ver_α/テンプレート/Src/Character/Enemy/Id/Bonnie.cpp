@@ -15,7 +15,7 @@ void Ume::Update()
 {
 	m_iFrameCount++;
 
-	if (m_IsActive == false && m_iFrameCount >= 700) {
+	if (m_IsActive == false && m_iFrameCount >= 5000) {
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
@@ -105,6 +105,7 @@ void Ume::LoadTex(SceneId id_)
 	case GameScene:
 		LoadTexture("Res/Game/Enemy/Sakura/Chica_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex);
 		LoadTexture("Res/Game/Enemy/Sakura/Chica.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex);
+		LoadTexture("Res/Game/Enemy/Sakura/sak_walk_rough.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieNearTex);
 		break;
 
 	case MonitorScene:
@@ -171,7 +172,7 @@ void Ume::Draw()
 		if (GameView()->CurrentViewID() == GameData::SubGameScene::LEFT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(1360.0f, 440.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
+			DrawTexture(1360.0f, 440.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieNearTex));
 		}
 		break;
 	default:
