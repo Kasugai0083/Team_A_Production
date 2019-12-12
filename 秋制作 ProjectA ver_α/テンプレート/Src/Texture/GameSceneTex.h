@@ -31,8 +31,11 @@ enum GameCategoryTextureList
 	
 	GameLeftShojiFrontTex,
 	GameLeftShojiBackTex,
+	GameLeftBlackTex,	//!< センターシーンの黒テクスチャ
+
 	GameRightShojiFrontTex,
 	GameRightShojiBackTex,
+	GameRightBlackTex,	//!< センターシーンの黒テクスチャ
 
 	GameMainUITex,
 	GameMaskUITex,
@@ -52,6 +55,8 @@ enum CenterCategoryTextureList {
 
 	GameCenterDeskTex,	//!< センターシーンのデスク
 	GameCenterBlackTex,	//!< センターシーンの黒テクスチャ
+
+
 
 	GameCenterFreddy,
 	GameCenterPuppet,
