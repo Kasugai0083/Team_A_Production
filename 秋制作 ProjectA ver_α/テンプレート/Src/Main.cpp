@@ -21,10 +21,12 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	Timer::CreateInstance();
 	{
 		// エンジンの初期化
-		if (InitEngine(1920, 1080, "FaNF2", WINDOWED) == false)
+		if (InitEngine(1920, 1080, "FaNF2", FULL_SCLEEN) == false)
 		{
 			return 0;
 		}
+
+		SetCursorPos(1920 / 2, 1080 / 2);
 
 		while (SceneController()->IsGetID(SceneTransition::Id::Finish) == false)
 		{

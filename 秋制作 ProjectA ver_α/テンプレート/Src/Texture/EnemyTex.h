@@ -7,16 +7,20 @@ enum EnemyCategoryTextureList
 {
 	FredyFarTex,	// フレディ(200*200)のテクスチャ
 	FredyNearTex,	// フレディ(350*350)のテクスチャ
+	FredyPlayerTex,	// バニーがプレイヤールームに来た時
+
 
 	EnemyBoonieTex,	// テスト用
 	
 	EnemyBonnieTex,	// バニー(512*512)のテクスチャー
 	BonnieSpawnTex,	// バニー(350*350)のテクスチャー
 	BonnieLookTex,	// バニー(300*300)のテクスチャー
+	BonnieNearTex,	// バニーがプレイヤールームに来た時
 
 	ChicaTex,
 	ChicaSpawnTex,
 	ChicaLookTex,
+	ChicaNearTex,
 
 	RanTex,		// ラン(512*512)のテクスチャ
 	RanFarTex,	// ラン(200*200)のテクスチャ
