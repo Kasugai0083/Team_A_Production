@@ -175,7 +175,7 @@ void Ohagi::Draw()
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(850.0f, 350.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyPlayerTex));
+			DrawTexture(650.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyPlayerTex));
 		}
 		break;
 
