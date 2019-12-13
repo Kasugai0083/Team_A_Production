@@ -122,7 +122,7 @@ void Candle::Init() {
 			return;
 		}
 
-		m_Pos = { 0.0f, 0.0f };
+		m_Pos = { 5.0f, 0.0f };
 		m_Size = { 0.f, 0.f };
 		m_Frame = { 2048.f, 2048.f };
 
