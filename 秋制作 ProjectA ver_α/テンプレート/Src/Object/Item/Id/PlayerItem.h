@@ -89,9 +89,9 @@ public:
 	void Draw()override {
 
 		if (m_IsDeath == false) {
-			if (m_OnMouse == true) {
+			/*if (m_OnMouse == true) {
 				DrawTexture(m_Pos, m_pOnHitTex);
-			}
+			}*/
 			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
 		}
 	}

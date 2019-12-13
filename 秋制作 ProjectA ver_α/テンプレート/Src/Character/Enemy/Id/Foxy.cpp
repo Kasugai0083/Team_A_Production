@@ -168,7 +168,7 @@ void Ran::Draw()
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pCenterCandle->HasCaLight() == true) {
 				
-			DrawTexture(750.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex));
+			DrawTexture(880.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex));
 		}
 		break;
 	default:
