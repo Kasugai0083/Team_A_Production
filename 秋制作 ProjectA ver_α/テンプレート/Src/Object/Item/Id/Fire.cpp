@@ -94,6 +94,7 @@ void Fire::Update() {
 		switch (m_Id)
 		{
 		case ObjID::FIRE_CENTER:
+
 			if (m_pObject->HasCaLight() == true) {
 
 				if (m_pObject->GetRatio() != NULL) {

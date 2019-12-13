@@ -290,12 +290,30 @@ void Candle::Update(){
 
 	EffectUpdate();
 
+	switch (m_Id)
+	{
+	case ObjID::CANDLE_CENTER:
+		if (GetKeyDown(UP_KEY) == true) {
+			m_IsDeath = false;
+			m_CandleHp = 1.f;
+
+			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
+
+			m_Pos.Y = CANDLE_SMALL_POS.Y + m_HeightRatio;
+		}
+		break;
+	default:
+		break;
+	}
+
 	if (m_IsDeath == false && m_CandleHp > 0.f && pPlayer->HasMask() == false) {
 
 
 		MeltCandle(ObjID::CANDLE_CENTER);
 		MeltCandle(ObjID::CANDLE_LEFT);
 		MeltCandle(ObjID::CANDLE_RIGHT);
+
+
 
 		if (OnMousePush(Right) == true) {
 			switch (GameView()->CurrentViewID())
