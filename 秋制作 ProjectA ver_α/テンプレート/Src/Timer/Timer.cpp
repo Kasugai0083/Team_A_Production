@@ -84,8 +84,6 @@ void Timer::Draw() {
 	Object* WatchInstance = ObjManager()->GetObj(ObjID::POCKET_WATCH);
 	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
 
-	//ƒTƒ“ƒvƒ‹•`‰æ
-	DrawFont(100.f, 100.f, m_Sample.c_str(), Large, White);
 
 	if (WatchInstance->HasOnMouse() == true) {
 		DrawFont(30.f, 1014.f, "AM", Large, Yellow);
