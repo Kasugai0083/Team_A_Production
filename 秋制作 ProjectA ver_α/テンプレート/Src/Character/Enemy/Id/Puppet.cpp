@@ -26,24 +26,30 @@ void Margaret::Init()
 
 void Margaret::Update()
 {
+	static bool CountFrag = false;
+	if (GetKeyDown(DOWN_KEY)) {
+		CountFrag = true;
+		m_iFrameCount = 1600;
+	}
+
 	// モニターシーンかつ子供部屋を見ているとき
 	if (m_pPlayer->HasMonitor() == true
 		&& m_pPlayer->CurrentViewMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
 
-		m_iFrameCount++;
+		m_iFrameCount += 2;
 		// 上限値になったら上限値をいれる
 		if (m_iFrameCount >= MAX_COUNT) {
 			m_iFrameCount = MAX_COUNT;
 		}
 	}
-	else {
+	else if (CountFrag){
 		m_iFrameCount--;
 	}
 
-	if (m_iFrameCount >= 3600) {
+	if (m_iFrameCount >= 3200) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza1;
 	}
-	else if (m_iFrameCount < 3600 && m_iFrameCount > 3200) {
+	else if (m_iFrameCount < 3200 && m_iFrameCount > 2800) {
 		m_TextureCategory = EnemyCategoryTextureList::MargaretPiza2;
 	}
 	else if (m_iFrameCount < 2800 && m_iFrameCount > 2400) {
