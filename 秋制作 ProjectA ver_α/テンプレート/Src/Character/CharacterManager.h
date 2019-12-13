@@ -45,6 +45,12 @@ public:
 	*/
 	void LoadTex(SceneId id);
 
+	/*
+		キルアニメーション
+	*/
+	void KillAnimation();
+
+
 	bool RefKill();
 
 private:

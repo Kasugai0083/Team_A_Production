@@ -200,8 +200,10 @@ void Ume::Draw()
 	default:
 		break;
 	}
+}
 
-
+void Ume::KillAnimation()
+{
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);

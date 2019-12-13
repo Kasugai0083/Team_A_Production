@@ -70,6 +70,11 @@ public:
 	*/
 	virtual void Draw() override;
 
+	/*
+		キルアニメーション
+	*/
+	virtual void KillAnimation() override;
+
 private:
 	// キャラID定数
 	const CharacterID m_CharId = CharacterID::BOTAN;

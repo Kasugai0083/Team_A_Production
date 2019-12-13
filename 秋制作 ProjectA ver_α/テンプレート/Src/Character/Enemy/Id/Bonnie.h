@@ -56,9 +56,14 @@ public:
 	*/
 	virtual void LoadTex(SceneId id_) override;
 	/*
-	描画
+		描画
 	*/
 	virtual void Draw() override;
+
+	/*
+		キルアニメーション
+	*/
+	virtual void KillAnimation() override;
 
 
 private:

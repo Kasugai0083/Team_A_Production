@@ -126,10 +126,10 @@ void Margaret::Draw()
 			DrawTexture(1200.0f, 800.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, m_TextureCategory));
 		}
 	}
+}
 
-
-
-
+void Margaret::KillAnimation()
+{
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);

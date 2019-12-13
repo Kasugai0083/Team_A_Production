@@ -88,6 +88,8 @@ void DrawMonitorScene()
 	ObjManager()->Draw();
 
 	DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
+
+	g_Manager.KillAnimation();
 }
 
 void InitMonitorScene()

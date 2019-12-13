@@ -45,6 +45,7 @@ public:
 
 	virtual void LoadTex(SceneId id) {};
 
+	virtual void KillAnimation() {}
 
 	// 2019/12/05’Ç‰Á
 	virtual bool ControlMonitor() { return 0; };

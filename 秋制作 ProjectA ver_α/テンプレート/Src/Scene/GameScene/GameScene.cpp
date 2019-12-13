@@ -117,7 +117,8 @@ void DrawGameScene()
 		break;
 	}
 
-
+	
+	g_Manager.KillAnimation();
 	
 }
 

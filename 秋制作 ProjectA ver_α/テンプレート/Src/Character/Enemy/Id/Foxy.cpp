@@ -174,7 +174,10 @@ void Ran::Draw()
 	default:
 		break;
 	}
+}
 
+void Ran::KillAnimation()
+{
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);

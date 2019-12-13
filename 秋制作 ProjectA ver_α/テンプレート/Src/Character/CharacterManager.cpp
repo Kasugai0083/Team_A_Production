@@ -75,6 +75,15 @@ void CharacterManager::LoadTex(SceneId id) {
 	}
 }
 
+void CharacterManager::KillAnimation()
+{
+	for (int i = OHAGI; i <= ENEMY_NUM; i++) {
+		if (m_Charas[i] != nullptr) {
+			m_Charas[i]->KillAnimation();
+		}
+	}
+}
+
 bool CharacterManager::RefKill() {
 	for (int i = OHAGI; i <= ENEMY_NUM; i++) {
 		if (m_Charas[i]->HasKill() == true) {
@@ -84,3 +93,4 @@ bool CharacterManager::RefKill() {
 	}
 	return false;
 }
+
