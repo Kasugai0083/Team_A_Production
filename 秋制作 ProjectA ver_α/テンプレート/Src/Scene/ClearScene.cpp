@@ -7,6 +7,7 @@
 #include "../Character/Player/Player.h"
 #include "../Character/CharacterManager.h"
 #include "../Character/CharacterID.h"
+#include "../Scene/Days/DayController.h"
 
 // ゲームオーバーシーンの初期化
 void InitClearScene();
@@ -59,9 +60,8 @@ void InitClearScene()
 	pTimerInstance->Init();
 
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
-	if (tmp_player->IsActive() == true) {
-		g_ClearCount++;
-	}
+
+	DayDifficulty()->CheckClear(tmp_player->IsActive());
 
 	LoadTexture("Res/End/EndBg.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex);
 	LoadTexture("Res/End/GameOver.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex);
@@ -71,7 +71,6 @@ void InitClearScene()
 
 void MainClearScene()
 {
-
 	SceneController()->GameEnd();
 
 

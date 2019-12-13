@@ -3,7 +3,6 @@
 #include "../../Engine/Calculation.h"
 #include "../../Texture/Texture.h"
 #include "../../Engine/Graphics.h"
-#include "../ObjectManager.h"
 
 
 Item::Item() {

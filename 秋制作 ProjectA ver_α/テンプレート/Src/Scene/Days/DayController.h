@@ -21,11 +21,10 @@ public:
 
 	void LoadDays(Days savedata_ = Days::DAY_0) { m_Days = savedata_; };
 
-	void CheckClear() {
+	void CheckClear(bool clear_) {
 		// クリアフラグをどっかでとってDAYを進行する
-		bool Clear = false;
 
-		if (Clear == true) {
+		if (clear_ == true) {
 			switch (m_Days)
 			{
 			case Days::DAY_0:
@@ -49,7 +48,9 @@ public:
 	Days GetCurrentDays() { return m_Days; };
 
 private:
-	static Days m_Days;
+	Days m_Days;
 };
 
-#endif // ! DAY_CONTROLLER_H_
+DayController* DayDifficulty();
+
+#endif 

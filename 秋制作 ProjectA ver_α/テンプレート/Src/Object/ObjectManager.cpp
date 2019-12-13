@@ -1,12 +1,11 @@
 #include "ObjectManager.h"
 #include "UI/UI.h"
 #include "Item/Item.h"
-#include "ObjectID.h"
 #include "../Engine/Input.h"
 #include "Item/Id/Candle.h"
 #include "Item/Id/Fire.h"
 #include "Item/Id/PlayerItem.h"
-#include "Item/Id/Fire.h"
+
 
 ObjectManager* ObjManager() {
 	static ObjectManager obj;

@@ -1,3 +1,6 @@
 #include "DayController.h"
 
-Days DayController::m_Days;
+DayController* DayDifficulty() {
+	static DayController Days;
+	return &Days;
+}

@@ -21,7 +21,7 @@ public:
 	//! コンストラクタ
 	Item();	
 	//! デストラクタ
-	~Item();	
+	~Item() {};
 
 	/**
 	* @fn void Draw()

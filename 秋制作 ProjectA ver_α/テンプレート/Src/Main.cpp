@@ -21,7 +21,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	Timer::CreateInstance();
 	{
 		// エンジンの初期化
-		if (InitEngine(1920, 1080, "FaNF2", FULL_SCLEEN) == false)
+		if (InitEngine(1920, 1080, "FaNF2", WINDOWED) == false)
 		{
 			return 0;
 		}

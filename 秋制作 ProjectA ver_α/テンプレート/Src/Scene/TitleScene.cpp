@@ -10,6 +10,7 @@
 #include "../Object/ObjectManager.h"
 #include "../Object/ObjectID.h"
 #include "../Engine/Audio/Audio.h"
+#include "../Scene/Days/DayController.h"
 
 // タイトルシーンの初期化
 void InitTitleScene();
@@ -77,6 +78,7 @@ void MainTitleScene()
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouse(ObjID::BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
+			DayDifficulty()->LoadDays(Days::DAY_1);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
