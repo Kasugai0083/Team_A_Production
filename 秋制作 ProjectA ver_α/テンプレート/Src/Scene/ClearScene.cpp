@@ -53,18 +53,28 @@ void DrawClearScene()
 	}
 }
 
+bool Check() {
+	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
+	return tmp_player->IsActive();
+}
+
 void InitClearScene()
 {
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 
-	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
-
-	DayDifficulty()->CheckClear(tmp_player->IsActive());
 
 	LoadTexture("Res/End/EndBg.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex);
 	LoadTexture("Res/End/GameOver.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex);
+
+	//true => クリア時Daysを進める
+	DayManager()->CheckClear();
+	//DayManager()->CheckClear(true);
+	
+
+
+
 	ChangeSceneStep(SceneStep::MainStep);
 
 }

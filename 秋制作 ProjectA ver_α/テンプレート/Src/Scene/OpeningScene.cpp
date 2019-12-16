@@ -64,19 +64,19 @@ SceneId UpdateOpeningScene()
 
 void DrawOpeningScene()
 {
-	DayController DayCon;
 
-	switch (DayCon.GetCurrentDays())
+	switch (DayManager()->GetCurrentDays())
 	{
 	case Days::DAY_0:
+
+		break;
+	case Days::DAY_1:
 		if (OpCon.GetCount() == 0) {
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex));
 		}
 		else if (OpCon.GetCount() == 1) {
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex));
 		}
-		break;
-	case Days::DAY_1:
 		break;
 	case Days::DAY_2:
 		break;

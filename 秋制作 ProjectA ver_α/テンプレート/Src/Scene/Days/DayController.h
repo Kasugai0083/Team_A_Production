@@ -1,7 +1,7 @@
 #ifndef  DAY_CONTROLLER_H_
 #define  DAY_CONTROLLER_H_
 
-
+#include "../../Character/CharacterManager.h"
 
 enum class Days {
 	DAY_0,
@@ -16,41 +16,25 @@ enum class Days {
 class DayController {
 public:
 	//仮にコンストラクタで初期化
-	DayController() { m_Days = Days::DAY_0; };
+	DayController() { 
+		m_Days = Days::DAY_0;
+		m_pPlayer = g_Manager.GetCharacter(PLAYER);
+	};
 	~DayController() {};
 
 	void LoadDays(Days savedata_ = Days::DAY_0) { m_Days = savedata_; };
 
-	void CheckClear(bool clear_) {
-		// クリアフラグをどっかでとってDAYを進行する
-
-		if (clear_ == true) {
-			switch (m_Days)
-			{
-			case Days::DAY_0:
-				m_Days = Days::DAY_1;
-				break;
-			case Days::DAY_1:
-				m_Days = Days::DAY_2;
-				break;
-			case Days::DAY_2:
-				m_Days = Days::DAY_3;
-				break;
-			case Days::DAY_3:
-				m_Days = Days::ENDING;
-				break;
-			default:
-				break;
-			}
-		}
-	};
+	void CheckClear();
 
 	Days GetCurrentDays() { return m_Days; };
 
+	void DrawCurrentDays();
+
 private:
 	Days m_Days;
+	Character* m_pPlayer;
 };
 
-DayController* DayDifficulty();
+DayController* DayManager();
 
 #endif 

@@ -40,9 +40,13 @@ SceneId UpdateTitleScene()
 void DrawTitleScene()
 {
 
+
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex));
 
 	ObjManager()->Draw();
+
+	DayManager()->DrawCurrentDays();
+
 
 }
 
@@ -78,7 +82,7 @@ void MainTitleScene()
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouse(ObjID::BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
-			DayDifficulty()->LoadDays(Days::DAY_1);
+			DayManager()->LoadDays(Days::DAY_1);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}
