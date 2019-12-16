@@ -189,131 +189,130 @@ void UI::Update() {
 			break;
 		}
 	}
-	else if(GetCurrentSceneId() == SceneId::GameScene){
-		switch (m_Id)
-		{
-		case ObjID::GAME_BASE_UI:
-		case ObjID::BUTTON_CONTROL_UI:
-		case ObjID::MO_MASK_UI:
-			m_IsDeath = false;
-			break;
-		default:
-			m_IsDeath = true;
-			break;
+	else if (GetCurrentSceneId() == SceneId::GameScene) {
+		if (GameView()->GetHasMonitor() == false) {
+			switch (m_Id)
+			{
+			case ObjID::GAME_BASE_UI:
+			case ObjID::BUTTON_CONTROL_UI:
+			case ObjID::MO_MASK_UI:
+				m_IsDeath = false;
+				break;
+			default:
+				m_IsDeath = true;
+				break;
+			}
+		}else {
+			switch (m_Id)
+			{
+			case ObjID::BUTTON_WORKSHOP:
+			case ObjID::BUTTON_STORE_ROOM:
+			case ObjID::BUTTON_RECEPTION_ROOM:
+			case ObjID::BUTTON_CHILD_ROOM:
+			case ObjID::BUTTON_RIGHT_CORRIDOR:
+			case ObjID::BUTTON_LEFT_CORRIDOR:
+			case ObjID::BUTTON_ON_WORKSHOP:
+			case ObjID::BUTTON_ON_STORE_ROOM:
+			case ObjID::BUTTON_ON_RECEPTION_ROOM:
+			case ObjID::BUTTON_ON_CHILD_ROOM:
+			case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
+			case ObjID::BUTTON_ON_LEFT_CORRIDOR:
+			case ObjID::MONITOR_MAP:
+				m_IsDeath = false;
+				break;
+			default:
+				m_IsDeath = true;
+				break;
+			}
+
+			switch (GameView()->CurrentMonitorID())
+			{
+			case MonitorView::WORKSHOP_VIEW:
+
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_ON_STORE_ROOM:
+				case ObjID::BUTTON_ON_RECEPTION_ROOM:
+				case ObjID::BUTTON_ON_CHILD_ROOM:
+				case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
+				case ObjID::BUTTON_ON_LEFT_CORRIDOR:
+					m_IsDeath = true;
+					break;
+				default:
+					break;
+				}
+				break;
+			case MonitorView::STORE_ROOM_VIEW:
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_ON_WORKSHOP:
+				case ObjID::BUTTON_ON_RECEPTION_ROOM:
+				case ObjID::BUTTON_ON_CHILD_ROOM:
+				case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
+				case ObjID::BUTTON_ON_LEFT_CORRIDOR:
+					m_IsDeath = true;
+					break;
+				default:
+					break;
+				}
+				break;
+			case MonitorView::RECEPTION_ROOM_VIEW:
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_ON_WORKSHOP:
+				case ObjID::BUTTON_ON_STORE_ROOM:
+				case ObjID::BUTTON_ON_CHILD_ROOM:
+				case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
+				case ObjID::BUTTON_ON_LEFT_CORRIDOR:
+					m_IsDeath = true;
+				default:
+					break;
+				}
+				break;
+			case MonitorView::CHILD_ROOM_VIEW:
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_ON_WORKSHOP:
+				case ObjID::BUTTON_ON_STORE_ROOM:
+				case ObjID::BUTTON_ON_RECEPTION_ROOM:
+				case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
+				case ObjID::BUTTON_ON_LEFT_CORRIDOR:
+					m_IsDeath = true;
+				default:
+					break;
+				}
+				break;
+			case MonitorView::RIGHT_CORRIDOR_VIEW:
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_ON_WORKSHOP:
+				case ObjID::BUTTON_ON_STORE_ROOM:
+				case ObjID::BUTTON_ON_RECEPTION_ROOM:
+				case ObjID::BUTTON_ON_CHILD_ROOM:
+				case ObjID::BUTTON_ON_LEFT_CORRIDOR:
+					m_IsDeath = true;
+				default:
+					break;
+				}
+				break;
+			case MonitorView::LEFT_CORRIDOR_VIEW:
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_ON_WORKSHOP:
+				case ObjID::BUTTON_ON_STORE_ROOM:
+				case ObjID::BUTTON_ON_RECEPTION_ROOM:
+				case ObjID::BUTTON_ON_CHILD_ROOM:
+				case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
+					m_IsDeath = true;
+				default:
+					break;
+				}
+				break;
+			default:
+				break;
+			}
 		}
 	}
-	else if (GetCurrentSceneId() == SceneId::MonitorScene) {
-		switch (m_Id)
-		{
-		case ObjID::BUTTON_WORKSHOP:
-		case ObjID::BUTTON_STORE_ROOM:
-		case ObjID::BUTTON_RECEPTION_ROOM:
-		case ObjID::BUTTON_CHILD_ROOM:
-		case ObjID::BUTTON_RIGHT_CORRIDOR:
-		case ObjID::BUTTON_LEFT_CORRIDOR:
-		case ObjID::BUTTON_ON_WORKSHOP:
-		case ObjID::BUTTON_ON_STORE_ROOM:
-		case ObjID::BUTTON_ON_RECEPTION_ROOM:
-		case ObjID::BUTTON_ON_CHILD_ROOM:
-		case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
-		case ObjID::BUTTON_ON_LEFT_CORRIDOR:
-		case ObjID::MONITOR_MAP:
-			m_IsDeath = false;
-			break;
-		default:
-			m_IsDeath = true;
-			break;
-		}
-
-		switch (GameView()->CurrentMonitorID())
-		{
-		case MonitorView::WORKSHOP_VIEW:
-
-			switch (m_Id)
-			{
-			case ObjID::BUTTON_ON_STORE_ROOM:
-			case ObjID::BUTTON_ON_RECEPTION_ROOM:
-			case ObjID::BUTTON_ON_CHILD_ROOM:
-			case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
-			case ObjID::BUTTON_ON_LEFT_CORRIDOR:
-				m_IsDeath = true;
-				break;
-			default:
-				break;
-			}
-			break;
-		case MonitorView::STORE_ROOM_VIEW:
-			switch (m_Id)
-			{
-			case ObjID::BUTTON_ON_WORKSHOP:
-			case ObjID::BUTTON_ON_RECEPTION_ROOM:
-			case ObjID::BUTTON_ON_CHILD_ROOM:
-			case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
-			case ObjID::BUTTON_ON_LEFT_CORRIDOR:
-				m_IsDeath = true;
-				break;
-			default:
-				break;
-			}
-			break;
-		case MonitorView::RECEPTION_ROOM_VIEW:
-			switch (m_Id)
-			{
-			case ObjID::BUTTON_ON_WORKSHOP:
-			case ObjID::BUTTON_ON_STORE_ROOM:
-			case ObjID::BUTTON_ON_CHILD_ROOM:
-			case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
-			case ObjID::BUTTON_ON_LEFT_CORRIDOR:
-				m_IsDeath = true;
-			default:
-				break;
-			}
-			break;
-		case MonitorView::CHILD_ROOM_VIEW:
-			switch (m_Id)
-			{
-			case ObjID::BUTTON_ON_WORKSHOP:
-			case ObjID::BUTTON_ON_STORE_ROOM:
-			case ObjID::BUTTON_ON_RECEPTION_ROOM:
-			case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
-			case ObjID::BUTTON_ON_LEFT_CORRIDOR:
-				m_IsDeath = true;
-			default:
-				break;
-			}
-			break;
-		case MonitorView::RIGHT_CORRIDOR_VIEW:
-			switch (m_Id)
-			{
-			case ObjID::BUTTON_ON_WORKSHOP:
-			case ObjID::BUTTON_ON_STORE_ROOM:
-			case ObjID::BUTTON_ON_RECEPTION_ROOM:
-			case ObjID::BUTTON_ON_CHILD_ROOM:
-			case ObjID::BUTTON_ON_LEFT_CORRIDOR:
-				m_IsDeath = true;
-			default:
-				break;
-			}
-			break;
-		case MonitorView::LEFT_CORRIDOR_VIEW:
-			switch (m_Id)
-			{
-			case ObjID::BUTTON_ON_WORKSHOP:
-			case ObjID::BUTTON_ON_STORE_ROOM:
-			case ObjID::BUTTON_ON_RECEPTION_ROOM:
-			case ObjID::BUTTON_ON_CHILD_ROOM:
-			case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
-				m_IsDeath = true;
-			default:
-				break;
-			}
-			break;
-		default:
-			break;
-		}
-
-	}
-
 	UpdateGameUI();
 
 	if (m_IsDeath == false) {

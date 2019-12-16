@@ -67,23 +67,25 @@ bool Player::ControlGameScene() {
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-		switch (GameView()->CurrentViewID()) {
-		case GameData::SubGameScene::CENTER:
+		if (GameView()->GetHasMonitor() == false) {
+			switch (GameView()->CurrentViewID()) {
+			case GameData::SubGameScene::CENTER:
 
-			KeyPush(A_KEY, GameData::LEFT);
-			KeyPush(D_KEY, GameData::RIGHT);
+				KeyPush(A_KEY, GameData::LEFT);
+				KeyPush(D_KEY, GameData::RIGHT);
 
-			break;
-		case GameData::RIGHT:
+				break;
+			case GameData::RIGHT:
 
-			KeyPush(A_KEY, GameData::CENTER);
+				KeyPush(A_KEY, GameData::CENTER);
 
-			break;
-		case GameData::LEFT:
+				break;
+			case GameData::LEFT:
 
-			KeyPush(D_KEY, GameData::CENTER);
+				KeyPush(D_KEY, GameData::CENTER);
 
-			break;
+				break;
+			}
 		}
 
 		if (GetKey(SPACE_KEY) == true) {

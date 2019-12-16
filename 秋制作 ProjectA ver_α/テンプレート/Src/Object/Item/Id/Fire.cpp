@@ -69,6 +69,7 @@ void Fire::FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_
 
 void Fire::SceneDeath() {
 	if (GetCurrentSceneId() == GameScene) {
+
 		switch (GameView()->CurrentViewID())
 		{
 		case GameData::SubGameScene::CENTER:

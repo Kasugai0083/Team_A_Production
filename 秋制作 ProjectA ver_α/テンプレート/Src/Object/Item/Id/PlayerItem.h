@@ -55,14 +55,15 @@ public:
 	*/
 	void Update()override {
 
-		if (GetCurrentSceneId() == GameScene) {
+		if (GameView()->GetHasMonitor() == false) {
+			if (GetCurrentSceneId() == GameScene) {
 
-			if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {
-				m_IsDeath = false;
-			}
-			else {
-				m_IsDeath = true;
-
+				if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {
+					m_IsDeath = false;
+				}
+				else {
+					m_IsDeath = true;
+				}
 			}
 		}
 		else {
@@ -145,14 +146,16 @@ public:
 
 		Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-		if (GetCurrentSceneId() == GameScene) {
+		if (GameView()->GetHasMonitor() == false) {
+			if (GetCurrentSceneId() == GameScene) {
 
-			if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {
-				m_IsDeath = false;
-			}
-			else {
-				m_IsDeath = true;
-				m_OnMouse = false;
+				if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {
+					m_IsDeath = false;
+				}
+				else {
+					m_IsDeath = true;
+					m_OnMouse = false;
+				}
 			}
 		}
 		else {
