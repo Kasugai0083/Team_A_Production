@@ -175,6 +175,7 @@ void UI::Draw(){
 
 void UI::Update() {
 
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
 	if (GetCurrentSceneId() == SceneId::TitleScene) {
 		switch (m_Id)
@@ -190,7 +191,7 @@ void UI::Update() {
 		}
 	}
 	else if (GetCurrentSceneId() == SceneId::GameScene) {
-		if (GameView()->GetHasMonitor() == false) {
+		if (pPlayer->HasMonitor() == false) {
 			switch (m_Id)
 			{
 			case ObjID::GAME_BASE_UI:
@@ -332,33 +333,46 @@ void UI::UpdateGameUI() {
 
 	if (GetCurrentSceneId() == SceneId::GameScene) {
 
-		if (HasPull == true) {
-			switch (m_Id) {
-			case ObjID::BUTTON_ON_CONTROL_UI:
-				m_IsDeath = false;
-				break;
-			case ObjID::DESCRIPTION_UI:
-				m_IsDeath = false;
-				break;
-			}
-		}
-
-		if (m_OnMouse == true) {
-			switch (m_Id)
-			{
-			case ObjID::BUTTON_CONTROL_UI:
-				if (OnMouseDown(Left) == true) {
-					HasPull = true;
+		if (pPlayer->HasMonitor() == false) {
+			if (HasPull == true) {
+				switch (m_Id) {
+				case ObjID::BUTTON_ON_CONTROL_UI:
+					m_IsDeath = false;
+					break;
+				case ObjID::DESCRIPTION_UI:
+					m_IsDeath = false;
+					break;
 				}
-				break;
-			case ObjID::MO_MASK_UI:
-				m_HasMask = true;
-				break;
+			}
 
+			if (m_OnMouse == true) {
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_CONTROL_UI:
+					if (OnMouseDown(Left) == true) {
+						HasPull = true;
+					}
+					break;
+				case ObjID::MO_MASK_UI:
+					m_HasMask = true;
+					break;
+
+				}
+			}
+			else {
+
+				switch (m_Id)
+				{
+				case ObjID::BUTTON_CONTROL_UI:
+					HasPull = false;
+					break;
+				case ObjID::MO_MASK_UI:
+					m_HasMask = false;
+					break;
+				}
 			}
 		}
 		else {
-
 			switch (m_Id)
 			{
 			case ObjID::BUTTON_CONTROL_UI:
@@ -369,5 +383,6 @@ void UI::UpdateGameUI() {
 				break;
 			}
 		}
+
 	}
 }

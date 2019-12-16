@@ -44,6 +44,10 @@ bool Player::ControlMonitor() {
 			//一旦コメントアウト
 			m_HasGFreddySpown = true;
 
+			m_HasMonitor = false;
+
+			pTimerInstance->Init(Timer::Id::SCENE);
+
 			return true;
 		}
 	}
@@ -67,7 +71,6 @@ bool Player::ControlGameScene() {
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-		if (GameView()->GetHasMonitor() == false) {
 			switch (GameView()->CurrentViewID()) {
 			case GameData::SubGameScene::CENTER:
 
@@ -86,12 +89,12 @@ bool Player::ControlGameScene() {
 
 				break;
 			}
-		}
+		
 
 		if (GetKey(SPACE_KEY) == true) {
+			m_HasMonitor = true;
 
-		//	m_HasGFreddySpown = true;
-
+			pTimerInstance->Init(Timer::Id::SCENE);
 			return true;
 		}
 	}
@@ -112,12 +115,15 @@ void Player::Update()
 		m_IsMask = false;
 	}
 
-	if (GetCurrentSceneId() == SceneId::MonitorScene) {
-		m_HasMonitor = true;
+	if (GetCurrentSceneId() == SceneId::GameScene) {
+		if (m_HasMonitor == false) {
+			ControlGameScene();
+		}
+		else {
+			ControlMonitor();
+		}
 	}
-	else {
-		m_HasMonitor = false;
-	}
+	
 
 	//エネミーが参照する値を変更
 	if (g_Manager.RefKill() == true) {

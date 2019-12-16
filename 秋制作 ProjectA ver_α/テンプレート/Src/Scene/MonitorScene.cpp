@@ -129,9 +129,6 @@ void MainMonitorScene()
 	g_Manager.Update();
 
 
-	//キー入力でシーン遷移
-
-	GameView()->Update();
 
 	//if (pPlayer->ControlMonitor() == true) {
 	//	SceneController()->SetID(SceneTransition::Id::Game, true);

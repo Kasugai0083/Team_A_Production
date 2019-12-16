@@ -1,12 +1,13 @@
 #pragma once
 
 enum class MonitorView {
-	WORKSHOP_VIEW,
-	STORE_ROOM_VIEW,
-	RECEPTION_ROOM_VIEW,
-	CHILD_ROOM_VIEW,
-	RIGHT_CORRIDOR_VIEW,
-	LEFT_CORRIDOR_VIEW
+	WORKSHOP_VIEW,			//çHñ[
+	STORE_ROOM_VIEW,		//ï®íu
+	RECEPTION_ROOM_VIEW,	//ãqä‘
+	CHILD_ROOM_VIEW,		//éqãüïîâÆ
+	RIGHT_CORRIDOR_VIEW,	//âEòLâ∫
+	LEFT_CORRIDOR_VIEW,		//ç∂òLâ∫
+	NONE					//ñ≥Ç∆ÇÕàÍëÃÅBÅBÅB
 };
 
 class GameData {
@@ -15,6 +16,7 @@ public:
 		CENTER,
 		LEFT,
 		RIGHT,
+		NONE,
 	};
 
 	GameData() :
@@ -24,10 +26,10 @@ public:
 	{
 	}
 
-	void Update();
 
 	SubGameScene CurrentViewID() { return m_ViewID;	};
-	MonitorView CurrentMonitorID() { return m_MonitorID;};
+	const MonitorView CurrentMonitorID() { return m_MonitorID;};
+
 	bool GetHasMonitor() { return m_HasMonitor; };
 
 	void SetViewID(SubGameScene id_) {	m_ViewID = id_;	};
@@ -35,8 +37,8 @@ public:
 	void SetMonitorID(MonitorView view_) {	m_MonitorID = view_; }
 
 private:
-	SubGameScene m_ViewID;
-	MonitorView m_MonitorID;
+	SubGameScene m_ViewID, m_ViewTmp;
+	MonitorView m_MonitorID, m_MonitorTmp;
 
 	bool m_HasMonitor;
 };

@@ -2,6 +2,7 @@
 #include "..//Scene/Scene.h"
 #include "..//Engine/Graphics.h"
 #include "../Object/ObjectManager.h"
+#include "..//Character/CharacterManager.h"
 
 //‚±‚±‚ÅŽžŠÔ‚Ìi‚Ý‚ð•ÏX
 const int TIME_MAGNIFICATION = 100000;
@@ -84,7 +85,9 @@ void Timer::Draw() {
 	Object* WatchInstance = ObjManager()->GetObj(ObjID::POCKET_WATCH);
 	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
 
-	if (GameView()->GetHasMonitor() == false) {
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
+	if (pPlayer->HasMonitor() == false) {
 		if (WatchInstance->HasOnMouse() == true) {
 			DrawFont(30.f, 1014.f, "AM", Large, Yellow);
 			DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Yellow);

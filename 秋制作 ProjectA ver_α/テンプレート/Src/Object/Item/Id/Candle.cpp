@@ -159,7 +159,10 @@ void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_swi
 }
 
 void Candle::SceneDeath() {
-	if (GameView()->GetHasMonitor() == false) {
+
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
+	if (pPlayer->HasMonitor() == false) {
 
 		if (GetCurrentSceneId() == GameScene) {
 

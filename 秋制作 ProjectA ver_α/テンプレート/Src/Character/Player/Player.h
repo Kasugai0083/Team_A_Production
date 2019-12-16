@@ -14,6 +14,7 @@ public:
 		Character(true)
 	{
 		m_HasGFreddySpown = false;
+		m_HasMonitor = false;
 	}
 	/*
 		デストラクタ

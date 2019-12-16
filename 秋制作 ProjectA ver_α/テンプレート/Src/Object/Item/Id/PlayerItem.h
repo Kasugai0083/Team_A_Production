@@ -55,7 +55,9 @@ public:
 	*/
 	void Update()override {
 
-		if (GameView()->GetHasMonitor() == false) {
+		Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
+		if (pPlayer->HasMonitor() == false) {
 			if (GetCurrentSceneId() == GameScene) {
 
 				if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {
@@ -146,7 +148,7 @@ public:
 
 		Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-		if (GameView()->GetHasMonitor() == false) {
+		if (pPlayer->HasMonitor() == false) {
 			if (GetCurrentSceneId() == GameScene) {
 
 				if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER) {

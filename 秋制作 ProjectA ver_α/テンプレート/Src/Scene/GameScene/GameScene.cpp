@@ -80,7 +80,7 @@ void DrawGameScene()
 	
 	switch (GameView()->CurrentViewID()) {
 	case GameData::CENTER:
-		if (GameView()->GetHasMonitor() == false) {
+		if (pPlayer->HasMonitor() == false) {
 
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
 
@@ -95,7 +95,7 @@ void DrawGameScene()
 
 		g_Manager.Draw();
 
-		if (GameView()->GetHasMonitor() == false) {
+		if (pPlayer->HasMonitor() == false) {
 
 			if (pCenterCandle->HasCaLight() == false) {
 				DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex));
@@ -111,7 +111,7 @@ void DrawGameScene()
 
 		break;
 	case GameData::RIGHT:
-		if (GameView()->GetHasMonitor() == false) {
+		if (pPlayer->HasMonitor() == false) {
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex));
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex));
@@ -136,7 +136,7 @@ void DrawGameScene()
 
 		break;
 	case GameData::LEFT:
-		if (GameView()->GetHasMonitor() == false) {
+		if (pPlayer->HasMonitor() == false) {
 
 			DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex));
@@ -254,13 +254,6 @@ void MainGameScene()
 	g_Manager.Update();
 
 	ObjManager()->Update();
-
-	////キー入力でシーン遷移
-	GameView()->Update();
-	//if (pPlayer->ControlGameScene() == true) {
-	//	SceneController()->SetID(SceneTransition::Id::Monitor, true);
-	//	ChangeSceneStep(SceneStep::EndStep);
-	//}
 
 	//クリア時間経過でシーン遷移
 	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
