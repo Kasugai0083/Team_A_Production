@@ -41,19 +41,16 @@ void GameData::Update() {
 	//else if (GetCurrentSceneId() == MonitorScene) {
 	//	MonitorToRoom();
 	//}
-	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
-
 		if (pPlayer->ControlGameScene() == true) {
 			if (m_HasMonitor == false) {
 				m_HasMonitor = true;
 			}
-			else {
+			else  {
 				m_HasMonitor = false;
 			}
 
 			pTimerInstance->Init(Timer::Id::SCENE);
 
 		}
-	}
 
 }
