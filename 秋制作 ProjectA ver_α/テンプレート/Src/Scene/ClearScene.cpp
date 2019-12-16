@@ -73,8 +73,6 @@ void InitClearScene()
 	//DayManager()->CheckClear(true);
 	
 
-
-
 	ChangeSceneStep(SceneStep::MainStep);
 
 }

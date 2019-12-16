@@ -84,19 +84,35 @@ void Timer::Draw() {
 	Object* WatchInstance = ObjManager()->GetObj(ObjID::POCKET_WATCH);
 	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
 
+	if (GameView()->GetHasMonitor() == false) {
+		if (WatchInstance->HasOnMouse() == true) {
+			DrawFont(30.f, 1014.f, "AM", Large, Yellow);
+			DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Yellow);
+			DrawFont(162.f, 1014.f, ":", Large, Yellow);
+			DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Yellow);
+		}
+		else {
+			DrawFont(30.f, 1014.f, "@#", Large, Yellow);
+			DrawFont(130.f, 1014.f, "*", Large, Yellow);
+			DrawFont(162.f, 1014.f, ";", Large, Yellow);
+			DrawFont(194.f, 1014.f, "?=", Large, Yellow);
+		}
+	}
 
-	if (WatchInstance->HasOnMouse() == true) {
-		DrawFont(30.f, 1014.f, "AM", Large, Yellow);
-		DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Yellow);
-		DrawFont(162.f, 1014.f, ":", Large, Yellow);
-		DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Yellow);
-	}
-	else {
-		DrawFont(30.f, 1014.f, "@#", Large, Yellow);
-		DrawFont(130.f, 1014.f, "*", Large, Yellow);
-		DrawFont(162.f, 1014.f, ";", Large, Yellow);
-		DrawFont(194.f, 1014.f, "?=", Large, Yellow);
-	}
+ 	//	if (WatchInstance->HasOnMouse() == true) {
+		//	DrawFont(30.f, 1014.f, "AM", Large, Yellow);
+		//	DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Yellow);
+		//	DrawFont(162.f, 1014.f, ":", Large, Yellow);
+		//	DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Yellow);
+		//}
+		//else {
+		//	DrawFont(30.f, 1014.f, "@#", Large, Yellow);
+		//	DrawFont(130.f, 1014.f, "*", Large, Yellow);
+		//	DrawFont(162.f, 1014.f, ";", Large, Yellow);
+		//	DrawFont(194.f, 1014.f, "?=", Large, Yellow);
+		//}
+	
+
 
 }
 

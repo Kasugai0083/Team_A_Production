@@ -63,6 +63,8 @@ void DrawMonitorBg() {
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
 
+	DrawFont(100.f, 900.f, "Space で 戻る", Large, White);
+
 }
 
 //シーンのメイン処理
@@ -83,6 +85,9 @@ void DrawGameScene()
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
 
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterDeskTex));
+
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
+
 		}
 		else {
 			DrawMonitorBg();
@@ -97,7 +102,6 @@ void DrawGameScene()
 			}
 		}
 
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 
 		ObjManager()->Draw();
 
@@ -111,6 +115,7 @@ void DrawGameScene()
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex));
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiBackTex));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 			//カーテン
 			if (pRightCandle->HasCaLight() == false) {
 				DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightBlackTex));
@@ -120,13 +125,12 @@ void DrawGameScene()
 			DrawMonitorBg();
 		}
 
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
-
-		pTimerInstance->Draw();
 
 		g_Manager.Draw();
 
 		ObjManager()->Draw();
+
+		pTimerInstance->Draw();
 
 		g_Manager.Draw();
 
@@ -137,6 +141,8 @@ void DrawGameScene()
 			DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiFrontTex));
 			DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
+
 			//カーテン
 			if (pLeftCandle->HasCaLight() == false) {
 				DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftBlackTex));
@@ -148,7 +154,6 @@ void DrawGameScene()
 
 
 
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 
 		ObjManager()->Draw();
 
