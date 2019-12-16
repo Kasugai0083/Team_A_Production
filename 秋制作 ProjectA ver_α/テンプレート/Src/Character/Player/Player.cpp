@@ -44,8 +44,6 @@ bool Player::ControlMonitor() {
 			//一旦コメントアウト
 			m_HasGFreddySpown = true;
 
-			m_HasMonitor = false;
-
 			GameView()->SaveMonitorID();
 			GameView()->SetMonitorID(MonitorView::NONE);
 			GameView()->LoadViewID();
@@ -96,7 +94,6 @@ bool Player::ControlGameScene() {
 		
 
 		if (GetKey(SPACE_KEY) == true) {
-			m_HasMonitor = true;
 
 			GameView()->SaveViewID();
 			GameView()->SetViewID(GameData::SubGameScene::NONE);
@@ -125,10 +122,18 @@ void Player::Update()
 
 	if (GetCurrentSceneId() == SceneId::GameScene) {
 		if (m_HasMonitor == false) {
-			ControlGameScene();
+			if (GameView()->CurrentViewID() != GameData::SubGameScene::NONE) {
+				if (ControlGameScene() == true) {
+					m_HasMonitor = true;
+				}
+			}
 		}
 		else {
-			ControlMonitor();
+			if (GameView()->CurrentMonitorID() != MonitorView::NONE) {
+				if (ControlMonitor() == true) {
+					m_HasMonitor = false;
+				}
+			}
 		}
 	}
 	
