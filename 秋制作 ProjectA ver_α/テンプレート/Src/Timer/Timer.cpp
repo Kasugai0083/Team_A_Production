@@ -4,7 +4,7 @@
 #include "../Object/ObjectManager.h"
 
 //ここで時間の進みを変更
-const int TIME_MAGNIFICATION = 1;
+const int TIME_MAGNIFICATION = 100000;
 
 //staticなメンバ変数を初期化【コンストラクタではやらない】
 Timer* Timer::p_Instance = nullptr;

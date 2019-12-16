@@ -159,46 +159,43 @@ void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_swi
 }
 
 void Candle::SceneDeath() {
-	if (GetCurrentSceneId() == GameScene) {
+	if (GameView()->GetHasMonitor() == false) {
 
-		//switch (m_Id)
-		//{
-		//case ObjID::CANDLE_STAND_CENTER:
-		//	m_IsDeath = false;
-		//	break;
-		//case ObjID::CANDLE_STAND_SIDE:
-		//	m_IsDeath = false;
-		//	break;
-		//}
+		if (GetCurrentSceneId() == GameScene) {
 
-		switch (GameView()->CurrentViewID())
-		{
-		case GameData::SubGameScene::CENTER:
-			if (m_Id == ObjID::CANDLE_STAND_CENTER) {
-				m_IsDeath = false;
+			switch (GameView()->CurrentViewID())
+			{
+			case GameData::SubGameScene::CENTER:
+				if (m_Id == ObjID::CANDLE_STAND_CENTER) {
+					m_IsDeath = false;
+				}
+				else if (m_Id == ObjID::CANDLE_STAND_LEFT || m_Id == ObjID::CANDLE_STAND_RIGHT) {
+					m_IsDeath = true;
+				}
+				CandleSwitch(false, true, true);
+				break;
+			case GameData::SubGameScene::RIGHT:
+				if (m_Id == ObjID::CANDLE_STAND_RIGHT) {
+					m_IsDeath = false;
+				}
+				else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_LEFT) {
+					m_IsDeath = true;
+				}
+				CandleSwitch(true, true, false);
+				break;
+			case GameData::SubGameScene::LEFT:
+				if (m_Id == ObjID::CANDLE_STAND_LEFT) {
+					m_IsDeath = false;
+				}
+				else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_RIGHT) {
+					m_IsDeath = true;
+				}
+				CandleSwitch(true, false, true);
+				break;
 			}
-			else if (m_Id == ObjID::CANDLE_STAND_LEFT || m_Id == ObjID::CANDLE_STAND_RIGHT) {
-				m_IsDeath = true;
-			}
-			CandleSwitch(false, true, true);
-			break;
-		case GameData::SubGameScene::RIGHT:
-			if (m_Id == ObjID::CANDLE_STAND_RIGHT) {
-				m_IsDeath = false;
-			}else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_LEFT) {
-				m_IsDeath = true;
-			}
-			CandleSwitch(true, true, false);
-			break;
-		case GameData::SubGameScene::LEFT:
-			if (m_Id == ObjID::CANDLE_STAND_LEFT) {
-				m_IsDeath = false;
-			}
-			else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_RIGHT) {
-				m_IsDeath = true;
-			}
-			CandleSwitch(true, false, true);
-			break;
+		}
+		else {
+			m_IsDeath = true;
 		}
 	}
 	else {
