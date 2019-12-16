@@ -9,3 +9,6 @@ GameData* GameView() {
 	return &g_GameData;
 }
 
+//void GameData::SetViewID(SubGameScene id_) {
+//
+//}

@@ -46,6 +46,10 @@ bool Player::ControlMonitor() {
 
 			m_HasMonitor = false;
 
+			GameView()->SaveMonitorID();
+			GameView()->SetMonitorID(MonitorView::NONE);
+			GameView()->LoadViewID();
+
 			pTimerInstance->Init(Timer::Id::SCENE);
 
 			return true;
@@ -93,6 +97,10 @@ bool Player::ControlGameScene() {
 
 		if (GetKey(SPACE_KEY) == true) {
 			m_HasMonitor = true;
+
+			GameView()->SaveViewID();
+			GameView()->SetViewID(GameData::SubGameScene::NONE);
+			GameView()->LoadMonitorID();
 
 			pTimerInstance->Init(Timer::Id::SCENE);
 			return true;
