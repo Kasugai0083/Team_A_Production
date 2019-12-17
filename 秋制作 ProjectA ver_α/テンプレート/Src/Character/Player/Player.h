@@ -15,6 +15,11 @@ public:
 	{
 		m_HasGFreddySpown = false;
 		m_HasMonitor = false;
+		m_ViewID = CENTER;
+		m_ViewTmp = CENTER;
+		m_MonitorViewID = MonitorView::NONE;
+		m_MonitorTmp = MonitorView::WORKSHOP_VIEW;
+
 	}
 	/*
 		デストラクタ
@@ -37,7 +42,10 @@ public:
 
 	bool IsActive() override { return m_IsActive; };
 
-	MonitorView CurrentViewMonitorID() const override{
+	SubGameScene CurrentViewID() const override{
+		return m_ViewID;
+	}
+	MonitorView CurrentMonitorID() const override{
 		return m_MonitorViewID;
 	}
 
@@ -53,6 +61,12 @@ public:
 private:
 	void OnMask();
 
+	template <class T1, class T2>
+	void KeyPush(T1 button_, T2 view_);
+
+	template <class T1, class T2>
+	void ButtonPush(T1 button_, T2 view_);
+
 private:
 	bool m_IsActive;		// 生きてるかどうか(必要性あるかな？)
 	bool m_IsMask;		// マスクをつけてるかどうか
@@ -60,8 +74,8 @@ private:
 	bool m_HasGFreddySpown; //ゴールデンフレディのフラグが立っているかどうか
 	bool m_HasMonitor;		// モニターを見ているかどうか
 
-	MonitorView m_MonitorViewID; // モニターのどこを見ているか
-
+	SubGameScene m_ViewID, m_ViewTmp;
+	MonitorView m_MonitorViewID, m_MonitorTmp;
 };
 
 #endif

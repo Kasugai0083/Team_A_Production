@@ -1,5 +1,6 @@
 #include "Fire.h"
 #include "../ItemValue.h"
+#include "../../../Character/CharacterManager.h"
 
 void Fire::Init() {
 	switch (m_Id)
@@ -68,17 +69,20 @@ void Fire::FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_
 }
 
 void Fire::SceneDeath() {
+
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
 	if (GetCurrentSceneId() == GameScene) {
 
-		switch (GameView()->CurrentViewID())
+		switch (pPlayer->CurrentViewID())
 		{
-		case GameData::SubGameScene::CENTER:
+		case SubGameScene::CENTER:
 			FireSwitch(false, true, true);
 			break;
-		case GameData::SubGameScene::RIGHT:
+		case SubGameScene::RIGHT:
 			FireSwitch(true, true, false);
 			break;
-		case GameData::SubGameScene::LEFT:
+		case SubGameScene::LEFT:
 			FireSwitch(true, false, true);
 			break;
 		}

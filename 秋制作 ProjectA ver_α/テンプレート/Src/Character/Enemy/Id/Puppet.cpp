@@ -34,7 +34,7 @@ void Margaret::Update()
 
 	// モニターシーンかつ子供部屋を見ているとき
 	if (m_pPlayer->HasMonitor() == true
-		&& m_pPlayer->CurrentViewMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
+		&& m_pPlayer->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
 
 		m_iFrameCount += 2;
 		// 上限値になったら上限値をいれる
@@ -120,10 +120,12 @@ void Margaret::LoadTex(SceneId id_)
 
 void Margaret::Draw()
 {
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& GameView()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
+			&& pPlayer->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
 
 			DrawTexture(500.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorPuppetTex));
 			DrawTexture(500.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterPuppet));

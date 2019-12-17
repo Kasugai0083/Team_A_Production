@@ -37,10 +37,12 @@ public:
 	}
 	virtual bool IsActive() { return m_IsActive; }
 
-	virtual MonitorView CurrentViewMonitorID() const{
+	virtual MonitorView CurrentMonitorID() const{
 		return m_MonitorViewID;
 	}
-
+	virtual SubGameScene CurrentViewID() const{
+		return m_ViewID;
+	}
 	virtual void Draw() = 0;
 
 	virtual void LoadTex(SceneId id) {};
@@ -64,6 +66,7 @@ private:
 	bool m_HasLight;
 	bool m_HasMonitor;
 	MonitorView m_MonitorViewID;
+	SubGameScene m_ViewID;
 
 	//エネミーの情報
 	bool m_HasKill;

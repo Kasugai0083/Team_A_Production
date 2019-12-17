@@ -226,7 +226,7 @@ void UI::Update() {
 				break;
 			}
 
-			switch (GameView()->CurrentMonitorID())
+			switch (pPlayer->CurrentMonitorID())
 			{
 			case MonitorView::WORKSHOP_VIEW:
 

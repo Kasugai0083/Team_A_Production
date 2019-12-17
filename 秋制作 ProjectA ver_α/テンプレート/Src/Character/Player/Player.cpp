@@ -16,12 +16,12 @@ void Player::Init()
 // T2 => どの MonitorView に移動するか
 // 糞ずるい気がするので変更する予定
 template <class T1, class T2>
-void ButtonPush(T1 button_, T2 view_) {
+void Player::ButtonPush(T1 button_, T2 view_) {
 	Timer* pTimerInstance = Timer::GetInstance();
 
 	if (ObjManager()->HasOnMouse(button_) == true) {
 		if (OnMouseDown(Left) == true) {
-			GameView()->SetMonitorID(view_);
+			m_MonitorViewID = view_;
 			pTimerInstance->Init(Timer::Id::SCENE);
 		}
 	}
@@ -44,10 +44,6 @@ bool Player::ControlMonitor() {
 			//一旦コメントアウト
 			m_HasGFreddySpown = true;
 
-			GameView()->SaveMonitorID();
-			GameView()->SetMonitorID(MonitorView::NONE);
-			GameView()->LoadViewID();
-
 			pTimerInstance->Init(Timer::Id::SCENE);
 
 			return true;
@@ -60,44 +56,41 @@ bool Player::ControlMonitor() {
 // T2 => どの ViewScene に移動するか
 // 糞ずるい気がするので変更する予定
 template <class T1, class T2>
-void KeyPush(T1 button_, T2 view_) {
+void Player::KeyPush(T1 button_, T2 view_) {
 	Timer* pTimerInstance = Timer::GetInstance();
 
 	if (GetKey(button_) == true) {
 		pTimerInstance->Init(Timer::Id::SCENE);
-		GameView()->SetViewID(view_);
+		m_ViewID = view_;
 	}
 }
 
 bool Player::ControlGameScene() {
+
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-			switch (GameView()->CurrentViewID()) {
-			case GameData::SubGameScene::CENTER:
+			switch (m_ViewID) {
+			case SubGameScene::CENTER:
 
-				KeyPush(A_KEY, GameData::LEFT);
-				KeyPush(D_KEY, GameData::RIGHT);
-
-				break;
-			case GameData::RIGHT:
-
-				KeyPush(A_KEY, GameData::CENTER);
+				KeyPush(A_KEY, SubGameScene::LEFT);
+				KeyPush(D_KEY, SubGameScene::RIGHT);
 
 				break;
-			case GameData::LEFT:
+			case SubGameScene::RIGHT:
 
-				KeyPush(D_KEY, GameData::CENTER);
+				KeyPush(A_KEY, SubGameScene::CENTER);
+
+				break;
+			case SubGameScene::LEFT:
+
+				KeyPush(D_KEY, SubGameScene::CENTER);
 
 				break;
 			}
 		
 
 		if (GetKey(SPACE_KEY) == true) {
-
-			GameView()->SaveViewID();
-			GameView()->SetViewID(GameData::SubGameScene::NONE);
-			GameView()->LoadMonitorID();
 
 			pTimerInstance->Init(Timer::Id::SCENE);
 			return true;
@@ -110,7 +103,18 @@ void Player::Update()
 {
 	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
 
-	m_MonitorViewID = GameView()->CurrentMonitorID();
+	//if (m_HasMonitor == false) {
+	//	GameView()->SaveViewID();
+	//	GameView()->LoadViewID();
+	//	GameView()->SetMonitorID(MonitorView::NONE);
+	//}
+	//else {
+	//	GameView()->SaveMonitorID();
+	//	GameView()->LoadMonitorID();
+	//	GameView()->SetViewID(GameData::SubGameScene::NONE);
+	//}
+
+	//m_MonitorViewID = GameView()->CurrentMonitorID();
 
 	//マスク被る・被らない
 	if (pMaskUI->HasMask() == true) {
@@ -122,17 +126,13 @@ void Player::Update()
 
 	if (GetCurrentSceneId() == SceneId::GameScene) {
 		if (m_HasMonitor == false) {
-			if (GameView()->CurrentViewID() != GameData::SubGameScene::NONE) {
-				if (ControlGameScene() == true) {
-					m_HasMonitor = true;
-				}
+			if (ControlGameScene() == true) {
+				m_HasMonitor = true;
 			}
 		}
 		else {
-			if (GameView()->CurrentMonitorID() != MonitorView::NONE) {
-				if (ControlMonitor() == true) {
-					m_HasMonitor = false;
-				}
+			if (ControlMonitor() == true) {
+				m_HasMonitor = false;
 			}
 		}
 	}

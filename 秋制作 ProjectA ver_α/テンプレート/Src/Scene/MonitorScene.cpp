@@ -35,29 +35,29 @@ void LoadMonitor() {
 
 }
 
-void DrawBg() {
-	if (GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorSpownBgTex));
-	}
-	else if (GameView()->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorLeftDuctBgTex));
-	}
-	else if (GameView()->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorRightDuctBgTex));
-	}
-	else if (GameView()->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex));
-	}
-	else if (GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex));
-	}
-	else if (GameView()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex));
-	}
-
-	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
-
-}
+//void DrawBg() {
+//	if (GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+//		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorSpownBgTex));
+//	}
+//	else if (GameView()->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
+//		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorLeftDuctBgTex));
+//	}
+//	else if (GameView()->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
+//		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorRightDuctBgTex));
+//	}
+//	else if (GameView()->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
+//		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex));
+//	}
+//	else if (GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+//		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex));
+//	}
+//	else if (GameView()->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
+//		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex));
+//	}
+//
+//	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
+//
+//}
 
 #pragma endregion
 
@@ -81,7 +81,7 @@ SceneId UpdateMonitorScene()
 
 void DrawMonitorScene()
 {	
-	DrawBg();
+	//DrawBg();
 
 	g_Manager.Draw();///‚±‚±‚ªŒ´ˆö
 

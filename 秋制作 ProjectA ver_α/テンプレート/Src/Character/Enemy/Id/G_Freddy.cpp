@@ -100,10 +100,12 @@ void Botan::LoadTex(SceneId id_)
 
 void Botan::Draw()
 {
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
 	if (m_IsActive == false) { return; }
 	// Ž€‚ñ‚Å‚¢‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢
 
-	if (GameView()->CurrentViewID() == GameData::SubGameScene::CENTER
+	if (pPlayer->CurrentViewID() == SubGameScene::CENTER
 		&& GetCurrentSceneId() == SceneId::GameScene) {
 
 		DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex));

@@ -138,11 +138,12 @@ void Sakura::LoadTex(SceneId id_)
 void Sakura::Draw()
 {
 	static Object* pRightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
 			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
@@ -155,7 +156,7 @@ void Sakura::Draw()
 	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& GameView()->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
 
 			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
@@ -164,7 +165,7 @@ void Sakura::Draw()
 	case RoomID::ROOM_RECEPTION:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
-			&& GameView()->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+			&& pPlayer->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
 
 			DrawTexture(1050.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
@@ -173,7 +174,7 @@ void Sakura::Draw()
 	case RoomID::RIGHT_CORRIDOR:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& GameView()->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
+			&& pPlayer->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
 
 			DrawTexture(800.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex));
 		}
@@ -181,7 +182,7 @@ void Sakura::Draw()
 
 	case RoomID::RIGHT_SHOJI:
 
-		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
+		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pRightCandle->HasCaLight() == true) {
 
@@ -191,7 +192,7 @@ void Sakura::Draw()
 
 	case RoomID::ROOM_RIGHT_PRAYER:
 
-		if (GameView()->CurrentViewID() == GameData::SubGameScene::RIGHT
+		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaNearTex));

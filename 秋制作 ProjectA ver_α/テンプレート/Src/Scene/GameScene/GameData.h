@@ -10,38 +10,51 @@ enum class MonitorView {
 	NONE					//ñ≥Ç∆ÇÕàÍëÃÅBÅBÅB
 };
 
+enum SubGameScene {
+	CENTER,
+	LEFT,
+	RIGHT,
+	NONE
+};
 class GameData {
 public:
-	enum SubGameScene {
-		CENTER,
-		LEFT,
-		RIGHT,
-		NONE
-	};
-
-	GameData() :
-		m_ViewID(CENTER),
-		m_ViewTmp(m_ViewID),
-		m_MonitorID(MonitorView::WORKSHOP_VIEW),
-		m_MonitorTmp(m_MonitorID)
-	{
-	}
 
 
-	SubGameScene CurrentViewID() { return m_ViewID;	};
-	const MonitorView CurrentMonitorID() { return m_MonitorID;};
+	//GameData() :
+	//	m_ViewID(CENTER),
+	//	m_ViewTmp(CENTER),
+	//	m_MonitorID(MonitorView::NONE),
+	//	m_MonitorTmp(MonitorView::WORKSHOP_VIEW)
+	//{
+	//}
 
-	void SetViewID(SubGameScene id_) {	m_ViewID = id_;	};
-	void SaveViewID() { m_ViewTmp = m_ViewID; };
-	void LoadViewID() { m_ViewID = m_ViewTmp; }
 
-	void SetMonitorID(MonitorView view_) {	m_MonitorID = view_; }
-	void SaveMonitorID() { m_MonitorTmp = m_MonitorID; }
-	void LoadMonitorID() { m_MonitorID = m_MonitorTmp; }
+	//SubGameScene CurrentViewID() { return m_ViewID;	};
+	//const MonitorView CurrentMonitorID() { return m_MonitorID;};
+
+	//void SetViewID(SubGameScene id_) {	m_ViewID = id_;	};
+
+	//void SaveViewID() { 
+	//	if (m_ViewID != NONE) {
+	//		m_ViewTmp = m_ViewID;
+	//	}
+	//};
+
+	//void LoadViewID() { m_ViewID = m_ViewTmp; }
+
+	//void SetMonitorID(MonitorView view_) {	m_MonitorID = view_; }
+
+	//void SaveMonitorID() { 
+	//	if (m_MonitorID != MonitorView::NONE) {
+	//		m_MonitorTmp = m_MonitorID;
+	//	}
+	//}
+
+	//void LoadMonitorID() { m_MonitorID = m_MonitorTmp; }
 
 private:
-	SubGameScene m_ViewID, m_ViewTmp;
-	MonitorView m_MonitorID, m_MonitorTmp;
+	//SubGameScene m_ViewID, m_ViewTmp;
+	//MonitorView m_MonitorID, m_MonitorTmp;
 };
 
 GameData* GameView();
