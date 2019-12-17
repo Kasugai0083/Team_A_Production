@@ -21,7 +21,7 @@ void Player::ButtonPush(T1 button_, T2 view_) {
 
 	if (ObjManager()->HasOnMouse(button_) == true) {
 		if (OnMouseDown(Left) == true) {
-			m_MonitorViewID = view_;
+			m_ViewID = view_;
 			pTimerInstance->Init(Timer::Id::SCENE);
 		}
 	}
@@ -32,16 +32,17 @@ bool Player::ControlMonitor() {
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-		ButtonPush(ObjID::BUTTON_WORKSHOP, MonitorView::WORKSHOP_VIEW);
-		ButtonPush(ObjID::BUTTON_LEFT_CORRIDOR, MonitorView::LEFT_CORRIDOR_VIEW);
-		ButtonPush(ObjID::BUTTON_RIGHT_CORRIDOR, MonitorView::RIGHT_CORRIDOR_VIEW);
-		ButtonPush(ObjID::BUTTON_STORE_ROOM, MonitorView::STORE_ROOM_VIEW);
-		ButtonPush(ObjID::BUTTON_RECEPTION_ROOM, MonitorView::RECEPTION_ROOM_VIEW);
-		ButtonPush(ObjID::BUTTON_CHILD_ROOM, MonitorView::CHILD_ROOM_VIEW);
+		ButtonPush(ObjID::BUTTON_WORKSHOP, SubGameScene::WORKSHOP_VIEW);
+		ButtonPush(ObjID::BUTTON_LEFT_CORRIDOR, SubGameScene::LEFT_CORRIDOR_VIEW);
+		ButtonPush(ObjID::BUTTON_RIGHT_CORRIDOR, SubGameScene::RIGHT_CORRIDOR_VIEW);
+		ButtonPush(ObjID::BUTTON_STORE_ROOM, SubGameScene::STORE_ROOM_VIEW);
+		ButtonPush(ObjID::BUTTON_RECEPTION_ROOM, SubGameScene::RECEPTION_ROOM_VIEW);
+		ButtonPush(ObjID::BUTTON_CHILD_ROOM, SubGameScene::CHILD_ROOM_VIEW);
 
-		if (GetKey(SPACE_KEY) == true) {
+		if (GetKeyDown(SPACE_KEY) == true) {
+			TmpMonitor = m_ViewID;
+			m_ViewID = TmpRoom;
 
-			//一旦コメントアウト
 			m_HasGFreddySpown = true;
 
 			pTimerInstance->Init(Timer::Id::SCENE);
@@ -59,7 +60,7 @@ template <class T1, class T2>
 void Player::KeyPush(T1 button_, T2 view_) {
 	Timer* pTimerInstance = Timer::GetInstance();
 
-	if (GetKey(button_) == true) {
+	if (GetKeyDown(button_) == true) {
 		pTimerInstance->Init(Timer::Id::SCENE);
 		m_ViewID = view_;
 	}
@@ -71,26 +72,29 @@ bool Player::ControlGameScene() {
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
 			switch (m_ViewID) {
-			case SubGameScene::CENTER:
+			case SubGameScene::CENTER_VIEW:
 
-				KeyPush(A_KEY, SubGameScene::LEFT);
-				KeyPush(D_KEY, SubGameScene::RIGHT);
-
-				break;
-			case SubGameScene::RIGHT:
-
-				KeyPush(A_KEY, SubGameScene::CENTER);
+				KeyPush(A_KEY, SubGameScene::LEFT_VIEW);
+				KeyPush(D_KEY, SubGameScene::RIGHT_VIEW);
 
 				break;
-			case SubGameScene::LEFT:
+			case SubGameScene::RIGHT_VIEW:
 
-				KeyPush(D_KEY, SubGameScene::CENTER);
+				KeyPush(A_KEY, SubGameScene::CENTER_VIEW);
+
+				break;
+			case SubGameScene::LEFT_VIEW:
+
+				KeyPush(D_KEY, SubGameScene::CENTER_VIEW);
 
 				break;
 			}
 		
 
-		if (GetKey(SPACE_KEY) == true) {
+		if (GetKeyDown(SPACE_KEY) == true) {
+
+			TmpRoom = m_ViewID;
+			m_ViewID = TmpMonitor;
 
 			pTimerInstance->Init(Timer::Id::SCENE);
 			return true;
@@ -102,19 +106,6 @@ bool Player::ControlGameScene() {
 void Player::Update()
 {
 	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
-
-	//if (m_HasMonitor == false) {
-	//	GameView()->SaveViewID();
-	//	GameView()->LoadViewID();
-	//	GameView()->SetMonitorID(MonitorView::NONE);
-	//}
-	//else {
-	//	GameView()->SaveMonitorID();
-	//	GameView()->LoadMonitorID();
-	//	GameView()->SetViewID(GameData::SubGameScene::NONE);
-	//}
-
-	//m_MonitorViewID = GameView()->CurrentMonitorID();
 
 	//マスク被る・被らない
 	if (pMaskUI->HasMask() == true) {
@@ -130,7 +121,7 @@ void Player::Update()
 				m_HasMonitor = true;
 			}
 		}
-		else {
+		else if((m_HasMonitor == true)){
 			if (ControlMonitor() == true) {
 				m_HasMonitor = false;
 			}

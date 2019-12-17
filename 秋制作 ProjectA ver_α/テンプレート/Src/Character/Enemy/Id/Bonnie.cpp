@@ -143,7 +143,7 @@ void Ume::Draw()
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
 
 			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
@@ -156,7 +156,7 @@ void Ume::Draw()
 	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
 
 			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
@@ -165,7 +165,7 @@ void Ume::Draw()
 	case RoomID::ROOM_RECEPTION:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::RECEPTION_ROOM_VIEW) {
 
 			DrawTexture(50.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
@@ -174,7 +174,7 @@ void Ume::Draw()
 	case RoomID::LEFT_CORRIDOR:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::LEFT_CORRIDOR_VIEW) {
 
 			DrawTexture(670.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
 		}
@@ -182,7 +182,7 @@ void Ume::Draw()
 
 	case RoomID::LEFT_SHOJI:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::LEFT
+		if (pPlayer->CurrentViewID() == SubGameScene::LEFT_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pLeftCandle->HasCaLight() == true) {
 
@@ -192,7 +192,7 @@ void Ume::Draw()
 
 	case RoomID::ROOM_LEFT_PRAYER:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::LEFT
+		if (pPlayer->CurrentViewID() == SubGameScene::LEFT_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(1360.0f, 440.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieNearTex));

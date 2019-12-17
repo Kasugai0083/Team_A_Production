@@ -37,9 +37,6 @@ public:
 	}
 	virtual bool IsActive() { return m_IsActive; }
 
-	virtual MonitorView CurrentMonitorID() const{
-		return m_MonitorViewID;
-	}
 	virtual SubGameScene CurrentViewID() const{
 		return m_ViewID;
 	}
@@ -65,7 +62,6 @@ private:
 	bool m_HasMask;
 	bool m_HasLight;
 	bool m_HasMonitor;
-	MonitorView m_MonitorViewID;
 	SubGameScene m_ViewID;
 
 	//エネミーの情報

@@ -105,7 +105,7 @@ void Botan::Draw()
 	if (m_IsActive == false) { return; }
 	// Ž€‚ñ‚Å‚¢‚½‚ç‚±‚±‚æ‚è‰º‚Ìˆ—‚É‚Í‚¢‚©‚È‚¢
 
-	if (pPlayer->CurrentViewID() == SubGameScene::CENTER
+	if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 		&& GetCurrentSceneId() == SceneId::GameScene) {
 
 		DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex));

@@ -37,9 +37,10 @@ SceneId UpdateTitleScene()
 	return SceneId::TitleScene;
 }
 
+bool g_flag = false;
+
 void DrawTitleScene()
 {
-
 
 	DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex));
 
@@ -47,6 +48,13 @@ void DrawTitleScene()
 
 	DayManager()->DrawCurrentDays();
 
+	if (g_flag == true) {
+		DrawFont(100.f,100.f, "ON",FontSize::Large,FontColor::Yellow);
+	}
+	else {
+		DrawFont(100.f, 100.f, "OFF", FontSize::Large, FontColor::Yellow);
+
+	}
 
 }
 
@@ -79,6 +87,15 @@ void MainTitleScene()
 
 	ObjManager()->Update();
 	
+	if (GetKeyDown(SPACE_KEY) == true) {
+		if (g_flag == false) {
+			g_flag = true;
+		}
+		else {
+			g_flag = false;
+		}
+	}
+
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouse(ObjID::BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {

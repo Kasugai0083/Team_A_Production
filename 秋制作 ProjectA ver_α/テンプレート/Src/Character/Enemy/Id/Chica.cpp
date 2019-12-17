@@ -143,7 +143,7 @@ void Sakura::Draw()
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
 
 			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
@@ -156,7 +156,7 @@ void Sakura::Draw()
 	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
 
 			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
@@ -165,7 +165,7 @@ void Sakura::Draw()
 	case RoomID::ROOM_RECEPTION:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
-			&& pPlayer->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::RECEPTION_ROOM_VIEW) {
 
 			DrawTexture(1050.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
 		}
@@ -174,7 +174,7 @@ void Sakura::Draw()
 	case RoomID::RIGHT_CORRIDOR:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::RIGHT_CORRIDOR_VIEW) {
 
 			DrawTexture(800.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex));
 		}
@@ -182,7 +182,7 @@ void Sakura::Draw()
 
 	case RoomID::RIGHT_SHOJI:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT
+		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pRightCandle->HasCaLight() == true) {
 
@@ -192,7 +192,7 @@ void Sakura::Draw()
 
 	case RoomID::ROOM_RIGHT_PRAYER:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT
+		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaNearTex));

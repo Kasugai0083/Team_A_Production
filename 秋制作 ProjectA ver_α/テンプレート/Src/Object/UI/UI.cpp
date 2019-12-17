@@ -226,9 +226,9 @@ void UI::Update() {
 				break;
 			}
 
-			switch (pPlayer->CurrentMonitorID())
+			switch (pPlayer->CurrentViewID())
 			{
-			case MonitorView::WORKSHOP_VIEW:
+			case SubGameScene::WORKSHOP_VIEW:
 
 				switch (m_Id)
 				{
@@ -243,7 +243,7 @@ void UI::Update() {
 					break;
 				}
 				break;
-			case MonitorView::STORE_ROOM_VIEW:
+			case SubGameScene::STORE_ROOM_VIEW:
 				switch (m_Id)
 				{
 				case ObjID::BUTTON_ON_WORKSHOP:
@@ -257,7 +257,7 @@ void UI::Update() {
 					break;
 				}
 				break;
-			case MonitorView::RECEPTION_ROOM_VIEW:
+			case SubGameScene::RECEPTION_ROOM_VIEW:
 				switch (m_Id)
 				{
 				case ObjID::BUTTON_ON_WORKSHOP:
@@ -270,7 +270,7 @@ void UI::Update() {
 					break;
 				}
 				break;
-			case MonitorView::CHILD_ROOM_VIEW:
+			case SubGameScene::CHILD_ROOM_VIEW:
 				switch (m_Id)
 				{
 				case ObjID::BUTTON_ON_WORKSHOP:
@@ -283,7 +283,7 @@ void UI::Update() {
 					break;
 				}
 				break;
-			case MonitorView::RIGHT_CORRIDOR_VIEW:
+			case SubGameScene::RIGHT_CORRIDOR_VIEW:
 				switch (m_Id)
 				{
 				case ObjID::BUTTON_ON_WORKSHOP:
@@ -296,7 +296,7 @@ void UI::Update() {
 					break;
 				}
 				break;
-			case MonitorView::LEFT_CORRIDOR_VIEW:
+			case SubGameScene::LEFT_CORRIDOR_VIEW:
 				switch (m_Id)
 				{
 				case ObjID::BUTTON_ON_WORKSHOP:

@@ -131,7 +131,7 @@ void Ohagi::Draw()
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
 
 			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
@@ -146,7 +146,7 @@ void Ohagi::Draw()
 	case RoomID::ROOM_WORK:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene 
-			&& pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
 
 			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
@@ -155,7 +155,7 @@ void Ohagi::Draw()
 	case RoomID::ROOM_RECEPTION:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::RECEPTION_ROOM_VIEW) {
 
 			DrawTexture(100.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
 		}
@@ -163,7 +163,7 @@ void Ohagi::Draw()
 
 	case RoomID::HALL_BACK:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER
+		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene
 			&& pCenterCandle->HasCaLight() == true) {
 
@@ -173,7 +173,7 @@ void Ohagi::Draw()
 
 	case RoomID::HALL_FRONT:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER
+		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pCenterCandle->HasCaLight() == true) {
 
@@ -183,7 +183,7 @@ void Ohagi::Draw()
 
 	case RoomID::ROOM_PRAYER:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER
+		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
 			DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));

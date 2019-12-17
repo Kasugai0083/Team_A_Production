@@ -1,20 +1,15 @@
 #pragma once
 
-enum class MonitorView {
+enum class SubGameScene {
+	CENTER_VIEW,			//プレイヤールーム中央
+	LEFT_VIEW,				//プレイヤールーム左
+	RIGHT_VIEW,				//プレイヤールーム右
 	WORKSHOP_VIEW,			//工房
 	STORE_ROOM_VIEW,		//物置
 	RECEPTION_ROOM_VIEW,	//客間
 	CHILD_ROOM_VIEW,		//子供部屋
 	RIGHT_CORRIDOR_VIEW,	//右廊下
 	LEFT_CORRIDOR_VIEW,		//左廊下
-	NONE					//無とは一体。。。
-};
-
-enum SubGameScene {
-	CENTER,
-	LEFT,
-	RIGHT,
-	NONE
 };
 class GameData {
 public:

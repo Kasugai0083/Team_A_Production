@@ -45,22 +45,22 @@ void DrawMonitorBg() {
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (pPlayer->CurrentMonitorID() == MonitorView::WORKSHOP_VIEW) {
+	if (pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorSpownBgTex));
 	}
-	else if (pPlayer->CurrentMonitorID() == MonitorView::LEFT_CORRIDOR_VIEW) {
+	else if (pPlayer->CurrentViewID() == SubGameScene::LEFT_CORRIDOR_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorLeftDuctBgTex));
 	}
-	else if (pPlayer->CurrentMonitorID() == MonitorView::RIGHT_CORRIDOR_VIEW) {
+	else if (pPlayer->CurrentViewID() == SubGameScene::RIGHT_CORRIDOR_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorRightDuctBgTex));
 	}
-	else if (pPlayer->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
+	else if (pPlayer->CurrentViewID() == SubGameScene::STORE_ROOM_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex));
 	}
-	else if (pPlayer->CurrentMonitorID() == MonitorView::RECEPTION_ROOM_VIEW) {
+	else if (pPlayer->CurrentViewID() == SubGameScene::RECEPTION_ROOM_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex));
 	}
-	else if (pPlayer->CurrentMonitorID() == MonitorView::CHILD_ROOM_VIEW) {
+	else if (pPlayer->CurrentViewID() == SubGameScene::CHILD_ROOM_VIEW) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex));
 	}
 
@@ -82,7 +82,7 @@ void DrawGameScene()
 
 	
 	switch (pPlayer->CurrentViewID()) {
-	case CENTER:
+	case SubGameScene::CENTER_VIEW:
 		if (pPlayer->HasMonitor() == false) {
 
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex));
@@ -113,7 +113,7 @@ void DrawGameScene()
 		pPlayer->Draw();
 
 		break;
-	case RIGHT:
+	case SubGameScene::RIGHT_VIEW:
 		if (pPlayer->HasMonitor() == false) {
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_RIGHT, RightCategoryTextureList::GameRightBgTex));
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightShojiFrontTex));
@@ -138,7 +138,7 @@ void DrawGameScene()
 		g_Manager.Draw();
 
 		break;
-	case LEFT:
+	case SubGameScene::LEFT_VIEW:
 		if (pPlayer->HasMonitor() == false) {
 
 			DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_LEFT, LeftCategoryTextureList::GameLeftBgTex));
@@ -155,8 +155,102 @@ void DrawGameScene()
 			DrawMonitorBg();
 		}
 
+		ObjManager()->Draw();
 
+		pPlayer->Draw();
 
+		pTimerInstance->Draw();
+
+		g_Manager.Draw();
+
+		break;
+	case SubGameScene::WORKSHOP_VIEW:
+
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorSpownBgTex));
+		
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
+
+		DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
+
+		ObjManager()->Draw();
+
+		pPlayer->Draw();
+
+		pTimerInstance->Draw();
+
+		g_Manager.Draw();
+
+		break;
+	case SubGameScene::LEFT_CORRIDOR_VIEW:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorLeftDuctBgTex));
+		
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
+
+		DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
+
+		ObjManager()->Draw();
+
+		pPlayer->Draw();
+
+		pTimerInstance->Draw();
+
+		g_Manager.Draw();
+
+		break;
+	case SubGameScene::RIGHT_CORRIDOR_VIEW:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorRightDuctBgTex));
+
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
+
+		DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
+
+		ObjManager()->Draw();
+
+		pPlayer->Draw();
+
+		pTimerInstance->Draw();
+
+		g_Manager.Draw();
+
+		break;
+	case SubGameScene::STORE_ROOM_VIEW:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex));
+
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
+
+		DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
+
+		ObjManager()->Draw();
+
+		pPlayer->Draw();
+
+		pTimerInstance->Draw();
+
+		g_Manager.Draw();
+
+		break;
+	case SubGameScene::RECEPTION_ROOM_VIEW:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex));
+
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
+
+		DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
+
+		ObjManager()->Draw();
+
+		pPlayer->Draw();
+
+		pTimerInstance->Draw();
+
+		g_Manager.Draw();
+
+		break;
+	case SubGameScene::CHILD_ROOM_VIEW:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex));
+
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex));
+
+		DrawFont(100.f, 900.f, "Space ‚Å –ß‚é", Large, White);
 
 		ObjManager()->Draw();
 
@@ -168,7 +262,7 @@ void DrawGameScene()
 
 		break;
 	}
-
+	
 	
 
 

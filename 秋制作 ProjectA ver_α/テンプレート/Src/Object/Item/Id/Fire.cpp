@@ -76,13 +76,13 @@ void Fire::SceneDeath() {
 
 		switch (pPlayer->CurrentViewID())
 		{
-		case SubGameScene::CENTER:
+		case SubGameScene::CENTER_VIEW:
 			FireSwitch(false, true, true);
 			break;
-		case SubGameScene::RIGHT:
+		case SubGameScene::RIGHT_VIEW:
 			FireSwitch(true, true, false);
 			break;
-		case SubGameScene::LEFT:
+		case SubGameScene::LEFT_VIEW:
 			FireSwitch(true, false, true);
 			break;
 		}

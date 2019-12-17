@@ -168,7 +168,7 @@ void Candle::SceneDeath() {
 
 			switch (pPlayer->CurrentViewID())
 			{
-			case SubGameScene::CENTER:
+			case SubGameScene::CENTER_VIEW:
 				if (m_Id == ObjID::CANDLE_STAND_CENTER) {
 					m_IsDeath = false;
 				}
@@ -177,7 +177,7 @@ void Candle::SceneDeath() {
 				}
 				CandleSwitch(false, true, true);
 				break;
-			case SubGameScene::RIGHT:
+			case SubGameScene::RIGHT_VIEW:
 				if (m_Id == ObjID::CANDLE_STAND_RIGHT) {
 					m_IsDeath = false;
 				}
@@ -186,7 +186,7 @@ void Candle::SceneDeath() {
 				}
 				CandleSwitch(true, true, false);
 				break;
-			case SubGameScene::LEFT:
+			case SubGameScene::LEFT_VIEW:
 				if (m_Id == ObjID::CANDLE_STAND_LEFT) {
 					m_IsDeath = false;
 				}
@@ -318,19 +318,19 @@ void Candle::Update(){
 		if (OnMousePush(Right) == true) {
 			switch (pPlayer->CurrentViewID())
 			{
-			case CENTER:
+			case SubGameScene::CENTER_VIEW:
 				if (m_Id == ObjID::CANDLE_CENTER) {
 					m_HasCaLight = true;
 				}
 
 				break;
-			case RIGHT:
+			case SubGameScene::RIGHT_VIEW:
 				if (m_Id == ObjID::CANDLE_RIGHT) {
 					m_HasCaLight = true;
 				}
 
 				break;
-			case LEFT:
+			case SubGameScene::LEFT_VIEW:
 				if (m_Id == ObjID::CANDLE_LEFT) {
 					m_HasCaLight = true;
 				}

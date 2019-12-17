@@ -15,10 +15,9 @@ public:
 	{
 		m_HasGFreddySpown = false;
 		m_HasMonitor = false;
-		m_ViewID = CENTER;
-		m_ViewTmp = CENTER;
-		m_MonitorViewID = MonitorView::NONE;
-		m_MonitorTmp = MonitorView::WORKSHOP_VIEW;
+		m_ViewID = SubGameScene::CENTER_VIEW;
+		TmpRoom = SubGameScene::CENTER_VIEW;
+		TmpMonitor = SubGameScene::WORKSHOP_VIEW;
 
 	}
 	/*
@@ -45,10 +44,6 @@ public:
 	SubGameScene CurrentViewID() const override{
 		return m_ViewID;
 	}
-	MonitorView CurrentMonitorID() const override{
-		return m_MonitorViewID;
-	}
-
 	//モニターシーン遷移を管理する関数
 	bool ControlMonitor() override;
 	//ゲームシーン遷移を管理する関数
@@ -74,8 +69,7 @@ private:
 	bool m_HasGFreddySpown; //ゴールデンフレディのフラグが立っているかどうか
 	bool m_HasMonitor;		// モニターを見ているかどうか
 
-	SubGameScene m_ViewID, m_ViewTmp;
-	MonitorView m_MonitorViewID, m_MonitorTmp;
+	SubGameScene m_ViewID, TmpRoom, TmpMonitor;
 };
 
 #endif

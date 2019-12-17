@@ -60,7 +60,7 @@ public:
 		if (pPlayer->HasMonitor() == false) {
 			if (GetCurrentSceneId() == GameScene) {
 
-				if (pPlayer->CurrentViewID() == SubGameScene::CENTER) {
+				if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW) {
 					m_IsDeath = false;
 				}
 				else {
@@ -151,7 +151,7 @@ public:
 		if (pPlayer->HasMonitor() == false) {
 			if (GetCurrentSceneId() == GameScene) {
 
-				if (pPlayer->CurrentViewID() == SubGameScene::CENTER) {
+				if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW) {
 					m_IsDeath = false;
 				}
 				else {

@@ -133,7 +133,7 @@ void Ran::Draw()
 	if (m_IsActive == false)
 	{
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::STORE_ROOM_VIEW) {
 
 			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
 		}
@@ -148,7 +148,7 @@ void Ran::Draw()
 	case RoomID::ROOM_STORAGE:
 
 		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentMonitorID() == MonitorView::STORE_ROOM_VIEW) {
+			&& pPlayer->CurrentViewID() == SubGameScene::STORE_ROOM_VIEW) {
 
 			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
 		}
@@ -156,7 +156,7 @@ void Ran::Draw()
 
 	case RoomID::HALL_BACK:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER
+		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pCenterCandle->HasCaLight() == true) {
 
@@ -166,7 +166,7 @@ void Ran::Draw()
 
 	case RoomID::HALL_FRONT:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER
+		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 			&& GetCurrentSceneId() == SceneId::GameScene
 				&& pCenterCandle->HasCaLight() == true) {
 				
