@@ -6,12 +6,16 @@
 #include "../../../Engine/Input.h"
 #include "../../../Object/Object.h"
 #include "../../../Object/ObjectManager.h"
+#include "../../../Engine/Audio/Audio.h"
 
 void Ume::Init()
 {
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
+	
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+	pAudio->Load("",)
 }
 
 void Ume::Update()
