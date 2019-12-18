@@ -92,10 +92,6 @@ void DrawGameScene()
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameBlackFanceTex));
 
 		}
-		else {
-			DrawMonitorBg();
-		}
-
 		g_Manager.Draw();
 
 		if (pPlayer->HasMonitor() == false) {
@@ -104,7 +100,6 @@ void DrawGameScene()
 				DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBlackTex));
 			}
 		}
-
 
 		ObjManager()->Draw();
 
@@ -123,9 +118,6 @@ void DrawGameScene()
 			if (pRightCandle->HasCaLight() == false) {
 				DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameRightBlackTex));
 			}
-		}
-		else {
-			DrawMonitorBg();
 		}
 
 
@@ -150,9 +142,6 @@ void DrawGameScene()
 			if (pLeftCandle->HasCaLight() == false) {
 				DrawTexture(128.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftBlackTex));
 			}
-		}
-		else {
-			DrawMonitorBg();
 		}
 
 		ObjManager()->Draw();
