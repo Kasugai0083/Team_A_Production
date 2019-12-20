@@ -52,6 +52,9 @@ public:
 	//ゴールデンフレディのフラグを取得
 	bool HasGFreddySpown() override { return m_HasGFreddySpown; };
 
+	const bool CurrentViewID(const SubGameScene sceneId_) const override;
+
+
 
 private:
 	void OnMask();

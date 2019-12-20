@@ -146,6 +146,14 @@ void Player::Draw() {
 	OnMask();
 }
 
+const bool Player::CurrentViewID(const SubGameScene sceneId_) const
+{
+	if (m_ViewID == sceneId_) {
+		return true;
+	}
+	return false;
+}
+
 void Player::OnMask() {
 	if (GetCurrentSceneId() == SceneId::MonitorScene) {
 		return;

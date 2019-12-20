@@ -13,9 +13,6 @@ void Ume::Init()
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
-	
-	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
-	pAudio->Load("",)
 }
 
 void Ume::Update()
@@ -146,8 +143,7 @@ void Ume::Draw()
 
 	if (m_IsActive == false)
 	{
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
 			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
@@ -159,8 +155,7 @@ void Ume::Draw()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
 			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
@@ -168,8 +163,7 @@ void Ume::Draw()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::RECEPTION_ROOM_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::RECEPTION_ROOM_VIEW)) {
 
 			DrawTexture(50.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieSpawnTex));
 		}
@@ -177,8 +171,7 @@ void Ume::Draw()
 
 	case RoomID::LEFT_CORRIDOR:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::LEFT_CORRIDOR_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::LEFT_CORRIDOR_VIEW)) {
 
 			DrawTexture(670.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBonnieTex));
 		}
@@ -186,9 +179,8 @@ void Ume::Draw()
 
 	case RoomID::LEFT_SHOJI:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::LEFT_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene
-				&& pLeftCandle->HasCaLight() == true) {
+		if (pPlayer->CurrentViewID(SubGameScene::LEFT_VIEW)
+			&& pLeftCandle->HasCaLight() == true) {
 
 			DrawTexture(820.0f, 490.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieLookTex));
 		}
@@ -196,8 +188,7 @@ void Ume::Draw()
 
 	case RoomID::ROOM_LEFT_PRAYER:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::LEFT_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene) {
+		if (pPlayer->CurrentViewID(SubGameScene::LEFT_VIEW)) {
 
 			DrawTexture(1360.0f, 440.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BonnieNearTex));
 		}

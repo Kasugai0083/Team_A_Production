@@ -54,6 +54,8 @@ public:
 	// ééÇµÇ…í«â¡ÇµÇ‹Ç∑ÅB
 	virtual bool SpawnJudgement() const { return 0; }
 
+	virtual const bool CurrentViewID(const SubGameScene sceneId_) const {}
+
 protected:
 	bool m_IsActive;
 
