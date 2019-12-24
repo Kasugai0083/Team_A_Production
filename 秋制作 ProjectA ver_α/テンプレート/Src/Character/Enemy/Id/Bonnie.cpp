@@ -2,7 +2,7 @@
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
-#include "../../../Scene/GameScene/GameData.h"
+#include "../..//..//Data/GameData.h"
 #include "../../../Engine/Input.h"
 #include "../../../Object/Object.h"
 #include "../../../Object/ObjectManager.h"
@@ -15,7 +15,6 @@ void Ume::Init()
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 	
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
-	pAudio->Load("",)
 }
 
 void Ume::Update()

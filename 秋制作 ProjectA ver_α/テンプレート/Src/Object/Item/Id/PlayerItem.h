@@ -10,7 +10,7 @@
 #include "../../../Engine/Calculation.h"
 #include "../../../Timer/Timer.h"
 #include "../../../Engine/Input.h"
-#include "../../../Scene/GameScene/GameData.h"
+#include "../..//..//Data/GameData.h"
 #include "../../../Character/CharacterManager.h"
 
 /**

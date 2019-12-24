@@ -3,9 +3,8 @@
 #include "..//Engine/Graphics.h"
 #include "../Object/ObjectManager.h"
 #include "..//Character/CharacterManager.h"
+#include "..//Data/GameData.h"
 
-//ここで時間の進みを変更
-const int TIME_MAGNIFICATION = 100000;
 
 //staticなメンバ変数を初期化【コンストラクタではやらない】
 Timer* Timer::p_Instance = nullptr;

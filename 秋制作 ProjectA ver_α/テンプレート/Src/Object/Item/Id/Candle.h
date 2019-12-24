@@ -7,12 +7,10 @@
 
 #include "../Item.h"
 #include "../../../Scene/Scene.h"
-#include "../../../Scene/GameScene/GameData.h"
+#include "../..//..//Data/GameData.h"
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Calculation.h"
 
-
-const float MELT_RATIO = 0.001f; //!< @brief ˜XC‚ª—n‚¯‚é‘¬“x
 
 /**
 * @brief ˜XC‚É“Z‚í‚éƒIƒuƒWƒFƒNƒg‚ðŠÇ—‚·‚éƒNƒ‰ƒX@n
