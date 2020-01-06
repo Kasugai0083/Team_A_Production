@@ -65,73 +65,73 @@ void UI::Init(){
 	case ObjID::BUTTON_WORKSHOP:
 		m_Pos = WORKSHOP_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_1.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom1Tex);
 		break;
 	case ObjID::BUTTON_STORE_ROOM:
 		m_Pos = STORE_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_2.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom2Tex);
 		break;
 	case ObjID::BUTTON_RECEPTION_ROOM:
 		m_Pos = RECEPTION_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_3.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom3Tex);
 		break;
 	case ObjID::BUTTON_CHILD_ROOM:
 		m_Pos = CHILD_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_4.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom4Tex);
 		break;
 	case ObjID::BUTTON_RIGHT_CORRIDOR:
 		m_Pos = RIGHT_CORRIDOR_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_5.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom5Tex);
 		break;
 	case ObjID::BUTTON_LEFT_CORRIDOR:
 		m_Pos = LEFT_CORRIDOR_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/button_6.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorButtom6Tex);
 		break;
 	case ObjID::BUTTON_ON_WORKSHOP:
 		m_Pos = WORKSHOP_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_1.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom1Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom1Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom1Tex);
 		break;
 	case ObjID::BUTTON_ON_STORE_ROOM:
 		m_Pos = STORE_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_2.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom2Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom2Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom2Tex);
 		break;
 	case ObjID::BUTTON_ON_RECEPTION_ROOM:
 		m_Pos = RECEPTION_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_3.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom3Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom3Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom3Tex);
 		break;
 	case ObjID::BUTTON_ON_CHILD_ROOM:
 		m_Pos = CHILD_ROOM_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_4.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom4Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom4Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom4Tex);
 		break;
 	case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
 		m_Pos = RIGHT_CORRIDOR_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_5.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom5Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom5Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom5Tex);
 		break;
 	case ObjID::BUTTON_ON_LEFT_CORRIDOR:
 		m_Pos = LEFT_CORRIDOR_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;
-		LoadTexture("Res/Game/Monitor/MonitorUI/on_button_6.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom6Tex);
+		LoadTexture("Res/Game/Monitor/MonitorUI/on_map_UI_crystal.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom6Tex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorOnButtom6Tex);
 		break;
 	case ObjID::MONITOR_MAP:
@@ -139,6 +139,12 @@ void UI::Init(){
 		m_Size = {0.f,0.f};
 		LoadTexture("Res/Game/Monitor/MonitorUI/map.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapTex);
+		break;	
+	case ObjID::MONITOR_PLAYER:
+		m_Pos = MAP_PLAYER_UI_POS;
+		m_Size = {0.f,0.f};
+		LoadTexture("Res/Game/Monitor/MonitorUI/map_UI_pin.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapPlayerTex);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorMapPlayerTex);
 		break;	
 	}
 
@@ -219,6 +225,7 @@ void UI::Update() {
 			case ObjID::BUTTON_ON_RIGHT_CORRIDOR:
 			case ObjID::BUTTON_ON_LEFT_CORRIDOR:
 			case ObjID::MONITOR_MAP:
+			case ObjID::MONITOR_PLAYER:
 				m_IsDeath = false;
 				break;
 			default:
