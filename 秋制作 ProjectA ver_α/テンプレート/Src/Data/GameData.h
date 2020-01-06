@@ -36,4 +36,4 @@ const int MOVEMENT_SPEED_BOTAN = 0;
 const float MELT_RATIO = 0.001f; 
 
 //! ‚±‚±‚ÅŠÔ‚Ìi‚İ‚ğ•ÏX
-const int TIME_MAGNIFICATION = 100000;
+const int TIME_MAGNIFICATION = 1;

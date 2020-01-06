@@ -67,6 +67,9 @@ public:
 					m_IsDeath = true;
 				}
 			}
+			else {
+				m_IsDeath = true;
+			}
 		}
 		else {
 			m_IsDeath = true;
@@ -158,6 +161,9 @@ public:
 					m_IsDeath = true;
 					m_OnMouse = false;
 				}
+			}
+			else {
+				m_IsDeath = true;
 			}
 		}
 		else {
