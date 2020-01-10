@@ -1,23 +1,24 @@
-#ifndef FREDDY_H_
-#define FREDDY_H_
+#ifndef FOXY_H_
+#define FOXY_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
+#include "../../../Texture/Texture.h"
 
 /*
-	フレディ(エネミー)のクラス
+	フォクシー(エネミー)のクラス
 */
-class Ohagi : public Enemy
+class Ran : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Ohagi() :
-		Enemy(RoomID::ROOM_WORK, 0)
+	Ran() :
+		Enemy(RoomID::ROOM_STORAGE, 0)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
@@ -26,17 +27,18 @@ public:
 		}
 
 		m_AnimationTex.m_Counter = 0;
-		m_AnimationTex.m_Length  = 3;
-		m_AnimationTex.m_Speed   = 15;
+		m_AnimationTex.m_Length = 3;
+		m_AnimationTex.m_Speed = 15;
 
 		for (int i = 0; i < m_AnimationTex.m_Length; i++) {
 			m_AnimationTex.m_TextureData[i] = new Texture();
 		}
+
 	}
 	/*
 		デストラクタ
 	*/
-	virtual ~Ohagi(){}
+	virtual ~Ran(){}
 	/*
 		初期化
 	*/
@@ -49,15 +51,15 @@ public:
 	/*
 		m_IsKillを返す
 	*/
-	virtual bool HasKill()const override { return m_HasKill; }
+	virtual bool HasKill()const final { return m_HasKill; }
 
 	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	virtual void LoadTex(SceneId id_) override;
+	virtual void LoadTex() final;
 	/*
-		描画
+	描画
 	*/
 	virtual void Draw() override;
 
@@ -66,9 +68,9 @@ public:
 	*/
 	virtual void KillAnimation() override;
 
-
 private:
-	const CharacterID m_CharId = CharacterID::OHAGI;// キャラID定数
+	// キャラID定数
+	const CharacterID m_CharId = CharacterID::RAN;
 };
 
-#endif
+#endif 

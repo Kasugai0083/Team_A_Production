@@ -1,23 +1,22 @@
-#ifndef CHICA_H_
-#define CHICA_H_
+#ifndef G_FREDDY_H_
+#define G_FREDDY_H_
 
 #include "../../Enemy/Enemy.h"
-#include "../../CharacterID.h"
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
 
 /*
-	チカ(エネミー)のクラス
+	ゴールデンフレディ(エネミー)のクラス
 */
-class Sakura : public Enemy
+class Botan : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Sakura() :
-		Enemy(RoomID::ROOM_WORK, 0)
+	Botan() :
+		Enemy(RoomID::ROOM_PRAYER, 0)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
@@ -34,9 +33,9 @@ public:
 		}
 	}
 	/*
-		デストラクタ
+		デストラクター
 	*/
-	virtual ~Sakura(){}
+	virtual ~Botan(){}
 	/*
 		初期化
 	*/
@@ -52,10 +51,20 @@ public:
 	virtual bool HasKill()const override { return m_HasKill; }
 
 	/*
+		生成するかしないかの判定関数
+		プレイヤーがモニターシーンの時に使う。
+		trueで生成する
+	*/
+	bool SpawnJudgement(double probability_);
+
+	// m_SpawnJudgementを返す
+	bool SpawnJudgement() const override { return m_SpawnJudgement; }
+
+	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	virtual void LoadTex(SceneId id_) override;
+	virtual void LoadTex() override;
 	/*
 		描画
 	*/
@@ -66,10 +75,13 @@ public:
 	*/
 	virtual void KillAnimation() override;
 
-
 private:
-	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数
+	// キャラID定数
+	const CharacterID m_CharId = CharacterID::BOTAN;
 
+	// 試しに作ってみた
+	// SpawnJudgement関数を使ったかどうか
+	bool m_SpawnJudgement;
 };
 
 #endif

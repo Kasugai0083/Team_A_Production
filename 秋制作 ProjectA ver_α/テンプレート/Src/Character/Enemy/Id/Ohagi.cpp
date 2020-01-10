@@ -1,4 +1,4 @@
-#include "Freddy.h"
+#include "Ohagi.h"
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
@@ -10,9 +10,6 @@
 
 void Ohagi::Init()
 {
-	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
-	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
-	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Ohagi::Update()
@@ -113,24 +110,16 @@ void Ohagi::Update()
 	}
 }
 
-void Ohagi::LoadTex(SceneId id_)
+void Ohagi::LoadTex()
 {
-	switch (id_)
-	{
-	case GameScene:
-		LoadTexture("Res/Game/Enemy/Ohagi/Freddy.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy);
-		LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex);
-		LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex);
-		LoadTexture("Res/Game/Enemy/Ohagi/FreddyAAA.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyPlayerTex);
-		break;
+	LoadTexture("Res/Game/Enemy/Ohagi/Freddy.png",	   TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX);
+	LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_FAR_TEX);
+	LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Near.png",TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_NEAR_TEX);
+	LoadTexture("Res/Game/Enemy/Ohagi/FreddyAAA.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_RTEX);
 
-	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex);
-
-		break;
-	default:
-		break;
-	}
+	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Ohagi::Draw()
@@ -139,10 +128,9 @@ void Ohagi::Draw()
 
 	if (m_IsActive == false)
 	{
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
 		}
 
 		return;
@@ -154,48 +142,44 @@ void Ohagi::Draw()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene 
-			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
 		}
 		break;
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::RECEPTION_ROOM_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::RECEPTION_ROOM_VIEW)) {
 
-			DrawTexture(100.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterFreddy));
+			DrawTexture(100.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
 		}
 		break;
 
 	case RoomID::HALL_BACK:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene
+		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 			&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(530.0f, 420.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyFarTex));
+			DrawTexture(530.0f, 420.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_FAR_TEX));
 		}
 		break;
 
 	case RoomID::HALL_FRONT:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene
+		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(650.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyPlayerTex));
+			DrawTexture(650.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_RTEX));
 		}
 		break;
 
 	case RoomID::ROOM_PRAYER:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
+		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::FredyNearTex));
+			DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_NEAR_TEX));
 		}
 		break;
 	default:

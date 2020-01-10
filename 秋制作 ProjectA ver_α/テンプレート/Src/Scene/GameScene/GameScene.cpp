@@ -268,8 +268,7 @@ void InitGameScene()
 
 	ObjManager()->Init();
 
-
-	g_Manager.LoadTex(GetCurrentSceneId());
+	g_Manager.LoadTex();
 
 	//ƒQ[ƒ€ƒV[ƒ“”wŒi
 	LoadTexture("Res/Game/Center/GameCenterBg.png", TEXTURE_CATEGORY_CENTER, CenterCategoryTextureList::GameCenterBgTex);

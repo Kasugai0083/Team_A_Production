@@ -5,42 +5,50 @@
 
 enum EnemyCategoryTextureList
 {
-	FredyFarTex,	// フレディ(200*200)のテクスチャ
-	FredyNearTex,	// フレディ(350*350)のテクスチャ
-	FredyPlayerTex,	// バニーがプレイヤールームに来た時
+	// オハギ
+	OHAGI_SPAWN_TEX,
+	OHAGI_FAR_TEX,
+	OHAGI_NEAR_TEX,	
+	OHAGI_PLAYER_RTEX,
 
+	// ウメ
+	UME_SPAWN_TEX,
+	UME_WALK_TEX,
+	UME_LOOK_TEX,
+	UME_PLAYER_TEX,
 
-	EnemyBoonieTex,	// テスト用
-	
-	EnemyBonnieTex,	// バニー(512*512)のテクスチャー
-	BonnieSpawnTex,	// バニー(350*350)のテクスチャー
-	BonnieLookTex,	// バニー(300*300)のテクスチャー
-	BonnieNearTex,	// バニーがプレイヤールームに来た時
+	// サクラ
+	SAKURA_SPAWN_TEX,
+	SAKURA_WALK_TEX,
+	SAKURA_LOOK_TEX,
+	SAKURA_PLAYER_TEX,
 
-	ChicaTex,
-	ChicaSpawnTex,
-	ChicaLookTex,
-	ChicaNearTex,
+	// オラン
+	ORAN_SPAWN_TEX,
+	ORAN_FAR_TEX,
+	ORAN_NEAR_TEX,
+	ORAN_PLAYER_TEX,
 
-	RanTex,		// ラン(512*512)のテクスチャ
-	RanFarTex,	// ラン(200*200)のテクスチャ
-	RanNearTex,	// ラン(350*350)のテクスチャ
+	// ボタン
+	BOTAN_PLAYER_TEX,
 
+	// マーガレット
+	MARGARET_SPAWN_BASE_TEX,
+	MARGARET_SPAWN_EYE_TEX,
+	// マーガレットの目のUI
+	MARGARET_EYE_TEX,
+	MARGARET_PIZA_1,
+	MARGARET_PIZA_2,
+	MARGARET_PIZA_3,
+	MARGARET_PIZA_4,
+	MARGARET_PIZA_5,
+	MARGARET_PIZA_6,
+	MARGARET_PIZA_7,
+	MARGARET_PIZA_8,
+	MARGARET_PIZA_9,
 
-	EnemyBotanTex,	// ボタンテクスチャ
-
-	MargaretEyeUITex,	// マーガレットの目のUI
-	MargaretPiza1,
-	MargaretPiza2,
-	MargaretPiza3,
-	MargaretPiza4,
-	MargaretPiza5,
-	MargaretPiza6,
-	MargaretPiza7,
-	MargaretPiza8,
-	MargaretPiza9,
-
-	EnemyTextureMax,
+	// エネミー最大
+	ENEMY_TEXTURE_MAX,
 };
 
 #define TEXTURE_CATEGORY_ENEMY (SceneId::EnemyScene)				//!< ゲーム本編カテゴリー

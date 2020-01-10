@@ -1,0 +1,143 @@
+#include "Margaret.h"
+#include "../../CharacterManager.h"
+#include "../../../Engine/Graphics.h"
+#include "../../../Texture/Texture.h"
+#include "../../../Timer/Timer.h"
+#include "../../../Object/Item/Id/PlayerItem.h"
+#include "../../../Engine/Audio/Audio.h"
+
+
+void Margaret::Init()
+{
+	
+}
+
+void Margaret::Update()
+{
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+
+	static bool CountFrag = false;
+	if (GetKeyDown(DOWN_KEY)) {
+		CountFrag = true;
+		m_iFrameCount = 1600;
+	}
+
+	// モニターシーンかつ子供部屋を見ているとき
+	if (m_pPlayer->HasMonitor() == true
+		&& m_pPlayer->CurrentViewID() == SubGameScene::CHILD_ROOM_VIEW) {
+
+		m_iFrameCount += 2;
+		// 上限値になったら上限値をいれる
+		if (m_iFrameCount >= MAX_COUNT) {
+			m_iFrameCount = MAX_COUNT;
+		}
+	}
+	else if (CountFrag){
+		m_iFrameCount--;
+	}
+
+	if (m_iFrameCount >= 3200) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_1;
+	}
+	else if (m_iFrameCount < 3200 && m_iFrameCount > 2800) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_2;
+	}
+	else if (m_iFrameCount < 2800 && m_iFrameCount > 2400) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_3;
+	}
+	else if (m_iFrameCount < 2400 && m_iFrameCount > 2000) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_4;
+	}
+	else if (m_iFrameCount < 2000 && m_iFrameCount > 1600) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_5;
+	}
+	else if (m_iFrameCount < 1600 && m_iFrameCount > 1200) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_6;
+	}
+	else if (m_iFrameCount < 1200 && m_iFrameCount > 800) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_7;
+	}
+	else if (m_iFrameCount < 800 && m_iFrameCount > 400) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_8;
+	}
+	else if (m_iFrameCount < 400 && m_iFrameCount > 0) {
+		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_9;
+	}
+
+
+
+	if (m_iFrameCount <= 0) {
+
+		m_IsActive = true;
+	}
+
+
+	if (m_IsActive == false) { return; }
+	// アクティブじゃなかったらここより下の処理にはいかない
+
+	if (m_IsActive == true) {
+		// ↓ゲームオーバー処理↓ //
+		m_CanKill = true;
+
+		static bool once = false;
+		if (!once)
+		{
+			pAudio->Play("PuppetKillVoice");
+			once = true;
+		}
+	}
+
+	// キルアニメーションが終わったら殺す処理
+	if (m_AnimationTex.m_Counter >= 2) {
+		m_iFrameCount = 0;
+		m_HasKill = true;
+		m_CanKill = false;
+	}
+
+}
+
+void Margaret::LoadTex()
+{
+	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
+
+	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_base.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX);
+	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_eye.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX);
+
+	// 目のUI
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/UI_me_64.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_EYE_TEX);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_1.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_1);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_2.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_2);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_3.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_3);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_4.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_4);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_5.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_5);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_6.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_6);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_7.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_7);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_8.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_8);
+	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_9.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_9);
+}
+
+void Margaret::Draw()
+{
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
+	if (m_IsActive == false)
+	{
+		if (pPlayer->CurrentViewID(SubGameScene::CHILD_ROOM_VIEW)) {
+
+			DrawTexture(500.0f,  600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX));
+			DrawTexture(500.0f,  600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX));
+			DrawTexture(1200.0f, 700.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_EYE_TEX));
+			DrawTexture(1200.0f, 800.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, m_TextureCategory));
+		}
+	}
+}
+
+void Margaret::KillAnimation()
+{
+	if (m_CanKill == true)
+	{
+		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+	}
+}

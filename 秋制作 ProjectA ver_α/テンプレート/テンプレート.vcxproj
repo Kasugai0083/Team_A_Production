@@ -141,12 +141,12 @@
   <ItemGroup>
     <ClCompile Include="Src\Character\CharacterManager.cpp" />
     <ClCompile Include="Src\Character\Enemy\Enemy.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Id\Bonnie.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Id\Chica.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Id\Foxy.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Id\Freddy.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Id\G_Freddy.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Id\Puppet.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Sakura.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Ume.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Oran.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Ohagi.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Botan.cpp" />
+    <ClCompile Include="Src\Character\Enemy\Id\Margaret.cpp" />
     <ClCompile Include="Src\Character\Player\Player.cpp" />
     <ClCompile Include="Src\Data\GameData.cpp" />
     <ClCompile Include="Src\Engine\Audio\Audio.cpp" />
@@ -181,12 +181,12 @@
     <ClInclude Include="Src\Character\CharacterID.h" />
     <ClInclude Include="Src\Character\CharacterManager.h" />
     <ClInclude Include="Src\Character\Enemy\Enemy.h" />
-    <ClInclude Include="Src\Character\Enemy\Id\Bonnie.h" />
-    <ClInclude Include="Src\Character\Enemy\Id\Chica.h" />
-    <ClInclude Include="Src\Character\Enemy\Id\Foxy.h" />
-    <ClInclude Include="Src\Character\Enemy\Id\Freddy.h" />
-    <ClInclude Include="Src\Character\Enemy\Id\G_Freddy.h" />
-    <ClInclude Include="Src\Character\Enemy\Id\Puppet.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Sakura.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Ume.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Oran.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Ohagi.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Botan.h" />
+    <ClInclude Include="Src\Character\Enemy\Id\Margaret.h" />
     <ClInclude Include="Src\Character\Player\Player.h" />
     <ClInclude Include="Src\Data\GameData.h" />
     <ClInclude Include="Src\Engine\Audio\Audio.h" />

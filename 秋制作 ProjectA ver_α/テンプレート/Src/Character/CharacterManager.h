@@ -40,10 +40,9 @@ public:
 	void Draw();
 
 	/*
-		引数に現在のシーンを入れる。
-		引数のシーンのテクスチャを読み込む
+		テクスチャの読み込み関数
 	*/
-	void LoadTex(SceneId id);
+	void LoadTex();
 
 	/*
 		キルアニメーション

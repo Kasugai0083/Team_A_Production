@@ -1,4 +1,4 @@
-#include "Chica.h"
+#include "Ume.h"
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
@@ -12,9 +12,7 @@
 
 void Sakura::Init()
 {
-	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
-	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
-	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
+	
 }
 
 void Sakura::Update()
@@ -127,22 +125,16 @@ void Sakura::Update()
 	}
 }
 
-void Sakura::LoadTex(SceneId id_)
+void Sakura::LoadTex()
 {
-	switch (id_)
-	{
-	case GameScene:
-		LoadTexture("Res/Game/Enemy/Ume/Bonnie.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex);
-		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Look.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex);
-		LoadTexture("Res/Game/Enemy/Ume/右エネミー.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaNearTex);
-		break;
+	LoadTexture("Res/Game/Enemy/Ume/ume_design_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX);
+	LoadTexture("Res/Game/Enemy/Ume/ume_walk_gray.png",   TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_WALK_TEX);
+	LoadTexture("Res/Game/Enemy/Ume/ume_look.png",		  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_LOOK_TEX);
+	LoadTexture("Res/Game/Enemy/Ume/ume_design.png",	  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_PLAYER_TEX);
 
-	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Ume/Bonnie_Spawn.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex);
-		break;
-	default:
-		break;
-	}
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Sakura::Draw()
@@ -152,10 +144,9 @@ void Sakura::Draw()
 
 	if (m_IsActive == false)
 	{
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
+			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
 		}
 
 		return;
@@ -165,47 +156,42 @@ void Sakura::Draw()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::WORKSHOP_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
+			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
 		}
 		break;
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene 
-			&& pPlayer->CurrentViewID() == SubGameScene::RECEPTION_ROOM_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::RECEPTION_ROOM_VIEW)) {
 
-			DrawTexture(1050.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaSpawnTex));
+			DrawTexture(1050.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
 		}
 		break;
 
 	case RoomID::RIGHT_CORRIDOR:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::RIGHT_CORRIDOR_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::RIGHT_CORRIDOR_VIEW)) {
 
-			DrawTexture(800.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaTex));
+			DrawTexture(800.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_WALK_TEX));
 		}
 		break;
 
 	case RoomID::RIGHT_SHOJI:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene
+		if (pPlayer->CurrentViewID(SubGameScene::RIGHT_VIEW)
 				&& pRightCandle->HasCaLight() == true) {
 
-			DrawTexture(700.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaLookTex));
+			DrawTexture(700.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_LOOK_TEX));
 		}
 		break;
 
 	case RoomID::ROOM_RIGHT_PRAYER:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::RIGHT_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene) {
+		if (pPlayer->CurrentViewID(SubGameScene::RIGHT_VIEW)) {
 
-			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ChicaNearTex));
+			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_PLAYER_TEX));
 		}
 		break;
 

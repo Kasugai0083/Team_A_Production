@@ -47,7 +47,7 @@ public:
 	/*
 		引数に指定したシーンのテクスチャをロードする
 	*/
-	virtual void LoadTex(SceneId id_)override {}
+	virtual void LoadTex()override {}
 
 
 protected:
