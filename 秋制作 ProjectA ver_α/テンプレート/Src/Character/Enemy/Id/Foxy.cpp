@@ -5,6 +5,7 @@
 #include "../../../Scene/GameScene/GameData.h"
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Input.h"
+#include "../../../Engine/Audio/Audio.h"
 
 void Ran::Init()
 {
@@ -15,6 +16,7 @@ void Ran::Init()
 
 void Ran::Update()
 {
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 	
 	//追加中！
@@ -94,6 +96,12 @@ void Ran::Update()
 	case RoomID::ROOM_PRAYER:
 	{
 		m_CanKill = true;
+		static bool once = false;
+		if (!once)
+		{
+			pAudio->Play("OranKillVoice");
+			once = true;
+		}
 
 		// キルアニメーションが終わったら殺す処理
 		if (m_AnimationTex.m_Counter >= 2) {

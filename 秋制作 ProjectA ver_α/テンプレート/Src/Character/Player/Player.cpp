@@ -4,6 +4,7 @@
 #include "../CharacterManager.h"
 #include "..//..//Object/ObjectManager.h"
 #include "..//..//Timer/Timer.h"
+#include "../../Engine/Audio/Audio.h"
 
 void Player::Init()
 {
@@ -67,6 +68,7 @@ void Player::KeyPush(T1 button_, T2 view_) {
 }
 
 bool Player::ControlGameScene() {
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
@@ -89,9 +91,14 @@ bool Player::ControlGameScene() {
 
 				break;
 			}
-		
 
+		static bool once = false;
 		if (GetKeyDown(SPACE_KEY) == true) {
+
+			if (!once) {
+				pAudio->Play("ToMonitor");
+				once = true;
+			}
 
 			TmpRoom = m_ViewID;
 			m_ViewID = TmpMonitor;
@@ -99,20 +106,32 @@ bool Player::ControlGameScene() {
 			pTimerInstance->Init(Timer::Id::SCENE);
 			return true;
 		}
+		once = false;
 	}
 	return false;
 }
 
 void Player::Update()
 {
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+
 	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
 
+	static bool once = false;
 	//マスク被る・被らない
 	if (pMaskUI->HasMask() == true) {
+
+		if (!once)
+		{
+			pAudio->Play("MaskSE");
+			once = true;
+		}
 		m_IsMask = true;
 	}
 	else {
 		m_IsMask = false;
+
+		once = false;
 	}
 
 	if (GetCurrentSceneId() == SceneId::GameScene) {

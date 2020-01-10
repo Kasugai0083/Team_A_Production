@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Input.h"
+#include "../../../Engine/Audio/Audio.h"
 
 void Botan::Init()
 {
@@ -16,6 +17,7 @@ void Botan::Init()
 
 void Botan::Update()
 {
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
 	if (m_pPlayer->HasGFreddySpown() == true) {
 		if (GetKey(FIVE_KEY)) {
@@ -54,6 +56,13 @@ void Botan::Update()
 		|| m_pPlayer->HasMonitor() == true) {
 
 		m_CanKill = true;
+
+		static bool once = false;
+		if (!once)
+		{
+			pAudio->Play("BotanKillVoice");
+			once = true;
+		}
 	}
 
 	// もしプレイヤーがモニターを見たら

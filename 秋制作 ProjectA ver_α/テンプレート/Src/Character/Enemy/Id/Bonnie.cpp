@@ -17,6 +17,7 @@ void Ume::Init()
 
 void Ume::Update()
 {
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 
 	if (GetKeyDown(TWO_KEY)) {
@@ -102,6 +103,13 @@ void Ume::Update()
 		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
 			m_CanKill = true;
+
+			static bool once = false;
+			if (!once)
+			{
+				pAudio->Play("UmeKillVoice");
+				once = true;
+			}
 		}
 
 		// キルアニメーションが終わったら殺す処理

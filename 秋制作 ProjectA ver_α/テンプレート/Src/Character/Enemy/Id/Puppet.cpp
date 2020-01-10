@@ -4,6 +4,8 @@
 #include "../../../Texture/Texture.h"
 #include "../../../Timer/Timer.h"
 #include "../../../Object/Item/Id/PlayerItem.h"
+#include "../../../Engine/Audio/Audio.h"
+
 
 void Margaret::Init()
 {
@@ -26,6 +28,8 @@ void Margaret::Init()
 
 void Margaret::Update()
 {
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+
 	static bool CountFrag = false;
 	if (GetKeyDown(DOWN_KEY)) {
 		CountFrag = true;
@@ -88,6 +92,13 @@ void Margaret::Update()
 	if (m_IsActive == true) {
 		// ↓ゲームオーバー処理↓ //
 		m_CanKill = true;
+
+		static bool once = false;
+		if (!once)
+		{
+			pAudio->Play("PuppetKillVoice");
+			once = true;
+		}
 	}
 
 	// キルアニメーションが終わったら殺す処理

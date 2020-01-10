@@ -6,6 +6,7 @@
 #include "../../../Object/Object.h"
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Input.h"
+#include "../../../Engine/Audio/Audio.h"
 
 void Ohagi::Init()
 {
@@ -16,6 +17,7 @@ void Ohagi::Init()
 
 void Ohagi::Update()
 {
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 
 	if (GetKeyDown(ONE_KEY)) {
@@ -91,6 +93,13 @@ void Ohagi::Update()
 		if (m_iFrameCount >= 300) {
 
 			m_CanKill = true;
+
+			static bool once = false;
+			if (!once)
+			{
+				pAudio->Play("OhagiKillVoice");
+				once = true;
+			}
 		}
 
 		// キルアニメーションが終わったら殺す処理

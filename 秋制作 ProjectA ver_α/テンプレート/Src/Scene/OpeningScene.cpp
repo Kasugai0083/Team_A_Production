@@ -7,6 +7,7 @@
 #include "../Character/Player/Player.h"
 #include "../Character/CharacterManager.h"
 #include "../Character/CharacterID.h"
+#include "../Engine/Audio/Audio.h"
 #include "Days/DayController.h"
 
 class OpController {
@@ -21,8 +22,11 @@ public:
 		Timer* pTimerInstance = Timer::GetInstance();
 		pTimerInstance->Update();
 
+		auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+
 		if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 			if (OnMouseDown(Left) == true) {
+				pAudio->Play("Book");
 				m_Count++;
 			}
 		}
@@ -98,6 +102,10 @@ void InitOpeningScene()
 	LoadTexture("Res/Opening/operation_scene.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex);
 	LoadTexture("Res/Opening/operation_scene2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex);
 
+
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+	pAudio->Load("Book", "Sound/Book.wav");
+
 	ChangeSceneStep(SceneStep::MainStep);
 
 }
@@ -119,6 +127,10 @@ SceneId FinishOpeningScene()
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
+
+	auto audio = AudioPlayer::GetInstance();
+	//audio->Stop("Book");
+	//audio->Release("Book");
 
 	return SceneId::GameScene;
 }

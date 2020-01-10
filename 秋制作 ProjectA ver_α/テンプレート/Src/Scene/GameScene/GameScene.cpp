@@ -14,6 +14,7 @@
 #include "../../Object/Item/ItemValue.h"
 #include "../../Object/Object.h"
 #include "../../Object/UI/UIvalue.h"
+#include "../../Engine/Audio/Audio.h"
 
 // ゲーム本編シーンの初期化
 void InitGameScene();
@@ -300,6 +301,20 @@ void InitGameScene()
 	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
 	LoadTexture("Res/Game/Monitor/dust.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex);
 
+	// オーディオ
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+	pAudio->Load("GameBGM", "Sound/GameBGM.wav");
+	pAudio->Play("GameBGM", 1000, true);
+
+	pAudio->Load("RousokuSE", "Sound/RousokuSE.wav");
+	pAudio->Load("MaskSE", "Sound/MaskSE.wav");
+	pAudio->Load("OhagiKillVoice", "Sound/OhagiKillVoice.wav");
+	pAudio->Load("UmeKillVoice", "Sound/UmeKillVoice.wav");
+	pAudio->Load("SakuraKillVoice", "Sound/SakuraKillVoice.wav");
+	pAudio->Load("OranKillVoice", "Sound/OranKillVoice.wav");
+	pAudio->Load("BotanKillVoice", "Sound/BotanKillVoice.wav");
+	pAudio->Load("PuppetKillVoice", "Sound/PuppetKillVoice.wav");
+	pAudio->Load("ToMonitor", "Sound/ToMonitor.wav");
 
 
 	ChangeSceneStep(SceneStep::MainStep);

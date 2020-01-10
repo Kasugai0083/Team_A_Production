@@ -8,6 +8,7 @@
 #include "../Character/CharacterManager.h"
 #include "../Character/CharacterID.h"
 #include "../Scene/Days/DayController.h"
+#include "../Engine/Audio/Audio.h"
 
 // ゲームオーバーシーンの初期化
 void InitClearScene();
@@ -60,7 +61,6 @@ bool Check() {
 
 void InitClearScene()
 {
-
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 
@@ -72,6 +72,8 @@ void InitClearScene()
 	DayManager()->CheckClear();
 	//DayManager()->CheckClear(true);
 	
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+	pAudio->Load("GameOverBGM", "Sound/GameOverBGM.wav");
 
 	ChangeSceneStep(SceneStep::MainStep);
 
@@ -81,6 +83,13 @@ void MainClearScene()
 {
 	SceneController()->GameEnd();
 
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+	static bool once = false;
+	if (!once)
+	{
+		pAudio->Play("GameOverBGM");
+		once = true;
+	}
 
 	if (OnMouseDown(Left) == true) {
 		ChangeSceneStep(SceneStep::EndStep);

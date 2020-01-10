@@ -74,8 +74,10 @@ void InitTitleScene()
 
 	// オーディオ
 	auto audio = AudioPlayer::GetInstance(GetWindowHandle());
-	audio->Load("Title", "Sound/nayu_dra.wav");
-	audio->Play("Title");
+	audio->Load("Title", "Sound/TitleBGM.wav");
+	audio->Load("Select", "Sound/TitleStart.wav");
+
+	audio->Play("Title", 1000, true);
 
 	ChangeSceneStep(SceneStep::MainStep);
 }
@@ -122,6 +124,7 @@ SceneId FinishTitleScene()
 	audio->Stop("Title");
 	audio->Release("Title");
 
+	audio->Play("Select");
 
 	g_Manager.Initialize();
 

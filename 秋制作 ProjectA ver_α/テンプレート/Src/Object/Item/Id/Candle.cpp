@@ -2,6 +2,7 @@
 #include "..//..//ObjectManager.h"
 #include "../ItemValue.h"
 #include "../../../Character/CharacterManager.h"
+#include "../../../Engine/Audio/Audio.h"
 
 void Candle::Init() {
 	switch (m_Id) {
@@ -313,24 +314,41 @@ void Candle::Update(){
 		MeltCandle(ObjID::CANDLE_LEFT);
 		MeltCandle(ObjID::CANDLE_RIGHT);
 
+		auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
+		static bool Once = false;
 
 		if (OnMousePush(Right) == true) {
 			switch (pPlayer->CurrentViewID())
 			{
 			case SubGameScene::CENTER_VIEW:
+				if (!Once)
+				{
+					pAudio->Play("RousokuSE");
+					Once = true;
+				}
 				if (m_Id == ObjID::CANDLE_CENTER) {
 					m_HasCaLight = true;
 				}
 
 				break;
 			case SubGameScene::RIGHT_VIEW:
+				if (!Once)
+				{
+					pAudio->Play("RousokuSE");
+					Once = true;
+				}
 				if (m_Id == ObjID::CANDLE_RIGHT) {
 					m_HasCaLight = true;
 				}
 
 				break;
 			case SubGameScene::LEFT_VIEW:
+				if (!Once)
+				{
+					pAudio->Play("RousokuSE");
+					Once = true;
+				}
 				if (m_Id == ObjID::CANDLE_LEFT) {
 					m_HasCaLight = true;
 				}
@@ -339,6 +357,7 @@ void Candle::Update(){
 		}
 		else {
 			m_HasCaLight = false;
+			Once = false;
 		}
 
 
