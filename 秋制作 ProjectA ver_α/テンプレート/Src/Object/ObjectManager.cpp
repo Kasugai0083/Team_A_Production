@@ -62,6 +62,7 @@ ObjectManager::ObjectManager() {
 	m_pObjects[static_cast<int>(ObjID::BUTTON_ON_LEFT_CORRIDOR)]	= new UI(ObjID::BUTTON_ON_LEFT_CORRIDOR);
 	
 	m_pObjects[static_cast<int>(ObjID::MONITOR_MAP)]				= new UI(ObjID::MONITOR_MAP);
+	m_pObjects[static_cast<int>(ObjID::MONITOR_PLAYER)]				= new UI(ObjID::MONITOR_PLAYER);
 
 	for (auto& objects : m_pObjects) {
 		if (objects == nullptr) {

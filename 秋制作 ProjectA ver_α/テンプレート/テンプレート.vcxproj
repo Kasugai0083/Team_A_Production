@@ -148,6 +148,7 @@
     <ClCompile Include="Src\Character\Enemy\Id\G_Freddy.cpp" />
     <ClCompile Include="Src\Character\Enemy\Id\Puppet.cpp" />
     <ClCompile Include="Src\Character\Player\Player.cpp" />
+    <ClCompile Include="Src\Data\GameData.cpp" />
     <ClCompile Include="Src\Engine\Audio\Audio.cpp" />
     <ClCompile Include="Src\Engine\Audio\Sound.cpp" />
     <ClCompile Include="Src\Engine\Engine.cpp" />
@@ -166,7 +167,6 @@
     <ClCompile Include="Src\Object\UI\UI.cpp" />
     <ClCompile Include="Src\Scene\ClearScene.cpp" />
     <ClCompile Include="Src\Scene\Days\DayController.cpp" />
-    <ClCompile Include="Src\Scene\GameScene\GameData.cpp" />
     <ClCompile Include="Src\Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Src\Scene\MonitorScene.cpp" />
     <ClCompile Include="Src\Scene\OpeningScene.cpp" />
@@ -188,6 +188,7 @@
     <ClInclude Include="Src\Character\Enemy\Id\G_Freddy.h" />
     <ClInclude Include="Src\Character\Enemy\Id\Puppet.h" />
     <ClInclude Include="Src\Character\Player\Player.h" />
+    <ClInclude Include="Src\Data\GameData.h" />
     <ClInclude Include="Src\Engine\Audio\Audio.h" />
     <ClInclude Include="Src\Engine\Audio\Sound.h" />
     <ClInclude Include="Src\Engine\Engine.h" />
@@ -207,7 +208,6 @@
     <ClInclude Include="Src\Object\UI\UIvalue.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
     <ClInclude Include="Src\Scene\Days\DayController.h" />
-    <ClInclude Include="Src\Scene\GameScene\GameData.h" />
     <ClInclude Include="Src\Scene\GameScene\GameScene.h" />
     <ClInclude Include="Src\Scene\MonitorScene.h" />
     <ClInclude Include="Src\Scene\OpeningScene.h" />

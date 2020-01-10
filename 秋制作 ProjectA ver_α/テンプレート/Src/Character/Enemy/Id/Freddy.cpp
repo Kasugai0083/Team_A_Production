@@ -2,7 +2,7 @@
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
-#include "../../../Scene/GameScene/GameData.h"
+#include "../..//..//Data/GameData.h"
 #include "../../../Object/Object.h"
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Input.h"

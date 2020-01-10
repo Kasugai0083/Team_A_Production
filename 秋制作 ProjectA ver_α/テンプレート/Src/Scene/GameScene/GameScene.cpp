@@ -9,7 +9,7 @@
 #include "../../Character/CharacterManager.h"
 #include "../../Object/ObjectManager.h"
 #include "../../Object/ObjectID.h"
-#include "GameData.h"
+#include "../..//Data/GameData.h"
 #include "GameScene.h"
 #include "../../Object/Item/ItemValue.h"
 #include "../../Object/Object.h"

@@ -6,7 +6,7 @@
 
 #include "Object.h"
 #include "ObjectID.h"
-#include "../Scene/GameScene/GameData.h"
+#include "../Data/GameData.h"
 
 /**
 * @brief オブジェクトを管理するマネージャークラス

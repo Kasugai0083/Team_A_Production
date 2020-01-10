@@ -3,9 +3,8 @@
 #include "..//Engine/Graphics.h"
 #include "../Object/ObjectManager.h"
 #include "..//Character/CharacterManager.h"
+#include "..//Data/GameData.h"
 
-//ここで時間の進みを変更
-const int TIME_MAGNIFICATION = 100000;
 
 //staticなメンバ変数を初期化【コンストラクタではやらない】
 Timer* Timer::p_Instance = nullptr;
@@ -94,28 +93,7 @@ void Timer::Draw() {
 			DrawFont(162.f, 1014.f, ":", Large, Yellow);
 			DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Yellow);
 		}
-		else {
-			DrawFont(30.f, 1014.f, "@#", Large, Yellow);
-			DrawFont(130.f, 1014.f, "*", Large, Yellow);
-			DrawFont(162.f, 1014.f, ";", Large, Yellow);
-			DrawFont(194.f, 1014.f, "?=", Large, Yellow);
-		}
 	}
-
- 	//	if (WatchInstance->HasOnMouse() == true) {
-		//	DrawFont(30.f, 1014.f, "AM", Large, Yellow);
-		//	DrawFont(130.f, 1014.f, m_Hour.c_str(), Large, Yellow);
-		//	DrawFont(162.f, 1014.f, ":", Large, Yellow);
-		//	DrawFont(194.f, 1014.f, m_Minute.c_str(), Large, Yellow);
-		//}
-		//else {
-		//	DrawFont(30.f, 1014.f, "@#", Large, Yellow);
-		//	DrawFont(130.f, 1014.f, "*", Large, Yellow);
-		//	DrawFont(162.f, 1014.f, ";", Large, Yellow);
-		//	DrawFont(194.f, 1014.f, "?=", Large, Yellow);
-		//}
-	
-
 
 }
 

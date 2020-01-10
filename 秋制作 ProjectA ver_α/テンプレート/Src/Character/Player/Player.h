@@ -2,7 +2,7 @@
 #define PLAYER_H_
 
 #include "../Character.h"
-#include "../../Scene/GameScene/GameData.h"
+#include "../..//Data/GameData.h"
 
 class Player : public Character {
 	 

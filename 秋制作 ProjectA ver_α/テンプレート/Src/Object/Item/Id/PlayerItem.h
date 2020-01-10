@@ -10,7 +10,7 @@
 #include "../../../Engine/Calculation.h"
 #include "../../../Timer/Timer.h"
 #include "../../../Engine/Input.h"
-#include "../../../Scene/GameScene/GameData.h"
+#include "../..//..//Data/GameData.h"
 #include "../../../Character/CharacterManager.h"
 
 /**
@@ -66,6 +66,9 @@ public:
 				else {
 					m_IsDeath = true;
 				}
+			}
+			else {
+				m_IsDeath = true;
 			}
 		}
 		else {
@@ -158,6 +161,9 @@ public:
 					m_IsDeath = true;
 					m_OnMouse = false;
 				}
+			}
+			else {
+				m_IsDeath = true;
 			}
 		}
 		else {

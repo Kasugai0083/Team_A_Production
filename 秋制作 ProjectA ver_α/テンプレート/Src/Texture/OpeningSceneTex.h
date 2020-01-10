@@ -5,6 +5,7 @@ enum OpeningCategoryTextureList
 {
 	OpeningDiary1Tex,				//!< ”wŒi
 	OpeningDiary2Tex,				//!< ”wŒi
+	OpeningDiary3Tex,				//!< ”wŒi
 
 	OpeningDay1Tex,
 	OpeningDay2Tex,

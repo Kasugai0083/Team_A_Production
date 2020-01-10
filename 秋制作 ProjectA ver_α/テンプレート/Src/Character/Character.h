@@ -4,7 +4,7 @@
 // キャラクターの基礎となるクラス
 
 #include "..//Scene/Scene.h"
-#include "../Scene/GameScene/GameData.h"
+#include "../Data/GameData.h"
 
 class Character {
 public:

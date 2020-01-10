@@ -83,6 +83,7 @@ void DrawOpeningScene()
 		}
 		break;
 	case Days::DAY_2:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex));
 		break;
 	case Days::DAY_3:
 		break;
@@ -101,6 +102,7 @@ void InitOpeningScene()
 
 	LoadTexture("Res/Opening/operation_scene.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex);
 	LoadTexture("Res/Opening/operation_scene2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex);
+	LoadTexture("Res/Opening/operation_scene_day2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex);
 
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
@@ -115,10 +117,25 @@ void MainOpeningScene()
 	SceneController()->GameEnd();
 
 	OpCon.Update();
+	switch (DayManager()->GetCurrentDays()) {
+	case Days::DAY_0:
+		break;
+	case Days::DAY_1:
+		if (OpCon.GetCount() == 2) {
+			ChangeSceneStep(SceneStep::EndStep);
+		}
+		break;
+	case Days::DAY_2:
+		if (OpCon.GetCount() == 1) {
+			ChangeSceneStep(SceneStep::EndStep);
+		}
+		break;
+	case Days::DAY_3:
+		break;
 
-	if (OpCon.GetCount() == 2) {
-		ChangeSceneStep(SceneStep::EndStep);
 	}
+
+
 }
 
 SceneId FinishOpeningScene()

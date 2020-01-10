@@ -115,6 +115,7 @@ enum MonitorCategoryTextureList {
 	GameMonitorPuppetTex,
 
 	GameMonitorMapTex,
+	GameMonitorMapPlayerTex,
 
 	GameMonitorButtom1Tex,
 	GameMonitorButtom2Tex,

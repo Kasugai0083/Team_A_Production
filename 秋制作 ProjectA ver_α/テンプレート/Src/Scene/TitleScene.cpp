@@ -37,8 +37,6 @@ SceneId UpdateTitleScene()
 	return SceneId::TitleScene;
 }
 
-bool g_flag = false;
-
 void DrawTitleScene()
 {
 
@@ -47,14 +45,6 @@ void DrawTitleScene()
 	ObjManager()->Draw();
 
 	DayManager()->DrawCurrentDays();
-
-	if (g_flag == true) {
-		DrawFont(100.f,100.f, "ON",FontSize::Large,FontColor::Yellow);
-	}
-	else {
-		DrawFont(100.f, 100.f, "OFF", FontSize::Large, FontColor::Yellow);
-
-	}
 
 }
 
@@ -89,21 +79,21 @@ void MainTitleScene()
 
 	ObjManager()->Update();
 	
-	if (GetKeyDown(SPACE_KEY) == true) {
-		if (g_flag == false) {
-			g_flag = true;
-		}
-		else {
-			g_flag = false;
-		}
-	}
-
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouse(ObjID::BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
 			DayManager()->LoadDays(Days::DAY_1);
 			ChangeSceneStep(SceneStep::EndStep);
 		}
+	}
+	if (ObjManager()->HasOnMouse(ObjID::BUTTON_CONTINUE) == true) {
+
+		if (DayManager()->GetCurrentDays() != Days::DAY_0) {
+			if (OnMouseDown(Left) == true) {
+				ChangeSceneStep(SceneStep::EndStep);
+			}
+		}
+
 	}
 }
 

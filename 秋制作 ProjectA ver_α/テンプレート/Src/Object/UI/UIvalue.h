@@ -49,14 +49,15 @@ const Vec2 GAME_DESCRIPTION_UI_POS = {0.f, 0.f };
 const Size MONITOR_BUTTON_SIZE = { 32.f,32.f };
 
 //モニタールームのマップ
-const Vec2 MAP_UI_POS = {1200.f, 400.f};
+const Vec2 MAP_UI_POS = {1350.f, 400.f};
+const Vec2 MAP_PLAYER_UI_POS = {1580.f, 920.f};
 
 //モニタールームの各種ボタン座標
-const Vec2 WORKSHOP_BUTTON_POS = {1600.f, 430.f};
-const Vec2 STORE_ROOM_BUTTON_POS = {1375.f, 550.f};
-const Vec2 RECEPTION_ROOM_BUTTON_POS = {1600.f, 550.f};
-const Vec2 CHILD_ROOM_BUTTON_POS = {1825.f, 550.f};
-const Vec2 LEFT_CORRIDOR_BUTTON_POS = {1375.f, 700.f};
-const Vec2 RIGHT_CORRIDOR_BUTTON_POS = {1720.f, 700.f};
+const Vec2 WORKSHOP_BUTTON_POS = {1585.f, 445.f};
+const Vec2 STORE_ROOM_BUTTON_POS = {1415.f, 565.f};
+const Vec2 RECEPTION_ROOM_BUTTON_POS = {1585.f, 565.f};
+const Vec2 CHILD_ROOM_BUTTON_POS = {1750.f, 565.f};
+const Vec2 LEFT_CORRIDOR_BUTTON_POS = {1465.f, 800.f};
+const Vec2 RIGHT_CORRIDOR_BUTTON_POS = {1705.f, 800.f};
 
 #pragma endregion
