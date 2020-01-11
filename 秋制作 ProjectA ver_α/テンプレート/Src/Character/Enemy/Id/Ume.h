@@ -1,5 +1,5 @@
-#ifndef CHICA_H_
-#define CHICA_H_
+#ifndef UME_H_
+#define UME_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"
@@ -10,13 +10,13 @@
 /*
 	チカ(エネミー)のクラス
 */
-class Sakura : public Enemy
+class Ume : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Sakura() :
+	Ume() :
 		Enemy(RoomID::ROOM_WORK, 0)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -36,7 +36,7 @@ public:
 	/*
 		デストラクタ
 	*/
-	virtual ~Sakura(){}
+	virtual ~Ume(){}
 	/*
 		初期化
 	*/
@@ -68,7 +68,7 @@ public:
 
 
 private:
-	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数
+	const CharacterID m_CharId = CharacterID::UME;// キャラID定数
 
 };
 

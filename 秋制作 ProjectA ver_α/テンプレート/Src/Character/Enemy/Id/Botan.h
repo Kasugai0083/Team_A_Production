@@ -1,5 +1,5 @@
-#ifndef G_FREDDY_H_
-#define G_FREDDY_H_
+#ifndef BOTAN_H_
+#define BOTAN_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../../Utility/RoomID.h"

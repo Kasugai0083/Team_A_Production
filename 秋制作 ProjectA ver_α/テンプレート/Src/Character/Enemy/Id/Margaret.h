@@ -1,5 +1,5 @@
-#ifndef PUPPET_H_
-#define PUPPET_H_
+#ifndef MARGARET_H_
+#define MARGARET_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"

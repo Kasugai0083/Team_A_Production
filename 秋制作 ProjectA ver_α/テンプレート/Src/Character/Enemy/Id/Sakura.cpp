@@ -8,19 +8,20 @@
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Audio/Audio.h"
 
-void Ume::Init()
+void Sakura::Init()
 {
 	LoadTexture("Res/Game/Enemy/Sakura/sak_design_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX);
 	LoadTexture("Res/Game/Enemy/Sakura/sak_walk_gray.png",   TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_WALK_TEX);
 	LoadTexture("Res/Game/Enemy/Sakura/sak_look.png",		 TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_LOOK_TEX);
 	LoadTexture("Res/Game/Enemy/Sakura/sak_design.png",      TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_PLAYER_TEX);
+	LoadTexture("Res/Game/Enemy/Sakura/KillAnimation/sak_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_KILLANIME_TEX);
 
-	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
-	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
-	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
-void Ume::Update()
+void Sakura::Update()
 {
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
@@ -112,7 +113,7 @@ void Ume::Update()
 			static bool once = false;
 			if (!once)
 			{
-				pAudio->Play("UmeKillVoice");
+				pAudio->Play("SakuraKillVoice");
 				once = true;
 			}
 		}
@@ -131,12 +132,12 @@ void Ume::Update()
 
 }
 
-void Ume::LoadTex()
+void Sakura::LoadTex()
 {
 
 }
 
-void Ume::Draw()
+void Sakura::Draw()
 {
 	Object* pLeftCandle = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -198,10 +199,11 @@ void Ume::Draw()
 	}
 }
 
-void Ume::KillAnimation()
+void Sakura::KillAnimation()
 {
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_KILLANIME_TEX));
 	}
 }

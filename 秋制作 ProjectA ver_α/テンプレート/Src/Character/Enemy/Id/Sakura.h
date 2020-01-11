@@ -1,5 +1,5 @@
-#ifndef BONNIE_H_
-#define BONNIE_H_
+#ifndef SAKURA_H_
+#define SAKURA_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"
@@ -10,13 +10,13 @@
 /*
 	バニー(エネミー)のクラス
 */
-class Ume : public Enemy
+class Sakura : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Ume() :
+	Sakura() :
 		Enemy(RoomID::ROOM_WORK, 0)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -36,7 +36,7 @@ public:
 	/*
 		デストラクタ
 	*/
-	virtual ~Ume(){}
+	virtual ~Sakura(){}
 	/*
 		初期化
 	*/
@@ -67,7 +67,7 @@ public:
 
 
 private:
-	const CharacterID m_CharId = CharacterID::UME;// キャラID定数
+	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数
 
 };
 

@@ -2,8 +2,8 @@
 #include "Player/Player.h"
 #include "Enemy/Enemy.h"
 #include "CharacterID.h"
-#include "Enemy/Id/Ume.h"
 #include "Enemy/Id/Sakura.h"
+#include "Enemy/Id/Ume.h"
 #include "Enemy/Id/Oran.h"
 #include "Enemy/Id/Ohagi.h"
 #include "Enemy/Id/Botan.h"
@@ -15,8 +15,8 @@ CharacterManager::CharacterManager() {
 	m_Charas[PLAYER]	= new Player;
 
 	m_Charas[OHAGI]     = new Ohagi;
+	m_Charas[SAKURA]	= new Sakura;
 	m_Charas[UME]		= new Ume;
-	m_Charas[SAKURA]    = new Sakura;
 	m_Charas[RAN]	    = new Ran;
 	m_Charas[BOTAN]		= new Botan;
 	m_Charas[MARGARET]  = new Margaret;

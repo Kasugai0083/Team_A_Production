@@ -1,5 +1,5 @@
-#ifndef FREDDY_H_
-#define FREDDY_H_
+#ifndef OHAGI_H_
+#define OHAGI_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"

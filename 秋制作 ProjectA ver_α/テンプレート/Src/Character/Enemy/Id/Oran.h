@@ -1,5 +1,5 @@
-#ifndef FOXY_H_
-#define FOXY_H_
+#ifndef ORAN_H_
+#define ORAN_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"

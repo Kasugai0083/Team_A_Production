@@ -17,8 +17,8 @@ enum class SubGameScene {
 * DAYÇ…ÇÊÇ¡Çƒí≤êÆ
 */
 const float SPOWN_JUDGE_OHAGI = 1.0f;
-const float SPOWN_JUDGE_SAKURA = 1.0f;
-const float SPOWN_JUDGE_UME = 1.0f;
+const float SPOWN_JUDGE_Ume = 1.0f;
+const float SPOWN_JUDGE_Sakura = 1.0f;
 const float SPOWN_JUDGE_RAN = 1.0f;
 const float SPOWN_JUDGE_BOTAN = 1.0f;
 
@@ -27,8 +27,8 @@ const float SPOWN_JUDGE_BOTAN = 1.0f;
 * ÉvÉâÉìÉiÅ[Ç™í≤êÆÇ∑ÇÈçÄñ⁄
 */
 const int MOVEMENT_SPEED_OHAGI = 300;
-const int MOVEMENT_SPEED_SAKURA = 300;
-const int MOVEMENT_SPEED_UME = 300;
+const int MOVEMENT_SPEED_Ume = 300;
+const int MOVEMENT_SPEED_Sakura = 300;
 const int MOVEMENT_SPEED_RAN = 300;
 const int MOVEMENT_SPEED_BOTAN = 0;
 

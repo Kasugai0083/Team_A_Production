@@ -115,7 +115,7 @@ void Ohagi::LoadTex()
 	LoadTexture("Res/Game/Enemy/Ohagi/Freddy.png",	   TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX);
 	LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_FAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ohagi/Freddy_Near.png",TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_NEAR_TEX);
-	LoadTexture("Res/Game/Enemy/Ohagi/FreddyAAA.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_RTEX);
+	LoadTexture("Res/Game/Enemy/Ohagi/FreddyAAA.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_TEX);
 
 	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Ohagi/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
@@ -170,7 +170,7 @@ void Ohagi::Draw()
 		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(650.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_RTEX));
+			DrawTexture(650.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_TEX));
 		}
 		break;
 

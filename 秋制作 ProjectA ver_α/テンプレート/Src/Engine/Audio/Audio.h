@@ -25,7 +25,7 @@ public:
 	/*
 		Ä¶ˆ—
 	*/
-	void Play(std::string alias_, int volume = -1000, bool is_loop = false);
+	void Play(std::string alias_, int volSakura = -1000, bool is_loop = false);
 
 	/*
 		’â~
@@ -35,7 +35,7 @@ public:
 	/*
 		ƒ{ƒŠƒ…[ƒ€İ’è
 	*/
-	void SetVolume(std::string alias_, int volume_);
+	void SetVolSakura(std::string alias_, int volSakura_);
 
 	// ‰ğ•úˆ—
 	void Release(std::string alias_);

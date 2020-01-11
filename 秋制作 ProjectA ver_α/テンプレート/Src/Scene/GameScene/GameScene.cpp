@@ -308,8 +308,8 @@ void InitGameScene()
 	pAudio->Load("RousokuSE", "Sound/RousokuSE.wav");
 	pAudio->Load("MaskSE", "Sound/MaskSE.wav");
 	pAudio->Load("OhagiKillVoice", "Sound/OhagiKillVoice.wav");
-	pAudio->Load("UmeKillVoice", "Sound/UmeKillVoice.wav");
 	pAudio->Load("SakuraKillVoice", "Sound/SakuraKillVoice.wav");
+	pAudio->Load("UmeKillVoice", "Sound/UmeKillVoice.wav");
 	pAudio->Load("OranKillVoice", "Sound/OranKillVoice.wav");
 	pAudio->Load("BotanKillVoice", "Sound/BotanKillVoice.wav");
 	pAudio->Load("PuppetKillVoice", "Sound/PuppetKillVoice.wav");
