@@ -3,6 +3,9 @@
 
 #include "Days/DayController.h"
 #include "../Utility/SingletonTemplate.h"
+#include "../Character/CharacterID.h"
+
+class CSV;
 
 enum class SubGameScene {
 	CENTER_VIEW,			//プレイヤールーム中央
@@ -96,17 +99,19 @@ public:
 	void SendGameParam(GameParam* gameparam_) { *gameparam_ = m_GameParam; }
 
 	// データを受け取る関数(GameData を Accesor にする場合)
-	void ReceiveData(EnemyData edata_, CharacterID charid_) { m_EData[charid_] = edata_; }
-	void ReceiveParam(GameParam param_) { m_GameParam = param_; }
+	void SetEnemyData(EnemyData edata_, CharacterID charid_) { m_EData[charid_] = edata_; }
+	void SetGameParam(GameParam param_) { m_GameParam = param_; }
 
 	// 値を読み込むメソッド
 	void LoadDay(Days day_);
 
 	void LoadParam(GameParam param_);
 
+
 private:
 	EnemyData m_EData[6];
 	GameParam m_GameParam;
+	Days m_Days;
 private:
 	friend Singleton<GameData>;
 
