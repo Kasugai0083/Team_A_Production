@@ -85,3 +85,10 @@ bool FileReader::LoadCSV(EnemyData* enemyData_, GameParam* gameParam_, Days* day
 
 	return true;
 }
+
+void FileReader::WriteCSV(std::string fileName_, int days_)
+{
+	std::ofstream Ofs(fileName_);
+
+	Ofs << days_ << std::endl;
+}

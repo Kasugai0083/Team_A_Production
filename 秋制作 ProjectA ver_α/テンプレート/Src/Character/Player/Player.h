@@ -19,6 +19,8 @@ public:
 		TmpRoom = SubGameScene::CENTER_VIEW;
 		TmpMonitor = SubGameScene::WORKSHOP_VIEW;
 
+		m_IsMask = false;
+		m_MaskAnimation = -540.f;
 	}
 	/*
 		デストラクタ
@@ -34,6 +36,8 @@ public:
 	bool HasMask() const override{
 		return m_IsMask;
 	}
+
+	void LoadTex() override;
 
 	bool HasMonitor() const override {
 		return m_HasMonitor;

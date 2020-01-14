@@ -94,3 +94,21 @@ bool CharacterManager::RefKill() {
 	return false;
 }
 
+void CharacterManager::CreateCharacter()
+{
+	for (int i = 0; i < MAX_CHARACTER; i++) {
+		if (m_Charas[i] != nullptr) {
+			return;
+		}
+	}
+
+	m_Charas[PLAYER]   = new Player;
+
+	m_Charas[OHAGI]    = new Ohagi;
+	m_Charas[SAKURA]   = new Sakura;
+	m_Charas[UME]      = new Ume;
+	m_Charas[RAN]      = new Ran;
+	m_Charas[BOTAN]    = new Botan;
+	m_Charas[MARGARET] = new Margaret;
+}
+

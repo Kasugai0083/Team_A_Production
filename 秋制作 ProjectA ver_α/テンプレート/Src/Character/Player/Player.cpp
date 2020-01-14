@@ -8,9 +8,6 @@
 
 void Player::Init()
 {
-	m_IsMask = false;
-	m_MaskAnimation = -540.f;
-	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex);
 }
 
 // T1 => ‚Ç‚Ìƒ{ƒ^ƒ“‚ğG‚ê‚½‚©
@@ -163,6 +160,11 @@ void Player::Update()
 
 void Player::Draw() {
 	OnMask();
+}
+
+void Player::LoadTex()
+{
+	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex);
 }
 
 const bool Player::CurrentViewID(const SubGameScene sceneId_) const

@@ -17,7 +17,7 @@ public:
 		コンストラクタ
 	*/
 	Sakura() :
-		Enemy(RoomID::ROOM_WORK, 0)
+		Enemy(RoomID::ROOM_WORK, EnemyID::SAKURA)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {

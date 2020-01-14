@@ -20,7 +20,7 @@ public:
 		コンストラクタ
 	*/
 	Margaret() :
-		Enemy(RoomID::ROOM_CHILDREN, 3600)
+		Enemy(RoomID::ROOM_CHILDREN, EnemyID::MARGARET)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
@@ -28,6 +28,7 @@ public:
 			return;
 		}
 
+		m_iFrameCount = 3600;
 		m_AnimationTex.m_Counter = 0;
 		m_AnimationTex.m_Length = 3;
 		m_AnimationTex.m_Speed = 15;

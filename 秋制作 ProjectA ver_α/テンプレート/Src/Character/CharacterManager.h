@@ -40,6 +40,14 @@ public:
 	void Draw();
 
 	/*
+		m_Charas変数をdeleteする関数
+		ClearSceneで一度だけ行う
+
+		またはゲームが終了したときに行われる
+	*/
+	void Release();
+
+	/*
 		テクスチャの読み込み関数
 	*/
 	void LoadTex();
@@ -49,11 +57,14 @@ public:
 	*/
 	void KillAnimation();
 
-
+	/*
+		エネミーがプレイヤーを殺したかどうかを返す関数
+	*/
 	bool RefKill();
 
+	void CreateCharacter();
+
 private:
-	void Release();
 
 	Character* m_Charas[8];
 };

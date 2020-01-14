@@ -14,6 +14,7 @@ void Margaret::Init()
 
 void Margaret::Update()
 {
+	EnemyTimer EnemuTimer(10);
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
 	static bool CountFrag = false;

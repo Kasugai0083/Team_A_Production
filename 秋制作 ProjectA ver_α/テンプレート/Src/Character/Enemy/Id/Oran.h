@@ -18,7 +18,7 @@ public:
 		コンストラクタ
 	*/
 	Ran() :
-		Enemy(RoomID::ROOM_STORAGE, 0)
+		Enemy(RoomID::ROOM_STORAGE, EnemyID::OHAGI)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
