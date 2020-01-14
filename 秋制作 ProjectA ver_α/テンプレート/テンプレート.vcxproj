@@ -175,6 +175,7 @@
     <ClCompile Include="Src\Texture\Texture.cpp" />
     <ClCompile Include="Src\Timer\Timer.cpp" />
     <ClCompile Include="Src\Utility\Common.cpp" />
+    <ClCompile Include="Src\Utility\FileReader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Character\Character.h" />
@@ -222,6 +223,7 @@
     <ClInclude Include="Src\Texture\TitleSceneTex.h" />
     <ClInclude Include="Src\Timer\Timer.h" />
     <ClInclude Include="Src\Utility\Common.h" />
+    <ClInclude Include="Src\Utility\FileReader.h" />
     <ClInclude Include="Src\Utility\RoomID.h" />
     <ClInclude Include="Src\Utility\SingletonTemplate.h" />
     <ClInclude Include="Src\Utility\Size.h" />

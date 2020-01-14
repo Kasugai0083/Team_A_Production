@@ -95,11 +95,11 @@ const int MOVEMENT_SPEED_BOTAN = 0;
 const float MELT_RATIO = 0.001f; 
 
 //! Ç±Ç±Ç≈éûä‘ÇÃêiÇ›ÇïœçX
-const int TIME_MAGNIFICATION = 1;
+const int TIME_MAGNIFICATION = 60000000;
 
 struct EnemyData {
-	float m_SpownJudge;
-	float m_MovementSpeed;
+	int m_SpownJudge;
+	int m_MovementSpeed;
 };
 
 struct GameParam {
@@ -123,6 +123,7 @@ public:
 
 	void LoadParam(GameParam param_);
 
+	void LoadGameData();
 
 private:
 	EnemyData m_EData[6];

@@ -11,6 +11,7 @@
 #include "../Object/ObjectID.h"
 #include "../Engine/Audio/Audio.h"
 #include "../Data/Days/DayController.h"
+#include "../Data/GameData.h"
 
 // タイトルシーンの初期化
 void InitTitleScene();
@@ -52,6 +53,8 @@ void DrawTitleScene()
 
 void InitTitleScene()
 {
+	GameData::GetInstance()->LoadGameData();
+
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::CLEAR);
 
@@ -60,7 +63,6 @@ void InitTitleScene()
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
 	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
-
 
 	// オーディオ
 	auto audio = AudioPlayer::GetInstance(GetWindowHandle());
