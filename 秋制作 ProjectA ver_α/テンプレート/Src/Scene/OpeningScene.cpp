@@ -8,7 +8,7 @@
 #include "../Character/CharacterManager.h"
 #include "../Character/CharacterID.h"
 #include "../Engine/Audio/Audio.h"
-#include "Days/DayController.h"
+#include "../Data/Days/DayController.h"
 
 class OpController {
 public:
@@ -86,6 +86,7 @@ void DrawOpeningScene()
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex));
 		break;
 	case Days::DAY_3:
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary4Tex));
 		break;
 	default:
 		break;
@@ -103,6 +104,7 @@ void InitOpeningScene()
 	LoadTexture("Res/Opening/operation_scene.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex);
 	LoadTexture("Res/Opening/operation_scene2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex);
 	LoadTexture("Res/Opening/operation_scene_day2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex);
+	LoadTexture("Res/Opening/operation_scene_day3.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary4Tex);
 
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
@@ -131,6 +133,9 @@ void MainOpeningScene()
 		}
 		break;
 	case Days::DAY_3:
+		if (OpCon.GetCount() == 1) {
+			ChangeSceneStep(SceneStep::EndStep);
+		}
 		break;
 
 	}

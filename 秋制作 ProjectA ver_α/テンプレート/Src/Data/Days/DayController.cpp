@@ -1,6 +1,14 @@
 #include "DayController.h"
 #include "..//..//Engine/Graphics.h"
 #include <string>
+#include "../../Character/CharacterManager.h"
+
+
+DayController::DayController() {
+	m_Days = Days::DAY_1;
+	m_pPlayer = g_Manager.GetCharacter(PLAYER);
+};
+
 
 DayController* DayManager() {
 	static DayController Days;
@@ -35,7 +43,6 @@ void DayController::CheckClear() {
 			m_Days = Days::DAY_3;
 			break;
 		case Days::DAY_3:
-			m_Days = Days::ENDING;
 			break;
 		default:
 			break;

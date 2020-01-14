@@ -7,7 +7,7 @@
 #include "../Character/Player/Player.h"
 #include "../Character/CharacterManager.h"
 #include "../Character/CharacterID.h"
-#include "../Scene/Days/DayController.h"
+#include "../Data/Days/DayController.h"
 #include "../Engine/Audio/Audio.h"
 
 // ゲームオーバーシーンの初期化

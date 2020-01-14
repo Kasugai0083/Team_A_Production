@@ -4,8 +4,15 @@ enum TitleCategoryTextureList
 {
 	TitleBgTex,				//!< ”wŒi
 	TitleLogoTex,
+
 	TitleNewGameUITex,
+	TitleNewGameOnHitUITex,
+
 	TitleContinueUITex,
+	TitleContinueOnHitUITex,
+
+	TitleDaysUITex,
+	TitleDaysOnHitUITex,
 
 	TitleFreeTex,
 

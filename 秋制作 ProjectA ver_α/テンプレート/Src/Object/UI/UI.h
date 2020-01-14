@@ -24,6 +24,12 @@ public:
 	UI(ObjID id_) {
 		m_Id = id_;
 		m_HasMask = false;
+
+		m_Tex = nullptr;
+		m_Tex2 = nullptr;
+		m_OnHitTex = nullptr;
+		m_OnHitTex2 = nullptr;
+
 	};
 
 	/**
@@ -74,9 +80,16 @@ private:
 	*/
 	void UpdateGameUI();
 
+	/**
+	* @fn void UpdateTitleUI()
+	* @brief TitleScene で使われている UI の更新処理
+	*/
+	void UpdateTitleUI();
+
 private:
 	//! テクスチャの情報を格納
-	Texture* m_Tex;		
+	Texture* m_Tex, *m_OnHitTex;
+	Texture* m_Tex2, *m_OnHitTex2;
 	//! マスク着脱情報
 	bool m_HasMask;	
 	//! マウスが重なったとき true

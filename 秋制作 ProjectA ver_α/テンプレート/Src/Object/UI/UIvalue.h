@@ -21,6 +21,12 @@ const Size NEWGAME_UI_SIZE = { 256.f, 512.f };
 const Vec2 CONTINUE_UI_POS = { 200.f, 284.f };
 const Size CONTINUE_UI_SIZE = { 256.f, 512.f };
 
+//コンテニューUIの値
+const Vec2 DAYS_UI_POS = { 200.f, 220.f };
+const Size DAYS_UI_SIZE = { 256.f, 64.f };
+
+
+
 #pragma endregion
 
 #pragma region ゲームシーンのUI

@@ -80,7 +80,6 @@ void DrawGameScene()
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 	Timer* pTimerInstance = Timer::GetInstance();
-
 	
 	switch (pPlayer->CurrentViewID()) {
 	case SubGameScene::CENTER_VIEW:

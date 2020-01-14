@@ -148,6 +148,7 @@
     <ClCompile Include="Src\Character\Enemy\Id\G_Freddy.cpp" />
     <ClCompile Include="Src\Character\Enemy\Id\Puppet.cpp" />
     <ClCompile Include="Src\Character\Player\Player.cpp" />
+    <ClCompile Include="Src\Data\Days\DayController.cpp" />
     <ClCompile Include="Src\Data\GameData.cpp" />
     <ClCompile Include="Src\Engine\Audio\Audio.cpp" />
     <ClCompile Include="Src\Engine\Audio\Sound.cpp" />
@@ -166,7 +167,6 @@
     <ClCompile Include="Src\Object\ObjectManager.cpp" />
     <ClCompile Include="Src\Object\UI\UI.cpp" />
     <ClCompile Include="Src\Scene\ClearScene.cpp" />
-    <ClCompile Include="Src\Scene\Days\DayController.cpp" />
     <ClCompile Include="Src\Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Src\Scene\MonitorScene.cpp" />
     <ClCompile Include="Src\Scene\OpeningScene.cpp" />
@@ -188,6 +188,8 @@
     <ClInclude Include="Src\Character\Enemy\Id\G_Freddy.h" />
     <ClInclude Include="Src\Character\Enemy\Id\Puppet.h" />
     <ClInclude Include="Src\Character\Player\Player.h" />
+    <ClInclude Include="Src\Data\Accesor.h" />
+    <ClInclude Include="Src\Data\Days\DayController.h" />
     <ClInclude Include="Src\Data\GameData.h" />
     <ClInclude Include="Src\Engine\Audio\Audio.h" />
     <ClInclude Include="Src\Engine\Audio\Sound.h" />
@@ -207,7 +209,6 @@
     <ClInclude Include="Src\Object\UI\UI.h" />
     <ClInclude Include="Src\Object\UI\UIvalue.h" />
     <ClInclude Include="Src\Scene\ClearScene.h" />
-    <ClInclude Include="Src\Scene\Days\DayController.h" />
     <ClInclude Include="Src\Scene\GameScene\GameScene.h" />
     <ClInclude Include="Src\Scene\MonitorScene.h" />
     <ClInclude Include="Src\Scene\OpeningScene.h" />
@@ -222,6 +223,7 @@
     <ClInclude Include="Src\Timer\Timer.h" />
     <ClInclude Include="Src\Utility\Common.h" />
     <ClInclude Include="Src\Utility\RoomID.h" />
+    <ClInclude Include="Src\Utility\SingletonTemplate.h" />
     <ClInclude Include="Src\Utility\Size.h" />
     <ClInclude Include="Src\Utility\Vec.h" />
   </ItemGroup>

@@ -10,7 +10,7 @@
 #include "../Object/ObjectManager.h"
 #include "../Object/ObjectID.h"
 #include "../Engine/Audio/Audio.h"
-#include "../Scene/Days/DayController.h"
+#include "../Data/Days/DayController.h"
 
 // タイトルシーンの初期化
 void InitTitleScene();
@@ -90,6 +90,12 @@ void MainTitleScene()
 
 		if (DayManager()->GetCurrentDays() != Days::DAY_0) {
 			if (OnMouseDown(Left) == true) {
+				ChangeSceneStep(SceneStep::EndStep);
+			}
+		}
+		if (DayManager()->GetCurrentDays() == Days::DAY_0) {
+			if (OnMouseDown(Left) == true) {
+				DayManager()->LoadDays(Days::DAY_3);
 				ChangeSceneStep(SceneStep::EndStep);
 			}
 		}

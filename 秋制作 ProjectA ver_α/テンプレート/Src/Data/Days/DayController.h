@@ -1,7 +1,7 @@
 #ifndef  DAY_CONTROLLER_H_
 #define  DAY_CONTROLLER_H_
 
-#include "../../Character/CharacterManager.h"
+class Character;
 
 enum class Days {
 	DAY_0,
@@ -9,17 +9,13 @@ enum class Days {
 	DAY_2,
 	DAY_3,
 
-	ENDING
 };
 
 // なんとなく作ったＤＡＹ管理クラス
 class DayController {
 public:
 	//仮にコンストラクタで初期化
-	DayController() { 
-		m_Days = Days::DAY_0;
-		m_pPlayer = g_Manager.GetCharacter(PLAYER);
-	};
+	DayController();
 	~DayController() {};
 
 	void LoadDays(Days savedata_ = Days::DAY_0) { m_Days = savedata_; };

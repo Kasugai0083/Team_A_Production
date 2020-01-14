@@ -5,6 +5,7 @@
 #include "../../Engine/Graphics.h"
 #include "../ObjectManager.h"
 #include "..//..//Character/CharacterManager.h"
+#include "../../Data/Days/DayController.h"
 
 Object* g_pTitleLogo;
 
@@ -24,13 +25,39 @@ void UI::Init(){
 		m_Pos = NEWGAME_UI_POS;
 		m_Size = NEWGAME_UI_SIZE;
 		LoadTexture("Res/Title/TitleMenuStart.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleNewGameUITex);
+		LoadTexture("Res/Title/titlemenu_start_effect.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleNewGameOnHitUITex);
 		m_Tex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleNewGameUITex);
+		m_OnHitTex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleNewGameOnHitUITex);
 		break;
 	case ObjID::BUTTON_CONTINUE:
 		m_Pos = CONTINUE_UI_POS;
 		m_Size = CONTINUE_UI_SIZE;
+
 		LoadTexture("Res/Title/TitleMenuHelp.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);
+		LoadTexture("Res/Title/titlemenu_help_effect.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueOnHitUITex);
+
 		m_Tex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueUITex);		
+		m_OnHitTex = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleContinueOnHitUITex);
+
+		if (DayManager()->GetCurrentDays() == Days::DAY_1) {
+			// ˆê“ú–Ú‚Ì‰æ‘œ
+			LoadTexture("Res/Title/itiyame_UI.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysUITex);
+			LoadTexture("Res/Title/itiyame_effect.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysOnHitUITex);
+		}
+		else if (DayManager()->GetCurrentDays() == Days::DAY_2) {
+			// “ñ“ú–Ú‚Ì‰æ‘œ
+			LoadTexture("Res/Title/niyame_UI.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysUITex);
+			LoadTexture("Res/Title/niyame_effect.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysOnHitUITex);
+		}
+		else if (DayManager()->GetCurrentDays() == Days::DAY_3) {
+			// ŽO“ú–Ú‚Ì‰æ‘œ
+			LoadTexture("Res/Title/sannyame_UI.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysUITex);
+			LoadTexture("Res/Title/sannyame_effect.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysOnHitUITex);
+		}
+
+		m_Tex2 = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysUITex);
+		m_OnHitTex2 = GetTexture(TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleDaysOnHitUITex);
+
 		break;	
 	case ObjID::GAME_BASE_UI:
 		m_Pos = GAME_BASE_UI_POS;
@@ -153,21 +180,32 @@ void UI::Init(){
 void UI::Draw(){
 
 	if (m_IsDeath == false) {
+
+		switch (m_Id)
+		{
+		case ObjID::BUTTON_NEW_GAME:
+			if (m_OnMouse == true) {
+				DrawTexture(m_Pos.X, m_Pos.Y, m_OnHitTex);
+			}
+			break;
+		case ObjID::BUTTON_CONTINUE:
+			if (m_OnMouse == true) {
+				DrawTexture(m_Pos.X, m_Pos.Y, m_OnHitTex);
+				DrawTexture(DAYS_UI_POS.X, DAYS_UI_POS.Y, m_OnHitTex2);
+			}
+
+			DrawTexture(DAYS_UI_POS.X, DAYS_UI_POS.Y, m_Tex2);
+
+			break;
+		default:
+			break;
+		}
+
 		DrawTexture(m_Pos.X, m_Pos.Y, m_Tex);
 
 		Lib::Texture polygon("hoge");
 
 		switch (m_Id) {
-		case ObjID::BUTTON_NEW_GAME:
-			if (m_OnMouse == true) {
-				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
-			}
-			break;
-		case ObjID::BUTTON_CONTINUE:
-			if (m_OnMouse == true) {
-				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
-			}
-			break;
 		case ObjID::MO_MASK_UI:
 			if (m_OnMouse == true) {
 				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
@@ -332,6 +370,8 @@ void UI::Update() {
 		}
 	}
 }
+
+
 
 void UI::UpdateGameUI() {
 
