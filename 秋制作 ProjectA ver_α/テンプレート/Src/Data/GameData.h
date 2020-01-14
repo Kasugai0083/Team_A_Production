@@ -23,6 +23,7 @@ enum class SubGameScene {
 * エネミーのスポーンする頻度\n
 * DAYによって調整
 */
+
 const float D1_SPOWN_JUDGE_OHAGI = 1.0f;
 const float D1_SPOWN_JUDGE_SAKURA = 1.0f;
 const float D1_SPOWN_JUDGE_UME = 1.0f;
@@ -47,10 +48,18 @@ const float ED_SPOWN_JUDGE_UME = 1.0f;
 const float ED_SPOWN_JUDGE_RAN = 1.0f;
 const float ED_SPOWN_JUDGE_BOTAN = 1.0f;
 
+const float SPOWN_JUDGE_OHAGI = 1.0f;
+const float SPOWN_JUDGE_Ume = 1.0f;
+const float SPOWN_JUDGE_Sakura = 1.0f;
+const float SPOWN_JUDGE_RAN = 1.0f;
+const float SPOWN_JUDGE_BOTAN = 1.0f;
+
+
 /**
 * エネミーの移動速度\n
 * プランナーが調整する項目
 */
+
 const int D1_MOVEMENT_SPEED_OHAGI = 300;
 const int D1_MOVEMENT_SPEED_SAKURA = 300;
 const int D1_MOVEMENT_SPEED_UME = 300;
@@ -74,6 +83,13 @@ const int ED_MOVEMENT_SPEED_SAKURA = 300;
 const int ED_MOVEMENT_SPEED_UME = 300;
 const int ED_MOVEMENT_SPEED_RAN = 300;
 const int ED_MOVEMENT_SPEED_BOTAN = 0;
+
+const int MOVEMENT_SPEED_OHAGI = 300;
+const int MOVEMENT_SPEED_Ume = 300;
+const int MOVEMENT_SPEED_Sakura = 300;
+const int MOVEMENT_SPEED_RAN = 300;
+const int MOVEMENT_SPEED_BOTAN = 0;
+
 
 //! 蝋燭が溶ける速度
 const float MELT_RATIO = 0.001f; 

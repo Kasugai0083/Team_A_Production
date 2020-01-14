@@ -1,4 +1,4 @@
-#include "Foxy.h"
+#include "Oran.h"
 #include "../../CharacterManager.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
@@ -9,9 +9,6 @@
 
 void Ran::Init()
 {
-	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
-	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
-	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Ran::Update()
@@ -116,22 +113,16 @@ void Ran::Update()
 	}
 }
 
-void Ran::LoadTex(SceneId id_)
+void Ran::LoadTex()
 {
-	switch (id_)
-	{
-	case GameScene:
-		LoadTexture("Res/Game/Enemy/Ran/Ran.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex);
-		LoadTexture("Res/Game/Enemy/Ran/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
-		LoadTexture("Res/Game/Enemy/Ran/Ran_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex);
-		break;
+	LoadTexture("Res/Game/Enemy/Ran/Ran.png",      TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX);
+	LoadTexture("Res/Game/Enemy/Ran/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX);
+	LoadTexture("Res/Game/Enemy/Ran/Ran_Far.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX);
+	LoadTexture("Res/Game/Enemy/Ran/KillAnimation/ran_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_KILLANIME_TEX);
 
-	case MonitorScene:
-		LoadTexture("Res/Game/Enemy/Ran/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex);
-		break;
-	default:
-		break;
-	}
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Ran::Draw()
@@ -140,10 +131,9 @@ void Ran::Draw()
 
 	if (m_IsActive == false)
 	{
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::STORE_ROOM_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::STORE_ROOM_VIEW)) {
 
-			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
+			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
 		}
 
 		return;
@@ -155,30 +145,27 @@ void Ran::Draw()
 	{
 	case RoomID::ROOM_STORAGE:
 
-		if (GetCurrentSceneId() == SceneId::MonitorScene
-			&& pPlayer->CurrentViewID() == SubGameScene::STORE_ROOM_VIEW) {
+		if (pPlayer->CurrentViewID(SubGameScene::STORE_ROOM_VIEW)) {
 
-			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanNearTex));
+			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
 		}
 		break;
 
 	case RoomID::HALL_BACK:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene
+		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(650.0f, 340.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanFarTex));
+			DrawTexture(650.0f, 340.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX));
 		}
 		break;
 
 	case RoomID::HALL_FRONT:
 
-		if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
-			&& GetCurrentSceneId() == SceneId::GameScene
+		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 				&& pCenterCandle->HasCaLight() == true) {
 				
-			DrawTexture(880.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::RanTex));
+			DrawTexture(880.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
 		}
 		break;
 	default:
@@ -191,5 +178,6 @@ void Ran::KillAnimation()
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_KILLANIME_TEX));
 	}
 }

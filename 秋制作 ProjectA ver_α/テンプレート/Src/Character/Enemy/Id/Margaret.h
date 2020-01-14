@@ -1,23 +1,26 @@
-#ifndef CHICA_H_
-#define CHICA_H_
+#ifndef MARGARET_H_
+#define MARGARET_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
+#include "../../../Engine/Graphics.h"
+#include "../../../Texture/EnemyTex.h"
+
 
 /*
-	チカ(エネミー)のクラス
-*/
-class Sakura : public Enemy
+	パペット(エネミー)のクラス
+*/	
+class Margaret : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Sakura() :
-		Enemy(RoomID::ROOM_WORK, 0)
+	Margaret() :
+		Enemy(RoomID::ROOM_CHILDREN, 3600)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
@@ -34,9 +37,10 @@ public:
 		}
 	}
 	/*
-		デストラクタ
+		デストラクター
 	*/
-	virtual ~Sakura(){}
+	virtual ~Margaret(){}
+
 	/*
 		初期化
 	*/
@@ -55,7 +59,7 @@ public:
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	virtual void LoadTex(SceneId id_) override;
+	virtual void LoadTex() override;
 	/*
 		描画
 	*/
@@ -66,10 +70,11 @@ public:
 	*/
 	virtual void KillAnimation() override;
 
-
 private:
-	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数
+	const CharacterID m_CharId = CharacterID::MARGARET;// キャラID定数
+	const int MAX_COUNT = 3600;
 
+	int m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_9;
 };
 
 #endif

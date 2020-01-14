@@ -1,5 +1,5 @@
-#ifndef FREDDY_H_
-#define FREDDY_H_
+#ifndef SAKURA_H_
+#define SAKURA_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"
@@ -8,15 +8,15 @@
 #include "../../CharacterManager.h"
 
 /*
-	フレディ(エネミー)のクラス
+	バニー(エネミー)のクラス
 */
-class Ohagi : public Enemy
+class Sakura : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Ohagi() :
+	Sakura() :
 		Enemy(RoomID::ROOM_WORK, 0)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
@@ -26,8 +26,8 @@ public:
 		}
 
 		m_AnimationTex.m_Counter = 0;
-		m_AnimationTex.m_Length  = 3;
-		m_AnimationTex.m_Speed   = 15;
+		m_AnimationTex.m_Length = 3;
+		m_AnimationTex.m_Speed = 15;
 
 		for (int i = 0; i < m_AnimationTex.m_Length; i++) {
 			m_AnimationTex.m_TextureData[i] = new Texture();
@@ -36,7 +36,7 @@ public:
 	/*
 		デストラクタ
 	*/
-	virtual ~Ohagi(){}
+	virtual ~Sakura(){}
 	/*
 		初期化
 	*/
@@ -49,13 +49,12 @@ public:
 	/*
 		m_IsKillを返す
 	*/
-	virtual bool HasKill()const override { return m_HasKill; }
-
+	virtual bool HasKill()const final { return m_HasKill; }
 	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	virtual void LoadTex(SceneId id_) override;
+	virtual void LoadTex() override;
 	/*
 		描画
 	*/
@@ -68,7 +67,8 @@ public:
 
 
 private:
-	const CharacterID m_CharId = CharacterID::OHAGI;// キャラID定数
+	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数
+
 };
 
 #endif

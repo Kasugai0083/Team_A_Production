@@ -9,7 +9,7 @@ bool AudioPlayer::Load(std::string alias_, std::string file_name_)
 	return false;
 }
 
-void AudioPlayer::Play(std::string alias_, int volume_, bool is_loop_)
+void AudioPlayer::Play(std::string alias_, int volSakura_, bool is_loop_)
 {
 	IDirectSoundBuffer8* psound = Find(alias_);
 	// サウンドデータがなかった場合
@@ -18,11 +18,11 @@ void AudioPlayer::Play(std::string alias_, int volume_, bool is_loop_)
 	}
 
 	if (is_loop_) {
-		psound->SetVolume(volume_);
+		psound->SetVolume(volSakura_);
 		psound->Play(0, 0, DSBPLAY_LOOPING);
 	}
 	else {
-		psound->SetVolume(volume_);
+		psound->SetVolume(volSakura_);
 		psound->Play(0, 0, 0);
 		psound->SetCurrentPosition(0);
 	}
@@ -38,14 +38,14 @@ void AudioPlayer::Stop(std::string alias_)
 	psound->Stop();
 }
 
-void AudioPlayer::SetVolume(std::string alias_, int volume_)
+void AudioPlayer::SetVolSakura(std::string alias_, int volSakura_)
 {
 	IDirectSoundBuffer8* psound = Find(alias_);
 	// サウンドデータがなかった場合
 	if (psound == nullptr) {
 		return;
 	}
-	psound->SetVolume(volume_);
+	psound->SetVolume(volSakura_);
 }
 
 void AudioPlayer::Release(std::string alias_)

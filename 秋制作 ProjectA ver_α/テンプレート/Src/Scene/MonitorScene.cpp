@@ -102,7 +102,7 @@ void InitMonitorScene()
 
 	ObjManager()->Init();
 
-	g_Manager.LoadTex(GetCurrentSceneId());
+	//g_Manager.LoadTex();
 
 	ChangeSceneStep(SceneStep::MainStep);
 }

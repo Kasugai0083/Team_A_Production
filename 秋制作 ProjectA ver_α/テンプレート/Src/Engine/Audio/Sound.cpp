@@ -15,8 +15,8 @@ DirectSound::DirectSound(HWND hwnd)
 	desc.dwSize = sizeof(DSBUFFERDESC);
 	// バッファーオブジェクトの能力の指定するフラグ(複数指定可能)
 	// 今回は( DSBCAPS_PRIMARYBUFFER = このバッファがプライマリバッファ
-	//		   DSBCAPS_CTRLVOLUME    = このバッファにはボリューム制御機能がある
-	desc.dwFlags = DSBCAPS_PRIMARYBUFFER | DSBCAPS_CTRLVOLUME;
+	//		   DSBCAPS_CTRLVOLSakura    = このバッファにはボリューム制御機能がある
+	desc.dwFlags = DSBCAPS_PRIMARYBUFFER |  DSBCAPS_CTRLVOLUME;
 	// 新しいバッファサイズの指定
 	// 今回はdwFlagsでDSBCAPS_PRIMARYBUFFERを指定しているため「0」にする
 	desc.dwBufferBytes = 0;

@@ -2,12 +2,12 @@
 #include "Player/Player.h"
 #include "Enemy/Enemy.h"
 #include "CharacterID.h"
-#include "Enemy/Id/Bonnie.h"
-#include "Enemy/Id/Chica.h"
-#include "Enemy/Id/Foxy.h"
-#include "Enemy/Id/Freddy.h"
-#include "Enemy/Id/G_Freddy.h"
-#include "Enemy/Id/Puppet.h"
+#include "Enemy/Id/Sakura.h"
+#include "Enemy/Id/Ume.h"
+#include "Enemy/Id/Oran.h"
+#include "Enemy/Id/Ohagi.h"
+#include "Enemy/Id/Botan.h"
+#include "Enemy/Id/Margaret.h"
 
 CharacterManager g_Manager;
 
@@ -15,8 +15,8 @@ CharacterManager::CharacterManager() {
 	m_Charas[PLAYER]	= new Player;
 
 	m_Charas[OHAGI]     = new Ohagi;
+	m_Charas[SAKURA]	= new Sakura;
 	m_Charas[UME]		= new Ume;
-	m_Charas[SAKURA]    = new Sakura;
 	m_Charas[RAN]	    = new Ran;
 	m_Charas[BOTAN]		= new Botan;
 	m_Charas[MARGARET]  = new Margaret;
@@ -66,11 +66,11 @@ void CharacterManager::Release()
 	}
 }
 
-void CharacterManager::LoadTex(SceneId id) {
+void CharacterManager::LoadTex() {
 	for (int i = 0; i < MAX_CHARACTER; i++) {
 		if (m_Charas[i] != nullptr) {
 
-			m_Charas[i]->LoadTex(id);
+			m_Charas[i]->LoadTex();
 		}
 	}
 }

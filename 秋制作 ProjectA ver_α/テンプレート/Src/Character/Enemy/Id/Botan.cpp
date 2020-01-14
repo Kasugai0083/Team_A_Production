@@ -1,4 +1,4 @@
-#include "G_Freddy.h"
+#include "Botan.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
 #include <time.h>
@@ -10,9 +10,6 @@
 void Botan::Init()
 {
 	srand((unsigned)time(nullptr));
-	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
-	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
-	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Botan::Update()
@@ -94,17 +91,13 @@ bool Botan::SpawnJudgement(double probability_)
 	return false;
 }
 
-
-void Botan::LoadTex(SceneId id_)
+void Botan::LoadTex()
 {
-	switch (id_)
-	{
-	case GameScene:
-		LoadTexture("Res/Game/Enemy/Botan/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex);
-		break;
-	default:
-		break;
-	}
+	LoadTexture("Res/Game/Enemy/Botan/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_PLAYER_TEX);
+	
+	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
+	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
+	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Botan::Draw()
@@ -117,7 +110,7 @@ void Botan::Draw()
 	if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 		&& GetCurrentSceneId() == SceneId::GameScene) {
 
-		DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::EnemyBotanTex));
+		DrawTexture(1360.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_PLAYER_TEX));
 	}
 }
 

@@ -1,22 +1,24 @@
-#ifndef G_FREDDY_H_
-#define G_FREDDY_H_
+#ifndef ORAN_H_
+#define ORAN_H_
 
 #include "../../Enemy/Enemy.h"
+#include "../../CharacterID.h"
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
+#include "../../../Texture/Texture.h"
 
 /*
-	ゴールデンフレディ(エネミー)のクラス
+	フォクシー(エネミー)のクラス
 */
-class Botan : public Enemy
+class Ran : public Enemy
 {
 public:
 	/*
 		コンストラクタ
 	*/
-	Botan() :
-		Enemy(RoomID::ROOM_PRAYER, 0)
+	Ran() :
+		Enemy(RoomID::ROOM_STORAGE, 0)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {
@@ -31,11 +33,12 @@ public:
 		for (int i = 0; i < m_AnimationTex.m_Length; i++) {
 			m_AnimationTex.m_TextureData[i] = new Texture();
 		}
+
 	}
 	/*
-		デストラクター
+		デストラクタ
 	*/
-	virtual ~Botan(){}
+	virtual ~Ran(){}
 	/*
 		初期化
 	*/
@@ -48,25 +51,15 @@ public:
 	/*
 		m_IsKillを返す
 	*/
-	virtual bool HasKill()const override { return m_HasKill; }
-
-	/*
-		生成するかしないかの判定関数
-		プレイヤーがモニターシーンの時に使う。
-		trueで生成する
-	*/
-	bool SpawnJudgement(double probability_);
-
-	// m_SpawnJudgementを返す
-	bool SpawnJudgement() const override { return m_SpawnJudgement; }
+	virtual bool HasKill()const final { return m_HasKill; }
 
 	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	virtual void LoadTex(SceneId id_) override;
+	virtual void LoadTex() final;
 	/*
-		描画
+	描画
 	*/
 	virtual void Draw() override;
 
@@ -77,11 +70,7 @@ public:
 
 private:
 	// キャラID定数
-	const CharacterID m_CharId = CharacterID::BOTAN;
-
-	// 試しに作ってみた
-	// SpawnJudgement関数を使ったかどうか
-	bool m_SpawnJudgement;
+	const CharacterID m_CharId = CharacterID::RAN;
 };
 
-#endif
+#endif 

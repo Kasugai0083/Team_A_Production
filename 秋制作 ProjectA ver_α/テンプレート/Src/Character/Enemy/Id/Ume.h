@@ -1,5 +1,5 @@
-#ifndef BONNIE_H_
-#define BONNIE_H_
+#ifndef UME_H_
+#define UME_H_
 
 #include "../../Enemy/Enemy.h"
 #include "../../CharacterID.h"
@@ -8,7 +8,7 @@
 #include "../../CharacterManager.h"
 
 /*
-	バニー(エネミー)のクラス
+	チカ(エネミー)のクラス
 */
 class Ume : public Enemy
 {
@@ -49,12 +49,13 @@ public:
 	/*
 		m_IsKillを返す
 	*/
-	virtual bool HasKill()const final { return m_HasKill; }
+	virtual bool HasKill()const override { return m_HasKill; }
+
 	/*
 		引数に現在のシーンを入れる
 		テクスチャのロード
 	*/
-	virtual void LoadTex(SceneId id_) override;
+	virtual void LoadTex() override;
 	/*
 		描画
 	*/
