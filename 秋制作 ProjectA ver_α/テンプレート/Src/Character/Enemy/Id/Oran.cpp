@@ -115,9 +115,9 @@ void Ran::Update()
 
 void Ran::LoadTex()
 {
-	LoadTexture("Res/Game/Enemy/Ran/Ran.png",      TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX);
-	LoadTexture("Res/Game/Enemy/Ran/Ran_Near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX);
-	LoadTexture("Res/Game/Enemy/Ran/Ran_Far.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX);
+	LoadTexture("Res/Game/Enemy/Ran/ran_come_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX);
+	LoadTexture("Res/Game/Enemy/Ran/ran_come.png",		TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX);
+	LoadTexture("Res/Game/Enemy/Ran/Ran_Far.png",		TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ran/KillAnimation/ran_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_KILLANIME_TEX);
 
 	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
@@ -133,7 +133,7 @@ void Ran::Draw()
 	{
 		if (pPlayer->CurrentViewID(SubGameScene::STORE_ROOM_VIEW)) {
 
-			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
+			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX));
 		}
 
 		return;
@@ -147,7 +147,7 @@ void Ran::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::STORE_ROOM_VIEW)) {
 
-			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
+			DrawTexture(840.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX));
 		}
 		break;
 
