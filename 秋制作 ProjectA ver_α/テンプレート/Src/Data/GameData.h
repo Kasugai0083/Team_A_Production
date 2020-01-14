@@ -91,8 +91,13 @@ struct GameParam {
 class GameData : public Singleton<GameData> {
 
 public:
+	// データを送信する関数(GameData を Accesor にしない場合)
 	void SendEnemyData(EnemyData* edata_, int i) { *edata_ = m_EData[i]; }
 	void SendGameParam(GameParam* gameparam_) { *gameparam_ = m_GameParam; }
+
+	// データを受け取る関数(GameData を Accesor にする場合)
+	void ReceiveData(EnemyData edata_, CharacterID charid_) { m_EData[charid_] = edata_; }
+	void ReceiveParam(GameParam param_) { m_GameParam = param_; }
 
 	// 値を読み込むメソッド
 	void LoadDay(Days day_);
