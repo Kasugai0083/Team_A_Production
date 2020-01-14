@@ -102,8 +102,8 @@ void Margaret::LoadTex()
 	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
 	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 
-	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_base.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX);
-	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_eye.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX);
+	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_body_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX);
+	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_eye_gray.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX);
 
 	// –Ú‚ÌUI
 	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/UI_me_64.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_EYE_TEX);
