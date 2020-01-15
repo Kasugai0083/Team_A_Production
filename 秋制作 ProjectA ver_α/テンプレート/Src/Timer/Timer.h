@@ -118,6 +118,8 @@ private:
 	//! クリアに必要なカウント
 	int m_HourCount;	
 
+	int m_Timemag;
+
 	//! デジタル時計風の描画に必要な文字列
 	std::string m_Minute, m_Hour, m_Sample; 
 

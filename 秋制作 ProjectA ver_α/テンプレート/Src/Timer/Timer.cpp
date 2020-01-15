@@ -5,7 +5,6 @@
 #include "..//Character/CharacterManager.h"
 #include "..//Data/GameData.h"
 
-
 //staticなメンバ変数を初期化【コンストラクタではやらない】
 Timer* Timer::p_Instance = nullptr;
 
@@ -14,6 +13,10 @@ void Timer::Init() {
 	Timers.m_Clear = 0;
 	Timers.m_MusicBox = 0;
 	m_HourCount = 0;
+
+	// ここで時間の調整
+	m_Timemag = Timers.m_Clear / GameData::GetInstance()->GetGameParam().m_TimeMagnification;
+
 }
 void Timer::Init(Id id_) {
 
@@ -57,8 +60,8 @@ void Timer::Update() {
 	Timers.m_Clear++;
 	Timers.m_MusicBox++;
 
-	// ここで時間の調整
-	int TIME = Timers.m_Clear / TIME_MAGNIFICATION;
+	m_Timemag = GameData::GetInstance()->GetGameParam().m_TimeMagnification;
+	int TIME = Timers.m_Clear / m_Timemag;
 
 	if (TIME == 60) {
 		Timers.m_Clear = 0;

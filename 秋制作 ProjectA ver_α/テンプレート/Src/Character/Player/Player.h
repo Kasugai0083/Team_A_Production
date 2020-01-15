@@ -70,7 +70,7 @@ private:
 	void ButtonPush(T1 button_, T2 view_);
 
 private:
-	bool m_IsActive;		// 生きてるかどうか(必要性あるかな？)
+	//bool m_IsActive;		// 生きてるかどうか(必要性あるかな？)
 	bool m_IsMask;		// マスクをつけてるかどうか
 	float m_MaskAnimation; // マスクのアニメーションタイマー
 	bool m_HasGFreddySpown; //ゴールデンフレディのフラグが立っているかどうか

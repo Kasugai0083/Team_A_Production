@@ -3,6 +3,7 @@
 #include "../ItemValue.h"
 #include "../../../Character/CharacterManager.h"
 #include "../../../Engine/Audio/Audio.h"
+#include "../../../Data/GameData.h"
 
 void Candle::Init() {
 	switch (m_Id) {
@@ -163,6 +164,10 @@ void Candle::SceneDeath() {
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
+	if (pPlayer == nullptr) {
+		return;
+	}
+
 	if (pPlayer->HasMonitor() == false) {
 
 		if (GetCurrentSceneId() == GameScene) {
@@ -213,7 +218,7 @@ void Candle::MeltCandle(ObjID id_) {
 		switch (m_Id)
 		{
 		case ObjID::CANDLE_LEFT:
-			m_CandleHp -= MELT_RATIO;
+			m_CandleHp -= GameData::GetInstance()->GetGameParam().m_MeltRatio;
 
 			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
 
@@ -222,7 +227,7 @@ void Candle::MeltCandle(ObjID id_) {
 			break;
 		case ObjID::CANDLE_RIGHT:
 
-			m_CandleHp -= MELT_RATIO;
+			m_CandleHp -= GameData::GetInstance()->GetGameParam().m_MeltRatio;
 
 			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
 
@@ -231,7 +236,7 @@ void Candle::MeltCandle(ObjID id_) {
 			break;
 		case ObjID::CANDLE_CENTER:
 
-			m_CandleHp -= MELT_RATIO;
+			m_CandleHp -= GameData::GetInstance()->GetGameParam().m_MeltRatio;
 
 			m_HeightRatio = (m_Size.Height - (m_Size.Height * m_CandleHp));
 
@@ -286,6 +291,8 @@ void Candle::EffectUpdate() {
 void Candle::Update(){
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
+
 
 	SceneDeath();
 

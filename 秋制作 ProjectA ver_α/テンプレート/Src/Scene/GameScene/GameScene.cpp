@@ -267,8 +267,8 @@ void InitGameScene()
 
 	ObjManager()->Init();
 
-	g_Manager.CreateCharacter();
-	g_Manager.Initialize();
+	//g_Manager.CreateCharacter();
+	//g_Manager.Initialize();
 	g_Manager.LoadTex();
 
 	//ƒQ[ƒ€ƒV[ƒ“”wŒi

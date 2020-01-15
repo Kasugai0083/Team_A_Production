@@ -2,7 +2,7 @@
 #include "..//..//Engine/Graphics.h"
 #include <string>
 #include "../../Character/CharacterManager.h"
-
+#include "../../Utility/FileReader.h"
 
 DayController::DayController() {
 	m_Days = Days::DAY_1;
@@ -30,7 +30,9 @@ void DayController::CheckClear() {
 	//bool check = true;
 	bool check = m_pPlayer->IsActive();
 
-	if (check != true) {
+	FileReader FR;
+
+	if (check == true) {
 		switch (m_Days)
 		{
 		case Days::DAY_0:
@@ -38,9 +40,11 @@ void DayController::CheckClear() {
 			break;
 		case Days::DAY_1:
 			m_Days = Days::DAY_2;
+			FR.WriteCSV("Days.csv", static_cast<int>(m_Days));
 			break;
 		case Days::DAY_2:
 			m_Days = Days::DAY_3;
+			FR.WriteCSV("Days.csv", static_cast<int>(m_Days));
 			break;
 		case Days::DAY_3:
 			break;

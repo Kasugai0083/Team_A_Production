@@ -12,6 +12,7 @@
 #include "../Engine/Audio/Audio.h"
 #include "../Data/Days/DayController.h"
 #include "../Data/GameData.h"
+#include "../Utility/FileReader.h"
 
 // タイトルシーンの初期化
 void InitTitleScene();
@@ -81,10 +82,16 @@ void MainTitleScene()
 
 	ObjManager()->Update();
 	
+	FileReader FR;
+
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouse(ObjID::BUTTON_NEW_GAME) == true) {
 		if (OnMouseDown(Left) == true) {
+
 			DayManager()->LoadDays(Days::DAY_1);
+			
+			FR.WriteCSV("Days.csv", 1);
+
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 	}

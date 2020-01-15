@@ -19,84 +19,6 @@ enum class SubGameScene {
 	LEFT_CORRIDOR_VIEW,		//左廊下
 };
 
-/**
-* エネミーのスポーンする頻度\n
-* DAYによって調整
-*/
-
-const float D1_SPOWN_JUDGE_OHAGI = 1.0f;
-const float D1_SPOWN_JUDGE_SAKURA = 1.0f;
-const float D1_SPOWN_JUDGE_UME = 1.0f;
-const float D1_SPOWN_JUDGE_RAN = 1.0f;
-const float D1_SPOWN_JUDGE_BOTAN = 1.0f;
-
-const float D2_SPOWN_JUDGE_OHAGI = 1.0f;
-const float D2_SPOWN_JUDGE_SAKURA = 1.0f;
-const float D2_SPOWN_JUDGE_UME = 1.0f;
-const float D2_SPOWN_JUDGE_RAN = 1.0f;
-const float D2_SPOWN_JUDGE_BOTAN = 1.0f;
-
-const float D3_SPOWN_JUDGE_OHAGI = 1.0f;
-const float D3_SPOWN_JUDGE_SAKURA = 1.0f;
-const float D3_SPOWN_JUDGE_UME = 1.0f;
-const float D3_SPOWN_JUDGE_RAN = 1.0f;
-const float D3_SPOWN_JUDGE_BOTAN = 1.0f;
-
-const float ED_SPOWN_JUDGE_OHAGI = 1.0f;
-const float ED_SPOWN_JUDGE_SAKURA = 1.0f;
-const float ED_SPOWN_JUDGE_UME = 1.0f;
-const float ED_SPOWN_JUDGE_RAN = 1.0f;
-const float ED_SPOWN_JUDGE_BOTAN = 1.0f;
-
-const float SPOWN_JUDGE_OHAGI = 1.0f;
-const float SPOWN_JUDGE_Ume = 1.0f;
-const float SPOWN_JUDGE_Sakura = 1.0f;
-const float SPOWN_JUDGE_RAN = 1.0f;
-const float SPOWN_JUDGE_BOTAN = 1.0f;
-
-
-/**
-* エネミーの移動速度\n
-* プランナーが調整する項目
-*/
-
-const int D1_MOVEMENT_SPEED_OHAGI = 300;
-const int D1_MOVEMENT_SPEED_SAKURA = 300;
-const int D1_MOVEMENT_SPEED_UME = 300;
-const int D1_MOVEMENT_SPEED_RAN = 300;
-const int D1_MOVEMENT_SPEED_BOTAN = 0;
-
-const int D2_MOVEMENT_SPEED_OHAGI = 300;
-const int D2_MOVEMENT_SPEED_SAKURA = 300;
-const int D2_MOVEMENT_SPEED_UME = 300;
-const int D2_MOVEMENT_SPEED_RAN = 300;
-const int D2_MOVEMENT_SPEED_BOTAN = 0;
-
-const int D3_MOVEMENT_SPEED_OHAGI = 300;
-const int D3_MOVEMENT_SPEED_SAKURA = 300;
-const int D3_MOVEMENT_SPEED_UME = 300;
-const int D3_MOVEMENT_SPEED_RAN = 300;
-const int D3_MOVEMENT_SPEED_BOTAN = 0;
-
-const int ED_MOVEMENT_SPEED_OHAGI = 300;
-const int ED_MOVEMENT_SPEED_SAKURA = 300;
-const int ED_MOVEMENT_SPEED_UME = 300;
-const int ED_MOVEMENT_SPEED_RAN = 300;
-const int ED_MOVEMENT_SPEED_BOTAN = 0;
-
-const int MOVEMENT_SPEED_OHAGI = 300;
-const int MOVEMENT_SPEED_Ume = 300;
-const int MOVEMENT_SPEED_Sakura = 300;
-const int MOVEMENT_SPEED_RAN = 300;
-const int MOVEMENT_SPEED_BOTAN = 0;
-
-
-//! 蝋燭が溶ける速度
-const float MELT_RATIO = 0.001f; 
-
-//! ここで時間の進みを変更
-const int TIME_MAGNIFICATION = 60000000;
-
 struct EnemyData {
 	int m_SpownJudge;
 	int m_MovementSpeed;
@@ -113,6 +35,10 @@ public:
 	// データを送信する関数(GameData を Accesor にしない場合)
 	void SendEnemyData(EnemyData* edata_, int i) { *edata_ = m_EData[i]; }
 	void SendGameParam(GameParam* gameparam_) { *gameparam_ = m_GameParam; }
+	// ゲット関数
+	EnemyData GetEnemyData(EnemyID enemyId_) const { return m_EData[static_cast<int>(enemyId_)]; }
+	GameParam GetGameParam() const { return m_GameParam; }
+	Days GetDays() const { return m_Days; }
 
 	// データを受け取る関数(GameData を Accesor にする場合)
 	void SetEnemyData(EnemyData edata_, CharacterID charid_) { m_EData[charid_] = edata_; }

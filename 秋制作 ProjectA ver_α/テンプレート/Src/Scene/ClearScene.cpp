@@ -64,12 +64,12 @@ void InitClearScene()
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 
-
 	LoadTexture("Res/End/EndBg.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex);
 	LoadTexture("Res/End/GameOver.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex);
 
 	//true => クリア時Daysを進める
 	DayManager()->CheckClear();
+
 	//DayManager()->CheckClear(true);
 	
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
@@ -102,7 +102,7 @@ SceneId FinishClearScene()
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Stop("GameOverBGM");
 
-	g_Manager.Release();
+	//g_Manager.Release();
 
 	return SceneId::TitleScene;
 }
