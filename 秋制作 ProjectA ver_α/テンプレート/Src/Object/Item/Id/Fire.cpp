@@ -6,8 +6,8 @@ void Fire::Init() {
 	switch (m_Id)
 	{
 	case ObjID::FIRE_CENTER:
-		LoadTexture("Res/Game/Item/candle_fire.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireTex);
+		LoadTexture("Res/Game/Item/candle_fire.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_FIRE_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_FIRE_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -19,8 +19,8 @@ void Fire::Init() {
 		m_pObject = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 		break;
 	case ObjID::FIRE_RIGHT:
-		LoadTexture("Res/Game/Item/candle_fire_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+		LoadTexture("Res/Game/Item/candle_fire_side.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_FIRE_SMALL_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_FIRE_SMALL_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -33,8 +33,8 @@ void Fire::Init() {
 
 		break;
 	case ObjID::FIRE_LEFT:
-		LoadTexture("Res/Game/Item/candle_fire_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameFireSmallTex);
+		LoadTexture("Res/Game/Item/candle_fire_side.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_FIRE_SMALL_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_FIRE_SMALL_TEX);
 
 		if (m_pTex == nullptr) {
 			return;

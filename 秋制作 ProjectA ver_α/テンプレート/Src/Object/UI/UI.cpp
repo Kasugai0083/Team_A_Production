@@ -62,33 +62,34 @@ void UI::Init(){
 	case ObjID::GAME_BASE_UI:
 		m_Pos = GAME_BASE_UI_POS;
 		m_Size = GAME_BASE_UI_SIZE;
-		LoadTexture("Res/Game/UI/base_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMainUITex);
+		LoadTexture("Res/Game/UI/base_ui_bar.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_MAIN_UI_TEX);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_MAIN_UI_TEX);
 		break;
 	case ObjID::BUTTON_CONTROL_UI:
 		m_Pos = GAME_CONTROL_UI_POS;
 		m_Size = GAME_CONTROL_UI_SIZE;
-		LoadTexture("Res/Game/UI/control_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameControlUITex);
+		LoadTexture("Res/Game/UI/control_ui_bar.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CONTROL_UI_TEX);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CONTROL_UI_TEX);
 		break;
 	case ObjID::BUTTON_ON_CONTROL_UI:
 		m_Pos = GAME_CONTROL_UI_POS;
 		m_Size = GAME_CONTROL_UI_SIZE;
-		LoadTexture("Res/Game/UI/onhit_control_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitControlUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitControlUITex);
+		LoadTexture("Res/Game/UI/onhit_control_ui_bar.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_ONHIT_CONTROL_UI_TEX);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_ONHIT_CONTROL_UI_TEX);
 		break;
 	case ObjID::MO_MASK_UI:
 		m_Pos = GAME_MASK_UI_POS;
 		m_Size = GAME_MASK_UI_SIZE;
-		LoadTexture("Res/Game/UI/mask_ui_bar.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskUITex);
+		LoadTexture("Res/Game/UI/mask_ui_bar.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_MASK_UI_TEX);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_MASK_UI_TEX);
 		break;
 	case ObjID::DESCRIPTION_UI:
 		m_Pos = GAME_DESCRIPTION_UI_POS;
 		m_Size = GAME_DESCRIPTION_UI_SIZE;
-		LoadTexture("Res/Game/UI/control_ui_main.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex);
-		m_Tex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameDescriptionUITex);
+		LoadTexture("Res/Game/UI/control_ui_main.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_DESCRIPTION_UI_TEX);
+		m_Tex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_DESCRIPTION_UI_TEX);
 		break;
+
 	case ObjID::BUTTON_WORKSHOP:
 		m_Pos = WORKSHOP_BUTTON_POS;
 		m_Size = MONITOR_BUTTON_SIZE;

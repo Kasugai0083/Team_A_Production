@@ -342,8 +342,8 @@ void MainGameScene()
 
 	//クリア時間経過でシーン遷移
 	if (pTimerInstance->GetClearTime() == CLEAR_TIME) {
-			SceneController()->SetID(SceneTransition::Id::Clear, true);
-			ChangeSceneStep(SceneStep::EndStep);
+		SceneController()->SetID(SceneTransition::Id::Clear, true);
+		ChangeSceneStep(SceneStep::EndStep);
 	}
 
 	//プレイヤーの死亡でシーン遷移
@@ -358,7 +358,15 @@ void MainGameScene()
 
 SceneId FinishGameScene()
 {
-	//ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
+
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_CENTER);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_LEFT);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_RIGHT);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_ENEMY);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
+
 
 	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, false);

@@ -78,6 +78,8 @@ public:
 	*/
 	bool HasOnMouse(ObjID id_);
 
+	void LoadTex();
+
 private:
 
 	//! ObjectID.h で指定された識別番号分、インスタンス化する

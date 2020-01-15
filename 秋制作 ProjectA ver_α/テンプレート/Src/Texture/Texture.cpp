@@ -12,6 +12,7 @@ int TextureCaterogySize[] = {
 	OpeningCategoryTextureList::OpeningTextureMax,
 	GameCategoryTextureList::GameTextureMax,
 	EnemyCategoryTextureList::ENEMY_TEXTURE_MAX,
+	ObjectCategoryTextureList::OBJECT_TEXTURE_MAX,
 	CenterCategoryTextureList::GameCenterTextureMax,
 	LeftCategoryTextureList::GameLeftTextureMax,
 	RightCategoryTextureList::GameRightTextureMax,

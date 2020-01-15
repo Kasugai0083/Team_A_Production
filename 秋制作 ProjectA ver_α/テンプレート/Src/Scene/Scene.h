@@ -16,6 +16,7 @@ enum SceneId
 	OpeningScene,
 	GameScene,
 	EnemyScene,
+	ObjectScene,
 	CenterScene,
 	LeftScene,
 	RightScene,

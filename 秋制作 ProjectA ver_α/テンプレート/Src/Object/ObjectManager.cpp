@@ -108,6 +108,15 @@ void ObjectManager::Draw()
 
 }
 
+void ObjectManager::LoadTex() {
+	for (auto& objects : m_pObjects) {
+		if (objects == nullptr) {
+			continue;
+		}
+		objects->LoadTex();
+	}
+}
+
 void ObjectManager::Release(int id_) {
 
 	delete m_pObjects[id_];

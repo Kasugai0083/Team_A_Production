@@ -116,6 +116,11 @@ void Player::Update()
 
 	static bool once = false;
 	//マスク被る・被らない
+
+	if (pMaskUI == nullptr) {
+		return;
+	}
+
 	if (pMaskUI->HasMask() == true) {
 
 		if (!once)
@@ -164,7 +169,7 @@ void Player::Draw() {
 
 void Player::LoadTex()
 {
-	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex);
+	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_MASK_TEX);
 }
 
 const bool Player::CurrentViewID(const SubGameScene sceneId_) const
@@ -187,7 +192,7 @@ void Player::OnMask() {
 				m_MaskAnimation = 1080.0f;
 			}
 		}
-		DrawTexture(0.0f, (-1080.f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex));
+		DrawTexture(0.0f, (-1080.f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_MASK_TEX));
 	}
 	else {
 		if (m_MaskAnimation >= -1080.f) {
@@ -196,6 +201,6 @@ void Player::OnMask() {
 				m_MaskAnimation = -540.f;
 			}
 		}
-		DrawTexture(0.0f, (-1080.0f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameMaskTex));
+		DrawTexture(0.0f, (-1080.0f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_MASK_TEX));
 	}
 }

@@ -9,6 +9,7 @@
 #include "../Character/CharacterID.h"
 #include "../Engine/Audio/Audio.h"
 #include "../Data/Days/DayController.h"
+#include "../Object/ObjectManager.h"
 
 class OpController {
 public:
@@ -146,6 +147,8 @@ void MainOpeningScene()
 SceneId FinishOpeningScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_OPENING);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
+
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();

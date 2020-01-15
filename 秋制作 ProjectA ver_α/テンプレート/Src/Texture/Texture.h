@@ -8,6 +8,7 @@
 #include "../Scene/Scene.h"
 #include "../Engine/Graphics.h"
 #include "EnemyTex.h"
+#include "ObjectTex.h"
 #include "TitleSceneTex.h"
 #include "GameSceneTex.h"
 #include "ResultSceneTex.h"

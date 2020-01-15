@@ -6,10 +6,14 @@
 #include "../../../Data/GameData.h"
 
 void Candle::Init() {
+
+	m_CandleHp = 1.f;
+
+
 	switch (m_Id) {
 	case ObjID::CANDLE_LEFT:
-		LoadTexture("Res/Game/Item/candle_big.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
+		LoadTexture("Res/Game/Item/candle_big.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_BIG_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_BIG_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -26,8 +30,8 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_RIGHT:
-		LoadTexture("Res/Game/Item/candle_big.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleBigTex);
+		LoadTexture("Res/Game/Item/candle_big.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_BIG_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_BIG_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -48,8 +52,8 @@ void Candle::Init() {
 
 
 
-		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleSmallTex);
+		LoadTexture("Res/Game/Item/Candle_Center.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_SMALL_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_SMALL_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -65,8 +69,8 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_STAND_CENTER:
-		LoadTexture("Res/Game/Item/candle_stand_center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandCenterTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandCenterTex);
+		LoadTexture("Res/Game/Item/candle_stand_center.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_STAND_CENTER_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_STAND_CENTER_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -78,8 +82,8 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_STAND_RIGHT:
-		LoadTexture("Res/Game/Item/candle_stand_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
+		LoadTexture("Res/Game/Item/candle_stand_side.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_STAND_SIDE_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_STAND_SIDE_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -91,8 +95,8 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_STAND_LEFT:
-		LoadTexture("Res/Game/Item/candle_stand_side.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleStandSideTex);
+		LoadTexture("Res/Game/Item/candle_stand_side.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_STAND_SIDE_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_STAND_SIDE_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -104,8 +108,8 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_EFFECT_CENTER:
-		LoadTexture("Res/Game/Item/candle_effect_center.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleCenterEffectTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleCenterEffectTex);
+		LoadTexture("Res/Game/Item/candle_effect_center.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_CENTER_EFFECT_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_CENTER_EFFECT_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -117,8 +121,8 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_EFFECT_RIGHT:
-		LoadTexture("Res/Game/Item/candle_effect_right.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleRightEffectTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleRightEffectTex);
+		LoadTexture("Res/Game/Item/candle_effect_right.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_RIGHT_EFFECT_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_RIGHT_EFFECT_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -130,8 +134,8 @@ void Candle::Init() {
 
 		break;
 	case ObjID::CANDLE_EFFECT_LEFT:
-		LoadTexture("Res/Game/Item/candle_effect_left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleLeftEffectTex);
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCandleLeftEffectTex);
+		LoadTexture("Res/Game/Item/candle_effect_left.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_LEFT_EFFECT_TEX);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CANDLE_LEFT_EFFECT_TEX);
 
 		if (m_pTex == nullptr) {
 			return;

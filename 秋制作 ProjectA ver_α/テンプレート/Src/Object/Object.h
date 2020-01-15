@@ -59,6 +59,9 @@ public:
 	* UI をインスタンス化して使用する
 	*/
 	virtual bool HasMask() { return 0; };
+
+	virtual void LoadTex() { return ; }
+
 protected:
 	//! オブジェクトの生存情報
 	bool m_IsDeath;

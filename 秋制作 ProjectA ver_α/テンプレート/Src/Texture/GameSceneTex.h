@@ -3,32 +3,9 @@
 /** @brief ゲーム本編用テクスチャのリスト */
 enum GameCategoryTextureList
 {
-	GameMaskTex,				//!< 背景
-
 	GameBlackFanceTex,	//!< 黒フィルター
 	GameBlackFilterTex, //!< 黒フィルター(全体)
 
-	//item
-	GameCandleBigTex,
-	GameCandleSmallTex,
-
-	GameCandleStandCenterTex,
-	GameCandleStandSideTex,
-
-	GameCandleCenterEffectTex,
-	GameCandleLeftEffectTex,
-	GameCandleRightEffectTex,
-	
-	GameFireTex,
-	GameFireBigTex,
-	GameFireSmallTex,
-	
-	GameCrystalTex,
-	GameOnHitCrystalTex,
-
-	GameWatchTex,
-	GameOnHitWatchTex,
-	
 	GameLeftShojiFrontTex,
 	GameLeftShojiBackTex,
 	GameLeftBlackTex,	//!< センターシーンの黒テクスチャ
@@ -36,14 +13,6 @@ enum GameCategoryTextureList
 	GameRightShojiFrontTex,
 	GameRightShojiBackTex,
 	GameRightBlackTex,	//!< センターシーンの黒テクスチャ
-
-	GameMainUITex,
-	GameMaskUITex,
-
-	GameControlUITex,
-	GameOnHitControlUITex,
-
-	GameDescriptionUITex,
 
 	GameFreeTex,
 
@@ -56,8 +25,6 @@ enum CenterCategoryTextureList {
 	GameCenterDeskTex,	//!< センターシーンのデスク
 	GameCenterBlackTex,	//!< センターシーンの黒テクスチャ
 
-
-
 	GameCenterFreddy,
 	GameCenterPuppet,
 
@@ -69,8 +36,6 @@ enum CenterCategoryTextureList {
 	GameCircle6Tex,
 	GameCircle7Tex,
 	GameCircle8Tex,
-
-
 
 	GameCenterTextureMax,			//!< リスト最大数
 };

@@ -32,11 +32,9 @@ public:
 	*/
 	void Init()override {
 
-		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);
-		LoadTexture("Res/Game/Item/crystal_effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitCrystalTex);
+		LoadTexture("Res/Game/Item/Crystal.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CRYSTAL_TEX);
 
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameCrystalTex);	
-		m_pOnHitTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitCrystalTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_CRYSTAL_TEX);
 
 		if (m_pTex == nullptr) {
 			return;
@@ -126,11 +124,11 @@ public:
 	*/
 	void Init()override {
 
-		LoadTexture("Res/Game/Item/pocket_watch.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameWatchTex);
-		LoadTexture("Res/Game/Item/pocket_watch_effect.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitWatchTex);
+		LoadTexture("Res/Game/Item/pocket_watch.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_WATCH_TEX);
+		LoadTexture("Res/Game/Item/pocket_watch_effect.png", TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_ONHITWATCH_TEX);
 
-		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameWatchTex);
-		m_pOnHitTex = GetTexture(TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameOnHitWatchTex);
+		m_pTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_WATCH_TEX);
+		m_pOnHitTex = GetTexture(TEXTURE_CATEGORY_OBJECT, ObjectCategoryTextureList::OBJECT_ONHITWATCH_TEX);
 
 		if (m_pTex == nullptr) {
 			return;

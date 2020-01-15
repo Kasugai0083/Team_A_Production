@@ -9,6 +9,7 @@
 #include "../Character/CharacterID.h"
 #include "../Data/Days/DayController.h"
 #include "../Engine/Audio/Audio.h"
+#include "../Object/ObjectManager.h"
 
 // ゲームオーバーシーンの初期化
 void InitClearScene();
@@ -99,6 +100,8 @@ void MainClearScene()
 SceneId FinishClearScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_CLEAR);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
+
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Stop("GameOverBGM");
 

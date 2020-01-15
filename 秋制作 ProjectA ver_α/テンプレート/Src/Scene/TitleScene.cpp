@@ -59,7 +59,6 @@ void InitTitleScene()
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::CLEAR);
 
-
 	ObjManager()->Init();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
@@ -104,7 +103,7 @@ void MainTitleScene()
 		}
 		if (DayManager()->GetCurrentDays() == Days::DAY_0) {
 			if (OnMouseDown(Left) == true) {
-				DayManager()->LoadDays(Days::DAY_3);
+				//DayManager()->LoadDays(Days::DAY_3);
 				ChangeSceneStep(SceneStep::EndStep);
 			}
 		}
@@ -116,11 +115,10 @@ SceneId FinishTitleScene()
 {
 	// リリース解放
 	ReleaseCategoryTexture(SceneId::TitleScene);
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME);
+	
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_TITLE);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
 
-	//ObjManager()->Release(TITLE_LOGO);
-	//ObjManager()->Release(BUTTON_NEW_GAME);
-	//ObjManager()->Release(BUTTON_CONTINUE);
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 
