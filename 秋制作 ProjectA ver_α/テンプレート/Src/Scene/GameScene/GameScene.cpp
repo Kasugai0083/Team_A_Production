@@ -265,6 +265,7 @@ void InitGameScene()
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
 
+	ObjManager()->CreateGameObj();
 	ObjManager()->Init();
 
 	//g_Manager.CreateCharacter();
@@ -365,8 +366,7 @@ SceneId FinishGameScene()
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_RIGHT);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_ENEMY);
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
-
+	ObjManager()->ReleaseGameObj();
 
 	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, false);

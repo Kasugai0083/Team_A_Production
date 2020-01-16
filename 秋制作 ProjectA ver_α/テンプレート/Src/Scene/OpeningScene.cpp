@@ -147,7 +147,6 @@ void MainOpeningScene()
 SceneId FinishOpeningScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_OPENING);
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
 
 
 	Timer* pTimerInstance = Timer::GetInstance();

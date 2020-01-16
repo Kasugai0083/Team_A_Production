@@ -59,6 +59,7 @@ void InitTitleScene()
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::CLEAR);
 
+	ObjManager()->CreateTitleObj();
 	ObjManager()->Init();
 
 	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
@@ -117,7 +118,7 @@ SceneId FinishTitleScene()
 	ReleaseCategoryTexture(SceneId::TitleScene);
 	
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_TITLE);
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
+	ObjManager()->ReleaseTitleObj();
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();

@@ -79,26 +79,6 @@ enum MonitorCategoryTextureList {
 	GameMonitorChicaTex,
 	GameMonitorPuppetTex,
 
-	GameMonitorMapTex,
-	GameMonitorMapPlayerTex,
-
-	GameMonitorButtom1Tex,
-	GameMonitorButtom2Tex,
-	GameMonitorButtom3Tex,
-	GameMonitorButtom4Tex,
-	GameMonitorButtom5Tex,
-	GameMonitorButtom6Tex,
-
-	GameMonitorOnButtom1Tex,
-	GameMonitorOnButtom2Tex,
-	GameMonitorOnButtom3Tex,
-	GameMonitorOnButtom4Tex,
-	GameMonitorOnButtom5Tex,
-	GameMonitorOnButtom6Tex,
-
-
-
-
 	GameMonitorTextureMax,			//!< ƒŠƒXƒgÅ‘å”
 };
 

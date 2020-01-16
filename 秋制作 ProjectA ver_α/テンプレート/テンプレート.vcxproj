@@ -216,10 +216,11 @@
     <ClInclude Include="Src\Scene\TitleScene.h" />
     <ClInclude Include="Src\Texture\EnemyTex.h" />
     <ClInclude Include="Src\Texture\GameSceneTex.h" />
-    <ClInclude Include="Src\Texture\ObjectTex.h" />
+    <ClInclude Include="Src\Texture\GameObjectTex.h" />
     <ClInclude Include="Src\Texture\OpeningSceneTex.h" />
     <ClInclude Include="Src\Texture\ResultSceneTex.h" />
     <ClInclude Include="Src\Texture\Texture.h" />
+    <ClInclude Include="Src\Texture\TitleObjectTex.h" />
     <ClInclude Include="Src\Texture\TitleSceneTex.h" />
     <ClInclude Include="Src\Timer\Timer.h" />
     <ClInclude Include="Src\Utility\Common.h" />

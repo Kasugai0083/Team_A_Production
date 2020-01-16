@@ -61,7 +61,15 @@ public:
 	* @brief 指定された m_pObjects を解放する
 	* @param[in] id_ m_pObjects の識別番号を指定
 	*/
-	void Release(int id_);
+	void Release(ObjID id_);
+
+	// 各シーンのオブジェクトを解放
+	void ReleaseTitleObj();
+	void ReleaseGameObj();
+
+	// 各シーンの領域を確保(new)
+	void CreateTitleObj();
+	void CreateGameObj();
 
 	/**
 	* @fn Draw()
@@ -78,7 +86,11 @@ public:
 	*/
 	bool HasOnMouse(ObjID id_);
 
+	// Objectのテクスチャを読み込み
 	void LoadTex();
+
+
+
 
 private:
 

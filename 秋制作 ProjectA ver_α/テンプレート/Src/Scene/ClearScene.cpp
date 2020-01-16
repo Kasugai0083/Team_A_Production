@@ -100,7 +100,6 @@ void MainClearScene()
 SceneId FinishClearScene()
 {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_CLEAR);
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_OBJECT);
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Stop("GameOverBGM");
