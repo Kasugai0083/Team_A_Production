@@ -124,6 +124,7 @@ void LoadGameTex() {
 	//Character
 	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_MASK_TEX);
 	LoadTexture("Res/Game/Enemy/Botan/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_PLAYER_TEX);
+	LoadTexture("Res/Game/Enemy/Botan/KillAnimation/bot_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_KILLANIME_TEX);
 	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_body_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX);
 	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_eye_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX);
 
@@ -143,6 +144,7 @@ void LoadGameTex() {
 	LoadTexture("Res/Game/Enemy/Ohagi/oha_distant.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_FAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ohagi/oha_near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_NEAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ohagi/FreddyAAA.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_TEX);
+	LoadTexture("Res/Game/Enemy/Ohagi/KillAnimation/oha_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_KILLANIME_TEX);
 
 	LoadTexture("Res/Game/Enemy/Ran/ran_come_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX);
 	LoadTexture("Res/Game/Enemy/Ran/ran_come.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX);

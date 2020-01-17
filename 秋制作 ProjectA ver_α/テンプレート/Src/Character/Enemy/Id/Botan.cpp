@@ -118,5 +118,6 @@ void Botan::KillAnimation()
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_KILLANIME_TEX));
 	}
 }
