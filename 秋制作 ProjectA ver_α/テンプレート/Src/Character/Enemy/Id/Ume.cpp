@@ -77,6 +77,8 @@ void Ume::Update()
 			m_RoomId = RoomID::ROOM_RIGHT_PRAYER;
 		}
 		break;
+	default:
+		break;
 	}
 #pragma endregion
 
@@ -99,6 +101,13 @@ void Ume::Update()
 			m_IsActive = false;
 		}
 
+		// キルアニメーションが終わったら殺す処理
+		if (!m_CanKill && m_iFrameCount >= 400) {
+			m_iFrameCount = 0;
+			m_HasKill = true;
+			m_CanKill = false;
+		}
+
 		if (m_iFrameCount >= 300) {
 			// ゲームオーバー処理
 			m_CanKill = true;
@@ -111,12 +120,6 @@ void Ume::Update()
 			}
 		}
 
-		// キルアニメーションが終わったら殺す処理
-		if (m_AnimationTex.m_Counter >= 2) {
-			m_iFrameCount = 0;
-			m_HasKill = true;
-			m_CanKill = false;
-		}
 
 		break;
 
@@ -127,15 +130,11 @@ void Ume::Update()
 
 void Ume::LoadTex()
 {
-
-	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
-	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
-	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 }
 
 void Ume::Draw()
 {
-	static Object* pRightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
+	Object* pRightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
 	if (m_IsActive == false)
@@ -196,11 +195,37 @@ void Ume::Draw()
 	}
 }
 
+bool DrawBlood(float x_, float y_);
+
 void Ume::KillAnimation()
 {
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_KILLANIME_TEX));
+		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
 	}
+}
+
+bool DrawBlood(float x_, float y_) {
+	Lib::Texture polygon("hoge");
+
+	static float timer = 0.f;
+
+	timer += 0.01f;
+
+	Vec2 pos;
+	pos.X = x_;
+	pos.Y = y_;
+	Size size;
+	size.Width = 1920.f;
+	size.Height = 1080.f;
+
+	DrawAlphaBox2D(polygon, pos, size, D3DXCOLOR(0.5f, 0.f, 0.f, timer));
+
+	if (timer >= 1.5f) {
+		timer = 0.f;
+		return true;
+	}
+	return false;
 }

@@ -57,10 +57,8 @@ void InitTitleScene()
 
 	InitTexture();
 
-	GameData::GetInstance()->LoadGameData();
 
 	Timer* pTimerInstance = Timer::GetInstance();
-	pTimerInstance->Init(Timer::Id::CLEAR);
 
 	ObjManager()->CreateTitleObj();
 	ObjManager()->Init();

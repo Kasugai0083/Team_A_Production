@@ -293,7 +293,12 @@ void DrawUVScrollTexture(float x, float y, Texture* texture_data, float tu, floa
 void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_)
 {
 	static int Timer = 0;
-	++Timer;
+	Timer++;
+	
+	animatinon_->m_KillingCounter += 0.1f;
+
+
+
 	if (Timer > animatinon_->m_Speed) {
 
 		++animatinon_->m_Counter;
@@ -305,6 +310,7 @@ void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_)
 	}
 
 	DrawTexture(x_, y_, animatinon_->m_TextureData[animatinon_->m_Counter]);
+
 }
 
 

@@ -50,6 +50,7 @@ struct AnimationTexture
 	int m_Speed;	// アニメションのスピード
 	int m_Length;	// アニメーションの枚数
 	int m_Counter;	// 現在何枚目かを数える変数
+	float m_KillingCounter;
 };
 
 

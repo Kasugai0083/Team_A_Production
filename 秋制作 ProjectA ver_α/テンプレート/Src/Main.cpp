@@ -23,6 +23,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	Accesor::CreateInstance();
 
 	Timer::CreateInstance();
+
+	GameData::GetInstance()->LoadGameData();
+
 	{
 		// エンジンの初期化
 		if (InitEngine(1920, 1080, "FaNF2", WINDOWED) == false)

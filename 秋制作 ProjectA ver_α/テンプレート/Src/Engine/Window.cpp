@@ -10,7 +10,9 @@
 
 HWND hWnd;
 HWND GetWindowHandle() { return hWnd; }
-
+POINT start_point;
+POINT end_point;
+bool is_click = false;
 LRESULT CALLBACK WindowProc(HWND window_handle, UINT message_id, WPARAM wparam, LPARAM lparam)
 {
 	switch (message_id)
@@ -18,7 +20,22 @@ LRESULT CALLBACK WindowProc(HWND window_handle, UINT message_id, WPARAM wparam, 
 	case WM_CLOSE:
 		PostQuitMessage(0);
 		break;
+
+	case WM_RBUTTONDOWN:
+	case WM_LBUTTONDOWN:
+		is_click = true;
 	
+	case WM_RBUTTONUP:
+	case WM_LBUTTONUP:
+		is_click = false;
+		end_point = start_point;
+
+	case WM_MOVE:
+		start_point.x = LOWORD(lparam);
+		start_point.y = HIWORD(lparam);
+		break;
+
+
 	default:
 		return DefWindowProc(window_handle, message_id, wparam, lparam);
 		break;
