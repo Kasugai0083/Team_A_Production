@@ -18,7 +18,8 @@ public:
 	Enemy(RoomID roomId_, EnemyID enemyId_) :
 		Character(false)
 	{
-		GameData::GetInstance()->SendEnemyData(&m_EnemyData, (int)enemyId_);
+		m_EnemyData.m_MovementSpeed = GameData::GetInstance()->GetEnemyData(enemyId_).m_MovementSpeed;
+		m_EnemyData.m_SpownJudge = GameData::GetInstance()->GetEnemyData(enemyId_).m_SpownJudge;
 		m_RoomId	  = roomId_;
 		m_iFrameCount = 0;
 		m_HasKill	  = false;

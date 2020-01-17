@@ -1,11 +1,12 @@
 #include "Botan.h"
 #include "../../../Engine/Graphics.h"
 #include "../../../Texture/Texture.h"
-#include <time.h>
-#include <stdlib.h>
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Audio/Audio.h"
+#include "../../../Utility/Probability.h"
+#include <time.h>
+#include <stdlib.h>
 
 void Botan::Init()
 {
@@ -14,8 +15,10 @@ void Botan::Init()
 
 void Botan::Update()
 {
+	Probability Prob;
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
+#if 0
 	if (m_pPlayer->HasGFreddySpown() == true) {
 		if (GetKey(FIVE_KEY)) {
 			m_IsActive = true;
@@ -25,12 +28,11 @@ void Botan::Update()
 	else {
 		m_SpawnJudgement = false;
 	}
+#endif
 
-#if 0
+#if 1
 	if (m_pPlayer->HasGFreddySpown() == true) {
-		if (SpawnJudgement(0.00) == true) {
-			m_IsActive = true;
-		}
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5)) { m_IsActive = true; }
 		m_SpawnJudgement = true;
 	}
 	else {

@@ -12,7 +12,7 @@ bool FileReader::LoadCSV(EnemyData* enemyData_, GameParam* gameParam_, Days* day
 	}
 
 	char buf[256];
-	int TmpDays;
+	int TmpDays = 0;
 	while (fgets(buf, 256, pFile) != nullptr)
 	{
 		if (buf[0] == '#') {

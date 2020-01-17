@@ -7,6 +7,8 @@
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Audio/Audio.h"
+#include "../../../Utility/Probability.h"
+
 
 void Ohagi::Init()
 {
@@ -14,8 +16,11 @@ void Ohagi::Init()
 
 void Ohagi::Update()
 {
+	Probability Prob;
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
+
+#if 0
 
 	if (GetKeyDown(ONE_KEY)) {
 
@@ -24,8 +29,14 @@ void Ohagi::Update()
 		m_RoomId = RoomID::ROOM_WORK;
 	}
 
-#if 0
-	if (m_IsActive == false && m_iFrameCount >= 2000) {
+#endif
+
+#if 1
+	if (m_IsActive == false && m_iFrameCount >= 100) {
+		if (Prob.GetRandomValue(0,m_EnemyData.m_SpownJudge,5) == false) { 
+			m_iFrameCount = 0;
+			return; 
+		}
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
@@ -41,7 +52,7 @@ void Ohagi::Update()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (m_iFrameCount >= 300) {
+ 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId      = RoomID::ROOM_RECEPTION;
@@ -50,7 +61,7 @@ void Ohagi::Update()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId      = RoomID::HALL_BACK;
@@ -59,7 +70,7 @@ void Ohagi::Update()
 
 	case RoomID::HALL_BACK:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::HALL_FRONT;
@@ -68,7 +79,7 @@ void Ohagi::Update()
 
 	case RoomID::HALL_FRONT:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_PRAYER;
@@ -87,7 +98,7 @@ void Ohagi::Update()
 			m_IsActive	  = false;
 		}
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_CanKill = true;
 

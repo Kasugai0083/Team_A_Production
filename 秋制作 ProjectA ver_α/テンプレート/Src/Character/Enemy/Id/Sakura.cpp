@@ -7,6 +7,8 @@
 #include "../../../Object/Object.h"
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Audio/Audio.h"
+#include "../../../Utility/Probability.h"
+
 
 void Sakura::Init()
 {
@@ -18,19 +20,25 @@ void Sakura::Init()
 
 void Sakura::Update()
 {
+	Probability Prob;
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 
+#if 0
 	if (GetKeyDown(TWO_KEY)) {
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
 		m_RoomId = RoomID::ROOM_WORK;
 	}
+#endif
 
-
-#if 0
-	if (m_IsActive == false && m_iFrameCount >= 5000) {
+#if 1
+	if (m_IsActive == false && m_iFrameCount >= 100) {
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5) == false) { 
+			m_iFrameCount = 0;
+			return; 
+		}
 
 		m_iFrameCount = 0;
 		m_IsActive	  = true;
@@ -46,7 +54,7 @@ void Sakura::Update()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_RECEPTION;
@@ -55,7 +63,7 @@ void Sakura::Update()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::LEFT_CORRIDOR;
@@ -64,7 +72,7 @@ void Sakura::Update()
 
 	case RoomID::LEFT_CORRIDOR:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::LEFT_SHOJI;
@@ -73,7 +81,7 @@ void Sakura::Update()
 
 	case RoomID::LEFT_SHOJI:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_LEFT_PRAYER;
@@ -101,7 +109,7 @@ void Sakura::Update()
 			m_IsActive = false;
 		}
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 			// ゲームオーバー処理
 			m_CanKill = true;
 

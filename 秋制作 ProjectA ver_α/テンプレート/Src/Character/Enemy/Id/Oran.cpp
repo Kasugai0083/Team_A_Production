@@ -6,6 +6,7 @@
 #include "../../../Object/ObjectManager.h"
 #include "../../../Engine/Input.h"
 #include "../../../Engine/Audio/Audio.h"
+#include "../../../Utility/Probability.h"
 
 void Ran::Init()
 {
@@ -13,21 +14,28 @@ void Ran::Init()
 
 void Ran::Update()
 {
+	Probability Prob;
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 	
 	//’Ç‰Á’†I
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 
+#if 0
 	if (GetKeyDown(FOUR_KEY)) {
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
 		m_RoomId = RoomID::ROOM_STORAGE;
 	}
+#endif
 
-#if 0
-	if (m_IsActive == false && m_iFrameCount >= 2000) {
+#if 1
+	if (m_IsActive == false && m_iFrameCount >= 100) {
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5) == false) { 
+			m_iFrameCount = 0;
+			return; 
+		}
 
 		m_iFrameCount = 0;
 		m_IsActive    = true;
@@ -43,7 +51,7 @@ void Ran::Update()
 	{
 	case RoomID::ROOM_STORAGE:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::HALL_BACK;
@@ -52,7 +60,7 @@ void Ran::Update()
 
 	case RoomID::HALL_BACK:
 
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::HALL_FRONT;
@@ -60,7 +68,7 @@ void Ran::Update()
 		break;
 
 	case RoomID::HALL_FRONT:
-		if (m_iFrameCount >= 300) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_PRAYER;
@@ -80,7 +88,7 @@ void Ran::Update()
 
 			m_iFrameCount = 0;
 		}
-		if (ActiveTimer >= 1200) {
+		if (ActiveTimer >= 700) {
 
 			m_IsActive = false;
 		}

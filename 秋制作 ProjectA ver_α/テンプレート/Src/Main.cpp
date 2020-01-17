@@ -9,6 +9,8 @@
 #include "Data/Accesor.h"
 #include "Data/GameData.h"
 
+#define DEBUG
+
 enum WINDOW_MODE {
 	WINDOWED,
 	FULL_SCLEEN
