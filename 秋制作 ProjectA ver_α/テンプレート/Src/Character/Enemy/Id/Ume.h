@@ -27,7 +27,8 @@ public:
 
 		m_AnimationTex.m_Counter = 0;
 		m_AnimationTex.m_Length = 3;
-		m_AnimationTex.m_Speed = 15;
+		m_AnimationTex.m_Speed = 60;
+		m_AnimationTex.m_KillingCounter = 0.f;
 
 		for (int i = 0; i < m_AnimationTex.m_Length; i++) {
 			m_AnimationTex.m_TextureData[i] = new Texture();

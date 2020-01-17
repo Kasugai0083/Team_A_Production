@@ -50,6 +50,7 @@ struct AnimationTexture
 	int m_Speed;	// アニメションのスピード
 	int m_Length;	// アニメーションの枚数
 	int m_Counter;	// 現在何枚目かを数える変数
+	float m_KillingCounter;
 };
 
 
@@ -106,6 +107,7 @@ void DrawUVMappingTexture(float x, float y, Texture* texture_data, float texture
 	アニメーションの描画用関数
 */
 void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_);
+bool DrawBlood(float x_, float y_);
 
 /**
 * @brief テクスチャのUVスクロール描画関数@n

@@ -293,7 +293,12 @@ void DrawUVScrollTexture(float x, float y, Texture* texture_data, float tu, floa
 void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_)
 {
 	static int Timer = 0;
-	++Timer;
+	Timer++;
+	
+	animatinon_->m_KillingCounter += 0.1f;
+
+
+
 	if (Timer > animatinon_->m_Speed) {
 
 		++animatinon_->m_Counter;
@@ -305,9 +310,31 @@ void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_)
 	}
 
 	DrawTexture(x_, y_, animatinon_->m_TextureData[animatinon_->m_Counter]);
+
 }
 
+bool DrawBlood(float x_, float y_) {
+	Lib::Texture polygon("hoge");
 
+	static float timer = 0.f;
+
+	timer += 0.01f;
+
+	Vec2 pos;
+	pos.X = x_;
+	pos.Y = y_;
+	Size size;
+	size.Width = 1920.f;
+	size.Height = 1080.f;
+
+	DrawAlphaBox2D(polygon, pos, size, D3DXCOLOR(0.5f, 0.f, 0.f, timer));
+
+	if (timer >= 1.5f) {
+		timer = 0.f;
+		return true;
+	}
+	return false;
+}
 
 void DrawFont(float pos_x, float pos_y, const char* text, FontSize font_type, FontColor color)
 {
