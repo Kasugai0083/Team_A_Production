@@ -7,7 +7,7 @@ class Probability
 public:
 	// ˆø”‚ÉŠm—¦‚ğ“ü‚ê‚é
 	// 1.0f‚Å100%
-	bool ProbabilityJudge(double probability_);
+	bool GetRandomValue(int floor, int ceil, int val);
 };
 
 #endif

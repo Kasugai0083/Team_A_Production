@@ -99,6 +99,8 @@ bool Player::ControlGameScene() {
 
 			TmpRoom = m_ViewID;
 			m_ViewID = TmpMonitor;
+			
+			/*m_HasMonitor = true;*/
 
 			pTimerInstance->Init(Timer::Id::SCENE);
 			return true;
