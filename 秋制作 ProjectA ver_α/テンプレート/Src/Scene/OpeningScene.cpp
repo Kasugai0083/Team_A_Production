@@ -97,6 +97,9 @@ void DrawOpeningScene()
 
 void InitOpeningScene()
 {
+	InitTexture();
+
+
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
 

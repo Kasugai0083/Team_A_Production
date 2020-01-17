@@ -60,10 +60,14 @@ void CharacterManager::Draw()
 
 void CharacterManager::Release()
 {
+	//Characterの領域を解放
 	for (int i = 0; i < MAX_CHARACTER; i++) {
 		delete m_Charas[i];
 		m_Charas[i] = nullptr;
 	}
+
+	//テクスチャを解放
+	//ReleaseCategoryTexture(TEXTURE_CATEGORY_ENEMY);
 }
 
 void CharacterManager::LoadTex() {

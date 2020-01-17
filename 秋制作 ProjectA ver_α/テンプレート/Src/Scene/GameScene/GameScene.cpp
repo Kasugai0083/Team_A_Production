@@ -261,6 +261,29 @@ void DrawGameScene()
 
 void InitGameScene()
 {
+	InitTexture();
+
+	//デバッグ用
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
+	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
+	InitTexture();
 
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
@@ -268,8 +291,8 @@ void InitGameScene()
 	ObjManager()->CreateGameObj();
 	ObjManager()->Init();
 
-	//g_Manager.CreateCharacter();
-	//g_Manager.Initialize();
+	g_Manager.CreateCharacter();
+	
 	g_Manager.LoadTex();
 
 	//ゲームシーン背景
@@ -292,14 +315,13 @@ void InitGameScene()
 	LoadTexture("Res/Game/Left/left_shoji_back.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftShojiBackTex);
 	LoadTexture("Res/Game/Left/black_texture_left.png", TEXTURE_CATEGORY_GAME, GameCategoryTextureList::GameLeftBlackTex);
 
-
 	//モニターシーン
 	LoadTexture("Res/Game/Monitor/GameMonitorBg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorSpownBgTex);
+	//LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
 	LoadTexture("Res/Game/Monitor/Duct/LeftDuct.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorLeftDuctBgTex);
 	LoadTexture("Res/Game/Monitor/Duct/RightDuct.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorRightDuctBgTex);
 	LoadTexture("Res/Game/Monitor/child_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorChildRoomBgTex);
 	LoadTexture("Res/Game/Monitor/resption_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorResptionRoomBgTex);
-	LoadTexture("Res/Game/Monitor/store_room_bg.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorStoreRoomBgTex);
 	LoadTexture("Res/Game/Monitor/dust.png", TEXTURE_CATEGORY_MONITOR, MonitorCategoryTextureList::GameMonitorDustTex);
 
 	// オーディオ
@@ -325,6 +347,8 @@ void InitGameScene()
 void MainGameScene()
 {
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+
+;
 
 	if (pPlayer == nullptr) {
 		return;
@@ -365,8 +389,9 @@ SceneId FinishGameScene()
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_LEFT);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_RIGHT);
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
-	ReleaseCategoryTexture(TEXTURE_CATEGORY_ENEMY);
+
 	ObjManager()->ReleaseGameObj();
+	//g_Manager.Release();
 
 	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, false);

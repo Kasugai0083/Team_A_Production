@@ -21,7 +21,7 @@ bool InitEngine(int width_, int height_, const char* titleName_, bool isFull_)
 		return false;
 	}
 
-	InitTexture();
+	//InitTexture();
 
 	return true;
 }

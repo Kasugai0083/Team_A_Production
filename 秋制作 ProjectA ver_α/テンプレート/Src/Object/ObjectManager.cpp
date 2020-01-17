@@ -232,6 +232,8 @@ void ObjectManager::Release()
 		delete objects;
 		objects = nullptr;
 	}
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_TITLE_OBJECT);
+	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME_OBJECT);
 }
 
 bool ObjectManager::HasOnMouse(ObjID id_) {

@@ -62,6 +62,8 @@ bool Check() {
 
 void InitClearScene()
 {
+	InitTexture();
+
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 
@@ -104,7 +106,7 @@ SceneId FinishClearScene()
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Stop("GameOverBGM");
 
-	//g_Manager.Release();
+	g_Manager.Release();
 
 	return SceneId::TitleScene;
 }

@@ -46,7 +46,6 @@ void AllReleaseTexture();
 * @param[in] texture_id カテゴリー内のテクスチャID
 */
 bool LoadTexture(const char* file_name, int category_id, int texture_id);
-
 /**
 * @brief テクスチャデータの取得@n
 * 指定されたカテゴリのテクスチャデータを取得する

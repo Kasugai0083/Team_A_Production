@@ -47,13 +47,17 @@ void DrawTitleScene()
 	ObjManager()->Draw();
 
 	DayManager()->DrawCurrentDays();
-
 }
 
 
 
 void InitTitleScene()
 {
+
+	InitTexture();
+
+	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
+	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
 	GameData::GetInstance()->LoadGameData();
 
 	Timer* pTimerInstance = Timer::GetInstance();
@@ -62,8 +66,7 @@ void InitTitleScene()
 	ObjManager()->CreateTitleObj();
 	ObjManager()->Init();
 
-	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
-	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
+	
 
 	// オーディオ
 	auto audio = AudioPlayer::GetInstance(GetWindowHandle());

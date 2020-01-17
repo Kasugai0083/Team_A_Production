@@ -371,6 +371,7 @@ bool CreateTexture(const char* file_name, Texture* texture_data)
 		nullptr,
 		&texture_data->TexutreData)))
 	{
+		//MessageBox(NULL, "中本予想", NULL, MB_OK);
 		return false;
 	}
 	else
@@ -380,6 +381,7 @@ bool CreateTexture(const char* file_name, Texture* texture_data)
 
 		if (FAILED(texture_data->TexutreData->GetLevelDesc(0, &desc)))
 		{
+			MessageBox(NULL, "春日井予想", NULL, MB_OK);
 			texture_data->TexutreData->Release();
 			return false;
 		}
@@ -389,9 +391,6 @@ bool CreateTexture(const char* file_name, Texture* texture_data)
 
 	return true;
 }
-
-
-
 
 bool CreateGraphicsInterface()
 {

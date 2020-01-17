@@ -1,6 +1,7 @@
 ﻿#include <d3dx9.h>
 #include <stdlib.h>
 #include "Texture.h"
+#include <assert.h>
 
 // カテゴリごとのテクスチャ保存用配列
 static Texture** g_TextureList[MAX_TEXTURE_CATEGORY] = { nullptr };
@@ -35,6 +36,7 @@ void InitTexture()
 		for (int j = 0; j < TextureCaterogySize[i]; j++)
 		{
 			g_TextureList[i][j] = (Texture*)malloc(sizeof(Texture));
+
 			g_TextureList[i][j]->TexutreData = nullptr;
 		}
 	}
@@ -63,10 +65,17 @@ void AllReleaseTexture()
 {
 	for (int i = 0; i < MAX_TEXTURE_CATEGORY; i++)
 	{
+		if (g_TextureList[i] == NULL)
+		{
+			continue;
+		}
 		ReleaseCategoryTexture(i);
-
+		for (int j = 0; j < TextureCaterogySize[i]; j++)
+		{
+			free(g_TextureList[i][j]);
+		}
 		free(g_TextureList[i]);
-		g_TextureList[i] = nullptr;
+		g_TextureList[i] = NULL;
 	}
 }
 

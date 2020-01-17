@@ -6,7 +6,6 @@
 
 DayController::DayController() {
 	m_Days = Days::DAY_1;
-	m_pPlayer = g_Manager.GetCharacter(PLAYER);
 };
 
 
@@ -27,6 +26,8 @@ void DayController::DrawCurrentDays() {
 void DayController::CheckClear() {
 	// クリアフラグをどっかでとってDAYを進行する
 
+	m_pPlayer = g_Manager.GetCharacter(PLAYER);
+	
 	//bool check = true;
 	bool check = m_pPlayer->IsActive();
 
