@@ -10,6 +10,8 @@
 #include "../Engine/Audio/Audio.h"
 #include "../Data/Days/DayController.h"
 #include "../Object/ObjectManager.h"
+#include "../Texture/LoadTex.h"
+
 
 class OpController {
 public:
@@ -99,17 +101,12 @@ void InitOpeningScene()
 {
 	InitTexture();
 
-
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init(Timer::Id::SCENE);
 
 	OpCon.Init();
 
-	LoadTexture("Res/Opening/operation_scene.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex);
-	LoadTexture("Res/Opening/operation_scene2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex);
-	LoadTexture("Res/Opening/operation_scene_day2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex);
-	LoadTexture("Res/Opening/operation_scene_day3.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary4Tex);
-
+	LoadSceneTex(SceneId::OpeningScene);
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Load("Book", "Sound/Book.wav");

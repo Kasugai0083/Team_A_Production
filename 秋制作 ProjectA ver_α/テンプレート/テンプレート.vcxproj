@@ -171,6 +171,7 @@
     <ClCompile Include="Src\Scene\OpeningScene.cpp" />
     <ClCompile Include="Src\Scene\Scene.cpp" />
     <ClCompile Include="Src\Scene\TitleScene.cpp" />
+    <ClCompile Include="Src\Texture\LoadTex.cpp" />
     <ClCompile Include="Src\Texture\Texture.cpp" />
     <ClCompile Include="Src\Timer\Timer.cpp" />
     <ClCompile Include="Src\Utility\Common.cpp" />
@@ -217,6 +218,7 @@
     <ClInclude Include="Src\Texture\EnemyTex.h" />
     <ClInclude Include="Src\Texture\GameSceneTex.h" />
     <ClInclude Include="Src\Texture\GameObjectTex.h" />
+    <ClInclude Include="Src\Texture\LoadTex.h" />
     <ClInclude Include="Src\Texture\OpeningSceneTex.h" />
     <ClInclude Include="Src\Texture\ResultSceneTex.h" />
     <ClInclude Include="Src\Texture\Texture.h" />

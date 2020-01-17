@@ -103,20 +103,6 @@ void Margaret::LoadTex()
 	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
 	CreateTexture("Res/Game/Enemy/Margaret/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
 
-	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_body_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX);
-	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_eye_gray.png",  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX);
-
-	// –Ú‚ÌUI
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/UI_me_64.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_EYE_TEX);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_1.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_1);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_2.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_2);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_3.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_3);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_4.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_4);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_5.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_5);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_6.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_6);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_7.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_7);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_8.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_8);
-	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_9.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_9);
 }
 
 void Margaret::Draw()

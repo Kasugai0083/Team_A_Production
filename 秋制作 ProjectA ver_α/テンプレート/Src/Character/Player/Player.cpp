@@ -169,7 +169,6 @@ void Player::Draw() {
 
 void Player::LoadTex()
 {
-	LoadTexture("Res/Game/Player/Mask.png", TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_MASK_TEX);
 }
 
 const bool Player::CurrentViewID(const SubGameScene sceneId_) const

@@ -10,11 +10,6 @@
 
 void Sakura::Init()
 {
-	LoadTexture("Res/Game/Enemy/Sakura/sak_design_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX);
-	LoadTexture("Res/Game/Enemy/Sakura/sak_walk_gray.png",   TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_WALK_TEX);
-	LoadTexture("Res/Game/Enemy/Sakura/sak_look.png",		 TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_LOOK_TEX);
-	LoadTexture("Res/Game/Enemy/Sakura/sak_design.png",      TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_PLAYER_TEX);
-	LoadTexture("Res/Game/Enemy/Sakura/KillAnimation/sak_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_KILLANIME_TEX);
 
 	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Sakura/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);

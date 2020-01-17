@@ -127,11 +127,6 @@ void Ume::Update()
 
 void Ume::LoadTex()
 {
-	LoadTexture("Res/Game/Enemy/Ume/ume_design_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX);
-	LoadTexture("Res/Game/Enemy/Ume/ume_walk_gray.png",   TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_WALK_TEX);
-	LoadTexture("Res/Game/Enemy/Ume/ume_look.png",		  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_LOOK_TEX);
-	LoadTexture("Res/Game/Enemy/Ume/ume_design.png",	  TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_PLAYER_TEX);
-	LoadTexture("Res/Game/Enemy/Ume/KillAnimation/ume_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_KILLANIME_TEX);
 
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Ume/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);

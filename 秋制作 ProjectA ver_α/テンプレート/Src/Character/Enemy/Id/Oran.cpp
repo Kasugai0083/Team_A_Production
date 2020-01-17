@@ -115,10 +115,6 @@ void Ran::Update()
 
 void Ran::LoadTex()
 {
-	LoadTexture("Res/Game/Enemy/Ran/ran_come_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX);
-	LoadTexture("Res/Game/Enemy/Ran/ran_come.png",		TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX);
-	LoadTexture("Res/Game/Enemy/Ran/Ran_Far.png",		TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX);
-	LoadTexture("Res/Game/Enemy/Ran/KillAnimation/ran_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_KILLANIME_TEX);
 
 	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Ran/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);

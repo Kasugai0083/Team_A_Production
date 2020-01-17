@@ -13,6 +13,7 @@
 #include "../Data/Days/DayController.h"
 #include "../Data/GameData.h"
 #include "../Utility/FileReader.h"
+#include "../Texture/LoadTex.h"
 
 // タイトルシーンの初期化
 void InitTitleScene();
@@ -56,8 +57,6 @@ void InitTitleScene()
 
 	InitTexture();
 
-	LoadTexture("Res/Title/TitleBg.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleBgTex);
-	LoadTexture("Res/Game/Enemy/Bonnie.png", TEXTURE_CATEGORY_TITLE, TitleCategoryTextureList::TitleFreeTex);
 	GameData::GetInstance()->LoadGameData();
 
 	Timer* pTimerInstance = Timer::GetInstance();
@@ -66,7 +65,7 @@ void InitTitleScene()
 	ObjManager()->CreateTitleObj();
 	ObjManager()->Init();
 
-	
+	LoadSceneTex(SceneId::TitleScene);
 
 	// オーディオ
 	auto audio = AudioPlayer::GetInstance(GetWindowHandle());

@@ -10,6 +10,7 @@
 #include "../Data/Days/DayController.h"
 #include "../Engine/Audio/Audio.h"
 #include "../Object/ObjectManager.h"
+#include "../Texture/LoadTex.h"
 
 // ゲームオーバーシーンの初期化
 void InitClearScene();
@@ -67,14 +68,11 @@ void InitClearScene()
 	Timer* pTimerInstance = Timer::GetInstance();
 	pTimerInstance->Init();
 
-	LoadTexture("Res/End/EndBg.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex);
-	LoadTexture("Res/End/GameOver.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex);
-
 	//true => クリア時Daysを進める
 	DayManager()->CheckClear();
-
-	//DayManager()->CheckClear(true);
 	
+	LoadSceneTex(SceneId::ClearScene);
+
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Load("GameOverBGM", "Sound/GameOverBGM.wav");
 

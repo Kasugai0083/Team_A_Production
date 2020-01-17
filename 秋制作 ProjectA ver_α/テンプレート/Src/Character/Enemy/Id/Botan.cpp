@@ -93,8 +93,7 @@ bool Botan::SpawnJudgement(double probability_)
 
 void Botan::LoadTex()
 {
-	LoadTexture("Res/Game/Enemy/Botan/Botan.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_PLAYER_TEX);
-	
+	// koko
 	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/1_.png", m_AnimationTex.m_TextureData[0]);
 	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/2_.png", m_AnimationTex.m_TextureData[1]);
 	CreateTexture("Res/Game/Enemy/Botan/KillAnimation/3_.png", m_AnimationTex.m_TextureData[2]);
