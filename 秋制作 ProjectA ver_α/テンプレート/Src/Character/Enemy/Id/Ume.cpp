@@ -195,8 +195,6 @@ void Ume::Draw()
 	}
 }
 
-bool DrawBlood(float x_, float y_);
-
 void Ume::KillAnimation()
 {
 	if (m_CanKill == true)
@@ -207,25 +205,3 @@ void Ume::KillAnimation()
 	}
 }
 
-bool DrawBlood(float x_, float y_) {
-	Lib::Texture polygon("hoge");
-
-	static float timer = 0.f;
-
-	timer += 0.01f;
-
-	Vec2 pos;
-	pos.X = x_;
-	pos.Y = y_;
-	Size size;
-	size.Width = 1920.f;
-	size.Height = 1080.f;
-
-	DrawAlphaBox2D(polygon, pos, size, D3DXCOLOR(0.5f, 0.f, 0.f, timer));
-
-	if (timer >= 1.5f) {
-		timer = 0.f;
-		return true;
-	}
-	return false;
-}

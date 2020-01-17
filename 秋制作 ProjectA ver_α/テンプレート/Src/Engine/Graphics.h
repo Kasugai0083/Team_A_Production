@@ -107,6 +107,7 @@ void DrawUVMappingTexture(float x, float y, Texture* texture_data, float texture
 	アニメーションの描画用関数
 */
 void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_);
+bool DrawBlood(float x_, float y_);
 
 /**
 * @brief テクスチャのUVスクロール描画関数@n
