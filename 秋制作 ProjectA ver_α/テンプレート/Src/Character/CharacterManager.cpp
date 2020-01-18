@@ -49,12 +49,16 @@ void CharacterManager::Update()
 
 void CharacterManager::Draw()
 {
-	for (int i = 0; i < MAX_CHARACTER; i++) {
+
+	for (int i = 1; i < MAX_CHARACTER; i++) {
 		if (m_Charas[i] != nullptr) {
 
 			m_Charas[i]->Draw();
 		}
 	}
+
+	m_Charas[PLAYER]->Draw();
+
 }
 
 

@@ -92,11 +92,13 @@ void EndGraphics()
 
 bool DrawStart()
 {
-	g_D3DDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0, 0, 0), 0.0f, 0);
+	g_D3DDevice->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB(0, 0, 0), 0.0f, 0);
 
 	g_D3DDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, true);
 	g_D3DDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
 	g_D3DDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
+
+	g_D3DDevice->SetRenderState(D3DRS_ZENABLE, TRUE);
 
 	if (D3D_OK == g_D3DDevice->BeginScene())
 	{
@@ -442,8 +444,7 @@ bool CreateGraphicsDevice(D3DPRESENT_PARAMETERS* present_param, bool isFullScree
 	present_param->BackBufferCount = 1;
 	//ディスプレイモード
 	present_param->BackBufferFormat = D3DFMT_A8R8G8B8;
-	//ステンシルバッファのフォーマット
-	present_param->AutoDepthStencilFormat = D3DFMT_D24S8;
+
 	//バックバッファからフロントバッファへ転送時のオプション
 	present_param->Flags = D3DPRESENTFLAG_DISCARD_DEPTHSTENCIL;
 
@@ -475,6 +476,8 @@ bool CreateGraphicsDevice(D3DPRESENT_PARAMETERS* present_param, bool isFullScree
 	present_param->MultiSampleQuality = 0;
 	//深度ステンシルバッファがあるかどうか
 	present_param->EnableAutoDepthStencil = TRUE;
+	//ステンシルバッファのフォーマット
+	present_param->AutoDepthStencilFormat = D3DFMT_D16;
 	//スワップエフェクトの書き換えタイミング
 	present_param->PresentationInterval = D3DPRESENT_INTERVAL_ONE;
 	// スワップエフェクト => バックバッファとフロントバッファへの切り替え方法
@@ -637,6 +640,7 @@ void DrawAlphaBox2D(
 
 	g_D3DDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);//上で設定したアルファをブレンドします宣言モス
 	g_D3DDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);//透過ポリゴンが２枚重なったたときの濃淡の設定モス
+
 	g_D3DDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vtx, sizeof(Vertex));
 }
 //---------------------------------

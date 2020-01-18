@@ -2,8 +2,8 @@
 #define CHARACTERID_H_
 
 enum CharacterID {
-
 	PLAYER,		// プレイヤー
+
 	OHAGI,		// 正面
 	UME,		// 右
 	SAKURA,		// 左
@@ -28,5 +28,7 @@ enum class EnemyID : int {
 	MAX_ENEMY,
 	
 };
+
+
 
 #endif

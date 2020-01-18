@@ -130,10 +130,12 @@ void Player::Update()
 			pAudio->Play("MaskSE");
 			once = true;
 		}
-		m_IsMask = true;
+
+		//m_IsMask = true;
+	
 	}
 	else {
-		m_IsMask = false;
+		//m_IsMask = false;
 
 		once = false;
 	}
@@ -163,6 +165,9 @@ void Player::Update()
 		m_HasGFreddySpown = false;
 	}
 
+
+	m_IsMask = m_MaskAnimation >= 1080.f ? true : false;
+
 }
 
 void Player::Draw() {
@@ -186,14 +191,18 @@ void Player::OnMask() {
 		return;
 	}
 
-	if (m_IsMask == true) {
+	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
+
+	if (pMaskUI->HasMask() == true) {
 		if (m_MaskAnimation <= 1100.0f) {
 			m_MaskAnimation += 50.f;
 			if (m_MaskAnimation >= 1080.0f) {
 				m_MaskAnimation = 1080.0f;
 			}
 		}
+
 		DrawTexture(0.0f, (-1080.f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_MASK_TEX));
+
 	}
 	else {
 		if (m_MaskAnimation >= -1080.f) {
@@ -205,3 +214,4 @@ void Player::OnMask() {
 		DrawTexture(0.0f, (-1080.0f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_MASK_TEX));
 	}
 }
+
