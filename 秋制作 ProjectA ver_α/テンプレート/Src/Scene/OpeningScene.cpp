@@ -42,7 +42,16 @@ public:
 				m_Count++;
 			}
 		}
-		m_BlackFade.a -= 0.01f;
+
+		if (m_BlackFade.a <= 0.f) {
+			m_BlackFade.a = 0.f;
+			//« ‚±‚±‚ÅSE‚ð–Â‚ç‚·
+
+		}
+		else {
+			m_BlackFade.a -= 0.01f;
+		}
+
 	};
 
 	int GetCount() { return m_Count; };
