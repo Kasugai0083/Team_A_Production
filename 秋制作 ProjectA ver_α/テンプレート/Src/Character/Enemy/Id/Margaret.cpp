@@ -61,6 +61,8 @@ void Margaret::Update()
 	}
 	else if (m_iFrameCount < 800 && m_iFrameCount > 400) {
 		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_8;
+		// •s‰¸‚È‰¹‚ð–Â‚ç‚·
+
 	}
 	else if (m_iFrameCount < 400 && m_iFrameCount > 0) {
 		m_TextureCategory = EnemyCategoryTextureList::MARGARET_PIZA_9;
