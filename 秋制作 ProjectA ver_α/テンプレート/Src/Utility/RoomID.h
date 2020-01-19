@@ -19,6 +19,8 @@ enum RoomID {
 	ROOM_RIGHT_PRAYER,	// ‰E‹F“˜Žº
 	ROOM_LEFT_PRAYER,	// ¶‹F“˜Žº
 
+	ROOM_VOID,			// ˆŸ‹óŠÔ
+
 };
 
 

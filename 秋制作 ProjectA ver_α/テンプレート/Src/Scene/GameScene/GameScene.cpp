@@ -290,6 +290,10 @@ void InitGameScene()
 	pAudio->Load("BotanKillVoice", "Sound/BotanKillVoice.wav");
 	pAudio->Load("PuppetKillVoice", "Sound/PuppetKillVoice.wav");
 	pAudio->Load("ToMonitor", "Sound/ToMonitor.wav");
+	pAudio->Load("YukaKisimiSE", "Sound/KisimiSE.wav");
+	pAudio->Load("ClearSE", "Sound/ClearSE.wav");
+	pAudio->Load("ChildRoomBGM", "Sound/ChildRoomBGM.wav");
+
 
 
 	ChangeSceneStep(SceneStep::MainStep);

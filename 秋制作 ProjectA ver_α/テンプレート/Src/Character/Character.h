@@ -5,6 +5,7 @@
 
 #include "..//Scene/Scene.h"
 #include "../Data/GameData.h"
+#include "../Utility/RoomID.h"
 
 class Character {
 public:
@@ -56,7 +57,7 @@ public:
 
 	virtual const bool CurrentViewID(const SubGameScene sceneId_) const { return 0; }
 
-	virtual RoomID GetRoomID() const {}
+	virtual RoomID GetRoomID() const { return RoomID::HALL_FRONT; }
 
 protected:
 	bool m_IsActive;

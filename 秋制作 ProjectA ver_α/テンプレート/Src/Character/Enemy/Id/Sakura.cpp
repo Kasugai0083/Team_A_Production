@@ -35,7 +35,7 @@ void Sakura::Update()
 
 #if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 2) == false) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 2) == true) { 
 			m_iFrameCount = 0;
 			return; 
 		}
@@ -54,8 +54,11 @@ void Sakura::Update()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(ROOM_RECEPTION) == false) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+			if (g_Manager.IsSameRoom(ROOM_RECEPTION) == true) {
+				m_iFrameCount = 0;
+				break;
+			}
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_RECEPTION;
@@ -64,8 +67,11 @@ void Sakura::Update()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(LEFT_CORRIDOR) == false) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+			if (g_Manager.IsSameRoom(LEFT_CORRIDOR) == true) {
+				m_iFrameCount = 0;
+				break;
+			}
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::LEFT_CORRIDOR;
@@ -74,8 +80,11 @@ void Sakura::Update()
 
 	case RoomID::LEFT_CORRIDOR:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(LEFT_SHOJI) == false) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+			if (g_Manager.IsSameRoom(LEFT_SHOJI) == true) {
+				m_iFrameCount = 0;
+				break;
+			}
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::LEFT_SHOJI;
@@ -84,10 +93,12 @@ void Sakura::Update()
 
 	case RoomID::LEFT_SHOJI:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(ROOM_PRAYER) == false
-			&& g_Manager.IsSameRoom(ROOM_LEFT_PRAYER) == false
-			&& g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == false) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+			if (g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == true
+				|| g_Manager.IsSameRoom(ROOM_PRAYER) == true) {
+				m_iFrameCount = 0;
+				break;
+			}
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_LEFT_PRAYER;
@@ -98,13 +109,25 @@ void Sakura::Update()
 
 	switch (m_RoomId)
 	{
+	case RoomID::LEFT_SHOJI:
+	{
+		static bool once = false;
+		if (!once)
+		{
+			pAudio->Play("YukaKisimiSE");
+			once = true;
+		}
+	}
+	break;
+
 	case RoomID::ROOM_LEFT_PRAYER:
 
 
 		if (m_pPlayer->HasMask() == true) {
 
 			m_iFrameCount = 0;
-			m_IsActive = false;
+			m_IsActive	  = false;
+			m_RoomId	  = ROOM_WORK;
 		}
 
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
@@ -130,7 +153,6 @@ void Sakura::Update()
 	default:
 		break;
 	}
-
 }
 
 void Sakura::LoadTex()
@@ -141,7 +163,7 @@ void Sakura::LoadTex()
 void Sakura::Draw()
 {
 	Object* pLeftCandle = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
-	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+	Character* pPlayer  = g_Manager.GetCharacter(PLAYER);
 
 	if (m_IsActive == false)
 	{

@@ -52,7 +52,7 @@ void Ran::Update()
 	case RoomID::ROOM_STORAGE:
 
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(HALL_BACK) == false) {
+			&& g_Manager.IsSameRoom(HALL_BACK) == true) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::HALL_BACK;
@@ -70,10 +70,12 @@ void Ran::Update()
 		break;
 
 	case RoomID::HALL_FRONT:
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(ROOM_PRAYER) == false
-			&& g_Manager.IsSameRoom(ROOM_LEFT_PRAYER) == false
-			&& g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == false) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+			if (g_Manager.IsSameRoom(ROOM_LEFT_PRAYER) == true
+				|| g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == true) {
+				m_iFrameCount = 0;
+				break;
+			}
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_PRAYER;

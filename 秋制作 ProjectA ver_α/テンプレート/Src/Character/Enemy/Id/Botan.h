@@ -16,7 +16,7 @@ public:
 		コンストラクタ
 	*/
 	Botan() :
-		Enemy(RoomID::ROOM_PRAYER, EnemyID::BOTAN)
+		Enemy(RoomID::ROOM_VOID, EnemyID::BOTAN)
 	{
 		m_pPlayer = g_Manager.GetCharacter(PLAYER);
 		if (m_pPlayer == nullptr) {

@@ -32,7 +32,10 @@ void Botan::Update()
 
 #if 1
 	if (m_pPlayer->HasGFreddySpown() == true) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5)) { m_IsActive = true; }
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5)) { 
+			m_IsActive = true; 
+			m_RoomId   = RoomID::ROOM_PRAYER;
+		}
 		m_SpawnJudgement = true;
 	}
 	else {
@@ -72,6 +75,7 @@ void Botan::Update()
 	// ボタンの死亡処理
 	if (m_pPlayer->HasMask() == true) {
 		m_IsActive = false;
+		m_RoomId   = RoomID::ROOM_VOID;
 	}
 
 	// キルアニメーションが終わったら殺す処理
