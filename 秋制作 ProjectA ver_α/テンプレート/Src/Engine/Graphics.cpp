@@ -315,6 +315,47 @@ void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_)
 
 }
 
+void DrawFade(bool in_, D3DXCOLOR color_) {
+
+	Lib::Texture polygon("hoge");
+
+	//static float fadeout_timer = 0.f;
+	//static float fadein_timer = 1.5f;
+
+	//bool finish = false;
+
+	//if (!finish == false) {
+	//	fadeout_timer += 0.01f;
+	//	fadein_timer -= 0.01f;
+	//}
+
+	//if (in_ == true) {
+	//	color_.a = fadein_timer;
+	//}
+	//else {
+	//	color_.a = fadeout_timer;
+	//}
+
+	Vec2 pos;
+	pos.X = 0.f;
+	pos.Y = 0.f;
+	Size size;
+	size.Width = 1920.f;
+	size.Height = 1080.f;
+
+	DrawAlphaBox2D(polygon, pos, size, color_);
+
+	//if (fadeout_timer >= 1.5f) {
+	//	fadeout_timer = 0.f;
+	//	finish = true;
+	//}
+	//if (fadein_timer <= 0.f) {
+	//	fadein_timer = 1.5f;
+	//	finish = true;
+	//}
+
+}
+
 bool DrawBlood(float x_, float y_) {
 	Lib::Texture polygon("hoge");
 

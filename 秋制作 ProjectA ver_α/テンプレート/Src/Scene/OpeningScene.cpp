@@ -20,7 +20,16 @@ public:
 
 	void Init() { 
 		m_Count = 0;
+		m_BlackFade.r = 0.f;
+		m_BlackFade.g = 0.f;
+		m_BlackFade.b = 0.f;
+		m_BlackFade.a = 1.5f;
 	};
+
+	void Draw() {
+		DrawFade(true, m_BlackFade);
+	}
+
 	void Update() {
 		Timer* pTimerInstance = Timer::GetInstance();
 		pTimerInstance->Update();
@@ -33,12 +42,14 @@ public:
 				m_Count++;
 			}
 		}
+		m_BlackFade.a -= 0.01f;
 	};
 
 	int GetCount() { return m_Count; };
 private:
 
 	int m_Count;
+	D3DXCOLOR m_BlackFade;
 };
 
 static OpController OpCon;
@@ -69,8 +80,11 @@ SceneId UpdateOpeningScene()
 }
 
 
+
+
 void DrawOpeningScene()
 {
+
 
 	switch (DayManager()->GetCurrentDays())
 	{
@@ -79,21 +93,37 @@ void DrawOpeningScene()
 		break;
 	case Days::DAY_1:
 		if (OpCon.GetCount() == 0) {
-			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex));
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDay1Tex));
 		}
 		else if (OpCon.GetCount() == 1) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary1Tex));
+		}
+		else if (OpCon.GetCount() == 2) {
 			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex));
 		}
 		break;
 	case Days::DAY_2:
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex));
+		if (OpCon.GetCount() == 0) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDay2Tex));
+		}
+		else if (OpCon.GetCount() == 1) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex));
+		}
 		break;
 	case Days::DAY_3:
-		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary4Tex));
+		if (OpCon.GetCount() == 0) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDay3Tex));
+		}
+		else if (OpCon.GetCount() == 1) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary4Tex));
+		}
+
 		break;
 	default:
 		break;
 	}
+
+	OpCon.Draw();
 
 }
 
@@ -124,17 +154,17 @@ void MainOpeningScene()
 	case Days::DAY_0:
 		break;
 	case Days::DAY_1:
-		if (OpCon.GetCount() == 2) {
+		if (OpCon.GetCount() == 3) {
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 		break;
 	case Days::DAY_2:
-		if (OpCon.GetCount() == 1) {
+		if (OpCon.GetCount() == 2) {
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 		break;
 	case Days::DAY_3:
-		if (OpCon.GetCount() == 1) {
+		if (OpCon.GetCount() == 2) {
 			ChangeSceneStep(SceneStep::EndStep);
 		}
 		break;
