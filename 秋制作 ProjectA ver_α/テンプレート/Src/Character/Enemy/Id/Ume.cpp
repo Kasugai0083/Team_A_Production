@@ -21,7 +21,7 @@ void Ume::Update()
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 
-#if 0
+#if 1
 	if (GetKeyDown(THREE_KEY)) {
 
 		m_iFrameCount = 0;
@@ -30,7 +30,7 @@ void Ume::Update()
 	}
 #endif
 
-#if 1
+#if 0
 	if (m_IsActive == false && m_iFrameCount >= 100) {
 		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 1) == true) { 
 			m_iFrameCount = 0;

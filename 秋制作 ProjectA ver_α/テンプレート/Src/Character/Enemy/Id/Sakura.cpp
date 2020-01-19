@@ -24,7 +24,7 @@ void Sakura::Update()
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 
-#if 0
+#if 1
 	if (GetKeyDown(TWO_KEY)) {
 
 		m_iFrameCount = 0;
@@ -33,7 +33,7 @@ void Sakura::Update()
 	}
 #endif
 
-#if 1
+#if 0
 	if (m_IsActive == false && m_iFrameCount >= 100) {
 		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 2) == true) { 
 			m_iFrameCount = 0;
@@ -129,6 +129,12 @@ void Sakura::Update()
 			m_IsActive	  = false;
 			m_RoomId	  = ROOM_WORK;
 		}
+		// キルアニメーションが終わったら殺す処理
+		if (!m_CanKill && m_iFrameCount >= 400) {
+			m_iFrameCount = 0;
+			m_HasKill = true;
+			m_CanKill = false;
+		}
 
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 			// ゲームオーバー処理
@@ -142,12 +148,7 @@ void Sakura::Update()
 			}
 		}
 
-		// キルアニメーションが終わったら殺す処理
-		if (m_AnimationTex.m_Counter >= 2) {
-			m_iFrameCount = 0;
-			m_HasKill = true;
-			m_CanKill = false;
-		}
+
 
 		break;
 	default:
@@ -228,5 +229,6 @@ void Sakura::KillAnimation()
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_KILLANIME_TEX));
+		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
 	}
 }

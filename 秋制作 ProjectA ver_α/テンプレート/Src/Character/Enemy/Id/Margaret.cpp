@@ -36,6 +36,11 @@ void Margaret::Update()
 	}
 	else if (CountFrag){
 		m_iFrameCount--;
+
+		if (m_iFrameCount <= 0) {
+			m_iFrameCount = 0;
+		}
+
 	}
 
 	if (m_iFrameCount >= 3200) {
@@ -73,6 +78,9 @@ void Margaret::Update()
 	if (m_iFrameCount <= 0) {
 
 		m_IsActive = true;
+		//m_CanKill = true;
+
+
 	}
 
 
@@ -81,22 +89,26 @@ void Margaret::Update()
 
 	if (m_IsActive == true) {
 		// ↓ゲームオーバー処理↓ //
-		m_CanKill = true;
 
 		static bool once = false;
+
 		if (!once)
 		{
 			pAudio->Play("PuppetKillVoice");
 			once = true;
+
+			m_CanKill = true;
 		}
 	}
 
 	// キルアニメーションが終わったら殺す処理
-	if (m_AnimationTex.m_Counter >= 2) {
+	if (!m_CanKill && m_iFrameCount <= 0) {
 		m_iFrameCount = 0;
 		m_HasKill = true;
 		m_CanKill = false;
 	}
+
+
 
 }
 
@@ -125,5 +137,7 @@ void Margaret::KillAnimation()
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
+
 	}
 }

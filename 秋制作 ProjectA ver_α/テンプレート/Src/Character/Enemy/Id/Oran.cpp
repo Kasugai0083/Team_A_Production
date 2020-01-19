@@ -21,7 +21,7 @@ void Ran::Update()
 	//追加中！
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 
-#if 0
+#if 1
 	if (GetKeyDown(FOUR_KEY)) {
 
 		m_iFrameCount = 0;
@@ -30,7 +30,7 @@ void Ran::Update()
 	}
 #endif
 
-#if 1
+#if 0
 	if (m_IsActive == false && m_iFrameCount >= 100) {
 		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5) == false) { 
 			m_iFrameCount = 0;
@@ -51,8 +51,11 @@ void Ran::Update()
 	{
 	case RoomID::ROOM_STORAGE:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(HALL_BACK) == true) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+			if (g_Manager.IsSameRoom(HALL_BACK) == true) {
+				m_iFrameCount = 0;
+				break;
+			}
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::HALL_BACK;
@@ -61,9 +64,11 @@ void Ran::Update()
 
 	case RoomID::HALL_BACK:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
-			&& g_Manager.IsSameRoom(HALL_FRONT) == false) {
-
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed){
+			if (g_Manager.IsSameRoom(HALL_FRONT) == true) {
+				m_iFrameCount = 0;
+					break;
+			}
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::HALL_FRONT;
 		}
@@ -98,6 +103,8 @@ void Ran::Update()
 		if (ActiveTimer >= 700) {
 
 			m_IsActive = false;
+			ActiveTimer = 0;
+			m_RoomId = RoomID::ROOM_STORAGE;
 		}
 		ActiveTimer++;
 
@@ -107,20 +114,22 @@ void Ran::Update()
 
 	case RoomID::ROOM_PRAYER:
 	{
-		m_CanKill = true;
-		static bool once = false;
+	// キルアニメーションが終わったら殺す処理
+	if (!m_CanKill && m_iFrameCount >= 130) {
+		m_iFrameCount = 0;
+		m_HasKill = true;
+		m_CanKill = false;
+	}
+
+	m_CanKill = true;
+	
+	static bool once = false;
 		if (!once)
 		{
 			pAudio->Play("OranKillVoice");
 			once = true;
 		}
 
-		// キルアニメーションが終わったら殺す処理
-		if (m_AnimationTex.m_Counter >= 2) {
-			m_iFrameCount = 0;
-			m_HasKill = true;
-			m_CanKill = false;
-		}
 	}
 		break;
 	default:
@@ -186,5 +195,7 @@ void Ran::KillAnimation()
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_KILLANIME_TEX));
+		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
+
 	}
 }

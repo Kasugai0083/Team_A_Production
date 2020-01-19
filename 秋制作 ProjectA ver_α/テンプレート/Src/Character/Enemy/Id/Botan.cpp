@@ -18,7 +18,7 @@ void Botan::Update()
 	Probability Prob;
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
-#if 0
+#if 1
 	if (m_pPlayer->HasGFreddySpown() == true) {
 		if (GetKey(FIVE_KEY)) {
 			m_IsActive = true;
@@ -30,7 +30,7 @@ void Botan::Update()
 	}
 #endif
 
-#if 1
+#if 0
 	if (m_pPlayer->HasGFreddySpown() == true) {
 		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5)) { 
 			m_IsActive = true; 
@@ -45,12 +45,6 @@ void Botan::Update()
 
 	if (m_IsActive == false) { return; }
 	// アクティブじゃなかったらここより下の処理にはいかない
-	
-	// ボタンの攻撃処理
-	//if (m_pPlayer->HasLight() == true
-	//	|| m_pPlayer->HasMonitor() == true) {
-	//	m_HasKill = true;
-	//}
 
 	// ボタンの攻撃処理(仮)
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
@@ -58,6 +52,8 @@ void Botan::Update()
 		|| m_pPlayer->HasMonitor() == true) {
 
 		m_CanKill = true;
+
+		m_iFrameCount = 0;
 
 		static bool once = false;
 		if (!once)
@@ -73,13 +69,16 @@ void Botan::Update()
 	///////////////////////
 	
 	// ボタンの死亡処理
-	if (m_pPlayer->HasMask() == true) {
+	if (m_pPlayer->HasMask() == true 
+		&& m_CanKill == false) {
 		m_IsActive = false;
 		m_RoomId   = RoomID::ROOM_VOID;
 	}
 
+
+
 	// キルアニメーションが終わったら殺す処理
-	if (m_AnimationTex.m_Counter >= 2) {
+	if (!m_CanKill && m_iFrameCount >= 120) {
 		m_iFrameCount = 0;
 		m_HasKill = true;
 		m_CanKill = false;
@@ -119,7 +118,9 @@ void Botan::KillAnimation()
 {
 	if (m_CanKill == true)
 	{
+		m_iFrameCount++;
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_KILLANIME_TEX));
+		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
 	}
 }

@@ -20,7 +20,7 @@ void Ohagi::Update()
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
 
-#if 0
+#if 1
 
 	if (GetKeyDown(ONE_KEY)) {
 
@@ -31,7 +31,7 @@ void Ohagi::Update()
 
 #endif
 
-#if 1
+#if 0
 	if (m_IsActive == false && m_iFrameCount >= 100) {
 		if (Prob.GetRandomValue(0,m_EnemyData.m_SpownJudge,5) == true) { 
 			m_iFrameCount = 0;
@@ -116,6 +116,13 @@ void Ohagi::Update()
 			m_RoomId	  = ROOM_WORK;
 		}
 
+		// キルアニメーションが終わったら殺す処理
+		if (!m_CanKill && m_iFrameCount >= 400) {
+			m_iFrameCount = 0;
+			m_HasKill = true;
+			m_CanKill = false;
+		}
+
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_CanKill = true;
@@ -128,12 +135,6 @@ void Ohagi::Update()
 			}
 		}
 
-		// キルアニメーションが終わったら殺す処理
-		if (m_AnimationTex.m_Counter >= 2) {
-			m_iFrameCount = 0;
-			m_HasKill = true;
-			m_CanKill = false;
-		}
 
 		break;
 	}
@@ -215,5 +216,6 @@ void Ohagi::KillAnimation()
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_KILLANIME_TEX));
+		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
 	}
 }
