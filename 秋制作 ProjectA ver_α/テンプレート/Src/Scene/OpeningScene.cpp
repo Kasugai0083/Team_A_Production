@@ -46,7 +46,7 @@ public:
 		if (m_BlackFade.a <= 0.f) {
 			m_BlackFade.a = 0.f;
 			//« ‚±‚±‚ÅSE‚ð–Â‚ç‚·
-
+			pAudio->Play("DaySE");
 		}
 		else {
 			m_BlackFade.a -= 0.01f;
@@ -149,6 +149,7 @@ void InitOpeningScene()
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Load("Book", "Sound/Book.wav");
+	pAudio->Load("DaySE", "Sound/DaySE.wav");
 
 	ChangeSceneStep(SceneStep::MainStep);
 

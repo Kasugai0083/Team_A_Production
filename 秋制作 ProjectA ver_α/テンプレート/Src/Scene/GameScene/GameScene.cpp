@@ -295,7 +295,6 @@ void InitGameScene()
 	pAudio->Load("ChildRoomBGM", "Sound/ChildRoomBGM.wav");
 
 
-
 	ChangeSceneStep(SceneStep::MainStep);
 }
 
@@ -348,6 +347,9 @@ SceneId FinishGameScene()
 
 	ObjManager()->ReleaseGameObj();
 	//g_Manager.Release();
+
+	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
+	pAudio->Stop("GameBGM");
 
 	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, false);

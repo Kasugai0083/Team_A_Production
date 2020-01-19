@@ -127,6 +127,7 @@ void LoadGameTex() {
 	LoadTexture("Res/Game/Enemy/Botan/KillAnimation/bot_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::BOTAN_KILLANIME_TEX);
 	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_body_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX);
 	LoadTexture("Res/Game/Enemy/Margaret/mag_camera_eye_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX);
+	LoadTexture("Res/Game/Enemy/Margaret/KillAnimation/mag_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_KILLANIME_TEX);
 
 	// –Ú‚ÌUI
 	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/UI_me_64.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_EYE_TEX);

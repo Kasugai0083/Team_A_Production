@@ -137,6 +137,7 @@ void Margaret::KillAnimation()
 	if (m_CanKill == true)
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
+		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_KILLANIME_TEX));
 		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
 
 	}
