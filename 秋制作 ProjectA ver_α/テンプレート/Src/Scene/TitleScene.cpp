@@ -47,7 +47,8 @@ void DrawTitleScene()
 
 	ObjManager()->Draw();
 
-	DayManager()->DrawCurrentDays();
+	// デバッグ用->現在の日数を表示
+	//DayManager()->DrawCurrentDays();
 }
 
 
