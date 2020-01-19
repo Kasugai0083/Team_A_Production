@@ -6,7 +6,7 @@
 #include "ClearScene.h"
 #include "OpeningScene.h"
 
-static SceneId g_CurrentSceneId = SceneId::GameScene;		// 動作中シーンID
+static SceneId g_CurrentSceneId = SceneId::TitleScene;		// 動作中シーンID
 static SceneStep g_CurrentSceneStep = SceneStep::InitStep;	// 動作中シーンのステップ
 
 //シーン管理の関数群

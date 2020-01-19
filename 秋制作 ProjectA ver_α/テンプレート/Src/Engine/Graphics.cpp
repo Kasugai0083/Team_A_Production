@@ -315,6 +315,22 @@ void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_)
 
 }
 
+void DrawFade(bool in_, D3DXCOLOR color_) {
+
+	Lib::Texture polygon("hoge");
+
+	Vec2 pos;
+	pos.X = 0.f;
+	pos.Y = 0.f;
+	Size size;
+	size.Width = 1920.f;
+	size.Height = 1080.f;
+
+	DrawAlphaBox2D(polygon, pos, size, color_);
+
+
+}
+
 bool DrawBlood(float x_, float y_) {
 	Lib::Texture polygon("hoge");
 

@@ -169,6 +169,12 @@ void LoadOpTex() {
 	LoadTexture("Res/Opening/operation_scene2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary2Tex);
 	LoadTexture("Res/Opening/operation_scene_day2.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary3Tex);
 	LoadTexture("Res/Opening/operation_scene_day3.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDiary4Tex);
+
+	LoadTexture("Res/Opening/one_night.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDay1Tex);
+	LoadTexture("Res/Opening/two_night.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDay2Tex);
+	LoadTexture("Res/Opening/three_night.png", TEXTURE_CATEGORY_OPENING, OpeningCategoryTextureList::OpeningDay3Tex);
+
+
 }
 
 void LoadClearTex() {

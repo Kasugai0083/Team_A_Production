@@ -109,6 +109,10 @@ void DrawUVMappingTexture(float x, float y, Texture* texture_data, float texture
 void DrawAnimation(float x_, float y_, AnimationTexture* animatinon_);
 bool DrawBlood(float x_, float y_);
 
+// in => true フェードイン
+// in => false フェードアウト
+void DrawFade(bool in_, D3DXCOLOR color_);
+
 /**
 * @brief テクスチャのUVスクロール描画関数@n
 * 指定された情報でテクスチャをUVスクロールして描画する@n
