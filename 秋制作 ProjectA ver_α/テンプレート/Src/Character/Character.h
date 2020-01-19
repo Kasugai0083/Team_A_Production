@@ -56,6 +56,8 @@ public:
 
 	virtual const bool CurrentViewID(const SubGameScene sceneId_) const { return 0; }
 
+	virtual RoomID GetRoomID() const {}
+
 protected:
 	bool m_IsActive;
 

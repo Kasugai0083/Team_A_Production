@@ -120,3 +120,16 @@ void CharacterManager::CreateCharacter()
 	m_Charas[MARGARET] = new Margaret;
 }
 
+bool CharacterManager::IsSameRoom(RoomID roomId_)
+{
+	for (int i = CharacterID::OHAGI; i <= ENEMY_NUM; i++)
+	{
+		if (m_Charas[i]->GetRoomID() == roomId_)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+

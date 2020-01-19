@@ -3,6 +3,7 @@
 
 #include "Character.h"
 #include "CharacterID.h"
+#include "../Utility/RoomID.h"
 
 // キャラクターマネージャークラス
 class CharacterManager {
@@ -63,6 +64,12 @@ public:
 	bool RefKill();
 
 	void CreateCharacter();
+
+	/*
+		引数の部屋に敵がいるかどうか
+		[roomId_] -> RoomID
+	*/
+	bool IsSameRoom(RoomID roomId_);
 
 private:
 

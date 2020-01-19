@@ -35,7 +35,7 @@ void Sakura::Update()
 
 #if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5) == false) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 2) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}
@@ -54,7 +54,8 @@ void Sakura::Update()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(ROOM_RECEPTION) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_RECEPTION;
@@ -63,7 +64,8 @@ void Sakura::Update()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(LEFT_CORRIDOR) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::LEFT_CORRIDOR;
@@ -72,7 +74,8 @@ void Sakura::Update()
 
 	case RoomID::LEFT_CORRIDOR:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(LEFT_SHOJI) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::LEFT_SHOJI;
@@ -81,7 +84,10 @@ void Sakura::Update()
 
 	case RoomID::LEFT_SHOJI:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(ROOM_PRAYER) == false
+			&& g_Manager.IsSameRoom(ROOM_LEFT_PRAYER) == false
+			&& g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_LEFT_PRAYER;
@@ -92,16 +98,8 @@ void Sakura::Update()
 
 	switch (m_RoomId)
 	{
-	case RoomID::LEFT_SHOJI:
-
-		if (m_pPlayer->HasMask() == true) {
-
-			m_iFrameCount = 0;
-			m_IsActive = false;
-		}
-		break;
-
 	case RoomID::ROOM_LEFT_PRAYER:
+
 
 		if (m_pPlayer->HasMask() == true) {
 

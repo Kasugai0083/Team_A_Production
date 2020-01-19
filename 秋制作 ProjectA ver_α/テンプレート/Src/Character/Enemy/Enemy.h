@@ -52,6 +52,8 @@ public:
 	*/
 	virtual void LoadTex()override {}
 
+	virtual RoomID GetRoomID() const override{ return m_RoomId; }
+
 	protected:
 	// エネミーの移動用タイマークラス(未実装)
 	class EnemyTimer

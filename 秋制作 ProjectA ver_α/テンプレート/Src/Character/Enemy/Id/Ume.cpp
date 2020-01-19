@@ -32,7 +32,7 @@ void Ume::Update()
 
 #if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5) == false) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 1) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}
@@ -51,7 +51,8 @@ void Ume::Update()
 	{
 	case RoomID::ROOM_WORK:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(ROOM_RECEPTION) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId	  = RoomID::ROOM_RECEPTION;
@@ -60,7 +61,8 @@ void Ume::Update()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(RIGHT_CORRIDOR) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId	  = RoomID::RIGHT_CORRIDOR;
@@ -69,7 +71,8 @@ void Ume::Update()
 
 	case RoomID::RIGHT_CORRIDOR:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(RIGHT_SHOJI) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::RIGHT_SHOJI;
@@ -78,7 +81,10 @@ void Ume::Update()
 
 	case RoomID::RIGHT_SHOJI:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(ROOM_PRAYER) == false
+			&& g_Manager.IsSameRoom(ROOM_LEFT_PRAYER) == false
+			&& g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_RIGHT_PRAYER;
@@ -91,15 +97,6 @@ void Ume::Update()
 
 	switch (m_RoomId)
 	{
-	case RoomID::RIGHT_SHOJI:
-
-		if (m_pPlayer->HasMask() == true) {
-
-			m_iFrameCount = 0;
-			m_IsActive	  = false;
-		}
-		break;
-
 	case RoomID::ROOM_RIGHT_PRAYER:
 
 		if (m_pPlayer->HasMask() == true) {

@@ -52,7 +52,8 @@ void Ohagi::Update()
 	{
 	case RoomID::ROOM_WORK:
 
- 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+ 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(ROOM_RECEPTION) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId      = RoomID::ROOM_RECEPTION;
@@ -61,7 +62,8 @@ void Ohagi::Update()
 
 	case RoomID::ROOM_RECEPTION:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(HALL_BACK) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId      = RoomID::HALL_BACK;
@@ -70,7 +72,8 @@ void Ohagi::Update()
 
 	case RoomID::HALL_BACK:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(HALL_FRONT) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::HALL_FRONT;
@@ -79,7 +82,10 @@ void Ohagi::Update()
 
 	case RoomID::HALL_FRONT:
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed
+			&& g_Manager.IsSameRoom(ROOM_PRAYER) == false
+			&& g_Manager.IsSameRoom(ROOM_LEFT_PRAYER) == false
+			&& g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == false) {
 
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_PRAYER;
