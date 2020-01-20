@@ -36,7 +36,7 @@ public:
 
 		auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
-		if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
+		if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT && m_BlackFade.a <= 0.f) {
 			if (OnMouseDown(Left) == true) {
 				pAudio->Play("Book");
 				m_Count++;
