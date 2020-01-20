@@ -97,13 +97,6 @@ void MainClearScene()
 			once = true;
 		}
 	}
-	else {
-		if (!once)
-		{
-			pAudio->Play("GameOverBGM");
-			once = true;
-		}
-	}
 
 	SceneController()->GameEnd();
 
@@ -118,11 +111,17 @@ SceneId FinishClearScene()
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_CLEAR);
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
-	pAudio->Stop("GameOverBGM");
 	pAudio->Stop("ClearSE");
+
+	// 敵の声を止める
+	pAudio->Stop("OhagiKillVoice");
+	pAudio->Stop("SakuraKillVoice");
+	pAudio->Stop("UmeKillVoice");
+	pAudio->Stop("OranKillVoice");
+	pAudio->Stop("BotanKillVoice");
+	pAudio->Stop("PuppetKillVoice");
 
 	g_Manager.Release();
 
 	return SceneId::TitleScene;
 }
-

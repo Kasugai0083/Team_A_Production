@@ -60,6 +60,11 @@ public:
 
 	virtual RoomID GetRoomID() const override{ return m_RoomId; }
 
+	/*
+		エネミーがプレイヤーを殺せるかどうか
+	*/
+	virtual bool CanKill() const override { return m_CanKill; }
+
 	protected:
 	// エネミーの移動用タイマークラス(未実装)
 	class EnemyTimer

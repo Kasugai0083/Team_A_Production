@@ -14,6 +14,8 @@ void Ran::Init()
 
 void Ran::Update()
 {
+	if (m_HasKill == true) { return; }
+
 	Probability Prob;
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	m_iFrameCount++;
@@ -30,9 +32,9 @@ void Ran::Update()
 	}
 #endif
 
-#if 0
+#if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5) == false) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 6) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}
@@ -100,7 +102,7 @@ void Ran::Update()
 
 			m_iFrameCount = 0;
 		}
-		if (ActiveTimer >= 700) {
+		if (ActiveTimer >= 1200) {
 
 			m_IsActive = false;
 			ActiveTimer = 0;
@@ -115,24 +117,22 @@ void Ran::Update()
 
 	case RoomID::ROOM_PRAYER:
 	{
-		static bool once = false;
-	// キルアニメーションが終わったら殺す処理
-	if (m_CanKill && m_Color.a >= 1.5f) {
-		m_iFrameCount = 0;
-		m_HasKill = true;
-		once = false;
-		//m_CanKill = false;
-	}
-
 		m_CanKill = true;
-		m_Color.a += 0.01f;
+		if (m_CanKill) { m_Color.a += 0.01f; }
 
+		static bool once = false;
 		if (!once)
 		{
 			pAudio->Play("OranKillVoice");
 			once = true;
 		}
 
+		// キルアニメーションが終わったら殺す処理
+		if (m_CanKill && m_Color.a >= 1.5f) {
+			m_iFrameCount = 0;
+			m_HasKill = true;
+			once = false;
+		}
 	}
 		break;
 	default:
@@ -184,7 +184,7 @@ void Ran::Draw()
 		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 				&& pCenterCandle->HasCaLight() == true) {
 				
-			DrawTexture(880.0f, 550.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
+			DrawTexture(700.0f, 450.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
 		}
 		break;
 	default:

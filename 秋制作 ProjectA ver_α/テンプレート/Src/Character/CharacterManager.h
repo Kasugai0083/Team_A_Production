@@ -63,6 +63,11 @@ public:
 	*/
 	bool RefKill();
 
+	/*
+		エネミーがプレイヤーを殺せるかどうか
+	*/
+	const bool CanKill() const;
+
 	void CreateCharacter();
 
 	/*

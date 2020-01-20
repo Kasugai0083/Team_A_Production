@@ -59,6 +59,8 @@ public:
 
 	virtual RoomID GetRoomID() const { return RoomID::HALL_FRONT; }
 
+	virtual bool CanKill() const { return false; }
+
 protected:
 	bool m_IsActive;
 

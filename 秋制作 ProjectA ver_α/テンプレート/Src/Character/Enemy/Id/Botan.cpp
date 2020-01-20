@@ -30,9 +30,9 @@ void Botan::Update()
 	}
 #endif
 
-#if 0
+#if 1
 	if (m_pPlayer->HasGFreddySpown() == true) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 5)) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 1)) { 
 			m_IsActive = true; 
 			m_RoomId   = RoomID::ROOM_PRAYER;
 		}
@@ -70,6 +70,7 @@ void Botan::Update()
 	
 	// ボタンの死亡処理
 	if (m_pPlayer->HasMask() == true 
+		&& m_pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW
 		&& m_CanKill == false) {
 		m_IsActive = false;
 		m_RoomId   = RoomID::ROOM_VOID;
@@ -78,11 +79,10 @@ void Botan::Update()
 
 
 	// キルアニメーションが終わったら殺す処理
-	if (m_CanKill && m_Color.a >= 1.f) {
+	if (m_CanKill && m_Color.a >= 1.4f) {
 		m_iFrameCount = 0;
 		m_HasKill = true;
 		once = false;
-	//	once = false;
 	//	m_CanKill = false;
 	}
 }

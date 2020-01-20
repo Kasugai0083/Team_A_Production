@@ -5,7 +5,7 @@
 #include "../../Utility/FileReader.h"
 
 DayController::DayController() {
-	m_Days = Days::DAY_1;
+	m_Days = GameData::GetInstance()->GetDays();
 };
 
 

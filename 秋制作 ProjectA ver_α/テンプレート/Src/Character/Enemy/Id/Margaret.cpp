@@ -15,10 +15,12 @@ void Margaret::Init()
 
 void Margaret::Update()
 {
+	if (m_HasKill) { return; }
+
 	EnemyTimer EnemuTimer(10);
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
-	static bool CountFrag = false;
+	static bool CountFrag = true;
 	if (GetKeyDown(DOWN_KEY)) {
 		CountFrag = true;
 		m_iFrameCount = 1600;
@@ -125,8 +127,8 @@ void Margaret::Draw()
 	{
 		if (pPlayer->CurrentViewID(SubGameScene::CHILD_ROOM_VIEW)) {
 
-			DrawTexture(500.0f,  600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX));
-			DrawTexture(500.0f,  600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX));
+			DrawTexture(720.0f,  770.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_EYE_TEX));
+			DrawTexture(720.0f,  770.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_SPAWN_BASE_TEX));
 			DrawTexture(1200.0f, 700.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_EYE_TEX));
 			DrawTexture(1200.0f, 800.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, m_TextureCategory));
 		}

@@ -30,9 +30,9 @@ void Ume::Update()
 	}
 #endif
 
-#if 0
+#if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 1) == true) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 1) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}
@@ -118,7 +118,8 @@ void Ume::Update()
 	{
 	case RoomID::ROOM_RIGHT_PRAYER:
 	{
-		if (m_pPlayer->HasMask() == true) {
+		if (m_pPlayer->HasMask() == true
+			&& m_pPlayer->CurrentViewID() == SubGameScene::RIGHT_VIEW) {
 
 			m_iFrameCount = 0;
 			m_IsActive = false;
@@ -136,13 +137,14 @@ void Ume::Update()
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 			// ゲームオーバー処理
 			m_CanKill = true;
-			m_Color.a += 0.01f;
 
 			if (!once)
 			{
 				pAudio->Play("UmeKillVoice");
 				once = true;
 			}
+
+			if (m_CanKill) { m_Color.a += 0.01f; }
 		}
 		break;
 	}
@@ -164,7 +166,7 @@ void Ume::Draw()
 	{
 		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
+			DrawTexture(960.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
 		}
 
 		return;
@@ -176,7 +178,7 @@ void Ume::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(1040.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
+			DrawTexture(960.0f, 540.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
 		}
 		break;
 
@@ -184,7 +186,7 @@ void Ume::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::RECEPTION_ROOM_VIEW)) {
 
-			DrawTexture(1050.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
+			DrawTexture(750.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_SPAWN_TEX));
 		}
 		break;
 
@@ -192,7 +194,7 @@ void Ume::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::RIGHT_CORRIDOR_VIEW)) {
 
-			DrawTexture(800.0f, 200.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_WALK_TEX));
+			DrawTexture(900.0f, 470.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_WALK_TEX));
 		}
 		break;
 
@@ -201,7 +203,7 @@ void Ume::Draw()
 		if (pPlayer->CurrentViewID(SubGameScene::RIGHT_VIEW)
 				&& pRightCandle->HasCaLight() == true) {
 
-			DrawTexture(700.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_LOOK_TEX));
+			DrawTexture(740.0f, 700.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_LOOK_TEX));
 		}
 		break;
 
@@ -209,7 +211,7 @@ void Ume::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::RIGHT_VIEW)) {
 
-			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_PLAYER_TEX));
+			DrawTexture(450.0f, 630.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::UME_PLAYER_TEX));
 		}
 		break;
 

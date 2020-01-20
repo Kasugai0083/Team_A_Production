@@ -92,9 +92,21 @@ void CharacterManager::KillAnimation()
 	}
 }
 
-bool CharacterManager::RefKill() {
+bool CharacterManager::RefKill() 
+{
 	for (int i = OHAGI; i <= ENEMY_NUM; i++) {
 		if (m_Charas[i]->HasKill() == true) {
+
+			return true;
+		}
+	}
+	return false;
+}
+
+const bool CharacterManager::CanKill() const
+{
+	for (int i = OHAGI; i <= ENEMY_NUM; i++) {
+		if (m_Charas[i]->CanKill() == true) {
 
 			return true;
 		}

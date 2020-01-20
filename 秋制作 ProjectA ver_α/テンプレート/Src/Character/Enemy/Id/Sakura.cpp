@@ -33,9 +33,9 @@ void Sakura::Update()
 	}
 #endif
 
-#if 0
+#if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 2) == true) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 2) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}
@@ -119,7 +119,8 @@ void Sakura::Update()
 	{
 	case RoomID::ROOM_LEFT_PRAYER:
 	{
-		if (m_pPlayer->HasMask() == true) {
+		if (m_pPlayer->HasMask() == true
+			&& m_pPlayer->CurrentViewID() == SubGameScene::LEFT_VIEW) {
 
 			m_iFrameCount = 0;
 			m_IsActive = false;
@@ -138,14 +139,15 @@ void Sakura::Update()
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 			// ゲームオーバー処理
 			m_CanKill = true;
-			m_Color.a += 0.01f;
-
+			
 			if (!once)
 			{
 				pAudio->Play("SakuraKillVoice");
 				once = true;
 			}
 		}
+
+		if (m_CanKill) { m_Color.a += 0.01f; }
 	}
 		break;
 	default:
@@ -167,7 +169,7 @@ void Sakura::Draw()
 	{
 		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX));
+			DrawTexture(600.0f, 610.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX));
 		}
 
 		return;
@@ -179,7 +181,7 @@ void Sakura::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(540.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX));
+			DrawTexture(600.0f, 610.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX));
 		}
 		break;
 
@@ -187,7 +189,7 @@ void Sakura::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::RECEPTION_ROOM_VIEW)) {
 
-			DrawTexture(50.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX));
+			DrawTexture(1000.0f, 800.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_SPAWN_TEX));
 		}
 		break;
 
@@ -195,7 +197,7 @@ void Sakura::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::LEFT_CORRIDOR_VIEW)) {
 
-			DrawTexture(670.0f, 300.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_WALK_TEX));
+			DrawTexture(790.0f, 400.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_WALK_TEX));
 		}
 		break;
 
@@ -204,7 +206,7 @@ void Sakura::Draw()
 		if (pPlayer->CurrentViewID(SubGameScene::LEFT_VIEW)
 			&& pLeftCandle->HasCaLight() == true) {
 
-			DrawTexture(820.0f, 490.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_LOOK_TEX));
+			DrawTexture(1045.0f, 690.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_LOOK_TEX));
 		}
 		break;
 
@@ -212,7 +214,7 @@ void Sakura::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::LEFT_VIEW)) {
 
-			DrawTexture(1360.0f, 440.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_PLAYER_TEX));
+			DrawTexture(1380.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_PLAYER_TEX));
 		}
 		break;
 	default:

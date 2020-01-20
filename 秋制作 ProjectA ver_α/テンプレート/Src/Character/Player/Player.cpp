@@ -70,6 +70,8 @@ bool Player::ControlGameScene() {
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
+		if (!m_IsMask)
+		{
 			switch (m_ViewID) {
 			case SubGameScene::CENTER_VIEW:
 
@@ -88,6 +90,7 @@ bool Player::ControlGameScene() {
 
 				break;
 			}
+		}
 
 		static bool once = false;
 		if (GetKeyDown(SPACE_KEY) == true) {
@@ -112,6 +115,13 @@ bool Player::ControlGameScene() {
 
 void Player::Update()
 {
+	//エネミーが参照する値を変更
+	if (g_Manager.RefKill() == true) {
+		m_IsActive = false;
+	}
+
+	if (g_Manager.CanKill() == true) { return; }
+
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
 	Object* pMaskUI = ObjManager()->GetObj(ObjID::MO_MASK_UI);
@@ -153,11 +163,6 @@ void Player::Update()
 		}
 	}
 	
-
-	//エネミーが参照する値を変更
-	if (g_Manager.RefKill() == true) {
-		m_IsActive = false;
-	}
 
 	// 試しに追加
 	Character* pBotan = g_Manager.GetCharacter(CharacterID::BOTAN);

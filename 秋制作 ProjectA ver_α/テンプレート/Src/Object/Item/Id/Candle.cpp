@@ -285,7 +285,7 @@ void Candle::Update(){
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-
+	if (g_Manager.CanKill() == true) { return; }
 
 	SceneDeath();
 
