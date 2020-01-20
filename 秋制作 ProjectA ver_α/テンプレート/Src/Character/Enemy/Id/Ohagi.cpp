@@ -122,11 +122,13 @@ void Ohagi::Update()
 		//	m_HasKill = true;
 		//	m_CanKill = false;
 		//}
+		static bool once = false;
 
 		// キルアニメーションが終わったら殺す処理
 		if (m_CanKill && m_Color.a >= 1.5f) {
 			m_iFrameCount = 0;
 			m_HasKill = true;
+			once = false;
 			//m_CanKill = false;
 		}
 
@@ -135,7 +137,6 @@ void Ohagi::Update()
 			m_CanKill = true;
 			m_Color.a += 0.01f;
 
-			static bool once = false;
 			if (!once)
 			{
 				pAudio->Play("OhagiKillVoice");

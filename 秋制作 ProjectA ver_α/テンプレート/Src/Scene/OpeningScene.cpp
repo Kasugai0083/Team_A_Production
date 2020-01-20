@@ -46,7 +46,13 @@ public:
 		if (m_BlackFade.a <= 0.f) {
 			m_BlackFade.a = 0.f;
 			//« ‚±‚±‚ÅSE‚ð–Â‚ç‚·
-			pAudio->Play("DaySE");
+			static bool once = false;
+			{
+				if (!once) {
+					pAudio->Play("DaySE");
+					once = true;
+				}
+			}
 		}
 		else {
 			m_BlackFade.a -= 0.01f;

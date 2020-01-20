@@ -92,24 +92,6 @@ void Sakura::Update()
 		break;
 
 	case RoomID::LEFT_SHOJI:
-
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
-			if (g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == true
-				|| g_Manager.IsSameRoom(ROOM_PRAYER) == true) {
-				m_iFrameCount = 0;
-				break;
-			}
-
-			m_iFrameCount = 0;
-			m_RoomId = RoomID::ROOM_LEFT_PRAYER;
-		}
-		break;
-	}
-#pragma endregion
-
-	switch (m_RoomId)
-	{
-	case RoomID::LEFT_SHOJI:
 	{
 		static bool once = false;
 		if (!once)
@@ -117,22 +99,39 @@ void Sakura::Update()
 			pAudio->Play("YukaKisimiSE");
 			once = true;
 		}
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
+			if (g_Manager.IsSameRoom(ROOM_RIGHT_PRAYER) == true
+				|| g_Manager.IsSameRoom(ROOM_PRAYER) == true) {
+				m_iFrameCount = 0;
+				break;
+			}
+
+			once = false;
+			m_iFrameCount = 0;
+			m_RoomId = RoomID::ROOM_LEFT_PRAYER;
+		}
 	}
-	break;
+		break;
+	}
+#pragma endregion
 
+	switch (m_RoomId)
+	{
 	case RoomID::ROOM_LEFT_PRAYER:
-
-
+	{
 		if (m_pPlayer->HasMask() == true) {
 
 			m_iFrameCount = 0;
-			m_IsActive	  = false;
-			m_RoomId	  = ROOM_WORK;
+			m_IsActive = false;
+			m_RoomId = ROOM_WORK;
 		}
+		static bool once = false;
+
 		// キルアニメーションが終わったら殺す処理
 		if (m_CanKill && m_Color.a >= 1.5f) {
 			m_iFrameCount = 0;
 			m_HasKill = true;
+			once = false;
 			//m_CanKill = false;
 		}
 
@@ -141,16 +140,13 @@ void Sakura::Update()
 			m_CanKill = true;
 			m_Color.a += 0.01f;
 
-			static bool once = false;
 			if (!once)
 			{
 				pAudio->Play("SakuraKillVoice");
 				once = true;
 			}
 		}
-
-
-
+	}
 		break;
 	default:
 		break;

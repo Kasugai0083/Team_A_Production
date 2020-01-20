@@ -58,7 +58,7 @@ void Ume::Update()
 			}
 
 			m_iFrameCount = 0;
-			m_RoomId	  = RoomID::ROOM_RECEPTION;
+			m_RoomId = RoomID::ROOM_RECEPTION;
 		}
 		break;
 
@@ -71,7 +71,7 @@ void Ume::Update()
 			}
 
 			m_iFrameCount = 0;
-			m_RoomId	  = RoomID::RIGHT_CORRIDOR;
+			m_RoomId = RoomID::RIGHT_CORRIDOR;
 		}
 		break;
 
@@ -89,17 +89,25 @@ void Ume::Update()
 		break;
 
 	case RoomID::RIGHT_SHOJI:
+	{
+		static bool once = false;
+		if (!once)
+		{
+			pAudio->Play("YukaKisimiSE");
+			once = true;
+		}
 
-		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed){
+		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 			if (g_Manager.IsSameRoom(ROOM_LEFT_PRAYER) == true
 				|| g_Manager.IsSameRoom(ROOM_PRAYER) == true) {
 				m_iFrameCount = 0;
 				break;
 			}
-
+			once = false;
 			m_iFrameCount = 0;
 			m_RoomId = RoomID::ROOM_RIGHT_PRAYER;
 		}
+	}
 		break;
 	default:
 		break;
@@ -108,30 +116,20 @@ void Ume::Update()
 
 	switch (m_RoomId)
 	{
-	case RoomID::RIGHT_SHOJI:
-	{
-		static bool once = false;
-		if (!once)
-		{
-			pAudio->Play("YukaKisimiSE");
-			once = true;
-		}
-	}
-	break;
-
 	case RoomID::ROOM_RIGHT_PRAYER:
-
+	{
 		if (m_pPlayer->HasMask() == true) {
 
 			m_iFrameCount = 0;
-			m_IsActive	  = false;
-			m_RoomId	  = ROOM_WORK;
+			m_IsActive = false;
+			m_RoomId = ROOM_WORK;
 		}
-
+		static bool once = false;
 		// キルアニメーションが終わったら殺す処理
 		if (m_CanKill && m_Color.a >= 1.5f) {
 			m_iFrameCount = 0;
 			m_HasKill = true;
+			once = false;
 			//m_CanKill = false;
 		}
 
@@ -140,17 +138,14 @@ void Ume::Update()
 			m_CanKill = true;
 			m_Color.a += 0.01f;
 
-			static bool once = false;
 			if (!once)
 			{
 				pAudio->Play("UmeKillVoice");
 				once = true;
 			}
 		}
-
-
 		break;
-
+	}
 	default:
 		break;
 	}
