@@ -82,17 +82,33 @@ void InitClearScene()
 
 void MainClearScene()
 {
-	SceneController()->GameEnd();
-
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	static bool once = false;
-	if (!once)
-	{
-		pAudio->Play("GameOverBGM");
-		once = true;
+
+	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
+	if (pPlayer == nullptr) {
+		return;
 	}
 
+	if (pPlayer->IsActive()) {
+		if (!once)
+		{
+			pAudio->Play("ClearSE");
+			once = true;
+		}
+	}
+	else {
+		if (!once)
+		{
+			pAudio->Play("GameOverBGM");
+			once = true;
+		}
+	}
+
+	SceneController()->GameEnd();
+
 	if (OnMouseDown(Left) == true) {
+		once = false;
 		ChangeSceneStep(SceneStep::EndStep);
 	}
 }
@@ -103,6 +119,7 @@ SceneId FinishClearScene()
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Stop("GameOverBGM");
+	pAudio->Stop("ClearSE");
 
 	g_Manager.Release();
 

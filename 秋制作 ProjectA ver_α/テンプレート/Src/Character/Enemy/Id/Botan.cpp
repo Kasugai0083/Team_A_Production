@@ -45,7 +45,7 @@ void Botan::Update()
 
 	if (m_IsActive == false) { return; }
 	// アクティブじゃなかったらここより下の処理にはいかない
-
+	static bool once = false;
 	// ボタンの攻撃処理(仮)
 	Object* pCenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 	if (pCenterCandle->HasCaLight() == true
@@ -53,11 +53,8 @@ void Botan::Update()
 
 		m_CanKill = true;
 
-		m_Color.a += 0.01f;
-
 		m_iFrameCount = 0;
 
-		static bool once = false;
 		if (!once)
 		{
 			pAudio->Play("BotanKillVoice");
@@ -69,6 +66,7 @@ void Botan::Update()
 	// 死ぬ処理を入れる
 	//
 	///////////////////////
+	if (m_CanKill){ m_Color.a += 0.01f; }
 	
 	// ボタンの死亡処理
 	if (m_pPlayer->HasMask() == true 
@@ -80,9 +78,11 @@ void Botan::Update()
 
 
 	// キルアニメーションが終わったら殺す処理
-	if (m_CanKill && m_Color.a >= 1.5f) {
+	if (m_CanKill && m_Color.a >= 1.f) {
 		m_iFrameCount = 0;
 		m_HasKill = true;
+		once = false;
+	//	once = false;
 	//	m_CanKill = false;
 	}
 }

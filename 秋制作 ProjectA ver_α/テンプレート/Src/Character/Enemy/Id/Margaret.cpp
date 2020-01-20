@@ -87,11 +87,10 @@ void Margaret::Update()
 	if (m_IsActive == false) { return; }
 	// アクティブじゃなかったらここより下の処理にはいかない
 
+	static bool once = false;
 	if (m_IsActive == true) {
 		// ↓ゲームオーバー処理↓ //
 		m_Color.a += 0.01f;
-
-		static bool once = false;
 
 		if (!once)
 		{
@@ -106,6 +105,7 @@ void Margaret::Update()
 	if (m_CanKill && m_Color.a >= 1.5f) {
 		m_iFrameCount = 0;
 		m_HasKill = true;
+		once = false;
 		//m_CanKill = false;
 	}
 
