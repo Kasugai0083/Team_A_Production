@@ -40,6 +40,9 @@ SceneId UpdateTitleScene()
 	return SceneId::TitleScene;
 }
 
+static D3DXCOLOR g_TitleFade(0.f,0.f,0.f,0.f);
+static bool SceneJump;
+
 void DrawTitleScene()
 {
 
@@ -47,8 +50,7 @@ void DrawTitleScene()
 
 	ObjManager()->Draw();
 
-	// デバッグ用->現在の日数を表示
-	//DayManager()->DrawCurrentDays();
+	DrawFade(true, g_TitleFade);
 }
 
 
@@ -58,6 +60,11 @@ void InitTitleScene()
 
 	InitTexture();
 
+	SceneJump = false;
+	g_TitleFade.r = 0.f;
+	g_TitleFade.g = 0.f;
+	g_TitleFade.b = 0.f;
+	g_TitleFade.a = 0.f;
 
 	Timer* pTimerInstance = Timer::GetInstance();
 
@@ -78,12 +85,24 @@ void InitTitleScene()
 
 void MainTitleScene()
 {
+	auto audio = AudioPlayer::GetInstance();
+
+	if (SceneJump == true) {
+
+		g_TitleFade.a += 0.01f;
+		if (g_TitleFade.a >= 1.5f) {
+			ChangeSceneStep(SceneStep::EndStep);
+		}
+		return;
+	}
 
 	SceneController()->GameEnd();
 
 	ObjManager()->Update();
 	
 	FileReader FR;
+
+
 
 	//ニューゲームUIにマウスオーバーしている場合シーン遷移
 	if (ObjManager()->HasOnMouse(ObjID::BUTTON_NEW_GAME) == true) {
@@ -93,24 +112,34 @@ void MainTitleScene()
 			
 			FR.WriteCSV("Days.csv", 1);
 
-			ChangeSceneStep(SceneStep::EndStep);
+			SceneJump = true;
+			audio->Play("Select");
+
 		}
 	}
 	if (ObjManager()->HasOnMouse(ObjID::BUTTON_CONTINUE) == true) {
 
 		if (DayManager()->GetCurrentDays() != Days::DAY_0) {
 			if (OnMouseDown(Left) == true) {
-				ChangeSceneStep(SceneStep::EndStep);
+
+				SceneJump = true;
+				audio->Play("Select");
+
 			}
 		}
 		if (DayManager()->GetCurrentDays() == Days::DAY_0) {
 			if (OnMouseDown(Left) == true) {
-				//DayManager()->LoadDays(Days::DAY_3);
-				ChangeSceneStep(SceneStep::EndStep);
+
+				SceneJump = true;
+				audio->Play("Select");
+
 			}
 		}
 
 	}
+
+
+
 }
 
 SceneId FinishTitleScene()
@@ -129,9 +158,9 @@ SceneId FinishTitleScene()
 	audio->Stop("Title");
 	audio->Release("Title");
 
-	audio->Play("Select");
 
-	// 次のシーンIDを返す
+		// 次のシーンIDを返す
 	return SceneId::OpeningScene;
+
 }
 
