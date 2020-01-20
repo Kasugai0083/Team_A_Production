@@ -24,6 +24,12 @@ public:
 		m_iFrameCount = 0;
 		m_HasKill	  = false;
 		m_CanKill	  = false;
+
+		m_Color.r = 0.5f;
+		m_Color.g = 0.f;
+		m_Color.b = 0.f;
+		m_Color.a = 0.f;
+
 	}
 
 	/*
@@ -92,6 +98,8 @@ protected:
 	EnemyData  m_EnemyData;			  // 敵の移動速度とスポーン確率が保存されている変数
 
 	Character* m_pPlayer;			  // プレイヤーの参照用変数
+
+	D3DXCOLOR m_Color;				  // 1/20 フェードイン処理のために追加
 };
 
 #endif

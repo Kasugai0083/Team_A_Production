@@ -82,6 +82,7 @@ void DrawGameScene()
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 	Timer* pTimerInstance = Timer::GetInstance();
 	
+
 	switch (pPlayer->CurrentViewID()) {
 	case SubGameScene::CENTER_VIEW:
 		if (pPlayer->HasMonitor() == false) {
@@ -253,11 +254,11 @@ void DrawGameScene()
 		break;
 	}
 	
-	
-
-
 	g_Manager.KillAnimation();
 	
+		
+	
+
 }
 
 void InitGameScene()
@@ -354,10 +355,6 @@ SceneId FinishGameScene()
 	if (SceneController()->IsGetID(SceneTransition::Id::Clear) == true) {
 		SceneController()->SetID(SceneTransition::Id::Clear, false);
 		return SceneId::ClearScene;
-	}
-	else if (SceneController()->IsGetID(SceneTransition::Id::Monitor) == true) {
-		SceneController()->SetID(SceneTransition::Id::Monitor, false);
-		return SceneId::MonitorScene;
 	}
 }
 

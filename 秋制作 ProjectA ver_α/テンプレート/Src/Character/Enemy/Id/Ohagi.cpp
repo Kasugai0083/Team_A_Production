@@ -116,16 +116,24 @@ void Ohagi::Update()
 			m_RoomId	  = ROOM_WORK;
 		}
 
+		//// キルアニメーションが終わったら殺す処理
+		//if (!m_CanKill && m_iFrameCount >= 400) {
+		//	m_iFrameCount = 0;
+		//	m_HasKill = true;
+		//	m_CanKill = false;
+		//}
+
 		// キルアニメーションが終わったら殺す処理
-		if (!m_CanKill && m_iFrameCount >= 400) {
+		if (m_CanKill && m_Color.a >= 1.5f) {
 			m_iFrameCount = 0;
 			m_HasKill = true;
-			m_CanKill = false;
+			//m_CanKill = false;
 		}
 
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {
 
 			m_CanKill = true;
+			m_Color.a += 0.01f;
 
 			static bool once = false;
 			if (!once)
@@ -216,6 +224,7 @@ void Ohagi::KillAnimation()
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_KILLANIME_TEX));
-		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
+		DrawFade(false, m_Color);
+		//if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
 	}
 }

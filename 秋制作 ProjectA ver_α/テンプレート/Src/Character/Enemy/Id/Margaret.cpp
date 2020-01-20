@@ -89,6 +89,7 @@ void Margaret::Update()
 
 	if (m_IsActive == true) {
 		// ↓ゲームオーバー処理↓ //
+		m_Color.a += 0.01f;
 
 		static bool once = false;
 
@@ -102,10 +103,10 @@ void Margaret::Update()
 	}
 
 	// キルアニメーションが終わったら殺す処理
-	if (!m_CanKill && m_iFrameCount <= 0) {
+	if (m_CanKill && m_Color.a >= 1.5f) {
 		m_iFrameCount = 0;
 		m_HasKill = true;
-		m_CanKill = false;
+		//m_CanKill = false;
 	}
 
 
@@ -138,7 +139,7 @@ void Margaret::KillAnimation()
 	{
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_KILLANIME_TEX));
-		if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
+		DrawFade(false, m_Color);
 
 	}
 }
