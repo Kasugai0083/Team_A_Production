@@ -143,7 +143,7 @@ void Fire::Draw() {
 	
 	if (m_pObject != nullptr) {
 		if (m_pObject->HasCaLight() == true && m_IsDeath == false) {
-			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
+			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, 0.f, 0.99f, 1.f);
 		}
 	}
 }

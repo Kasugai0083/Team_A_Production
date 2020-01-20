@@ -115,14 +115,14 @@ void DrawEnd()
 }
 
 
-void DrawTexture(float x, float y, Texture* texture_data, float z_)
+void DrawTexture(float x, float y, Texture* texture_data, float z_, float tu_, float tv_)
 {
 	CustomVertex v[4] =
 	{
 		{ x, y, z_, 1.0f, 0.0f, 0.0f }, //0
-		{ x + texture_data->Width, y, z_, 1.0f, 1.0f, 0.0f }, //1
-		{ x + texture_data->Width, y + texture_data->Height, z_, 1.0f, 1.0f, 1.0f }, //2
-		{ x, y + texture_data->Height, z_, 1.0f, 0.0f, 1.0f }, //3
+		{ x + texture_data->Width, y, z_, 1.0f, tu_, 0.0f }, //1
+		{ x + texture_data->Width, y + texture_data->Height, z_, 1.0f, tu_, tv_ }, //2
+		{ x, y + texture_data->Height, z_, 1.0f, 0.0f, tv_ }, //3
 	};
 
 	// 頂点構造の指定
@@ -194,8 +194,8 @@ void CandleDraw(float x, float y, Texture* texture_data, Size size_, float hp_)
 	CustomVertex v[4] =
 	{
 		{ x, y, 0.0f, 1.0f, 0.0f, 0.0f },
-		{ x + size_.Width, y, 0.0f, 1.0f, 1.0f , 0.0f },
-		{ x + size_.Width, y + size_.Height * hp_, 0.0f, 1.0f, 1.0f, 1.0f * hp_ },
+		{ x + size_.Width, y, 0.0f, 1.0f, 0.99f , 0.0f },
+		{ x + size_.Width, y + size_.Height * hp_, 0.0f, 1.0f, 0.99f, 1.0f * hp_ },
 		{ x, y + size_.Height * hp_, 0.0f, 1.0f, 0.0f, 1.0f * hp_ },
 	};
 
@@ -214,8 +214,8 @@ void CandleDraw(float x, float y, Texture* texture_data, Size size_, Size flame_
 	CustomVertex v[4] =
 	{
 		{ x, y, 0.0f, 1.0f, 0.0f, 0.0f },
-		{ x + flame_.Width, y, 0.0f, 1.0f, 1.0f , 0.0f },
-		{ x + flame_.Width, y + size_.Height * hp_, 0.0f, 1.0f, 1.0f, meltpos * hp_ },
+		{ x + flame_.Width, y, 0.0f, 1.0f, 0.99f , 0.0f },
+		{ x + flame_.Width, y + size_.Height * hp_, 0.0f, 1.0f, 0.99f, meltpos * hp_ },
 		{ x, y + size_.Height * hp_, 0.0f, 1.0f, 0.0f, meltpos * hp_ },
 	};
 
