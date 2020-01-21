@@ -33,7 +33,7 @@ void Ohagi::Update()
 
 #if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0,m_EnemyData.m_SpownJudge,5) == false) { 
+		if (Prob.GetRandomValue(0,m_EnemyData.m_SpownJudge,0) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}

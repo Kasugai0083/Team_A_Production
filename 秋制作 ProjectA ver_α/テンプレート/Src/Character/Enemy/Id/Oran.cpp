@@ -34,7 +34,7 @@ void Ran::Update()
 
 #if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 6) == false) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 4) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}
