@@ -96,7 +96,7 @@ void Sakura::Update()
 		static bool once = false;
 		if (!once)
 		{
-			pAudio->Play("YukaKisimiSE");
+			pAudio->Play("YukaKisimiSE",0);
 			once = true;
 		}
 		if (m_iFrameCount >= m_EnemyData.m_MovementSpeed) {

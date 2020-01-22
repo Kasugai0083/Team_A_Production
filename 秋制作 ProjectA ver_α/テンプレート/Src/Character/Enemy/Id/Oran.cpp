@@ -123,7 +123,7 @@ void Ran::Update()
 		static bool once = false;
 		if (!once)
 		{
-			pAudio->Play("OranKillVoice");
+			pAudio->Play("OranKillVoice",0);
 			once = true;
 		}
 

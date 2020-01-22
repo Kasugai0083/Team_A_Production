@@ -57,7 +57,7 @@ void Botan::Update()
 
 		if (!once)
 		{
-			pAudio->Play("BotanKillVoice");
+			pAudio->Play("BotanKillVoice", 0);
 			once = true;
 		}
 	}

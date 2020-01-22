@@ -93,7 +93,7 @@ void Ume::Update()
 		static bool once = false;
 		if (!once)
 		{
-			pAudio->Play("YukaKisimiSE");
+			pAudio->Play("YukaKisimiSE", 0);
 			once = true;
 		}
 

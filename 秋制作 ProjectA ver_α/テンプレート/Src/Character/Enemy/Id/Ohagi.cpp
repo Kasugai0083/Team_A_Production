@@ -138,7 +138,7 @@ void Ohagi::Update()
 			m_CanKill = true;
 			if (!once)
 			{
-				pAudio->Play("OhagiKillVoice");
+				pAudio->Play("OhagiKillVoice",0);
 				once = true;
 			}
 		}

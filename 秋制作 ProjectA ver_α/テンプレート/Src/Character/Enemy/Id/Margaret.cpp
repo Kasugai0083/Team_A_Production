@@ -96,7 +96,7 @@ void Margaret::Update()
 
 		if (!once)
 		{
-			pAudio->Play("PuppetKillVoice");
+			pAudio->Play("PuppetKillVoice",0);
 			once = true;
 
 			m_CanKill = true;

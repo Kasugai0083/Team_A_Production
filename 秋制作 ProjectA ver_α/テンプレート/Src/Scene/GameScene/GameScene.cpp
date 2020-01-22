@@ -280,7 +280,7 @@ void InitGameScene()
 	// オーディオ
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Load("GameBGM", "Sound/GameBGM.wav");
-	pAudio->Play("GameBGM", 1000, true);
+	pAudio->Play("GameBGM", 0, true);
 
 	pAudio->Load("RousokuSE", "Sound/RousokuSE.wav");
 	pAudio->Load("MaskSE", "Sound/MaskSE.wav");
