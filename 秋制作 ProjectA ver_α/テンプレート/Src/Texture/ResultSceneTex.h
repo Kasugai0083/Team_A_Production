@@ -3,6 +3,7 @@
 enum ClearCategoryTextureList
 {
 	ClearBgTex,				//!< ”wŒi
+	ClearGameEndTex,
 	ClearGameOverTex,
 	ClearTextureMax,			//!< ƒŠƒXƒgÅ‘å”
 };

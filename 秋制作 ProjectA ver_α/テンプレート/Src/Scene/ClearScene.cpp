@@ -50,9 +50,13 @@ void DrawClearScene()
 	//プレイヤー死亡時は背景を変更
 	if (tmp_player->IsActive() == false) {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex));
+
 	}
 	else {
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex));
+		if (DayManager()->GetCurrentDays() == Days::DAY_3) {
+			DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameEndTex));
+		}
 	}
 }
 

@@ -148,7 +148,7 @@ void LoadGameTex() {
 	LoadTexture("Res/Game/Enemy/Ohagi/KillAnimation/oha_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_KILLANIME_TEX);
 
 	LoadTexture("Res/Game/Enemy/Ran/ran_come_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_SPAWN_TEX);
-	LoadTexture("Res/Game/Enemy/Ran/ran_come.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX);
+	LoadTexture("Res/Game/Enemy/Ran/ran_room.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ran/Ran_Far.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ran/KillAnimation/ran_kill.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_KILLANIME_TEX);
 
@@ -180,5 +180,6 @@ void LoadOpTex() {
 
 void LoadClearTex() {
 	LoadTexture("Res/End/EndBg.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearBgTex);
+	LoadTexture("Res/End/GameEnd.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameEndTex);
 	LoadTexture("Res/End/GameOver.png", TEXTURE_CATEGORY_CLEAR, ClearCategoryTextureList::ClearGameOverTex);
 }
