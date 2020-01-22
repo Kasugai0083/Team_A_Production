@@ -39,7 +39,7 @@ bool Player::ControlMonitor() {
 
 		if (GetKeyDown(SPACE_KEY) == true) {
 			TmpMonitor = m_ViewID;
-			m_ViewID = TmpRoom;
+			m_ViewID = SubGameScene::CENTER_VIEW;
 
 			m_HasGFreddySpown = true;
 
@@ -100,7 +100,7 @@ bool Player::ControlGameScene() {
 				once = true;
 			}
 
-			TmpRoom = m_ViewID;
+			//TmpRoom = m_ViewID;
 			m_ViewID = TmpMonitor;
 			
 			/*m_HasMonitor = true;*/
