@@ -28,7 +28,7 @@ void Ran::Update()
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
-		m_RoomId = RoomID::ROOM_STORAGE;
+		m_RoomId = RoomID::HALL_BACK;
 	}
 #endif
 
@@ -173,9 +173,10 @@ void Ran::Draw()
 	case RoomID::HALL_BACK:
 
 		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
-				&& pCenterCandle->HasCaLight() == true) {
+			&& pCenterCandle->HasCaLight() == true
+			&& g_Manager.IsSameRoom(HALL_FRONT) == false) {
 
-			DrawTexture(650.0f, 340.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX));
+			DrawTexture(650.0f, 350.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_FAR_TEX));
 		}
 		break;
 
@@ -184,7 +185,7 @@ void Ran::Draw()
 		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 				&& pCenterCandle->HasCaLight() == true) {
 				
-			DrawTexture(700.0f, 450.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
+			DrawTexture(585.0f, 390.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::ORAN_NEAR_TEX));
 		}
 		break;
 	default:

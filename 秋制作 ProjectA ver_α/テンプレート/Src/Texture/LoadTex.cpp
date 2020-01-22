@@ -141,7 +141,7 @@ void LoadGameTex() {
 	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_8.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_8);
 	LoadTexture("Res/Game/Enemy/Margaret/Margaret_Eye/piza_9.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::MARGARET_PIZA_9);
 
-	LoadTexture("Res/Game/Enemy/Ohagi/Freddy.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX);
+	LoadTexture("Res/Game/Enemy/Ohagi/centerenemy_gray.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX);
 	LoadTexture("Res/Game/Enemy/Ohagi/oha_distant.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_FAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ohagi/oha_near.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_NEAR_TEX);
 	LoadTexture("Res/Game/Enemy/Ohagi/FreddyAAA.png", TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_TEX);

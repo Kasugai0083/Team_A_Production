@@ -26,7 +26,7 @@ void Ohagi::Update()
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
-		m_RoomId = RoomID::HALL_BACK;
+		m_RoomId = RoomID::HALL_FRONT;
 	}
 
 #endif
@@ -191,9 +191,10 @@ void Ohagi::Draw()
 	case RoomID::HALL_BACK:
 
 		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
-			&& pCenterCandle->HasCaLight() == true) {
+			&& pCenterCandle->HasCaLight() == true
+			&& g_Manager.IsSameRoom(HALL_FRONT) == false) {
 
-			DrawTexture(800.0f, 520.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_FAR_TEX));
+			DrawTexture(720.0f, 350.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_FAR_TEX));
 		}
 		break;
 
@@ -202,7 +203,7 @@ void Ohagi::Draw()
 		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 				&& pCenterCandle->HasCaLight() == true) {
 
-			DrawTexture(650.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_TEX));
+			DrawTexture(630.0f, 445.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_PLAYER_TEX));
 		}
 		break;
 
@@ -211,7 +212,7 @@ void Ohagi::Draw()
 		if (pPlayer->CurrentViewID(SubGameScene::CENTER_VIEW)
 			&& GetCurrentSceneId() == SceneId::GameScene) {
 
-			DrawTexture(1400.0f, 640.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_NEAR_TEX));
+			DrawTexture(1400.0f, 600.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_NEAR_TEX));
 		}
 		break;
 	default:
