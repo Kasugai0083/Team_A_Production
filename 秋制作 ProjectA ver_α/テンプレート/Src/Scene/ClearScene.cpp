@@ -97,7 +97,7 @@ void MainClearScene()
 	if (pPlayer->IsActive()) {
 		if (!once)
 		{
-			pAudio->Play("ClearSE");
+			pAudio->Play("ClearSE", 0);
 			once = true;
 		}
 	}

@@ -26,7 +26,7 @@ void Ohagi::Update()
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
-		m_RoomId = RoomID::HALL_FRONT;
+		m_RoomId = RoomID::ROOM_WORK;
 	}
 
 #endif

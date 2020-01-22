@@ -28,7 +28,7 @@ void Ran::Update()
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
-		m_RoomId = RoomID::HALL_BACK;
+		m_RoomId = RoomID::ROOM_STORAGE;
 	}
 #endif
 

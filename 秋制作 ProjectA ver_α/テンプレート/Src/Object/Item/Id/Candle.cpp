@@ -322,35 +322,38 @@ void Candle::Update(){
 			switch (pPlayer->CurrentViewID())
 			{
 			case SubGameScene::CENTER_VIEW:
-				if (!Once)
-				{
-					pAudio->Play("RousokuSE");
-					Once = true;
-				}
+
 				if (m_Id == ObjID::CANDLE_CENTER) {
 					m_HasCaLight = true;
+					if (!Once)
+					{
+						pAudio->Play("RousokuSE", 0);
+						Once = true;
+					}
 				}
 
 				break;
 			case SubGameScene::RIGHT_VIEW:
-				if (!Once)
-				{
-					pAudio->Play("RousokuSE");
-					Once = true;
-				}
+
 				if (m_Id == ObjID::CANDLE_RIGHT) {
 					m_HasCaLight = true;
+					if (!Once)
+					{
+						pAudio->Play("RousokuSE", 0);
+						Once = true;
+					}
 				}
 
 				break;
 			case SubGameScene::LEFT_VIEW:
-				if (!Once)
-				{
-					pAudio->Play("RousokuSE");
-					Once = true;
-				}
+
 				if (m_Id == ObjID::CANDLE_LEFT) {
 					m_HasCaLight = true;
+					if (!Once)
+					{
+						pAudio->Play("RousokuSE", 0);
+						Once = true;
+					}
 				}
 				break;
 			}

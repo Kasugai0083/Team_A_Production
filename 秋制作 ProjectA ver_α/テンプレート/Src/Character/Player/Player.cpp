@@ -96,7 +96,7 @@ bool Player::ControlGameScene() {
 		if (GetKeyDown(SPACE_KEY) == true) {
 
 			if (!once) {
-				pAudio->Play("ToMonitor");
+				pAudio->Play("ToMonitor", 0);
 				once = true;
 			}
 
@@ -137,7 +137,7 @@ void Player::Update()
 
 		if (!once)
 		{
-			pAudio->Play("MaskSE");
+			pAudio->Play("MaskSE", 0);
 			once = true;
 		}
 

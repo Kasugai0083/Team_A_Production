@@ -38,7 +38,7 @@ public:
 
 		if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT && m_BlackFade.a <= 0.f) {
 			if (OnMouseDown(Left) == true) {
-				pAudio->Play("Book");
+				pAudio->Play("Book",0);
 				m_Count++;
 			}
 		}
@@ -49,7 +49,7 @@ public:
 			static bool once = false;
 			{
 				if (!once) {
-					pAudio->Play("DaySE");
+					pAudio->Play("DaySE",0);
 					once = true;
 				}
 			}

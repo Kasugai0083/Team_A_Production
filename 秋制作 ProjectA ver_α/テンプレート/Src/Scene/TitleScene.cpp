@@ -78,7 +78,7 @@ void InitTitleScene()
 	audio->Load("Title", "Sound/TitleBGM.wav");
 	audio->Load("Select", "Sound/TitleStart.wav");
 
-	audio->Play("Title", 1000, true);
+	audio->Play("Title", 0, true);
 
 	ChangeSceneStep(SceneStep::MainStep);
 }
@@ -113,7 +113,7 @@ void MainTitleScene()
 			FR.WriteCSV("Days.csv", 1);
 
 			SceneJump = true;
-			audio->Play("Select");
+			audio->Play("Select", 0);
 
 		}
 	}

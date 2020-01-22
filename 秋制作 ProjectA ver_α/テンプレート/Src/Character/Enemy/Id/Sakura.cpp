@@ -142,7 +142,7 @@ void Sakura::Update()
 			
 			if (!once)
 			{
-				pAudio->Play("SakuraKillVoice");
+				pAudio->Play("SakuraKillVoice",0);
 				once = true;
 			}
 		}

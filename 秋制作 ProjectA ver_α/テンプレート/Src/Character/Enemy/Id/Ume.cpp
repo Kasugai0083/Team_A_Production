@@ -140,7 +140,7 @@ void Ume::Update()
 
 			if (!once)
 			{
-				pAudio->Play("UmeKillVoice");
+				pAudio->Play("UmeKillVoice", 0);
 				once = true;
 			}
 
