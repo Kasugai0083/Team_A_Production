@@ -179,6 +179,7 @@
     <ClCompile Include="Src\Utility\Probability.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Src\Character\Character.h" />
     <ClInclude Include="Src\Character\CharacterID.h" />
     <ClInclude Include="Src\Character\CharacterManager.h" />
@@ -235,7 +236,11 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Res\Document\マップ図.jpg.png" />
+    <Image Include="Res\Icon\人形屋敷.ico" />
     <Image Include="参考\title01_UI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="秋制作.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
