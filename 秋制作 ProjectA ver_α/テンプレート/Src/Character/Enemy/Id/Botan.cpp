@@ -52,7 +52,6 @@ void Botan::Update()
 		|| m_pPlayer->HasMonitor() == true) {
 
 		m_CanKill = true;
-
 		m_iFrameCount = 0;
 
 		if (!once)
@@ -77,12 +76,12 @@ void Botan::Update()
 	}
 
 
-
 	// キルアニメーションが終わったら殺す処理
 	if (m_CanKill && m_Color.a >= 1.4f) {
 		m_iFrameCount = 0;
 		m_HasKill = true;
 		once = false;
+		m_IsActive = false;
 	//	m_CanKill = false;
 	}
 }

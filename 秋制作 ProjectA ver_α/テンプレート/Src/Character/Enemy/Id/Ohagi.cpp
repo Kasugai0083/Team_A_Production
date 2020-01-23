@@ -162,7 +162,7 @@ void Ohagi::Draw()
 	{
 		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
+			DrawTexture(260.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
 		}
 
 		return;
@@ -176,7 +176,7 @@ void Ohagi::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::WORKSHOP_VIEW)) {
 
-			DrawTexture(200.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
+			DrawTexture(260.0f, 500.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
 		}
 		break;
 
@@ -184,7 +184,7 @@ void Ohagi::Draw()
 
 		if (pPlayer->CurrentViewID(SubGameScene::RECEPTION_ROOM_VIEW)) {
 
-			DrawTexture(190.0f, 360.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
+			DrawTexture(270.0f, 360.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::OHAGI_SPAWN_TEX));
 		}
 		break;
 
