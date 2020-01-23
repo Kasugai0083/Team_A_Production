@@ -12,7 +12,6 @@
 #include "../Object/ObjectManager.h"
 #include "../Texture/LoadTex.h"
 
-
 class OpController {
 public:
 	OpController() {};
@@ -43,10 +42,10 @@ public:
 			}
 		}
 
+		static bool once = false;
 		if (m_BlackFade.a <= 0.f) {
 			m_BlackFade.a = 0.f;
 			//« ‚±‚±‚ÅSE‚ð–Â‚ç‚·
-			static bool once = false;
 			{
 				if (!once) {
 					pAudio->Play("DaySE",0);
@@ -56,6 +55,7 @@ public:
 		}
 		else {
 			m_BlackFade.a -= 0.01f;
+			once = false;
 		}
 
 	};
