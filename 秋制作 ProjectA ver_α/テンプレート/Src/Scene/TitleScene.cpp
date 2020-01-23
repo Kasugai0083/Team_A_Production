@@ -112,6 +112,8 @@ void MainTitleScene()
 			
 			FR.WriteCSV("Days.csv", 1);
 
+			GameData::GetInstance()->LoadGameData();
+
 			SceneJump = true;
 			audio->Play("Select", 0);
 
