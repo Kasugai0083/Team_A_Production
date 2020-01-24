@@ -28,7 +28,7 @@ void Ran::Update()
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
-		m_RoomId = RoomID::ROOM_STORAGE;
+		m_RoomId = RoomID::HALL_FRONT;
 	}
 #endif
 
@@ -102,7 +102,7 @@ void Ran::Update()
 
 			m_iFrameCount = 0;
 		}
-		if (ActiveTimer >= 1200) {
+		if (ActiveTimer >= 400) {
 
 			m_IsActive = false;
 			ActiveTimer = 0;

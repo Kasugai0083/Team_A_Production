@@ -20,7 +20,20 @@ void Margaret::Update()
 	EnemyTimer EnemuTimer(10);
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
+
+
+#if 0
+
 	static bool CountFrag = true;
+
+#endif
+
+#if 1
+
+	static bool CountFrag = false;
+
+#endif
+
 	if (GetKeyDown(DOWN_KEY)) {
 		CountFrag = true;
 		m_iFrameCount = 1600;

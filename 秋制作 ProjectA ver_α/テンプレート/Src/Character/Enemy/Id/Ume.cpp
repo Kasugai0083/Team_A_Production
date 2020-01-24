@@ -26,13 +26,13 @@ void Ume::Update()
 
 		m_iFrameCount = 0;
 		m_IsActive = true;
-		m_RoomId = RoomID::ROOM_WORK;
+		m_RoomId = RoomID::ROOM_RIGHT_PRAYER;
 	}
 #endif
 
 #if 1
 	if (m_IsActive == false && m_iFrameCount >= 100) {
-		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 1) == false) { 
+		if (Prob.GetRandomValue(0, m_EnemyData.m_SpownJudge, 3) == false) { 
 			m_iFrameCount = 0;
 			return; 
 		}
