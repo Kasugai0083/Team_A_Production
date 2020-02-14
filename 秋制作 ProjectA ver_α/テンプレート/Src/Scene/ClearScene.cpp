@@ -78,7 +78,7 @@ void InitClearScene()
 	LoadSceneTex(SceneId::ClearScene);
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
-	pAudio->Load("GameOverBGM", "Sound/GameOverBGM.wav");
+	pAudio->Load("GameOverBGM", "Res/Sound/GameOverBGM.wav");
 
 	ChangeSceneStep(SceneStep::MainStep);
 

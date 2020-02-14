@@ -279,21 +279,21 @@ void InitGameScene()
 
 	// オーディオ
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
-	pAudio->Load("GameBGM", "Sound/GameBGM.wav");
+	pAudio->Load("GameBGM", "Res/Sound/GameBGM.wav");
 	pAudio->Play("GameBGM", 0, true);
 
-	pAudio->Load("RousokuSE", "Sound/RousokuSE.wav");
-	pAudio->Load("MaskSE", "Sound/MaskSE.wav");
-	pAudio->Load("OhagiKillVoice", "Sound/OhagiKillVoice.wav");
-	pAudio->Load("SakuraKillVoice", "Sound/SakuraKillVoice.wav");
-	pAudio->Load("UmeKillVoice", "Sound/UmeKillVoice.wav");
-	pAudio->Load("OranKillVoice", "Sound/OranKillVoice.wav");
-	pAudio->Load("BotanKillVoice", "Sound/BotanKillVoice.wav");
-	pAudio->Load("PuppetKillVoice", "Sound/PuppetKillVoice.wav");
-	pAudio->Load("ToMonitor", "Sound/ToMonitor.wav");
-	pAudio->Load("YukaKisimiSE", "Sound/KisimiSE.wav");
-	pAudio->Load("ClearSE", "Sound/ClearSE.wav");
-	pAudio->Load("ChildRoomBGM", "Sound/ChildRoomBGM.wav");
+	pAudio->Load("RousokuSE", "Res/Sound/RousokuSE.wav");
+	pAudio->Load("MaskSE", "Res/Sound/MaskSE.wav");
+	pAudio->Load("OhagiKillVoice", "Res/Sound/OhagiKillVoice.wav");
+	pAudio->Load("SakuraKillVoice", "Res/Sound/SakuraKillVoice.wav");
+	pAudio->Load("UmeKillVoice", "Res/Sound/UmeKillVoice.wav");
+	pAudio->Load("OranKillVoice", "Res/Sound/OranKillVoice.wav");
+	pAudio->Load("BotanKillVoice", "Res/Sound/BotanKillVoice.wav");
+	pAudio->Load("PuppetKillVoice", "Res/Sound/PuppetKillVoice.wav");
+	pAudio->Load("ToMonitor", "Res/Sound/ToMonitor.wav");
+	pAudio->Load("YukaKisimiSE", "Res/Sound/KisimiSE.wav");
+	pAudio->Load("ClearSE", "Res/Sound/ClearSE.wav");
+	pAudio->Load("ChildRoomBGM", "Res/Sound/ChildRoomBGM.wav");
 
 
 	ChangeSceneStep(SceneStep::MainStep);

@@ -41,11 +41,11 @@ void DayController::CheckClear() {
 			break;
 		case Days::DAY_1:
 			m_Days = Days::DAY_2;
-			FR.WriteCSV("Days.csv", static_cast<int>(m_Days));
+			FR.WriteCSV("Res/Csv/Days.csv", static_cast<int>(m_Days));
 			break;
 		case Days::DAY_2:
 			m_Days = Days::DAY_3;
-			FR.WriteCSV("Days.csv", static_cast<int>(m_Days));
+			FR.WriteCSV("Res/Csv/Days.csv", static_cast<int>(m_Days));
 			break;
 		case Days::DAY_3:
 			break;

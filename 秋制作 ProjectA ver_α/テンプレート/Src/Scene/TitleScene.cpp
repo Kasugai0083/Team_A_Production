@@ -75,8 +75,8 @@ void InitTitleScene()
 
 	// オーディオ
 	auto audio = AudioPlayer::GetInstance(GetWindowHandle());
-	audio->Load("Title", "Sound/TitleBGM.wav");
-	audio->Load("Select", "Sound/TitleStart.wav");
+	audio->Load("Title", "Res/Sound/TitleBGM.wav");
+	audio->Load("Select", "Res/Sound/TitleStart.wav");
 
 	audio->Play("Title", 0, true);
 
@@ -110,7 +110,7 @@ void MainTitleScene()
 
 			DayManager()->LoadDays(Days::DAY_1);
 			
-			FR.WriteCSV("Days.csv", 1);
+			FR.WriteCSV("Res/Csv/Days.csv", 1);
 
 			GameData::GetInstance()->LoadGameData();
 

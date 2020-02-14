@@ -154,8 +154,8 @@ void InitOpeningScene()
 	LoadSceneTex(SceneId::OpeningScene);
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
-	pAudio->Load("Book", "Sound/Book.wav");
-	pAudio->Load("DaySE", "Sound/DaySE.wav");
+	pAudio->Load("Book", "Res/Sound/Book.wav");
+	pAudio->Load("DaySE", "Res/Sound/DaySE.wav");
 
 	ChangeSceneStep(SceneStep::MainStep);
 

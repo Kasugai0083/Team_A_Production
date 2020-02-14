@@ -4,7 +4,7 @@
 bool FileReader::LoadCSV(EnemyData* enemyData_, GameParam* gameParam_, Days* days_)
 {
 	FILE* pFile;
-	fopen_s(&pFile, "Days.csv", "r");
+	fopen_s(&pFile, "Res/Csv/Days.csv", "r");
 
 	if (pFile == nullptr) {
 		MessageBox(0, "DaysCSVファイルの読み込みに失敗しました", 0, MB_OK);
@@ -37,7 +37,7 @@ bool FileReader::LoadCSV(EnemyData* enemyData_, GameParam* gameParam_, Days* day
 	std::ostringstream oss;
 	oss << TmpDays;
 
-	std::string FileName = "EnemyData";
+	std::string FileName = "Res/Csv/EnemyData";
 	FileName = FileName + oss.str();
 	FileName = FileName + ".csv";
 
@@ -63,7 +63,7 @@ bool FileReader::LoadCSV(EnemyData* enemyData_, GameParam* gameParam_, Days* day
 	pFile = nullptr;
 
 
-	fopen_s(&pFile, "GameData.csv", "r");
+	fopen_s(&pFile, "Res/Csv/GameData.csv", "r");
 
 	if (pFile == nullptr) {
 		MessageBox(0, "GamedataCSVファイルの読み込みに失敗しました", 0, MB_OK);
