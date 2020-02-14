@@ -22,13 +22,13 @@ void Margaret::Update()
 
 
 
-#if 0
+#if 1
 
 	static bool CountFrag = true;
 
 #endif
 
-#if 1
+#if 0
 
 	static bool CountFrag = false;
 
@@ -91,11 +91,7 @@ void Margaret::Update()
 
 
 	if (m_iFrameCount <= 0) {
-
 		m_IsActive = true;
-		//m_CanKill = true;
-
-
 	}
 
 
