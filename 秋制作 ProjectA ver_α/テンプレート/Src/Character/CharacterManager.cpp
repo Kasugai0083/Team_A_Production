@@ -12,14 +12,6 @@
 CharacterManager g_Manager;
 
 CharacterManager::CharacterManager() {
-	//m_Charas[PLAYER]	= new Player;
-
-	//m_Charas[OHAGI]     = new Ohagi;
-	//m_Charas[SAKURA]	= new Sakura;
-	//m_Charas[UME]		= new Ume;
-	//m_Charas[RAN]	    = new Ran;
-	//m_Charas[BOTAN]		= new Botan;
-	//m_Charas[MARGARET]  = new Margaret;
 }
 
 CharacterManager::~CharacterManager() {
@@ -69,9 +61,6 @@ void CharacterManager::Release()
 		delete m_Charas[i];
 		m_Charas[i] = nullptr;
 	}
-
-	//テクスチャを解放
-	//ReleaseCategoryTexture(TEXTURE_CATEGORY_ENEMY);
 }
 
 void CharacterManager::KillAnimation()

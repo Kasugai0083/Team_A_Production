@@ -28,7 +28,7 @@ public:
 		TmpRoom = SubGameScene::CENTER_VIEW;
 		TmpMonitor = SubGameScene::WORKSHOP_VIEW;
 
-		m_IsMask = false;
+		m_HasMask = false;
 		m_MaskAnimation = -540.f;
 	}
 	
@@ -46,9 +46,8 @@ public:
 	*/
 	bool HasMask() const override
 	{
-		return m_IsMask;
+		return m_HasMask;
 	}
-
 
 	/**
 	* @fn HasMonitor
@@ -126,7 +125,7 @@ private:
 	void ButtonPush(T1 button_, T2 view_);
 
 private:
-	bool m_IsMask;			/** @brief マスクをつけてるかどうか */
+	bool m_HasMask;			/** @brief マスクをつけてるかどうか */
 	float m_MaskAnimation;	/** @brief マスクのアニメーションタイマー */
 	bool m_HasGFreddySpown;	/** @brief ゴールデンフレディのフラグが立っているかどうか */
 	bool m_HasMonitor;		/** @brief モニターを見ているかどうか */

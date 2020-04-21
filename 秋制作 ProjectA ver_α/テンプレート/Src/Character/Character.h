@@ -58,19 +58,26 @@ public:
 	*/
 	virtual void Draw() = 0;
 
-	virtual bool HasLight() const
-	{
-		return m_HasLight;
-	}
-
+	/**
+	* @fn HasMask
+	* @brief プレイヤーがマスクを被っているかどうか
+	*/
 	virtual bool HasMask() const {
 		return m_HasMask;
 	}
 
+	/**
+	* @fn HasMonitor
+	* @brief プレイヤーがモニターを見ているかどうか
+	*/
 	virtual bool HasMonitor() const {
 		return m_HasMonitor;
 	}
 
+	/**
+	* @fn CurrentViewID
+	* @brief どこの部屋を見ているか
+	*/
 	virtual SubGameScene CurrentViewID() const {
 		return m_ViewID;
 	}
@@ -102,7 +109,6 @@ public:
 		return RoomID::ROOM_VOID; 
 	}
 
-
 	/**
 	* @fn		void KillAnimation()
 	* @brief	キルアニメーションの描画関数
@@ -114,8 +120,10 @@ public:
 	virtual bool ControlGameScene() { return 0; }
 	virtual bool HasGFreddySpown()	{ return 0; }
 
-
-
+	/**
+	* @fn CurrentViewID
+	* @brief 現在のプレイヤー視界情報と引数の視界情報を比較
+	*/
 	virtual const bool CurrentViewID(const SubGameScene sceneId_) const { return 0; }
 
 	/**
@@ -131,10 +139,9 @@ protected:
 
 private:
 	//! プレイヤーの情報
-	bool m_HasMask;
-	bool m_HasLight;
-	bool m_HasMonitor;
-	SubGameScene m_ViewID;
+	bool m_HasMask;			/** @brief マスクをつけてるかどうか */
+	bool m_HasMonitor;		/** @brief モニターを見ているかどうか */
+	SubGameScene m_ViewID;	/** @brief 視界情報の制御 */
 
 	bool m_HasKill;			//! 殺したかどうか
 };

@@ -224,7 +224,5 @@ void Sakura::KillAnimation()
 		DrawAnimation(0.0f, 0.0f, &m_AnimationTex);
 		DrawTexture(0.0f, 0.0f, GetTexture(TEXTURE_CATEGORY_ENEMY, EnemyCategoryTextureList::SAKURA_KILLANIME_TEX));
 		DrawFade(false, m_Color);
-
-		//if (DrawBlood(0.f, 0.f) == true) { m_CanKill = false; }
 	}
 }

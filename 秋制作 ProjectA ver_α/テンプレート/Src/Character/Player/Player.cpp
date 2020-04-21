@@ -68,7 +68,7 @@ bool Player::ControlGameScene() {
 	Timer* pTimerInstance = Timer::GetInstance();
 	if (pTimerInstance->GetTime(Timer::Id::SCENE) >= SCENE_WAIT) {
 
-		if (!m_IsMask)
+		if (!m_HasMask)
 		{
 			switch (m_ViewID) {
 			case SubGameScene::CENTER_VIEW:
@@ -166,7 +166,7 @@ void Player::Update()
 	}
 
 
-	m_IsMask = m_MaskAnimation >= 1080.f ? true : false;
+	m_HasMask = m_MaskAnimation >= 1080.f ? true : false;
 
 }
 

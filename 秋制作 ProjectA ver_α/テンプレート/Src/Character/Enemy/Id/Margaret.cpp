@@ -116,7 +116,6 @@ void Margaret::Update()
 		m_iFrameCount = 0;
 		m_HasKill = true;
 		once = false;
-		//m_CanKill = false;
 	}
 
 
