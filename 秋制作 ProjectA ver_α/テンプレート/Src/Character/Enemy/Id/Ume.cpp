@@ -153,10 +153,6 @@ void Ume::Update()
 	}
 }
 
-void Ume::LoadTex()
-{
-}
-
 void Ume::Draw()
 {
 	Object* pRightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);

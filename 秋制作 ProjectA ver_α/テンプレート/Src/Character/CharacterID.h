@@ -3,39 +3,42 @@
 
 /**
 *	@file Botan.h
-*	@author 春日井
+*	@author 中本
 *	@brief キャラクター「牡丹」を管理するクラスを処理
 */
 
-
+/** 
+*	@enum       CharacterID
+*	@brief      Characterの定数
+*/
 enum CharacterID {
-	PLAYER,		// プレイヤー
+	PLAYER,	
 
-	OHAGI,		// 正面
-	UME,		// 右
-	SAKURA,		// 左
-	RAN,		// 正面にいて光で撃退
-	BOTAN,		// カメラから戻ってきたらたまにいるやつ
-	MARGARET,	// オルゴール
+	OHAGI,	
+	UME,	
+	SAKURA,	
+	RAN,	
+	BOTAN,	
+	MARGARET,
 
 	ENEMY_NUM = MARGARET,
 
 	MAX_CHARACTER,
 };
 
+/**
+*	@enum       EnemyID
+*	@brief      Enemyの定数
+*/
 enum class EnemyID : int {
-	
-	OHAGI,		// 正面
-	UME,		// 右
-	SAKURA,		// 左
-	RAN,		// 正面にいて光で撃退
-	BOTAN,		// カメラから戻ってきたらたまにいるやつ
-	MARGARET,	// オルゴール
+	OHAGI,	
+	UME,	
+	SAKURA,	
+	RAN,	
+	BOTAN,	
+	MARGARET,
 
 	MAX_ENEMY,
-	
 };
-
-
 
 #endif

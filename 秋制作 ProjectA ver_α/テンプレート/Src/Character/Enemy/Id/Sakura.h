@@ -2,9 +2,9 @@
 #define SAKURA_H_
 
 /**
-*	@file Botan.h
+*	@file	Sakura.h
 *	@author 中本
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief	キャラクター「サクラ」を管理するクラスを処理
 */
 
 
@@ -14,14 +14,16 @@
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
 
-/*
-	バニー(エネミー)のクラス
+/**
+* @brief	エネミー[サクラ]を管理するクラス
+* @details	サクラの挙動や描画を実装している
 */
 class Sakura : public Enemy
 {
 public:
-	/*
-		コンストラクタ
+	/**
+	* @fn		Sakura()
+	* @brief	コンストラクタ
 	*/
 	Sakura() :
 		Enemy(RoomID::ROOM_WORK, EnemyID::SAKURA)
@@ -42,42 +44,36 @@ public:
 			m_AnimationTex.m_TextureData[i] = new Texture();
 		}
 	}
-	/*
-		デストラクタ
+
+	/**
+	* @fn		~Sakura()
+	* @brief	デストラクタ
 	*/
 	virtual ~Sakura(){}
-	/*
-		初期化
+
+	/**
+	* @fn		void Init()
+	* @brief	初期化関数
 	*/
 	virtual void Init() override;
 
-	/*
-		挙動
+	/**
+	* @fn		void Init()
+	* @brief	更新関数
 	*/
 	virtual void Update() override;
-	/*
-		m_IsKillを返す
-	*/
-	virtual bool HasKill()const final { return m_HasKill; }
-	/*
-		引数に現在のシーンを入れる
-		テクスチャのロード
-	*/
-	virtual void LoadTex() override;
-	/*
-		描画
+
+	/**
+	* @fn		void Draw()
+	* @brief	描画関数
 	*/
 	virtual void Draw() override;
 
-	/*
-		キルアニメーション
+	/**
+	* @fn		void KillAnimation()
+	* @brief	キルアニメーションの描画関数
 	*/
 	virtual void KillAnimation() override;
-
-
-private:
-	const CharacterID m_CharId = CharacterID::SAKURA;// キャラID定数
-
 };
 
 #endif

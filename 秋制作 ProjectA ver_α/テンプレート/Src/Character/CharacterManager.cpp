@@ -74,15 +74,6 @@ void CharacterManager::Release()
 	//ReleaseCategoryTexture(TEXTURE_CATEGORY_ENEMY);
 }
 
-void CharacterManager::LoadTex() {
-	for (int i = 0; i < MAX_CHARACTER; i++) {
-		if (m_Charas[i] != nullptr) {
-
-			m_Charas[i]->LoadTex();
-		}
-	}
-}
-
 void CharacterManager::KillAnimation()
 {
 	for (int i = OHAGI; i <= ENEMY_NUM; i++) {
@@ -92,7 +83,7 @@ void CharacterManager::KillAnimation()
 	}
 }
 
-bool CharacterManager::RefKill() 
+bool CharacterManager::HasKill()
 {
 	for (int i = OHAGI; i <= ENEMY_NUM; i++) {
 		if (m_Charas[i]->HasKill() == true) {

@@ -155,11 +155,6 @@ void Sakura::Update()
 	}
 }
 
-void Sakura::LoadTex()
-{
-
-}
-
 void Sakura::Draw()
 {
 	Object* pLeftCandle = ObjManager()->GetObj(ObjID::CANDLE_LEFT);

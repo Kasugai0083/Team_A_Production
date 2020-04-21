@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Src\Character\CharacterManager.cpp" />
-    <ClCompile Include="Src\Character\Enemy\Enemy.cpp" />
     <ClCompile Include="Src\Character\Enemy\Id\Sakura.cpp" />
     <ClCompile Include="Src\Character\Enemy\Id\Ume.cpp" />
     <ClCompile Include="Src\Character\Enemy\Id\Oran.cpp" />

@@ -272,8 +272,6 @@ void InitGameScene()
 	ObjManager()->Init();
 
 	g_Manager.CreateCharacter();
-	
-	g_Manager.LoadTex();
 
 	LoadSceneTex(SceneId::GameScene);
 

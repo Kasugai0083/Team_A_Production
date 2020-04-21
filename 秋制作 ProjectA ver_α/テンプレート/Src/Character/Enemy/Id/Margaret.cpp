@@ -17,7 +17,6 @@ void Margaret::Update()
 {
 	if (m_HasKill) { return; }
 
-	EnemyTimer EnemuTimer(10);
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 
 
@@ -122,10 +121,6 @@ void Margaret::Update()
 
 
 
-}
-
-void Margaret::LoadTex()
-{
 }
 
 void Margaret::Draw()

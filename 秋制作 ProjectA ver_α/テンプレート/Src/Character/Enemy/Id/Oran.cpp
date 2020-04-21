@@ -140,10 +140,6 @@ void Ran::Update()
 	}
 }
 
-void Ran::LoadTex()
-{
-}
-
 void Ran::Draw()
 {
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);

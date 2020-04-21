@@ -86,21 +86,6 @@ void Botan::Update()
 	}
 }
 
-bool Botan::SpawnJudgement(double probability_)
-{
-	static double Probability = probability_; // Šm—¦
-
-	if ((double)rand() / RAND_MAX < Probability) {
-		return true;
-	}
-
-	return false;
-}
-
-void Botan::LoadTex()
-{
-}
-
 void Botan::Draw()
 {
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);

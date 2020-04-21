@@ -149,11 +149,6 @@ void Ohagi::Update()
 	}
 }
 
-void Ohagi::LoadTex()
-{
-
-}
-
 void Ohagi::Draw()
 {
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);

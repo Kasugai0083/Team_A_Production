@@ -116,7 +116,7 @@ bool Player::ControlGameScene() {
 void Player::Update()
 {
 	//エネミーが参照する値を変更
-	if (g_Manager.RefKill() == true) {
+	if (g_Manager.HasKill() == true) {
 		m_IsActive = false;
 	}
 
@@ -177,10 +177,6 @@ void Player::Update()
 
 void Player::Draw() {
 	OnMask();
-}
-
-void Player::LoadTex()
-{
 }
 
 const bool Player::CurrentViewID(const SubGameScene sceneId_) const

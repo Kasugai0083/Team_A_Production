@@ -2,16 +2,16 @@
 #define SOUND_H_
 
 /**
-*	@file Botan.h
-*	@author 中本
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@file	Sound.h
+*	@author 松本
 */
 
 #include <dsound.h>
 #include <string>
 
-/*
-	サウンドクラス
+/**
+* @brief	サウンドクラス
+* @details	このクラスからそれぞれのエネミーに派生させる
 */
 class DirectSound
 {

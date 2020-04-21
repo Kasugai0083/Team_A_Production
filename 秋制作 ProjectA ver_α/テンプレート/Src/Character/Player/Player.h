@@ -44,8 +44,6 @@ public:
 		return m_IsMask;
 	}
 
-	void LoadTex() override;
-
 	bool HasMonitor() const override {
 		return m_HasMonitor;
 	}

@@ -13,14 +13,17 @@
 #include "../../../Scene/Scene.h"
 #include "../../CharacterManager.h"
 
-/*
-	ゴールデンフレディ(エネミー)のクラス
+
+/**
+* @brief	エネミー[ボタン]を管理するクラス
+* @details	ボタンの挙動や描画を実装している
 */
 class Botan : public Enemy
 {
 public:
-	/*
-		コンストラクタ
+	/**
+	* @fn		Botan()
+	* @brief	コンストラクタ
 	*/
 	Botan() :
 		Enemy(RoomID::ROOM_VOID, EnemyID::BOTAN)
@@ -39,56 +42,47 @@ public:
 			m_AnimationTex.m_TextureData[i] = new Texture();
 		}
 	}
-	/*
-		デストラクター
+
+	/**
+	* @fn		~Botan()
+	* @brief	デストラクタ
 	*/
 	virtual ~Botan(){}
-	/*
-		初期化
+
+	/**
+	* @fn		void Init()
+	* @brief	初期化関数
 	*/
 	virtual void Init() override;
 
-	/*
-		挙動
+	/**
+	* @fn		void Update()
+	* @brief	更新関数
 	*/
 	virtual void Update() override;
-	/*
-		m_IsKillを返す
-	*/
-	virtual bool HasKill()const override { return m_HasKill; }
 
-	/*
-		生成するかしないかの判定関数
-		プレイヤーがモニターシーンの時に使う。
-		trueで生成する
-	*/
-	bool SpawnJudgement(double probability_);
-
-	// m_SpawnJudgementを返す
-	bool SpawnJudgement() const override { return m_SpawnJudgement; }
-
-	/*
-		引数に現在のシーンを入れる
-		テクスチャのロード
-	*/
-	virtual void LoadTex() override;
-	/*
-		描画
+	/**
+	* @fn		void Draw()
+	* @brief	描画関数
 	*/
 	virtual void Draw() override;
 
-	/*
-		キルアニメーション
+	/**
+	* @fn		void KillAnimation()
+	* @brief	キルアニメーションの描画関数
 	*/
 	virtual void KillAnimation() override;
 
-private:
-	// キャラID定数
-	const CharacterID m_CharId = CharacterID::BOTAN;
+	/**
+	* @fn		bool SpawnJudgement() const
+	* @brief	m_SpawnJudgementを返す
+	* @return	bool
+	*/
+	bool SpawnJudgement() const override { return m_SpawnJudgement; }
 
-	// 試しに作ってみた
-	// SpawnJudgement関数を使ったかどうか
-	bool m_SpawnJudgement;
+private:
+
+	bool m_SpawnJudgement;	//! ボタンがスポーンしてもいいかどうかを保存する変数
 };
 
 #endif
