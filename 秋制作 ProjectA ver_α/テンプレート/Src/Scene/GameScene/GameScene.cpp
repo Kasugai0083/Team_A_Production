@@ -345,7 +345,6 @@ SceneId FinishGameScene()
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_MONITOR);
 
 	ObjManager()->ReleaseGameObj();
-	//g_Manager.Release();
 
 	auto pAudio = AudioPlayer::GetInstance(GetWindowHandle());
 	pAudio->Stop("GameBGM");

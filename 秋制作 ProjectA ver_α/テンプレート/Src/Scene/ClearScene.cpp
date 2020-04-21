@@ -43,9 +43,7 @@ void DrawClearScene()
 {
 	Character* tmp_player = g_Manager.GetCharacter(PLAYER);
 	
-	if (tmp_player == nullptr) {
-		return;
-	}
+	if (tmp_player == nullptr) { return; }
 
 	//プレイヤー死亡時は背景を変更
 	if (tmp_player->IsActive() == false) {

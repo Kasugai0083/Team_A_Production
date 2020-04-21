@@ -2,13 +2,15 @@
 #include "../ItemValue.h"
 #include "../../../Character/CharacterManager.h"
 
-void Fire::Init() {
+void Fire::Init() 
+{
 	switch (m_Id)
 	{
 	case ObjID::FIRE_CENTER:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_FIRE_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr) 
+		{
 			return;
 		}
 
@@ -20,7 +22,8 @@ void Fire::Init() {
 	case ObjID::FIRE_RIGHT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_FIRE_SMALL_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -33,7 +36,8 @@ void Fire::Init() {
 	case ObjID::FIRE_LEFT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_FIRE_SMALL_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -49,7 +53,8 @@ void Fire::Init() {
 
 };
 
-void Fire::FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_) {
+void Fire::FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_)
+{
 		switch (m_Id)
 		{
 		case ObjID::FIRE_CENTER:
@@ -65,11 +70,13 @@ void Fire::FireSwitch(bool center_switch_, bool left_switch_, bool right_switch_
 
 }
 
-void Fire::SceneDeath() {
+void Fire::SceneDeath()
+{
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (GetCurrentSceneId() == GameScene) {
+	if (GetCurrentSceneId() == GameScene)
+	{
 
 		switch (pPlayer->CurrentViewID())
 		{
@@ -87,19 +94,23 @@ void Fire::SceneDeath() {
 	}
 }
 
-void Fire::Update() {
+void Fire::Update() 
+{
 	float HeightRatio = 0.f;
 
 	SceneDeath();
 
-	if (m_IsDeath == false) {
+	if (m_IsDeath == false) 
+	{
 		switch (m_Id)
 		{
 		case ObjID::FIRE_CENTER:
 
-			if (m_pObject->HasCaLight() == true) {
+			if (m_pObject->HasCaLight() == true)
+			{
 
-				if (m_pObject->GetRatio() != NULL) {
+				if (m_pObject->GetRatio() != NULL) 
+				{
 					HeightRatio = m_pObject->GetRatio();
 				}
 
@@ -107,8 +118,10 @@ void Fire::Update() {
 			}
 			break;
 		case ObjID::FIRE_RIGHT:
-			if (m_pObject->HasCaLight() == true) {
-				if (m_pObject->GetRatio() != NULL) {
+			if (m_pObject->HasCaLight() == true) 
+			{
+				if (m_pObject->GetRatio() != NULL) 
+				{
 					HeightRatio = m_pObject->GetRatio();
 				}
 
@@ -117,8 +130,10 @@ void Fire::Update() {
 			}
 			break;
 		case ObjID::FIRE_LEFT:
-			if (m_pObject->HasCaLight() == true) {
-				if (m_pObject->GetRatio() != NULL) {
+			if (m_pObject->HasCaLight() == true) 
+			{
+				if (m_pObject->GetRatio() != NULL) 
+				{
 					HeightRatio = m_pObject->GetRatio();
 				}
 				m_Pos.Y = FIRE_BIG_LEFT_POS.Y + HeightRatio;
@@ -139,10 +154,12 @@ void Fire::Update() {
 	}
 }
 
-void Fire::Draw() {
-	
-	if (m_pObject != nullptr) {
-		if (m_pObject->HasCaLight() == true && m_IsDeath == false) {
+void Fire::Draw() 
+{
+	if (m_pObject != nullptr)
+	{
+		if (m_pObject->HasCaLight() == true && m_IsDeath == false)
+		{
 			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex, 0.f, 0.99f, 1.f);
 		}
 	}

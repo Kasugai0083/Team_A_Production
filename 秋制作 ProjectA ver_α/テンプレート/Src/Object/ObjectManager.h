@@ -1,14 +1,11 @@
 /**
-*	@file Botan.h
+*	@file ObjectManager.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オブジェクトを管理するマネージャークラスを定義
 */
 
 #pragma once
 
-/**
-* オブジェクトを管理するマネージャークラスを定義
-*/
 
 #include "Object.h"
 #include "ObjectID.h"
@@ -17,7 +14,8 @@
 /**
 * @brief オブジェクトを管理するマネージャークラス
 */
-class ObjectManager {
+class ObjectManager 
+{
 
 public:
 

@@ -6,7 +6,6 @@
 #include "Engine/Graphics.h"
 #include "Engine/Lib/Lib.h"
 #include "Timer/Timer.h"
-#include "Data/Accesor.h"
 #include "Data/GameData.h"
 
 
@@ -20,8 +19,6 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	LPSTR     lpCmpLine,
 	INT       nCmdShow)
 {
-
-	Accesor::CreateInstance();
 
 	Timer::CreateInstance();
 
@@ -68,7 +65,6 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		EndEngine();
 	}
 	Timer::DestroyInstance();
-	Accesor::DestroyInstance();
 	GameData::DestroyInstance();
 	return 0;
 }

@@ -1,15 +1,11 @@
 /**
-*	@file Botan.h
+*	@file ObjectID.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オブジェクトの識別番号
 */
 
 #ifndef OBJECT_ID_H_
 #define OBJECT_ID_H_
-
-/**
-* オブジェクトの識別番号
-*/
 
 enum class ObjID {
 	//Item

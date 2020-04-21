@@ -1,14 +1,10 @@
 /**
-*	@file Botan.h
+*	@file UIvalue.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief UI のサイズと座標情報を登録
 */
 
 #pragma once
-
-/**
-* UI のサイズと座標情報を登録
-*/
 
 #include "../../Utility/Vec.h"
 #include "../../Utility/Size.h"

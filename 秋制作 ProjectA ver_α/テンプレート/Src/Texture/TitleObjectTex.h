@@ -1,8 +1,8 @@
 /**
-*	@file Botan.h
+*	@file TitleObjectTex.h
 *	@author 中地
 *			春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief タイトルで使用するオブジェクトの画像リスト
 */
 
 #ifndef TITLE_OBJECTTEX_H_

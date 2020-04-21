@@ -7,29 +7,37 @@
 #include "Item/Id/PlayerItem.h"
 #include "../Texture/Texture.h"
 
-ObjectManager* ObjManager() {
+ObjectManager* ObjManager() 
+{
 	static ObjectManager obj;
 	return &obj;
 }
 
-ObjectManager::ObjectManager() {
+ObjectManager::ObjectManager() 
+{
 
-	for (auto& objects : m_pObjects) {
-		if (objects == nullptr) {
+	for (auto& objects : m_pObjects) 
+	{
+		if (objects == nullptr) 
+		{
 			return;
 		}
 	}
 
 }
 
-ObjectManager::~ObjectManager() {
+ObjectManager::~ObjectManager()
+{
 	Release();
 }
 
-void ObjectManager::Init() {
+void ObjectManager::Init()
+{
 
-	for (auto& objects : m_pObjects) {
-		if (objects == nullptr) {
+	for (auto& objects : m_pObjects) 
+	{
+		if (objects == nullptr)
+		{
 			continue;
 		}
 		objects->Init();
@@ -38,8 +46,10 @@ void ObjectManager::Init() {
 
 void ObjectManager::Update()
 {
-	for (auto& objects : m_pObjects) {
-		if (objects == nullptr) {
+	for (auto& objects : m_pObjects) 
+	{
+		if (objects == nullptr)
+		{
 			continue;
 		}
 		objects->Update();
@@ -49,8 +59,10 @@ void ObjectManager::Update()
 void ObjectManager::Draw()
 {
 
-	for (auto& objects : m_pObjects) {
-		if (objects == nullptr) {
+	for (auto& objects : m_pObjects)
+	{
+		if (objects == nullptr) 
+		{
 			continue;
 		}
 		objects->Draw();
@@ -58,22 +70,27 @@ void ObjectManager::Draw()
 
 }
 
-void ObjectManager::LoadTex() {
-	for (auto& objects : m_pObjects) {
-		if (objects == nullptr) {
+void ObjectManager::LoadTex() 
+{
+	for (auto& objects : m_pObjects) 
+	{
+		if (objects == nullptr) 
+		{
 			continue;
 		}
 		objects->LoadTex();
 	}
 }
 
-void ObjectManager::Release(ObjID id_) {
+void ObjectManager::Release(ObjID id_) 
+{
 
 	delete m_pObjects[static_cast<int>(id_)];
 	m_pObjects[static_cast<int>(id_)] = nullptr;
 }
 
-void ObjectManager::ReleaseTitleObj() {
+void ObjectManager::ReleaseTitleObj() 
+{
 	delete m_pObjects[static_cast<int>(ObjID::TITLE_LOGO)];
 	m_pObjects[static_cast<int>(ObjID::TITLE_LOGO)] = nullptr;
 
@@ -87,7 +104,8 @@ void ObjectManager::ReleaseTitleObj() {
 
 }
 
-void ObjectManager::ReleaseGameObj() {
+void ObjectManager::ReleaseGameObj() 
+{
 	delete m_pObjects[static_cast<int>(ObjID::CANDLE_RIGHT)];
 	m_pObjects[static_cast<int>(ObjID::CANDLE_RIGHT)] = nullptr;
 
@@ -170,12 +188,14 @@ void ObjectManager::ReleaseGameObj() {
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME_OBJECT);
 }
 
-void ObjectManager::CreateTitleObj() {
+void ObjectManager::CreateTitleObj()
+{
 	m_pObjects[static_cast<int>(ObjID::TITLE_LOGO)] = new UI(ObjID::TITLE_LOGO);
 	m_pObjects[static_cast<int>(ObjID::BUTTON_NEW_GAME)] = new UI(ObjID::BUTTON_NEW_GAME);
 	m_pObjects[static_cast<int>(ObjID::BUTTON_CONTINUE)] = new UI(ObjID::BUTTON_CONTINUE);
 }
-void ObjectManager::CreateGameObj() {
+void ObjectManager::CreateGameObj()
+{
 
 	m_pObjects[static_cast<int>(ObjID::CANDLE_RIGHT)] = new Candle(ObjID::CANDLE_RIGHT);
 	m_pObjects[static_cast<int>(ObjID::CANDLE_EFFECT_RIGHT)] = new Candle(ObjID::CANDLE_EFFECT_RIGHT);
@@ -225,8 +245,10 @@ void ObjectManager::CreateGameObj() {
 
 void ObjectManager::Release()
 {
-	for (auto& objects : m_pObjects) {
-		if (objects == nullptr) {
+	for (auto& objects : m_pObjects)
+	{
+		if (objects == nullptr)
+		{
 			continue;
 		}
 		delete objects;
@@ -236,7 +258,8 @@ void ObjectManager::Release()
 	ReleaseCategoryTexture(TEXTURE_CATEGORY_GAME_OBJECT);
 }
 
-bool ObjectManager::HasOnMouse(ObjID id_) {
+bool ObjectManager::HasOnMouse(ObjID id_)
+{
 	if (m_pObjects[static_cast<int>(id_)]->HasOnMouse() == true) {
 		return true;
 	}

@@ -12,7 +12,6 @@ void Player::Init()
 
 // T1 => どのボタンを触れたか
 // T2 => どの MonitorView に移動するか
-// 糞ずるい気がするので変更する予定
 template <class T1, class T2>
 void Player::ButtonPush(T1 button_, T2 view_) {
 	Timer* pTimerInstance = Timer::GetInstance();
@@ -53,7 +52,6 @@ bool Player::ControlMonitor() {
 
 // T1 => どのボタンを触れたか
 // T2 => どの ViewScene に移動するか
-// 糞ずるい気がするので変更する予定
 template <class T1, class T2>
 void Player::KeyPush(T1 button_, T2 view_) {
 	Timer* pTimerInstance = Timer::GetInstance();
@@ -100,10 +98,7 @@ bool Player::ControlGameScene() {
 				once = true;
 			}
 
-			//TmpRoom = m_ViewID;
 			m_ViewID = TmpMonitor;
-			
-			/*m_HasMonitor = true;*/
 
 			pTimerInstance->Init(Timer::Id::SCENE);
 			return true;
@@ -201,9 +196,6 @@ void Player::OnMask() {
 				m_MaskAnimation = 1080.0f;
 			}
 		}
-
-		//DrawTexture(0.0f, (-1080.f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_MASK_TEX));
-
 	}
 	else {
 		if (m_MaskAnimation >= -1080.f) {
@@ -212,7 +204,6 @@ void Player::OnMask() {
 				m_MaskAnimation = -540.f;
 			}
 		}
-		//DrawTexture(0.0f, (-1080.0f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_MASK_TEX));
 	}
 	DrawTexture(0.0f, (-1080.0f + m_MaskAnimation), GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_MASK_TEX), 0.f, 1.f, 0.9f);
 }

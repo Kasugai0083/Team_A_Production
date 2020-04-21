@@ -1,15 +1,11 @@
 /**
-*	@file Botan.h
+*	@file Candle.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オブジェクトの葉（最終継承先）@n
+*		   「キャンドル」を管理するクラスを処理
 */
 
 #pragma once
-
-/**
-* オブジェクトの葉（最終継承先）@n
-* 蝋燭を管理するクラスを格納
-*/
 
 #include "../Item.h"
 #include "../../../Scene/Scene.h"
@@ -22,7 +18,8 @@
 * @brief 蝋燭に纏わるオブジェクトを管理するクラス@n
 * 蝋燭、燭台、蝋燭のエフェクト@n
 */
-class Candle : public Item {
+class Candle : public Item
+{
 public:
 
 	/**

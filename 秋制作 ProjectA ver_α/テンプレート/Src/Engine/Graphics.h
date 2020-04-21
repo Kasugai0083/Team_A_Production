@@ -2,6 +2,7 @@
 * @file Graphics.h
 * @brief 描画に関する関数、定数の宣言
 * @author 中地
+*		  松本
 */
 #ifndef GRAPHICS_H_
 #define GRAPHICS_H_

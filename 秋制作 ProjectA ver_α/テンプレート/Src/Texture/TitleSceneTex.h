@@ -1,8 +1,8 @@
 /**
-*	@file Botan.h
+*	@file TitleSceneTex.h
 *	@author 中地
 *			春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief タイトルシーンの画像リスト
 */
 
 

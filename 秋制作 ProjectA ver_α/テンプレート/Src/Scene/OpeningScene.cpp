@@ -199,8 +199,6 @@ SceneId FinishOpeningScene()
 	pTimerInstance->Init();
 
 	auto audio = AudioPlayer::GetInstance();
-	//audio->Stop("Book");
-	//audio->Release("Book");
 
 	return SceneId::GameScene;
 }

@@ -1,8 +1,8 @@
 /**
-*	@file Botan.h
+*	@file OpeningSceneTex.h
 *	@author 中地
 *			春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オープニングシーンの画像リスト
 */
 
 #pragma once

@@ -1,7 +1,8 @@
 /**
-*	@file Botan.h
+*	@file SingletonTemplate.h
 *	@author	佐藤
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief シングルトンをテンプレート化@n
+*	継承して使用する
 */
 
 #ifndef SINGLETONTEMPLATE_H_

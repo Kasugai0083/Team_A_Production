@@ -1,15 +1,11 @@
 /**
-*	@file Botan.h
+*	@file Object.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オブジェクトの親(派生元)@n
+*	@brief UI や Item に派生するクラスを格納
 */
 
 #pragma once
-
-/**
-* オブジェクトの親(派生元)@n
-* UI や Item に派生するクラスを格納
-*/
 
 #include "../Utility/Vec.h"
 #include "../Utility/Size.h"
