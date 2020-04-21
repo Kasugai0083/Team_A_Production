@@ -4,17 +4,20 @@
 #include "../../Character/CharacterManager.h"
 #include "../../Utility/FileReader.h"
 
-DayController::DayController() {
+DayController::DayController()
+{
 	m_Days = GameData::GetInstance()->GetDays();
 };
 
 
-DayController* DayManager() {
+DayController* DayManager() 
+{
 	static DayController Days;
 	return &Days;
 }
 
-void DayController::DrawCurrentDays() {
+void DayController::DrawCurrentDays() 
+{
 
 	std::string debug;
 
@@ -23,8 +26,8 @@ void DayController::DrawCurrentDays() {
 	DrawFont(100.f, 100.f, debug.c_str(), Large, Yellow);
 }
 
-void DayController::CheckClear() {
-	// クリアフラグをどっかでとってDAYを進行する
+void DayController::CheckClear() 
+{
 
 	m_pPlayer = g_Manager.GetCharacter(PLAYER);
 	

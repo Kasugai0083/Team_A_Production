@@ -14,7 +14,8 @@
 /**
 * @brief オブジェクトを管理するマネージャークラス
 */
-class ObjectManager {
+class ObjectManager 
+{
 
 public:
 

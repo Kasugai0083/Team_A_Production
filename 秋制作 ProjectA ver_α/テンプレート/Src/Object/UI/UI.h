@@ -8,8 +8,6 @@
 #ifndef UI_H_
 #define UI_H_
 
-
-
 #include "UIvalue.h"
 #include "../../Texture/Texture.h"
 #include "../Object.h"

@@ -2,7 +2,7 @@
 *	@file PlayerItem.h
 *	@author 春日井
 *	@brief オブジェクトの葉（最終継承先）@n
-*		   「水晶」「時計」を管理するクラスを処理
+*		   「水晶」「時計」を管理するクラスを定義
 */
 
 #pragma once
@@ -18,7 +18,8 @@
 /**
 * @brief 水晶を管理するクラス
 */
-class Crystal : public Item {
+class Crystal : public Item 
+{
 public:
 	//! コンストラクタ
 	Crystal() { m_IsDeath = true; };
@@ -32,12 +33,12 @@ public:
 	*座標の指定@n
 	*オブジェクトサイズの指定
 	*/
-	void Init()override {
-
-
+	void Init()override 
+	{
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CRYSTAL_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -52,33 +53,43 @@ public:
 	*ゲームシーン以外では死亡\n
 	*死んでいなければ当たり判定を取る\n
 	*/
-	void Update()override {
+	void Update()override 
+	{
 
 		Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-		if (pPlayer->HasMonitor() == false) {
-			if (GetCurrentSceneId() == GameScene) {
+		if (pPlayer->HasMonitor() == false) 
+		{
+			if (GetCurrentSceneId() == GameScene) 
+			{
 
-				if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW) {
+				if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW) 
+				{
 					m_IsDeath = false;
 				}
-				else {
+				else
+				{
 					m_IsDeath = true;
 				}
 			}
-			else {
+			else 
+			{
 				m_IsDeath = true;
 			}
 		}
-		else {
+		else
+		{
 			m_IsDeath = true;
 		}
 
-		if (m_IsDeath == false) {
-			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+		if (m_IsDeath == false)
+		{
+			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true)
+			{
 				m_OnMouse = true;
 			}
-			else {
+			else
+			{
 				m_OnMouse = false;
 			}
 		}
@@ -91,12 +102,11 @@ public:
 	*死亡していなければ描画\n
 	*マウスオーバーでエフェクトの追加\n
 	*/
-	void Draw()override {
+	void Draw()override
+	{
 
-		if (m_IsDeath == false) {
-			/*if (m_OnMouse == true) {
-				DrawTexture(m_Pos, m_pOnHitTex);
-			}*/
+		if (m_IsDeath == false)
+		{
 			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);
 		}
 	}
@@ -109,7 +119,8 @@ private:
 /**
 * @brief 時計を管理するクラス
 */
-class Watch : public Item {
+class Watch : public Item
+{
 public:
 	//! コンストラクタ
 	Watch() { m_IsDeath = true; };
@@ -123,13 +134,14 @@ public:
 	*座標の指定\n
 	*オブジェクトサイズの指定
 	*/
-	void Init()override {
-
+	void Init()override
+	{
 
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_WATCH_TEX);
 		m_pOnHitTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_ONHITWATCH_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr) 
+		{
 			return;
 		}
 
@@ -144,41 +156,52 @@ public:
 	*ゲームシーン以外では死亡\n
 	*死んでいなければ当たり判定を取る\n
 	*/
-	void Update()override {
+	void Update()override
+	{
 
 		Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-		if (pPlayer->HasMonitor() == false) {
-			if (GetCurrentSceneId() == GameScene) {
+		if (pPlayer->HasMonitor() == false) 
+		{
+			if (GetCurrentSceneId() == GameScene)
+			{
 
-				if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW) {
+				if (pPlayer->CurrentViewID() == SubGameScene::CENTER_VIEW) 
+				{
 					m_IsDeath = false;
 				}
-				else {
+				else
+				{
 					m_IsDeath = true;
 					m_OnMouse = false;
 				}
 			}
-			else {
+			else
+			{
 				m_IsDeath = true;
 			}
 		}
-		else {
+		else 
+		{
 			m_IsDeath = true;
 		}
 
-		if (m_IsDeath == false) {
+		if (m_IsDeath == false) 
+		{
 
-			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+			if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true)
+			{
 				m_OnMouse = true;
 			}
-			else {
+			else
+			{
 				m_OnMouse = false;
 			}
 			
 		}
 
-		if (pPlayer->HasMask() == true) {
+		if (pPlayer->HasMask() == true)
+		{
 			m_OnMouse = false;
 		}
 
@@ -191,10 +214,13 @@ public:
 	*死亡していなければ描画\n
 	*マウスオーバーでエフェクトの追加\n
 	*/
-	void Draw()override {
+	void Draw()override 
+	{
 
-		if (m_IsDeath == false) {
-			if (m_OnMouse == true) {
+		if (m_IsDeath == false)
+		{
+			if (m_OnMouse == true)
+			{
 				DrawTexture(m_Pos, m_pOnHitTex);
 			}
 			DrawTexture(m_Pos.X, m_Pos.Y, m_pTex);

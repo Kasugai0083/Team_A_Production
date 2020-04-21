@@ -10,7 +10,8 @@
 
 class Character;
 
-enum class Days {
+enum class Days 
+{
 	DAY_0,
 	DAY_1,
 	DAY_2,
@@ -18,7 +19,8 @@ enum class Days {
 
 };
 
-class DayController {
+class DayController 
+{
 public:
 
 	DayController();		// コンストラクタ

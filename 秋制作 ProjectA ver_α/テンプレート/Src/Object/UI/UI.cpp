@@ -7,14 +7,14 @@
 #include "..//..//Character/CharacterManager.h"
 #include "../../Data/Days/DayController.h"
 
-Object* g_pTitleLogo;
 
-
-void UI::Init(){
+void UI::Init()
+{
 
 	m_IsDeath = true;
 
-	switch (m_Id) {
+	switch (m_Id) 
+	{
 	case ObjID::TITLE_LOGO:
 		m_Pos = TITLE_LOGO_POS;
 		m_Size = TITLE_LOGO_SIZE;
@@ -137,19 +137,23 @@ void UI::Init(){
 
 };
 
-void UI::Draw(){
+void UI::Draw()
+{
 
-	if (m_IsDeath == false) {
+	if (m_IsDeath == false) 
+	{
 
 		switch (m_Id)
 		{
 		case ObjID::BUTTON_NEW_GAME:
-			if (m_OnMouse == true) {
+			if (m_OnMouse == true)
+			{
 				DrawTexture(m_Pos.X, m_Pos.Y, m_OnHitTex);
 			}
 			break;
 		case ObjID::BUTTON_CONTINUE:
-			if (m_OnMouse == true) {
+			if (m_OnMouse == true) 
+			{
 				DrawTexture(m_Pos.X, m_Pos.Y, m_OnHitTex);
 				DrawTexture(DAYS_UI_POS.X, DAYS_UI_POS.Y, m_OnHitTex2);
 			}
@@ -165,9 +169,11 @@ void UI::Draw(){
 
 		Lib::Texture polygon("hoge");
 
-		switch (m_Id) {
+		switch (m_Id)
+		{
 		case ObjID::MO_MASK_UI:
-			if (m_OnMouse == true) {
+			if (m_OnMouse == true)
+			{
 				DrawAlphaBox2D(polygon, m_Pos, m_Size, D3DXCOLOR(0.f, 0.f, 0.f, 0.5f));
 			}
 			break;
@@ -177,11 +183,13 @@ void UI::Draw(){
 		
 }
 
-void UI::Update() {
+void UI::Update() 
+{
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (GetCurrentSceneId() == SceneId::TitleScene) {
+	if (GetCurrentSceneId() == SceneId::TitleScene)
+	{
 		switch (m_Id)
 		{
 		case ObjID::TITLE_LOGO:
@@ -194,8 +202,10 @@ void UI::Update() {
 			break;
 		}
 	}
-	else if (GetCurrentSceneId() == SceneId::GameScene) {
-		if (pPlayer->HasMonitor() == false) {
+	else if (GetCurrentSceneId() == SceneId::GameScene) 
+	{
+		if (pPlayer->HasMonitor() == false)
+		{
 			switch (m_Id)
 			{
 			case ObjID::GAME_BASE_UI:
@@ -207,7 +217,9 @@ void UI::Update() {
 				m_IsDeath = true;
 				break;
 			}
-		}else {
+		}
+		else
+		{
 			switch (m_Id)
 			{
 			case ObjID::BUTTON_WORKSHOP:
@@ -321,11 +333,14 @@ void UI::Update() {
 	}
 	UpdateGameUI();
 
-	if (m_IsDeath == false) {
-		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+	if (m_IsDeath == false) 
+	{
+		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true)
+		{
 			m_OnMouse = true;
 		}
-		else {
+		else 
+		{
 			m_OnMouse = false;
 		}
 	}
@@ -333,16 +348,20 @@ void UI::Update() {
 
 
 
-void UI::UpdateGameUI() {
+void UI::UpdateGameUI() 
+{
 
 	static bool HasPull = false;
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (GetCurrentSceneId() == SceneId::GameScene) {
-
-		if (pPlayer->HasMonitor() == false) {
-			if (HasPull == true) {
-				switch (m_Id) {
+	if (GetCurrentSceneId() == SceneId::GameScene) 
+	{
+		if (pPlayer->HasMonitor() == false) 
+		{
+			if (HasPull == true) 
+			{
+				switch (m_Id)
+				{
 				case ObjID::BUTTON_ON_CONTROL_UI:
 					m_IsDeath = false;
 					break;
@@ -352,11 +371,13 @@ void UI::UpdateGameUI() {
 				}
 			}
 
-			if (m_OnMouse == true) {
+			if (m_OnMouse == true) 
+			{
 				switch (m_Id)
 				{
 				case ObjID::BUTTON_CONTROL_UI:
-					if (OnMouseDown(Left) == true) {
+					if (OnMouseDown(Left) == true)
+					{
 						HasPull = true;
 					}
 					break;
@@ -366,7 +387,8 @@ void UI::UpdateGameUI() {
 
 				}
 			}
-			else {
+			else
+			{
 
 				switch (m_Id)
 				{
@@ -379,7 +401,8 @@ void UI::UpdateGameUI() {
 				}
 			}
 		}
-		else {
+		else
+		{
 			switch (m_Id)
 			{
 			case ObjID::BUTTON_CONTROL_UI:

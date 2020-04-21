@@ -5,16 +5,19 @@
 #include "../../../Engine/Audio/Audio.h"
 #include "../../../Data/GameData.h"
 
-void Candle::Init() {
+void Candle::Init() 
+{
 
 	m_CandleHp = 1.f;
 
 
-	switch (m_Id) {
+	switch (m_Id) 
+	{
 	case ObjID::CANDLE_LEFT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_BIG_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr) 
+		{
 			return;
 		}
 
@@ -31,7 +34,8 @@ void Candle::Init() {
 	case ObjID::CANDLE_RIGHT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_BIG_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr) 
+		{
 			return;
 		}
 
@@ -50,7 +54,8 @@ void Candle::Init() {
 
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_SMALL_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 		m_Pos = CANDLE_SMALL_POS;
@@ -66,7 +71,8 @@ void Candle::Init() {
 	case ObjID::CANDLE_STAND_CENTER:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_STAND_CENTER_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -78,7 +84,8 @@ void Candle::Init() {
 	case ObjID::CANDLE_STAND_RIGHT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_STAND_SIDE_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -90,7 +97,8 @@ void Candle::Init() {
 	case ObjID::CANDLE_STAND_LEFT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_STAND_SIDE_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -102,7 +110,8 @@ void Candle::Init() {
 	case ObjID::CANDLE_EFFECT_CENTER:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_CENTER_EFFECT_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -114,7 +123,8 @@ void Candle::Init() {
 	case ObjID::CANDLE_EFFECT_RIGHT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_RIGHT_EFFECT_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -126,7 +136,8 @@ void Candle::Init() {
 	case ObjID::CANDLE_EFFECT_LEFT:
 		m_pTex = GetTexture(TEXTURE_CATEGORY_GAME_OBJECT, GameObjectCategoryTextureList::OBJECT_CANDLE_LEFT_EFFECT_TEX);
 
-		if (m_pTex == nullptr) {
+		if (m_pTex == nullptr)
+		{
 			return;
 		}
 
@@ -138,7 +149,8 @@ void Candle::Init() {
 	}
 }
 
-void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_switch_) {
+void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_switch_)
+{
 	switch (m_Id)
 	{
 	case ObjID::CANDLE_LEFT:
@@ -153,61 +165,75 @@ void Candle::CandleSwitch(bool center_switch_, bool left_switch_, bool right_swi
 	}
 }
 
-void Candle::SceneDeath() {
+void Candle::SceneDeath()
+{
 
 	Character* pPlayer = g_Manager.GetCharacter(PLAYER);
 
-	if (pPlayer == nullptr) {
+	if (pPlayer == nullptr) 
+	{
 		return;
 	}
 
-	if (pPlayer->HasMonitor() == false) {
+	if (pPlayer->HasMonitor() == false)
+	{
 
-		if (GetCurrentSceneId() == GameScene) {
+		if (GetCurrentSceneId() == GameScene) 
+		{
 
 			switch (pPlayer->CurrentViewID())
 			{
 			case SubGameScene::CENTER_VIEW:
-				if (m_Id == ObjID::CANDLE_STAND_CENTER) {
+				if (m_Id == ObjID::CANDLE_STAND_CENTER)
+				{
 					m_IsDeath = false;
 				}
-				else if (m_Id == ObjID::CANDLE_STAND_LEFT || m_Id == ObjID::CANDLE_STAND_RIGHT) {
+				else if (m_Id == ObjID::CANDLE_STAND_LEFT || m_Id == ObjID::CANDLE_STAND_RIGHT)
+				{
 					m_IsDeath = true;
 				}
 				CandleSwitch(false, true, true);
 				break;
 			case SubGameScene::RIGHT_VIEW:
-				if (m_Id == ObjID::CANDLE_STAND_RIGHT) {
+				if (m_Id == ObjID::CANDLE_STAND_RIGHT) 
+				{
 					m_IsDeath = false;
 				}
-				else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_LEFT) {
+				else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_LEFT)
+				{
 					m_IsDeath = true;
 				}
 				CandleSwitch(true, true, false);
 				break;
 			case SubGameScene::LEFT_VIEW:
-				if (m_Id == ObjID::CANDLE_STAND_LEFT) {
+				if (m_Id == ObjID::CANDLE_STAND_LEFT) 
+				{
 					m_IsDeath = false;
 				}
-				else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_RIGHT) {
+				else if (m_Id == ObjID::CANDLE_STAND_CENTER || m_Id == ObjID::CANDLE_STAND_RIGHT)
+				{
 					m_IsDeath = true;
 				}
 				CandleSwitch(true, false, true);
 				break;
 			}
 		}
-		else {
+		else 
+		{
 			m_IsDeath = true;
 		}
 	}
-	else {
+	else 
+	{
 		m_IsDeath = true;
 	}
 }
 
-void Candle::MeltCandle(ObjID id_) {
+void Candle::MeltCandle(ObjID id_)
+{
 
-	if (m_HasCaLight == true) {
+	if (m_HasCaLight == true) 
+	{
 		switch (m_Id)
 		{
 		case ObjID::CANDLE_LEFT:
@@ -242,40 +268,53 @@ void Candle::MeltCandle(ObjID id_) {
 
 }
 
-void Candle::EffectUpdate() {
+void Candle::EffectUpdate() 
+{
 	Object* CenterCandle = ObjManager()->GetObj(ObjID::CANDLE_CENTER);
 	Object* LeftCandle = ObjManager()->GetObj(ObjID::CANDLE_LEFT);
 	Object* RightCandle = ObjManager()->GetObj(ObjID::CANDLE_RIGHT);
 
-	if (CenterCandle->HasCaLight() == true) {
-		if (m_Id == ObjID::CANDLE_EFFECT_CENTER) {
+	if (CenterCandle->HasCaLight() == true) 
+	{
+		if (m_Id == ObjID::CANDLE_EFFECT_CENTER) 
+		{
 			m_IsDeath = false;
 		}
 	}
-	else {
-		if (m_Id == ObjID::CANDLE_EFFECT_CENTER) {
+	else 
+	{
+		if (m_Id == ObjID::CANDLE_EFFECT_CENTER)
+		{
 			m_IsDeath = true;
 		}
 	}
 
-	if (LeftCandle->HasCaLight() == true) {
-		if (m_Id == ObjID::CANDLE_EFFECT_LEFT) {
+	if (LeftCandle->HasCaLight() == true) 
+	{
+		if (m_Id == ObjID::CANDLE_EFFECT_LEFT) 
+		{
 			m_IsDeath = false;
 		}
 	}
-	else {
-		if (m_Id == ObjID::CANDLE_EFFECT_LEFT) {
+	else 
+	{
+		if (m_Id == ObjID::CANDLE_EFFECT_LEFT)
+		{
 			m_IsDeath = true;
 		}
 	}
 
-	if (RightCandle->HasCaLight() == true) {
-		if (m_Id == ObjID::CANDLE_EFFECT_RIGHT) {
+	if (RightCandle->HasCaLight() == true) 
+	{
+		if (m_Id == ObjID::CANDLE_EFFECT_RIGHT)
+		{
 			m_IsDeath = false;
 		}
 	}
-	else {
-		if (m_Id == ObjID::CANDLE_EFFECT_RIGHT) {
+	else
+	{
+		if (m_Id == ObjID::CANDLE_EFFECT_RIGHT) 
+		{
 			m_IsDeath = true;
 		}
 	}
@@ -294,7 +333,8 @@ void Candle::Update(){
 	switch (m_Id)
 	{
 	case ObjID::CANDLE_CENTER:
-		if (GetKeyDown(UP_KEY) == true) {
+		if (GetKeyDown(UP_KEY) == true)
+		{
 			m_IsDeath = false;
 			m_CandleHp = 1.f;
 
@@ -307,8 +347,8 @@ void Candle::Update(){
 		break;
 	}
 
-	if (m_IsDeath == false && m_CandleHp > 0.f && pPlayer->HasMask() == false) {
-
+	if (m_IsDeath == false && m_CandleHp > 0.f && pPlayer->HasMask() == false) 
+	{
 
 		MeltCandle(ObjID::CANDLE_CENTER);
 		MeltCandle(ObjID::CANDLE_LEFT);
@@ -318,12 +358,14 @@ void Candle::Update(){
 
 		static bool Once = false;
 
-		if (OnMousePush(Right) == true) {
+		if (OnMousePush(Right) == true)
+		{
 			switch (pPlayer->CurrentViewID())
 			{
 			case SubGameScene::CENTER_VIEW:
 
-				if (m_Id == ObjID::CANDLE_CENTER) {
+				if (m_Id == ObjID::CANDLE_CENTER) 
+				{
 					m_HasCaLight = true;
 					if (!Once)
 					{
@@ -335,7 +377,8 @@ void Candle::Update(){
 				break;
 			case SubGameScene::RIGHT_VIEW:
 
-				if (m_Id == ObjID::CANDLE_RIGHT) {
+				if (m_Id == ObjID::CANDLE_RIGHT) 
+				{
 					m_HasCaLight = true;
 					if (!Once)
 					{
@@ -347,7 +390,8 @@ void Candle::Update(){
 				break;
 			case SubGameScene::LEFT_VIEW:
 
-				if (m_Id == ObjID::CANDLE_LEFT) {
+				if (m_Id == ObjID::CANDLE_LEFT) 
+				{
 					m_HasCaLight = true;
 					if (!Once)
 					{
@@ -358,31 +402,37 @@ void Candle::Update(){
 				break;
 			}
 		}
-		else {
+		else 
+		{
 			m_HasCaLight = false;
 			Once = false;
 		}
 
 
-		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) {
+		if (HasRectangleHit(GetMousePos().X, GetMousePos().Y, m_Pos.X, m_Pos.Y, (m_Pos.X + m_Size.Width), (m_Pos.Y + m_Size.Height)) == true) 
+		{
 			m_OnMouse = true;
 		}
-		else {
+		else
+		{
 			m_OnMouse = false;
 		}
 	}
-	else {
+	else 
+	{
 		m_HasCaLight = false;
 	}
 }
 
-void Candle::Draw(){
+void Candle::Draw()
+{
 
 	Size test = m_Frame;
 
 	test.Height *= m_CandleHp;
 
-	if (m_IsDeath == false) {
+	if (m_IsDeath == false)
+	{
 		switch (m_Id)
 		{
 		case ObjID::CANDLE_CENTER:

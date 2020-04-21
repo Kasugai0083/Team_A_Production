@@ -26,17 +26,20 @@ enum class SubGameScene
 	LEFT_CORRIDOR_VIEW,		//左廊下
 };
 
-struct EnemyData {
-	int m_SpownJudge;
-	int m_MovementSpeed;
+struct EnemyData
+{
+	int m_SpownJudge;		// エネミーの出現頻度
+	int m_MovementSpeed;	// エネミーの移動時間
 };
 
-struct GameParam {
-	float m_MeltRatio;
-	int m_TimeMagnification;
+struct GameParam 
+{
+	float m_MeltRatio;		// 蝋燭の融解速度
+	int m_TimeMagnification;// ステージクリアの時間
 };
 
-class GameData : public Singleton<GameData> {
+class GameData : public Singleton<GameData> 
+{
 
 public:
 

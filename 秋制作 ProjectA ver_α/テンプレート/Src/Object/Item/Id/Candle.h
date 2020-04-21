@@ -18,7 +18,8 @@
 * @brief 蝋燭に纏わるオブジェクトを管理するクラス@n
 * 蝋燭、燭台、蝋燭のエフェクト@n
 */
-class Candle : public Item {
+class Candle : public Item
+{
 public:
 
 	/**
