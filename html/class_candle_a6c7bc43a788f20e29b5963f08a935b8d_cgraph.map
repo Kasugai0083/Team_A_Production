@@ -1,6 +1,0 @@
-<map id="Candle::SceneDeath" name="Candle::SceneDeath">
-<area shape="rect" id="node1" title="GameScene 以外でキャンドルを死亡させる GameView 情報によってキャンドルの生死を管理する" alt="" coords="5,56,147,83"/>
-<area shape="rect" id="node2" href="$class_candle.html#a0534ae18084e1ee7f3876710a53cf3e7" title=" " alt="" coords="195,5,344,32"/>
-<area shape="rect" id="node3" href="$_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="227,56,312,83"/>
-<area shape="rect" id="node4" href="$_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="203,107,335,133"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="Ume::Init" name="Ume::Init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,80,32"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="128,5,231,32"/>
-</map>

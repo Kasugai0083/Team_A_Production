@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['p_5finstance_1224',['p_Instance',['../class_timer.html#a333c9669327fac7cdcfd7c48d6116f7a',1,'Timer']]],
-  ['pos_1225',['pos',['../struct_vertex.html#af95390f79baafd843e09c5a92523d246',1,'Vertex']]]
+  ['newgame_5fui_5fpos_1166',['NEWGAME_UI_POS',['../_u_ivalue_8h.html#ac91d80492bf1333cbcaf8ffcd6ecd899',1,'UIvalue.h']]],
+  ['newgame_5fui_5fsize_1167',['NEWGAME_UI_SIZE',['../_u_ivalue_8h.html#a60e7869f485b42031dfe63a29c00e4f9',1,'UIvalue.h']]],
+  ['now_1168',['now',['../struct_i_n_p_u_t_s_t_a_t_e.html#a3db6ee387c46702f73c0cae074e436a3',1,'INPUTSTATE']]],
+  ['ntrg_1169',['ntrg',['../struct_i_n_p_u_t_s_t_a_t_e.html#ac9ac981c39fd698afe2d2869ddf9b756',1,'INPUTSTATE']]]
 ];

@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('class_u_i.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,11 +59,10 @@ $(document).ready(function(){initNavTree('class_u_i.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="#pri-methods">非公開メンバ関数</a> &#124;
-<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="class_u_i-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">UI クラス</div>  </div>
@@ -100,27 +74,8 @@ $(document).ready(function(){initNavTree('class_u_i.html','');});
  <a href="class_u_i.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_u_i_8h_source.html">UI.h</a>&gt;</code></p>
-<div class="dynheader">
-UI の継承関係図</div>
-<div class="dyncontent">
-<div class="center"><img src="class_u_i__inherit__graph.png" border="0" usemap="#_u_i_inherit__map" alt="Inheritance graph"/></div>
-<map name="_u_i_inherit__map" id="_u_i_inherit__map">
-<area shape="rect" title="UIを管理するクラス" alt="" coords="16,80,55,107"/>
-<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
-<div class="dynheader">
-UI 連携図</div>
-<div class="dyncontent">
-<div class="center"><img src="class_u_i__coll__graph.png" border="0" usemap="#_u_i_coll__map" alt="Collaboration graph"/></div>
-<map name="_u_i_coll__map" id="_u_i_coll__map">
-<area shape="rect" title="UIを管理するクラス" alt="" coords="133,95,172,121"/>
-<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
-<area shape="rect" href="struct_vec2.html" title="Vector用構造体(2D版)" alt="" coords="89,5,141,32"/>
-<area shape="rect" href="struct_size.html" title="サイズデータ用構造体" alt="" coords="167,5,215,32"/>
-<area shape="rect" href="struct_texture.html" title="テクスチャデータやサイズを保持する構造体" alt="" coords="240,5,305,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+
+<p><a class="el" href="class_object.html">Object</a>を継承しています。</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
@@ -165,30 +120,8 @@ GameScene に実装されている <a class="el" href="class_u_i.html" title="UI
 <tr class="memitem:a56b5956cea5204d55183a444a01a30d6 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a56b5956cea5204d55183a444a01a30d6">HasCaLight</a> ()</td></tr>
 <tr class="memdesc:a56b5956cea5204d55183a444a01a30d6 inherit pub_methods_class_object"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_candle.html" title="蝋燭に纏わるオブジェクトを管理するクラス 蝋燭、燭台、蝋燭のエフェクト">Candle</a> クラスで使用する <a class="el" href="class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する">HasCaLight()</a> の仮想関数 <a class="el" href="class_candle.html" title="蝋燭に纏わるオブジェクトを管理するクラス 蝋燭、燭台、蝋燭のエフェクト">Candle</a> をインスタンス化して使用する  <a href="class_object.html#a56b5956cea5204d55183a444a01a30d6">[詳解]</a><br /></td></tr>
 <tr class="separator:a56b5956cea5204d55183a444a01a30d6 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-非公開メンバ関数</h2></td></tr>
-<tr class="memitem:aab645726b1de7528bb8563d962886900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#aab645726b1de7528bb8563d962886900">UpdateGameUI</a> ()</td></tr>
-<tr class="memdesc:aab645726b1de7528bb8563d962886900"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameScene で使われている <a class="el" href="class_u_i.html" title="UIを管理するクラス">UI</a> の更新処理  <a href="class_u_i.html#aab645726b1de7528bb8563d962886900">[詳解]</a><br /></td></tr>
-<tr class="separator:aab645726b1de7528bb8563d962886900"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-非公開変数類</h2></td></tr>
-<tr class="memitem:a6e8a73c95ff88047f973974c07c28f30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#a6e8a73c95ff88047f973974c07c28f30">m_Tex</a></td></tr>
-<tr class="memdesc:a6e8a73c95ff88047f973974c07c28f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャの情報を格納  <a href="class_u_i.html#a6e8a73c95ff88047f973974c07c28f30">[詳解]</a><br /></td></tr>
-<tr class="separator:a6e8a73c95ff88047f973974c07c28f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9ea1a766f030d4a20546808a0f898a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">m_HasMask</a></td></tr>
-<tr class="memdesc:a6e9ea1a766f030d4a20546808a0f898a"><td class="mdescLeft">&#160;</td><td class="mdescRight">マスク着脱情報  <a href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">[詳解]</a><br /></td></tr>
-<tr class="separator:a6e9ea1a766f030d4a20546808a0f898a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af718e7cf9fa6e6be6801d840c878a5e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#af718e7cf9fa6e6be6801d840c878a5e6">m_OnMouse</a></td></tr>
-<tr class="memdesc:af718e7cf9fa6e6be6801d840c878a5e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスが重なったとき true  <a href="class_u_i.html#af718e7cf9fa6e6be6801d840c878a5e6">[詳解]</a><br /></td></tr>
-<tr class="separator:af718e7cf9fa6e6be6801d840c878a5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0436580a5a98fc4a44c87affd64e7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#abe0436580a5a98fc4a44c87affd64e7d">m_Pos</a></td></tr>
-<tr class="memdesc:abe0436580a5a98fc4a44c87affd64e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標情報  <a href="class_u_i.html#abe0436580a5a98fc4a44c87affd64e7d">[詳解]</a><br /></td></tr>
-<tr class="separator:abe0436580a5a98fc4a44c87affd64e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87f5591f19b666bd8d094422d167bae6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_size.html">Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i.html#a87f5591f19b666bd8d094422d167bae6">m_Size</a></td></tr>
-<tr class="memdesc:a87f5591f19b666bd8d094422d167bae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">サイズ情報  <a href="class_u_i.html#a87f5591f19b666bd8d094422d167bae6">[詳解]</a><br /></td></tr>
-<tr class="separator:a87f5591f19b666bd8d094422d167bae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c01db131509235804689e9da5af6ad5 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a9c01db131509235804689e9da5af6ad5">LoadTex</a> ()</td></tr>
+<tr class="separator:a9c01db131509235804689e9da5af6ad5 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
@@ -203,10 +136,6 @@ GameScene に実装されている <a class="el" href="class_u_i.html" title="UI
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>UIを管理するクラス<br  />
 </p>
-<p>オブジェクトの葉（最終継承先）<br  />
-UserInterface を管理するクラスを格納 </p>
-
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00016">16</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a299a88710de0d14e7c621238f767323a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a299a88710de0d14e7c621238f767323a">&#9670;&nbsp;</a></span>UI()</h2>
@@ -242,8 +171,6 @@ UserInterface を管理するクラスを格納 </p>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00024">24</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
@@ -274,19 +201,6 @@ UserInterface を管理するクラスを格納 </p>
 マウスが重なっている場合、黒ポリゴンを重ねる </p>
 
 <p><a class="el" href="class_object.html#acbd787db750bc1be296d152b324acf20">Object</a>を実装しています。</p>
-
-<p class="definition"> <a class="el" href="_u_i_8cpp_source.html">UI.cpp</a> の <a class="el" href="_u_i_8cpp_source.html#l00147">147</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_u_i_ab1403cfb83132a7815e11fd3ece8fc85_cgraph.png" border="0" usemap="#class_u_i_ab1403cfb83132a7815e11fd3ece8fc85_cgraph" alt=""/></div>
-<map name="class_u_i_ab1403cfb83132a7815e11fd3ece8fc85_cgraph" id="class_u_i_ab1403cfb83132a7815e11fd3ece8fc85_cgraph">
-<area shape="rect" title="生存情報に基づいて描画 マウスが重なっている場合、黒ポリゴンを重ねる" alt="" coords="5,31,76,57"/>
-<area shape="rect" href="_graphics_8cpp.html#a77681abc93f8cf102f7b432c93b2b345" title=" " alt="" coords="124,5,247,32"/>
-<area shape="rect" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="138,56,233,83"/>
-<area shape="rect" href="_graphics_8cpp.html#a81a99b59b0e7a9febaf04ed8a7cc0384" title=" " alt="" coords="295,5,393,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -319,8 +233,6 @@ UserInterface を管理するクラスを格納 </p>
 
 <p><a class="el" href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7">Object</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00064">64</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <a id="ab54fc2620277db836aedff9aaa63bdca"></a>
@@ -351,8 +263,6 @@ UserInterface を管理するクラスを格納 </p>
 マウスが重なっていない時 false </dd></dl>
 
 <p><a class="el" href="class_object.html#af936fbfd0a49fbc6311205cd7d8eff19">Object</a>を実装しています。</p>
-
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00056">56</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -387,20 +297,6 @@ UserInterface を管理するクラスを格納 </p>
 
 <p><a class="el" href="class_object.html#a7254c74e9926c9c9e5076b606dbfc962">Object</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_u_i_8cpp_source.html">UI.cpp</a> の <a class="el" href="_u_i_8cpp_source.html#l00012">12</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_u_i_ace720e810124ecde6db91865b4f5b8b2_cgraph.png" border="0" usemap="#class_u_i_ace720e810124ecde6db91865b4f5b8b2_cgraph" alt=""/></div>
-<map name="class_u_i_ace720e810124ecde6db91865b4f5b8b2_cgraph" id="class_u_i_ace720e810124ecde6db91865b4f5b8b2_cgraph">
-<area shape="rect" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定" alt="" coords="5,31,64,57"/>
-<area shape="rect" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="115,5,202,32"/>
-<area shape="rect" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="112,56,205,83"/>
-<area shape="rect" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="253,5,412,32"/>
-<area shape="rect" href="_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="281,56,384,83"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="aa88f13bd32fa1501837d58d9d4aa2c1d"></a>
@@ -431,220 +327,18 @@ GameScene に実装されている <a class="el" href="class_u_i.html" title="UI
 
 <p><a class="el" href="class_object.html#a5ee5c17a09981cbd7c469370e210b4ff">Object</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_u_i_8cpp_source.html">UI.cpp</a> の <a class="el" href="_u_i_8cpp_source.html#l00176">176</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_u_i_aa88f13bd32fa1501837d58d9d4aa2c1d_cgraph.png" border="0" usemap="#class_u_i_aa88f13bd32fa1501837d58d9d4aa2c1d_cgraph" alt=""/></div>
-<map name="class_u_i_aa88f13bd32fa1501837d58d9d4aa2c1d_cgraph" id="class_u_i_aa88f13bd32fa1501837d58d9d4aa2c1d_cgraph">
-<area shape="rect" title="UIの生存情報の更新 GameScene に実装されている UI の処理" alt="" coords="5,107,88,133"/>
-<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="159,5,244,32"/>
-<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="355,95,487,121"/>
-<area shape="rect" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee" title="マウスの座標取得関数" alt="" coords="149,107,254,133"/>
-<area shape="rect" href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac" title=" " alt="" coords="142,157,261,184"/>
-<area shape="rect" href="class_u_i.html#aab645726b1de7528bb8563d962886900" title="GameScene で使われている UI の更新処理" alt="" coords="136,208,267,235"/>
-<area shape="rect" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777" title=" " alt="" coords="315,183,528,209"/>
-<area shape="rect" href="_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02" title="クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する" alt="" coords="366,233,477,260"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aab645726b1de7528bb8563d962886900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab645726b1de7528bb8563d962886900">&#9670;&nbsp;</a></span>UpdateGameUI()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UI::UpdateGameUI </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>GameScene で使われている <a class="el" href="class_u_i.html" title="UIを管理するクラス">UI</a> の更新処理 </p>
-<p>Update で呼び出される関数 </p>
-
-<p class="definition"> <a class="el" href="_u_i_8cpp_source.html">UI.cpp</a> の <a class="el" href="_u_i_8cpp_source.html#l00329">329</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_u_i_aab645726b1de7528bb8563d962886900_cgraph.png" border="0" usemap="#class_u_i_aab645726b1de7528bb8563d962886900_cgraph" alt=""/></div>
-<map name="class_u_i_aab645726b1de7528bb8563d962886900_cgraph" id="class_u_i_aab645726b1de7528bb8563d962886900_cgraph">
-<area shape="rect" title="GameScene で使われている UI の更新処理" alt="" coords="5,56,136,83"/>
-<area shape="rect" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777" title=" " alt="" coords="184,5,397,32"/>
-<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="225,56,357,83"/>
-<area shape="rect" href="_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02" title="クリックした瞬間判定関数 指定したマウスのボタンがクリックされた瞬間かどうかを判定する" alt="" coords="235,107,346,133"/>
-</map>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_u_i_aab645726b1de7528bb8563d962886900_icgraph.png" border="0" usemap="#class_u_i_aab645726b1de7528bb8563d962886900_icgraph" alt=""/></div>
-<map name="class_u_i_aab645726b1de7528bb8563d962886900_icgraph" id="class_u_i_aab645726b1de7528bb8563d962886900_icgraph">
-<area shape="rect" title="GameScene で使われている UI の更新処理" alt="" coords="136,5,267,32"/>
-<area shape="rect" href="class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d" title="UIの生存情報の更新 GameScene に実装されている UI の処理" alt="" coords="5,5,88,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">メンバ詳解</h2>
-<a id="a6e9ea1a766f030d4a20546808a0f898a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e9ea1a766f030d4a20546808a0f898a">&#9670;&nbsp;</a></span>m_HasMask</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool UI::m_HasMask</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>マスク着脱情報 </p>
-
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00081">81</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af718e7cf9fa6e6be6801d840c878a5e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af718e7cf9fa6e6be6801d840c878a5e6">&#9670;&nbsp;</a></span>m_OnMouse</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool UI::m_OnMouse</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>マウスが重なったとき true </p>
-
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00083">83</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="abe0436580a5a98fc4a44c87affd64e7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe0436580a5a98fc4a44c87affd64e7d">&#9670;&nbsp;</a></span>m_Pos</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_vec2.html">Vec2</a> UI::m_Pos</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>座標情報 </p>
-
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00085">85</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a87f5591f19b666bd8d094422d167bae6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87f5591f19b666bd8d094422d167bae6">&#9670;&nbsp;</a></span>m_Size</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_size.html">Size</a> UI::m_Size</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>サイズ情報 </p>
-
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00087">87</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a6e8a73c95ff88047f973974c07c28f30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e8a73c95ff88047f973974c07c28f30">&#9670;&nbsp;</a></span>m_Tex</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_texture.html">Texture</a>* UI::m_Tex</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>テクスチャの情報を格納 </p>
-
-<p class="definition"> <a class="el" href="_u_i_8h_source.html">UI.h</a> の <a class="el" href="_u_i_8h_source.html#l00079">79</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>Src/Object/UI/<a class="el" href="_u_i_8h_source.html">UI.h</a></li>
-<li>Src/Object/UI/<a class="el" href="_u_i_8cpp_source.html">UI.cpp</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/UI/<a class="el" href="_u_i_8h_source.html">UI.h</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/UI/<a class="el" href="_u_i_8cpp.html">UI.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_u_i.html">UI</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

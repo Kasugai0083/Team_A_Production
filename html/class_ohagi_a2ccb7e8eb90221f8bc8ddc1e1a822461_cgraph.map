@@ -1,9 +1,0 @@
-<map id="Ohagi::Draw" name="Ohagi::Draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,99,133"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#a8ae2a02cc1037867ead7f9318b195af0" title=" " alt="" coords="158,5,267,32"/>
-<area shape="rect" id="node3" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="359,31,453,57"/>
-<area shape="rect" id="node4" href="$_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="170,107,255,133"/>
-<area shape="rect" id="node5" href="$_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="147,157,279,184"/>
-<area shape="rect" id="node6" href="$_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="169,208,256,235"/>
-<area shape="rect" id="node7" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="327,208,485,235"/>
-</map>

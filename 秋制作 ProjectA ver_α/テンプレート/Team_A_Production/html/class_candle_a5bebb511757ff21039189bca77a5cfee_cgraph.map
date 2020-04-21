@@ -1,6 +1,0 @@
-<map id="Candle::EffectUpdate" name="Candle::EffectUpdate">
-<area shape="rect" id="node1" title="キャンドルエフェクトの生死情報を管理" alt="" coords="5,56,149,83"/>
-<area shape="rect" id="node2" href="$class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0" title="m_pObjects の インスタンス情報を取得する" alt="" coords="197,5,356,32"/>
-<area shape="rect" id="node3" href="$class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="209,56,344,83"/>
-<area shape="rect" id="node4" href="$_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="231,107,323,133"/>
-</map>

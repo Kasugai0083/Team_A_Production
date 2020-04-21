@@ -1,5 +1,0 @@
-<map id="UpdateOpeningScene" name="UpdateOpeningScene">
-<area shape="rect" id="node1" title="ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される" alt="" coords="275,5,423,32"/>
-<area shape="rect" id="node2" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,5,227,32"/>
-<area shape="rect" id="node3" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,5,79,32"/>
-</map>

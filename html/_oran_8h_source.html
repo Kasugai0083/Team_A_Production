@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Character/Enemy/Id/Oran.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_3921151bb8ef2a5c235c03f5b2de2e14.html">Character</a></li><li class="navelem"><a class="el" href="dir_b1d36a7f8dd5f49d2822b43231a398d3.html">Enemy</a></li><li class="navelem"><a class="el" href="dir_8fe96bb5d5a41a19b45c985ee3c928bc.html">Id</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Oran.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_oran_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ORAN_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ORAN_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../Enemy/Enemy.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../CharacterID.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../../../Utility/RoomID.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../../../Scene/Scene.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../../CharacterManager.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../../../Texture/Texture.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_ran.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ran.html">Ran</a> : <span class="keyword">public</span> <a class="code" href="class_enemy.html">Enemy</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_ran.html#a3b9dd2d0f2e05c9272f68804993dd1c9">   29</a></span>&#160;    <a class="code" href="class_ran.html#a3b9dd2d0f2e05c9272f68804993dd1c9">Ran</a>() :</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_enemy.html">Enemy</a>(<a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a>::<a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126a1700c53cd6a2c63feead44836485002f">ROOM_STORAGE</a>, <a class="code" href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32b">EnemyID</a>::<a class="code" href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32ba76fd9d0957bea1e9be70ead21603222c">RAN</a>)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">m_pPlayer</a> = <a class="code" href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a>.<a class="code" href="class_character_manager.html#a4506fd521aad70371f953806033921fa">GetCharacter</a>(<a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">m_pPlayer</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">m_Counter</a> = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">m_Length</a> = 3;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#a83a381fb07290a2b687571300aecc2a6">m_Speed</a> = 15;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">m_Length</a>; i++) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#ad14d528206f82506eff7051c9c6bb554">m_TextureData</a>[i] = <span class="keyword">new</span> <a class="code" href="struct_texture.html">Texture</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_ran.html#ac6800c5b61e4d548b5e8710a57221b8e">   52</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_ran.html#ac6800c5b61e4d548b5e8710a57221b8e">~Ran</a>(){}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_ran.html#a36fd770659304e2ce03da0ca05cdbd76">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_ran.html#a002243e1837061ed361c62f68a189aac">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_ran.html#a6fb3b82ff6f6585f72c60bb341a146a3">Draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_ran.html#a09d56e150c9d5c4c1bf99c84619794fa">KillAnimation</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif </span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_character_manager_8cpp_html_a95d8eb3e05890c267a200c30fd25791a"><div class="ttname"><a href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a></div><div class="ttdeci">CharacterManager g_Manager</div><div class="ttdef"><b>Definition:</b> CharacterManager.cpp:12</div></div>
+<div class="ttc" id="aclass_ran_html"><div class="ttname"><a href="class_ran.html">Ran</a></div><div class="ttdoc">エネミー[フォクシー]を管理するクラス</div><div class="ttdef"><b>Definition:</b> Oran.h:22</div></div>
+<div class="ttc" id="aclass_ran_html_a09d56e150c9d5c4c1bf99c84619794fa"><div class="ttname"><a href="class_ran.html#a09d56e150c9d5c4c1bf99c84619794fa">Ran::KillAnimation</a></div><div class="ttdeci">virtual void KillAnimation() override</div><div class="ttdoc">キルアニメーションの描画関数</div><div class="ttdef"><b>Definition:</b> Oran.cpp:192</div></div>
+<div class="ttc" id="aclass_enemy_html_a308fa05ba03d104b5679dea6f2a7f072"><div class="ttname"><a href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">Enemy::m_pPlayer</a></div><div class="ttdeci">Character * m_pPlayer</div><div class="ttdoc">アニメーション用テクスチャ保存変数</div><div class="ttdef"><b>Definition:</b> Enemy.h:97</div></div>
+<div class="ttc" id="aclass_ran_html_a6fb3b82ff6f6585f72c60bb341a146a3"><div class="ttname"><a href="class_ran.html#a6fb3b82ff6f6585f72c60bb341a146a3">Ran::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdoc">描画関数</div><div class="ttdef"><b>Definition:</b> Oran.cpp:143</div></div>
+<div class="ttc" id="aclass_ran_html_ac6800c5b61e4d548b5e8710a57221b8e"><div class="ttname"><a href="class_ran.html#ac6800c5b61e4d548b5e8710a57221b8e">Ran::~Ran</a></div><div class="ttdeci">virtual ~Ran()</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> Oran.h:52</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_acb05422f600e20c88d7c75432fe2d32b"><div class="ttname"><a href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32b">EnemyID</a></div><div class="ttdeci">EnemyID</div><div class="ttdoc">Enemyの定数</div><div class="ttdef"><b>Definition:</b> CharacterID.h:33</div></div>
+<div class="ttc" id="astruct_texture_html"><div class="ttname"><a href="struct_texture.html">Texture</a></div><div class="ttdoc">テクスチャデータやサイズを保持する構造体</div><div class="ttdef"><b>Definition:</b> Graphics.h:41</div></div>
+<div class="ttc" id="a_room_i_d_8h_html_aca771d9fb131dc58ebb0da000e692126"><div class="ttname"><a href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a></div><div class="ttdeci">RoomID</div><div class="ttdoc">部屋の定数</div><div class="ttdef"><b>Definition:</b> RoomID.h:14</div></div>
+<div class="ttc" id="aclass_ran_html_a002243e1837061ed361c62f68a189aac"><div class="ttname"><a href="class_ran.html#a002243e1837061ed361c62f68a189aac">Ran::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdoc">キャラクターの更新関数</div><div class="ttdef"><b>Definition:</b> Oran.cpp:15</div></div>
+<div class="ttc" id="aclass_ran_html_a3b9dd2d0f2e05c9272f68804993dd1c9"><div class="ttname"><a href="class_ran.html#a3b9dd2d0f2e05c9272f68804993dd1c9">Ran::Ran</a></div><div class="ttdeci">Ran()</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Oran.h:29</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_acb05422f600e20c88d7c75432fe2d32ba76fd9d0957bea1e9be70ead21603222c"><div class="ttname"><a href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32ba76fd9d0957bea1e9be70ead21603222c">EnemyID::RAN</a></div></div>
+<div class="ttc" id="aclass_ran_html_a36fd770659304e2ce03da0ca05cdbd76"><div class="ttname"><a href="class_ran.html#a36fd770659304e2ce03da0ca05cdbd76">Ran::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdoc">初期化関数</div><div class="ttdef"><b>Definition:</b> Oran.cpp:11</div></div>
+<div class="ttc" id="astruct_animation_texture_html_aa581ccad534d577baf1b5c5f9047ddfc"><div class="ttname"><a href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">AnimationTexture::m_Length</a></div><div class="ttdeci">int m_Length</div><div class="ttdef"><b>Definition:</b> Graphics.h:53</div></div>
+<div class="ttc" id="aclass_enemy_html_acc03ba884acb782253aaea4a83b2cf1c"><div class="ttname"><a href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">Enemy::m_AnimationTex</a></div><div class="ttdeci">AnimationTexture m_AnimationTex</div><div class="ttdoc">敵の移動速度とスポーン確率が保存されている変数</div><div class="ttdef"><b>Definition:</b> Enemy.h:95</div></div>
+<div class="ttc" id="astruct_animation_texture_html_a83a381fb07290a2b687571300aecc2a6"><div class="ttname"><a href="struct_animation_texture.html#a83a381fb07290a2b687571300aecc2a6">AnimationTexture::m_Speed</a></div><div class="ttdeci">int m_Speed</div><div class="ttdef"><b>Definition:</b> Graphics.h:52</div></div>
+<div class="ttc" id="astruct_animation_texture_html_acac6207a7d4d396730ff54f172ea28a4"><div class="ttname"><a href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">AnimationTexture::m_Counter</a></div><div class="ttdeci">int m_Counter</div><div class="ttdef"><b>Definition:</b> Graphics.h:54</div></div>
+<div class="ttc" id="a_room_i_d_8h_html_aca771d9fb131dc58ebb0da000e692126a1700c53cd6a2c63feead44836485002f"><div class="ttname"><a href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126a1700c53cd6a2c63feead44836485002f">ROOM_STORAGE</a></div><div class="ttdoc">工房</div><div class="ttdef"><b>Definition:</b> RoomID.h:17</div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">キャラクターの子クラス</div><div class="ttdef"><b>Definition:</b> Enemy.h:23</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a></div><div class="ttdef"><b>Definition:</b> CharacterID.h:15</div></div>
+<div class="ttc" id="astruct_animation_texture_html_ad14d528206f82506eff7051c9c6bb554"><div class="ttname"><a href="struct_animation_texture.html#ad14d528206f82506eff7051c9c6bb554">AnimationTexture::m_TextureData</a></div><div class="ttdeci">Texture * m_TextureData[10]</div><div class="ttdef"><b>Definition:</b> Graphics.h:50</div></div>
+<div class="ttc" id="aclass_character_manager_html_a4506fd521aad70371f953806033921fa"><div class="ttname"><a href="class_character_manager.html#a4506fd521aad70371f953806033921fa">CharacterManager::GetCharacter</a></div><div class="ttdeci">Character * GetCharacter(int id_)</div><div class="ttdoc">キャラクターのインスタンスを取得する関数</div><div class="ttdef"><b>Definition:</b> CharacterManager.h:57</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,5 +1,0 @@
-<map id="Item::Update" name="Item::Update">
-<area shape="rect" id="node1" title="マウスが画像情報に重なった場合、黒ポリゴンを重ねる" alt="" coords="5,31,101,57"/>
-<area shape="rect" id="node2" href="$_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee" title="マウスの座標取得関数" alt="" coords="156,5,261,32"/>
-<area shape="rect" id="node3" href="$_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac" title=" " alt="" coords="149,56,268,83"/>
-</map>

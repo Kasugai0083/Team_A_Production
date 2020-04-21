@@ -5,18 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Src/Object/UI/UI.h ソースファイル</title>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/UI/UI.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('_u_i_8h_source.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,79 +59,84 @@ $(document).ready(function(){initNavTree('_u_i_8h_source.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_42d363da389cf5682b7a800689646556.html">Object</a></li><li class="navelem"><a class="el" href="dir_aad01d31b6147a237379cf40c4a9b6ed.html">UI</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">UI.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_u_i_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef UI_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define UI_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_ivalue_8h.html">UIvalue.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../Texture/Texture.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_u_i.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_i.html">UI</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_u_i.html#a299a88710de0d14e7c621238f767323a">   24</a></span>&#160;    <a class="code" href="class_u_i.html#a299a88710de0d14e7c621238f767323a">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> = id_;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">m_HasMask</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_i.html#ace720e810124ecde6db91865b4f5b8b2">Init</a>()<span class="keyword">override</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d">Update</a>()<span class="keyword">override</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_i.html#ab1403cfb83132a7815e11fd3ece8fc85">Draw</a>()<span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_u_i.html#ab54fc2620277db836aedff9aaa63bdca">   56</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_i.html#ab54fc2620277db836aedff9aaa63bdca">HasOnMouse</a>()<span class="keyword">override </span>{ <span class="keywordflow">return</span> <a class="code" href="class_u_i.html#af718e7cf9fa6e6be6801d840c878a5e6">m_OnMouse</a>; };</div>
+<a href="_u_i_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef UI_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define UI_H_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_u_ivalue_8h.html">UIvalue.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../Texture/Texture.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../Object.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_u_i.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_i.html">UI</a> : <span class="keyword">public</span> <a class="code" href="class_object.html">Object</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_u_i.html#a299a88710de0d14e7c621238f767323a">   26</a></span>&#160;    <a class="code" href="class_u_i.html#a299a88710de0d14e7c621238f767323a">UI</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> = id_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        m_HasMask = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        m_Tex = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        m_Tex2 = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        m_OnHitTex = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        m_OnHitTex2 = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_i.html#ace720e810124ecde6db91865b4f5b8b2">Init</a>()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d">Update</a>()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_i.html#ab1403cfb83132a7815e11fd3ece8fc85">Draw</a>()<span class="keyword">override</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_u_i.html#a82e4cb8b5ba221bf0523e32a6fe0ed95">   64</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_i.html#a82e4cb8b5ba221bf0523e32a6fe0ed95">HasMask</a>()<span class="keyword">override </span>{ <span class="keywordflow">return</span> <a class="code" href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">m_HasMask</a>; };</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_u_i.html#ab54fc2620277db836aedff9aaa63bdca">   64</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_i.html#ab54fc2620277db836aedff9aaa63bdca">HasOnMouse</a>()<span class="keyword">override </span>{ <span class="keywordflow">return</span> m_OnMouse; };</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_u_i.html#aab645726b1de7528bb8563d962886900">UpdateGameUI</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_u_i.html#a6e8a73c95ff88047f973974c07c28f30">   79</a></span>&#160;    <a class="code" href="struct_texture.html">Texture</a>* <a class="code" href="class_u_i.html#a6e8a73c95ff88047f973974c07c28f30">m_Tex</a>;     </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">   81</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">m_HasMask</a>; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_u_i.html#af718e7cf9fa6e6be6801d840c878a5e6">   83</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_i.html#af718e7cf9fa6e6be6801d840c878a5e6">m_OnMouse</a>;     </div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_u_i.html#abe0436580a5a98fc4a44c87affd64e7d">   85</a></span>&#160;    <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="class_u_i.html#abe0436580a5a98fc4a44c87affd64e7d">m_Pos</a>;         </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_u_i.html#a87f5591f19b666bd8d094422d167bae6">   87</a></span>&#160;    <a class="code" href="struct_size.html">Size</a> <a class="code" href="class_u_i.html#a87f5591f19b666bd8d094422d167bae6">m_Size</a>;        </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_u_i.html#a82e4cb8b5ba221bf0523e32a6fe0ed95">   72</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_u_i.html#a82e4cb8b5ba221bf0523e32a6fe0ed95">HasMask</a>()<span class="keyword">override </span>{ <span class="keywordflow">return</span> m_HasMask; };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> UpdateGameUI();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> UpdateTitleUI();</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="struct_texture.html">Texture</a>* m_Tex, *m_OnHitTex;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="struct_texture.html">Texture</a>* m_Tex2, *m_OnHitTex2;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> m_HasMask; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> m_OnMouse;     </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="struct_vec2.html">Vec2</a> m_Pos;         </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="struct_size.html">Size</a> m_Size;        </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="ttc" id="aclass_u_i_html_a87f5591f19b666bd8d094422d167bae6"><div class="ttname"><a href="class_u_i.html#a87f5591f19b666bd8d094422d167bae6">UI::m_Size</a></div><div class="ttdeci">Size m_Size</div><div class="ttdoc">サイズ情報</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00087">UI.h:87</a></div></div>
-<div class="ttc" id="aclass_u_i_html_ab1403cfb83132a7815e11fd3ece8fc85"><div class="ttname"><a href="class_u_i.html#ab1403cfb83132a7815e11fd3ece8fc85">UI::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdoc">生存情報に基づいて描画 マウスが重なっている場合、黒ポリゴンを重ねる</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8cpp_source.html#l00147">UI.cpp:147</a></div></div>
-<div class="ttc" id="aclass_u_i_html_aab645726b1de7528bb8563d962886900"><div class="ttname"><a href="class_u_i.html#aab645726b1de7528bb8563d962886900">UI::UpdateGameUI</a></div><div class="ttdeci">void UpdateGameUI()</div><div class="ttdoc">GameScene で使われている UI の更新処理</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8cpp_source.html#l00329">UI.cpp:329</a></div></div>
-<div class="ttc" id="aclass_u_i_html_a299a88710de0d14e7c621238f767323a"><div class="ttname"><a href="class_u_i.html#a299a88710de0d14e7c621238f767323a">UI::UI</a></div><div class="ttdeci">UI(ObjID id_)</div><div class="ttdoc">コンストラクタ メンバ変数の初期化</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00024">UI.h:24</a></div></div>
-<div class="ttc" id="aclass_u_i_html_ab54fc2620277db836aedff9aaa63bdca"><div class="ttname"><a href="class_u_i.html#ab54fc2620277db836aedff9aaa63bdca">UI::HasOnMouse</a></div><div class="ttdeci">bool HasOnMouse() override</div><div class="ttdoc">m_OnMouse を取得する</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00056">UI.h:56</a></div></div>
-<div class="ttc" id="astruct_texture_html"><div class="ttname"><a href="struct_texture.html">Texture</a></div><div class="ttdoc">テクスチャデータやサイズを保持する構造体</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_8h_source.html#l00038">Graphics.h:38</a></div></div>
-<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">オブジェクトを管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_object_8h_source.html#l00016">Object.h:16</a></div></div>
-<div class="ttc" id="aclass_u_i_html_aa88f13bd32fa1501837d58d9d4aa2c1d"><div class="ttname"><a href="class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d">UI::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">UIの生存情報の更新 GameScene に実装されている UI の処理</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8cpp_source.html#l00176">UI.cpp:176</a></div></div>
-<div class="ttc" id="aclass_u_i_html_a82e4cb8b5ba221bf0523e32a6fe0ed95"><div class="ttname"><a href="class_u_i.html#a82e4cb8b5ba221bf0523e32a6fe0ed95">UI::HasMask</a></div><div class="ttdeci">bool HasMask() override</div><div class="ttdoc">m_HasMask を取得する</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00064">UI.h:64</a></div></div>
-<div class="ttc" id="aclass_u_i_html_abe0436580a5a98fc4a44c87affd64e7d"><div class="ttname"><a href="class_u_i.html#abe0436580a5a98fc4a44c87affd64e7d">UI::m_Pos</a></div><div class="ttdeci">Vec2 m_Pos</div><div class="ttdoc">座標情報</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00085">UI.h:85</a></div></div>
-<div class="ttc" id="aclass_u_i_html_ace720e810124ecde6db91865b4f5b8b2"><div class="ttname"><a href="class_u_i.html#ace720e810124ecde6db91865b4f5b8b2">UI::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8cpp_source.html#l00012">UI.cpp:12</a></div></div>
-<div class="ttc" id="aclass_u_i_html_a6e9ea1a766f030d4a20546808a0f898a"><div class="ttname"><a href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">UI::m_HasMask</a></div><div class="ttdeci">bool m_HasMask</div><div class="ttdoc">マスク着脱情報</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00081">UI.h:81</a></div></div>
-<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a></div><div class="ttdeci">ObjID</div><div class="ttdef"><b>Definition:</b> <a href="_object_i_d_8h_source.html#l00008">ObjectID.h:8</a></div></div>
-<div class="ttc" id="a_u_ivalue_8h_html"><div class="ttname"><a href="_u_ivalue_8h.html">UIvalue.h</a></div></div>
-<div class="ttc" id="aclass_u_i_html_af718e7cf9fa6e6be6801d840c878a5e6"><div class="ttname"><a href="class_u_i.html#af718e7cf9fa6e6be6801d840c878a5e6">UI::m_OnMouse</a></div><div class="ttdeci">bool m_OnMouse</div><div class="ttdoc">マウスが重なったとき true</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00083">UI.h:83</a></div></div>
-<div class="ttc" id="astruct_size_html"><div class="ttname"><a href="struct_size.html">Size</a></div><div class="ttdoc">サイズデータ用構造体</div><div class="ttdef"><b>Definition:</b> <a href="_size_8h_source.html#l00011">Size.h:11</a></div></div>
-<div class="ttc" id="aclass_u_i_html"><div class="ttname"><a href="class_u_i.html">UI</a></div><div class="ttdoc">UIを管理するクラス</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00016">UI.h:16</a></div></div>
-<div class="ttc" id="aclass_object_html_a9f06f75335ce0023e49bd4b79afcc1a4"><div class="ttname"><a href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">Object::m_Id</a></div><div class="ttdeci">ObjID m_Id</div><div class="ttdoc">オブジェクトの識別番号</div><div class="ttdef"><b>Definition:</b> <a href="_object_8h_source.html#l00066">Object.h:66</a></div></div>
-<div class="ttc" id="aclass_u_i_html_a6e8a73c95ff88047f973974c07c28f30"><div class="ttname"><a href="class_u_i.html#a6e8a73c95ff88047f973974c07c28f30">UI::m_Tex</a></div><div class="ttdeci">Texture * m_Tex</div><div class="ttdoc">テクスチャの情報を格納</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_8h_source.html#l00079">UI.h:79</a></div></div>
-<div class="ttc" id="astruct_vec2_html"><div class="ttname"><a href="struct_vec2.html">Vec2</a></div><div class="ttdoc">Vector用構造体(2D版)</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00011">Vec.h:11</a></div></div>
+<div class="ttc" id="aclass_u_i_html_ab1403cfb83132a7815e11fd3ece8fc85"><div class="ttname"><a href="class_u_i.html#ab1403cfb83132a7815e11fd3ece8fc85">UI::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdoc">生存情報に基づいて描画 マウスが重なっている場合、黒ポリゴンを重ねる</div><div class="ttdef"><b>Definition:</b> UI.cpp:140</div></div>
+<div class="ttc" id="aclass_u_i_html_a299a88710de0d14e7c621238f767323a"><div class="ttname"><a href="class_u_i.html#a299a88710de0d14e7c621238f767323a">UI::UI</a></div><div class="ttdeci">UI(ObjID id_)</div><div class="ttdoc">コンストラクタ メンバ変数の初期化</div><div class="ttdef"><b>Definition:</b> UI.h:26</div></div>
+<div class="ttc" id="aclass_u_i_html_ab54fc2620277db836aedff9aaa63bdca"><div class="ttname"><a href="class_u_i.html#ab54fc2620277db836aedff9aaa63bdca">UI::HasOnMouse</a></div><div class="ttdeci">bool HasOnMouse() override</div><div class="ttdoc">m_OnMouse を取得する</div><div class="ttdef"><b>Definition:</b> UI.h:64</div></div>
+<div class="ttc" id="astruct_texture_html"><div class="ttname"><a href="struct_texture.html">Texture</a></div><div class="ttdoc">テクスチャデータやサイズを保持する構造体</div><div class="ttdef"><b>Definition:</b> Graphics.h:41</div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">オブジェクトを管理するクラス</div><div class="ttdef"><b>Definition:</b> Object.h:18</div></div>
+<div class="ttc" id="aclass_u_i_html_aa88f13bd32fa1501837d58d9d4aa2c1d"><div class="ttname"><a href="class_u_i.html#aa88f13bd32fa1501837d58d9d4aa2c1d">UI::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">UIの生存情報の更新 GameScene に実装されている UI の処理</div><div class="ttdef"><b>Definition:</b> UI.cpp:186</div></div>
+<div class="ttc" id="aclass_u_i_html_a82e4cb8b5ba221bf0523e32a6fe0ed95"><div class="ttname"><a href="class_u_i.html#a82e4cb8b5ba221bf0523e32a6fe0ed95">UI::HasMask</a></div><div class="ttdeci">bool HasMask() override</div><div class="ttdoc">m_HasMask を取得する</div><div class="ttdef"><b>Definition:</b> UI.h:72</div></div>
+<div class="ttc" id="aclass_u_i_html_ace720e810124ecde6db91865b4f5b8b2"><div class="ttname"><a href="class_u_i.html#ace720e810124ecde6db91865b4f5b8b2">UI::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定</div><div class="ttdef"><b>Definition:</b> UI.cpp:11</div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a></div><div class="ttdeci">ObjID</div><div class="ttdef"><b>Definition:</b> ObjectID.h:10</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html"><div class="ttname"><a href="_u_ivalue_8h.html">UIvalue.h</a></div><div class="ttdoc">UI のサイズと座標情報を登録</div></div>
+<div class="ttc" id="astruct_size_html"><div class="ttname"><a href="struct_size.html">Size</a></div><div class="ttdoc">サイズデータ用構造体</div><div class="ttdef"><b>Definition:</b> Size.h:12</div></div>
+<div class="ttc" id="aclass_u_i_html"><div class="ttname"><a href="class_u_i.html">UI</a></div><div class="ttdoc">UIを管理するクラス</div><div class="ttdef"><b>Definition:</b> UI.h:18</div></div>
+<div class="ttc" id="aclass_object_html_a9f06f75335ce0023e49bd4b79afcc1a4"><div class="ttname"><a href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">Object::m_Id</a></div><div class="ttdeci">ObjID m_Id</div><div class="ttdoc">オブジェクトの識別番号</div><div class="ttdef"><b>Definition:</b> Object.h:71</div></div>
+<div class="ttc" id="astruct_vec2_html"><div class="ttname"><a href="struct_vec2.html">Vec2</a></div><div class="ttdoc">Vector用構造体(2D版)</div><div class="ttdef"><b>Definition:</b> Vec.h:12</div></div>
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_a1b83057247c09cdb8dec7926d827fb9.html">Object</a></li><li class="navelem"><a class="el" href="dir_76c12ab2af707bf4da90e20e45923626.html">UI</a></li><li class="navelem"><a class="el" href="_u_i_8h.html">UI.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

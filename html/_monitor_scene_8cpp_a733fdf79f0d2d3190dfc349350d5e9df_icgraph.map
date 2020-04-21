@@ -1,6 +1,0 @@
-<map id="InitMonitorScene" name="InitMonitorScene">
-<area shape="rect" id="node1" title=" " alt="" coords="465,5,584,32"/>
-<area shape="rect" id="node2" href="$_monitor_scene_8h.html#a502ddcf70f16f597857a74a4c5b0aff8" title=" " alt="" coords="275,5,417,32"/>
-<area shape="rect" id="node3" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,5,227,32"/>
-<area shape="rect" id="node4" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,5,79,32"/>
-</map>

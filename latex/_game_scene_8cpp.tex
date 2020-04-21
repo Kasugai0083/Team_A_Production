@@ -1,5 +1,5 @@
-\hypertarget{_game_scene_8cpp}{}\doxysection{Src/\+Scene/\+Game\+Scene/\+Game\+Scene.cpp ファイル}
-\label{_game_scene_8cpp}\index{Src/Scene/GameScene/GameScene.cpp@{Src/Scene/GameScene/GameScene.cpp}}
+\hypertarget{_game_scene_8cpp}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Scene/\+Game\+Scene/\+Game\+Scene.cpp ファイル}
+\label{_game_scene_8cpp}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/GameScene/GameScene.cpp@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/GameScene/GameScene.cpp}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}../../\+Scene/\+Scene.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../../\+Engine/\+Input.\+h\char`\"{}}\newline
@@ -11,18 +11,13 @@
 {\ttfamily \#include \char`\"{}../../\+Character/\+Character\+Manager.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../../\+Object/\+Object\+Manager.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../../\+Object/\+Object\+I\+D.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Game\+Data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../..//\+Data/\+Game\+Data.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Game\+Scene.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../../\+Object/\+Item/\+Item\+Value.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../../\+Object/\+Object.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../../\+Object/\+U\+I/\+U\+Ivalue.\+h\char`\"{}}\newline
-Game\+Scene.\+cpp の依存先関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp__incl}
-\end{center}
-\end{figure}
+{\ttfamily \#include \char`\"{}../../\+Engine/\+Audio/\+Audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Texture/\+Load\+Tex.\+h\char`\"{}}\newline
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,11 +28,13 @@ void \mbox{\hyperlink{_game_scene_8cpp_ae5041f4f90cb0d4b1d83b4e738fc1d73}{Main\+
 \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_game_scene_8cpp_a11b8798495a5153f96f49521c178d8cd}{Finish\+Game\+Scene}} ()
 \item 
 \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_game_scene_8cpp_aaa0f133f9ce54fe2b94a1ed07d922be8}{Update\+Game\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em ゲームシーンの更新関数~\newline
+ゲームシーンの仕様が実行される \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_game_scene_8cpp_a4fd67c2b68c32503780eb9c0aa18dcbe}{Draw\+Monitor\+Bg}} ()
 \item 
 void \mbox{\hyperlink{_game_scene_8cpp_a758cda2c7e70579e62ec2a9b4f4b7aa6}{Draw\+Game\+Scene}} ()
-\item 
-bool \mbox{\hyperlink{_game_scene_8cpp_ae952101cd17086466b5764d7cbdbe37b}{Has\+Scene\+Change}} (\mbox{\hyperlink{struct_game_data_afb8e91137fade7c0ebae2e3058d5cdfd}{Game\+Data\+::\+Sub\+Game\+Scene}} scene\+\_\+)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ゲームシーンの描画関数~\newline
+ゲームシーンのオブジェクトを描画するための関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{関数詳解}
@@ -49,111 +46,33 @@ bool \mbox{\hyperlink{_game_scene_8cpp_ae952101cd17086466b5764d7cbdbe37b}{Has\+S
 
 
 
- Game\+Scene.\+cpp の 45 行目に定義があります。
+ゲームシーンの描画関数~\newline
+ゲームシーンのオブジェクトを描画するための関数 
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_a758cda2c7e70579e62ec2a9b4f4b7aa6_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_a758cda2c7e70579e62ec2a9b4f4b7aa6_icgraph}
-\end{center}
-\end{figure}
+\mbox{\Hypertarget{_game_scene_8cpp_a4fd67c2b68c32503780eb9c0aa18dcbe}\label{_game_scene_8cpp_a4fd67c2b68c32503780eb9c0aa18dcbe}} 
+\index{GameScene.cpp@{GameScene.cpp}!DrawMonitorBg@{DrawMonitorBg}}
+\index{DrawMonitorBg@{DrawMonitorBg}!GameScene.cpp@{GameScene.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawMonitorBg()}{DrawMonitorBg()}}
+{\footnotesize\ttfamily void Draw\+Monitor\+Bg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{_game_scene_8cpp_a11b8798495a5153f96f49521c178d8cd}\label{_game_scene_8cpp_a11b8798495a5153f96f49521c178d8cd}} 
 \index{GameScene.cpp@{GameScene.cpp}!FinishGameScene@{FinishGameScene}}
 \index{FinishGameScene@{FinishGameScene}!GameScene.cpp@{GameScene.cpp}}
 \doxysubsubsection{\texorpdfstring{FinishGameScene()}{FinishGameScene()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} Finish\+Game\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Game\+Scene.\+cpp の 181 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=329pt]{_game_scene_8cpp_a11b8798495a5153f96f49521c178d8cd_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_a11b8798495a5153f96f49521c178d8cd_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{_game_scene_8cpp_ae952101cd17086466b5764d7cbdbe37b}\label{_game_scene_8cpp_ae952101cd17086466b5764d7cbdbe37b}} 
-\index{GameScene.cpp@{GameScene.cpp}!HasSceneChange@{HasSceneChange}}
-\index{HasSceneChange@{HasSceneChange}!GameScene.cpp@{GameScene.cpp}}
-\doxysubsubsection{\texorpdfstring{HasSceneChange()}{HasSceneChange()}}
-{\footnotesize\ttfamily bool Has\+Scene\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_data_afb8e91137fade7c0ebae2e3058d5cdfd}{Game\+Data\+::\+Sub\+Game\+Scene}}}]{scene\+\_\+ }\end{DoxyParamCaption})}
-
-
-
- Game\+Scene.\+cpp の 122 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=261pt]{_game_scene_8cpp_ae952101cd17086466b5764d7cbdbe37b_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_game_scene_8cpp_a1ece36617d8acd26e8fee2f8c8a56613}\label{_game_scene_8cpp_a1ece36617d8acd26e8fee2f8c8a56613}} 
 \index{GameScene.cpp@{GameScene.cpp}!InitGameScene@{InitGameScene}}
 \index{InitGameScene@{InitGameScene}!GameScene.cpp@{GameScene.cpp}}
 \doxysubsubsection{\texorpdfstring{InitGameScene()}{InitGameScene()}}
 {\footnotesize\ttfamily void Init\+Game\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Game\+Scene.\+cpp の 89 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_a1ece36617d8acd26e8fee2f8c8a56613_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_a1ece36617d8acd26e8fee2f8c8a56613_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_game_scene_8cpp_ae5041f4f90cb0d4b1d83b4e738fc1d73}\label{_game_scene_8cpp_ae5041f4f90cb0d4b1d83b4e738fc1d73}} 
 \index{GameScene.cpp@{GameScene.cpp}!MainGameScene@{MainGameScene}}
 \index{MainGameScene@{MainGameScene}!GameScene.cpp@{GameScene.cpp}}
 \doxysubsubsection{\texorpdfstring{MainGameScene()}{MainGameScene()}}
 {\footnotesize\ttfamily void Main\+Game\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Game\+Scene.\+cpp の 139 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_ae5041f4f90cb0d4b1d83b4e738fc1d73_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_ae5041f4f90cb0d4b1d83b4e738fc1d73_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_game_scene_8cpp_aaa0f133f9ce54fe2b94a1ed07d922be8}\label{_game_scene_8cpp_aaa0f133f9ce54fe2b94a1ed07d922be8}} 
 \index{GameScene.cpp@{GameScene.cpp}!UpdateGameScene@{UpdateGameScene}}
 \index{UpdateGameScene@{UpdateGameScene}!GameScene.cpp@{GameScene.cpp}}
@@ -162,19 +81,9 @@ bool \mbox{\hyperlink{_game_scene_8cpp_ae952101cd17086466b5764d7cbdbe37b}{Has\+S
 
 
 
- Game\+Scene.\+cpp の 26 行目に定義があります。
+ゲームシーンの更新関数~\newline
+ゲームシーンの仕様が実行される 
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_aaa0f133f9ce54fe2b94a1ed07d922be8_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_scene_8cpp_aaa0f133f9ce54fe2b94a1ed07d922be8_icgraph}
-\end{center}
-\end{figure}
+\begin{DoxyReturn}{戻り値}
+遷移先シーン\+ID(基本は\+Scene\+Id\+::\+Game\+Over\+Sceneが返る) 
+\end{DoxyReturn}

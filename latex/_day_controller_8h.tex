@@ -1,29 +1,37 @@
-\hypertarget{_day_controller_8h}{}\doxysection{Src/\+Scene/\+Days/\+Day\+Controller.h ファイル}
-\label{_day_controller_8h}\index{Src/Scene/Days/DayController.h@{Src/Scene/Days/DayController.h}}
-被依存関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_day_controller_8h__dep__incl}
-\end{center}
-\end{figure}
+\hypertarget{_day_controller_8h}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Data/\+Days/\+Day\+Controller.h ファイル}
+\label{_day_controller_8h}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Data/Days/DayController.h@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Data/Days/DayController.h}}
+
+
+日付(難易度)を管理するクラスを定義  
+
+
 \doxysubsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_day_controller}{Day\+Controller}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 日付(難易度)を管理するクラス \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{列挙型}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days}} \{ \newline
-\mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a7b8574232eb8fe098ea86898b77336b7}{Days\+::\+D\+A\+Y\+\_\+0}}, 
+enum \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days}} \{ \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a7b8574232eb8fe098ea86898b77336b7}{Days\+::\+D\+A\+Y\+\_\+0}}, 
 \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a235403ae8bfa46c07bfcb7b840f1ea3d}{Days\+::\+D\+A\+Y\+\_\+1}}, 
 \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a8cee5590f8b4748739d0f8de40ce533f}{Days\+::\+D\+A\+Y\+\_\+2}}, 
-\mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a8c5893c6b3f57bd02dfca8c644a725dd}{Days\+::\+D\+A\+Y\+\_\+3}}, 
-\newline
-\mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a5d2c84883acf876a2154cae9ab07d59f}{Days\+::\+E\+N\+D\+I\+NG}}
+\mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a8c5893c6b3f57bd02dfca8c644a725dd}{Days\+::\+D\+A\+Y\+\_\+3}}
  \}
+\begin{DoxyCompactList}\small\item\em 日付(難易度)の段階 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_day_controller}{Day\+Controller}} $\ast$ \mbox{\hyperlink{_day_controller_8h_a6efd114b1eac20c21709d773f1d2d164}{Day\+Manager}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+日付(難易度)を管理するクラスを定義 
+
+\begin{DoxyAuthor}{著者}
+春日井 
+\end{DoxyAuthor}
 
 
 \doxysubsection{列挙型詳解}
@@ -32,6 +40,10 @@ enum \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days
 \index{Days@{Days}!DayController.h@{DayController.h}}
 \doxysubsubsection{\texorpdfstring{Days}{Days}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+日付(難易度)の段階 
 
 \begin{DoxyEnumFields}{列挙値}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{DAY\_0@{DAY\_0}!DayController.h@{DayController.h}}\index{DayController.h@{DayController.h}!DAY\_0@{DAY\_0}}}\mbox{\Hypertarget{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a7b8574232eb8fe098ea86898b77336b7}\label{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a7b8574232eb8fe098ea86898b77336b7}} 
@@ -50,12 +62,13 @@ D\+A\+Y\+\_\+2&\\
 D\+A\+Y\+\_\+3&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ENDING@{ENDING}!DayController.h@{DayController.h}}\index{DayController.h@{DayController.h}!ENDING@{ENDING}}}\mbox{\Hypertarget{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a5d2c84883acf876a2154cae9ab07d59f}\label{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990a5d2c84883acf876a2154cae9ab07d59f}} 
-E\+N\+D\+I\+NG&\\
-\hline
-
 \end{DoxyEnumFields}
 
 
- Day\+Controller.\+h の 6 行目に定義があります。
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_day_controller_8h_a6efd114b1eac20c21709d773f1d2d164}\label{_day_controller_8h_a6efd114b1eac20c21709d773f1d2d164}} 
+\index{DayController.h@{DayController.h}!DayManager@{DayManager}}
+\index{DayManager@{DayManager}!DayController.h@{DayController.h}}
+\doxysubsubsection{\texorpdfstring{DayManager()}{DayManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_day_controller}{Day\+Controller}}$\ast$ Day\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 

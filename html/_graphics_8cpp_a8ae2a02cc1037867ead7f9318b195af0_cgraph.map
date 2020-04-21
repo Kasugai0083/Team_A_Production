@@ -1,4 +1,0 @@
-<map id="DrawAnimation" name="DrawAnimation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,115,32"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="163,5,257,32"/>
-</map>

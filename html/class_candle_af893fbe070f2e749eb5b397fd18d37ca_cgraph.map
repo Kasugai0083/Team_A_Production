@@ -1,5 +1,0 @@
-<map id="Candle::Draw" name="Candle::Draw">
-<area shape="rect" id="node1" title="m_Id に基づいて描画 蝋燭の場合 =&gt; ヘルスに応じて溶けるように描画される それ以外 =&gt; 指定された座標とサイズで描画" alt="" coords="5,31,104,57"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#ad61dd9d1b71c35e0486dd004e99021a1" title=" " alt="" coords="154,5,245,32"/>
-<area shape="rect" id="node3" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="152,56,247,83"/>
-</map>

@@ -2,78 +2,51 @@
 \label{class_player}\index{Player@{Player}}
 
 
+プレイヤーの情報を制御・管理  
+
+
+
+
 {\ttfamily \#include $<$Player.\+h$>$}
 
 
 
-Player の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=139pt]{class_player__inherit__graph}
-\end{center}
-\end{figure}
+\mbox{\hyperlink{class_character}{Character}}を継承しています。
 
-
-Player 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=139pt]{class_player__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_player_a8ed544987af18de0e6b2932206bf1186}{$\sim$\+Player}} () override
 \item 
 void \mbox{\hyperlink{class_player_a4eaaeb9d0967fef59baac319b9cc8d60}{Init}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}{Update}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_a5b60ad157bb1e8debca89ed6903ca2a4}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 更新 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a46fbdeeeb7df23ff354e91d68135ec6b}{Has\+Mask}} () const override
+\begin{DoxyCompactList}\small\item\em 描画 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a7371360752e97ba79b5e6299cf04a43d}{Has\+Monitor}} () const override
+\begin{DoxyCompactList}\small\item\em プレイヤーがモニターを見ているかどうか \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a22c7df92dbe1d5e2e0aa50b937ce0966}{Is\+Active}} () override
+\begin{DoxyCompactList}\small\item\em プレイヤーが生きているかどうか \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} \mbox{\hyperlink{class_player_a777721bf0063a23d9b76614924e45c77}{Current\+View\+ID}} () const override
 \item 
-bool \mbox{\hyperlink{class_player_a5ddd7cb248e9df3ab709b380cd55a6d7}{Has\+Mask}} () const override
-\item 
-bool \mbox{\hyperlink{class_player_a4ec9eb479cf249fe8dc2e7613b09d437}{Is\+Active}} () override
-\item 
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} \mbox{\hyperlink{class_player_a58c7d859f120c314adb6125cb4c5d29a}{Current\+View\+Monitor\+ID}} () const override
-\item 
-bool \mbox{\hyperlink{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b}{Control\+Monitor}} () override
-\item 
-bool \mbox{\hyperlink{class_player_ab1961f4cf35c15516d1f19372586e197}{Control\+Game\+Scene}} () override
-\item 
-bool \mbox{\hyperlink{class_player_a02d7ccd26184ddceec7162756b49a0e6}{Has\+G\+Freddy\+Spown}} () override
-\end{DoxyCompactItemize}
-\doxysubsection*{非公開メンバ関数}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_player_ace614875aaf28c64727890bc29f52dbd}{On\+Mask}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-bool \mbox{\hyperlink{class_player_ac493eddeb061ee315b64f76d81e70ce5}{m\+\_\+\+Is\+Active}}
-\item 
-bool \mbox{\hyperlink{class_player_a13140f5b3928d63f89fa0cb8a8156fe9}{m\+\_\+\+Is\+Mask}}
-\item 
-float \mbox{\hyperlink{class_player_ac520dcedabe371d93eafb6d6327eb36b}{m\+\_\+\+Mask\+Animation}}
-\item 
-bool \mbox{\hyperlink{class_player_a634da39cf9822d140a81c3b0c32c4bc1}{m\+\_\+\+Has\+G\+Freddy\+Spown}}
-\item 
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} \mbox{\hyperlink{class_player_a3a6f9774b938944cabc3c447327326ec}{m\+\_\+\+Monitor\+View\+ID}}
+bool \mbox{\hyperlink{class_player_a2c7dee59cee32a99becf3599a39bcacb}{Control\+Monitor}} () override
+\begin{DoxyCompactList}\small\item\em モニターシーン遷移を管理する関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_af3eeed08e6254baa48c44f0551273cac}{Control\+Game\+Scene}} () override
+\begin{DoxyCompactList}\small\item\em ゲームシーン遷移を管理する関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_aa620e5f4be27614873acdd1510189b60}{Has\+G\+Freddy\+Spown}} () override
+\begin{DoxyCompactList}\small\item\em ゴールデンフレディのフラグを取得 \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_player_a0a74b4d9c44d4b027baee4c8fac20592}{Current\+View\+ID}} (const \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} scene\+Id\+\_\+) const override
 \end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
-
-
- Player.\+h の 7 行目に定義があります。
-
-
+プレイヤーの情報を制御・管理 
 
 \doxysubsection{構築子と解体子}
 \mbox{\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
@@ -84,7 +57,7 @@ bool \mbox{\hyperlink{class_player_a634da39cf9822d140a81c3b0c32c4bc1}{m\+\_\+\+H
 
 
 
- Player.\+h の 13 行目に定義があります。
+コンストラクタ 
 
 \mbox{\Hypertarget{class_player_a8ed544987af18de0e6b2932206bf1186}\label{class_player_a8ed544987af18de0e6b2932206bf1186}} 
 \index{Player@{Player}!````~Player@{$\sim$Player}}
@@ -94,66 +67,54 @@ bool \mbox{\hyperlink{class_player_a634da39cf9822d140a81c3b0c32c4bc1}{m\+\_\+\+H
 
 
 
- Player.\+h の 21 行目に定義があります。
-
-
-
 \doxysubsection{関数詳解}
-\mbox{\Hypertarget{class_player_ab1961f4cf35c15516d1f19372586e197}\label{class_player_ab1961f4cf35c15516d1f19372586e197}} 
+\mbox{\Hypertarget{class_player_af3eeed08e6254baa48c44f0551273cac}\label{class_player_af3eeed08e6254baa48c44f0551273cac}} 
 \index{Player@{Player}!ControlGameScene@{ControlGameScene}}
 \index{ControlGameScene@{ControlGameScene}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{ControlGameScene()}{ControlGameScene()}}
-{\footnotesize\ttfamily bool Player\+::\+Control\+Game\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Player\+::\+Control\+Game\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ゲームシーン遷移を管理する関数 
 
 
 
 \mbox{\hyperlink{class_character_a7f64f261c8d7eda3895df7f1d083eb4c}{Character}}を再実装しています。
 
-
-
- Player.\+cpp の 66 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_player_ab1961f4cf35c15516d1f19372586e197_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b}\label{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b}} 
+\mbox{\Hypertarget{class_player_a2c7dee59cee32a99becf3599a39bcacb}\label{class_player_a2c7dee59cee32a99becf3599a39bcacb}} 
 \index{Player@{Player}!ControlMonitor@{ControlMonitor}}
 \index{ControlMonitor@{ControlMonitor}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{ControlMonitor()}{ControlMonitor()}}
-{\footnotesize\ttfamily bool Player\+::\+Control\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Player\+::\+Control\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+モニターシーン遷移を管理する関数 
 
 
 
 \mbox{\hyperlink{class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54}{Character}}を再実装しています。
 
-
-
- Player.\+cpp の 30 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_a58c7d859f120c314adb6125cb4c5d29a}\label{class_player_a58c7d859f120c314adb6125cb4c5d29a}} 
-\index{Player@{Player}!CurrentViewMonitorID@{CurrentViewMonitorID}}
-\index{CurrentViewMonitorID@{CurrentViewMonitorID}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{CurrentViewMonitorID()}{CurrentViewMonitorID()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} Player\+::\+Current\+View\+Monitor\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_player_a777721bf0063a23d9b76614924e45c77}\label{class_player_a777721bf0063a23d9b76614924e45c77}} 
+\index{Player@{Player}!CurrentViewID@{CurrentViewID}}
+\index{CurrentViewID@{CurrentViewID}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{CurrentViewID()}{CurrentViewID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} Player\+::\+Current\+View\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{class_character_a1ac0ae4900eb16be01a4fd6261b3061f}{Character}}を再実装しています。
+\mbox{\hyperlink{class_character_a0c4dd839871956bd5e4e61aba225a524}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a0a74b4d9c44d4b027baee4c8fac20592}\label{class_player_a0a74b4d9c44d4b027baee4c8fac20592}} 
+\index{Player@{Player}!CurrentViewID@{CurrentViewID}}
+\index{CurrentViewID@{CurrentViewID}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{CurrentViewID()}{CurrentViewID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const bool Player\+::\+Current\+View\+ID (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}}}]{scene\+Id\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Player.\+h の 35 行目に定義があります。
+\mbox{\hyperlink{class_character_a3c17c297de9f775fdcfc386df408a635}{Character}}を再実装しています。
 
 \mbox{\Hypertarget{class_player_a5b60ad157bb1e8debca89ed6903ca2a4}\label{class_player_a5b60ad157bb1e8debca89ed6903ca2a4}} 
 \index{Player@{Player}!Draw@{Draw}}
@@ -163,46 +124,53 @@ bool \mbox{\hyperlink{class_player_a634da39cf9822d140a81c3b0c32c4bc1}{m\+\_\+\+H
 
 
 
-\mbox{\hyperlink{class_character_a051c409115c689480f0246f6a4743474}{Character}}を実装しています。
+更新 
 
 
 
- Player.\+cpp の 120 行目に定義があります。
+\mbox{\hyperlink{class_character_ae0c60274d2515e4198b280cde1719a13}{Character}}を実装しています。
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_player_a5b60ad157bb1e8debca89ed6903ca2a4_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_a02d7ccd26184ddceec7162756b49a0e6}\label{class_player_a02d7ccd26184ddceec7162756b49a0e6}} 
+\mbox{\Hypertarget{class_player_aa620e5f4be27614873acdd1510189b60}\label{class_player_aa620e5f4be27614873acdd1510189b60}} 
 \index{Player@{Player}!HasGFreddySpown@{HasGFreddySpown}}
 \index{HasGFreddySpown@{HasGFreddySpown}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{HasGFreddySpown()}{HasGFreddySpown()}}
-{\footnotesize\ttfamily bool Player\+::\+Has\+G\+Freddy\+Spown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Player\+::\+Has\+G\+Freddy\+Spown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ゴールデンフレディのフラグを取得 
 
 
 
 \mbox{\hyperlink{class_character_aede2cfdfe20b765329f14773803c4363}{Character}}を再実装しています。
 
-
-
- Player.\+h の 45 行目に定義があります。
-
-\mbox{\Hypertarget{class_player_a5ddd7cb248e9df3ab709b380cd55a6d7}\label{class_player_a5ddd7cb248e9df3ab709b380cd55a6d7}} 
+\mbox{\Hypertarget{class_player_a46fbdeeeb7df23ff354e91d68135ec6b}\label{class_player_a46fbdeeeb7df23ff354e91d68135ec6b}} 
 \index{Player@{Player}!HasMask@{HasMask}}
 \index{HasMask@{HasMask}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{HasMask()}{HasMask()}}
-{\footnotesize\ttfamily bool Player\+::\+Has\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Player\+::\+Has\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{class_character_a77ebebf9e06dbb8edf710f52c7e1b237}{Character}}を再実装しています。
+描画 
+
+プレイヤーがマスクを被っているかどうか 
+
+\mbox{\hyperlink{class_character_a7e4a9d7f4b30187669847481b4ac1823}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a7371360752e97ba79b5e6299cf04a43d}\label{class_player_a7371360752e97ba79b5e6299cf04a43d}} 
+\index{Player@{Player}!HasMonitor@{HasMonitor}}
+\index{HasMonitor@{HasMonitor}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{HasMonitor()}{HasMonitor()}}
+{\footnotesize\ttfamily Player\+::\+Has\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Player.\+h の 29 行目に定義があります。
+プレイヤーがモニターを見ているかどうか 
+
+
+
+\mbox{\hyperlink{class_character_a33957f897e3d779a9433894bda0ed023}{Character}}を再実装しています。
 
 \mbox{\Hypertarget{class_player_a4eaaeb9d0967fef59baac319b9cc8d60}\label{class_player_a4eaaeb9d0967fef59baac319b9cc8d60}} 
 \index{Player@{Player}!Init@{Init}}
@@ -212,57 +180,26 @@ bool \mbox{\hyperlink{class_player_a634da39cf9822d140a81c3b0c32c4bc1}{m\+\_\+\+H
 
 
 
-\mbox{\hyperlink{class_character_ac3776b55752f328ee74fd1282331f872}{Character}}を実装しています。
+デストラクタ 
 
 
 
- Player.\+cpp の 8 行目に定義があります。
+\mbox{\hyperlink{class_character_a2c844a3b46e18e80d3dc1ccbf3b56f68}{Character}}を実装しています。
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_player_a4eaaeb9d0967fef59baac319b9cc8d60_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_a4ec9eb479cf249fe8dc2e7613b09d437}\label{class_player_a4ec9eb479cf249fe8dc2e7613b09d437}} 
+\mbox{\Hypertarget{class_player_a22c7df92dbe1d5e2e0aa50b937ce0966}\label{class_player_a22c7df92dbe1d5e2e0aa50b937ce0966}} 
 \index{Player@{Player}!IsActive@{IsActive}}
 \index{IsActive@{IsActive}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
-{\footnotesize\ttfamily bool Player\+::\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Player\+::\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{class_character_a10ef1a073e930eda4cab2c555d05c52f}{Character}}を再実装しています。
+プレイヤーが生きているかどうか 
 
 
 
- Player.\+h の 33 行目に定義があります。
+\mbox{\hyperlink{class_character_a7a8ebe4b210ee3c6ec7098d14e70e263}{Character}}を再実装しています。
 
-\mbox{\Hypertarget{class_player_ace614875aaf28c64727890bc29f52dbd}\label{class_player_ace614875aaf28c64727890bc29f52dbd}} 
-\index{Player@{Player}!OnMask@{OnMask}}
-\index{OnMask@{OnMask}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{OnMask()}{OnMask()}}
-{\footnotesize\ttfamily void Player\+::\+On\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Player.\+cpp の 124 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_player_ace614875aaf28c64727890bc29f52dbd_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=275pt]{class_player_ace614875aaf28c64727890bc29f52dbd_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}\label{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}} 
 \index{Player@{Player}!Update@{Update}}
 \index{Update@{Update}!Player@{Player}}
@@ -271,75 +208,15 @@ bool \mbox{\hyperlink{class_player_a634da39cf9822d140a81c3b0c32c4bc1}{m\+\_\+\+H
 
 
 
-\mbox{\hyperlink{class_character_a554d31593b3eee38178bd7c7804ef7fb}{Character}}を実装しています。
+初期化 
 
 
 
- Player.\+cpp の 99 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=339pt]{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_player_a634da39cf9822d140a81c3b0c32c4bc1}\label{class_player_a634da39cf9822d140a81c3b0c32c4bc1}} 
-\index{Player@{Player}!m\_HasGFreddySpown@{m\_HasGFreddySpown}}
-\index{m\_HasGFreddySpown@{m\_HasGFreddySpown}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{m\_HasGFreddySpown}{m\_HasGFreddySpown}}
-{\footnotesize\ttfamily bool Player\+::m\+\_\+\+Has\+G\+Freddy\+Spown\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Player.\+h の 55 行目に定義があります。
-
-\mbox{\Hypertarget{class_player_ac493eddeb061ee315b64f76d81e70ce5}\label{class_player_ac493eddeb061ee315b64f76d81e70ce5}} 
-\index{Player@{Player}!m\_IsActive@{m\_IsActive}}
-\index{m\_IsActive@{m\_IsActive}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{m\_IsActive}{m\_IsActive}}
-{\footnotesize\ttfamily bool Player\+::m\+\_\+\+Is\+Active\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Player.\+h の 52 行目に定義があります。
-
-\mbox{\Hypertarget{class_player_a13140f5b3928d63f89fa0cb8a8156fe9}\label{class_player_a13140f5b3928d63f89fa0cb8a8156fe9}} 
-\index{Player@{Player}!m\_IsMask@{m\_IsMask}}
-\index{m\_IsMask@{m\_IsMask}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{m\_IsMask}{m\_IsMask}}
-{\footnotesize\ttfamily bool Player\+::m\+\_\+\+Is\+Mask\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Player.\+h の 53 行目に定義があります。
-
-\mbox{\Hypertarget{class_player_ac520dcedabe371d93eafb6d6327eb36b}\label{class_player_ac520dcedabe371d93eafb6d6327eb36b}} 
-\index{Player@{Player}!m\_MaskAnimation@{m\_MaskAnimation}}
-\index{m\_MaskAnimation@{m\_MaskAnimation}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{m\_MaskAnimation}{m\_MaskAnimation}}
-{\footnotesize\ttfamily float Player\+::m\+\_\+\+Mask\+Animation\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Player.\+h の 54 行目に定義があります。
-
-\mbox{\Hypertarget{class_player_a3a6f9774b938944cabc3c447327326ec}\label{class_player_a3a6f9774b938944cabc3c447327326ec}} 
-\index{Player@{Player}!m\_MonitorViewID@{m\_MonitorViewID}}
-\index{m\_MonitorViewID@{m\_MonitorViewID}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{m\_MonitorViewID}{m\_MonitorViewID}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} Player\+::m\+\_\+\+Monitor\+View\+ID\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Player.\+h の 57 行目に定義があります。
+\mbox{\hyperlink{class_character_a2d4adac2e550add4608474b7a87d9466}{Character}}を実装しています。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Character/\+Player/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
-Src/\+Character/\+Player/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Player/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Player/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

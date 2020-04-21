@@ -11,13 +11,8 @@
 
 
 
-Object の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=306pt]{class_object__inherit__graph}
-\end{center}
-\end{figure}
+\mbox{\hyperlink{class_item}{Item}}, \mbox{\hyperlink{class_u_i}{UI}}に継承されています。
+
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,6 +35,8 @@ virtual float \mbox{\hyperlink{class_object_af6c3ba6ab9e42e35162e39d4fd9172ca}{G
 virtual bool \mbox{\hyperlink{class_object_a56b5956cea5204d55183a444a01a30d6}{Has\+Ca\+Light}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_candle}{Candle}} クラスで使用する \mbox{\hyperlink{class_object_a56b5956cea5204d55183a444a01a30d6}{Has\+Ca\+Light()}} の仮想関数 \mbox{\hyperlink{class_candle}{Candle}} をインスタンス化して使用する \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_object_a3fd4b731f381df03c9aa9f5afcbd73c7}{Has\+Mask}} ()
+\item 
+virtual void \mbox{\hyperlink{class_object_a9c01db131509235804689e9da5af6ad5}{Load\+Tex}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{限定公開変数類}
 \begin{DoxyCompactItemize}
@@ -53,13 +50,6 @@ bool \mbox{\hyperlink{class_object_a7a93bec1c230d962620b5ae62e581f91}{m\+\_\+\+I
 \doxysubsection{詳解}
 オブジェクトを管理するクラス 
 
-オブジェクトの親(派生元)~\newline
-\mbox{\hyperlink{class_u_i}{UI}} や \mbox{\hyperlink{class_item}{Item}} に派生するクラスを格納 
-
- Object.\+h の 16 行目に定義があります。
-
-
-
 \doxysubsection{構築子と解体子}
 \mbox{\Hypertarget{class_object_a40860402e64d8008fb42329df7097cdb}\label{class_object_a40860402e64d8008fb42329df7097cdb}} 
 \index{Object@{Object}!Object@{Object}}
@@ -71,10 +61,6 @@ bool \mbox{\hyperlink{class_object_a7a93bec1c230d962620b5ae62e581f91}{m\+\_\+\+I
 
 コンストラクタ 
 
-
-
- Object.\+h の 19 行目に定義があります。
-
 \mbox{\Hypertarget{class_object_ae8f5483f459e46687bd01e6f9977afd3}\label{class_object_ae8f5483f459e46687bd01e6f9977afd3}} 
 \index{Object@{Object}!````~Object@{$\sim$Object}}
 \index{````~Object@{$\sim$Object}!Object@{Object}}
@@ -84,10 +70,6 @@ bool \mbox{\hyperlink{class_object_a7a93bec1c230d962620b5ae62e581f91}{m\+\_\+\+I
 
 
 デストラクタ 
-
-
-
- Object.\+h の 21 行目に定義があります。
 
 
 
@@ -104,7 +86,7 @@ Draw の純仮想関数
 
 
 
-\mbox{\hyperlink{class_watch_a69bfb791c78e56c1b145161442af887f}{Watch}}, \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Crystal}}, \mbox{\hyperlink{class_candle_af893fbe070f2e749eb5b397fd18d37ca}{Candle}}, \mbox{\hyperlink{class_fire_ad079ebe0f50929022b4e33ea406e4412}{Fire}}, \mbox{\hyperlink{class_u_i_ab1403cfb83132a7815e11fd3ece8fc85}{UI}}, \mbox{\hyperlink{class_item_a02e91fb9fffeb259442662ed220869c5}{Item}}で実装されています。
+\mbox{\hyperlink{class_watch_a69bfb791c78e56c1b145161442af887f}{Watch}}, \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Crystal}}, \mbox{\hyperlink{class_candle_af893fbe070f2e749eb5b397fd18d37ca}{Candle}}, \mbox{\hyperlink{class_u_i_ab1403cfb83132a7815e11fd3ece8fc85}{UI}}, \mbox{\hyperlink{class_fire_ad079ebe0f50929022b4e33ea406e4412}{Fire}}, \mbox{\hyperlink{class_item_a02e91fb9fffeb259442662ed220869c5}{Item}}で実装されています。
 
 \mbox{\Hypertarget{class_object_a67dac0d49f2c9a8e4b86b2572238adb2}\label{class_object_a67dac0d49f2c9a8e4b86b2572238adb2}} 
 \index{Object@{Object}!GetHp@{GetHp}}
@@ -120,10 +102,6 @@ Draw の純仮想関数
 
 \mbox{\hyperlink{class_candle_a8e84e4577dbeb6daf559cb57ab476b71}{Candle}}で再実装されています。
 
-
-
- Object.\+h の 40 行目に定義があります。
-
 \mbox{\Hypertarget{class_object_af6c3ba6ab9e42e35162e39d4fd9172ca}\label{class_object_af6c3ba6ab9e42e35162e39d4fd9172ca}} 
 \index{Object@{Object}!GetRatio@{GetRatio}}
 \index{GetRatio@{GetRatio}!Object@{Object}}
@@ -134,17 +112,6 @@ Draw の純仮想関数
 
 \mbox{\hyperlink{class_candle_a0a52af571ba5ad324312c9112028331c}{Candle}}で再実装されています。
 
-
-
- Object.\+h の 47 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=275pt]{class_object_af6c3ba6ab9e42e35162e39d4fd9172ca_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_object_a56b5956cea5204d55183a444a01a30d6}\label{class_object_a56b5956cea5204d55183a444a01a30d6}} 
 \index{Object@{Object}!HasCaLight@{HasCaLight}}
 \index{HasCaLight@{HasCaLight}!Object@{Object}}
@@ -159,17 +126,6 @@ Draw の純仮想関数
 
 \mbox{\hyperlink{class_candle_a72eb25514569ad0212901422574c77af}{Candle}}で再実装されています。
 
-
-
- Object.\+h の 54 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_object_a56b5956cea5204d55183a444a01a30d6_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_object_a3fd4b731f381df03c9aa9f5afcbd73c7}\label{class_object_a3fd4b731f381df03c9aa9f5afcbd73c7}} 
 \index{Object@{Object}!HasMask@{HasMask}}
 \index{HasMask@{HasMask}!Object@{Object}}
@@ -180,17 +136,6 @@ Draw の純仮想関数
 
 \mbox{\hyperlink{class_u_i_a82e4cb8b5ba221bf0523e32a6fe0ed95}{UI}}で再実装されています。
 
-
-
- Object.\+h の 61 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=289pt]{class_object_a3fd4b731f381df03c9aa9f5afcbd73c7_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_object_af936fbfd0a49fbc6311205cd7d8eff19}\label{class_object_af936fbfd0a49fbc6311205cd7d8eff19}} 
 \index{Object@{Object}!HasOnMouse@{HasOnMouse}}
 \index{HasOnMouse@{HasOnMouse}!Object@{Object}}
@@ -205,13 +150,6 @@ Has\+On\+Mouse の純仮想関数
 
 \mbox{\hyperlink{class_u_i_ab54fc2620277db836aedff9aaa63bdca}{UI}}, \mbox{\hyperlink{class_item_a50da07e72d764fab667bc52d05c0cde3}{Item}}で実装されています。
 
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_object_af936fbfd0a49fbc6311205cd7d8eff19_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_object_a7254c74e9926c9c9e5076b606dbfc962}\label{class_object_a7254c74e9926c9c9e5076b606dbfc962}} 
 \index{Object@{Object}!Init@{Init}}
 \index{Init@{Init}!Object@{Object}}
@@ -224,7 +162,13 @@ Init の純仮想関数
 
 
 
-\mbox{\hyperlink{class_watch_a92a6fe78df72c5dfa66b1d672af9c284}{Watch}}, \mbox{\hyperlink{class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c}{Candle}}, \mbox{\hyperlink{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870}{Fire}}, \mbox{\hyperlink{class_u_i_ace720e810124ecde6db91865b4f5b8b2}{UI}}, \mbox{\hyperlink{class_crystal_ae53513bca380eedc662918a7164dbd68}{Crystal}}で実装されています。
+\mbox{\hyperlink{class_watch_a92a6fe78df72c5dfa66b1d672af9c284}{Watch}}, \mbox{\hyperlink{class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c}{Candle}}, \mbox{\hyperlink{class_u_i_ace720e810124ecde6db91865b4f5b8b2}{UI}}, \mbox{\hyperlink{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870}{Fire}}, \mbox{\hyperlink{class_crystal_ae53513bca380eedc662918a7164dbd68}{Crystal}}で実装されています。
+
+\mbox{\Hypertarget{class_object_a9c01db131509235804689e9da5af6ad5}\label{class_object_a9c01db131509235804689e9da5af6ad5}} 
+\index{Object@{Object}!LoadTex@{LoadTex}}
+\index{LoadTex@{LoadTex}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
+{\footnotesize\ttfamily virtual void Object\+::\+Load\+Tex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 \mbox{\Hypertarget{class_object_a5ee5c17a09981cbd7c469370e210b4ff}\label{class_object_a5ee5c17a09981cbd7c469370e210b4ff}} 
 \index{Object@{Object}!Update@{Update}}
@@ -238,7 +182,7 @@ Update の純仮想関数
 
 
 
-\mbox{\hyperlink{class_watch_af9d38be1512f05cad910968e7e8aba5d}{Watch}}, \mbox{\hyperlink{class_crystal_ab48cd1bfbae2b0b10454edf2aec45e22}{Crystal}}, \mbox{\hyperlink{class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405}{Candle}}, \mbox{\hyperlink{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}{Fire}}, \mbox{\hyperlink{class_u_i_aa88f13bd32fa1501837d58d9d4aa2c1d}{UI}}, \mbox{\hyperlink{class_item_a93dd04b3c6bd57e9bf255abc2dfd70a5}{Item}}で実装されています。
+\mbox{\hyperlink{class_watch_af9d38be1512f05cad910968e7e8aba5d}{Watch}}, \mbox{\hyperlink{class_crystal_ab48cd1bfbae2b0b10454edf2aec45e22}{Crystal}}, \mbox{\hyperlink{class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405}{Candle}}, \mbox{\hyperlink{class_u_i_aa88f13bd32fa1501837d58d9d4aa2c1d}{UI}}, \mbox{\hyperlink{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}{Fire}}, \mbox{\hyperlink{class_item_a93dd04b3c6bd57e9bf255abc2dfd70a5}{Item}}で実装されています。
 
 
 
@@ -253,10 +197,6 @@ Update の純仮想関数
 
 オブジェクトの識別番号 
 
-
-
- Object.\+h の 66 行目に定義があります。
-
 \mbox{\Hypertarget{class_object_a7a93bec1c230d962620b5ae62e581f91}\label{class_object_a7a93bec1c230d962620b5ae62e581f91}} 
 \index{Object@{Object}!m\_IsDeath@{m\_IsDeath}}
 \index{m\_IsDeath@{m\_IsDeath}!Object@{Object}}
@@ -269,10 +209,6 @@ Update の純仮想関数
 
 
 
- Object.\+h の 61 行目に定義があります。
-
-
-
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Object/\mbox{\hyperlink{_object_8h}{Object.\+h}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Object/\mbox{\hyperlink{_object_8h}{Object.\+h}}\end{DoxyCompactItemize}

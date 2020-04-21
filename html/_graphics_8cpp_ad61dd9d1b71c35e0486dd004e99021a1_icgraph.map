@@ -1,4 +1,0 @@
-<map id="CandleDraw" name="CandleDraw">
-<area shape="rect" id="node1" title=" " alt="" coords="152,5,243,32"/>
-<area shape="rect" id="node2" href="$class_candle.html#af893fbe070f2e749eb5b397fd18d37ca" title="m_Id に基づいて描画 蝋燭の場合 =&gt; ヘルスに応じて溶けるように描画される それ以外 =&gt; 指定された座標とサイズで描画" alt="" coords="5,5,104,32"/>
-</map>

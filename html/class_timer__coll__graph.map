@@ -1,4 +1,0 @@
-<map id="Timer" name="Timer">
-<area shape="rect" id="node1" title="シーンやエネミーを制御するためのタイマークラス 試験的に佐藤先生のシングルトンを導入" alt="" coords="33,95,88,121"/>
-<area shape="rect" id="node2" href="$struct_timer_1_1_t_i_m_e_r_s.html" title="タイマー変数をまとめた構造体" alt="" coords="5,5,116,32"/>
-</map>

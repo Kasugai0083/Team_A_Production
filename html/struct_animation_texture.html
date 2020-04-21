@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('struct_animation_texture.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,6 +59,7 @@ $(document).ready(function(){initNavTree('struct_animation_texture.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">公開変数類</a> &#124;
@@ -94,15 +70,6 @@ $(document).ready(function(){initNavTree('struct_animation_texture.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_graphics_8h_source.html">Graphics.h</a>&gt;</code></p>
-<div class="dynheader">
-AnimationTexture 連携図</div>
-<div class="dyncontent">
-<div class="center"><img src="struct_animation_texture__coll__graph.png" border="0" usemap="#_animation_texture_coll__map" alt="Collaboration graph"/></div>
-<map name="_animation_texture_coll__map" id="_animation_texture_coll__map">
-<area shape="rect" title=" " alt="" coords="5,95,128,121"/>
-<area shape="rect" href="struct_texture.html" title="テクスチャデータやサイズを保持する構造体" alt="" coords="34,5,99,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -114,11 +81,10 @@ AnimationTexture 連携図</div>
 <tr class="separator:aa581ccad534d577baf1b5c5f9047ddfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acac6207a7d4d396730ff54f172ea28a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">m_Counter</a></td></tr>
 <tr class="separator:acac6207a7d4d396730ff54f172ea28a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecef8817eb60be7338634f127001dc18"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_animation_texture.html#aecef8817eb60be7338634f127001dc18">m_KillingCounter</a></td></tr>
+<tr class="separator:aecef8817eb60be7338634f127001dc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_graphics_8h_source.html">Graphics.h</a> の <a class="el" href="_graphics_8h_source.html#l00045">45</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">メンバ詳解</h2>
+<h2 class="groupheader">メンバ詳解</h2>
 <a id="acac6207a7d4d396730ff54f172ea28a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acac6207a7d4d396730ff54f172ea28a4">&#9670;&nbsp;</a></span>m_Counter</h2>
 
@@ -131,7 +97,19 @@ AnimationTexture 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_graphics_8h_source.html">Graphics.h</a> の <a class="el" href="_graphics_8h_source.html#l00051">51</a> 行目に定義があります。</p>
+</div>
+</div>
+<a id="aecef8817eb60be7338634f127001dc18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecef8817eb60be7338634f127001dc18">&#9670;&nbsp;</a></span>m_KillingCounter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float AnimationTexture::m_KillingCounter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -147,8 +125,6 @@ AnimationTexture 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_graphics_8h_source.html">Graphics.h</a> の <a class="el" href="_graphics_8h_source.html#l00050">50</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <a id="a83a381fb07290a2b687571300aecc2a6"></a>
@@ -162,8 +138,6 @@ AnimationTexture 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_graphics_8h_source.html">Graphics.h</a> の <a class="el" href="_graphics_8h_source.html#l00049">49</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -179,23 +153,17 @@ AnimationTexture 連携図</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_graphics_8h_source.html">Graphics.h</a> の <a class="el" href="_graphics_8h_source.html#l00047">47</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <hr/>この構造体詳解は次のファイルから抽出されました:<ul>
-<li>Src/Engine/<a class="el" href="_graphics_8h_source.html">Graphics.h</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Engine/<a class="el" href="_graphics_8h_source.html">Graphics.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="struct_animation_texture.html">AnimationTexture</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

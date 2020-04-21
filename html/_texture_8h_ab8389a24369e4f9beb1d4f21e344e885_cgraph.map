@@ -1,4 +1,0 @@
-<map id="GetTexture" name="GetTexture">
-<area shape="rect" id="node1" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="5,5,92,32"/>
-<area shape="rect" id="node2" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="140,5,299,32"/>
-</map>

@@ -1,26 +1,16 @@
-\hypertarget{_scene_8cpp}{}\doxysection{Src/\+Scene/\+Scene.cpp ファイル}
-\label{_scene_8cpp}\index{Src/Scene/Scene.cpp@{Src/Scene/Scene.cpp}}
+\hypertarget{_scene_8cpp}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Scene/\+Scene.cpp ファイル}
+\label{_scene_8cpp}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/Scene.cpp@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/Scene.cpp}}
 {\ttfamily \#include \char`\"{}Scene.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Engine/\+Graphics.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Engine/\+Input.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Title\+Scene.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Game\+Scene/\+Game\+Scene.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Monitor\+Scene.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Clear\+Scene.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Opening\+Scene.\+h\char`\"{}}\newline
-Scene.\+cpp の依存先関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_scene_8cpp__incl}
-\end{center}
-\end{figure}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_scene_transition}{Scene\+Transition}} $\ast$ \mbox{\hyperlink{_scene_8cpp_a9abc5a8b2132504a6a3abae9a46cc228}{Scene\+Controller}} ()
-\item 
-\mbox{\hyperlink{class_monitor_transition}{Monitor\+Transition}} $\ast$ \mbox{\hyperlink{_scene_8cpp_ae7d6f71940b4246bf2357eecc91c9a49}{Monitor\+Func}} ()
 \item 
 \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_scene_8cpp_a9900ed42962250f87c2a65188751c746}{Get\+Current\+Scene\+Id}} ()
 \begin{DoxyCompactList}\small\item\em 現在実行中のシーン\+I\+Dの取得関数 \end{DoxyCompactList}\item 
@@ -40,13 +30,7 @@ void \mbox{\hyperlink{_scene_8cpp_ad3af99165d3fa882579d67cea83e9eab}{Draw\+Scene
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_scene_8cpp_a4eb4136c49d948416736b77cb52c6b30}{g\+\_\+\+Current\+Scene\+Id}} = \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168}{Scene\+Id\+::\+Title\+Scene}}
-\item 
-static \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7}{Scene\+Step}} \mbox{\hyperlink{_scene_8cpp_a8e6a88c22af24d36b09d59ada884feec}{g\+\_\+\+Current\+Scene\+Step}} = \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1}{Scene\+Step\+::\+Init\+Step}}
-\item 
 \mbox{\hyperlink{class_scene_transition}{Scene\+Transition}} \mbox{\hyperlink{_scene_8cpp_a1ada6464aab6229d1bd4c8015cf9b1b2}{g\+\_\+ppp}}
-\item 
-\mbox{\hyperlink{class_monitor_transition}{Monitor\+Transition}} \mbox{\hyperlink{_scene_8cpp_a05374106633b1ebc35423911f9f23a17}{g\+\_\+qqq}}
 \end{DoxyCompactItemize}
 
 
@@ -67,17 +51,6 @@ static \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7}{Scene\+Step
 \mbox{\texttt{ in}}  & {\em next\+\_\+step} & 次のステップ \\
 \hline
 \end{DoxyParams}
-
-
- Scene.\+cpp の 116 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_scene_8cpp_a9124bba4e4cb32fe152389f21623d827_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_scene_8cpp_ad3af99165d3fa882579d67cea83e9eab}\label{_scene_8cpp_ad3af99165d3fa882579d67cea83e9eab}} 
 \index{Scene.cpp@{Scene.cpp}!DrawScene@{DrawScene}}
 \index{DrawScene@{DrawScene}!Scene.cpp@{Scene.cpp}}
@@ -90,24 +63,6 @@ static \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7}{Scene\+Step
 シーンのオブジェクトを描画する~\newline
 内部で各シーン毎の描画を行うので使用者が\+Draw\+Title\+Scene等を実行する必要はない 
 
-
-
- Scene.\+cpp の 154 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_scene_8cpp_ad3af99165d3fa882579d67cea83e9eab_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=348pt]{_scene_8cpp_ad3af99165d3fa882579d67cea83e9eab_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_scene_8cpp_a9900ed42962250f87c2a65188751c746}\label{_scene_8cpp_a9900ed42962250f87c2a65188751c746}} 
 \index{Scene.cpp@{Scene.cpp}!GetCurrentSceneId@{GetCurrentSceneId}}
 \index{GetCurrentSceneId@{GetCurrentSceneId}!Scene.cpp@{Scene.cpp}}
@@ -118,18 +73,6 @@ static \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7}{Scene\+Step
 
 現在実行中のシーン\+I\+Dの取得関数 
 
-
-
- Scene.\+cpp の 106 行目に定義があります。
-
-被呼び出し関係図\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_scene_8cpp_a9900ed42962250f87c2a65188751c746_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_scene_8cpp_a9127a02a504755a923f76ef9108d53b0}\label{_scene_8cpp_a9127a02a504755a923f76ef9108d53b0}} 
 \index{Scene.cpp@{Scene.cpp}!GetCurrentSceneStep@{GetCurrentSceneStep}}
 \index{GetCurrentSceneStep@{GetCurrentSceneStep}!Scene.cpp@{Scene.cpp}}
@@ -140,44 +83,12 @@ static \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7}{Scene\+Step
 
 現在実行中のシーンステップの取得関数 
 
-
-
- Scene.\+cpp の 111 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_scene_8cpp_a9127a02a504755a923f76ef9108d53b0_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{_scene_8cpp_ae7d6f71940b4246bf2357eecc91c9a49}\label{_scene_8cpp_ae7d6f71940b4246bf2357eecc91c9a49}} 
-\index{Scene.cpp@{Scene.cpp}!MonitorFunc@{MonitorFunc}}
-\index{MonitorFunc@{MonitorFunc}!Scene.cpp@{Scene.cpp}}
-\doxysubsubsection{\texorpdfstring{MonitorFunc()}{MonitorFunc()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_monitor_transition}{Monitor\+Transition}}$\ast$ Monitor\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
- Scene.\+cpp の 93 行目に定義があります。
-
 \mbox{\Hypertarget{_scene_8cpp_a9abc5a8b2132504a6a3abae9a46cc228}\label{_scene_8cpp_a9abc5a8b2132504a6a3abae9a46cc228}} 
 \index{Scene.cpp@{Scene.cpp}!SceneController@{SceneController}}
 \index{SceneController@{SceneController}!Scene.cpp@{Scene.cpp}}
 \doxysubsubsection{\texorpdfstring{SceneController()}{SceneController()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_scene_transition}{Scene\+Transition}}$\ast$ Scene\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Scene.\+cpp の 15 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_scene_8cpp_a9abc5a8b2132504a6a3abae9a46cc228_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_scene_8cpp_acfe836cd67330b4856bb8feff6d94684}\label{_scene_8cpp_acfe836cd67330b4856bb8feff6d94684}} 
 \index{Scene.cpp@{Scene.cpp}!UpdateScene@{UpdateScene}}
 \index{UpdateScene@{UpdateScene}!Scene.cpp@{Scene.cpp}}
@@ -192,62 +103,10 @@ static \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7}{Scene\+Step
 
 
 
- Scene.\+cpp の 121 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{_scene_8cpp_acfe836cd67330b4856bb8feff6d94684_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=246pt]{_scene_8cpp_acfe836cd67330b4856bb8feff6d94684_icgraph}
-\end{center}
-\end{figure}
-
-
 \doxysubsection{変数詳解}
-\mbox{\Hypertarget{_scene_8cpp_a4eb4136c49d948416736b77cb52c6b30}\label{_scene_8cpp_a4eb4136c49d948416736b77cb52c6b30}} 
-\index{Scene.cpp@{Scene.cpp}!g\_CurrentSceneId@{g\_CurrentSceneId}}
-\index{g\_CurrentSceneId@{g\_CurrentSceneId}!Scene.cpp@{Scene.cpp}}
-\doxysubsubsection{\texorpdfstring{g\_CurrentSceneId}{g\_CurrentSceneId}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} g\+\_\+\+Current\+Scene\+Id = \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168}{Scene\+Id\+::\+Title\+Scene}}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
- Scene.\+cpp の 10 行目に定義があります。
-
-\mbox{\Hypertarget{_scene_8cpp_a8e6a88c22af24d36b09d59ada884feec}\label{_scene_8cpp_a8e6a88c22af24d36b09d59ada884feec}} 
-\index{Scene.cpp@{Scene.cpp}!g\_CurrentSceneStep@{g\_CurrentSceneStep}}
-\index{g\_CurrentSceneStep@{g\_CurrentSceneStep}!Scene.cpp@{Scene.cpp}}
-\doxysubsubsection{\texorpdfstring{g\_CurrentSceneStep}{g\_CurrentSceneStep}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7}{Scene\+Step}} g\+\_\+\+Current\+Scene\+Step = \mbox{\hyperlink{_scene_8h_a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1}{Scene\+Step\+::\+Init\+Step}}\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
- Scene.\+cpp の 11 行目に定義があります。
-
 \mbox{\Hypertarget{_scene_8cpp_a1ada6464aab6229d1bd4c8015cf9b1b2}\label{_scene_8cpp_a1ada6464aab6229d1bd4c8015cf9b1b2}} 
 \index{Scene.cpp@{Scene.cpp}!g\_ppp@{g\_ppp}}
 \index{g\_ppp@{g\_ppp}!Scene.cpp@{Scene.cpp}}
 \doxysubsubsection{\texorpdfstring{g\_ppp}{g\_ppp}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_scene_transition}{Scene\+Transition}} g\+\_\+ppp}
-
-
-
- Scene.\+cpp の 14 行目に定義があります。
-
-\mbox{\Hypertarget{_scene_8cpp_a05374106633b1ebc35423911f9f23a17}\label{_scene_8cpp_a05374106633b1ebc35423911f9f23a17}} 
-\index{Scene.cpp@{Scene.cpp}!g\_qqq@{g\_qqq}}
-\index{g\_qqq@{g\_qqq}!Scene.cpp@{Scene.cpp}}
-\doxysubsubsection{\texorpdfstring{g\_qqq}{g\_qqq}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_monitor_transition}{Monitor\+Transition}} g\+\_\+qqq}
-
-
-
- Scene.\+cpp の 92 行目に定義があります。
 

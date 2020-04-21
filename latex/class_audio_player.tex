@@ -4,25 +4,16 @@
 
 {\ttfamily \#include $<$Audio.\+h$>$}
 
-
-
-Audio\+Player 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=165pt]{class_audio_player__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_audio_player_a830d696dec8f2fe84b6ae1370e8452b5}{Load}} (std\+::string alias\+\_\+, std\+::string file\+\_\+name\+\_\+)
 \item 
-void \mbox{\hyperlink{class_audio_player_a21d082832fa33c10183f8184266ab52e}{Play}} (std\+::string alias\+\_\+, int volume=-\/1000, bool is\+\_\+loop=false)
+void \mbox{\hyperlink{class_audio_player_adafb28db241040ab02cfc53b9fcb5691}{Play}} (std\+::string alias\+\_\+, int vol\+Sakura=-\/1000, bool is\+\_\+loop=false)
 \item 
 void \mbox{\hyperlink{class_audio_player_a0848f1f605bf72c11044f7f753bd7423}{Stop}} (std\+::string alias\+\_\+)
 \item 
-void \mbox{\hyperlink{class_audio_player_a504f07e317cf8b5472cbdc6b09cba8b7}{Set\+Volume}} (std\+::string alias\+\_\+, int volume\+\_\+)
+void \mbox{\hyperlink{class_audio_player_a6338ae4f149314541e4e99289e9da88f}{Set\+Vol\+Sakura}} (std\+::string alias\+\_\+, int vol\+Sakura\+\_\+)
 \item 
 void \mbox{\hyperlink{class_audio_player_a74a5907779b3261bfc9a8b6b6e02ab27}{Release}} (std\+::string alias\+\_\+)
 \end{DoxyCompactItemize}
@@ -31,161 +22,39 @@ void \mbox{\hyperlink{class_audio_player_a74a5907779b3261bfc9a8b6b6e02ab27}{Rele
 \item 
 static \mbox{\hyperlink{class_audio_player}{Audio\+Player}} $\ast$ \mbox{\hyperlink{class_audio_player_add329a1de7de948b1327db5e28933cb2}{Get\+Instance}} (H\+W\+ND hwnd\+\_\+=nullptr)
 \end{DoxyCompactItemize}
-\doxysubsection*{非公開メンバ関数}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_audio_player_a5382ab9f5af2a75b0d2015e73da2d1aa}{Audio\+Player}} (H\+W\+ND hwnd)
-\item 
-I\+Direct\+Sound\+Buffer8 $\ast$ \mbox{\hyperlink{class_audio_player_a2aaed36b7dfd8fc476a49ab811222b01}{Find}} (std\+::string alias\+\_\+)
-\item 
-\mbox{\hyperlink{class_audio_player_a41d5beac7ef47d2d935f17e822cbfd9f}{$\sim$\+Audio\+Player}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_direct_sound}{Direct\+Sound}} $\ast$ \mbox{\hyperlink{class_audio_player_abd24a964ff46e1cdc10d9d5e04d63b63}{m\+\_\+p\+Sound}}
-\item 
-std\+::unordered\+\_\+map$<$ std\+::string, I\+Direct\+Sound\+Buffer8 $\ast$ $>$ \mbox{\hyperlink{class_audio_player_ad480d1ebdb88b6044bf4fed49c10f83d}{m\+\_\+\+Sound\+Data}}
-\item 
-W\+A\+V\+E\+F\+O\+R\+M\+A\+T\+EX \mbox{\hyperlink{class_audio_player_a01386d10d57e8921ce1680f28e6c5c44}{m\+\_\+\+Format}}
-\item 
-D\+W\+O\+RD \mbox{\hyperlink{class_audio_player_a82bc7bf7f6d71827949a51ec5829e418}{m\+\_\+\+Size}}
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{詳解}
-
-
- Audio.\+h の 12 行目に定義があります。
-
-
-
-\doxysubsection{構築子と解体子}
-\mbox{\Hypertarget{class_audio_player_a5382ab9f5af2a75b0d2015e73da2d1aa}\label{class_audio_player_a5382ab9f5af2a75b0d2015e73da2d1aa}} 
-\index{AudioPlayer@{AudioPlayer}!AudioPlayer@{AudioPlayer}}
-\index{AudioPlayer@{AudioPlayer}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{AudioPlayer()}{AudioPlayer()}}
-{\footnotesize\ttfamily Audio\+Player\+::\+Audio\+Player (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{hwnd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
-
-
-
- Audio.\+h の 46 行目に定義があります。
-
-\mbox{\Hypertarget{class_audio_player_a41d5beac7ef47d2d935f17e822cbfd9f}\label{class_audio_player_a41d5beac7ef47d2d935f17e822cbfd9f}} 
-\index{AudioPlayer@{AudioPlayer}!````~AudioPlayer@{$\sim$AudioPlayer}}
-\index{````~AudioPlayer@{$\sim$AudioPlayer}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{$\sim$AudioPlayer()}{~AudioPlayer()}}
-{\footnotesize\ttfamily Audio\+Player\+::$\sim$\+Audio\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Audio.\+cpp の 77 行目に定義があります。
-
 
 
 \doxysubsection{関数詳解}
-\mbox{\Hypertarget{class_audio_player_a2aaed36b7dfd8fc476a49ab811222b01}\label{class_audio_player_a2aaed36b7dfd8fc476a49ab811222b01}} 
-\index{AudioPlayer@{AudioPlayer}!Find@{Find}}
-\index{Find@{Find}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{Find()}{Find()}}
-{\footnotesize\ttfamily I\+Direct\+Sound\+Buffer8 $\ast$ Audio\+Player\+::\+Find (\begin{DoxyParamCaption}\item[{std\+::string}]{alias\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Audio.\+cpp の 65 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=333pt]{class_audio_player_a2aaed36b7dfd8fc476a49ab811222b01_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_audio_player_add329a1de7de948b1327db5e28933cb2}\label{class_audio_player_add329a1de7de948b1327db5e28933cb2}} 
 \index{AudioPlayer@{AudioPlayer}!GetInstance@{GetInstance}}
 \index{GetInstance@{GetInstance}!AudioPlayer@{AudioPlayer}}
 \doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{class_audio_player}{Audio\+Player}}$\ast$ Audio\+Player\+::\+Get\+Instance (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{hwnd\+\_\+ = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-
-
- Audio.\+h の 15 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_audio_player_add329a1de7de948b1327db5e28933cb2_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_audio_player_a830d696dec8f2fe84b6ae1370e8452b5}\label{class_audio_player_a830d696dec8f2fe84b6ae1370e8452b5}} 
 \index{AudioPlayer@{AudioPlayer}!Load@{Load}}
 \index{Load@{Load}!AudioPlayer@{AudioPlayer}}
 \doxysubsubsection{\texorpdfstring{Load()}{Load()}}
 {\footnotesize\ttfamily bool Audio\+Player\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::string}]{alias\+\_\+,  }\item[{std\+::string}]{file\+\_\+name\+\_\+ }\end{DoxyParamCaption})}
 
-
-
- Audio.\+cpp の 3 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=349pt]{class_audio_player_a830d696dec8f2fe84b6ae1370e8452b5_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_audio_player_a21d082832fa33c10183f8184266ab52e}\label{class_audio_player_a21d082832fa33c10183f8184266ab52e}} 
+\mbox{\Hypertarget{class_audio_player_adafb28db241040ab02cfc53b9fcb5691}\label{class_audio_player_adafb28db241040ab02cfc53b9fcb5691}} 
 \index{AudioPlayer@{AudioPlayer}!Play@{Play}}
 \index{Play@{Play}!AudioPlayer@{AudioPlayer}}
 \doxysubsubsection{\texorpdfstring{Play()}{Play()}}
-{\footnotesize\ttfamily void Audio\+Player\+::\+Play (\begin{DoxyParamCaption}\item[{std\+::string}]{alias\+\_\+,  }\item[{int}]{volume = {\ttfamily -\/1000},  }\item[{bool}]{is\+\_\+loop = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Audio\+Player\+::\+Play (\begin{DoxyParamCaption}\item[{std\+::string}]{alias\+\_\+,  }\item[{int}]{vol\+Sakura = {\ttfamily -\/1000},  }\item[{bool}]{is\+\_\+loop = {\ttfamily false} }\end{DoxyParamCaption})}
 
-
-
- Audio.\+cpp の 12 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=305pt]{class_audio_player_a21d082832fa33c10183f8184266ab52e_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_audio_player_a74a5907779b3261bfc9a8b6b6e02ab27}\label{class_audio_player_a74a5907779b3261bfc9a8b6b6e02ab27}} 
 \index{AudioPlayer@{AudioPlayer}!Release@{Release}}
 \index{Release@{Release}!AudioPlayer@{AudioPlayer}}
 \doxysubsubsection{\texorpdfstring{Release()}{Release()}}
 {\footnotesize\ttfamily void Audio\+Player\+::\+Release (\begin{DoxyParamCaption}\item[{std\+::string}]{alias\+\_\+ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_audio_player_a6338ae4f149314541e4e99289e9da88f}\label{class_audio_player_a6338ae4f149314541e4e99289e9da88f}} 
+\index{AudioPlayer@{AudioPlayer}!SetVolSakura@{SetVolSakura}}
+\index{SetVolSakura@{SetVolSakura}!AudioPlayer@{AudioPlayer}}
+\doxysubsubsection{\texorpdfstring{SetVolSakura()}{SetVolSakura()}}
+{\footnotesize\ttfamily void Audio\+Player\+::\+Set\+Vol\+Sakura (\begin{DoxyParamCaption}\item[{std\+::string}]{alias\+\_\+,  }\item[{int}]{vol\+Sakura\+\_\+ }\end{DoxyParamCaption})}
 
-
- Audio.\+cpp の 51 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=320pt]{class_audio_player_a74a5907779b3261bfc9a8b6b6e02ab27_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_audio_player_a504f07e317cf8b5472cbdc6b09cba8b7}\label{class_audio_player_a504f07e317cf8b5472cbdc6b09cba8b7}} 
-\index{AudioPlayer@{AudioPlayer}!SetVolume@{SetVolume}}
-\index{SetVolume@{SetVolume}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{SetVolume()}{SetVolume()}}
-{\footnotesize\ttfamily void Audio\+Player\+::\+Set\+Volume (\begin{DoxyParamCaption}\item[{std\+::string}]{alias\+\_\+,  }\item[{int}]{volume\+\_\+ }\end{DoxyParamCaption})}
-
-
-
- Audio.\+cpp の 41 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=333pt]{class_audio_player_a504f07e317cf8b5472cbdc6b09cba8b7_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_audio_player_a0848f1f605bf72c11044f7f753bd7423}\label{class_audio_player_a0848f1f605bf72c11044f7f753bd7423}} 
 \index{AudioPlayer@{AudioPlayer}!Stop@{Stop}}
 \index{Stop@{Stop}!AudioPlayer@{AudioPlayer}}
@@ -194,61 +63,7 @@ D\+W\+O\+RD \mbox{\hyperlink{class_audio_player_a82bc7bf7f6d71827949a51ec5829e41
 
 
 
- Audio.\+cpp の 31 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=305pt]{class_audio_player_a0848f1f605bf72c11044f7f753bd7423_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_audio_player_a01386d10d57e8921ce1680f28e6c5c44}\label{class_audio_player_a01386d10d57e8921ce1680f28e6c5c44}} 
-\index{AudioPlayer@{AudioPlayer}!m\_Format@{m\_Format}}
-\index{m\_Format@{m\_Format}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{m\_Format}{m\_Format}}
-{\footnotesize\ttfamily W\+A\+V\+E\+F\+O\+R\+M\+A\+T\+EX Audio\+Player\+::m\+\_\+\+Format\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Audio.\+h の 68 行目に定義があります。
-
-\mbox{\Hypertarget{class_audio_player_abd24a964ff46e1cdc10d9d5e04d63b63}\label{class_audio_player_abd24a964ff46e1cdc10d9d5e04d63b63}} 
-\index{AudioPlayer@{AudioPlayer}!m\_pSound@{m\_pSound}}
-\index{m\_pSound@{m\_pSound}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{m\_pSound}{m\_pSound}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_direct_sound}{Direct\+Sound}}$\ast$ Audio\+Player\+::m\+\_\+p\+Sound\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Audio.\+h の 64 行目に定義があります。
-
-\mbox{\Hypertarget{class_audio_player_a82bc7bf7f6d71827949a51ec5829e418}\label{class_audio_player_a82bc7bf7f6d71827949a51ec5829e418}} 
-\index{AudioPlayer@{AudioPlayer}!m\_Size@{m\_Size}}
-\index{m\_Size@{m\_Size}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{m\_Size}{m\_Size}}
-{\footnotesize\ttfamily D\+W\+O\+RD Audio\+Player\+::m\+\_\+\+Size\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Audio.\+h の 70 行目に定義があります。
-
-\mbox{\Hypertarget{class_audio_player_ad480d1ebdb88b6044bf4fed49c10f83d}\label{class_audio_player_ad480d1ebdb88b6044bf4fed49c10f83d}} 
-\index{AudioPlayer@{AudioPlayer}!m\_SoundData@{m\_SoundData}}
-\index{m\_SoundData@{m\_SoundData}!AudioPlayer@{AudioPlayer}}
-\doxysubsubsection{\texorpdfstring{m\_SoundData}{m\_SoundData}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, I\+Direct\+Sound\+Buffer8$\ast$$>$ Audio\+Player\+::m\+\_\+\+Sound\+Data\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Audio.\+h の 66 行目に定義があります。
-
-
-
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Engine/\+Audio/\mbox{\hyperlink{_audio_8h}{Audio.\+h}}\item 
-Src/\+Engine/\+Audio/\mbox{\hyperlink{_audio_8cpp}{Audio.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Engine/\+Audio/\mbox{\hyperlink{_audio_8h}{Audio.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Engine/\+Audio/\mbox{\hyperlink{_audio_8cpp}{Audio.\+cpp}}\end{DoxyCompactItemize}

@@ -1,8 +1,0 @@
-<map id="DrawOpeningScene" name="DrawOpeningScene">
-<area shape="rect" id="node1" title="ゲームオーバーシーンの描画関数 ゲームオーバーシーンのオブジェクトを描画するための関数" alt="" coords="5,81,141,108"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="243,5,337,32"/>
-<area shape="rect" id="node3" href="$class_op_controller.html#a57231bda9ba264688f9e14131c30a543" title=" " alt="" coords="211,56,369,83"/>
-<area shape="rect" id="node4" href="$class_day_controller.html#a9dce2f923f89033782054076d22867bb" title=" " alt="" coords="189,107,391,133"/>
-<area shape="rect" id="node5" href="$_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="247,157,333,184"/>
-<area shape="rect" id="node6" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="439,157,597,184"/>
-</map>

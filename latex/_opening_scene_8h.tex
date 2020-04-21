@@ -1,12 +1,10 @@
-\hypertarget{_opening_scene_8h}{}\doxysection{Src/\+Scene/\+Opening\+Scene.h ファイル}
-\label{_opening_scene_8h}\index{Src/Scene/OpeningScene.h@{Src/Scene/OpeningScene.h}}
-被依存関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_opening_scene_8h__dep__incl}
-\end{center}
-\end{figure}
+\hypertarget{_opening_scene_8h}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Scene/\+Opening\+Scene.h ファイル}
+\label{_opening_scene_8h}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/OpeningScene.h@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/OpeningScene.h}}
+
+
+オープニングシーン中の処理  
+
+
 \doxysubsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,11 +14,19 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_opening_scene_8h_a130a9d710956b3d6031a82fd31ac5c9e}{Update\+Opening\+Scene}} ()
-\begin{DoxyCompactList}\small\item\em ゲームオーバーシーンの更新関数~\newline
-ゲームオーバーシーンの仕様が実行される \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em オープニングシーンの更新関数~\newline
+オープニングシーンの仕様が実行される \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_opening_scene_8h_afafa0ea856d6013bbf2a3f749f5fab45}{Draw\+Opening\+Scene}} ()
-\begin{DoxyCompactList}\small\item\em ゲームオーバーシーンの描画関数~\newline
-ゲームオーバーシーンのオブジェクトを描画するための関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em オープニングシーンの描画関数~\newline
+オープニングシーンのオブジェクトを描画するための関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+オープニングシーン中の処理 
+
+\begin{DoxyAuthor}{著者}
+中地 春日井 中本 
+\end{DoxyAuthor}
 
 
 \doxysubsection{マクロ定義詳解}
@@ -29,10 +35,6 @@ void \mbox{\hyperlink{_opening_scene_8h_afafa0ea856d6013bbf2a3f749f5fab45}{Draw\
 \index{OPENING\_SCENE\_H\_@{OPENING\_SCENE\_H\_}!OpeningScene.h@{OpeningScene.h}}
 \doxysubsubsection{\texorpdfstring{OPENING\_SCENE\_H\_}{OPENING\_SCENE\_H\_}}
 {\footnotesize\ttfamily \#define O\+P\+E\+N\+I\+N\+G\+\_\+\+S\+C\+E\+N\+E\+\_\+\+H\+\_\+}
-
-
-
- Opening\+Scene.\+h の 7 行目に定義があります。
 
 
 
@@ -45,27 +47,9 @@ void \mbox{\hyperlink{_opening_scene_8h_afafa0ea856d6013bbf2a3f749f5fab45}{Draw\
 
 
 
-ゲームオーバーシーンの描画関数~\newline
-ゲームオーバーシーンのオブジェクトを描画するための関数 
+オープニングシーンの描画関数~\newline
+オープニングシーンのオブジェクトを描画するための関数 
 
-
-
- Opening\+Scene.\+cpp の 65 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_opening_scene_8h_afafa0ea856d6013bbf2a3f749f5fab45_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_opening_scene_8h_afafa0ea856d6013bbf2a3f749f5fab45_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_opening_scene_8h_a130a9d710956b3d6031a82fd31ac5c9e}\label{_opening_scene_8h_a130a9d710956b3d6031a82fd31ac5c9e}} 
 \index{OpeningScene.h@{OpeningScene.h}!UpdateOpeningScene@{UpdateOpeningScene}}
 \index{UpdateOpeningScene@{UpdateOpeningScene}!OpeningScene.h@{OpeningScene.h}}
@@ -74,27 +58,9 @@ void \mbox{\hyperlink{_opening_scene_8h_afafa0ea856d6013bbf2a3f749f5fab45}{Draw\
 
 
 
-ゲームオーバーシーンの更新関数~\newline
-ゲームオーバーシーンの仕様が実行される 
+オープニングシーンの更新関数~\newline
+オープニングシーンの仕様が実行される 
 
 \begin{DoxyReturn}{戻り値}
 遷移先シーン\+ID(基本は\+Scene\+Id\+::\+Game\+Over\+Sceneが返る) 
 \end{DoxyReturn}
-
-
- Opening\+Scene.\+cpp の 46 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_opening_scene_8h_a130a9d710956b3d6031a82fd31ac5c9e_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_opening_scene_8h_a130a9d710956b3d6031a82fd31ac5c9e_icgraph}
-\end{center}
-\end{figure}

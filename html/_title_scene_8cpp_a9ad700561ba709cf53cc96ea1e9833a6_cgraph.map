@@ -1,8 +1,0 @@
-<map id="DrawTitleScene" name="DrawTitleScene">
-<area shape="rect" id="node1" title="タイトルシーンの描画関数 タイトルシーンのオブジェクトを描画する関数" alt="" coords="5,81,117,108"/>
-<area shape="rect" id="node2" href="$class_object_manager.html#ad30e438f05942a753d4eb7770ad069f3" title="全ての m_pObjects を描画する" alt="" coords="165,5,312,32"/>
-<area shape="rect" id="node3" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="191,56,286,83"/>
-<area shape="rect" id="node4" href="$_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="195,107,282,133"/>
-<area shape="rect" id="node6" href="$_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="193,157,285,184"/>
-<area shape="rect" id="node5" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="360,107,519,133"/>
-</map>

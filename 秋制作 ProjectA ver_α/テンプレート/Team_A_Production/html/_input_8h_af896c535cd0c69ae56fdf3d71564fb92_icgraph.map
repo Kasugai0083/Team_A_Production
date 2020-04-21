@@ -1,4 +1,0 @@
-<map id="OnMousePush" name="OnMousePush">
-<area shape="rect" id="node1" title="クリック中判定関数 指定したマウスのボタンがクリック中かどうかを判定する" alt="" coords="164,5,272,32"/>
-<area shape="rect" id="node2" href="$class_candle.html#ad1c90d9b6a6df8cfb7063c3837cd5405" title="蝋燭の更新 蝋燭の生死管理 キャンドル明滅の管理 キャンドルが溶けて座標が下がる処理" alt="" coords="5,5,116,32"/>
-</map>

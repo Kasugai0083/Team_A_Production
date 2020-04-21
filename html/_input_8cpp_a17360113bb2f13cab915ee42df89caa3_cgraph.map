@@ -1,5 +1,0 @@
-<map id="UpdateInput" name="UpdateInput">
-<area shape="rect" id="node1" title="入力情報の更新 デバイスの入力情報の更新を行う 毎フレームに１度必ず実行する必要がある" alt="" coords="5,31,96,57"/>
-<area shape="rect" id="node2" href="$_input_8cpp.html#ae57107136b39d15829122034f9a40a20" title=" " alt="" coords="152,5,239,32"/>
-<area shape="rect" id="node3" href="$_input_8cpp.html#af4e3f1d462afafd7777019240509a21e" title=" " alt="" coords="144,56,247,83"/>
-</map>

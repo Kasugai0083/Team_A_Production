@@ -1,8 +1,0 @@
-<map id="Fire" name="Fire">
-<area shape="rect" id="node1" title="蝋燭の火を管理するクラス" alt="" coords="51,185,95,212"/>
-<area shape="rect" id="node2" href="$class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="128,109,175,136"/>
-<area shape="rect" id="node3" href="$class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
-<area shape="rect" id="node4" href="$struct_vec2.html" title="Vector用構造体(2D版)" alt="" coords="89,5,141,32"/>
-<area shape="rect" id="node5" href="$struct_size.html" title="サイズデータ用構造体" alt="" coords="167,5,215,32"/>
-<area shape="rect" id="node6" href="$struct_texture.html" title="テクスチャデータやサイズを保持する構造体" alt="" coords="245,5,311,32"/>
-</map>

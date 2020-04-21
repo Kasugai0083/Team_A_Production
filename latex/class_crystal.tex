@@ -11,22 +11,8 @@
 
 
 
-Crystal の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=127pt]{class_crystal__inherit__graph}
-\end{center}
-\end{figure}
+\mbox{\hyperlink{class_item}{Item}}を継承しています。
 
-
-Crystal 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_crystal__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,23 +35,11 @@ void \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Draw}} ()
 死亡していなければ描画~\newline
 マウスオーバーでエフェクトの追加~\newline
 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{struct_texture}{Texture}} $\ast$ \mbox{\hyperlink{class_crystal_afca946f659be59dbadc4d3b14f610730}{m\+\_\+p\+On\+Hit\+Tex}}
-\begin{DoxyCompactList}\small\item\em マウスオーバー時の画像 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
 水晶を管理するクラス 
-
-オブジェクトの葉（最終継承先）~\newline
-水晶を管理するクラスを格納 
-
- Player\+Item.\+h の 18 行目に定義があります。
-
-
 
 \doxysubsection{構築子と解体子}
 \mbox{\Hypertarget{class_crystal_a7de88d9998696dca4ee346c673a55b7c}\label{class_crystal_a7de88d9998696dca4ee346c673a55b7c}} 
@@ -78,10 +52,6 @@ void \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Draw}} ()
 
 コンストラクタ 
 
-
-
- Player\+Item.\+h の 21 行目に定義があります。
-
 \mbox{\Hypertarget{class_crystal_a79aa0bafbe74ad194781c3afd3effea0}\label{class_crystal_a79aa0bafbe74ad194781c3afd3effea0}} 
 \index{Crystal@{Crystal}!````~Crystal@{$\sim$Crystal}}
 \index{````~Crystal@{$\sim$Crystal}!Crystal@{Crystal}}
@@ -91,10 +61,6 @@ void \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Draw}} ()
 
 
 デストラクタ 
-
-
-
- Player\+Item.\+h の 23 行目に定義があります。
 
 
 
@@ -116,18 +82,6 @@ void \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Draw}} ()
 
 \mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{Object}}を実装しています。
 
-
-
- Player\+Item.\+h の 88 行目に定義があります。
-
-呼び出し関係図\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=262pt]{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_crystal_ae53513bca380eedc662918a7164dbd68}\label{class_crystal_ae53513bca380eedc662918a7164dbd68}} 
 \index{Crystal@{Crystal}!Init@{Init}}
 \index{Init@{Init}!Crystal@{Crystal}}
@@ -145,17 +99,6 @@ void \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Draw}} ()
 
 \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Object}}を実装しています。
 
-
-
- Player\+Item.\+h の 32 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_crystal_ae53513bca380eedc662918a7164dbd68_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_crystal_ab48cd1bfbae2b0b10454edf2aec45e22}\label{class_crystal_ab48cd1bfbae2b0b10454edf2aec45e22}} 
 \index{Crystal@{Crystal}!Update@{Update}}
 \index{Update@{Update}!Crystal@{Crystal}}
@@ -175,35 +118,6 @@ void \mbox{\hyperlink{class_crystal_aaf8b7a71371dddc43e0d3e86a85df252}{Draw}} ()
 
 
 
- Player\+Item.\+h の 55 行目に定義があります。
-
-呼び出し関係図\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=299pt]{class_crystal_ab48cd1bfbae2b0b10454edf2aec45e22_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_crystal_afca946f659be59dbadc4d3b14f610730}\label{class_crystal_afca946f659be59dbadc4d3b14f610730}} 
-\index{Crystal@{Crystal}!m\_pOnHitTex@{m\_pOnHitTex}}
-\index{m\_pOnHitTex@{m\_pOnHitTex}!Crystal@{Crystal}}
-\doxysubsubsection{\texorpdfstring{m\_pOnHitTex}{m\_pOnHitTex}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_texture}{Texture}}$\ast$ Crystal\+::m\+\_\+p\+On\+Hit\+Tex\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-マウスオーバー時の画像 
-
-
-
- Player\+Item.\+h の 100 行目に定義があります。
-
-
-
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_player_item_8h}{Player\+Item.\+h}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_player_item_8h}{Player\+Item.\+h}}\end{DoxyCompactItemize}

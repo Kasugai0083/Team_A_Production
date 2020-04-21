@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -54,22 +46,6 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('functions_func_g.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -88,17 +64,11 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 &#160;
 
 <h3><a id="index_g"></a>- g -</h3><ul>
-<li>GameData()
-: <a class="el" href="struct_game_data.html#a67ab18c5a35df618e99983275c7552ab">GameData</a>
-</li>
 <li>GameEnd()
 : <a class="el" href="class_scene_transition.html#a24fd0d8bf1dc606777a8e63b0b02df00">SceneTransition</a>
 </li>
-<li>Get()
-: <a class="el" href="class_monitor_transition.html#a76e800b9d452ea993a0b90e5c6eacb5f">MonitorTransition</a>
-</li>
 <li>GetCharacter()
-: <a class="el" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">CharacterManager</a>
+: <a class="el" href="class_character_manager.html#a4506fd521aad70371f953806033921fa">CharacterManager</a>
 </li>
 <li>GetClearTime()
 : <a class="el" href="class_timer.html#a546bcc8cb8606044f528a75953836f93">Timer</a>
@@ -109,12 +79,22 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>GetCurrentDays()
 : <a class="el" href="class_day_controller.html#a9dce2f923f89033782054076d22867bb">DayController</a>
 </li>
+<li>GetDays()
+: <a class="el" href="class_game_data.html#aacfde291e648c610c55c977a74b68d45">GameData</a>
+</li>
+<li>GetEnemyData()
+: <a class="el" href="class_game_data.html#ae2c00ff1c39a156dd9e6175b95c32183">GameData</a>
+</li>
+<li>GetGameParam()
+: <a class="el" href="class_game_data.html#aa9cabee58bb6d82be2de203fd830e889">GameData</a>
+</li>
 <li>GetHp()
 : <a class="el" href="class_candle.html#a8e84e4577dbeb6daf559cb57ab476b71">Candle</a>
 , <a class="el" href="class_object.html#a67dac0d49f2c9a8e4b86b2572238adb2">Object</a>
 </li>
 <li>GetInstance()
 : <a class="el" href="class_audio_player.html#add329a1de7de948b1327db5e28933cb2">AudioPlayer</a>
+, <a class="el" href="class_singleton.html#a9460c2b31ff4dd9f7d022b0fff0afda4">Singleton&lt; T &gt;</a>
 , <a class="el" href="class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082">Timer</a>
 </li>
 <li>GetName()
@@ -123,12 +103,16 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>GetObj()
 : <a class="el" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0">ObjectManager</a>
 </li>
-<li>GetRand()
-: <a class="el" href="class_enemy_1_1_enemy_timer.html#a60cc56de07fe476672039faa80785fd9">Enemy::EnemyTimer</a>
+<li>GetRandomValue()
+: <a class="el" href="class_probability.html#a57f7868fc1dd936ecb5ff42362dbca7f">Probability</a>
 </li>
 <li>GetRatio()
 : <a class="el" href="class_candle.html#a0a52af571ba5ad324312c9112028331c">Candle</a>
 , <a class="el" href="class_object.html#af6c3ba6ab9e42e35162e39d4fd9172ca">Object</a>
+</li>
+<li>GetRoomID()
+: <a class="el" href="class_character.html#a959b53f41fa44490f584b4c96354f30c">Character</a>
+, <a class="el" href="class_enemy.html#aab4540d84f5b3760930c06eaefb237e7">Enemy</a>
 </li>
 <li>GetSize()
 : <a class="el" href="class_lib_1_1_texture.html#acc78034d9f6c5676cab8613e0e9dbe04">Lib::Texture</a>
@@ -138,14 +122,11 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

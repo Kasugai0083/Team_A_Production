@@ -2,59 +2,41 @@
 \label{class_botan}\index{Botan@{Botan}}
 
 
-{\ttfamily \#include $<$G\+\_\+\+Freddy.\+h$>$}
+エネミー\mbox{[}ボタン\mbox{]}を管理するクラス  
 
 
 
-Botan の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=139pt]{class_botan__inherit__graph}
-\end{center}
-\end{figure}
+
+{\ttfamily \#include $<$Botan.\+h$>$}
 
 
-Botan 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=280pt]{class_botan__coll__graph}
-\end{center}
-\end{figure}
+
+\mbox{\hyperlink{class_enemy}{Enemy}}を継承しています。
+
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_botan_acbb3b0f3925137c53619c6ffe4f37edc}{Botan}} ()
-\item 
-virtual \mbox{\hyperlink{class_botan_a78242c296df4f5c7c17557ff6fe3db05}{$\sim$\+Botan}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_botan_aeea37d9d5066130b7c588ebe13d35583}{$\sim$\+Botan}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_botan_ac8ed8694fbeb1b27221f4878487c08a1}{Init}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_botan_a7e9c22e468535d2c0b206c7d1e5a48d9}{Update}} () override
-\item 
-virtual bool \mbox{\hyperlink{class_botan_a2557a86441aba61cfa171c0b32e0b9bc}{Has\+Kill}} () const override
-\item 
-bool \mbox{\hyperlink{class_botan_a6961f3a41eab40239197fe9568c34c4a}{Spawn\+Judgement}} (double probability\+\_\+)
-\item 
-virtual void \mbox{\hyperlink{class_botan_a3c6375b593e9e88f6f31f25ea2ae361f}{Load\+Tex}} (\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} id\+\_\+) override
-\item 
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_botan_ad255867f0c175804588e424917e7a9dc}{Draw}} () override
-\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} \mbox{\hyperlink{class_botan_af1ec18d2aa48b2008c3214c67f84a9a7}{m\+\_\+\+Char\+Id}} = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fabe178ed03874feef23396b196d23866d}{Character\+I\+D\+::\+B\+O\+T\+AN}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_botan_a5f9c31b11c42235ef7e55fbc0ed22336}{Kill\+Animation}} () override
+\begin{DoxyCompactList}\small\item\em キルアニメーションの描画関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_botan_aacd89bafe01fdc37e5a68cebbccc30e1}{Spawn\+Judgement}} () const override
+\begin{DoxyCompactList}\small\item\em m\+\_\+\+Spawn\+Judgementを返す \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
+エネミー\mbox{[}ボタン\mbox{]}を管理するクラス 
 
-
- G\+\_\+\+Freddy.\+h の 12 行目に定義があります。
-
-
+ボタンの挙動や描画を実装している 
 
 \doxysubsection{構築子と解体子}
 \mbox{\Hypertarget{class_botan_acbb3b0f3925137c53619c6ffe4f37edc}\label{class_botan_acbb3b0f3925137c53619c6ffe4f37edc}} 
@@ -65,24 +47,17 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
- G\+\_\+\+Freddy.\+h の 18 行目に定義があります。
+コンストラクタ 
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_botan_acbb3b0f3925137c53619c6ffe4f37edc_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_botan_a78242c296df4f5c7c17557ff6fe3db05}\label{class_botan_a78242c296df4f5c7c17557ff6fe3db05}} 
+\mbox{\Hypertarget{class_botan_aeea37d9d5066130b7c588ebe13d35583}\label{class_botan_aeea37d9d5066130b7c588ebe13d35583}} 
 \index{Botan@{Botan}!````~Botan@{$\sim$Botan}}
 \index{````~Botan@{$\sim$Botan}!Botan@{Botan}}
 \doxysubsubsection{\texorpdfstring{$\sim$Botan()}{~Botan()}}
-{\footnotesize\ttfamily virtual Botan\+::$\sim$\+Botan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Botan\+::$\sim$\+Botan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
- G\+\_\+\+Freddy.\+h の 38 行目に定義があります。
+デストラクタ 
 
 
 
@@ -95,32 +70,11 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_character_a051c409115c689480f0246f6a4743474}{Character}}を実装しています。
+描画関数 
 
 
 
- G\+\_\+\+Freddy.\+cpp の 81 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_botan_ad255867f0c175804588e424917e7a9dc_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_botan_a2557a86441aba61cfa171c0b32e0b9bc}\label{class_botan_a2557a86441aba61cfa171c0b32e0b9bc}} 
-\index{Botan@{Botan}!HasKill@{HasKill}}
-\index{HasKill@{HasKill}!Botan@{Botan}}
-\doxysubsubsection{\texorpdfstring{HasKill()}{HasKill()}}
-{\footnotesize\ttfamily virtual bool Botan\+::\+Has\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-\mbox{\hyperlink{class_enemy_ab7b752c2b8898f5dbffd6df567b2b965}{Enemy}}を再実装しています。
-
-
-
- G\+\_\+\+Freddy.\+h の 51 行目に定義があります。
+\mbox{\hyperlink{class_character_ae0c60274d2515e4198b280cde1719a13}{Character}}を実装しています。
 
 \mbox{\Hypertarget{class_botan_ac8ed8694fbeb1b27221f4878487c08a1}\label{class_botan_ac8ed8694fbeb1b27221f4878487c08a1}} 
 \index{Botan@{Botan}!Init@{Init}}
@@ -130,57 +84,43 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_enemy_a2b56a302d65e9a32cf37aed8949164e6}{Enemy}}を再実装しています。
+初期化関数 
 
 
 
- G\+\_\+\+Freddy.\+cpp の 8 行目に定義があります。
+\mbox{\hyperlink{class_enemy_a0af6416bc431c1ff2d3fb7f8441950c2}{Enemy}}を再実装しています。
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=254pt]{class_botan_ac8ed8694fbeb1b27221f4878487c08a1_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_botan_a3c6375b593e9e88f6f31f25ea2ae361f}\label{class_botan_a3c6375b593e9e88f6f31f25ea2ae361f}} 
-\index{Botan@{Botan}!LoadTex@{LoadTex}}
-\index{LoadTex@{LoadTex}!Botan@{Botan}}
-\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
-{\footnotesize\ttfamily void Botan\+::\+Load\+Tex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}}}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{class_botan_a5f9c31b11c42235ef7e55fbc0ed22336}\label{class_botan_a5f9c31b11c42235ef7e55fbc0ed22336}} 
+\index{Botan@{Botan}!KillAnimation@{KillAnimation}}
+\index{KillAnimation@{KillAnimation}!Botan@{Botan}}
+\doxysubsubsection{\texorpdfstring{KillAnimation()}{KillAnimation()}}
+{\footnotesize\ttfamily void Botan\+::\+Kill\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{class_enemy_a5eb22e7d02bdb2772afd42dbbd65a881}{Enemy}}を再実装しています。
+キルアニメーションの描画関数 
 
 
 
- G\+\_\+\+Freddy.\+cpp の 69 行目に定義があります。
+\mbox{\hyperlink{class_character_ab52c6c1bfb2133a6f0bb1e7e39d091c3}{Character}}を再実装しています。
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_botan_a3c6375b593e9e88f6f31f25ea2ae361f_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_botan_a6961f3a41eab40239197fe9568c34c4a}\label{class_botan_a6961f3a41eab40239197fe9568c34c4a}} 
+\mbox{\Hypertarget{class_botan_aacd89bafe01fdc37e5a68cebbccc30e1}\label{class_botan_aacd89bafe01fdc37e5a68cebbccc30e1}} 
 \index{Botan@{Botan}!SpawnJudgement@{SpawnJudgement}}
 \index{SpawnJudgement@{SpawnJudgement}!Botan@{Botan}}
 \doxysubsubsection{\texorpdfstring{SpawnJudgement()}{SpawnJudgement()}}
-{\footnotesize\ttfamily bool Botan\+::\+Spawn\+Judgement (\begin{DoxyParamCaption}\item[{double}]{probability\+\_\+ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Botan\+::\+Spawn\+Judgement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- G\+\_\+\+Freddy.\+cpp の 57 行目に定義があります。
+m\+\_\+\+Spawn\+Judgementを返す 
 
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=320pt]{class_botan_a6961f3a41eab40239197fe9568c34c4a_icgraph}
-\end{center}
-\end{figure}
+\begin{DoxyReturn}{戻り値}
+bool 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_character_a606ae9bec2acc1aa8098ad7a454b4857}{Character}}を再実装しています。
+
 \mbox{\Hypertarget{class_botan_a7e9c22e468535d2c0b206c7d1e5a48d9}\label{class_botan_a7e9c22e468535d2c0b206c7d1e5a48d9}} 
 \index{Botan@{Botan}!Update@{Update}}
 \index{Update@{Update}!Botan@{Botan}}
@@ -189,35 +129,15 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
+更新関数 
+
+
+
 \mbox{\hyperlink{class_enemy_ad880b3aa85d38ee61d3bf1352163f3c6}{Enemy}}を再実装しています。
-
-
-
- G\+\_\+\+Freddy.\+cpp の 16 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=320pt]{class_botan_a7e9c22e468535d2c0b206c7d1e5a48d9_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_botan_af1ec18d2aa48b2008c3214c67f84a9a7}\label{class_botan_af1ec18d2aa48b2008c3214c67f84a9a7}} 
-\index{Botan@{Botan}!m\_CharId@{m\_CharId}}
-\index{m\_CharId@{m\_CharId}!Botan@{Botan}}
-\doxysubsubsection{\texorpdfstring{m\_CharId}{m\_CharId}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} Botan\+::m\+\_\+\+Char\+Id = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fabe178ed03874feef23396b196d23866d}{Character\+I\+D\+::\+B\+O\+T\+AN}}\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- G\+\_\+\+Freddy.\+h の 72 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_g___freddy_8h}{G\+\_\+\+Freddy.\+h}}\item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_g___freddy_8cpp}{G\+\_\+\+Freddy.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_botan_8h}{Botan.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_botan_8cpp}{Botan.\+cpp}}\end{DoxyCompactItemize}

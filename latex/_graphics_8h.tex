@@ -1,5 +1,5 @@
-\hypertarget{_graphics_8h}{}\doxysection{Src/\+Engine/\+Graphics.h ファイル}
-\label{_graphics_8h}\index{Src/Engine/Graphics.h@{Src/Engine/Graphics.h}}
+\hypertarget{_graphics_8h}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Engine/\+Graphics.h ファイル}
+\label{_graphics_8h}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Engine/Graphics.h@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Engine/Graphics.h}}
 
 
 描画に関する関数、定数の宣言  
@@ -11,20 +11,6 @@
 {\ttfamily \#include \char`\"{}../\+Utility/\+Common.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Utility/\+Size.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Utility/\+Vec.\+h\char`\"{}}\newline
-Graphics.\+h の依存先関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h__incl}
-\end{center}
-\end{figure}
-被依存関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h__dep__incl}
-\end{center}
-\end{figure}
 \doxysubsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +32,8 @@ struct \mbox{\hyperlink{struct_animation_texture}{Animation\+Texture}}
 \item 
 enum \mbox{\hyperlink{_graphics_8h_a38781c7178610f85215f87793e99ed51}{Font\+Color}} \{ \mbox{\hyperlink{_graphics_8h_a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd}{Black}}, 
 \mbox{\hyperlink{_graphics_8h_a38781c7178610f85215f87793e99ed51ab548046646b36c12aa6ba841de500094}{White}}, 
-\mbox{\hyperlink{_graphics_8h_a38781c7178610f85215f87793e99ed51ad3163c1fcda01965b692ec2c3122b743}{Red}}
+\mbox{\hyperlink{_graphics_8h_a38781c7178610f85215f87793e99ed51ad3163c1fcda01965b692ec2c3122b743}{Red}}, 
+\mbox{\hyperlink{_graphics_8h_a38781c7178610f85215f87793e99ed51abf28513245738599d13e3ce36bd16c82}{Yellow}}
  \}
 \begin{DoxyCompactList}\small\item\em フォントカラー \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{_graphics_8h_a88cff078229df1c0803a690e4826b5f1}{Font\+Size}} \{ \mbox{\hyperlink{_graphics_8h_a88cff078229df1c0803a690e4826b5f1ad701591531ebfe0abdf21101ddaf6abe}{Small}}, 
@@ -75,7 +62,7 @@ void \mbox{\hyperlink{_graphics_8h_a1c451f1cdb5a9103fe81d6495940b96d}{Draw\+End}
 \begin{DoxyCompactList}\small\item\em 描画終了関数~\newline
 描画の終了を宣言し、バックバッファとフロントバッファを入れ替える~\newline
 ※この関数は必ず\+Draw\+Startの後に実行されるようにしてください。 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_graphics_8h_af22bfa223bf3af2a90e4d09801dae097}{Draw\+Texture}} (float x, float y, \mbox{\hyperlink{struct_texture}{Texture}} $\ast$texture\+\_\+data, float z\+\_\+=0.f)
+void \mbox{\hyperlink{_graphics_8h_a622badb40e0fa413caf81956cd938882}{Draw\+Texture}} (float x, float y, \mbox{\hyperlink{struct_texture}{Texture}} $\ast$texture\+\_\+data, float z\+\_\+=0.f, float tu\+\_\+=1.f, float tv\+\_\+=1.f)
 \begin{DoxyCompactList}\small\item\em テクスチャ描画関数~\newline
 指定された位置にテクスチャを描画する~\newline
 ※texture\+\_\+dataは\+File.\+hの\+Get\+Texture\+Dataを使用してください。 \end{DoxyCompactList}\item 
@@ -87,7 +74,15 @@ void \mbox{\hyperlink{_graphics_8h_ac6182caf2250f3cfeb8849714704de8d}{Draw\+Text
 \item 
 void \mbox{\hyperlink{_graphics_8h_ad61dd9d1b71c35e0486dd004e99021a1}{Candle\+Draw}} (float x, float y, \mbox{\hyperlink{struct_texture}{Texture}} $\ast$texture\+\_\+data, \mbox{\hyperlink{struct_size}{Size}} size\+\_\+, float hp\+\_\+)
 \item 
+void \mbox{\hyperlink{_graphics_8h_a941268bf34d964be9a6d93bbd5ff08a8}{Candle\+Draw}} (float x, float y, \mbox{\hyperlink{struct_texture}{Texture}} $\ast$texture\+\_\+data, \mbox{\hyperlink{struct_size}{Size}} size\+\_\+, \mbox{\hyperlink{struct_size}{Size}} flame\+\_\+, float hp\+\_\+)
+\item 
+void \mbox{\hyperlink{_graphics_8h_aac485d287182632704b220d01e7fea42}{Draw\+U\+V\+Mapping\+Texture}} (float x, float y, \mbox{\hyperlink{struct_texture}{Texture}} $\ast$texture\+\_\+data, float texture\+\_\+x, float texture\+\_\+y, float rect\+\_\+width, float rect\+\_\+height)
+\item 
 void \mbox{\hyperlink{_graphics_8h_a8ae2a02cc1037867ead7f9318b195af0}{Draw\+Animation}} (float x\+\_\+, float y\+\_\+, \mbox{\hyperlink{struct_animation_texture}{Animation\+Texture}} $\ast$animatinon\+\_\+)
+\item 
+bool \mbox{\hyperlink{_graphics_8h_af08fa7ed49ac1bef24c7a18106fcf114}{Draw\+Blood}} (float x\+\_\+, float y\+\_\+)
+\item 
+void \mbox{\hyperlink{_graphics_8h_ab7bd411ab349ba6722bb712ac80dac08}{Draw\+Fade}} (bool in\+\_\+, D3\+D\+X\+C\+O\+L\+OR color\+\_\+)
 \item 
 void \mbox{\hyperlink{_graphics_8h_aa53efa63942faa570929b7b404b4e372}{Draw\+U\+V\+Scroll\+Texture}} (float x, float y, \mbox{\hyperlink{struct_texture}{Texture}} $\ast$texture\+\_\+data, float tu, float tv)
 \begin{DoxyCompactList}\small\item\em テクスチャの\+U\+Vスクロール描画関数~\newline
@@ -120,6 +115,9 @@ void \mbox{\hyperlink{_graphics_8h_ae90034a42e168b843a5b09a82ff668fa}{Draw\+Alph
 \doxysubsection{詳解}
 描画に関する関数、定数の宣言 
 
+\begin{DoxyAuthor}{著者}
+中地 松本 
+\end{DoxyAuthor}
 
 
 \doxysubsection{マクロ定義詳解}
@@ -133,10 +131,6 @@ void \mbox{\hyperlink{_graphics_8h_ae90034a42e168b843a5b09a82ff668fa}{Draw\+Alph
 
 フォントサイズ(大) 
 
-
-
- Graphics.\+h の 35 行目に定義があります。
-
 \mbox{\Hypertarget{_graphics_8h_aaae4cf3bad8e63b004bac0345a91c52c}\label{_graphics_8h_aaae4cf3bad8e63b004bac0345a91c52c}} 
 \index{Graphics.h@{Graphics.h}!REGULAR\_FONT\_SIZE@{REGULAR\_FONT\_SIZE}}
 \index{REGULAR\_FONT\_SIZE@{REGULAR\_FONT\_SIZE}!Graphics.h@{Graphics.h}}
@@ -147,10 +141,6 @@ void \mbox{\hyperlink{_graphics_8h_ae90034a42e168b843a5b09a82ff668fa}{Draw\+Alph
 
 フォントサイズ(中) 
 
-
-
- Graphics.\+h の 34 行目に定義があります。
-
 \mbox{\Hypertarget{_graphics_8h_a773fc8bee89c59317682b3eb780dbab2}\label{_graphics_8h_a773fc8bee89c59317682b3eb780dbab2}} 
 \index{Graphics.h@{Graphics.h}!SMALL\_FONT\_SIZE@{SMALL\_FONT\_SIZE}}
 \index{SMALL\_FONT\_SIZE@{SMALL\_FONT\_SIZE}!Graphics.h@{Graphics.h}}
@@ -160,10 +150,6 @@ void \mbox{\hyperlink{_graphics_8h_ae90034a42e168b843a5b09a82ff668fa}{Draw\+Alph
 
 
 フォントサイズ(小) 
-
-
-
- Graphics.\+h の 33 行目に定義があります。
 
 
 
@@ -191,11 +177,11 @@ White&白 \\
 Red&赤 \\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yellow@{Yellow}!Graphics.h@{Graphics.h}}\index{Graphics.h@{Graphics.h}!Yellow@{Yellow}}}\mbox{\Hypertarget{_graphics_8h_a38781c7178610f85215f87793e99ed51abf28513245738599d13e3ce36bd16c82}\label{_graphics_8h_a38781c7178610f85215f87793e99ed51abf28513245738599d13e3ce36bd16c82}} 
+Yellow&\\
+\hline
+
 \end{DoxyEnumFields}
-
-
- Graphics.\+h の 17 行目に定義があります。
-
 \mbox{\Hypertarget{_graphics_8h_a88cff078229df1c0803a690e4826b5f1}\label{_graphics_8h_a88cff078229df1c0803a690e4826b5f1}} 
 \index{Graphics.h@{Graphics.h}!FontSize@{FontSize}}
 \index{FontSize@{FontSize}!Graphics.h@{Graphics.h}}
@@ -222,28 +208,19 @@ Font\+Size\+Max&サイズ最大数 \\
 \end{DoxyEnumFields}
 
 
- Graphics.\+h の 25 行目に定義があります。
-
-
-
 \doxysubsection{関数詳解}
 \mbox{\Hypertarget{_graphics_8h_ad61dd9d1b71c35e0486dd004e99021a1}\label{_graphics_8h_ad61dd9d1b71c35e0486dd004e99021a1}} 
 \index{Graphics.h@{Graphics.h}!CandleDraw@{CandleDraw}}
 \index{CandleDraw@{CandleDraw}!Graphics.h@{Graphics.h}}
-\doxysubsubsection{\texorpdfstring{CandleDraw()}{CandleDraw()}}
+\doxysubsubsection{\texorpdfstring{CandleDraw()}{CandleDraw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Candle\+Draw (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{\mbox{\hyperlink{struct_size}{Size}}}]{size\+\_\+,  }\item[{float}]{hp\+\_\+ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{_graphics_8h_a941268bf34d964be9a6d93bbd5ff08a8}\label{_graphics_8h_a941268bf34d964be9a6d93bbd5ff08a8}} 
+\index{Graphics.h@{Graphics.h}!CandleDraw@{CandleDraw}}
+\index{CandleDraw@{CandleDraw}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{CandleDraw()}{CandleDraw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Candle\+Draw (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{\mbox{\hyperlink{struct_size}{Size}}}]{size\+\_\+,  }\item[{\mbox{\hyperlink{struct_size}{Size}}}]{flame\+\_\+,  }\item[{float}]{hp\+\_\+ }\end{DoxyParamCaption})}
 
-
- Graphics.\+cpp の 189 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=258pt]{_graphics_8h_ad61dd9d1b71c35e0486dd004e99021a1_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a23eb2b43afea51b17b043323ac582b21}\label{_graphics_8h_a23eb2b43afea51b17b043323ac582b21}} 
 \index{Graphics.h@{Graphics.h}!CreateTexture@{CreateTexture}}
 \index{CreateTexture@{CreateTexture}!Graphics.h@{Graphics.h}}
@@ -266,44 +243,17 @@ Font\+Size\+Max&サイズ最大数 \\
 \mbox{\texttt{ out}}  & {\em texture\+\_\+data} & 読み込まれたテクスチャを反映するデータ \\
 \hline
 \end{DoxyParams}
-
-
- Graphics.\+cpp の 322 行目に定義があります。
-
-被呼び出し関係図\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h_a23eb2b43afea51b17b043323ac582b21_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a76a04127f47dd5bc22fce5796e3b3a52}\label{_graphics_8h_a76a04127f47dd5bc22fce5796e3b3a52}} 
 \index{Graphics.h@{Graphics.h}!CreateVertex@{CreateVertex}}
 \index{CreateVertex@{CreateVertex}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{CreateVertex()}{CreateVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Create\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mastumoto_1_1_vec2}{Mastumoto\+::\+Vec2}}}]{pos,  }\item[{\mbox{\hyperlink{struct_mastumoto_1_1_vec2}{Mastumoto\+::\+Vec2}}}]{offset,  }\item[{\mbox{\hyperlink{struct_vertex}{Vertex}}}]{vtx\mbox{[}4\mbox{]},  }\item[{D3\+D\+X\+C\+O\+L\+OR}]{color = {\ttfamily 0x00ffffff} }\end{DoxyParamCaption})}
 
-
-
- Graphics.\+cpp の 500 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h_a76a04127f47dd5bc22fce5796e3b3a52_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_aa275e0d51776998145b407622368fa7a}\label{_graphics_8h_aa275e0d51776998145b407622368fa7a}} 
 \index{Graphics.h@{Graphics.h}!CreateVertex@{CreateVertex}}
 \index{CreateVertex@{CreateVertex}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{CreateVertex()}{CreateVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Create\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vec2}{Vec2}}}]{pos,  }\item[{\mbox{\hyperlink{struct_size}{Size}}}]{offset,  }\item[{\mbox{\hyperlink{struct_vertex}{Vertex}}}]{vtx\mbox{[}4\mbox{]},  }\item[{D3\+D\+X\+C\+O\+L\+OR}]{color = {\ttfamily 0x00ffffff} }\end{DoxyParamCaption})}
-
-
-
- Graphics.\+cpp の 521 行目に定義があります。
 
 \mbox{\Hypertarget{_graphics_8h_afeba9e9ebe427ca7b666b26c04a6f119}\label{_graphics_8h_afeba9e9ebe427ca7b666b26c04a6f119}} 
 \index{Graphics.h@{Graphics.h}!DrawAlphaBox2D@{DrawAlphaBox2D}}
@@ -311,99 +261,36 @@ Font\+Size\+Max&サイズ最大数 \\
 \doxysubsubsection{\texorpdfstring{DrawAlphaBox2D()}{DrawAlphaBox2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Draw\+Alpha\+Box2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lib_1_1_texture}{Lib\+::\+Texture}} \&}]{tex,  }\item[{\mbox{\hyperlink{struct_mastumoto_1_1_vec2}{Mastumoto\+::\+Vec2}}}]{pos,  }\item[{\mbox{\hyperlink{struct_mastumoto_1_1_vec2}{Mastumoto\+::\+Vec2}}}]{size,  }\item[{D3\+D\+X\+C\+O\+L\+OR}]{col = {\ttfamily 0x00ffffff} }\end{DoxyParamCaption})}
 
-
-
- Graphics.\+cpp の 557 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=282pt]{_graphics_8h_afeba9e9ebe427ca7b666b26c04a6f119_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=271pt]{_graphics_8h_afeba9e9ebe427ca7b666b26c04a6f119_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a605f4cb8b1829e08323eca4219e35ae6}\label{_graphics_8h_a605f4cb8b1829e08323eca4219e35ae6}} 
 \index{Graphics.h@{Graphics.h}!DrawAlphaBox2D@{DrawAlphaBox2D}}
 \index{DrawAlphaBox2D@{DrawAlphaBox2D}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawAlphaBox2D()}{DrawAlphaBox2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Draw\+Alpha\+Box2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lib_1_1_texture}{Lib\+::\+Texture}} \&}]{tex,  }\item[{\mbox{\hyperlink{struct_vec2}{Vec2}}}]{pos,  }\item[{\mbox{\hyperlink{struct_size}{Size}}}]{size,  }\item[{D3\+D\+X\+C\+O\+L\+OR}]{col }\end{DoxyParamCaption})}
 
-
-
- Graphics.\+cpp の 589 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=282pt]{_graphics_8h_a605f4cb8b1829e08323eca4219e35ae6_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_ae90034a42e168b843a5b09a82ff668fa}\label{_graphics_8h_ae90034a42e168b843a5b09a82ff668fa}} 
 \index{Graphics.h@{Graphics.h}!DrawAlphaTex2D@{DrawAlphaTex2D}}
 \index{DrawAlphaTex2D@{DrawAlphaTex2D}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawAlphaTex2D()}{DrawAlphaTex2D()}}
 {\footnotesize\ttfamily void Draw\+Alpha\+Tex2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lib_1_1_texture}{Lib\+::\+Texture}} \&}]{tex,  }\item[{\mbox{\hyperlink{struct_mastumoto_1_1_vec2}{Mastumoto\+::\+Vec2}}}]{pos,  }\item[{\mbox{\hyperlink{struct_mastumoto_1_1_vec2}{Mastumoto\+::\+Vec2}}}]{size,  }\item[{D3\+D\+X\+C\+O\+L\+OR}]{col = {\ttfamily 0x00ffffff} }\end{DoxyParamCaption})}
 
-
-
- Graphics.\+cpp の 623 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=281pt]{_graphics_8h_ae90034a42e168b843a5b09a82ff668fa_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a8ae2a02cc1037867ead7f9318b195af0}\label{_graphics_8h_a8ae2a02cc1037867ead7f9318b195af0}} 
 \index{Graphics.h@{Graphics.h}!DrawAnimation@{DrawAnimation}}
 \index{DrawAnimation@{DrawAnimation}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawAnimation()}{DrawAnimation()}}
 {\footnotesize\ttfamily void Draw\+Animation (\begin{DoxyParamCaption}\item[{float}]{x\+\_\+,  }\item[{float}]{y\+\_\+,  }\item[{\mbox{\hyperlink{struct_animation_texture}{Animation\+Texture}} $\ast$}]{animatinon\+\_\+ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{_graphics_8h_af08fa7ed49ac1bef24c7a18106fcf114}\label{_graphics_8h_af08fa7ed49ac1bef24c7a18106fcf114}} 
+\index{Graphics.h@{Graphics.h}!DrawBlood@{DrawBlood}}
+\index{DrawBlood@{DrawBlood}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{DrawBlood()}{DrawBlood()}}
+{\footnotesize\ttfamily bool Draw\+Blood (\begin{DoxyParamCaption}\item[{float}]{x\+\_\+,  }\item[{float}]{y\+\_\+ }\end{DoxyParamCaption})}
 
-
- Graphics.\+cpp の 270 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=269pt]{_graphics_8h_a8ae2a02cc1037867ead7f9318b195af0_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=281pt]{_graphics_8h_a8ae2a02cc1037867ead7f9318b195af0_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a6c10a68a368ddfaa51ca82aa0546ce82}\label{_graphics_8h_a6c10a68a368ddfaa51ca82aa0546ce82}} 
 \index{Graphics.h@{Graphics.h}!DrawBox2D@{DrawBox2D}}
 \index{DrawBox2D@{DrawBox2D}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawBox2D()}{DrawBox2D()}}
 {\footnotesize\ttfamily void Draw\+Box2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lib_1_1_texture}{Lib\+::\+Texture}} \&}]{tex,  }\item[{\mbox{\hyperlink{struct_mastumoto_1_1_vec2}{Mastumoto\+::\+Vec2}}}]{pos }\end{DoxyParamCaption})}
 
-
-
- Graphics.\+cpp の 542 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=293pt]{_graphics_8h_a6c10a68a368ddfaa51ca82aa0546ce82_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a1c451f1cdb5a9103fe81d6495940b96d}\label{_graphics_8h_a1c451f1cdb5a9103fe81d6495940b96d}} 
 \index{Graphics.h@{Graphics.h}!DrawEnd@{DrawEnd}}
 \index{DrawEnd@{DrawEnd}!Graphics.h@{Graphics.h}}
@@ -416,17 +303,12 @@ Font\+Size\+Max&サイズ最大数 \\
 描画の終了を宣言し、バックバッファとフロントバッファを入れ替える~\newline
 ※この関数は必ず\+Draw\+Startの後に実行されるようにしてください。 
 
+\mbox{\Hypertarget{_graphics_8h_ab7bd411ab349ba6722bb712ac80dac08}\label{_graphics_8h_ab7bd411ab349ba6722bb712ac80dac08}} 
+\index{Graphics.h@{Graphics.h}!DrawFade@{DrawFade}}
+\index{DrawFade@{DrawFade}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{DrawFade()}{DrawFade()}}
+{\footnotesize\ttfamily void Draw\+Fade (\begin{DoxyParamCaption}\item[{bool}]{in\+\_\+,  }\item[{D3\+D\+X\+C\+O\+L\+OR}]{color\+\_\+ }\end{DoxyParamCaption})}
 
-
- Graphics.\+cpp の 109 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h_a1c451f1cdb5a9103fe81d6495940b96d_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a3f3e35ac7fae6ecda7841adcbe1a1a27}\label{_graphics_8h_a3f3e35ac7fae6ecda7841adcbe1a1a27}} 
 \index{Graphics.h@{Graphics.h}!DrawFont@{DrawFont}}
 \index{DrawFont@{DrawFont}!Graphics.h@{Graphics.h}}
@@ -452,26 +334,11 @@ Font\+Size\+Max&サイズ最大数 \\
 \mbox{\texttt{ in}}  & {\em color} & フォントの色 \\
 \hline
 \end{DoxyParams}
-
-
- Graphics.\+cpp の 289 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h_a3f3e35ac7fae6ecda7841adcbe1a1a27_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a3b999afae29e2c3afef8c54478888af4}\label{_graphics_8h_a3b999afae29e2c3afef8c54478888af4}} 
 \index{Graphics.h@{Graphics.h}!DrawIntegratedTexture@{DrawIntegratedTexture}}
 \index{DrawIntegratedTexture@{DrawIntegratedTexture}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawIntegratedTexture()}{DrawIntegratedTexture()}}
 {\footnotesize\ttfamily void Draw\+Integrated\+Texture (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{float}]{tu,  }\item[{float}]{tv,  }\item[{float}]{spriteX,  }\item[{float}]{spriteY,  }\item[{int}]{sprite\+NumX,  }\item[{int}]{sprite\+NumY }\end{DoxyParamCaption})}
-
-
-
- Graphics.\+cpp の 229 行目に定義があります。
 
 \mbox{\Hypertarget{_graphics_8h_ac2732194412d16de3230df806698af86}\label{_graphics_8h_ac2732194412d16de3230df806698af86}} 
 \index{Graphics.h@{Graphics.h}!DrawStart@{DrawStart}}
@@ -487,32 +354,17 @@ Font\+Size\+Max&サイズ最大数 \\
 \begin{DoxyReturn}{戻り値}
 描画開始の成否 (成功はtrue) 
 \end{DoxyReturn}
-
-
- Graphics.\+cpp の 93 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h_ac2732194412d16de3230df806698af86_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_a34f6d31faf6f85547dd3b273a6d22166}\label{_graphics_8h_a34f6d31faf6f85547dd3b273a6d22166}} 
 \index{Graphics.h@{Graphics.h}!DrawTexture@{DrawTexture}}
 \index{DrawTexture@{DrawTexture}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawTexture()}{DrawTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily void Draw\+Texture (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{float}]{width\+\_\+,  }\item[{float}]{height\+\_\+ }\end{DoxyParamCaption})}
 
-
-
- Graphics.\+cpp の 154 行目に定義があります。
-
-\mbox{\Hypertarget{_graphics_8h_af22bfa223bf3af2a90e4d09801dae097}\label{_graphics_8h_af22bfa223bf3af2a90e4d09801dae097}} 
+\mbox{\Hypertarget{_graphics_8h_a622badb40e0fa413caf81956cd938882}\label{_graphics_8h_a622badb40e0fa413caf81956cd938882}} 
 \index{Graphics.h@{Graphics.h}!DrawTexture@{DrawTexture}}
 \index{DrawTexture@{DrawTexture}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawTexture()}{DrawTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily void Draw\+Texture (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{float}]{z\+\_\+ = {\ttfamily 0.f} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Draw\+Texture (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{float}]{z\+\_\+ = {\ttfamily 0.f},  }\item[{float}]{tu\+\_\+ = {\ttfamily 1.f},  }\item[{float}]{tv\+\_\+ = {\ttfamily 1.f} }\end{DoxyParamCaption})}
 
 
 
@@ -529,27 +381,11 @@ Font\+Size\+Max&サイズ最大数 \\
 \mbox{\texttt{ in}}  & {\em texture\+\_\+data} & 描画で使用するテクスチャのデータ \\
 \hline
 \end{DoxyParams}
-
-
- Graphics.\+cpp の 116 行目に定義があります。
-
-被呼び出し関係図\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_graphics_8h_af22bfa223bf3af2a90e4d09801dae097_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_ac6182caf2250f3cfeb8849714704de8d}\label{_graphics_8h_ac6182caf2250f3cfeb8849714704de8d}} 
 \index{Graphics.h@{Graphics.h}!DrawTexture@{DrawTexture}}
 \index{DrawTexture@{DrawTexture}!Graphics.h@{Graphics.h}}
 \doxysubsubsection{\texorpdfstring{DrawTexture()}{DrawTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily void Draw\+Texture (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{\mbox{\hyperlink{struct_size}{Size}}}]{size\+\_\+ }\end{DoxyParamCaption})}
-
-
-
- Graphics.\+cpp の 171 行目に定義があります。
 
 \mbox{\Hypertarget{_graphics_8h_a2a8f5b9f18fda5eb2d15d8ef4a63b5b5}\label{_graphics_8h_a2a8f5b9f18fda5eb2d15d8ef4a63b5b5}} 
 \index{Graphics.h@{Graphics.h}!DrawTexture@{DrawTexture}}
@@ -557,9 +393,11 @@ Font\+Size\+Max&サイズ最大数 \\
 \doxysubsubsection{\texorpdfstring{DrawTexture()}{DrawTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily void Draw\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vec2}{Vec2}}}]{pos\+\_\+,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data }\end{DoxyParamCaption})}
 
-
-
- Graphics.\+cpp の 135 行目に定義があります。
+\mbox{\Hypertarget{_graphics_8h_aac485d287182632704b220d01e7fea42}\label{_graphics_8h_aac485d287182632704b220d01e7fea42}} 
+\index{Graphics.h@{Graphics.h}!DrawUVMappingTexture@{DrawUVMappingTexture}}
+\index{DrawUVMappingTexture@{DrawUVMappingTexture}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{DrawUVMappingTexture()}{DrawUVMappingTexture()}}
+{\footnotesize\ttfamily void Draw\+U\+V\+Mapping\+Texture (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+\_\+data,  }\item[{float}]{texture\+\_\+x,  }\item[{float}]{texture\+\_\+y,  }\item[{float}]{rect\+\_\+width,  }\item[{float}]{rect\+\_\+height }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{_graphics_8h_aa53efa63942faa570929b7b404b4e372}\label{_graphics_8h_aa53efa63942faa570929b7b404b4e372}} 
 \index{Graphics.h@{Graphics.h}!DrawUVScrollTexture@{DrawUVScrollTexture}}
@@ -586,10 +424,6 @@ Font\+Size\+Max&サイズ最大数 \\
 \mbox{\texttt{ in}}  & {\em tv} & テクスチャ\+V座標 \\
 \hline
 \end{DoxyParams}
-
-
- Graphics.\+cpp の 251 行目に定義があります。
-
 \mbox{\Hypertarget{_graphics_8h_a8bffad4f07810aa3753158897d9a8e8b}\label{_graphics_8h_a8bffad4f07810aa3753158897d9a8e8b}} 
 \index{Graphics.h@{Graphics.h}!EndGraphics@{EndGraphics}}
 \index{EndGraphics@{EndGraphics}!Graphics.h@{Graphics.h}}
@@ -603,17 +437,6 @@ Graphics機能終了関数~\newline
 ※\+Engine.\+cppの\+End\+Engineで実行しているので~\newline
 　使用者は自分たちで使う必要はない 
 
-
-
- Graphics.\+cpp の 83 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=344pt]{_graphics_8h_a8bffad4f07810aa3753158897d9a8e8b_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_graphics_8h_ace3c754311ada58c64c01066ea702b13}\label{_graphics_8h_ace3c754311ada58c64c01066ea702b13}} 
 \index{Graphics.h@{Graphics.h}!InitGraphics@{InitGraphics}}
 \index{InitGraphics@{InitGraphics}!Graphics.h@{Graphics.h}}
@@ -630,21 +453,3 @@ Graphics機能初期化関数~\newline
 \begin{DoxyReturn}{戻り値}
 初期化結果 (trueが成功) 
 \end{DoxyReturn}
-
-
- Graphics.\+cpp の 55 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=305pt]{_graphics_8h_ace3c754311ada58c64c01066ea702b13_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=334pt]{_graphics_8h_ace3c754311ada58c64c01066ea702b13_icgraph}
-\end{center}
-\end{figure}

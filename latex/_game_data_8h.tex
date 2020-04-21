@@ -1,92 +1,95 @@
-\hypertarget{_game_data_8h}{}\doxysection{Src/\+Scene/\+Game\+Scene/\+Game\+Data.h ファイル}
-\label{_game_data_8h}\index{Src/Scene/GameScene/GameData.h@{Src/Scene/GameScene/GameData.h}}
-被依存関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_data_8h__dep__incl}
-\end{center}
-\end{figure}
+\hypertarget{_game_data_8h}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Data/\+Game\+Data.h ファイル}
+\label{_game_data_8h}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Data/GameData.h@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Data/GameData.h}}
+
+
+外部ファイルから読み込んできた値を管理するクラスを処理  
+
+
+{\ttfamily \#include \char`\"{}Days/\+Day\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Utility/\+Singleton\+Template.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Character\+I\+D.\+h\char`\"{}}\newline
 \doxysubsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_game_data}{Game\+Data}}
-\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{struct_enemy_data}{Enemy\+Data}}
+\begin{DoxyCompactList}\small\item\em 外部出力されるエネミーの情報 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_game_param}{Game\+Param}}
+\begin{DoxyCompactList}\small\item\em 外部出力されるゲームシステムの情報 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_game_data}{Game\+Data}}
+\begin{DoxyCompactList}\small\item\em 外部ファイルから読み込んできた値を管理 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{列挙型}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}} \{ \newline
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7adf61dde18090e76135f77e920f7aa595}{Monitor\+View\+::\+W\+O\+R\+K\+S\+H\+O\+P\+\_\+\+V\+I\+EW}}, 
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a60ba94375edfa1592977b2998f050b99}{Monitor\+View\+::\+S\+T\+O\+R\+E\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a50222e086f9b4465d07efa7b18ef1a89}{Monitor\+View\+::\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a2f052f8e70fa319d3ed6f5f99d5e4886}{Monitor\+View\+::\+C\+H\+I\+L\+D\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
+enum \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} \{ \newline
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1}{Sub\+Game\+Scene\+::\+C\+E\+N\+T\+E\+R\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b}{Sub\+Game\+Scene\+::\+L\+E\+F\+T\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee}{Sub\+Game\+Scene\+::\+R\+I\+G\+H\+T\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595}{Sub\+Game\+Scene\+::\+W\+O\+R\+K\+S\+H\+O\+P\+\_\+\+V\+I\+EW}}, 
 \newline
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7ad177a8e479adc95a263a3d3823399aed}{Monitor\+View\+::\+R\+I\+G\+H\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW}}, 
-\mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7ae17372c93ff777476fd9d14408d8fcec}{Monitor\+View\+::\+L\+E\+F\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW}}
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99}{Sub\+Game\+Scene\+::\+S\+T\+O\+R\+E\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89}{Sub\+Game\+Scene\+::\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886}{Sub\+Game\+Scene\+::\+C\+H\+I\+L\+D\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed}{Sub\+Game\+Scene\+::\+R\+I\+G\+H\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW}}, 
+\newline
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec}{Sub\+Game\+Scene\+::\+L\+E\+F\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW}}
  \}
-\end{DoxyCompactItemize}
-\doxysubsection*{関数}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{struct_game_data}{Game\+Data}} $\ast$ \mbox{\hyperlink{_game_data_8h_ae547a3bb0f32ebf53a09a612c1147746}{Game\+View}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em モニタービューの種類 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+外部ファイルから読み込んできた値を管理するクラスを処理 
+
+\begin{DoxyAuthor}{著者}
+春日井 
+\end{DoxyAuthor}
 
 
 \doxysubsection{列挙型詳解}
-\mbox{\Hypertarget{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}\label{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}} 
-\index{GameData.h@{GameData.h}!MonitorView@{MonitorView}}
-\index{MonitorView@{MonitorView}!GameData.h@{GameData.h}}
-\doxysubsubsection{\texorpdfstring{MonitorView}{MonitorView}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{_game_data_8h_a55aa192d9faea04a29598049cbcffda7}{Monitor\+View}}\hspace{0.3cm}{\ttfamily [strong]}}
+\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}} 
+\index{GameData.h@{GameData.h}!SubGameScene@{SubGameScene}}
+\index{SubGameScene@{SubGameScene}!GameData.h@{GameData.h}}
+\doxysubsubsection{\texorpdfstring{SubGameScene}{SubGameScene}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+モニタービューの種類 
 
 \begin{DoxyEnumFields}{列挙値}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WORKSHOP\_VIEW@{WORKSHOP\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!WORKSHOP\_VIEW@{WORKSHOP\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a55aa192d9faea04a29598049cbcffda7adf61dde18090e76135f77e920f7aa595}\label{_game_data_8h_a55aa192d9faea04a29598049cbcffda7adf61dde18090e76135f77e920f7aa595}} 
-W\+O\+R\+K\+S\+H\+O\+P\+\_\+\+V\+I\+EW&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CENTER\_VIEW@{CENTER\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!CENTER\_VIEW@{CENTER\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1}} 
+C\+E\+N\+T\+E\+R\+\_\+\+V\+I\+EW&プレイヤールーム中央 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{STORE\_ROOM\_VIEW@{STORE\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!STORE\_ROOM\_VIEW@{STORE\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a60ba94375edfa1592977b2998f050b99}\label{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a60ba94375edfa1592977b2998f050b99}} 
-S\+T\+O\+R\+E\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_VIEW@{LEFT\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!LEFT\_VIEW@{LEFT\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b}} 
+L\+E\+F\+T\+\_\+\+V\+I\+EW&プレイヤールーム左 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{RECEPTION\_ROOM\_VIEW@{RECEPTION\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RECEPTION\_ROOM\_VIEW@{RECEPTION\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a50222e086f9b4465d07efa7b18ef1a89}\label{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a50222e086f9b4465d07efa7b18ef1a89}} 
-R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_VIEW@{RIGHT\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RIGHT\_VIEW@{RIGHT\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee}} 
+R\+I\+G\+H\+T\+\_\+\+V\+I\+EW&プレイヤールーム右 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CHILD\_ROOM\_VIEW@{CHILD\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!CHILD\_ROOM\_VIEW@{CHILD\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a2f052f8e70fa319d3ed6f5f99d5e4886}\label{_game_data_8h_a55aa192d9faea04a29598049cbcffda7a2f052f8e70fa319d3ed6f5f99d5e4886}} 
-C\+H\+I\+L\+D\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WORKSHOP\_VIEW@{WORKSHOP\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!WORKSHOP\_VIEW@{WORKSHOP\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595}} 
+W\+O\+R\+K\+S\+H\+O\+P\+\_\+\+V\+I\+EW&工房 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_CORRIDOR\_VIEW@{RIGHT\_CORRIDOR\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RIGHT\_CORRIDOR\_VIEW@{RIGHT\_CORRIDOR\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a55aa192d9faea04a29598049cbcffda7ad177a8e479adc95a263a3d3823399aed}\label{_game_data_8h_a55aa192d9faea04a29598049cbcffda7ad177a8e479adc95a263a3d3823399aed}} 
-R\+I\+G\+H\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STORE\_ROOM\_VIEW@{STORE\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!STORE\_ROOM\_VIEW@{STORE\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99}} 
+S\+T\+O\+R\+E\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&物置 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_CORRIDOR\_VIEW@{LEFT\_CORRIDOR\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!LEFT\_CORRIDOR\_VIEW@{LEFT\_CORRIDOR\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a55aa192d9faea04a29598049cbcffda7ae17372c93ff777476fd9d14408d8fcec}\label{_game_data_8h_a55aa192d9faea04a29598049cbcffda7ae17372c93ff777476fd9d14408d8fcec}} 
-L\+E\+F\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RECEPTION\_ROOM\_VIEW@{RECEPTION\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RECEPTION\_ROOM\_VIEW@{RECEPTION\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89}} 
+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&客間 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHILD\_ROOM\_VIEW@{CHILD\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!CHILD\_ROOM\_VIEW@{CHILD\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886}} 
+C\+H\+I\+L\+D\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&子供部屋 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_CORRIDOR\_VIEW@{RIGHT\_CORRIDOR\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RIGHT\_CORRIDOR\_VIEW@{RIGHT\_CORRIDOR\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed}} 
+R\+I\+G\+H\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW&右廊下 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_CORRIDOR\_VIEW@{LEFT\_CORRIDOR\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!LEFT\_CORRIDOR\_VIEW@{LEFT\_CORRIDOR\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec}} 
+L\+E\+F\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW&左廊下 \\
 \hline
 
 \end{DoxyEnumFields}
-
-
- Game\+Data.\+h の 3 行目に定義があります。
-
-
-
-\doxysubsection{関数詳解}
-\mbox{\Hypertarget{_game_data_8h_ae547a3bb0f32ebf53a09a612c1147746}\label{_game_data_8h_ae547a3bb0f32ebf53a09a612c1147746}} 
-\index{GameData.h@{GameData.h}!GameView@{GameView}}
-\index{GameView@{GameView}!GameData.h@{GameData.h}}
-\doxysubsubsection{\texorpdfstring{GameView()}{GameView()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_data}{Game\+Data}}$\ast$ Game\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
- Game\+Data.\+cpp の 3 行目に定義があります。
-
-被呼び出し関係図\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_game_data_8h_ae547a3bb0f32ebf53a09a612c1147746_icgraph}
-\end{center}
-\end{figure}

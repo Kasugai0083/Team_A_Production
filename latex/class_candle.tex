@@ -13,22 +13,8 @@
 
 
 
-Candle の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=127pt]{class_candle__inherit__graph}
-\end{center}
-\end{figure}
+\mbox{\hyperlink{class_item}{Item}}を継承しています。
 
-
-Candle 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=311pt]{class_candle__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,38 +44,12 @@ float \mbox{\hyperlink{class_candle_a0a52af571ba5ad324312c9112028331c}{Get\+Rati
 \begin{DoxyCompactList}\small\item\em インスタンス化して利用する \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_candle_a72eb25514569ad0212901422574c77af}{Has\+Ca\+Light}} () override
 \begin{DoxyCompactList}\small\item\em インスタンス化して利用する \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{非公開メンバ関数}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_candle_a6c7bc43a788f20e29b5963f08a935b8d}{Scene\+Death}} ()
-\begin{DoxyCompactList}\small\item\em Game\+Scene 以外でキャンドルを死亡させる~\newline
-Game\+View 情報によってキャンドルの生死を管理する~\newline
-\end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_candle_a0534ae18084e1ee7f3876710a53cf3e7}{Candle\+Switch}} (bool center\+\_\+switch\+\_\+, bool left\+\_\+switch\+\_\+, bool right\+\_\+switch\+\_\+)
-\item 
-void \mbox{\hyperlink{class_candle_aca48afd771e7270ae4afc329dff47c6f}{Melt\+Candle}} (\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}} id\+\_\+)
-\begin{DoxyCompactList}\small\item\em キャンドルを溶かすために計算する関数 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_candle_a5bebb511757ff21039189bca77a5cfee}{Effect\+Update}} ()
-\begin{DoxyCompactList}\small\item\em キャンドルエフェクトの生死情報を管理 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-bool \mbox{\hyperlink{class_candle_a68ec2526e66e9d7d8b647b48106087c0}{m\+\_\+\+Has\+Ca\+Light}}
-\begin{DoxyCompactList}\small\item\em キャンドルが点灯情報 \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_candle_a718c156f6a336e25e81e1ea3832909ee}{m\+\_\+\+Candle\+Hp}}
-\begin{DoxyCompactList}\small\item\em キャンドルの\+HP \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_candle_adabb5c093e584562d9338e82b89c41fa}{m\+\_\+\+Height\+Ratio}}
-\begin{DoxyCompactList}\small\item\em キャンドルの高さ比率 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
 蝋燭に纏わるオブジェクトを管理するクラス~\newline
 蝋燭、燭台、蝋燭のエフェクト~\newline
-
-
- Candle.\+h の 20 行目に定義があります。
-
 
 
 \doxysubsection{構築子と解体子}
@@ -112,28 +72,7 @@ float \mbox{\hyperlink{class_candle_adabb5c093e584562d9338e82b89c41fa}{m\+\_\+\+
 \end{DoxyParams}
 
 
- Candle.\+h の 28 行目に定義があります。
-
-
-
 \doxysubsection{関数詳解}
-\mbox{\Hypertarget{class_candle_a0534ae18084e1ee7f3876710a53cf3e7}\label{class_candle_a0534ae18084e1ee7f3876710a53cf3e7}} 
-\index{Candle@{Candle}!CandleSwitch@{CandleSwitch}}
-\index{CandleSwitch@{CandleSwitch}!Candle@{Candle}}
-\doxysubsubsection{\texorpdfstring{CandleSwitch()}{CandleSwitch()}}
-{\footnotesize\ttfamily void Candle\+::\+Candle\+Switch (\begin{DoxyParamCaption}\item[{bool}]{center\+\_\+switch\+\_\+,  }\item[{bool}]{left\+\_\+switch\+\_\+,  }\item[{bool}]{right\+\_\+switch\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Candle.\+cpp の 116 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_candle_a0534ae18084e1ee7f3876710a53cf3e7_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_candle_af893fbe070f2e749eb5b397fd18d37ca}\label{class_candle_af893fbe070f2e749eb5b397fd18d37ca}} 
 \index{Candle@{Candle}!Draw@{Draw}}
 \index{Draw@{Draw}!Candle@{Candle}}
@@ -150,45 +89,6 @@ m\+\_\+\+Id に基づいて描画~\newline
 
 \mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{Object}}を実装しています。
 
-
-
- Candle.\+cpp の 288 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=261pt]{class_candle_af893fbe070f2e749eb5b397fd18d37ca_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_candle_a5bebb511757ff21039189bca77a5cfee}\label{class_candle_a5bebb511757ff21039189bca77a5cfee}} 
-\index{Candle@{Candle}!EffectUpdate@{EffectUpdate}}
-\index{EffectUpdate@{EffectUpdate}!Candle@{Candle}}
-\doxysubsubsection{\texorpdfstring{EffectUpdate()}{EffectUpdate()}}
-{\footnotesize\ttfamily void Candle\+::\+Effect\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-キャンドルエフェクトの生死情報を管理 
-
-
-
- Candle.\+cpp の 197 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=343pt]{class_candle_a5bebb511757ff21039189bca77a5cfee_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=307pt]{class_candle_a5bebb511757ff21039189bca77a5cfee_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_candle_a8e84e4577dbeb6daf559cb57ab476b71}\label{class_candle_a8e84e4577dbeb6daf559cb57ab476b71}} 
 \index{Candle@{Candle}!GetHp@{GetHp}}
 \index{GetHp@{GetHp}!Candle@{Candle}}
@@ -205,10 +105,6 @@ float インスタンスの m\+\_\+\+Candle\+Hp を返す
 
 
 \mbox{\hyperlink{class_object_a67dac0d49f2c9a8e4b86b2572238adb2}{Object}}を再実装しています。
-
-
-
- Candle.\+h の 65 行目に定義があります。
 
 \mbox{\Hypertarget{class_candle_a0a52af571ba5ad324312c9112028331c}\label{class_candle_a0a52af571ba5ad324312c9112028331c}} 
 \index{Candle@{Candle}!GetRatio@{GetRatio}}
@@ -227,10 +123,6 @@ float インスタンスの m\+\_\+\+Height\+Ratio を返す
 
 \mbox{\hyperlink{class_object_af6c3ba6ab9e42e35162e39d4fd9172ca}{Object}}を再実装しています。
 
-
-
- Candle.\+h の 72 行目に定義があります。
-
 \mbox{\Hypertarget{class_candle_a72eb25514569ad0212901422574c77af}\label{class_candle_a72eb25514569ad0212901422574c77af}} 
 \index{Candle@{Candle}!HasCaLight@{HasCaLight}}
 \index{HasCaLight@{HasCaLight}!Candle@{Candle}}
@@ -247,10 +139,6 @@ float インスタンスの m\+\_\+\+Has\+Ca\+Light を返す
 
 
 \mbox{\hyperlink{class_object_a56b5956cea5204d55183a444a01a30d6}{Object}}を再実装しています。
-
-
-
- Candle.\+h の 79 行目に定義があります。
 
 \mbox{\Hypertarget{class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c}\label{class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c}} 
 \index{Candle@{Candle}!Init@{Init}}
@@ -271,86 +159,6 @@ float インスタンスの m\+\_\+\+Has\+Ca\+Light を返す
 
 \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Object}}を実装しています。
 
-
-
- Candle.\+cpp の 5 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_candle_a5bd211fe2840d31a0d82578f7fdcfa9c_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_candle_aca48afd771e7270ae4afc329dff47c6f}\label{class_candle_aca48afd771e7270ae4afc329dff47c6f}} 
-\index{Candle@{Candle}!MeltCandle@{MeltCandle}}
-\index{MeltCandle@{MeltCandle}!Candle@{Candle}}
-\doxysubsubsection{\texorpdfstring{MeltCandle()}{MeltCandle()}}
-{\footnotesize\ttfamily void Candle\+::\+Melt\+Candle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}}}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-キャンドルを溶かすために計算する関数 
-
-
-\begin{DoxyParams}[1]{引数}
-\mbox{\texttt{ in}}  & {\em id\+\_\+} & 指定したキャンドルを溶かす \\
-\hline
-\end{DoxyParams}
-
-
- Candle.\+cpp の 161 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=300pt]{class_candle_aca48afd771e7270ae4afc329dff47c6f_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_candle_a6c7bc43a788f20e29b5963f08a935b8d}\label{class_candle_a6c7bc43a788f20e29b5963f08a935b8d}} 
-\index{Candle@{Candle}!SceneDeath@{SceneDeath}}
-\index{SceneDeath@{SceneDeath}!Candle@{Candle}}
-\doxysubsubsection{\texorpdfstring{SceneDeath()}{SceneDeath()}}
-{\footnotesize\ttfamily void Candle\+::\+Scene\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Game\+Scene 以外でキャンドルを死亡させる~\newline
-Game\+View 情報によってキャンドルの生死を管理する~\newline
-
-
-キャンドルの生死を管理するスイッチ
-
-Update内で使用される関数群
-
-
-\begin{DoxyParams}[1]{引数}
-\mbox{\texttt{ in}}  & {\em center\+\_\+switch\+\_\+} & true だと C\+A\+N\+D\+L\+E\+\_\+\+C\+E\+N\+T\+ER 生存 \\
-\hline
-\mbox{\texttt{ in}}  & {\em left\+\_\+switch\+\_\+} & true だと C\+A\+N\+D\+L\+E\+\_\+\+L\+E\+FT 生存 \\
-\hline
-\mbox{\texttt{ in}}  & {\em right\+\_\+switch\+\_\+} & true だと C\+A\+N\+D\+L\+E\+\_\+\+R\+I\+G\+HT 生存 \\
-\hline
-\end{DoxyParams}
-
-
- Candle.\+cpp の 131 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=334pt]{class_candle_a6c7bc43a788f20e29b5963f08a935b8d_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=305pt]{class_candle_a6c7bc43a788f20e29b5963f08a935b8d_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405}\label{class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405}} 
 \index{Candle@{Candle}!Update@{Update}}
 \index{Update@{Update}!Candle@{Candle}}
@@ -370,63 +178,7 @@ Update内で使用される関数群
 
 
 
- Candle.\+cpp の 236 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_candle_ad1c90d9b6a6df8cfb7063c3837cd5405_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_candle_a718c156f6a336e25e81e1ea3832909ee}\label{class_candle_a718c156f6a336e25e81e1ea3832909ee}} 
-\index{Candle@{Candle}!m\_CandleHp@{m\_CandleHp}}
-\index{m\_CandleHp@{m\_CandleHp}!Candle@{Candle}}
-\doxysubsubsection{\texorpdfstring{m\_CandleHp}{m\_CandleHp}}
-{\footnotesize\ttfamily float Candle\+::m\+\_\+\+Candle\+Hp\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-キャンドルの\+HP 
-
-
-
- Candle.\+h の 120 行目に定義があります。
-
-\mbox{\Hypertarget{class_candle_a68ec2526e66e9d7d8b647b48106087c0}\label{class_candle_a68ec2526e66e9d7d8b647b48106087c0}} 
-\index{Candle@{Candle}!m\_HasCaLight@{m\_HasCaLight}}
-\index{m\_HasCaLight@{m\_HasCaLight}!Candle@{Candle}}
-\doxysubsubsection{\texorpdfstring{m\_HasCaLight}{m\_HasCaLight}}
-{\footnotesize\ttfamily bool Candle\+::m\+\_\+\+Has\+Ca\+Light\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-キャンドルが点灯情報 
-
-
-
- Candle.\+h の 117 行目に定義があります。
-
-\mbox{\Hypertarget{class_candle_adabb5c093e584562d9338e82b89c41fa}\label{class_candle_adabb5c093e584562d9338e82b89c41fa}} 
-\index{Candle@{Candle}!m\_HeightRatio@{m\_HeightRatio}}
-\index{m\_HeightRatio@{m\_HeightRatio}!Candle@{Candle}}
-\doxysubsubsection{\texorpdfstring{m\_HeightRatio}{m\_HeightRatio}}
-{\footnotesize\ttfamily float Candle\+::m\+\_\+\+Height\+Ratio\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-キャンドルの高さ比率 
-
-
-
- Candle.\+h の 123 行目に定義があります。
-
-
-
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_candle_8h}{Candle.\+h}}\item 
-Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_candle_8cpp}{Candle.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_candle_8h}{Candle.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_candle_8cpp}{Candle.\+cpp}}\end{DoxyCompactItemize}

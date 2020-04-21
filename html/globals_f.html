@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -54,22 +46,6 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('globals_f.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -94,32 +70,35 @@ $(document).ready(function(){initNavTree('globals_f.html','');});
 <li>FinishGameScene()
 : <a class="el" href="_game_scene_8cpp.html#a11b8798495a5153f96f49521c178d8cd">GameScene.cpp</a>
 </li>
-<li>FinishMonitorScene()
-: <a class="el" href="_monitor_scene_8cpp.html#a7cab58798cdc132659aab72b1040fe7c">MonitorScene.cpp</a>
-</li>
 <li>FinishOpeningScene()
 : <a class="el" href="_opening_scene_8cpp.html#a6d5d359869a9a22dcfa3b4615dcaa20e">OpeningScene.cpp</a>
 </li>
 <li>FinishTitleScene()
 : <a class="el" href="_title_scene_8cpp.html#afc2a10c9ed9e0597ad498b3e29e5e00b">TitleScene.cpp</a>
 </li>
-<li>FIRE_BIG_FRAME
-: <a class="el" href="_item_value_8h.html#a7967bd7c6f18addd01a8519129aa298d">ItemValue.h</a>
+<li>FIRE_BIG_LEFT_POS
+: <a class="el" href="_item_value_8h.html#a1edd8262f5f49f3f715010856011331c">ItemValue.h</a>
 </li>
-<li>FIRE_BIG_POS
-: <a class="el" href="_item_value_8h.html#a120fa254b55b96098947f92d4fe8f992">ItemValue.h</a>
+<li>FIRE_BIG_RIGHT_POS
+: <a class="el" href="_item_value_8h.html#a1937f9af393652d7bd4c2ee22099781e">ItemValue.h</a>
 </li>
-<li>FIRE_BIG_SIZE
-: <a class="el" href="_item_value_8h.html#a4b14929c81f89fcb0907dcf69f25f7f6">ItemValue.h</a>
+<li>FIRE_FRAME
+: <a class="el" href="_item_value_8h.html#af03168166e8c490f0b921b208f35620b">ItemValue.h</a>
 </li>
-<li>FIRE_SMALL_FRAME
-: <a class="el" href="_item_value_8h.html#af6df77432227bd08b8e745047f5dc0bb">ItemValue.h</a>
+<li>FIRE_SIDE_FRAME
+: <a class="el" href="_item_value_8h.html#a4e588c59fc27359532c99522cc5112ab">ItemValue.h</a>
+</li>
+<li>FIRE_SIDE_SIZE
+: <a class="el" href="_item_value_8h.html#ae7456f4ca411b4835bef62bf4d18baa5">ItemValue.h</a>
+</li>
+<li>FIRE_SIZE
+: <a class="el" href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">ItemValue.h</a>
 </li>
 <li>FIRE_SMALL_POS
 : <a class="el" href="_item_value_8h.html#ab6dd6a58240aaf54c856ce4497b97539">ItemValue.h</a>
 </li>
-<li>FIRE_SMALL_SIZE
-: <a class="el" href="_item_value_8h.html#ab0d0e0c39d9200535b0e13afb1e8f53a">ItemValue.h</a>
+<li>FIVE_KEY
+: <a class="el" href="_input_8h.html#a70b3fea4fde12eca78bb1393e9b5d7d3">Input.h</a>
 </li>
 <li>FontColor
 : <a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51">Graphics.h</a>
@@ -130,11 +109,8 @@ $(document).ready(function(){initNavTree('globals_f.html','');});
 <li>FontSizeMax
 : <a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a382ceab362b58ba89cc226f2399e69d8">Graphics.h</a>
 </li>
-<li>FredyFarTex
-: <a class="el" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a643fd45256c3bc043f91807049ba423b">EnemyTex.h</a>
-</li>
-<li>FredyNearTex
-: <a class="el" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ab1a792b54b8af99961179c3ce5d5a1bf">EnemyTex.h</a>
+<li>FOUR_KEY
+: <a class="el" href="_input_8h.html#a9599b17ce3bcdd9c360972254d24f0f5">Input.h</a>
 </li>
 <li>FULL_SCLEEN
 : <a class="el" href="_main_8cpp.html#abdc5ec13bf1dfb1d26eb0bcc9da0ddada916eddb43253516e9622a26bc176c1f0">Main.cpp</a>
@@ -144,14 +120,11 @@ $(document).ready(function(){initNavTree('globals_f.html','');});
 </li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

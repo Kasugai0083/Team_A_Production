@@ -2,57 +2,39 @@
 \label{class_ume}\index{Ume@{Ume}}
 
 
-{\ttfamily \#include $<$Bonnie.\+h$>$}
+エネミー\mbox{[}ウメ\mbox{]}を管理するクラス  
 
 
 
-Ume の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=139pt]{class_ume__inherit__graph}
-\end{center}
-\end{figure}
+
+{\ttfamily \#include $<$Ume.\+h$>$}
 
 
-Ume 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=280pt]{class_ume__coll__graph}
-\end{center}
-\end{figure}
+
+\mbox{\hyperlink{class_enemy}{Enemy}}を継承しています。
+
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_ume_aab59c64fed2b35280f0d9f118ed4caea}{Ume}} ()
-\item 
-virtual \mbox{\hyperlink{class_ume_a15e2c3c4831186dec683db271ca2fc43}{$\sim$\+Ume}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_ume_a0608c45a037cb2a140c0876299c1d0ca}{$\sim$\+Ume}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ume_a5d6c5ece2ac1bda798a151e111bc30c7}{Init}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ume_a2a1a52519b647ddd20c85f7d467596c2}{Update}} () override
-\item 
-virtual bool \mbox{\hyperlink{class_ume_a5d2e4290b16b8d130dcbcda91f7c18c1}{Has\+Kill}} () const final
-\item 
-virtual void \mbox{\hyperlink{class_ume_a3ce61db2365a3d54b8a11ddd86be51a1}{Load\+Tex}} (\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} id\+\_\+) override
-\item 
+\begin{DoxyCompactList}\small\item\em キャラクターの更新関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ume_ad1efe4fe6e94575a8b83f683fd5fc6a6}{Draw}} () override
-\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} \mbox{\hyperlink{class_ume_a4e6d97175159f179e61babe55130d127}{m\+\_\+\+Char\+Id}} = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fa57d8c2c0336666a73808a858216701f8}{Character\+I\+D\+::\+U\+ME}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ume_a8b433cf057f3e9262a460a75a48fbf61}{Kill\+Animation}} () override
+\begin{DoxyCompactList}\small\item\em キルアニメーションの描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
+エネミー\mbox{[}ウメ\mbox{]}を管理するクラス 
 
-
- Bonnie.\+h の 13 行目に定義があります。
-
-
+ウメの挙動や描画を実装している 
 
 \doxysubsection{構築子と解体子}
 \mbox{\Hypertarget{class_ume_aab59c64fed2b35280f0d9f118ed4caea}\label{class_ume_aab59c64fed2b35280f0d9f118ed4caea}} 
@@ -63,24 +45,17 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
- Bonnie.\+h の 19 行目に定義があります。
+コンストラクタ 
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=339pt]{class_ume_aab59c64fed2b35280f0d9f118ed4caea_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ume_a15e2c3c4831186dec683db271ca2fc43}\label{class_ume_a15e2c3c4831186dec683db271ca2fc43}} 
+\mbox{\Hypertarget{class_ume_a0608c45a037cb2a140c0876299c1d0ca}\label{class_ume_a0608c45a037cb2a140c0876299c1d0ca}} 
 \index{Ume@{Ume}!````~Ume@{$\sim$Ume}}
 \index{````~Ume@{$\sim$Ume}!Ume@{Ume}}
 \doxysubsubsection{\texorpdfstring{$\sim$Ume()}{~Ume()}}
-{\footnotesize\ttfamily virtual Ume\+::$\sim$\+Ume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Ume\+::$\sim$\+Ume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
- Bonnie.\+h の 39 行目に定義があります。
+デストラクタ 
 
 
 
@@ -93,32 +68,11 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_character_a051c409115c689480f0246f6a4743474}{Character}}を実装しています。
+描画関数 
 
 
 
- Bonnie.\+cpp の 117 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_ume_ad1efe4fe6e94575a8b83f683fd5fc6a6_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ume_a5d2e4290b16b8d130dcbcda91f7c18c1}\label{class_ume_a5d2e4290b16b8d130dcbcda91f7c18c1}} 
-\index{Ume@{Ume}!HasKill@{HasKill}}
-\index{HasKill@{HasKill}!Ume@{Ume}}
-\doxysubsubsection{\texorpdfstring{HasKill()}{HasKill()}}
-{\footnotesize\ttfamily virtual bool Ume\+::\+Has\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
-
-
-
-\mbox{\hyperlink{class_enemy_ab7b752c2b8898f5dbffd6df567b2b965}{Enemy}}を再実装しています。
-
-
-
- Bonnie.\+h の 52 行目に定義があります。
+\mbox{\hyperlink{class_character_ae0c60274d2515e4198b280cde1719a13}{Character}}を実装しています。
 
 \mbox{\Hypertarget{class_ume_a5d6c5ece2ac1bda798a151e111bc30c7}\label{class_ume_a5d6c5ece2ac1bda798a151e111bc30c7}} 
 \index{Ume@{Ume}!Init@{Init}}
@@ -128,40 +82,26 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_enemy_a2b56a302d65e9a32cf37aed8949164e6}{Enemy}}を再実装しています。
+初期化関数 
+
+更新関数 
+
+\mbox{\hyperlink{class_enemy_a0af6416bc431c1ff2d3fb7f8441950c2}{Enemy}}を再実装しています。
+
+\mbox{\Hypertarget{class_ume_a8b433cf057f3e9262a460a75a48fbf61}\label{class_ume_a8b433cf057f3e9262a460a75a48fbf61}} 
+\index{Ume@{Ume}!KillAnimation@{KillAnimation}}
+\index{KillAnimation@{KillAnimation}!Ume@{Ume}}
+\doxysubsubsection{\texorpdfstring{KillAnimation()}{KillAnimation()}}
+{\footnotesize\ttfamily void Ume\+::\+Kill\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Bonnie.\+cpp の 7 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=249pt]{class_ume_a5d6c5ece2ac1bda798a151e111bc30c7_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ume_a3ce61db2365a3d54b8a11ddd86be51a1}\label{class_ume_a3ce61db2365a3d54b8a11ddd86be51a1}} 
-\index{Ume@{Ume}!LoadTex@{LoadTex}}
-\index{LoadTex@{LoadTex}!Ume@{Ume}}
-\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
-{\footnotesize\ttfamily void Ume\+::\+Load\+Tex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}}}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+キルアニメーションの描画関数 
 
 
 
-\mbox{\hyperlink{class_enemy_a5eb22e7d02bdb2772afd42dbbd65a881}{Enemy}}を再実装しています。
+\mbox{\hyperlink{class_character_ab52c6c1bfb2133a6f0bb1e7e39d091c3}{Character}}を再実装しています。
 
-
-
- Bonnie.\+cpp の 100 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_ume_a3ce61db2365a3d54b8a11ddd86be51a1_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_ume_a2a1a52519b647ddd20c85f7d467596c2}\label{class_ume_a2a1a52519b647ddd20c85f7d467596c2}} 
 \index{Ume@{Ume}!Update@{Update}}
 \index{Update@{Update}!Ume@{Ume}}
@@ -170,35 +110,15 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
+キャラクターの更新関数 
+
+
+
 \mbox{\hyperlink{class_enemy_ad880b3aa85d38ee61d3bf1352163f3c6}{Enemy}}を再実装しています。
-
-
-
- Bonnie.\+cpp の 14 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=296pt]{class_ume_a2a1a52519b647ddd20c85f7d467596c2_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_ume_a4e6d97175159f179e61babe55130d127}\label{class_ume_a4e6d97175159f179e61babe55130d127}} 
-\index{Ume@{Ume}!m\_CharId@{m\_CharId}}
-\index{m\_CharId@{m\_CharId}!Ume@{Ume}}
-\doxysubsubsection{\texorpdfstring{m\_CharId}{m\_CharId}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} Ume\+::m\+\_\+\+Char\+Id = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fa57d8c2c0336666a73808a858216701f8}{Character\+I\+D\+::\+U\+ME}}\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Bonnie.\+h の 65 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_bonnie_8h}{Bonnie.\+h}}\item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_bonnie_8cpp}{Bonnie.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_ume_8h}{Ume.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_ume_8cpp}{Ume.\+cpp}}\end{DoxyCompactItemize}

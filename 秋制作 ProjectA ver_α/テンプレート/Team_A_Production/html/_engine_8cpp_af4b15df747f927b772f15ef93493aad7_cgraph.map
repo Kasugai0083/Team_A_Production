@@ -1,7 +1,0 @@
-<map id="EndEngine" name="EndEngine">
-<area shape="rect" id="node1" title="エンジン終了関数 ゲーム終了後にエンジン部分の終了を行う ※この関数はゲームループ終了後に１度だけ実行する" alt="" coords="5,56,91,83"/>
-<area shape="rect" id="node2" href="$_texture_8cpp.html#adf7bc429a7737bcf34789952fa0f8b90" title="テクスチャの全解放 読み込んでいるすべてのテクスチャを解放する ※この関数はEndEngineで使用されているので開発側で呼ぶ必要はない" alt="" coords="139,5,265,32"/>
-<area shape="rect" id="node4" href="$_graphics_8cpp.html#a8bffad4f07810aa3753158897d9a8e8b" title="Graphics機能終了関数 描画関連の処理の後始末を行う処理 ※Engine.cppのEndEngineで実行しているので 　使用者は自分たちで使う必要はない" alt="" coords="153,56,251,83"/>
-<area shape="rect" id="node5" href="$_input_8cpp.html#a4fdd03168a7e6952059fcf83e88c70f7" title="Input機能終了関数 Input機能を終了させる ※EndEngineで実行されるので開発側が実行する必要はない" alt="" coords="165,107,239,133"/>
-<area shape="rect" id="node3" href="$_texture_8cpp.html#ab0c2b786fbd4f64be1269a9e37291725" title="カテゴリー単位のテクスチャ解放関数 引数で指定されたカテゴリーのテクスチャを全て解放する" alt="" coords="313,5,477,32"/>
-</map>

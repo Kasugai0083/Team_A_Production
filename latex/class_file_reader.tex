@@ -1,0 +1,69 @@
+\hypertarget{class_file_reader}{}\doxysection{File\+Reader クラス}
+\label{class_file_reader}\index{FileReader@{FileReader}}
+
+
+File\+Readerクラス  
+
+
+
+
+{\ttfamily \#include $<$File\+Reader.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_file_reader_a9abee82426933fdeff6f95e7c9019788}{Load\+C\+SV}} (\mbox{\hyperlink{struct_enemy_data}{Enemy\+Data}} $\ast$enemy\+Data\+\_\+, \mbox{\hyperlink{struct_game_param}{Game\+Param}} $\ast$game\+Param\+\_\+, \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days}} $\ast$days\+\_\+)
+\begin{DoxyCompactList}\small\item\em ゲームに必要な情報を\+C\+S\+Vから抜き取るための関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_file_reader_aa25f1e005fa7b4233a4b95175e5317d0}{Write\+C\+SV}} (std\+::string file\+Name\+\_\+, int days\+\_\+)
+\begin{DoxyCompactList}\small\item\em 現在の進行度\+C\+S\+Vに保存するための関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+File\+Readerクラス 
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_file_reader_a9abee82426933fdeff6f95e7c9019788}\label{class_file_reader_a9abee82426933fdeff6f95e7c9019788}} 
+\index{FileReader@{FileReader}!LoadCSV@{LoadCSV}}
+\index{LoadCSV@{LoadCSV}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{LoadCSV()}{LoadCSV()}}
+{\footnotesize\ttfamily bool File\+Reader\+::\+Load\+C\+SV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_enemy_data}{Enemy\+Data}} $\ast$}]{enemy\+Data\+\_\+,  }\item[{\mbox{\hyperlink{struct_game_param}{Game\+Param}} $\ast$}]{game\+Param\+\_\+,  }\item[{\mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days}} $\ast$}]{days\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+ゲームに必要な情報を\+C\+S\+Vから抜き取るための関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ out}}  & {\em Enemy\+Data$\ast$(enemy\+Data\+\_\+)} & 敵に必要な情報を入れるための\+Enemy\+Dataポインタ \\
+\hline
+\mbox{\texttt{ out}}  & {\em Game\+Param$\ast$(game\+Param\+\_\+)} & ゲームメインに必要なパラメーターを保存するための\+Game\+Paramポインター \\
+\hline
+\mbox{\texttt{ out}}  & {\em Days$\ast$(days\+\_\+)} & 日にちを入れるための\+Dayspointerポインター \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+bool 読み込みに成功 \+: true 読み込みに失敗 \+: false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_file_reader_aa25f1e005fa7b4233a4b95175e5317d0}\label{class_file_reader_aa25f1e005fa7b4233a4b95175e5317d0}} 
+\index{FileReader@{FileReader}!WriteCSV@{WriteCSV}}
+\index{WriteCSV@{WriteCSV}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{WriteCSV()}{WriteCSV()}}
+{\footnotesize\ttfamily void File\+Reader\+::\+Write\+C\+SV (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name\+\_\+,  }\item[{int}]{days\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+現在の進行度\+C\+S\+Vに保存するための関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em std\+::string(file\+Name\+\_\+)} & 書き込むファイルの名前 \\
+\hline
+\mbox{\texttt{ in}}  & {\em int(days\+\_\+)} & 現在の日にち \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Utility/\mbox{\hyperlink{_file_reader_8h}{File\+Reader.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Utility/\mbox{\hyperlink{_file_reader_8cpp}{File\+Reader.\+cpp}}\end{DoxyCompactItemize}

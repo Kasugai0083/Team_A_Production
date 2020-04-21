@@ -1,5 +1,0 @@
-<map id="LoadTexture" name="LoadTexture">
-<area shape="rect" id="node1" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="5,31,99,57"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="175,5,277,32"/>
-<area shape="rect" id="node3" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="147,56,305,83"/>
-</map>

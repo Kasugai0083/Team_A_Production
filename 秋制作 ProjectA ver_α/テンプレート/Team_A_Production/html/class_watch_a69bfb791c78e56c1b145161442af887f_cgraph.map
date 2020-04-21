@@ -1,4 +1,0 @@
-<map id="Watch::Draw" name="Watch::Draw">
-<area shape="rect" id="node1" title="時計の描画 死亡していなければ描画 マウスオーバーでエフェクトの追加" alt="" coords="5,5,103,32"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="151,5,245,32"/>
-</map>

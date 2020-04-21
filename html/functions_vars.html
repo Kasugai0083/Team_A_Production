@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -54,22 +46,6 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('functions_vars.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,7 +73,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>Height
 : <a class="el" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Size</a>
-, <a class="el" href="struct_texture.html#a3584874a37dbe53dec337fd66790ac83">Texture</a>
+, <a class="el" href="struct_texture.html#a4fad92578139f8296606b9f03557304b">Texture</a>
 </li>
 </ul>
 
@@ -106,90 +82,26 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_AnimationTex
 : <a class="el" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">Enemy</a>
 </li>
-<li>m_CanCenter
-: <a class="el" href="class_scene_transition.html#aec477595d01d78909977356360c5ff6d">SceneTransition</a>
-</li>
-<li>m_CanClear
-: <a class="el" href="class_scene_transition.html#a404042b9785a83b09069ee8e429f34e4">SceneTransition</a>
-</li>
-<li>m_CandleHp
-: <a class="el" href="class_candle.html#a718c156f6a336e25e81e1ea3832909ee">Candle</a>
-</li>
-<li>m_CanFinish
-: <a class="el" href="class_scene_transition.html#a8ef69578dc453aa7c149c15c6c61dc3c">SceneTransition</a>
-</li>
-<li>m_CanGame
-: <a class="el" href="class_scene_transition.html#a443ee5ee3134a6a04cd29dbbea63d5a0">SceneTransition</a>
-</li>
 <li>m_CanKill
 : <a class="el" href="class_enemy.html#ae6e8d6ac8e9c86e538d7ca09afe4defe">Enemy</a>
-</li>
-<li>m_CanLeft
-: <a class="el" href="class_scene_transition.html#a749899d6546c7612d13fe08c644d4db3">SceneTransition</a>
-</li>
-<li>m_CanMonitor
-: <a class="el" href="class_scene_transition.html#a9c19795f5a04cde078afad744acd9d23">SceneTransition</a>
-</li>
-<li>m_CanRight
-: <a class="el" href="class_scene_transition.html#a5d82f6d9cf9026429db489c573822f1b">SceneTransition</a>
-</li>
-<li>m_Charas
-: <a class="el" href="class_character_manager.html#ad90a5c00e82cd1e5d79e2dff3b9366b7">CharacterManager</a>
-</li>
-<li>m_CharId
-: <a class="el" href="class_botan.html#af1ec18d2aa48b2008c3214c67f84a9a7">Botan</a>
-, <a class="el" href="class_margaret.html#a5561664598175c8cecac6cab03e6bf1b">Margaret</a>
-, <a class="el" href="class_ohagi.html#a343d1ace388c9ebd7ce6515c3553852b">Ohagi</a>
-, <a class="el" href="class_ran.html#a1a056f55b4047cb29d53f1da120a9b47">Ran</a>
-, <a class="el" href="class_sakura.html#aa3cb43121cf01f9b14ca1bf90de2ba8f">Sakura</a>
-, <a class="el" href="class_ume.html#a4e6d97175159f179e61babe55130d127">Ume</a>
 </li>
 <li>m_Clear
 : <a class="el" href="struct_timer_1_1_t_i_m_e_r_s.html#ab853d71f552c8e7f981ec2a19f52953a">Timer::TIMERS</a>
 </li>
-<li>m_Count
-: <a class="el" href="class_op_controller.html#ab59564db8eb15afe5968243ae6a523c8">OpController</a>
+<li>m_Color
+: <a class="el" href="class_enemy.html#a5dd26793b64e0aba601c15f6a3bb7c0a">Enemy</a>
 </li>
 <li>m_Counter
 : <a class="el" href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">AnimationTexture</a>
 </li>
-<li>m_Days
-: <a class="el" href="class_day_controller.html#afd71f968a89d3b3ca14e7ca6e5a03a6c">DayController</a>
-</li>
-<li>m_Format
-: <a class="el" href="class_audio_player.html#a01386d10d57e8921ce1680f28e6c5c44">AudioPlayer</a>
+<li>m_EnemyData
+: <a class="el" href="class_enemy.html#af9243e169ca4cb6be4fb7c848bd70ca3">Enemy</a>
 </li>
 <li>m_Frame
 : <a class="el" href="class_item.html#a7cc11af00ea7b0cc7441f94403301cb3">Item</a>
 </li>
-<li>m_HasCaLight
-: <a class="el" href="class_candle.html#a68ec2526e66e9d7d8b647b48106087c0">Candle</a>
-</li>
-<li>m_HasGFreddySpown
-: <a class="el" href="class_player.html#a634da39cf9822d140a81c3b0c32c4bc1">Player</a>
-</li>
 <li>m_HasKill
-: <a class="el" href="class_character.html#a56eddba73c39defe9933a942dec08bde">Character</a>
-, <a class="el" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">Enemy</a>
-</li>
-<li>m_HasLight
-: <a class="el" href="class_character.html#a192bb39fbb31cc6f8945bb3e4feca55e">Character</a>
-</li>
-<li>m_HasMask
-: <a class="el" href="class_character.html#a7625d8d90e93ffed8ba03061bf91aa08">Character</a>
-, <a class="el" href="class_u_i.html#a6e9ea1a766f030d4a20546808a0f898a">UI</a>
-</li>
-<li>m_HasMonitor
-: <a class="el" href="class_character.html#a18604627713d4b0d62f3857fca364d3b">Character</a>
-</li>
-<li>m_HeightRatio
-: <a class="el" href="class_candle.html#adabb5c093e584562d9338e82b89c41fa">Candle</a>
-</li>
-<li>m_Hour
-: <a class="el" href="class_timer.html#ae92734d6bbe446ea49a6d5fd661f19b2">Timer</a>
-</li>
-<li>m_HourCount
-: <a class="el" href="class_timer.html#a002e680e9f8fb77e550de53e7ecc303e">Timer</a>
+: <a class="el" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">Enemy</a>
 </li>
 <li>m_Id
 : <a class="el" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">Object</a>
@@ -199,109 +111,57 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_IsActive
 : <a class="el" href="class_character.html#a0dee035b9de6807947e2049c992d8159">Character</a>
-, <a class="el" href="class_player.html#ac493eddeb061ee315b64f76d81e70ce5">Player</a>
 </li>
 <li>m_IsDeath
 : <a class="el" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">Object</a>
 </li>
-<li>m_IsMask
-: <a class="el" href="class_player.html#a13140f5b3928d63f89fa0cb8a8156fe9">Player</a>
+<li>m_KillingCounter
+: <a class="el" href="struct_animation_texture.html#aecef8817eb60be7338634f127001dc18">AnimationTexture</a>
 </li>
 <li>m_Length
 : <a class="el" href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">AnimationTexture</a>
 </li>
-<li>m_MaskAnimation
-: <a class="el" href="class_player.html#ac520dcedabe371d93eafb6d6327eb36b">Player</a>
+<li>m_MeltRatio
+: <a class="el" href="struct_game_param.html#a4ea98e7461e6b59654daaea9745343e3">GameParam</a>
 </li>
-<li>m_Minute
-: <a class="el" href="class_timer.html#adc596e7ca5eba91b91c275fddacebb8e">Timer</a>
-</li>
-<li>m_MonitorID
-: <a class="el" href="struct_game_data.html#a93a3104c2c9cf160e787b35c6dd6b711">GameData</a>
-</li>
-<li>m_MonitorId
-: <a class="el" href="class_monitor_transition.html#acabe061d60a8ebb9815165d3d49896bc">MonitorTransition</a>
-</li>
-<li>m_MonitorViewID
-: <a class="el" href="class_character.html#a040ee7d0c5c472e6bcaba862b9292c8a">Character</a>
-, <a class="el" href="class_player.html#a3a6f9774b938944cabc3c447327326ec">Player</a>
+<li>m_MovementSpeed
+: <a class="el" href="struct_enemy_data.html#ae27b50c49ea33309cdb7dfa4faed5b11">EnemyData</a>
 </li>
 <li>m_MusicBox
 : <a class="el" href="struct_timer_1_1_t_i_m_e_r_s.html#aa8fd2dbe8eb57d62b00827d5522c1814">Timer::TIMERS</a>
 </li>
 <li>m_OnMouse
 : <a class="el" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">Item</a>
-, <a class="el" href="class_u_i.html#af718e7cf9fa6e6be6801d840c878a5e6">UI</a>
-</li>
-<li>m_pDSound8
-: <a class="el" href="class_direct_sound.html#a6d0bd433d77807c65af6d647ce61c3a5">DirectSound</a>
-</li>
-<li>m_pObject
-: <a class="el" href="class_fire.html#aa189e5954db3395317fb2f8a36fe26de">Fire</a>
-</li>
-<li>m_pObjects
-: <a class="el" href="class_object_manager.html#a24a33e2bf54521fe8b4de729b1f498be">ObjectManager</a>
-</li>
-<li>m_pOnHitTex
-: <a class="el" href="class_crystal.html#afca946f659be59dbadc4d3b14f610730">Crystal</a>
-, <a class="el" href="class_watch.html#a37cdde0d0feb579b67955f8a4f88deda">Watch</a>
 </li>
 <li>m_Pos
 : <a class="el" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">Item</a>
-, <a class="el" href="class_u_i.html#abe0436580a5a98fc4a44c87affd64e7d">UI</a>
 </li>
 <li>m_pPlayer
 : <a class="el" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">Enemy</a>
 </li>
-<li>m_pPrimaryBuffer
-: <a class="el" href="class_direct_sound.html#a08eca75e57b2d40f7e1ab1876e7e506f">DirectSound</a>
-</li>
-<li>m_pSecBuffer
-: <a class="el" href="class_direct_sound.html#ae7b2cdd68c95688534998a8867e91a13">DirectSound</a>
-</li>
-<li>m_pSound
-: <a class="el" href="class_audio_player.html#abd24a964ff46e1cdc10d9d5e04d63b63">AudioPlayer</a>
-</li>
 <li>m_pTex
 : <a class="el" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">Item</a>
 </li>
-<li>m_RandTime
-: <a class="el" href="class_enemy_1_1_enemy_timer.html#a5e3d1763a981eae0edefe98ca93da3a8">Enemy::EnemyTimer</a>
-</li>
 <li>m_RoomId
 : <a class="el" href="class_enemy.html#a733fde9467d45c90f171acc87454ab46">Enemy</a>
-</li>
-<li>m_Sample
-: <a class="el" href="class_timer.html#a4700b26c7aa5ee9004b8a3b1a7492256">Timer</a>
 </li>
 <li>m_Scene
 : <a class="el" href="struct_timer_1_1_t_i_m_e_r_s.html#ac8a8065a536ef87351f7f5da9e2136bb">Timer::TIMERS</a>
 </li>
 <li>m_Size
-: <a class="el" href="class_audio_player.html#a82bc7bf7f6d71827949a51ec5829e418">AudioPlayer</a>
-, <a class="el" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">Item</a>
-, <a class="el" href="class_u_i.html#a87f5591f19b666bd8d094422d167bae6">UI</a>
-</li>
-<li>m_SoundData
-: <a class="el" href="class_audio_player.html#ad480d1ebdb88b6044bf4fed49c10f83d">AudioPlayer</a>
+: <a class="el" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">Item</a>
 </li>
 <li>m_Speed
 : <a class="el" href="struct_animation_texture.html#a83a381fb07290a2b687571300aecc2a6">AnimationTexture</a>
 </li>
-<li>m_Tex
-: <a class="el" href="class_u_i.html#a6e8a73c95ff88047f973974c07c28f30">UI</a>
-</li>
-<li>m_TextureCategory
-: <a class="el" href="class_margaret.html#a91fd61a2b94c721ecf0c212d583b8424">Margaret</a>
+<li>m_SpownJudge
+: <a class="el" href="struct_enemy_data.html#a1ad316746c73d1bc15b905c44f7896c0">EnemyData</a>
 </li>
 <li>m_TextureData
 : <a class="el" href="struct_animation_texture.html#ad14d528206f82506eff7051c9c6bb554">AnimationTexture</a>
 </li>
-<li>m_Time
-: <a class="el" href="class_enemy_1_1_enemy_timer.html#a0ac6f451f68698e5d867072c081d8d80">Enemy::EnemyTimer</a>
-</li>
-<li>m_ViewID
-: <a class="el" href="struct_game_data.html#ae117915432b384ada7daeefd248d0d9d">GameData</a>
+<li>m_TimeMagnification
+: <a class="el" href="struct_game_param.html#a254a62029b62c71e02f2f49de098bf97">GameParam</a>
 </li>
 <li>m_X
 : <a class="el" href="struct_position.html#a4e5454c08ec1b470147946009f035085">Position</a>
@@ -309,16 +169,10 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_Y
 : <a class="el" href="struct_position.html#aeab6c533e4c877a5c8b46b16260cb534">Position</a>
 </li>
-<li>MAX_COUNT
-: <a class="el" href="class_margaret.html#aedf6dd63afa1d9ed10b90bdaa0ded11f">Margaret</a>
-</li>
 </ul>
 
 
 <h3><a id="index_n"></a>- n -</h3><ul>
-<li>name
-: <a class="el" href="class_lib_1_1_texture.html#a4c90e64b7a7ee7fb2df16a744e77124a">Lib::Texture</a>
-</li>
 <li>now
 : <a class="el" href="struct_i_n_p_u_t_s_t_a_t_e.html#a3db6ee387c46702f73c0cae074e436a3">INPUTSTATE</a>
 </li>
@@ -329,9 +183,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
-<li>p_Instance
-: <a class="el" href="class_timer.html#a333c9669327fac7cdcfd7c48d6116f7a">Timer</a>
-</li>
 <li>pos
 : <a class="el" href="struct_vertex.html#af95390f79baafd843e09c5a92523d246">Vertex</a>
 </li>
@@ -345,17 +196,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </ul>
 
 
-<h3><a id="index_s"></a>- s -</h3><ul>
-<li>size
-: <a class="el" href="class_lib_1_1_texture.html#af3c973a681b1fe9c5f0983bf6280277d">Lib::Texture</a>
-</li>
-</ul>
-
-
 <h3><a id="index_t"></a>- t -</h3><ul>
-<li>tex
-: <a class="el" href="class_lib_1_1_texture.html#a389636b4efca484e9fb7bf9892af5b0d">Lib::Texture</a>
-</li>
 <li>TexrureY
 : <a class="el" href="struct_custom_vertex.html#a125d8221344e65b23190a6be749d1f0b">CustomVertex</a>
 </li>
@@ -364,9 +205,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>TexutreData
 : <a class="el" href="struct_texture.html#a14c6c1545ed820b1635590f4b4db6d55">Texture</a>
-</li>
-<li>Timers
-: <a class="el" href="class_timer.html#a7bbbd270ded3f0278d08776adc0c0b34">Timer</a>
 </li>
 <li>trg
 : <a class="el" href="struct_i_n_p_u_t_s_t_a_t_e.html#a335f20f4ab76c0518e2fec7002a31428">INPUTSTATE</a>
@@ -384,7 +222,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <h3><a id="index_w"></a>- w -</h3><ul>
 <li>Width
 : <a class="el" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Size</a>
-, <a class="el" href="struct_texture.html#a1d7ea7e40f86dbb03d3cbb2f7fb788b5">Texture</a>
+, <a class="el" href="struct_texture.html#ac42add4b06e0796adca0189d5c9e1ef7">Texture</a>
 </li>
 </ul>
 
@@ -421,14 +259,11 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

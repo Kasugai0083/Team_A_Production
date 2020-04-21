@@ -1,16 +1,9 @@
-\hypertarget{_window_8cpp}{}\doxysection{Src/\+Engine/\+Window.cpp ファイル}
-\label{_window_8cpp}\index{Src/Engine/Window.cpp@{Src/Engine/Window.cpp}}
+\hypertarget{_window_8cpp}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Engine/\+Window.cpp ファイル}
+\label{_window_8cpp}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Engine/Window.cpp@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Engine/Window.cpp}}
 {\ttfamily \#include \char`\"{}Window.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$tchar.\+h$>$}\newline
 {\ttfamily \#include $<$dsound.\+h$>$}\newline
 {\ttfamily \#include $<$mmsystem.\+h$>$}\newline
-Window.\+cpp の依存先関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_window_8cpp__incl}
-\end{center}
-\end{figure}
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,6 +18,12 @@ bool \mbox{\hyperlink{_window_8cpp_acbb844a6ec143be5af5d026098596127}{Make\+Wind
 \begin{DoxyCompactItemize}
 \item 
 H\+W\+ND \mbox{\hyperlink{_window_8cpp_afec4341c234519e145bac6f0e5edaa51}{h\+Wnd}}
+\item 
+P\+O\+I\+NT \mbox{\hyperlink{_window_8cpp_a24d0f6b3869cb6e49a1d24e924d5e34a}{start\+\_\+point}}
+\item 
+P\+O\+I\+NT \mbox{\hyperlink{_window_8cpp_ad16b90a2947de00b43b8c4c0871e376f}{end\+\_\+point}}
+\item 
+bool \mbox{\hyperlink{_window_8cpp_a64269f5728a8ec893bc4fbbc3e86f9c9}{is\+\_\+click}} = false
 \end{DoxyCompactItemize}
 
 
@@ -35,17 +34,6 @@ H\+W\+ND \mbox{\hyperlink{_window_8cpp_afec4341c234519e145bac6f0e5edaa51}{h\+Wnd
 \doxysubsubsection{\texorpdfstring{GetWindowHandle()}{GetWindowHandle()}}
 {\footnotesize\ttfamily H\+W\+ND Get\+Window\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Window.\+cpp の 12 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_window_8cpp_ae7ae4278fb0e290f6cfb32e7db4f4aa7_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_window_8cpp_acbb844a6ec143be5af5d026098596127}\label{_window_8cpp_acbb844a6ec143be5af5d026098596127}} 
 \index{Window.cpp@{Window.cpp}!MakeWindow@{MakeWindow}}
 \index{MakeWindow@{MakeWindow}!Window.cpp@{Window.cpp}}
@@ -69,17 +57,6 @@ H\+W\+ND \mbox{\hyperlink{_window_8cpp_afec4341c234519e145bac6f0e5edaa51}{h\+Wnd
 \mbox{\texttt{ in}}  & {\em title} & タイトルバーに表示される文字列 \\
 \hline
 \end{DoxyParams}
-
-
- Window.\+cpp の 30 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=262pt]{_window_8cpp_acbb844a6ec143be5af5d026098596127_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_window_8cpp_ac52020353e92a86fee11826ae8e11e5e}\label{_window_8cpp_ac52020353e92a86fee11826ae8e11e5e}} 
 \index{Window.cpp@{Window.cpp}!WindowProc@{WindowProc}}
 \index{WindowProc@{WindowProc}!Window.cpp@{Window.cpp}}
@@ -88,25 +65,28 @@ H\+W\+ND \mbox{\hyperlink{_window_8cpp_afec4341c234519e145bac6f0e5edaa51}{h\+Wnd
 
 
 
- Window.\+cpp の 14 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=262pt]{_window_8cpp_ac52020353e92a86fee11826ae8e11e5e_icgraph}
-\end{center}
-\end{figure}
-
-
 \doxysubsection{変数詳解}
+\mbox{\Hypertarget{_window_8cpp_ad16b90a2947de00b43b8c4c0871e376f}\label{_window_8cpp_ad16b90a2947de00b43b8c4c0871e376f}} 
+\index{Window.cpp@{Window.cpp}!end\_point@{end\_point}}
+\index{end\_point@{end\_point}!Window.cpp@{Window.cpp}}
+\doxysubsubsection{\texorpdfstring{end\_point}{end\_point}}
+{\footnotesize\ttfamily P\+O\+I\+NT end\+\_\+point}
+
 \mbox{\Hypertarget{_window_8cpp_afec4341c234519e145bac6f0e5edaa51}\label{_window_8cpp_afec4341c234519e145bac6f0e5edaa51}} 
 \index{Window.cpp@{Window.cpp}!hWnd@{hWnd}}
 \index{hWnd@{hWnd}!Window.cpp@{Window.cpp}}
 \doxysubsubsection{\texorpdfstring{hWnd}{hWnd}}
 {\footnotesize\ttfamily H\+W\+ND h\+Wnd}
 
+\mbox{\Hypertarget{_window_8cpp_a64269f5728a8ec893bc4fbbc3e86f9c9}\label{_window_8cpp_a64269f5728a8ec893bc4fbbc3e86f9c9}} 
+\index{Window.cpp@{Window.cpp}!is\_click@{is\_click}}
+\index{is\_click@{is\_click}!Window.cpp@{Window.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_click}{is\_click}}
+{\footnotesize\ttfamily bool is\+\_\+click = false}
 
-
- Window.\+cpp の 11 行目に定義があります。
+\mbox{\Hypertarget{_window_8cpp_a24d0f6b3869cb6e49a1d24e924d5e34a}\label{_window_8cpp_a24d0f6b3869cb6e49a1d24e924d5e34a}} 
+\index{Window.cpp@{Window.cpp}!start\_point@{start\_point}}
+\index{start\_point@{start\_point}!Window.cpp@{Window.cpp}}
+\doxysubsubsection{\texorpdfstring{start\_point}{start\_point}}
+{\footnotesize\ttfamily P\+O\+I\+NT start\+\_\+point}
 

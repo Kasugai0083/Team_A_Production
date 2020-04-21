@@ -1,6 +1,0 @@
-<map id="UpdateMouse" name="UpdateMouse">
-<area shape="rect" id="node1" title=" " alt="" coords="413,5,516,32"/>
-<area shape="rect" id="node2" href="$_input_8h.html#a17360113bb2f13cab915ee42df89caa3" title="入力情報の更新 デバイスの入力情報の更新を行う 毎フレームに１度必ず実行する必要がある" alt="" coords="275,5,365,32"/>
-<area shape="rect" id="node3" href="$_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,5,227,32"/>
-<area shape="rect" id="node4" href="$_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,5,79,32"/>
-</map>

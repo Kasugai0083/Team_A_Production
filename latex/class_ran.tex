@@ -2,57 +2,39 @@
 \label{class_ran}\index{Ran@{Ran}}
 
 
-{\ttfamily \#include $<$Foxy.\+h$>$}
+エネミー\mbox{[}フォクシー\mbox{]}を管理するクラス  
 
 
 
-Ran の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=139pt]{class_ran__inherit__graph}
-\end{center}
-\end{figure}
+
+{\ttfamily \#include $<$Oran.\+h$>$}
 
 
-Ran 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=280pt]{class_ran__coll__graph}
-\end{center}
-\end{figure}
+
+\mbox{\hyperlink{class_enemy}{Enemy}}を継承しています。
+
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_ran_a3b9dd2d0f2e05c9272f68804993dd1c9}{Ran}} ()
-\item 
-virtual \mbox{\hyperlink{class_ran_a289bbd76f4011971555cb9aa5a10216b}{$\sim$\+Ran}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_ran_ac6800c5b61e4d548b5e8710a57221b8e}{$\sim$\+Ran}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ran_a36fd770659304e2ce03da0ca05cdbd76}{Init}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ran_a002243e1837061ed361c62f68a189aac}{Update}} () override
-\item 
-virtual bool \mbox{\hyperlink{class_ran_a8bddf8979238ee78509607f926007971}{Has\+Kill}} () const final
-\item 
-virtual void \mbox{\hyperlink{class_ran_acbb522be78b4115a9cc818a01824587e}{Load\+Tex}} (\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} id\+\_\+) final
-\item 
+\begin{DoxyCompactList}\small\item\em キャラクターの更新関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ran_a6fb3b82ff6f6585f72c60bb341a146a3}{Draw}} () override
-\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} \mbox{\hyperlink{class_ran_a1a056f55b4047cb29d53f1da120a9b47}{m\+\_\+\+Char\+Id}} = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fabef883fbe201a50f0f2600c0eb78e0e7}{Character\+I\+D\+::\+R\+AN}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ran_a09d56e150c9d5c4c1bf99c84619794fa}{Kill\+Animation}} () override
+\begin{DoxyCompactList}\small\item\em キルアニメーションの描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
+エネミー\mbox{[}フォクシー\mbox{]}を管理するクラス 
 
-
- Foxy.\+h の 14 行目に定義があります。
-
-
+フォクシーの挙動や描画を実装している 
 
 \doxysubsection{構築子と解体子}
 \mbox{\Hypertarget{class_ran_a3b9dd2d0f2e05c9272f68804993dd1c9}\label{class_ran_a3b9dd2d0f2e05c9272f68804993dd1c9}} 
@@ -63,24 +45,17 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
- Foxy.\+h の 20 行目に定義があります。
+コンストラクタ 
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=333pt]{class_ran_a3b9dd2d0f2e05c9272f68804993dd1c9_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ran_a289bbd76f4011971555cb9aa5a10216b}\label{class_ran_a289bbd76f4011971555cb9aa5a10216b}} 
+\mbox{\Hypertarget{class_ran_ac6800c5b61e4d548b5e8710a57221b8e}\label{class_ran_ac6800c5b61e4d548b5e8710a57221b8e}} 
 \index{Ran@{Ran}!````~Ran@{$\sim$Ran}}
 \index{````~Ran@{$\sim$Ran}!Ran@{Ran}}
 \doxysubsubsection{\texorpdfstring{$\sim$Ran()}{~Ran()}}
-{\footnotesize\ttfamily virtual Ran\+::$\sim$\+Ran (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Ran\+::$\sim$\+Ran (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
- Foxy.\+h の 41 行目に定義があります。
+デストラクタ 
 
 
 
@@ -93,32 +68,11 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_character_a051c409115c689480f0246f6a4743474}{Character}}を実装しています。
+描画関数 
 
 
 
- Foxy.\+cpp の 112 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_ran_a6fb3b82ff6f6585f72c60bb341a146a3_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ran_a8bddf8979238ee78509607f926007971}\label{class_ran_a8bddf8979238ee78509607f926007971}} 
-\index{Ran@{Ran}!HasKill@{HasKill}}
-\index{HasKill@{HasKill}!Ran@{Ran}}
-\doxysubsubsection{\texorpdfstring{HasKill()}{HasKill()}}
-{\footnotesize\ttfamily virtual bool Ran\+::\+Has\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
-
-
-
-\mbox{\hyperlink{class_enemy_ab7b752c2b8898f5dbffd6df567b2b965}{Enemy}}を再実装しています。
-
-
-
- Foxy.\+h の 54 行目に定義があります。
+\mbox{\hyperlink{class_character_ae0c60274d2515e4198b280cde1719a13}{Character}}を実装しています。
 
 \mbox{\Hypertarget{class_ran_a36fd770659304e2ce03da0ca05cdbd76}\label{class_ran_a36fd770659304e2ce03da0ca05cdbd76}} 
 \index{Ran@{Ran}!Init@{Init}}
@@ -128,40 +82,26 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_enemy_a2b56a302d65e9a32cf37aed8949164e6}{Enemy}}を再実装しています。
+初期化関数 
+
+更新関数 
+
+\mbox{\hyperlink{class_enemy_a0af6416bc431c1ff2d3fb7f8441950c2}{Enemy}}を再実装しています。
+
+\mbox{\Hypertarget{class_ran_a09d56e150c9d5c4c1bf99c84619794fa}\label{class_ran_a09d56e150c9d5c4c1bf99c84619794fa}} 
+\index{Ran@{Ran}!KillAnimation@{KillAnimation}}
+\index{KillAnimation@{KillAnimation}!Ran@{Ran}}
+\doxysubsubsection{\texorpdfstring{KillAnimation()}{KillAnimation()}}
+{\footnotesize\ttfamily void Ran\+::\+Kill\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Foxy.\+cpp の 8 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=246pt]{class_ran_a36fd770659304e2ce03da0ca05cdbd76_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ran_acbb522be78b4115a9cc818a01824587e}\label{class_ran_acbb522be78b4115a9cc818a01824587e}} 
-\index{Ran@{Ran}!LoadTex@{LoadTex}}
-\index{LoadTex@{LoadTex}!Ran@{Ran}}
-\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
-{\footnotesize\ttfamily void Ran\+::\+Load\+Tex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}}}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+キルアニメーションの描画関数 
 
 
 
-\mbox{\hyperlink{class_enemy_a5eb22e7d02bdb2772afd42dbbd65a881}{Enemy}}を再実装しています。
+\mbox{\hyperlink{class_character_ab52c6c1bfb2133a6f0bb1e7e39d091c3}{Character}}を再実装しています。
 
-
-
- Foxy.\+cpp の 94 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_ran_acbb522be78b4115a9cc818a01824587e_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_ran_a002243e1837061ed361c62f68a189aac}\label{class_ran_a002243e1837061ed361c62f68a189aac}} 
 \index{Ran@{Ran}!Update@{Update}}
 \index{Update@{Update}!Ran@{Ran}}
@@ -170,35 +110,15 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
+キャラクターの更新関数 
+
+
+
 \mbox{\hyperlink{class_enemy_ad880b3aa85d38ee61d3bf1352163f3c6}{Enemy}}を再実装しています。
-
-
-
- Foxy.\+cpp の 15 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=306pt]{class_ran_a002243e1837061ed361c62f68a189aac_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_ran_a1a056f55b4047cb29d53f1da120a9b47}\label{class_ran_a1a056f55b4047cb29d53f1da120a9b47}} 
-\index{Ran@{Ran}!m\_CharId@{m\_CharId}}
-\index{m\_CharId@{m\_CharId}!Ran@{Ran}}
-\doxysubsubsection{\texorpdfstring{m\_CharId}{m\_CharId}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} Ran\+::m\+\_\+\+Char\+Id = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fabef883fbe201a50f0f2600c0eb78e0e7}{Character\+I\+D\+::\+R\+AN}}\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Foxy.\+h の 68 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_foxy_8h}{Foxy.\+h}}\item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_foxy_8cpp}{Foxy.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_oran_8h}{Oran.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_oran_8cpp}{Oran.\+cpp}}\end{DoxyCompactItemize}

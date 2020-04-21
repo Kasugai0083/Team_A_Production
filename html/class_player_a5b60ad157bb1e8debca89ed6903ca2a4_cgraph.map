@@ -1,8 +1,0 @@
-<map id="Player::Draw" name="Player::Draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,101,83"/>
-<area shape="rect" id="node2" href="$class_player.html#ace614875aaf28c64727890bc29f52dbd" title=" " alt="" coords="149,56,265,83"/>
-<area shape="rect" id="node3" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="332,5,427,32"/>
-<area shape="rect" id="node4" href="$_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="313,56,445,83"/>
-<area shape="rect" id="node5" href="$_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="336,107,423,133"/>
-<area shape="rect" id="node6" href="$_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="493,107,652,133"/>
-</map>

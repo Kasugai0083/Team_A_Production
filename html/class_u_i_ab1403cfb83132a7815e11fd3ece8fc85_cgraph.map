@@ -1,6 +1,0 @@
-<map id="UI::Draw" name="UI::Draw">
-<area shape="rect" id="node1" title="生存情報に基づいて描画 マウスが重なっている場合、黒ポリゴンを重ねる" alt="" coords="5,31,76,57"/>
-<area shape="rect" id="node2" href="$_graphics_8cpp.html#a77681abc93f8cf102f7b432c93b2b345" title=" " alt="" coords="124,5,247,32"/>
-<area shape="rect" id="node4" href="$_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="138,56,233,83"/>
-<area shape="rect" id="node3" href="$_graphics_8cpp.html#a81a99b59b0e7a9febaf04ed8a7cc0384" title=" " alt="" coords="295,5,393,32"/>
-</map>

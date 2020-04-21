@@ -5,18 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Src/Utility/Vec.h ソースファイル</title>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Utility/Vec.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('_vec_8h_source.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,59 +59,60 @@ $(document).ready(function(){initNavTree('_vec_8h_source.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_f8cd46aa05f01b4cb9fdd67d310f461b.html">Utility</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Vec.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="_vec_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef VEC_H_</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define VEC_H_</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//=====================================================================//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span><span class="comment">//=====================================================================//</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_vec2.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vec2.html">Vec2</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_vec2.html#a76080feed7005893ecc634f903cfbae0">   14</a></span>&#160;    <a class="code" href="struct_vec2.html#a76080feed7005893ecc634f903cfbae0">Vec2</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> = 0.0f;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = 0.0f;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_vec2.html#a6256fecebf5a43b14d5d5341c58cfdc4">   25</a></span>&#160;    <a class="code" href="struct_vec2.html#a6256fecebf5a43b14d5d5341c58cfdc4">Vec2</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> = x;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = y;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_vec2.html#a0facd8932bec5fcc8f5bc0fa82790cbb">   35</a></span>&#160;    <a class="code" href="struct_vec2.html#a0facd8932bec5fcc8f5bc0fa82790cbb">Vec2</a>(<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a>&amp; size)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        this-&gt;<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> = size.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        this-&gt;<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = size.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">   41</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>;    </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">   42</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef VEC_H_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define VEC_H_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//=====================================================================//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span><span class="comment">//=====================================================================//</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_vec2.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vec2.html">Vec2</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_vec2.html#a76080feed7005893ecc634f903cfbae0">   15</a></span>&#160;    <a class="code" href="struct_vec2.html#a76080feed7005893ecc634f903cfbae0">Vec2</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> = 0.0f;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = 0.0f;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_vec2.html#a6256fecebf5a43b14d5d5341c58cfdc4">   26</a></span>&#160;    <a class="code" href="struct_vec2.html#a6256fecebf5a43b14d5d5341c58cfdc4">Vec2</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> = x;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = y;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_vec2.html#a0facd8932bec5fcc8f5bc0fa82790cbb">   36</a></span>&#160;    <a class="code" href="struct_vec2.html#a0facd8932bec5fcc8f5bc0fa82790cbb">Vec2</a>(<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a>&amp; size)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        this-&gt;<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> = size.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this-&gt;<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> = size.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">   42</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">   43</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="ttc" id="astruct_vec2_html_a9538442ffef888d4cd3008a4533b029a"><div class="ttname"><a href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">Vec2::X</a></div><div class="ttdeci">float X</div><div class="ttdoc">X値</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00041">Vec.h:41</a></div></div>
-<div class="ttc" id="astruct_vec2_html_a6256fecebf5a43b14d5d5341c58cfdc4"><div class="ttname"><a href="struct_vec2.html#a6256fecebf5a43b14d5d5341c58cfdc4">Vec2::Vec2</a></div><div class="ttdeci">Vec2(float x, float y)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00025">Vec.h:25</a></div></div>
-<div class="ttc" id="astruct_vec2_html_a76080feed7005893ecc634f903cfbae0"><div class="ttname"><a href="struct_vec2.html#a76080feed7005893ecc634f903cfbae0">Vec2::Vec2</a></div><div class="ttdeci">Vec2()</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00014">Vec.h:14</a></div></div>
-<div class="ttc" id="astruct_vec2_html_a38e42d6a69d43b831e2a434acd41d5af"><div class="ttname"><a href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Vec2::Y</a></div><div class="ttdeci">float Y</div><div class="ttdoc">Y値</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00042">Vec.h:42</a></div></div>
-<div class="ttc" id="astruct_vec2_html_a0facd8932bec5fcc8f5bc0fa82790cbb"><div class="ttname"><a href="struct_vec2.html#a0facd8932bec5fcc8f5bc0fa82790cbb">Vec2::Vec2</a></div><div class="ttdeci">Vec2(const Vec2 &amp;size)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00035">Vec.h:35</a></div></div>
-<div class="ttc" id="astruct_vec2_html"><div class="ttname"><a href="struct_vec2.html">Vec2</a></div><div class="ttdoc">Vector用構造体(2D版)</div><div class="ttdef"><b>Definition:</b> <a href="_vec_8h_source.html#l00011">Vec.h:11</a></div></div>
+<div class="ttc" id="astruct_vec2_html_a9538442ffef888d4cd3008a4533b029a"><div class="ttname"><a href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">Vec2::X</a></div><div class="ttdeci">float X</div><div class="ttdoc">X値</div><div class="ttdef"><b>Definition:</b> Vec.h:42</div></div>
+<div class="ttc" id="astruct_vec2_html_a6256fecebf5a43b14d5d5341c58cfdc4"><div class="ttname"><a href="struct_vec2.html#a6256fecebf5a43b14d5d5341c58cfdc4">Vec2::Vec2</a></div><div class="ttdeci">Vec2(float x, float y)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition:</b> Vec.h:26</div></div>
+<div class="ttc" id="astruct_vec2_html_a76080feed7005893ecc634f903cfbae0"><div class="ttname"><a href="struct_vec2.html#a76080feed7005893ecc634f903cfbae0">Vec2::Vec2</a></div><div class="ttdeci">Vec2()</div><div class="ttdef"><b>Definition:</b> Vec.h:15</div></div>
+<div class="ttc" id="astruct_vec2_html_a38e42d6a69d43b831e2a434acd41d5af"><div class="ttname"><a href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Vec2::Y</a></div><div class="ttdeci">float Y</div><div class="ttdoc">Y値</div><div class="ttdef"><b>Definition:</b> Vec.h:43</div></div>
+<div class="ttc" id="astruct_vec2_html_a0facd8932bec5fcc8f5bc0fa82790cbb"><div class="ttname"><a href="struct_vec2.html#a0facd8932bec5fcc8f5bc0fa82790cbb">Vec2::Vec2</a></div><div class="ttdeci">Vec2(const Vec2 &amp;size)</div><div class="ttdoc">Constructor</div><div class="ttdef"><b>Definition:</b> Vec.h:36</div></div>
+<div class="ttc" id="astruct_vec2_html"><div class="ttname"><a href="struct_vec2.html">Vec2</a></div><div class="ttdoc">Vector用構造体(2D版)</div><div class="ttdef"><b>Definition:</b> Vec.h:12</div></div>
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_d3e820f1e5f8d1bd069235013d5d75fa.html">Utility</a></li><li class="navelem"><a class="el" href="_vec_8h.html">Vec.h</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

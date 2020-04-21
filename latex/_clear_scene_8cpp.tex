@@ -1,5 +1,5 @@
-\hypertarget{_clear_scene_8cpp}{}\doxysection{Src/\+Scene/\+Clear\+Scene.cpp ファイル}
-\label{_clear_scene_8cpp}\index{Src/Scene/ClearScene.cpp@{Src/Scene/ClearScene.cpp}}
+\hypertarget{_clear_scene_8cpp}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Scene/\+Clear\+Scene.cpp ファイル}
+\label{_clear_scene_8cpp}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/ClearScene.cpp@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Scene/ClearScene.cpp}}
 {\ttfamily \#include \char`\"{}../\+Engine/\+Graphics.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Engine/\+Input.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Texture/\+Texture.\+h\char`\"{}}\newline
@@ -9,13 +9,10 @@
 {\ttfamily \#include \char`\"{}../\+Character/\+Player/\+Player.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Character/\+Character\+Manager.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}../\+Character/\+Character\+I\+D.\+h\char`\"{}}\newline
-Clear\+Scene.\+cpp の依存先関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp__incl}
-\end{center}
-\end{figure}
+{\ttfamily \#include \char`\"{}../\+Data/\+Days/\+Day\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Audio/\+Audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Object/\+Object\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Texture/\+Load\+Tex.\+h\char`\"{}}\newline
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,11 +23,13 @@ void \mbox{\hyperlink{_clear_scene_8cpp_a95287bf1c183d14fc2136121b75001ee}{Main\
 \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_clear_scene_8cpp_a78ed8b4184e46b5412f14a64f5b6443c}{Finish\+Clear\+Scene}} ()
 \item 
 \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_clear_scene_8cpp_ad87d3394130984bbd676d78e680a2b83}{Update\+Clear\+Scene}} ()
-\begin{DoxyCompactList}\small\item\em ゲームオーバーシーンの更新関数~\newline
-ゲームオーバーシーンの仕様が実行される \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em クリアシーンの更新関数~\newline
+クリアシーンの仕様が実行される \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_clear_scene_8cpp_a154e4ba3962b084e7552af3a805726a0}{Draw\+Clear\+Scene}} ()
-\begin{DoxyCompactList}\small\item\em ゲームオーバーシーンの描画関数~\newline
-ゲームオーバーシーンのオブジェクトを描画するための関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em クリアシーンの描画関数~\newline
+クリアシーンのオブジェクトを描画するための関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_clear_scene_8cpp_ae09f6c971bbcb7873298284b7bbc0be1}{Check}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{変数}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,6 +38,12 @@ int \mbox{\hyperlink{_clear_scene_8cpp_a4aca29e2df2ec63c0aea72680c7444d3}{g\+\_\
 
 
 \doxysubsection{関数詳解}
+\mbox{\Hypertarget{_clear_scene_8cpp_ae09f6c971bbcb7873298284b7bbc0be1}\label{_clear_scene_8cpp_ae09f6c971bbcb7873298284b7bbc0be1}} 
+\index{ClearScene.cpp@{ClearScene.cpp}!Check@{Check}}
+\index{Check@{Check}!ClearScene.cpp@{ClearScene.cpp}}
+\doxysubsubsection{\texorpdfstring{Check()}{Check()}}
+{\footnotesize\ttfamily bool Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{_clear_scene_8cpp_a154e4ba3962b084e7552af3a805726a0}\label{_clear_scene_8cpp_a154e4ba3962b084e7552af3a805726a0}} 
 \index{ClearScene.cpp@{ClearScene.cpp}!DrawClearScene@{DrawClearScene}}
 \index{DrawClearScene@{DrawClearScene}!ClearScene.cpp@{ClearScene.cpp}}
@@ -47,99 +52,27 @@ int \mbox{\hyperlink{_clear_scene_8cpp_a4aca29e2df2ec63c0aea72680c7444d3}{g\+\_\
 
 
 
-ゲームオーバーシーンの描画関数~\newline
-ゲームオーバーシーンのオブジェクトを描画するための関数 
+クリアシーンの描画関数~\newline
+クリアシーンのオブジェクトを描画するための関数 
 
-
-
- Clear\+Scene.\+cpp の 38 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_a154e4ba3962b084e7552af3a805726a0_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_a154e4ba3962b084e7552af3a805726a0_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_clear_scene_8cpp_a78ed8b4184e46b5412f14a64f5b6443c}\label{_clear_scene_8cpp_a78ed8b4184e46b5412f14a64f5b6443c}} 
 \index{ClearScene.cpp@{ClearScene.cpp}!FinishClearScene@{FinishClearScene}}
 \index{FinishClearScene@{FinishClearScene}!ClearScene.cpp@{ClearScene.cpp}}
 \doxysubsubsection{\texorpdfstring{FinishClearScene()}{FinishClearScene()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} Finish\+Clear\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Clear\+Scene.\+cpp の 83 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=332pt]{_clear_scene_8cpp_a78ed8b4184e46b5412f14a64f5b6443c_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_a78ed8b4184e46b5412f14a64f5b6443c_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_clear_scene_8cpp_a275bde985124cedd4fcfd1e3003bc1a4}\label{_clear_scene_8cpp_a275bde985124cedd4fcfd1e3003bc1a4}} 
 \index{ClearScene.cpp@{ClearScene.cpp}!InitClearScene@{InitClearScene}}
 \index{InitClearScene@{InitClearScene}!ClearScene.cpp@{ClearScene.cpp}}
 \doxysubsubsection{\texorpdfstring{InitClearScene()}{InitClearScene()}}
 {\footnotesize\ttfamily void Init\+Clear\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Clear\+Scene.\+cpp の 55 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_a275bde985124cedd4fcfd1e3003bc1a4_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_a275bde985124cedd4fcfd1e3003bc1a4_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_clear_scene_8cpp_a95287bf1c183d14fc2136121b75001ee}\label{_clear_scene_8cpp_a95287bf1c183d14fc2136121b75001ee}} 
 \index{ClearScene.cpp@{ClearScene.cpp}!MainClearScene@{MainClearScene}}
 \index{MainClearScene@{MainClearScene}!ClearScene.cpp@{ClearScene.cpp}}
 \doxysubsubsection{\texorpdfstring{MainClearScene()}{MainClearScene()}}
 {\footnotesize\ttfamily void Main\+Clear\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
- Clear\+Scene.\+cpp の 72 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_a95287bf1c183d14fc2136121b75001ee_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_a95287bf1c183d14fc2136121b75001ee_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{_clear_scene_8cpp_ad87d3394130984bbd676d78e680a2b83}\label{_clear_scene_8cpp_ad87d3394130984bbd676d78e680a2b83}} 
 \index{ClearScene.cpp@{ClearScene.cpp}!UpdateClearScene@{UpdateClearScene}}
 \index{UpdateClearScene@{UpdateClearScene}!ClearScene.cpp@{ClearScene.cpp}}
@@ -148,30 +81,12 @@ int \mbox{\hyperlink{_clear_scene_8cpp_a4aca29e2df2ec63c0aea72680c7444d3}{g\+\_\
 
 
 
-ゲームオーバーシーンの更新関数~\newline
-ゲームオーバーシーンの仕様が実行される 
+クリアシーンの更新関数~\newline
+クリアシーンの仕様が実行される 
 
 \begin{DoxyReturn}{戻り値}
 遷移先シーン\+ID(基本は\+Scene\+Id\+::\+Game\+Over\+Sceneが返る) 
 \end{DoxyReturn}
-
-
- Clear\+Scene.\+cpp の 20 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_ad87d3394130984bbd676d78e680a2b83_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_clear_scene_8cpp_ad87d3394130984bbd676d78e680a2b83_icgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsection{変数詳解}
@@ -180,8 +95,4 @@ int \mbox{\hyperlink{_clear_scene_8cpp_a4aca29e2df2ec63c0aea72680c7444d3}{g\+\_\
 \index{g\_ClearCount@{g\_ClearCount}!ClearScene.cpp@{ClearScene.cpp}}
 \doxysubsubsection{\texorpdfstring{g\_ClearCount}{g\_ClearCount}}
 {\footnotesize\ttfamily int g\+\_\+\+Clear\+Count = 0}
-
-
-
- Clear\+Scene.\+cpp の 18 行目に定義があります。
 

@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('class_fire.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,11 +59,10 @@ $(document).ready(function(){initNavTree('class_fire.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="#pri-methods">非公開メンバ関数</a> &#124;
-<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="class_fire-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">Fire クラス</div>  </div>
@@ -100,29 +74,8 @@ $(document).ready(function(){initNavTree('class_fire.html','');});
  <a href="class_fire.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_fire_8h_source.html">Fire.h</a>&gt;</code></p>
-<div class="dynheader">
-Fire の継承関係図</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire__inherit__graph.png" border="0" usemap="#_fire_inherit__map" alt="Inheritance graph"/></div>
-<map name="_fire_inherit__map" id="_fire_inherit__map">
-<area shape="rect" title="蝋燭の火を管理するクラス" alt="" coords="13,155,57,181"/>
-<area shape="rect" href="class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="12,80,59,107"/>
-<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
-<div class="dynheader">
-Fire 連携図</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire__coll__graph.png" border="0" usemap="#_fire_coll__map" alt="Collaboration graph"/></div>
-<map name="_fire_coll__map" id="_fire_coll__map">
-<area shape="rect" title="蝋燭の火を管理するクラス" alt="" coords="51,185,95,212"/>
-<area shape="rect" href="class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="128,109,175,136"/>
-<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
-<area shape="rect" href="struct_vec2.html" title="Vector用構造体(2D版)" alt="" coords="89,5,141,32"/>
-<area shape="rect" href="struct_size.html" title="サイズデータ用構造体" alt="" coords="167,5,215,32"/>
-<area shape="rect" href="struct_texture.html" title="テクスチャデータやサイズを保持する構造体" alt="" coords="245,5,311,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+
+<p><a class="el" href="class_item.html">Item</a>を継承しています。</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
@@ -182,21 +135,8 @@ m_Id に基づいて <a class="el" href="class_candle.html" title="蝋燭に纏�
 <tr class="separator:a56b5956cea5204d55183a444a01a30d6 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fd4b731f381df03c9aa9f5afcbd73c7 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7">HasMask</a> ()</td></tr>
 <tr class="separator:a3fd4b731f381df03c9aa9f5afcbd73c7 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-非公開メンバ関数</h2></td></tr>
-<tr class="memitem:ac6834116a6ee8bfa441760c38c250501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fire.html#ac6834116a6ee8bfa441760c38c250501">SceneDeath</a> ()</td></tr>
-<tr class="memdesc:ac6834116a6ee8bfa441760c38c250501"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameView 情報から生存情報を管理  <a href="class_fire.html#ac6834116a6ee8bfa441760c38c250501">[詳解]</a><br /></td></tr>
-<tr class="separator:ac6834116a6ee8bfa441760c38c250501"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a516fbe2b9263e9b85d3f2b46eab3e9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fire.html#a516fbe2b9263e9b85d3f2b46eab3e9f8">FireSwitch</a> (bool center_switch_, bool left_switch_, bool right_switch_)</td></tr>
-<tr class="memdesc:a516fbe2b9263e9b85d3f2b46eab3e9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">生存情報を引数によって管理  <a href="class_fire.html#a516fbe2b9263e9b85d3f2b46eab3e9f8">[詳解]</a><br /></td></tr>
-<tr class="separator:a516fbe2b9263e9b85d3f2b46eab3e9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-非公開変数類</h2></td></tr>
-<tr class="memitem:aa189e5954db3395317fb2f8a36fe26de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fire.html#aa189e5954db3395317fb2f8a36fe26de">m_pObject</a></td></tr>
-<tr class="memdesc:aa189e5954db3395317fb2f8a36fe26de"><td class="mdescLeft">&#160;</td><td class="mdescRight">蝋燭情報の取得用変数  <a href="class_fire.html#aa189e5954db3395317fb2f8a36fe26de">[詳解]</a><br /></td></tr>
-<tr class="separator:aa189e5954db3395317fb2f8a36fe26de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c01db131509235804689e9da5af6ad5 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a9c01db131509235804689e9da5af6ad5">LoadTex</a> ()</td></tr>
+<tr class="separator:a9c01db131509235804689e9da5af6ad5 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
@@ -227,10 +167,6 @@ m_Id に基づいて <a class="el" href="class_candle.html" title="蝋燭に纏�
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>蝋燭の火を管理するクラス<br  />
 </p>
-<p>オブジェクトの葉（最終継承先）<br  />
-蝋燭の火を管理するクラスを格納 </p>
-
-<p class="definition"> <a class="el" href="_fire_8h_source.html">Fire.h</a> の <a class="el" href="_fire_8h_source.html#l00016">16</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="aa469382f054a1fb7258482b932f03d2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa469382f054a1fb7258482b932f03d2f">&#9670;&nbsp;</a></span>Fire()</h2>
@@ -266,8 +202,6 @@ m_Id に基づいて <a class="el" href="class_candle.html" title="蝋燭に纏�
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_fire_8h_source.html">Fire.h</a> の <a class="el" href="_fire_8h_source.html#l00024">24</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
@@ -298,76 +232,6 @@ m_Id に基づいて <a class="el" href="class_candle.html" title="蝋燭に纏�
 </p>
 
 <p><a class="el" href="class_object.html#acbd787db750bc1be296d152b324acf20">Object</a>を実装しています。</p>
-
-<p class="definition"> <a class="el" href="_fire_8cpp_source.html">Fire.cpp</a> の <a class="el" href="_fire_8cpp_source.html#l00138">138</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire_ad079ebe0f50929022b4e33ea406e4412_cgraph.png" border="0" usemap="#class_fire_ad079ebe0f50929022b4e33ea406e4412_cgraph" alt=""/></div>
-<map name="class_fire_ad079ebe0f50929022b4e33ea406e4412_cgraph" id="class_fire_ad079ebe0f50929022b4e33ea406e4412_cgraph">
-<area shape="rect" title="蝋燭の点灯情報と自身の生存情報に基づいて描画" alt="" coords="5,56,87,83"/>
-<area shape="rect" href="_graphics_8cpp.html#a77681abc93f8cf102f7b432c93b2b345" title=" " alt="" coords="141,5,263,32"/>
-<area shape="rect" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="155,56,249,83"/>
-<area shape="rect" href="class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="135,107,269,133"/>
-<area shape="rect" href="_graphics_8cpp.html#a81a99b59b0e7a9febaf04ed8a7cc0384" title=" " alt="" coords="317,5,416,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a516fbe2b9263e9b85d3f2b46eab3e9f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a516fbe2b9263e9b85d3f2b46eab3e9f8">&#9670;&nbsp;</a></span>FireSwitch()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Fire::FireSwitch </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>center_switch_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>left_switch_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>right_switch_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>生存情報を引数によって管理 </p>
-
-<p class="definition"> <a class="el" href="_fire_8cpp_source.html">Fire.cpp</a> の <a class="el" href="_fire_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8_icgraph.png" border="0" usemap="#class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8_icgraph" alt=""/></div>
-<map name="class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8_icgraph" id="class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8_icgraph">
-<area shape="rect" title="生存情報を引数によって管理" alt="" coords="317,5,431,32"/>
-<area shape="rect" href="class_fire.html#ac6834116a6ee8bfa441760c38c250501" title="GameView 情報から生存情報を管理" alt="" coords="147,5,269,32"/>
-<area shape="rect" href="class_fire.html#a98dc82aa5d04562e3f298deda6c37a9a" title="蝋燭の点灯情報に基づいて、火を更新 火の生死管理 蝋燭が溶けて火の座標が下がる処理" alt="" coords="5,5,99,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -403,72 +267,6 @@ m_Id に基づいて <a class="el" href="class_candle.html" title="蝋燭に纏�
 
 <p><a class="el" href="class_object.html#a7254c74e9926c9c9e5076b606dbfc962">Object</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_fire_8cpp_source.html">Fire.cpp</a> の <a class="el" href="_fire_8cpp_source.html#l00003">3</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire_a8097c9cbafd7d794fa4dfd8fc996f870_cgraph.png" border="0" usemap="#class_fire_a8097c9cbafd7d794fa4dfd8fc996f870_cgraph" alt=""/></div>
-<map name="class_fire_a8097c9cbafd7d794fa4dfd8fc996f870_cgraph" id="class_fire_a8097c9cbafd7d794fa4dfd8fc996f870_cgraph">
-<area shape="rect" title="各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定 m_Id に基づいて Candle をインスタンス化" alt="" coords="5,81,75,108"/>
-<area shape="rect" href="class_object_manager.html#acb889688c7374c0ed461dfcbabd4a1e0" title="m_pObjects の インスタンス情報を取得する" alt="" coords="123,5,281,32"/>
-<area shape="rect" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="159,56,245,83"/>
-<area shape="rect" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="155,107,249,133"/>
-<area shape="rect" href="_object_manager_8cpp.html#a98f0c5ac7f5990ffad58461f1d23f0a9" title="疑似的なシングルトンをプロトタイプ宣言" alt="" coords="156,157,248,184"/>
-<area shape="rect" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="329,56,488,83"/>
-<area shape="rect" href="_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="357,107,460,133"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac6834116a6ee8bfa441760c38c250501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6834116a6ee8bfa441760c38c250501">&#9670;&nbsp;</a></span>SceneDeath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Fire::SceneDeath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>GameView 情報から生存情報を管理 </p>
-<p>Update内で使用されている関数 </p>
-
-<p class="definition"> <a class="el" href="_fire_8cpp_source.html">Fire.cpp</a> の <a class="el" href="_fire_8cpp_source.html#l00069">69</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire_ac6834116a6ee8bfa441760c38c250501_cgraph.png" border="0" usemap="#class_fire_ac6834116a6ee8bfa441760c38c250501_cgraph" alt=""/></div>
-<map name="class_fire_ac6834116a6ee8bfa441760c38c250501_cgraph" id="class_fire_ac6834116a6ee8bfa441760c38c250501_cgraph">
-<area shape="rect" title="GameView 情報から生存情報を管理" alt="" coords="5,56,128,83"/>
-<area shape="rect" href="class_fire.html#a516fbe2b9263e9b85d3f2b46eab3e9f8" title="生存情報を引数によって管理" alt="" coords="185,5,299,32"/>
-<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="199,56,285,83"/>
-<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="176,107,308,133"/>
-</map>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire_ac6834116a6ee8bfa441760c38c250501_icgraph.png" border="0" usemap="#class_fire_ac6834116a6ee8bfa441760c38c250501_icgraph" alt=""/></div>
-<map name="class_fire_ac6834116a6ee8bfa441760c38c250501_icgraph" id="class_fire_ac6834116a6ee8bfa441760c38c250501_icgraph">
-<area shape="rect" title="GameView 情報から生存情報を管理" alt="" coords="147,5,269,32"/>
-<area shape="rect" href="class_fire.html#a98dc82aa5d04562e3f298deda6c37a9a" title="蝋燭の点灯情報に基づいて、火を更新 火の生死管理 蝋燭が溶けて火の座標が下がる処理" alt="" coords="5,5,99,32"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="a98dc82aa5d04562e3f298deda6c37a9a"></a>
@@ -500,67 +298,18 @@ m_Id に基づいて <a class="el" href="class_candle.html" title="蝋燭に纏�
 
 <p><a class="el" href="class_object.html#a5ee5c17a09981cbd7c469370e210b4ff">Object</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_fire_8cpp_source.html">Fire.cpp</a> の <a class="el" href="_fire_8cpp_source.html#l00087">87</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_fire_a98dc82aa5d04562e3f298deda6c37a9a_cgraph.png" border="0" usemap="#class_fire_a98dc82aa5d04562e3f298deda6c37a9a_cgraph" alt=""/></div>
-<map name="class_fire_a98dc82aa5d04562e3f298deda6c37a9a_cgraph" id="class_fire_a98dc82aa5d04562e3f298deda6c37a9a_cgraph">
-<area shape="rect" title="蝋燭の点灯情報に基づいて、火を更新 火の生死管理 蝋燭が溶けて火の座標が下がる処理" alt="" coords="5,107,99,133"/>
-<area shape="rect" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee" title="マウスの座標取得関数" alt="" coords="161,5,267,32"/>
-<area shape="rect" href="class_object.html#af6c3ba6ab9e42e35162e39d4fd9172ca" title=" " alt="" coords="155,56,273,83"/>
-<area shape="rect" href="class_object.html#a56b5956cea5204d55183a444a01a30d6" title="Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する" alt="" coords="147,107,281,133"/>
-<area shape="rect" href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac" title=" " alt="" coords="155,157,273,184"/>
-<area shape="rect" href="class_fire.html#ac6834116a6ee8bfa441760c38c250501" title="GameView 情報から生存情報を管理" alt="" coords="153,208,275,235"/>
-<area shape="rect" href="class_fire.html#a516fbe2b9263e9b85d3f2b46eab3e9f8" title="生存情報を引数によって管理" alt="" coords="339,157,452,184"/>
-<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="353,208,438,235"/>
-<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="329,259,461,285"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">メンバ詳解</h2>
-<a id="aa189e5954db3395317fb2f8a36fe26de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa189e5954db3395317fb2f8a36fe26de">&#9670;&nbsp;</a></span>m_pObject</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_object.html">Object</a>* Fire::m_pObject</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>蝋燭情報の取得用変数 </p>
-
-<p class="definition"> <a class="el" href="_fire_8h_source.html">Fire.h</a> の <a class="el" href="_fire_8h_source.html#l00063">63</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>Src/Object/Item/Id/<a class="el" href="_fire_8h_source.html">Fire.h</a></li>
-<li>Src/Object/Item/Id/<a class="el" href="_fire_8cpp_source.html">Fire.cpp</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/Item/Id/<a class="el" href="_fire_8h_source.html">Fire.h</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/Item/Id/<a class="el" href="_fire_8cpp.html">Fire.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_fire.html">Fire</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

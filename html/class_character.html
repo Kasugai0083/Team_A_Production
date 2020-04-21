@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('class_character.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,89 +59,83 @@ $(document).ready(function(){initNavTree('class_character.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pro-attribs">限定公開変数類</a> &#124;
-<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="class_character-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">Character クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>キャラクターの基底クラス  
+ <a href="class_character.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_character_8h_source.html">Character.h</a>&gt;</code></p>
-<div class="dynheader">
-Character の継承関係図</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character__inherit__graph.png" border="0" usemap="#_character_inherit__map" alt="Inheritance graph"/></div>
-<map name="_character_inherit__map" id="_character_inherit__map">
-<area shape="rect" title=" " alt="" coords="253,5,331,32"/>
-<area shape="rect" href="class_enemy.html" title=" " alt="" coords="218,80,281,107"/>
-<area shape="rect" href="class_player.html" title=" " alt="" coords="305,80,364,107"/>
-<area shape="rect" href="class_botan.html" title=" " alt="" coords="5,155,61,181"/>
-<area shape="rect" href="class_margaret.html" title=" " alt="" coords="86,155,159,181"/>
-<area shape="rect" href="class_ohagi.html" title=" " alt="" coords="184,155,240,181"/>
-<area shape="rect" href="class_ran.html" title=" " alt="" coords="264,155,309,181"/>
-<area shape="rect" href="class_sakura.html" title=" " alt="" coords="334,155,397,181"/>
-<area shape="rect" href="class_ume.html" title=" " alt="" coords="421,155,470,181"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+
+<p><a class="el" href="class_enemy.html">Enemy</a>, <a class="el" href="class_player.html">Player</a>に継承されています。</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a5f5f0769ae4cfc315bf1bd040b0f6802"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a5f5f0769ae4cfc315bf1bd040b0f6802">Character</a> (bool is_active_)</td></tr>
 <tr class="separator:a5f5f0769ae4cfc315bf1bd040b0f6802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3ec409c562122c4464e8a9d3be5f6d2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#af3ec409c562122c4464e8a9d3be5f6d2">~Character</a> ()</td></tr>
-<tr class="separator:af3ec409c562122c4464e8a9d3be5f6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3776b55752f328ee74fd1282331f872"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#ac3776b55752f328ee74fd1282331f872">Init</a> ()=0</td></tr>
-<tr class="separator:ac3776b55752f328ee74fd1282331f872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a554d31593b3eee38178bd7c7804ef7fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a554d31593b3eee38178bd7c7804ef7fb">Update</a> ()=0</td></tr>
-<tr class="separator:a554d31593b3eee38178bd7c7804ef7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a168bdd7e64b9c433de77b13311bfec1d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a168bdd7e64b9c433de77b13311bfec1d">HasLight</a> () const</td></tr>
-<tr class="separator:a168bdd7e64b9c433de77b13311bfec1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ebebf9e06dbb8edf710f52c7e1b237"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a77ebebf9e06dbb8edf710f52c7e1b237">HasMask</a> () const</td></tr>
-<tr class="separator:a77ebebf9e06dbb8edf710f52c7e1b237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f08c22210951f1af772f589658593f2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a4f08c22210951f1af772f589658593f2">HasMonitor</a> () const</td></tr>
-<tr class="separator:a4f08c22210951f1af772f589658593f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d21402c4c0ebe6b50caeb9346edaa09"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a6d21402c4c0ebe6b50caeb9346edaa09">HasKill</a> () const</td></tr>
-<tr class="separator:a6d21402c4c0ebe6b50caeb9346edaa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10ef1a073e930eda4cab2c555d05c52f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a10ef1a073e930eda4cab2c555d05c52f">IsActive</a> ()</td></tr>
-<tr class="separator:a10ef1a073e930eda4cab2c555d05c52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ac0ae4900eb16be01a4fd6261b3061f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a1ac0ae4900eb16be01a4fd6261b3061f">CurrentViewMonitorID</a> () const</td></tr>
-<tr class="separator:a1ac0ae4900eb16be01a4fd6261b3061f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a051c409115c689480f0246f6a4743474"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a051c409115c689480f0246f6a4743474">Draw</a> ()=0</td></tr>
-<tr class="separator:a051c409115c689480f0246f6a4743474"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc549f5b4ebc1f79253bb1e25cd630a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#abc549f5b4ebc1f79253bb1e25cd630a6">LoadTex</a> (<a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> id)</td></tr>
-<tr class="separator:abc549f5b4ebc1f79253bb1e25cd630a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5e39d6f275a659642bc8aecab70039"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a7a5e39d6f275a659642bc8aecab70039">~Character</a> ()</td></tr>
+<tr class="memdesc:a7a5e39d6f275a659642bc8aecab70039"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <a href="class_character.html#a7a5e39d6f275a659642bc8aecab70039">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a5e39d6f275a659642bc8aecab70039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8ebe4b210ee3c6ec7098d14e70e263"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a7a8ebe4b210ee3c6ec7098d14e70e263">IsActive</a> ()</td></tr>
+<tr class="memdesc:a7a8ebe4b210ee3c6ec7098d14e70e263"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャラクターがアクティブかどうかを調べる関数  <a href="class_character.html#a7a8ebe4b210ee3c6ec7098d14e70e263">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a8ebe4b210ee3c6ec7098d14e70e263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c844a3b46e18e80d3dc1ccbf3b56f68"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a2c844a3b46e18e80d3dc1ccbf3b56f68">Init</a> ()=0</td></tr>
+<tr class="memdesc:a2c844a3b46e18e80d3dc1ccbf3b56f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャラクターの初期化関数  <a href="class_character.html#a2c844a3b46e18e80d3dc1ccbf3b56f68">[詳解]</a><br /></td></tr>
+<tr class="separator:a2c844a3b46e18e80d3dc1ccbf3b56f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4adac2e550add4608474b7a87d9466"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a2d4adac2e550add4608474b7a87d9466">Update</a> ()=0</td></tr>
+<tr class="memdesc:a2d4adac2e550add4608474b7a87d9466"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャラクターの更新関数  <a href="class_character.html#a2d4adac2e550add4608474b7a87d9466">[詳解]</a><br /></td></tr>
+<tr class="separator:a2d4adac2e550add4608474b7a87d9466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c60274d2515e4198b280cde1719a13"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#ae0c60274d2515e4198b280cde1719a13">Draw</a> ()=0</td></tr>
+<tr class="memdesc:ae0c60274d2515e4198b280cde1719a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャラクターの描画関数  <a href="class_character.html#ae0c60274d2515e4198b280cde1719a13">[詳解]</a><br /></td></tr>
+<tr class="separator:ae0c60274d2515e4198b280cde1719a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4a9d7f4b30187669847481b4ac1823"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a7e4a9d7f4b30187669847481b4ac1823">HasMask</a> () const</td></tr>
+<tr class="memdesc:a7e4a9d7f4b30187669847481b4ac1823"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーがマスクを被っているかどうか  <a href="class_character.html#a7e4a9d7f4b30187669847481b4ac1823">[詳解]</a><br /></td></tr>
+<tr class="separator:a7e4a9d7f4b30187669847481b4ac1823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33957f897e3d779a9433894bda0ed023"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a33957f897e3d779a9433894bda0ed023">HasMonitor</a> () const</td></tr>
+<tr class="memdesc:a33957f897e3d779a9433894bda0ed023"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーがモニターを見ているかどうか  <a href="class_character.html#a33957f897e3d779a9433894bda0ed023">[詳解]</a><br /></td></tr>
+<tr class="separator:a33957f897e3d779a9433894bda0ed023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4dd839871956bd5e4e61aba225a524"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34c">SubGameScene</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a0c4dd839871956bd5e4e61aba225a524">CurrentViewID</a> () const</td></tr>
+<tr class="separator:a0c4dd839871956bd5e4e61aba225a524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774bcb4ef8b3c5822691aa8fc989ed72"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a774bcb4ef8b3c5822691aa8fc989ed72">HasKill</a> () const</td></tr>
+<tr class="memdesc:a774bcb4ef8b3c5822691aa8fc989ed72"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーを殺したかどうかを返す関数  <a href="class_character.html#a774bcb4ef8b3c5822691aa8fc989ed72">[詳解]</a><br /></td></tr>
+<tr class="separator:a774bcb4ef8b3c5822691aa8fc989ed72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a11d75af5f6aef802c80d79420a87ec"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a5a11d75af5f6aef802c80d79420a87ec">CanKill</a> () const</td></tr>
+<tr class="memdesc:a5a11d75af5f6aef802c80d79420a87ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">エネミーがプレイヤーを殺せる状態かどうかを返す関数  <a href="class_character.html#a5a11d75af5f6aef802c80d79420a87ec">[詳解]</a><br /></td></tr>
+<tr class="separator:a5a11d75af5f6aef802c80d79420a87ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a959b53f41fa44490f584b4c96354f30c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a959b53f41fa44490f584b4c96354f30c">GetRoomID</a> () const</td></tr>
+<tr class="memdesc:a959b53f41fa44490f584b4c96354f30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">エネミーいる部屋を返す関数  <a href="class_character.html#a959b53f41fa44490f584b4c96354f30c">[詳解]</a><br /></td></tr>
+<tr class="separator:a959b53f41fa44490f584b4c96354f30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52c6c1bfb2133a6f0bb1e7e39d091c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#ab52c6c1bfb2133a6f0bb1e7e39d091c3">KillAnimation</a> ()</td></tr>
+<tr class="memdesc:ab52c6c1bfb2133a6f0bb1e7e39d091c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">キルアニメーションの描画関数  <a href="class_character.html#ab52c6c1bfb2133a6f0bb1e7e39d091c3">[詳解]</a><br /></td></tr>
+<tr class="separator:ab52c6c1bfb2133a6f0bb1e7e39d091c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7db1f1fbceb865d5e3905c3f4f0ae54"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aa7db1f1fbceb865d5e3905c3f4f0ae54">ControlMonitor</a> ()</td></tr>
 <tr class="separator:aa7db1f1fbceb865d5e3905c3f4f0ae54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f64f261c8d7eda3895df7f1d083eb4c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a7f64f261c8d7eda3895df7f1d083eb4c">ControlGameScene</a> ()</td></tr>
 <tr class="separator:a7f64f261c8d7eda3895df7f1d083eb4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aede2cfdfe20b765329f14773803c4363"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aede2cfdfe20b765329f14773803c4363">HasGFreddySpown</a> ()</td></tr>
 <tr class="separator:aede2cfdfe20b765329f14773803c4363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c17c297de9f775fdcfc386df408a635"><td class="memItemLeft" align="right" valign="top">virtual const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a3c17c297de9f775fdcfc386df408a635">CurrentViewID</a> (const <a class="el" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34c">SubGameScene</a> sceneId_) const</td></tr>
+<tr class="separator:a3c17c297de9f775fdcfc386df408a635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a606ae9bec2acc1aa8098ad7a454b4857"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a606ae9bec2acc1aa8098ad7a454b4857">SpawnJudgement</a> () const</td></tr>
+<tr class="memdesc:a606ae9bec2acc1aa8098ad7a454b4857"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_SpawnJudgementを返す  <a href="class_character.html#a606ae9bec2acc1aa8098ad7a454b4857">[詳解]</a><br /></td></tr>
+<tr class="separator:a606ae9bec2acc1aa8098ad7a454b4857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
 <tr class="memitem:a0dee035b9de6807947e2049c992d8159"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a0dee035b9de6807947e2049c992d8159">m_IsActive</a></td></tr>
 <tr class="separator:a0dee035b9de6807947e2049c992d8159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-非公開変数類</h2></td></tr>
-<tr class="memitem:a7625d8d90e93ffed8ba03061bf91aa08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a7625d8d90e93ffed8ba03061bf91aa08">m_HasMask</a></td></tr>
-<tr class="separator:a7625d8d90e93ffed8ba03061bf91aa08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a192bb39fbb31cc6f8945bb3e4feca55e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a192bb39fbb31cc6f8945bb3e4feca55e">m_HasLight</a></td></tr>
-<tr class="separator:a192bb39fbb31cc6f8945bb3e4feca55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18604627713d4b0d62f3857fca364d3b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a18604627713d4b0d62f3857fca364d3b">m_HasMonitor</a></td></tr>
-<tr class="separator:a18604627713d4b0d62f3857fca364d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a040ee7d0c5c472e6bcaba862b9292c8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a040ee7d0c5c472e6bcaba862b9292c8a">m_MonitorViewID</a></td></tr>
-<tr class="separator:a040ee7d0c5c472e6bcaba862b9292c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56eddba73c39defe9933a942dec08bde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a56eddba73c39defe9933a942dec08bde">m_HasKill</a></td></tr>
-<tr class="separator:a56eddba73c39defe9933a942dec08bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock">
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+<div class="textblock"><p>キャラクターの基底クラス </p>
+<p>このクラスからプレイヤーやエネミーに派生していく </p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a5f5f0769ae4cfc315bf1bd040b0f6802"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f5f0769ae4cfc315bf1bd040b0f6802">&#9670;&nbsp;</a></span>Character()</h2>
@@ -192,12 +161,10 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00011">11</a> 行目に定義があります。</p>
-
 </div>
 </div>
-<a id="af3ec409c562122c4464e8a9d3be5f6d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3ec409c562122c4464e8a9d3be5f6d2">&#9670;&nbsp;</a></span>~Character()</h2>
+<a id="a7a5e39d6f275a659642bc8aecab70039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5e39d6f275a659642bc8aecab70039">&#9670;&nbsp;</a></span>~Character()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +173,7 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Character::~Character </td>
+          <td class="memname">　 Character::~Character </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -219,11 +186,41 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00016">16</a> 行目に定義があります。</p>
+<p>デストラクタ </p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="a5a11d75af5f6aef802c80d79420a87ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a11d75af5f6aef802c80d79420a87ec">&#9670;&nbsp;</a></span>CanKill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Character::CanKill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エネミーがプレイヤーを殺せる状態かどうかを返す関数 </p>
+<dl class="section return"><dt>戻り値</dt><dd>bool true : 殺せる false : 殺せない </dd></dl>
+
+<p><a class="el" href="class_enemy.html#a30dc37c1535702aa3432f8b92dccaa80">Enemy</a>で再実装されています。</p>
+
+</div>
+</div>
 <a id="a7f64f261c8d7eda3895df7f1d083eb4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f64f261c8d7eda3895df7f1d083eb4c">&#9670;&nbsp;</a></span>ControlGameScene()</h2>
 
@@ -247,21 +244,7 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_player.html#ab1961f4cf35c15516d1f19372586e197">Player</a>で再実装されています。</p>
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00051">51</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a7f64f261c8d7eda3895df7f1d083eb4c_icgraph.png" border="0" usemap="#class_character_a7f64f261c8d7eda3895df7f1d083eb4c_icgraph" alt=""/></div>
-<map name="class_character_a7f64f261c8d7eda3895df7f1d083eb4c_icgraph" id="class_character_a7f64f261c8d7eda3895df7f1d083eb4c_icgraph">
-<area shape="rect" title=" " alt="" coords="628,5,827,32"/>
-<area shape="rect" href="_game_scene_8cpp.html#ae5041f4f90cb0d4b1d83b4e738fc1d73" title=" " alt="" coords="457,5,580,32"/>
-<area shape="rect" href="_game_scene_8h.html#aaa0f133f9ce54fe2b94a1ed07d922be8" title=" " alt="" coords="275,5,409,32"/>
-<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,5,227,32"/>
-<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,5,79,32"/>
-</map>
-</div>
+<p><a class="el" href="class_player.html#af3eeed08e6254baa48c44f0551273cac">Player</a>で再実装されています。</p>
 
 </div>
 </div>
@@ -288,26 +271,12 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_player.html#a99b56ee3bc81fa207b1b15f9397e5c2b">Player</a>で再実装されています。</p>
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00050">50</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54_icgraph.png" border="0" usemap="#class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54_icgraph" alt=""/></div>
-<map name="class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54_icgraph" id="class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54_icgraph">
-<area shape="rect" title=" " alt="" coords="644,5,815,32"/>
-<area shape="rect" href="_monitor_scene_8cpp.html#aebcee0a0a21b4af3c111191089b2b70e" title=" " alt="" coords="465,5,596,32"/>
-<area shape="rect" href="_monitor_scene_8h.html#a502ddcf70f16f597857a74a4c5b0aff8" title=" " alt="" coords="275,5,417,32"/>
-<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,5,227,32"/>
-<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,5,79,32"/>
-</map>
-</div>
+<p><a class="el" href="class_player.html#a2c7dee59cee32a99becf3599a39bcacb">Player</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="a1ac0ae4900eb16be01a4fd6261b3061f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ac0ae4900eb16be01a4fd6261b3061f">&#9670;&nbsp;</a></span>CurrentViewMonitorID()</h2>
+<a id="a0c4dd839871956bd5e4e61aba225a524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4dd839871956bd5e4e61aba225a524">&#9670;&nbsp;</a></span>CurrentViewID() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +285,7 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a> Character::CurrentViewMonitorID </td>
+          <td class="memname">virtual <a class="el" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34c">SubGameScene</a> Character::CurrentViewID </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -329,23 +298,12 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_player.html#a58c7d859f120c314adb6125cb4c5d29a">Player</a>で再実装されています。</p>
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00040">40</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a1ac0ae4900eb16be01a4fd6261b3061f_icgraph.png" border="0" usemap="#class_character_a1ac0ae4900eb16be01a4fd6261b3061f_icgraph" alt=""/></div>
-<map name="class_character_a1ac0ae4900eb16be01a4fd6261b3061f_icgraph" id="class_character_a1ac0ae4900eb16be01a4fd6261b3061f_icgraph">
-<area shape="rect" title=" " alt="" coords="176,5,387,32"/>
-<area shape="rect" href="class_margaret.html#a825c0221ca252a9488cde4cb74a119f6" title=" " alt="" coords="5,5,128,32"/>
-</map>
-</div>
+<p><a class="el" href="class_player.html#a777721bf0063a23d9b76614924e45c77">Player</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="a051c409115c689480f0246f6a4743474"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a051c409115c689480f0246f6a4743474">&#9670;&nbsp;</a></span>Draw()</h2>
+<a id="a3c17c297de9f775fdcfc386df408a635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c17c297de9f775fdcfc386df408a635">&#9670;&nbsp;</a></span>CurrentViewID() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,7 +312,35 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Character::Draw </td>
+          <td class="memname">virtual const bool Character::CurrentViewID </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34c">SubGameScene</a>&#160;</td>
+          <td class="paramname"><em>sceneId_</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_player.html#a0a74b4d9c44d4b027baee4c8fac20592">Player</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="ae0c60274d2515e4198b280cde1719a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c60274d2515e4198b280cde1719a13">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Character::Draw </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -367,21 +353,39 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_botan.html#ad255867f0c175804588e424917e7a9dc">Botan</a>, <a class="el" href="class_margaret.html#a9f235ef92d78e08b067afa1778bf7c86">Margaret</a>, <a class="el" href="class_ran.html#a6fb3b82ff6f6585f72c60bb341a146a3">Ran</a>, <a class="el" href="class_sakura.html#a8200f9a5944764ba38e1d0dd6ce709e2">Sakura</a>, <a class="el" href="class_ohagi.html#a2ccb7e8eb90221f8bc8ddc1e1a822461">Ohagi</a>, <a class="el" href="class_ume.html#ad1efe4fe6e94575a8b83f683fd5fc6a6">Ume</a>, <a class="el" href="class_player.html#a5b60ad157bb1e8debca89ed6903ca2a4">Player</a>で実装されています。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a051c409115c689480f0246f6a4743474_icgraph.png" border="0" usemap="#class_character_a051c409115c689480f0246f6a4743474_icgraph" alt=""/></div>
-<map name="class_character_a051c409115c689480f0246f6a4743474_icgraph" id="class_character_a051c409115c689480f0246f6a4743474_icgraph">
-<area shape="rect" title=" " alt="" coords="803,31,917,57"/>
-<area shape="rect" href="class_character_manager.html#a5ae904d5acacc51e3f5172a1426fe09d" title=" " alt="" coords="589,31,755,57"/>
-<area shape="rect" href="_game_scene_8h.html#a758cda2c7e70579e62ec2a9b4f4b7aa6" title=" " alt="" coords="415,5,537,32"/>
-<area shape="rect" href="_monitor_scene_8h.html#a47e3106c0904c38712b612ed7ffa92bf" title=" " alt="" coords="411,56,541,83"/>
-<area shape="rect" href="_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="275,31,363,57"/>
-<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,31,227,57"/>
-<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,31,79,57"/>
-</map>
+<p>キャラクターの描画関数 </p>
+
+<p><a class="el" href="class_margaret.html#a9f235ef92d78e08b067afa1778bf7c86">Margaret</a>, <a class="el" href="class_ran.html#a6fb3b82ff6f6585f72c60bb341a146a3">Ran</a>, <a class="el" href="class_sakura.html#a8200f9a5944764ba38e1d0dd6ce709e2">Sakura</a>, <a class="el" href="class_ume.html#ad1efe4fe6e94575a8b83f683fd5fc6a6">Ume</a>, <a class="el" href="class_botan.html#ad255867f0c175804588e424917e7a9dc">Botan</a>, <a class="el" href="class_ohagi.html#a2ccb7e8eb90221f8bc8ddc1e1a822461">Ohagi</a>, <a class="el" href="class_player.html#a5b60ad157bb1e8debca89ed6903ca2a4">Player</a>で実装されています。</p>
+
 </div>
+</div>
+<a id="a959b53f41fa44490f584b4c96354f30c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959b53f41fa44490f584b4c96354f30c">&#9670;&nbsp;</a></span>GetRoomID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a> Character::GetRoomID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エネミーいる部屋を返す関数 </p>
+<dl class="section return"><dt>戻り値</dt><dd>RoomID エネミーいる部屋が返る </dd></dl>
+
+<p><a class="el" href="class_enemy.html#aab4540d84f5b3760930c06eaefb237e7">Enemy</a>で再実装されています。</p>
 
 </div>
 </div>
@@ -408,14 +412,12 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_player.html#a02d7ccd26184ddceec7162756b49a0e6">Player</a>で再実装されています。</p>
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00052">52</a> 行目に定義があります。</p>
+<p><a class="el" href="class_player.html#aa620e5f4be27614873acdd1510189b60">Player</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="a6d21402c4c0ebe6b50caeb9346edaa09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d21402c4c0ebe6b50caeb9346edaa09">&#9670;&nbsp;</a></span>HasKill()</h2>
+<a id="a774bcb4ef8b3c5822691aa8fc989ed72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774bcb4ef8b3c5822691aa8fc989ed72">&#9670;&nbsp;</a></span>HasKill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,7 +426,7 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Character::HasKill </td>
+          <td class="memname">bool Character::HasKill </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -437,14 +439,15 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_margaret.html#acbeed64e7fcd254062f962e8861a5ad7">Margaret</a>, <a class="el" href="class_sakura.html#a00051eefcf19bfe872cef16d4227b243">Sakura</a>, <a class="el" href="class_ohagi.html#a4acd787f0da3a86dd464cd91aeb91cb0">Ohagi</a>, <a class="el" href="class_botan.html#a2557a86441aba61cfa171c0b32e0b9bc">Botan</a>, <a class="el" href="class_enemy.html#ab7b752c2b8898f5dbffd6df567b2b965">Enemy</a>, <a class="el" href="class_ran.html#a8bddf8979238ee78509607f926007971">Ran</a>, <a class="el" href="class_ume.html#a5d2e4290b16b8d130dcbcda91f7c18c1">Ume</a>で再実装されています。</p>
+<p>プレイヤーを殺したかどうかを返す関数 </p>
+<dl class="section return"><dt>戻り値</dt><dd>bool true : 殺した false : 殺してない </dd></dl>
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+<p><a class="el" href="class_enemy.html#abe6854ef7f0e563a056c1a984d66194e">Enemy</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="a168bdd7e64b9c433de77b13311bfec1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a168bdd7e64b9c433de77b13311bfec1d">&#9670;&nbsp;</a></span>HasLight()</h2>
+<a id="a7e4a9d7f4b30187669847481b4ac1823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4a9d7f4b30187669847481b4ac1823">&#9670;&nbsp;</a></span>HasMask()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,7 +456,7 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Character::HasLight </td>
+          <td class="memname">Character::HasMask </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -466,21 +469,14 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00022">22</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a168bdd7e64b9c433de77b13311bfec1d_icgraph.png" border="0" usemap="#class_character_a168bdd7e64b9c433de77b13311bfec1d_icgraph" alt=""/></div>
-<map name="class_character_a168bdd7e64b9c433de77b13311bfec1d_icgraph" id="class_character_a168bdd7e64b9c433de77b13311bfec1d_icgraph">
-<area shape="rect" title=" " alt="" coords="159,5,296,32"/>
-<area shape="rect" href="class_botan.html#a7e9c22e468535d2c0b206c7d1e5a48d9" title=" " alt="" coords="5,5,111,32"/>
-</map>
-</div>
+<p>プレイヤーがマスクを被っているかどうか </p>
+
+<p><a class="el" href="class_player.html#a46fbdeeeb7df23ff354e91d68135ec6b">Player</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="a77ebebf9e06dbb8edf710f52c7e1b237"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77ebebf9e06dbb8edf710f52c7e1b237">&#9670;&nbsp;</a></span>HasMask()</h2>
+<a id="a33957f897e3d779a9433894bda0ed023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33957f897e3d779a9433894bda0ed023">&#9670;&nbsp;</a></span>HasMonitor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,7 +485,7 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Character::HasMask </td>
+          <td class="memname">Character::HasMonitor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -502,26 +498,14 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_player.html#a5ddd7cb248e9df3ab709b380cd55a6d7">Player</a>で再実装されています。</p>
+<p>プレイヤーがモニターを見ているかどうか </p>
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00027">27</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a77ebebf9e06dbb8edf710f52c7e1b237_icgraph.png" border="0" usemap="#class_character_a77ebebf9e06dbb8edf710f52c7e1b237_icgraph" alt=""/></div>
-<map name="class_character_a77ebebf9e06dbb8edf710f52c7e1b237_icgraph" id="class_character_a77ebebf9e06dbb8edf710f52c7e1b237_icgraph">
-<area shape="rect" title=" " alt="" coords="165,81,307,108"/>
-<area shape="rect" href="class_botan.html#a7e9c22e468535d2c0b206c7d1e5a48d9" title=" " alt="" coords="9,5,114,32"/>
-<area shape="rect" href="class_sakura.html#a60c98cd32641685d33e983aa1f2b16d9" title=" " alt="" coords="5,56,117,83"/>
-<area shape="rect" href="class_ohagi.html#a831e45b2b288c9ad862fc766989238fd" title=" " alt="" coords="9,107,114,133"/>
-<area shape="rect" href="class_ume.html#a2a1a52519b647ddd20c85f7d467596c2" title=" " alt="" coords="12,157,111,184"/>
-</map>
-</div>
+<p><a class="el" href="class_player.html#a7371360752e97ba79b5e6299cf04a43d">Player</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="a4f08c22210951f1af772f589658593f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f08c22210951f1af772f589658593f2">&#9670;&nbsp;</a></span>HasMonitor()</h2>
+<a id="a2c844a3b46e18e80d3dc1ccbf3b56f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c844a3b46e18e80d3dc1ccbf3b56f68">&#9670;&nbsp;</a></span>Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -530,44 +514,7 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Character::HasMonitor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00031">31</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a4f08c22210951f1af772f589658593f2_icgraph.png" border="0" usemap="#class_character_a4f08c22210951f1af772f589658593f2_icgraph" alt=""/></div>
-<map name="class_character_a4f08c22210951f1af772f589658593f2_icgraph" id="class_character_a4f08c22210951f1af772f589658593f2_icgraph">
-<area shape="rect" title=" " alt="" coords="176,31,328,57"/>
-<area shape="rect" href="class_botan.html#a7e9c22e468535d2c0b206c7d1e5a48d9" title=" " alt="" coords="14,5,119,32"/>
-<area shape="rect" href="class_margaret.html#a825c0221ca252a9488cde4cb74a119f6" title=" " alt="" coords="5,56,128,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac3776b55752f328ee74fd1282331f872"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3776b55752f328ee74fd1282331f872">&#9670;&nbsp;</a></span>Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Character::Init </td>
+          <td class="memname">void Character::Init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -580,25 +527,14 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_margaret.html#a66940c15047eb5278c306a90db53e93f">Margaret</a>, <a class="el" href="class_ran.html#a36fd770659304e2ce03da0ca05cdbd76">Ran</a>, <a class="el" href="class_ume.html#a5d6c5ece2ac1bda798a151e111bc30c7">Ume</a>, <a class="el" href="class_sakura.html#abbdf3093407faf7ed36aef17205abce4">Sakura</a>, <a class="el" href="class_ohagi.html#aefd06d07f829365ba425727cf2425e1c">Ohagi</a>, <a class="el" href="class_botan.html#ac8ed8694fbeb1b27221f4878487c08a1">Botan</a>, <a class="el" href="class_enemy.html#a2b56a302d65e9a32cf37aed8949164e6">Enemy</a>, <a class="el" href="class_player.html#a4eaaeb9d0967fef59baac319b9cc8d60">Player</a>で実装されています。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_ac3776b55752f328ee74fd1282331f872_icgraph.png" border="0" usemap="#class_character_ac3776b55752f328ee74fd1282331f872_icgraph" alt=""/></div>
-<map name="class_character_ac3776b55752f328ee74fd1282331f872_icgraph" id="class_character_ac3776b55752f328ee74fd1282331f872_icgraph">
-<area shape="rect" title=" " alt="" coords="844,5,947,32"/>
-<area shape="rect" href="class_character_manager.html#a288e498a7ac239e17b85370b5122bdce" title=" " alt="" coords="613,5,796,32"/>
-<area shape="rect" href="_title_scene_8cpp.html#afc2a10c9ed9e0597ad498b3e29e5e00b" title=" " alt="" coords="447,5,565,32"/>
-<area shape="rect" href="_title_scene_8h.html#a63f9414cad6abe8e97e3ddf336d7e166" title="タイトルシーンの更新関数 タイトルシーンの仕様が実行される" alt="" coords="275,5,399,32"/>
-<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,5,227,32"/>
-<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,5,79,32"/>
-</map>
-</div>
+<p>キャラクターの初期化関数 </p>
+
+<p><a class="el" href="class_margaret.html#a66940c15047eb5278c306a90db53e93f">Margaret</a>, <a class="el" href="class_enemy.html#a0af6416bc431c1ff2d3fb7f8441950c2">Enemy</a>, <a class="el" href="class_ran.html#a36fd770659304e2ce03da0ca05cdbd76">Ran</a>, <a class="el" href="class_sakura.html#abbdf3093407faf7ed36aef17205abce4">Sakura</a>, <a class="el" href="class_ume.html#a5d6c5ece2ac1bda798a151e111bc30c7">Ume</a>, <a class="el" href="class_botan.html#ac8ed8694fbeb1b27221f4878487c08a1">Botan</a>, <a class="el" href="class_ohagi.html#aefd06d07f829365ba425727cf2425e1c">Ohagi</a>, <a class="el" href="class_player.html#a4eaaeb9d0967fef59baac319b9cc8d60">Player</a>で実装されています。</p>
 
 </div>
 </div>
-<a id="a10ef1a073e930eda4cab2c555d05c52f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10ef1a073e930eda4cab2c555d05c52f">&#9670;&nbsp;</a></span>IsActive()</h2>
+<a id="a7a8ebe4b210ee3c6ec7098d14e70e263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8ebe4b210ee3c6ec7098d14e70e263">&#9670;&nbsp;</a></span>IsActive()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -607,7 +543,7 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Character::IsActive </td>
+          <td class="memname">bool Character::IsActive </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -620,32 +556,15 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_player.html#a4ec9eb479cf249fe8dc2e7613b09d437">Player</a>で再実装されています。</p>
+<p>キャラクターがアクティブかどうかを調べる関数 </p>
+<dl class="section return"><dt>戻り値</dt><dd>bool true : アクティブ false : 非アクティブ </dd></dl>
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00038">38</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a10ef1a073e930eda4cab2c555d05c52f_icgraph.png" border="0" usemap="#class_character_a10ef1a073e930eda4cab2c555d05c52f_icgraph" alt=""/></div>
-<map name="class_character_a10ef1a073e930eda4cab2c555d05c52f_icgraph" id="class_character_a10ef1a073e930eda4cab2c555d05c52f_icgraph">
-<area shape="rect" title=" " alt="" coords="644,81,775,108"/>
-<area shape="rect" href="_clear_scene_8h.html#a154e4ba3962b084e7552af3a805726a0" title="ゲームオーバーシーンの描画関数 ゲームオーバーシーンのオブジェクトを描画するための関数" alt="" coords="471,5,590,32"/>
-<area shape="rect" href="_clear_scene_8cpp.html#a275bde985124cedd4fcfd1e3003bc1a4" title=" " alt="" coords="477,56,584,83"/>
-<area shape="rect" href="_game_scene_8cpp.html#ae5041f4f90cb0d4b1d83b4e738fc1d73" title=" " alt="" coords="469,107,592,133"/>
-<area shape="rect" href="_monitor_scene_8cpp.html#aebcee0a0a21b4af3c111191089b2b70e" title=" " alt="" coords="465,157,596,184"/>
-<area shape="rect" href="_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab" title="シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない" alt="" coords="302,5,390,32"/>
-<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,81,227,108"/>
-<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,81,79,108"/>
-<area shape="rect" href="_clear_scene_8h.html#ad87d3394130984bbd676d78e680a2b83" title="ゲームオーバーシーンの更新関数 ゲームオーバーシーンの仕様が実行される" alt="" coords="281,56,411,83"/>
-<area shape="rect" href="_game_scene_8h.html#aaa0f133f9ce54fe2b94a1ed07d922be8" title=" " alt="" coords="279,107,413,133"/>
-<area shape="rect" href="_monitor_scene_8h.html#a502ddcf70f16f597857a74a4c5b0aff8" title=" " alt="" coords="275,157,417,184"/>
-</map>
-</div>
+<p><a class="el" href="class_player.html#a22c7df92dbe1d5e2e0aa50b937ce0966">Player</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="abc549f5b4ebc1f79253bb1e25cd630a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc549f5b4ebc1f79253bb1e25cd630a6">&#9670;&nbsp;</a></span>LoadTex()</h2>
+<a id="ab52c6c1bfb2133a6f0bb1e7e39d091c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52c6c1bfb2133a6f0bb1e7e39d091c3">&#9670;&nbsp;</a></span>KillAnimation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -654,10 +573,9 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Character::LoadTex </td>
+          <td class="memname">void Character::KillAnimation </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a>&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -668,29 +586,14 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_botan.html#a3c6375b593e9e88f6f31f25ea2ae361f">Botan</a>, <a class="el" href="class_margaret.html#ac4b6364a66fb32eee51ab1a614f80f3e">Margaret</a>, <a class="el" href="class_sakura.html#a6ae0a88c3f2c6302441d57c32a3dc505">Sakura</a>, <a class="el" href="class_ohagi.html#a1ca34f2fc6eb3f0131292e01a16667de">Ohagi</a>, <a class="el" href="class_ume.html#a3ce61db2365a3d54b8a11ddd86be51a1">Ume</a>, <a class="el" href="class_enemy.html#a5eb22e7d02bdb2772afd42dbbd65a881">Enemy</a>, <a class="el" href="class_ran.html#acbb522be78b4115a9cc818a01824587e">Ran</a>で再実装されています。</p>
+<p>キルアニメーションの描画関数 </p>
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00046">46</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_abc549f5b4ebc1f79253bb1e25cd630a6_icgraph.png" border="0" usemap="#class_character_abc549f5b4ebc1f79253bb1e25cd630a6_icgraph" alt=""/></div>
-<map name="class_character_abc549f5b4ebc1f79253bb1e25cd630a6_icgraph" id="class_character_abc549f5b4ebc1f79253bb1e25cd630a6_icgraph">
-<area shape="rect" title=" " alt="" coords="865,31,1000,57"/>
-<area shape="rect" href="class_character_manager.html#a86dd3195c553571db938f8bf14b1ae63" title=" " alt="" coords="632,31,817,57"/>
-<area shape="rect" href="_game_scene_8cpp.html#a1ece36617d8acd26e8fee2f8c8a56613" title=" " alt="" coords="469,5,580,32"/>
-<area shape="rect" href="_monitor_scene_8cpp.html#a733fdf79f0d2d3190dfc349350d5e9df" title=" " alt="" coords="465,56,584,83"/>
-<area shape="rect" href="_game_scene_8h.html#aaa0f133f9ce54fe2b94a1ed07d922be8" title=" " alt="" coords="279,5,413,32"/>
-<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,31,227,57"/>
-<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,31,79,57"/>
-<area shape="rect" href="_monitor_scene_8h.html#a502ddcf70f16f597857a74a4c5b0aff8" title=" " alt="" coords="275,56,417,83"/>
-</map>
-</div>
+<p><a class="el" href="class_margaret.html#abf889c54361c6ac6f4d0f5c704a79dd8">Margaret</a>, <a class="el" href="class_ran.html#a09d56e150c9d5c4c1bf99c84619794fa">Ran</a>, <a class="el" href="class_sakura.html#ae9585203a6abe573936c652366f5b13d">Sakura</a>, <a class="el" href="class_ume.html#a8b433cf057f3e9262a460a75a48fbf61">Ume</a>, <a class="el" href="class_botan.html#a5f9c31b11c42235ef7e55fbc0ed22336">Botan</a>, <a class="el" href="class_ohagi.html#ac426bed397bf8f5f4a3e522d757c2cf5">Ohagi</a>で再実装されています。</p>
 
 </div>
 </div>
-<a id="a554d31593b3eee38178bd7c7804ef7fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a554d31593b3eee38178bd7c7804ef7fb">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="a606ae9bec2acc1aa8098ad7a454b4857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606ae9bec2acc1aa8098ad7a454b4857">&#9670;&nbsp;</a></span>SpawnJudgement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,7 +602,37 @@ Character の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Character::Update </td>
+          <td class="memname">bool Character::SpawnJudgement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>m_SpawnJudgementを返す </p>
+<dl class="section return"><dt>戻り値</dt><dd>bool </dd></dl>
+
+<p><a class="el" href="class_botan.html#aacd89bafe01fdc37e5a68cebbccc30e1">Botan</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a2d4adac2e550add4608474b7a87d9466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4adac2e550add4608474b7a87d9466">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Character::Update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -712,122 +645,13 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_margaret.html#a825c0221ca252a9488cde4cb74a119f6">Margaret</a>, <a class="el" href="class_ran.html#a002243e1837061ed361c62f68a189aac">Ran</a>, <a class="el" href="class_ume.html#a2a1a52519b647ddd20c85f7d467596c2">Ume</a>, <a class="el" href="class_sakura.html#a60c98cd32641685d33e983aa1f2b16d9">Sakura</a>, <a class="el" href="class_ohagi.html#a831e45b2b288c9ad862fc766989238fd">Ohagi</a>, <a class="el" href="class_botan.html#a7e9c22e468535d2c0b206c7d1e5a48d9">Botan</a>, <a class="el" href="class_enemy.html#ad880b3aa85d38ee61d3bf1352163f3c6">Enemy</a>, <a class="el" href="class_player.html#a5e17be3418fa0ac0192c05efaf3dc8bd">Player</a>で実装されています。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_character_a554d31593b3eee38178bd7c7804ef7fb_icgraph.png" border="0" usemap="#class_character_a554d31593b3eee38178bd7c7804ef7fb_icgraph" alt=""/></div>
-<map name="class_character_a554d31593b3eee38178bd7c7804ef7fb_icgraph" id="class_character_a554d31593b3eee38178bd7c7804ef7fb_icgraph">
-<area shape="rect" title=" " alt="" coords="869,31,996,57"/>
-<area shape="rect" href="class_character_manager.html#ab0f3ee8cb1ea5c16d3e1791991f7a876" title=" " alt="" coords="644,31,821,57"/>
-<area shape="rect" href="_game_scene_8cpp.html#ae5041f4f90cb0d4b1d83b4e738fc1d73" title=" " alt="" coords="469,5,592,32"/>
-<area shape="rect" href="_monitor_scene_8cpp.html#aebcee0a0a21b4af3c111191089b2b70e" title=" " alt="" coords="465,56,596,83"/>
-<area shape="rect" href="_game_scene_8h.html#aaa0f133f9ce54fe2b94a1ed07d922be8" title=" " alt="" coords="279,5,413,32"/>
-<area shape="rect" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684" title="シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない" alt="" coords="127,31,227,57"/>
-<area shape="rect" href="_main_8cpp.html#ae08e2eced892351db2a45383c3b982d6" title=" " alt="" coords="5,31,79,57"/>
-<area shape="rect" href="_monitor_scene_8h.html#a502ddcf70f16f597857a74a4c5b0aff8" title=" " alt="" coords="275,56,417,83"/>
-</map>
-</div>
+<p>キャラクターの更新関数 </p>
+
+<p><a class="el" href="class_margaret.html#a825c0221ca252a9488cde4cb74a119f6">Margaret</a>, <a class="el" href="class_enemy.html#ad880b3aa85d38ee61d3bf1352163f3c6">Enemy</a>, <a class="el" href="class_ran.html#a002243e1837061ed361c62f68a189aac">Ran</a>, <a class="el" href="class_sakura.html#a60c98cd32641685d33e983aa1f2b16d9">Sakura</a>, <a class="el" href="class_ume.html#a2a1a52519b647ddd20c85f7d467596c2">Ume</a>, <a class="el" href="class_botan.html#a7e9c22e468535d2c0b206c7d1e5a48d9">Botan</a>, <a class="el" href="class_ohagi.html#a831e45b2b288c9ad862fc766989238fd">Ohagi</a>, <a class="el" href="class_player.html#a5e17be3418fa0ac0192c05efaf3dc8bd">Player</a>で実装されています。</p>
 
 </div>
 </div>
 <h2 class="groupheader">メンバ詳解</h2>
-<a id="a56eddba73c39defe9933a942dec08bde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56eddba73c39defe9933a942dec08bde">&#9670;&nbsp;</a></span>m_HasKill</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Character::m_HasKill</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00065">65</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a192bb39fbb31cc6f8945bb3e4feca55e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a192bb39fbb31cc6f8945bb3e4feca55e">&#9670;&nbsp;</a></span>m_HasLight</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Character::m_HasLight</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00060">60</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a7625d8d90e93ffed8ba03061bf91aa08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7625d8d90e93ffed8ba03061bf91aa08">&#9670;&nbsp;</a></span>m_HasMask</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Character::m_HasMask</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00059">59</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a18604627713d4b0d62f3857fca364d3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18604627713d4b0d62f3857fca364d3b">&#9670;&nbsp;</a></span>m_HasMonitor</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Character::m_HasMonitor</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00061">61</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <a id="a0dee035b9de6807947e2049c992d8159"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0dee035b9de6807947e2049c992d8159">&#9670;&nbsp;</a></span>m_IsActive</h2>
 
@@ -848,47 +672,17 @@ Character の継承関係図</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00052">52</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a040ee7d0c5c472e6bcaba862b9292c8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a040ee7d0c5c472e6bcaba862b9292c8a">&#9670;&nbsp;</a></span>m_MonitorViewID</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_game_data_8h.html#a55aa192d9faea04a29598049cbcffda7">MonitorView</a> Character::m_MonitorViewID</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_character_8h_source.html">Character.h</a> の <a class="el" href="_character_8h_source.html#l00062">62</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>Src/Character/<a class="el" href="_character_8h_source.html">Character.h</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Character/<a class="el" href="_character_8h_source.html">Character.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_character.html">Character</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

@@ -1,0 +1,67 @@
+\hypertarget{class_game_data}{}\doxysection{Game\+Data クラス}
+\label{class_game_data}\index{GameData@{GameData}}
+
+
+外部ファイルから読み込んできた値を管理  
+
+
+
+
+{\ttfamily \#include $<$Game\+Data.\+h$>$}
+
+
+
+\mbox{\hyperlink{class_singleton}{Singleton$<$ Game\+Data $>$}}を継承しています。
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_data_a3f81cfe73ef9ac5aee18902a2c447986}{Load\+Game\+Data}} ()
+\begin{DoxyCompactList}\small\item\em 指定の\+C\+S\+Vから値の抜き出し \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_enemy_data}{Enemy\+Data}} \mbox{\hyperlink{class_game_data_ae2c00ff1c39a156dd9e6175b95c32183}{Get\+Enemy\+Data}} (\mbox{\hyperlink{_character_i_d_8h_acb05422f600e20c88d7c75432fe2d32b}{Enemy\+ID}} enemy\+Id\+\_\+) const
+\item 
+\mbox{\hyperlink{struct_game_param}{Game\+Param}} \mbox{\hyperlink{class_game_data_aa9cabee58bb6d82be2de203fd830e889}{Get\+Game\+Param}} () const
+\item 
+\mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days}} \mbox{\hyperlink{class_game_data_aacfde291e648c610c55c977a74b68d45}{Get\+Days}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{詳解}
+外部ファイルから読み込んできた値を管理 
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_game_data_aacfde291e648c610c55c977a74b68d45}\label{class_game_data_aacfde291e648c610c55c977a74b68d45}} 
+\index{GameData@{GameData}!GetDays@{GetDays}}
+\index{GetDays@{GetDays}!GameData@{GameData}}
+\doxysubsubsection{\texorpdfstring{GetDays()}{GetDays()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_day_controller_8h_a3b3e547cfc41fcb2479d1a7e56c51990}{Days}} Game\+Data\+::\+Get\+Days (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_game_data_ae2c00ff1c39a156dd9e6175b95c32183}\label{class_game_data_ae2c00ff1c39a156dd9e6175b95c32183}} 
+\index{GameData@{GameData}!GetEnemyData@{GetEnemyData}}
+\index{GetEnemyData@{GetEnemyData}!GameData@{GameData}}
+\doxysubsubsection{\texorpdfstring{GetEnemyData()}{GetEnemyData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_enemy_data}{Enemy\+Data}} Game\+Data\+::\+Get\+Enemy\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_character_i_d_8h_acb05422f600e20c88d7c75432fe2d32b}{Enemy\+ID}}}]{enemy\+Id\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+クラスの値を返す関数群 \mbox{\Hypertarget{class_game_data_aa9cabee58bb6d82be2de203fd830e889}\label{class_game_data_aa9cabee58bb6d82be2de203fd830e889}} 
+\index{GameData@{GameData}!GetGameParam@{GetGameParam}}
+\index{GetGameParam@{GetGameParam}!GameData@{GameData}}
+\doxysubsubsection{\texorpdfstring{GetGameParam()}{GetGameParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_param}{Game\+Param}} Game\+Data\+::\+Get\+Game\+Param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_game_data_a3f81cfe73ef9ac5aee18902a2c447986}\label{class_game_data_a3f81cfe73ef9ac5aee18902a2c447986}} 
+\index{GameData@{GameData}!LoadGameData@{LoadGameData}}
+\index{LoadGameData@{LoadGameData}!GameData@{GameData}}
+\doxysubsubsection{\texorpdfstring{LoadGameData()}{LoadGameData()}}
+{\footnotesize\ttfamily Game\+Data\+::\+Load\+Game\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+指定の\+C\+S\+Vから値の抜き出し 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Data/\mbox{\hyperlink{_game_data_8h}{Game\+Data.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Data/\mbox{\hyperlink{_game_data_8cpp}{Game\+Data.\+cpp}}\end{DoxyCompactItemize}

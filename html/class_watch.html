@@ -9,14 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -53,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('class_watch.html','');});
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,10 +59,10 @@ $(document).ready(function(){initNavTree('class_watch.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="#pri-attribs">非公開変数類</a> &#124;
 <a href="class_watch-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">Watch クラス</div>  </div>
@@ -98,29 +73,8 @@ $(document).ready(function(){initNavTree('class_watch.html','');});
  <a href="class_watch.html#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_player_item_8h_source.html">PlayerItem.h</a>&gt;</code></p>
-<div class="dynheader">
-Watch の継承関係図</div>
-<div class="dyncontent">
-<div class="center"><img src="class_watch__inherit__graph.png" border="0" usemap="#_watch_inherit__map" alt="Inheritance graph"/></div>
-<map name="_watch_inherit__map" id="_watch_inherit__map">
-<area shape="rect" title="時計を管理するクラス" alt="" coords="5,155,65,181"/>
-<area shape="rect" href="class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="12,80,59,107"/>
-<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
-<div class="dynheader">
-Watch 連携図</div>
-<div class="dyncontent">
-<div class="center"><img src="class_watch__coll__graph.png" border="0" usemap="#_watch_coll__map" alt="Collaboration graph"/></div>
-<map name="_watch_coll__map" id="_watch_coll__map">
-<area shape="rect" title="時計を管理するクラス" alt="" coords="279,185,339,212"/>
-<area shape="rect" href="class_item.html" title="最終継承先に使えそうな関数や変数を格納するクラス" alt="" coords="168,109,215,136"/>
-<area shape="rect" href="class_object.html" title="オブジェクトを管理するクラス" alt="" coords="5,5,65,32"/>
-<area shape="rect" href="struct_vec2.html" title="Vector用構造体(2D版)" alt="" coords="89,5,141,32"/>
-<area shape="rect" href="struct_size.html" title="サイズデータ用構造体" alt="" coords="167,5,215,32"/>
-<area shape="rect" href="struct_texture.html" title="テクスチャデータやサイズを保持する構造体" alt="" coords="280,5,345,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+
+<p><a class="el" href="class_item.html">Item</a>を継承しています。</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
@@ -182,12 +136,8 @@ Watch 連携図</div>
 <tr class="separator:a56b5956cea5204d55183a444a01a30d6 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fd4b731f381df03c9aa9f5afcbd73c7 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7">HasMask</a> ()</td></tr>
 <tr class="separator:a3fd4b731f381df03c9aa9f5afcbd73c7 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-非公開変数類</h2></td></tr>
-<tr class="memitem:a37cdde0d0feb579b67955f8a4f88deda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_watch.html#a37cdde0d0feb579b67955f8a4f88deda">m_pOnHitTex</a></td></tr>
-<tr class="memdesc:a37cdde0d0feb579b67955f8a4f88deda"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスオーバー時の画像  <a href="class_watch.html#a37cdde0d0feb579b67955f8a4f88deda">[詳解]</a><br /></td></tr>
-<tr class="separator:a37cdde0d0feb579b67955f8a4f88deda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c01db131509235804689e9da5af6ad5 inherit pub_methods_class_object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html#a9c01db131509235804689e9da5af6ad5">LoadTex</a> ()</td></tr>
+<tr class="separator:a9c01db131509235804689e9da5af6ad5 inherit pub_methods_class_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
@@ -217,8 +167,6 @@ Watch 連携図</div>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>時計を管理するクラス </p>
-
-<p class="definition"> <a class="el" href="_player_item_8h_source.html">PlayerItem.h</a> の <a class="el" href="_player_item_8h_source.html#l00106">106</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="ad89783cfa9feb47c0b7242adf635cebb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89783cfa9feb47c0b7242adf635cebb">&#9670;&nbsp;</a></span>Watch()</h2>
@@ -244,8 +192,6 @@ Watch 連携図</div>
 </div><div class="memdoc">
 
 <p>コンストラクタ </p>
-
-<p class="definition"> <a class="el" href="_player_item_8h_source.html">PlayerItem.h</a> の <a class="el" href="_player_item_8h_source.html#l00109">109</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -273,8 +219,6 @@ Watch 連携図</div>
 </div><div class="memdoc">
 
 <p>デストラクタ </p>
-
-<p class="definition"> <a class="el" href="_player_item_8h_source.html">PlayerItem.h</a> の <a class="el" href="_player_item_8h_source.html#l00111">111</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -309,17 +253,6 @@ Watch 連携図</div>
 
 <p><a class="el" href="class_object.html#acbd787db750bc1be296d152b324acf20">Object</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_player_item_8h_source.html">PlayerItem.h</a> の <a class="el" href="_player_item_8h_source.html#l00176">176</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_watch_a69bfb791c78e56c1b145161442af887f_cgraph.png" border="0" usemap="#class_watch_a69bfb791c78e56c1b145161442af887f_cgraph" alt=""/></div>
-<map name="class_watch_a69bfb791c78e56c1b145161442af887f_cgraph" id="class_watch_a69bfb791c78e56c1b145161442af887f_cgraph">
-<area shape="rect" title="時計の描画 死亡していなければ描画 マウスオーバーでエフェクトの追加" alt="" coords="5,5,103,32"/>
-<area shape="rect" href="_graphics_8cpp.html#ae127ebbc405f6d4a791de7e8bf392e72" title="テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。" alt="" coords="151,5,245,32"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="a92a6fe78df72c5dfa66b1d672af9c284"></a>
@@ -351,20 +284,6 @@ Watch 連携図</div>
 オブジェクトサイズの指定 </p>
 
 <p><a class="el" href="class_object.html#a7254c74e9926c9c9e5076b606dbfc962">Object</a>を実装しています。</p>
-
-<p class="definition"> <a class="el" href="_player_item_8h_source.html">PlayerItem.h</a> の <a class="el" href="_player_item_8h_source.html#l00120">120</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_watch_a92a6fe78df72c5dfa66b1d672af9c284_cgraph.png" border="0" usemap="#class_watch_a92a6fe78df72c5dfa66b1d672af9c284_cgraph" alt=""/></div>
-<map name="class_watch_a92a6fe78df72c5dfa66b1d672af9c284_cgraph" id="class_watch_a92a6fe78df72c5dfa66b1d672af9c284_cgraph">
-<area shape="rect" title="時計の初期化 テクスチャの読み込み 座標の指定 オブジェクトサイズの指定" alt="" coords="5,31,91,57"/>
-<area shape="rect" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885" title="テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する" alt="" coords="142,5,229,32"/>
-<area shape="rect" href="_texture_8cpp.html#ab555a1fa81787321e2d28314fcb11a69" title="テクスチャの読み込み 指定したされたパスのテクスチャを読み込み、カテゴリに登録する" alt="" coords="139,56,232,83"/>
-<area shape="rect" href="_texture_8cpp.html#a6e2ee2f8a6b73d5dd110a6deb43b64be" title=" " alt="" coords="280,5,439,32"/>
-<area shape="rect" href="_graphics_8cpp.html#a23eb2b43afea51b17b043323ac582b21" title="テクスチャ作成 指定された情報から読み込み、テクスチャを作成する ※開発側はFile.hのLoadTextureを使用してください。" alt="" coords="308,56,411,83"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -398,62 +317,17 @@ Watch 連携図</div>
 
 <p><a class="el" href="class_object.html#a5ee5c17a09981cbd7c469370e210b4ff">Object</a>を実装しています。</p>
 
-<p class="definition"> <a class="el" href="_player_item_8h_source.html">PlayerItem.h</a> の <a class="el" href="_player_item_8h_source.html#l00143">143</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_watch_af9d38be1512f05cad910968e7e8aba5d_cgraph.png" border="0" usemap="#class_watch_af9d38be1512f05cad910968e7e8aba5d_cgraph" alt=""/></div>
-<map name="class_watch_af9d38be1512f05cad910968e7e8aba5d_cgraph" id="class_watch_af9d38be1512f05cad910968e7e8aba5d_cgraph">
-<area shape="rect" title="時計の更新 ゲームシーン以外では死亡 死んでいなければ当たり判定を取る" alt="" coords="5,81,115,108"/>
-<area shape="rect" href="_game_data_8cpp.html#ae547a3bb0f32ebf53a09a612c1147746" title=" " alt="" coords="186,5,271,32"/>
-<area shape="rect" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746" title="現在実行中のシーンIDの取得関数" alt="" coords="163,56,295,83"/>
-<area shape="rect" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee" title="マウスの座標取得関数" alt="" coords="176,107,281,133"/>
-<area shape="rect" href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac" title=" " alt="" coords="169,157,288,184"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">メンバ詳解</h2>
-<a id="a37cdde0d0feb579b67955f8a4f88deda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37cdde0d0feb579b67955f8a4f88deda">&#9670;&nbsp;</a></span>m_pOnHitTex</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_texture.html">Texture</a>* Watch::m_pOnHitTex</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>マウスオーバー時の画像 </p>
-
-<p class="definition"> <a class="el" href="_player_item_8h_source.html">PlayerItem.h</a> の <a class="el" href="_player_item_8h_source.html#l00188">188</a> 行目に定義があります。</p>
-
 </div>
 </div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>Src/Object/Item/Id/<a class="el" href="_player_item_8h_source.html">PlayerItem.h</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/Item/Id/<a class="el" href="_player_item_8h_source.html">PlayerItem.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_watch.html">Watch</a></li>
-    <li class="footer">構築:
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
 </body>
 </html>

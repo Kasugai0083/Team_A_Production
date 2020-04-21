@@ -12,22 +12,8 @@
 
 
 
-Fire の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=125pt]{class_fire__inherit__graph}
-\end{center}
-\end{figure}
+\mbox{\hyperlink{class_item}{Item}}を継承しています。
 
-
-Fire 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=311pt]{class_fire__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,30 +35,11 @@ void \mbox{\hyperlink{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}{Update}} () 
 void \mbox{\hyperlink{class_fire_ad079ebe0f50929022b4e33ea406e4412}{Draw}} () override
 \begin{DoxyCompactList}\small\item\em 蝋燭の点灯情報と自身の生存情報に基づいて描画~\newline
 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{非公開メンバ関数}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_fire_ac6834116a6ee8bfa441760c38c250501}{Scene\+Death}} ()
-\begin{DoxyCompactList}\small\item\em Game\+View 情報から生存情報を管理 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8}{Fire\+Switch}} (bool center\+\_\+switch\+\_\+, bool left\+\_\+switch\+\_\+, bool right\+\_\+switch\+\_\+)
-\begin{DoxyCompactList}\small\item\em 生存情報を引数によって管理 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_object}{Object}} $\ast$ \mbox{\hyperlink{class_fire_aa189e5954db3395317fb2f8a36fe26de}{m\+\_\+p\+Object}}
-\begin{DoxyCompactList}\small\item\em 蝋燭情報の取得用変数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
 蝋燭の火を管理するクラス~\newline
-
-
-オブジェクトの葉（最終継承先）~\newline
-蝋燭の火を管理するクラスを格納 
-
- Fire.\+h の 16 行目に定義があります。
-
 
 
 \doxysubsection{構築子と解体子}
@@ -95,10 +62,6 @@ void \mbox{\hyperlink{class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8}{Fire\+Switch
 \end{DoxyParams}
 
 
- Fire.\+h の 24 行目に定義があります。
-
-
-
 \doxysubsection{関数詳解}
 \mbox{\Hypertarget{class_fire_ad079ebe0f50929022b4e33ea406e4412}\label{class_fire_ad079ebe0f50929022b4e33ea406e4412}} 
 \index{Fire@{Fire}!Draw@{Draw}}
@@ -115,38 +78,6 @@ void \mbox{\hyperlink{class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8}{Fire\+Switch
 
 \mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{Object}}を実装しています。
 
-
-
- Fire.\+cpp の 138 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_fire_ad079ebe0f50929022b4e33ea406e4412_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8}\label{class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8}} 
-\index{Fire@{Fire}!FireSwitch@{FireSwitch}}
-\index{FireSwitch@{FireSwitch}!Fire@{Fire}}
-\doxysubsubsection{\texorpdfstring{FireSwitch()}{FireSwitch()}}
-{\footnotesize\ttfamily void Fire\+::\+Fire\+Switch (\begin{DoxyParamCaption}\item[{bool}]{center\+\_\+switch\+\_\+,  }\item[{bool}]{left\+\_\+switch\+\_\+,  }\item[{bool}]{right\+\_\+switch\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-生存情報を引数によって管理 
-
-
-
- Fire.\+cpp の 53 行目に定義があります。
-
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_fire_a516fbe2b9263e9b85d3f2b46eab3e9f8_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870}\label{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870}} 
 \index{Fire@{Fire}!Init@{Init}}
 \index{Init@{Init}!Fire@{Fire}}
@@ -166,45 +97,6 @@ m\+\_\+\+Id に基づいて \mbox{\hyperlink{class_candle}{Candle}} をインス
 
 \mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Object}}を実装しています。
 
-
-
- Fire.\+cpp の 3 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_fire_ac6834116a6ee8bfa441760c38c250501}\label{class_fire_ac6834116a6ee8bfa441760c38c250501}} 
-\index{Fire@{Fire}!SceneDeath@{SceneDeath}}
-\index{SceneDeath@{SceneDeath}!Fire@{Fire}}
-\doxysubsubsection{\texorpdfstring{SceneDeath()}{SceneDeath()}}
-{\footnotesize\ttfamily void Fire\+::\+Scene\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Game\+View 情報から生存情報を管理 
-
-Update内で使用されている関数 
-
- Fire.\+cpp の 69 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=307pt]{class_fire_ac6834116a6ee8bfa441760c38c250501_cgraph}
-\end{center}
-\end{figure}
-被呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=278pt]{class_fire_ac6834116a6ee8bfa441760c38c250501_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}\label{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}} 
 \index{Fire@{Fire}!Update@{Update}}
 \index{Update@{Update}!Fire@{Fire}}
@@ -223,35 +115,7 @@ Update内で使用されている関数
 
 
 
- Fire.\+cpp の 87 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_fire_a98dc82aa5d04562e3f298deda6c37a9a_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_fire_aa189e5954db3395317fb2f8a36fe26de}\label{class_fire_aa189e5954db3395317fb2f8a36fe26de}} 
-\index{Fire@{Fire}!m\_pObject@{m\_pObject}}
-\index{m\_pObject@{m\_pObject}!Fire@{Fire}}
-\doxysubsubsection{\texorpdfstring{m\_pObject}{m\_pObject}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_object}{Object}}$\ast$ Fire\+::m\+\_\+p\+Object\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-蝋燭情報の取得用変数 
-
-
-
- Fire.\+h の 63 行目に定義があります。
-
-
-
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_fire_8h}{Fire.\+h}}\item 
-Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_fire_8cpp}{Fire.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_fire_8h}{Fire.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_fire_8cpp}{Fire.\+cpp}}\end{DoxyCompactItemize}

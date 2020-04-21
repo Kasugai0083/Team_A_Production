@@ -2,57 +2,39 @@
 \label{class_ohagi}\index{Ohagi@{Ohagi}}
 
 
-{\ttfamily \#include $<$Freddy.\+h$>$}
+エネミー\mbox{[}オハギ\mbox{]}を管理するクラス  
 
 
 
-Ohagi の継承関係図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=139pt]{class_ohagi__inherit__graph}
-\end{center}
-\end{figure}
+
+{\ttfamily \#include $<$Ohagi.\+h$>$}
 
 
-Ohagi 連携図\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=280pt]{class_ohagi__coll__graph}
-\end{center}
-\end{figure}
+
+\mbox{\hyperlink{class_enemy}{Enemy}}を継承しています。
+
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_ohagi_a0ed0c1beeb7a434d7e78b41b7c18ec31}{Ohagi}} ()
-\item 
-virtual \mbox{\hyperlink{class_ohagi_a0963e7f1aab0af95231fefcd3712109d}{$\sim$\+Ohagi}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_ohagi_ae66b61157d6888c17b0ca7477cd82e69}{$\sim$\+Ohagi}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ohagi_aefd06d07f829365ba425727cf2425e1c}{Init}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ohagi_a831e45b2b288c9ad862fc766989238fd}{Update}} () override
-\item 
-virtual bool \mbox{\hyperlink{class_ohagi_a4acd787f0da3a86dd464cd91aeb91cb0}{Has\+Kill}} () const override
-\item 
-virtual void \mbox{\hyperlink{class_ohagi_a1ca34f2fc6eb3f0131292e01a16667de}{Load\+Tex}} (\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} id\+\_\+) override
-\item 
+\begin{DoxyCompactList}\small\item\em キャラクターの更新関数 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ohagi_a2ccb7e8eb90221f8bc8ddc1e1a822461}{Draw}} () override
-\end{DoxyCompactItemize}
-\doxysubsection*{非公開変数類}
-\begin{DoxyCompactItemize}
-\item 
-const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} \mbox{\hyperlink{class_ohagi_a343d1ace388c9ebd7ce6515c3553852b}{m\+\_\+\+Char\+Id}} = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fac586b74ad3e7aec2d6426d5e61a30c51}{Character\+I\+D\+::\+O\+H\+A\+GI}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 描画関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ohagi_ac426bed397bf8f5f4a3e522d757c2cf5}{Kill\+Animation}} () override
+\begin{DoxyCompactList}\small\item\em キルアニメーションの描画関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{その他の継承メンバ}
 
 
 \doxysubsection{詳解}
+エネミー\mbox{[}オハギ\mbox{]}を管理するクラス 
 
-
- Freddy.\+h の 13 行目に定義があります。
-
-
+オハギの挙動や描画を実装している 
 
 \doxysubsection{構築子と解体子}
 \mbox{\Hypertarget{class_ohagi_a0ed0c1beeb7a434d7e78b41b7c18ec31}\label{class_ohagi_a0ed0c1beeb7a434d7e78b41b7c18ec31}} 
@@ -63,24 +45,17 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
- Freddy.\+h の 19 行目に定義があります。
+コンストラクタ 
 
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_ohagi_a0ed0c1beeb7a434d7e78b41b7c18ec31_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ohagi_a0963e7f1aab0af95231fefcd3712109d}\label{class_ohagi_a0963e7f1aab0af95231fefcd3712109d}} 
+\mbox{\Hypertarget{class_ohagi_ae66b61157d6888c17b0ca7477cd82e69}\label{class_ohagi_ae66b61157d6888c17b0ca7477cd82e69}} 
 \index{Ohagi@{Ohagi}!````~Ohagi@{$\sim$Ohagi}}
 \index{````~Ohagi@{$\sim$Ohagi}!Ohagi@{Ohagi}}
 \doxysubsubsection{\texorpdfstring{$\sim$Ohagi()}{~Ohagi()}}
-{\footnotesize\ttfamily virtual Ohagi\+::$\sim$\+Ohagi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Ohagi\+::$\sim$\+Ohagi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
- Freddy.\+h の 39 行目に定義があります。
+デストラクタ 
 
 
 
@@ -93,32 +68,11 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_character_a051c409115c689480f0246f6a4743474}{Character}}を実装しています。
+描画関数 
 
 
 
- Freddy.\+cpp の 113 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_ohagi_a2ccb7e8eb90221f8bc8ddc1e1a822461_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ohagi_a4acd787f0da3a86dd464cd91aeb91cb0}\label{class_ohagi_a4acd787f0da3a86dd464cd91aeb91cb0}} 
-\index{Ohagi@{Ohagi}!HasKill@{HasKill}}
-\index{HasKill@{HasKill}!Ohagi@{Ohagi}}
-\doxysubsubsection{\texorpdfstring{HasKill()}{HasKill()}}
-{\footnotesize\ttfamily virtual bool Ohagi\+::\+Has\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-\mbox{\hyperlink{class_enemy_ab7b752c2b8898f5dbffd6df567b2b965}{Enemy}}を再実装しています。
-
-
-
- Freddy.\+h の 52 行目に定義があります。
+\mbox{\hyperlink{class_character_ae0c60274d2515e4198b280cde1719a13}{Character}}を実装しています。
 
 \mbox{\Hypertarget{class_ohagi_aefd06d07f829365ba425727cf2425e1c}\label{class_ohagi_aefd06d07f829365ba425727cf2425e1c}} 
 \index{Ohagi@{Ohagi}!Init@{Init}}
@@ -128,40 +82,26 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
-\mbox{\hyperlink{class_enemy_a2b56a302d65e9a32cf37aed8949164e6}{Enemy}}を再実装しています。
+初期化関数 
+
+更新関数 
+
+\mbox{\hyperlink{class_enemy_a0af6416bc431c1ff2d3fb7f8441950c2}{Enemy}}を再実装しています。
+
+\mbox{\Hypertarget{class_ohagi_ac426bed397bf8f5f4a3e522d757c2cf5}\label{class_ohagi_ac426bed397bf8f5f4a3e522d757c2cf5}} 
+\index{Ohagi@{Ohagi}!KillAnimation@{KillAnimation}}
+\index{KillAnimation@{KillAnimation}!Ohagi@{Ohagi}}
+\doxysubsubsection{\texorpdfstring{KillAnimation()}{KillAnimation()}}
+{\footnotesize\ttfamily void Ohagi\+::\+Kill\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
- Freddy.\+cpp の 7 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=254pt]{class_ohagi_aefd06d07f829365ba425727cf2425e1c_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_ohagi_a1ca34f2fc6eb3f0131292e01a16667de}\label{class_ohagi_a1ca34f2fc6eb3f0131292e01a16667de}} 
-\index{Ohagi@{Ohagi}!LoadTex@{LoadTex}}
-\index{LoadTex@{LoadTex}!Ohagi@{Ohagi}}
-\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
-{\footnotesize\ttfamily void Ohagi\+::\+Load\+Tex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}}}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+キルアニメーションの描画関数 
 
 
 
-\mbox{\hyperlink{class_enemy_a5eb22e7d02bdb2772afd42dbbd65a881}{Enemy}}を再実装しています。
+\mbox{\hyperlink{class_character_ab52c6c1bfb2133a6f0bb1e7e39d091c3}{Character}}を再実装しています。
 
-
-
- Freddy.\+cpp の 94 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_ohagi_a1ca34f2fc6eb3f0131292e01a16667de_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{class_ohagi_a831e45b2b288c9ad862fc766989238fd}\label{class_ohagi_a831e45b2b288c9ad862fc766989238fd}} 
 \index{Ohagi@{Ohagi}!Update@{Update}}
 \index{Update@{Update}!Ohagi@{Ohagi}}
@@ -170,35 +110,15 @@ const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Char
 
 
 
+キャラクターの更新関数 
+
+
+
 \mbox{\hyperlink{class_enemy_ad880b3aa85d38ee61d3bf1352163f3c6}{Enemy}}を再実装しています。
-
-
-
- Freddy.\+cpp の 14 行目に定義があります。
-
-呼び出し関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=301pt]{class_ohagi_a831e45b2b288c9ad862fc766989238fd_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{メンバ詳解}
-\mbox{\Hypertarget{class_ohagi_a343d1ace388c9ebd7ce6515c3553852b}\label{class_ohagi_a343d1ace388c9ebd7ce6515c3553852b}} 
-\index{Ohagi@{Ohagi}!m\_CharId@{m\_CharId}}
-\index{m\_CharId@{m\_CharId}!Ohagi@{Ohagi}}
-\doxysubsubsection{\texorpdfstring{m\_CharId}{m\_CharId}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7f}{Character\+ID}} Ohagi\+::m\+\_\+\+Char\+Id = \mbox{\hyperlink{_character_i_d_8h_a240fc5bdcc6e0907d0383be7cf046b7fac586b74ad3e7aec2d6426d5e61a30c51}{Character\+I\+D\+::\+O\+H\+A\+GI}}\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
- Freddy.\+h の 66 行目に定義があります。
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_freddy_8h}{Freddy.\+h}}\item 
-Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_freddy_8cpp}{Freddy.\+cpp}}\end{DoxyCompactItemize}
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_ohagi_8h}{Ohagi.\+h}}\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Character/\+Enemy/\+Id/\mbox{\hyperlink{_ohagi_8cpp}{Ohagi.\+cpp}}\end{DoxyCompactItemize}

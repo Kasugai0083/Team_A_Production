@@ -1,0 +1,77 @@
+\hypertarget{class_singleton}{}\doxysection{Singleton$<$ T $>$ クラステンプレート}
+\label{class_singleton}\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Singleton\+Template.\+h$>$}
+
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_singleton_ac84240fa8ab8dffa691c8bcfb61f18aa}{Create\+Instance}} ()
+\item 
+static void \mbox{\hyperlink{class_singleton_a7446ffdb1aafa3fe7459e43819574fe5}{Destroy\+Instance}} ()
+\item 
+static bool \mbox{\hyperlink{class_singleton_a65e5092d60d23cd7bfd1060ddd4a64e3}{Is\+Null}} ()
+\item 
+static T $\ast$ \mbox{\hyperlink{class_singleton_a9460c2b31ff4dd9f7d022b0fff0afda4}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_singleton_a923b995920da9c06590adb170ab2f890}{Singleton}} ()
+\item 
+\mbox{\hyperlink{class_singleton_ac6e7af82cba33f561bd64e5e0243e7f8}{$\sim$\+Singleton}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_singleton_a923b995920da9c06590adb170ab2f890}\label{class_singleton_a923b995920da9c06590adb170ab2f890}} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!Singleton@{Singleton}}
+\index{Singleton@{Singleton}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Singleton()}{Singleton()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$\+::\mbox{\hyperlink{class_singleton}{Singleton}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_singleton_ac6e7af82cba33f561bd64e5e0243e7f8}\label{class_singleton_ac6e7af82cba33f561bd64e5e0243e7f8}} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!````~Singleton@{$\sim$Singleton}}
+\index{````~Singleton@{$\sim$Singleton}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Singleton()}{~Singleton()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_singleton}{Singleton}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_singleton_ac84240fa8ab8dffa691c8bcfb61f18aa}\label{class_singleton_ac84240fa8ab8dffa691c8bcfb61f18aa}} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!CreateInstance@{CreateInstance}}
+\index{CreateInstance@{CreateInstance}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateInstance()}{CreateInstance()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+static void \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$\+::Create\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_singleton_a7446ffdb1aafa3fe7459e43819574fe5}\label{class_singleton_a7446ffdb1aafa3fe7459e43819574fe5}} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!DestroyInstance@{DestroyInstance}}
+\index{DestroyInstance@{DestroyInstance}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DestroyInstance()}{DestroyInstance()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+static void \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$\+::Destroy\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_singleton_a9460c2b31ff4dd9f7d022b0fff0afda4}\label{class_singleton_a9460c2b31ff4dd9f7d022b0fff0afda4}} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+static T$\ast$ \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$\+::Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_singleton_a65e5092d60d23cd7bfd1060ddd4a64e3}\label{class_singleton_a65e5092d60d23cd7bfd1060ddd4a64e3}} 
+\index{Singleton$<$ T $>$@{Singleton$<$ T $>$}!IsNull@{IsNull}}
+\index{IsNull@{IsNull}!Singleton$<$ T $>$@{Singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsNull()}{IsNull()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+static bool \mbox{\hyperlink{class_singleton}{Singleton}}$<$ T $>$\+::Is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Team\+\_\+\+A\+\_\+\+Production/秋制作 Project\+A ver\+\_\+α/テンプレート/\+Src/\+Utility/\mbox{\hyperlink{_singleton_template_8h}{Singleton\+Template.\+h}}\end{DoxyCompactItemize}

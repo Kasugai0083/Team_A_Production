@@ -1,20 +1,11 @@
-\hypertarget{_calculation_8h}{}\doxysection{Src/\+Engine/\+Calculation.h ファイル}
-\label{_calculation_8h}\index{Src/Engine/Calculation.h@{Src/Engine/Calculation.h}}
+\hypertarget{_calculation_8h}{}\doxysection{Team\+\_\+\+A\+\_\+\+Production/秋制作 ProjectA ver\+\_\+α/テンプレート/\+Src/\+Engine/\+Calculation.h ファイル}
+\label{_calculation_8h}\index{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Engine/Calculation.h@{Team\_A\_Production/秋制作 ProjectA ver\_α/テンプレート/Src/Engine/Calculation.h}}
+
+
+当たり判定を行う関数群  
+
+
 {\ttfamily \#include \char`\"{}../\+Texture/\+Texture.\+h\char`\"{}}\newline
-Calculation.\+h の依存先関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_calculation_8h__incl}
-\end{center}
-\end{figure}
-被依存関係図\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{_calculation_8h__dep__incl}
-\end{center}
-\end{figure}
 \doxysubsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,16 +37,20 @@ bool \mbox{\hyperlink{_calculation_8h_ad6d8d044a0a02eb19634f55b7735126c}{Has\+Ad
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{詳解}
+当たり判定を行う関数群 
+
+\begin{DoxyAuthor}{著者}
+春日井 
+\end{DoxyAuthor}
+
+
 \doxysubsection{マクロ定義詳解}
 \mbox{\Hypertarget{_calculation_8h_a598a3330b3c21701223ee0ca14316eca}\label{_calculation_8h_a598a3330b3c21701223ee0ca14316eca}} 
 \index{Calculation.h@{Calculation.h}!PI@{PI}}
 \index{PI@{PI}!Calculation.h@{Calculation.h}}
 \doxysubsubsection{\texorpdfstring{PI}{PI}}
 {\footnotesize\ttfamily \#define PI~3.\+141592}
-
-
-
- Calculation.\+h の 13 行目に定義があります。
 
 
 
@@ -66,19 +61,11 @@ bool \mbox{\hyperlink{_calculation_8h_ad6d8d044a0a02eb19634f55b7735126c}{Has\+Ad
 \doxysubsubsection{\texorpdfstring{GetDegree()}{GetDegree()}}
 {\footnotesize\ttfamily double Get\+Degree (\begin{DoxyParamCaption}\item[{double}]{rad\+\_\+ }\end{DoxyParamCaption})}
 
-
-
- Calculation.\+cpp の 72 行目に定義があります。
-
 \mbox{\Hypertarget{_calculation_8h_aba2fc1fad98aae01e141cd23b9f760a9}\label{_calculation_8h_aba2fc1fad98aae01e141cd23b9f760a9}} 
 \index{Calculation.h@{Calculation.h}!GetImageRatio@{GetImageRatio}}
 \index{GetImageRatio@{GetImageRatio}!Calculation.h@{Calculation.h}}
 \doxysubsubsection{\texorpdfstring{GetImageRatio()}{GetImageRatio()}}
 {\footnotesize\ttfamily float Get\+Image\+Ratio (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+,  }\item[{float}]{b\+\_\+ }\end{DoxyParamCaption})}
-
-
-
- Calculation.\+cpp の 20 行目に定義があります。
 
 \mbox{\Hypertarget{_calculation_8h_a6d446c6eb515a8db63b683e5a6bc836a}\label{_calculation_8h_a6d446c6eb515a8db63b683e5a6bc836a}} 
 \index{Calculation.h@{Calculation.h}!GetIntegratedImageRatio@{GetIntegratedImageRatio}}
@@ -86,19 +73,11 @@ bool \mbox{\hyperlink{_calculation_8h_ad6d8d044a0a02eb19634f55b7735126c}{Has\+Ad
 \doxysubsubsection{\texorpdfstring{GetIntegratedImageRatio()}{GetIntegratedImageRatio()}}
 {\footnotesize\ttfamily float Get\+Integrated\+Image\+Ratio (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+,  }\item[{float}]{b\+\_\+ }\end{DoxyParamCaption})}
 
-
-
- Calculation.\+cpp の 25 行目に定義があります。
-
 \mbox{\Hypertarget{_calculation_8h_ad2960c19732ac2d59340f9387b9c4273}\label{_calculation_8h_ad2960c19732ac2d59340f9387b9c4273}} 
 \index{Calculation.h@{Calculation.h}!GetPosition@{GetPosition}}
 \index{GetPosition@{GetPosition}!Calculation.h@{Calculation.h}}
 \doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}} Get\+Position (\begin{DoxyParamCaption}\item[{float}]{x\+\_\+,  }\item[{float}]{y\+\_\+ }\end{DoxyParamCaption})}
-
-
-
- Calculation.\+cpp の 11 行目に定義があります。
 
 \mbox{\Hypertarget{_calculation_8h_a87da16a9d29691b5fc3ca07508443a65}\label{_calculation_8h_a87da16a9d29691b5fc3ca07508443a65}} 
 \index{Calculation.h@{Calculation.h}!GetRadian@{GetRadian}}
@@ -106,19 +85,11 @@ bool \mbox{\hyperlink{_calculation_8h_ad6d8d044a0a02eb19634f55b7735126c}{Has\+Ad
 \doxysubsubsection{\texorpdfstring{GetRadian()}{GetRadian()}}
 {\footnotesize\ttfamily double Get\+Radian (\begin{DoxyParamCaption}\item[{double}]{start\+X\+\_\+,  }\item[{double}]{start\+Y\+\_\+,  }\item[{double}]{end\+X\+\_\+,  }\item[{double}]{end\+Y\+\_\+ }\end{DoxyParamCaption})}
 
-
-
- Calculation.\+cpp の 62 行目に定義があります。
-
 \mbox{\Hypertarget{_calculation_8h_ad6d8d044a0a02eb19634f55b7735126c}\label{_calculation_8h_ad6d8d044a0a02eb19634f55b7735126c}} 
 \index{Calculation.h@{Calculation.h}!HasAdvRectangleHit@{HasAdvRectangleHit}}
 \index{HasAdvRectangleHit@{HasAdvRectangleHit}!Calculation.h@{Calculation.h}}
 \doxysubsubsection{\texorpdfstring{HasAdvRectangleHit()}{HasAdvRectangleHit()}}
 {\footnotesize\ttfamily bool Has\+Adv\+Rectangle\+Hit (\begin{DoxyParamCaption}\item[{float}]{x1\+\_\+,  }\item[{float}]{x2\+\_\+,  }\item[{float}]{y1\+\_\+,  }\item[{float}]{y2\+\_\+,  }\item[{float}]{wide1\+\_\+,  }\item[{float}]{wide2\+\_\+,  }\item[{float}]{height1\+\_\+,  }\item[{float}]{height2\+\_\+ }\end{DoxyParamCaption})}
-
-
-
- Calculation.\+cpp の 113 行目に定義があります。
 
 \mbox{\Hypertarget{_calculation_8h_a282237f76affde17a45751b4db6f3a5c}\label{_calculation_8h_a282237f76affde17a45751b4db6f3a5c}} 
 \index{Calculation.h@{Calculation.h}!HasRectangleHit@{HasRectangleHit}}
@@ -126,25 +97,9 @@ bool \mbox{\hyperlink{_calculation_8h_ad6d8d044a0a02eb19634f55b7735126c}{Has\+Ad
 \doxysubsubsection{\texorpdfstring{HasRectangleHit()}{HasRectangleHit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily bool Has\+Rectangle\+Hit (\begin{DoxyParamCaption}\item[{float}]{x1\+\_\+,  }\item[{float}]{y1\+\_\+,  }\item[{float}]{x2\+\_\+,  }\item[{float}]{y2\+\_\+,  }\item[{float}]{x3\+\_\+,  }\item[{float}]{y3\+\_\+ }\end{DoxyParamCaption})}
 
-
-
- Calculation.\+cpp の 101 行目に定義があります。
-
 \mbox{\Hypertarget{_calculation_8h_a79d4e35b1ad02421cb9dde7a23936188}\label{_calculation_8h_a79d4e35b1ad02421cb9dde7a23936188}} 
 \index{Calculation.h@{Calculation.h}!HasRectangleHit@{HasRectangleHit}}
 \index{HasRectangleHit@{HasRectangleHit}!Calculation.h@{Calculation.h}}
 \doxysubsubsection{\texorpdfstring{HasRectangleHit()}{HasRectangleHit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool Has\+Rectangle\+Hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_texture}{Texture}} $\ast$}]{texture\+Data\+\_\+,  }\item[{float}]{x1\+\_\+,  }\item[{float}]{x2\+\_\+,  }\item[{float}]{y1\+\_\+,  }\item[{float}]{y2\+\_\+ }\end{DoxyParamCaption})}
 
-
-
- Calculation.\+cpp の 89 行目に定義があります。
-
-被呼び出し関係図\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=289pt]{_calculation_8h_a79d4e35b1ad02421cb9dde7a23936188_icgraph}
-\end{center}
-\end{figure}
