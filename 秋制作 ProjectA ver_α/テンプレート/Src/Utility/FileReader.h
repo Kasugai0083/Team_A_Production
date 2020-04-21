@@ -1,3 +1,10 @@
+/**
+*	@file Botan.h
+*	@author	中本
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
+
 #ifndef FILEREADER_H_
 #define FILEREADER_H_
 

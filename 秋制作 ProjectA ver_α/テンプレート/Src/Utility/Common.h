@@ -1,4 +1,10 @@
-﻿#pragma once
+﻿/**
+*	@file Botan.h
+*	@author 松本
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
+#pragma once
 
 namespace Mastumoto{
 

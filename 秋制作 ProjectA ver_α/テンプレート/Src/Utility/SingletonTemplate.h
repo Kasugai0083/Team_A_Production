@@ -1,3 +1,9 @@
+/**
+*	@file Botan.h
+*	@author	佐藤
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
 #ifndef SINGLETONTEMPLATE_H_
 #define SINGLETONTEMPLATE_H_
 

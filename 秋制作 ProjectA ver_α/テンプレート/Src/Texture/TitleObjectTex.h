@@ -1,3 +1,10 @@
+/**
+*	@file Botan.h
+*	@author 中地
+*			春日井
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
 #ifndef TITLE_OBJECTTEX_H_
 #define TITLE_OBJECTTEX_H_
 

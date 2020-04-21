@@ -1,3 +1,9 @@
+/**
+*	@file Botan.h
+*	@author	中本
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
 #ifndef PROBABILITY_H_
 #define PROBABILITY_H_
 

@@ -1,6 +1,7 @@
 ﻿/**
 * @file Size.h
 * @brief データのサイズ(横、縦)を保存できる構造体の宣言
+* @author 中地
 */
 #ifndef SIZE_H_
 #define SIZE_H_

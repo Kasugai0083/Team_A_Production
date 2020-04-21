@@ -1,6 +1,7 @@
 ﻿/**
 * @file Vec.h
 * @brief 2Dの情報を保存できる構造体の宣言
+* @author 中地
 */
 #ifndef VEC_H_
 #define VEC_H_

@@ -1,6 +1,7 @@
 ﻿/**
 * @file Texture.h
 * @brief テクスチャの読み込み、解放など、テクスチャに関する関数、定数の宣言
+* @author 中地
 */
 #ifndef TEXTURE_H_
 #define TEXTURE_H_
