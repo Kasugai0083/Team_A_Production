@@ -2,14 +2,15 @@
 #define CALCULATION_H_
 
 /**
-*	@file Botan.h
+*	@file Calculation.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief 当たり判定を行う関数群
 */
 
 #include "../Texture/Texture.h"
 
-struct Position {
+struct Position 
+{
 	float m_X;
 	float m_Y;
 };

@@ -1,9 +1,8 @@
 /**
-*	@file Botan.h
+*	@file EnemyTex.h
 *	@author 中地
-*			春日井
 *			中本
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief キャラクターの画像リスト
 */
 
 

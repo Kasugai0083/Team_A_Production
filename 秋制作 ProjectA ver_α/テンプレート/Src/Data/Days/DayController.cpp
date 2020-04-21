@@ -28,7 +28,6 @@ void DayController::CheckClear() {
 
 	m_pPlayer = g_Manager.GetCharacter(PLAYER);
 	
-	//bool check = true;
 	bool check = m_pPlayer->IsActive();
 
 	FileReader FR;

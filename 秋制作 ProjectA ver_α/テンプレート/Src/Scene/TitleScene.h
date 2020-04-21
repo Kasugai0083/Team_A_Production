@@ -1,9 +1,9 @@
 ﻿/**
-*	@file Botan.h
+*	@file TitleScene.h
 *	@author 中地
 *			春日井
 *			中本
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief タイトルシーン中の処理
 */
 
 #ifndef TITLE_SCENE_H_

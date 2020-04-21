@@ -85,23 +85,6 @@ bool SceneTransition::ChangeStep(Id id_, unsigned long key_) {
 	return false;
 }
 
-//シーン管理用の関数群ここまで
-
-//モニター管理用クラス関数
-MonitorTransition g_qqq;
-MonitorTransition* MonitorFunc() { return &g_qqq; };
-
-int MonitorTransition::Get() {
-	return m_MonitorId;
-}
-
-void MonitorTransition::Set(Id id_) {
-	m_MonitorId = id_;
-}
-
-//ここまで
-
-
 SceneId GetCurrentSceneId()
 {
 	return g_CurrentSceneId;

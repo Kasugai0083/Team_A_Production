@@ -1,16 +1,14 @@
 /**
-*	@file Botan.h
+*	@file UI.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オブジェクトの葉（最終継承先）
+*	@brief ユーザーインターフェースを管理するクラスを処理
 */
 
 #ifndef UI_H_
 #define UI_H_
 
-/**
-* オブジェクトの葉（最終継承先）@n
-* UserInterface を管理するクラスを格納
-*/
+
 
 #include "UIvalue.h"
 #include "../../Texture/Texture.h"

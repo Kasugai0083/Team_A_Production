@@ -1,15 +1,11 @@
 /**
-*	@file Botan.h
+*	@file PlayerItem.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オブジェクトの葉（最終継承先）@n
+*		   「水晶」「時計」を管理するクラスを処理
 */
 
 #pragma once
-
-/**
-* オブジェクトの葉（最終継承先）\n
-* 水晶を管理するクラスを格納
-*/
 
 #include "../Item.h"
 #include "../../../Scene/Scene.h"

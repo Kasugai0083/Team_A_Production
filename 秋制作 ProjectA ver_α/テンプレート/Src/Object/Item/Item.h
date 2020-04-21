@@ -1,7 +1,8 @@
 /**
-*	@file Botan.h
+*	@file Item.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief オブジェクトの継承クラス@n
+*		   Candle, Fire, PlayerItem class に派生
 */
 
 #ifndef ITEM_H_

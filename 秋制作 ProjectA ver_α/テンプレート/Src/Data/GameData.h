@@ -2,9 +2,9 @@
 #define GAMEDATA_H_
 
 /**
-*	@file Botan.h
+*	@file GameData.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief 外部ファイルから読み込んできた値を管理するクラスを処理
 */
 
 #include "Days/DayController.h"
@@ -13,7 +13,8 @@
 
 class CSV;
 
-enum class SubGameScene {
+enum class SubGameScene
+{
 	CENTER_VIEW,			//プレイヤールーム中央
 	LEFT_VIEW,				//プレイヤールーム左
 	RIGHT_VIEW,				//プレイヤールーム右
@@ -38,23 +39,12 @@ struct GameParam {
 class GameData : public Singleton<GameData> {
 
 public:
-	// データを送信する関数(GameData を Accesor にしない場合)
-	void SendEnemyData(EnemyData* edata_, int i) { *edata_ = m_EData[i]; }
-	void SendGameParam(GameParam* gameparam_) { *gameparam_ = m_GameParam; }
-	// ゲット関数
+
 	EnemyData GetEnemyData(EnemyID enemyId_) const { return m_EData[static_cast<int>(enemyId_)]; }
 	GameParam GetGameParam() const { return m_GameParam; }
 	Days GetDays() const { return m_Days; }
 
-	// データを受け取る関数(GameData を Accesor にする場合)
-	void SetEnemyData(EnemyData edata_, CharacterID charid_) { m_EData[charid_] = edata_; }
-	void SetGameParam(GameParam param_) { m_GameParam = param_; }
-
-	// 値を読み込むメソッド
-	void LoadDay(Days day_);
-
-	void LoadParam(GameParam param_);
-
+	// 指定のCSVから値の抜き出し
 	void LoadGameData();
 
 private:

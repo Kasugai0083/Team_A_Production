@@ -1,15 +1,11 @@
 /**
-*	@file Botan.h
+*	@file ItemValue.h
 *	@author 春日井
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief item の座標情報、画像サイズ、アイテムの大きさを設定
 */
 
 #ifndef ITEM_VALUE_H_
 #define ITEM_VALUE_H_
-
-/**
-* item の座標情報、画像サイズ、アイテムの大きさを設定
-*/
 
 #include "../../Utility/Vec.h"
 #include "../../Utility/Size.h"

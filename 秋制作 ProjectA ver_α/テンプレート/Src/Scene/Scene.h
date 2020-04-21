@@ -2,8 +2,7 @@
 *	@file Botan.h
 *	@author 中地
 *			春日井
-*			中本
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief シーン遷移を管理するクラスと関数を定義
 */
 
 #ifndef SCENE_H_
@@ -14,6 +13,7 @@ const int SCENE_WAIT = 5;
 const int CLEAR_TIME = 6;
 
 /** @brief シーンID */
+// 現在は画像管理を行っている
 enum SceneId
 {
 	TitleScene,			//!< タイトルシーン
@@ -68,35 +68,8 @@ private:
 	bool m_CanFinish;
 };
 
-// クラスに格納された変数や関数を操作する関数
-
-//モニターの遷移を管理するクラス
-
-class MonitorTransition {
-public:
-
-	MonitorTransition():
-	m_MonitorId(0)
-	{}
-
-	enum Id {
-		Spown,
-		Left_Duct,
-		Right_Duct,
-		ROOM_STORE,
-		ROOM_RECEPTION,
-		ROOM_CHILD
-	};
-
-	int Get();
-	void Set(Id id);
-
-private:
-	int m_MonitorId;
-};
-//モニターの遷移を管理するクラスここまで
 SceneTransition* SceneController();
-MonitorTransition* MonitorFunc();
+
 
 /** @brief シーンステップ */
 enum SceneStep

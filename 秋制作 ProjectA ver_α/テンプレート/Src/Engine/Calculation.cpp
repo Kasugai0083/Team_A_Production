@@ -5,8 +5,6 @@
 #include "..//Engine/Input.h"
 #include <math.h>
 
-Texture* g_pWallTex;
-Texture* g_pPlayerTex;
 
 Position GetPosition(float x_, float y_) {
 	Position PositionTmp;	

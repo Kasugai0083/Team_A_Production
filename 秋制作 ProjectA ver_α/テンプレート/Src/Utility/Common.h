@@ -1,7 +1,7 @@
 ﻿/**
-*	@file Botan.h
+*	@file Common.h
 *	@author 松本
-*	@brief キャラクター「牡丹」を管理するクラスを処理
+*	@brief 演算系の関数を定義
 */
 
 #pragma once
