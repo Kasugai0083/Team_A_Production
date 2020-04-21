@@ -4,17 +4,21 @@
 /**
 *	@file Player.h
 *	@author 春日井
-*	@brief プレイヤーを管理するクラスを処理
+*	@brief プレイヤーを管理するクラスを定義
 */
-
 
 #include "../Character.h"
 #include "../..//Data/GameData.h"
 
-class Player : public Character {
+/**
+* @class Player
+* @brief プレイヤーの情報を制御・管理
+*/
+class Player : public Character 
+{
 	 
 public:
-	// コンストラクタ
+	/** @brief コンストラクタ */
 	Player():
 		Character(true)
 	{
@@ -28,63 +32,105 @@ public:
 		m_MaskAnimation = -540.f;
 	}
 	
-	// デストラクタ
-	~Player() override {}
+	~Player() override {}	/** @brief デストラクタ */
 
-	void Init()override;	// 初期化
+	void Init()override;	/** @brief 初期化 */
 
-	void Update()override;	// 更新
+	void Update()override;	/** @brief 更新 */
 
-	void Draw()override;	// 描画
+	void Draw()override;	/** @brief 描画 */
 
-	// プレイヤーがマスクを被っているかどうか
+	/**
+	* @fn HasMask
+	* @brief プレイヤーがマスクを被っているかどうか
+	*/
 	bool HasMask() const override
 	{
 		return m_IsMask;
 	}
 
-	// プレイヤーがモニターを見ているかどうか
+	/**
+	* @fn HasMonitor
+	* @brief プレイヤーがモニターを見ているかどうか
+	*/
 	bool HasMonitor() const override
 	{
 		return m_HasMonitor;
 	}
 
-	// プレイヤーが生きているかどうか
+	/**
+	* @fn IsActive
+	* @brief プレイヤーが生きているかどうか
+	*/
 	bool IsActive() override { return m_IsActive; };
 
-	// どこの部屋を見ているか
+	/**
+	* @fn CurrentViewID
+	* @brief どこの部屋を見ているか
+	*/
 	SubGameScene CurrentViewID() const override
 	{
 		return m_ViewID;
 	}
-	// モニターシーン遷移を管理する関数
-	bool ControlMonitor() override;
-	// ゲームシーン遷移を管理する関数
-	bool ControlGameScene() override;
 
-	//ゴールデンフレディのフラグを取得
+	/**
+	* @fn ControlMonitor
+	* @brief モニターシーン遷移を管理する関数
+	*/
+	bool ControlMonitor() override;
+	/**
+	* @fn ControlGameScene
+	* @brief ゲームシーン遷移を管理する関数
+	*/
+	bool ControlGameScene() override;
+	/**
+	* @fn HasGFreddySpown
+	* @brief ゴールデンフレディのフラグを取得
+	*/
 	bool HasGFreddySpown() override { return m_HasGFreddySpown; };
 
-	// 現在のプレイヤー視界情報と引数の視界情報を比較
+	/**
+	* @fn CurrentViewID
+	* @brief 現在のプレイヤー視界情報と引数の視界情報を比較
+	*/ 
 	const bool CurrentViewID(const SubGameScene sceneId_) const override;
 
 private:
+	/**
+	* クラス内で使用する関数
+	*/
 
-	void OnMask();	// マスクのアニメーション
+	/**
+	* @fn OnMask
+	* @brief マスクのアニメーション
+	*/
+	void OnMask();
 
+	/**
+	* @fn KeyPush
+	* @param[in] button_ どのボタンを触れたか
+	* @param[out] view_ どの ViewScene に移動するか
+	* @brief button_ で指定したボタンを入力した view_ で指定した ViewScene に遷移
+	*/
 	template <class T1, class T2>
 	void KeyPush(T1 button_, T2 view_);
 
+	/**
+	* @fn ButtonPush
+	* @param[in] button_ どのボタンを触れたか
+	* @param[out] view_ どの MonitorView に移動するか
+	* @brief button_ で指定したボタンを入力した view_ で指定した MonitorView に遷移
+	*/
 	template <class T1, class T2>
 	void ButtonPush(T1 button_, T2 view_);
 
 private:
-	bool m_IsMask;			// マスクをつけてるかどうか
-	float m_MaskAnimation;	// マスクのアニメーションタイマー
-	bool m_HasGFreddySpown; // ゴールデンフレディのフラグが立っているかどうか
-	bool m_HasMonitor;		// モニターを見ているかどうか
+	bool m_IsMask;			/** @brief マスクをつけてるかどうか */
+	float m_MaskAnimation;	/** @brief マスクのアニメーションタイマー */
+	bool m_HasGFreddySpown;	/** @brief ゴールデンフレディのフラグが立っているかどうか */
+	bool m_HasMonitor;		/** @brief モニターを見ているかどうか */
 
-	// 視界情報の制御
+	/** @brief 視界情報の制御 */
 	SubGameScene m_ViewID, TmpRoom, TmpMonitor;
 };
 

@@ -12,7 +12,6 @@ void Player::Init()
 
 // T1 => どのボタンを触れたか
 // T2 => どの MonitorView に移動するか
-// 糞ずるい気がするので変更する予定
 template <class T1, class T2>
 void Player::ButtonPush(T1 button_, T2 view_) {
 	Timer* pTimerInstance = Timer::GetInstance();
@@ -53,7 +52,6 @@ bool Player::ControlMonitor() {
 
 // T1 => どのボタンを触れたか
 // T2 => どの ViewScene に移動するか
-// 糞ずるい気がするので変更する予定
 template <class T1, class T2>
 void Player::KeyPush(T1 button_, T2 view_) {
 	Timer* pTimerInstance = Timer::GetInstance();
