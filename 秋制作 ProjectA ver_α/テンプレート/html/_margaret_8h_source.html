@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Character/Enemy/Id/Margaret.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_0af6d3c849582bafbf696c6668bb065a.html">Character</a></li><li class="navelem"><a class="el" href="dir_1a6826e49dcbd70d4d52780a342c33b0.html">Enemy</a></li><li class="navelem"><a class="el" href="dir_b8948a70f4c7b996ca7b2eea4ff6c866.html">Id</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Margaret.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_margaret_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MARGARET_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MARGARET_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../Enemy/Enemy.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../CharacterID.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../../Utility/RoomID.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../../../Scene/Scene.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../CharacterManager.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../../Engine/Graphics.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../../Texture/EnemyTex.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    パペット(エネミー)のクラス</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*/</span>  </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_margaret.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_margaret.html">Margaret</a> : <span class="keyword">public</span> <a class="code" href="class_enemy.html">Enemy</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">        コンストラクタ</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_margaret.html#a07b7925d021913fef75080ff9a7c5185">   22</a></span>&#160;    <a class="code" href="class_margaret.html#a07b7925d021913fef75080ff9a7c5185">Margaret</a>() :</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_enemy.html">Enemy</a>(<a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a>::<a class="code" href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126af567062c1b73278ed30940cab6296650">ROOM_CHILDREN</a>, <a class="code" href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32b">EnemyID</a>::<a class="code" href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32badddd1b4f1e1834457782107e75db934c">MARGARET</a>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">m_pPlayer</a> = <a class="code" href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a>.<a class="code" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">GetCharacter</a>(<a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">m_pPlayer</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_enemy.html#a0fab5c77908c0e2c168d4155127323b2">m_iFrameCount</a> = 3600;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">m_Counter</a> = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">m_Length</a> = 3;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#a83a381fb07290a2b687571300aecc2a6">m_Speed</a> = 15;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">m_Length</a>; i++) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">m_AnimationTex</a>.<a class="code" href="struct_animation_texture.html#ad14d528206f82506eff7051c9c6bb554">m_TextureData</a>[i] = <span class="keyword">new</span> <a class="code" href="struct_texture.html">Texture</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">        デストラクター</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_margaret.html#a571ba405fb1b87ba63f6f069dcc9ce66">   43</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_margaret.html#a571ba405fb1b87ba63f6f069dcc9ce66">~Margaret</a>(){}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">        初期化</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_margaret.html#a66940c15047eb5278c306a90db53e93f">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">        挙動</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_margaret.html#a825c0221ca252a9488cde4cb74a119f6">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">        m_IsKillを返す</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_margaret.html#acbeed64e7fcd254062f962e8861a5ad7">   57</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_margaret.html#acbeed64e7fcd254062f962e8861a5ad7">HasKill</a>()<span class="keyword">const override </span>{ <span class="keywordflow">return</span> <a class="code" href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">m_HasKill</a>; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">        引数に現在のシーンを入れる</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        テクスチャのロード</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_margaret.html#ace4f389c945d39e47c931bc1e23e6002">LoadTex</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">        描画</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_margaret.html#a9f235ef92d78e08b067afa1778bf7c86">Draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">        キルアニメーション</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_margaret.html#abf889c54361c6ac6f4d0f5c704a79dd8">KillAnimation</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> <a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7f">CharacterID</a> m_CharId = <a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fab1e619a8efc7941d278c42f5a203342b">CharacterID::MARGARET</a>;<span class="comment">// キャラID定数</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> MAX_COUNT = 3600;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> m_TextureCategory = <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af529e9955c8c4b975e61f0c453f8d1f2">EnemyCategoryTextureList::MARGARET_PIZA_9</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_character_manager_html_a2db27469d39061f5e9cb4e55359d8777"><div class="ttname"><a href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">CharacterManager::GetCharacter</a></div><div class="ttdeci">Character * GetCharacter(int id)</div><div class="ttdef"><b>Definition:</b> CharacterManager.h:34</div></div>
+<div class="ttc" id="aclass_margaret_html_a66940c15047eb5278c306a90db53e93f"><div class="ttname"><a href="class_margaret.html#a66940c15047eb5278c306a90db53e93f">Margaret::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdef"><b>Definition:</b> Margaret.cpp:12</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7f"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7f">CharacterID</a></div><div class="ttdeci">CharacterID</div><div class="ttdef"><b>Definition:</b> CharacterID.h:4</div></div>
+<div class="ttc" id="aclass_margaret_html_abf889c54361c6ac6f4d0f5c704a79dd8"><div class="ttname"><a href="class_margaret.html#abf889c54361c6ac6f4d0f5c704a79dd8">Margaret::KillAnimation</a></div><div class="ttdeci">virtual void KillAnimation() override</div><div class="ttdef"><b>Definition:</b> Margaret.cpp:147</div></div>
+<div class="ttc" id="a_character_manager_8cpp_html_a95d8eb3e05890c267a200c30fd25791a"><div class="ttname"><a href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a></div><div class="ttdeci">CharacterManager g_Manager</div><div class="ttdef"><b>Definition:</b> CharacterManager.cpp:12</div></div>
+<div class="ttc" id="aclass_margaret_html_a9f235ef92d78e08b067afa1778bf7c86"><div class="ttname"><a href="class_margaret.html#a9f235ef92d78e08b067afa1778bf7c86">Margaret::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdef"><b>Definition:</b> Margaret.cpp:131</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7af529e9955c8c4b975e61f0c453f8d1f2"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af529e9955c8c4b975e61f0c453f8d1f2">MARGARET_PIZA_9</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:54</div></div>
+<div class="ttc" id="aclass_margaret_html"><div class="ttname"><a href="class_margaret.html">Margaret</a></div><div class="ttdef"><b>Definition:</b> Margaret.h:16</div></div>
+<div class="ttc" id="aclass_margaret_html_ace4f389c945d39e47c931bc1e23e6002"><div class="ttname"><a href="class_margaret.html#ace4f389c945d39e47c931bc1e23e6002">Margaret::LoadTex</a></div><div class="ttdeci">virtual void LoadTex() override</div><div class="ttdef"><b>Definition:</b> Margaret.cpp:127</div></div>
+<div class="ttc" id="aclass_margaret_html_a825c0221ca252a9488cde4cb74a119f6"><div class="ttname"><a href="class_margaret.html#a825c0221ca252a9488cde4cb74a119f6">Margaret::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdef"><b>Definition:</b> Margaret.cpp:16</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_acb05422f600e20c88d7c75432fe2d32badddd1b4f1e1834457782107e75db934c"><div class="ttname"><a href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32badddd1b4f1e1834457782107e75db934c">EnemyID::MARGARET</a></div></div>
+<div class="ttc" id="aclass_enemy_html_a308fa05ba03d104b5679dea6f2a7f072"><div class="ttname"><a href="class_enemy.html#a308fa05ba03d104b5679dea6f2a7f072">Enemy::m_pPlayer</a></div><div class="ttdeci">Character * m_pPlayer</div><div class="ttdef"><b>Definition:</b> Enemy.h:105</div></div>
+<div class="ttc" id="a_room_i_d_8h_html_aca771d9fb131dc58ebb0da000e692126af567062c1b73278ed30940cab6296650"><div class="ttname"><a href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126af567062c1b73278ed30940cab6296650">ROOM_CHILDREN</a></div><div class="ttdef"><b>Definition:</b> RoomID.h:8</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_acb05422f600e20c88d7c75432fe2d32b"><div class="ttname"><a href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32b">EnemyID</a></div><div class="ttdeci">EnemyID</div><div class="ttdef"><b>Definition:</b> CharacterID.h:19</div></div>
+<div class="ttc" id="astruct_texture_html"><div class="ttname"><a href="struct_texture.html">Texture</a></div><div class="ttdoc">テクスチャデータやサイズを保持する構造体</div><div class="ttdef"><b>Definition:</b> Graphics.h:39</div></div>
+<div class="ttc" id="a_room_i_d_8h_html_aca771d9fb131dc58ebb0da000e692126"><div class="ttname"><a href="_room_i_d_8h.html#aca771d9fb131dc58ebb0da000e692126">RoomID</a></div><div class="ttdeci">RoomID</div><div class="ttdef"><b>Definition:</b> RoomID.h:4</div></div>
+<div class="ttc" id="aclass_margaret_html_a571ba405fb1b87ba63f6f069dcc9ce66"><div class="ttname"><a href="class_margaret.html#a571ba405fb1b87ba63f6f069dcc9ce66">Margaret::~Margaret</a></div><div class="ttdeci">virtual ~Margaret()</div><div class="ttdef"><b>Definition:</b> Margaret.h:43</div></div>
+<div class="ttc" id="astruct_animation_texture_html_aa581ccad534d577baf1b5c5f9047ddfc"><div class="ttname"><a href="struct_animation_texture.html#aa581ccad534d577baf1b5c5f9047ddfc">AnimationTexture::m_Length</a></div><div class="ttdeci">int m_Length</div><div class="ttdef"><b>Definition:</b> Graphics.h:51</div></div>
+<div class="ttc" id="aclass_enemy_html_acc03ba884acb782253aaea4a83b2cf1c"><div class="ttname"><a href="class_enemy.html#acc03ba884acb782253aaea4a83b2cf1c">Enemy::m_AnimationTex</a></div><div class="ttdeci">AnimationTexture m_AnimationTex</div><div class="ttdef"><b>Definition:</b> Enemy.h:102</div></div>
+<div class="ttc" id="astruct_animation_texture_html_a83a381fb07290a2b687571300aecc2a6"><div class="ttname"><a href="struct_animation_texture.html#a83a381fb07290a2b687571300aecc2a6">AnimationTexture::m_Speed</a></div><div class="ttdeci">int m_Speed</div><div class="ttdef"><b>Definition:</b> Graphics.h:50</div></div>
+<div class="ttc" id="astruct_animation_texture_html_acac6207a7d4d396730ff54f172ea28a4"><div class="ttname"><a href="struct_animation_texture.html#acac6207a7d4d396730ff54f172ea28a4">AnimationTexture::m_Counter</a></div><div class="ttdeci">int m_Counter</div><div class="ttdef"><b>Definition:</b> Graphics.h:52</div></div>
+<div class="ttc" id="aclass_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> Enemy.h:12</div></div>
+<div class="ttc" id="aclass_margaret_html_acbeed64e7fcd254062f962e8861a5ad7"><div class="ttname"><a href="class_margaret.html#acbeed64e7fcd254062f962e8861a5ad7">Margaret::HasKill</a></div><div class="ttdeci">virtual bool HasKill() const override</div><div class="ttdef"><b>Definition:</b> Margaret.h:57</div></div>
+<div class="ttc" id="aclass_enemy_html_a6dda06fe77a15ec4d9c0da0ad1359a4d"><div class="ttname"><a href="class_enemy.html#a6dda06fe77a15ec4d9c0da0ad1359a4d">Enemy::m_HasKill</a></div><div class="ttdeci">bool m_HasKill</div><div class="ttdef"><b>Definition:</b> Enemy.h:101</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a></div><div class="ttdef"><b>Definition:</b> CharacterID.h:5</div></div>
+<div class="ttc" id="astruct_animation_texture_html_ad14d528206f82506eff7051c9c6bb554"><div class="ttname"><a href="struct_animation_texture.html#ad14d528206f82506eff7051c9c6bb554">AnimationTexture::m_TextureData</a></div><div class="ttdeci">Texture * m_TextureData[10]</div><div class="ttdef"><b>Definition:</b> Graphics.h:48</div></div>
+<div class="ttc" id="aclass_enemy_html_a0fab5c77908c0e2c168d4155127323b2"><div class="ttname"><a href="class_enemy.html#a0fab5c77908c0e2c168d4155127323b2">Enemy::m_iFrameCount</a></div><div class="ttdeci">int m_iFrameCount</div><div class="ttdef"><b>Definition:</b> Enemy.h:99</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7fab1e619a8efc7941d278c42f5a203342b"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fab1e619a8efc7941d278c42f5a203342b">MARGARET</a></div><div class="ttdef"><b>Definition:</b> CharacterID.h:12</div></div>
+<div class="ttc" id="aclass_margaret_html_a07b7925d021913fef75080ff9a7c5185"><div class="ttname"><a href="class_margaret.html#a07b7925d021913fef75080ff9a7c5185">Margaret::Margaret</a></div><div class="ttdeci">Margaret()</div><div class="ttdef"><b>Definition:</b> Margaret.h:22</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

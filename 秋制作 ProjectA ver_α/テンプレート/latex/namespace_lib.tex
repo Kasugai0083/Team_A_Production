@@ -1,0 +1,139 @@
+\hypertarget{namespace_lib}{}\doxysection{Lib 名前空間}
+\label{namespace_lib}\index{Lib@{Lib}}
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_lib_1_1_texture}{Texture}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{namespace_lib_a7b0236323559a75e0739494b888f05d5}{Win\+Proc}} (H\+W\+ND hwnd, U\+I\+NT msg, W\+P\+A\+R\+AM wp, L\+P\+A\+R\+AM lp)
+\item 
+void \mbox{\hyperlink{namespace_lib_abe5200e7702b56015fbfc1786d5bb14a}{Init}} (int w, int h, const char $\ast$title)
+\item 
+void \mbox{\hyperlink{namespace_lib_a6b4f68f6d49e2413998abb1c4cc60ee9}{Set\+Win\+Device}} (H\+I\+N\+S\+T\+A\+N\+CE h\+\_\+instance, const char $\ast$class\+\_\+name, W\+N\+D\+C\+L\+A\+S\+S\+EX $\ast$wc)
+\item 
+void \mbox{\hyperlink{namespace_lib_a89f5bdfcb5db39b1e9dfe20040986a52}{Make\+Window}} (H\+I\+N\+S\+T\+A\+N\+CE h\+\_\+instance, const char $\ast$class\+\_\+name, const char $\ast$title, int w, int h)
+\item 
+void \mbox{\hyperlink{namespace_lib_af28cc92bcf19288af24d8025437f9b91}{Init\+D3\+D9}} ()
+\item 
+void \mbox{\hyperlink{namespace_lib_a4bae75601d988f6a1c96ab618ffd0128}{App\+End}} ()
+\item 
+bool \mbox{\hyperlink{namespace_lib_a1532ad799f274656fb639531e339acc7}{Process\+Message}} ()
+\item 
+void \mbox{\hyperlink{namespace_lib_a8474d534efd67c2ca0859fc3965a548c}{Draw\+Begin}} (D\+W\+O\+RD back\+\_\+color)
+\item 
+void \mbox{\hyperlink{namespace_lib_a81e20eb28077625bfb5c78ca804a8f73}{Draw\+End}} ()
+\begin{DoxyCompactList}\small\item\em 描画終了関数~\newline
+描画の終了を宣言し、バックバッファとフロントバッファを入れ替える~\newline
+※この関数は必ず\+Draw\+Startの後に実行されるようにしてください。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_lib_a078f22727c83b249c6de32671599228b}{Err\+Msg}} (std\+::string msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+H\+W\+ND \mbox{\hyperlink{namespace_lib_ae3f323808fb8b7b552d8e1bdac9756ab}{h\+Wnd}} = nullptr
+\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D9 \mbox{\hyperlink{namespace_lib_a0427e834d8892c5d2a495705b5bf4e4c}{d3d}} = nullptr
+\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{namespace_lib_a8391f9bcf41c4c833c2172c17a99405d}{dev}} = nullptr
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{class_lib_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{namespace_lib_ae176367b0362756a612e31e5d01548c3}{tex\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{namespace_lib_a4bae75601d988f6a1c96ab618ffd0128}\label{namespace_lib_a4bae75601d988f6a1c96ab618ffd0128}} 
+\index{Lib@{Lib}!AppEnd@{AppEnd}}
+\index{AppEnd@{AppEnd}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{AppEnd()}{AppEnd()}}
+{\footnotesize\ttfamily void Lib\+::\+App\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_a8474d534efd67c2ca0859fc3965a548c}\label{namespace_lib_a8474d534efd67c2ca0859fc3965a548c}} 
+\index{Lib@{Lib}!DrawBegin@{DrawBegin}}
+\index{DrawBegin@{DrawBegin}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{DrawBegin()}{DrawBegin()}}
+{\footnotesize\ttfamily void Lib\+::\+Draw\+Begin (\begin{DoxyParamCaption}\item[{D\+W\+O\+RD}]{back\+\_\+color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_a81e20eb28077625bfb5c78ca804a8f73}\label{namespace_lib_a81e20eb28077625bfb5c78ca804a8f73}} 
+\index{Lib@{Lib}!DrawEnd@{DrawEnd}}
+\index{DrawEnd@{DrawEnd}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{DrawEnd()}{DrawEnd()}}
+{\footnotesize\ttfamily void Lib\+::\+Draw\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+描画終了関数~\newline
+描画の終了を宣言し、バックバッファとフロントバッファを入れ替える~\newline
+※この関数は必ず\+Draw\+Startの後に実行されるようにしてください。 
+
+\mbox{\Hypertarget{namespace_lib_a078f22727c83b249c6de32671599228b}\label{namespace_lib_a078f22727c83b249c6de32671599228b}} 
+\index{Lib@{Lib}!ErrMsg@{ErrMsg}}
+\index{ErrMsg@{ErrMsg}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{ErrMsg()}{ErrMsg()}}
+{\footnotesize\ttfamily void Lib\+::\+Err\+Msg (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_abe5200e7702b56015fbfc1786d5bb14a}\label{namespace_lib_abe5200e7702b56015fbfc1786d5bb14a}} 
+\index{Lib@{Lib}!Init@{Init}}
+\index{Init@{Init}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Lib\+::\+Init (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{const char $\ast$}]{title }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_af28cc92bcf19288af24d8025437f9b91}\label{namespace_lib_af28cc92bcf19288af24d8025437f9b91}} 
+\index{Lib@{Lib}!InitD3D9@{InitD3D9}}
+\index{InitD3D9@{InitD3D9}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{InitD3D9()}{InitD3D9()}}
+{\footnotesize\ttfamily void Lib\+::\+Init\+D3\+D9 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_a89f5bdfcb5db39b1e9dfe20040986a52}\label{namespace_lib_a89f5bdfcb5db39b1e9dfe20040986a52}} 
+\index{Lib@{Lib}!MakeWindow@{MakeWindow}}
+\index{MakeWindow@{MakeWindow}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{MakeWindow()}{MakeWindow()}}
+{\footnotesize\ttfamily void Lib\+::\+Make\+Window (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+\_\+instance,  }\item[{const char $\ast$}]{class\+\_\+name,  }\item[{const char $\ast$}]{title,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_a1532ad799f274656fb639531e339acc7}\label{namespace_lib_a1532ad799f274656fb639531e339acc7}} 
+\index{Lib@{Lib}!ProcessMessage@{ProcessMessage}}
+\index{ProcessMessage@{ProcessMessage}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{ProcessMessage()}{ProcessMessage()}}
+{\footnotesize\ttfamily bool Lib\+::\+Process\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_a6b4f68f6d49e2413998abb1c4cc60ee9}\label{namespace_lib_a6b4f68f6d49e2413998abb1c4cc60ee9}} 
+\index{Lib@{Lib}!SetWinDevice@{SetWinDevice}}
+\index{SetWinDevice@{SetWinDevice}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{SetWinDevice()}{SetWinDevice()}}
+{\footnotesize\ttfamily void Lib\+::\+Set\+Win\+Device (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+\_\+instance,  }\item[{const char $\ast$}]{class\+\_\+name,  }\item[{W\+N\+D\+C\+L\+A\+S\+S\+EX $\ast$}]{wc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_lib_a7b0236323559a75e0739494b888f05d5}\label{namespace_lib_a7b0236323559a75e0739494b888f05d5}} 
+\index{Lib@{Lib}!WinProc@{WinProc}}
+\index{WinProc@{WinProc}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{WinProc()}{WinProc()}}
+{\footnotesize\ttfamily L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK Lib\+::\+Win\+Proc (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{hwnd,  }\item[{U\+I\+NT}]{msg,  }\item[{W\+P\+A\+R\+AM}]{wp,  }\item[{L\+P\+A\+R\+AM}]{lp }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{namespace_lib_a0427e834d8892c5d2a495705b5bf4e4c}\label{namespace_lib_a0427e834d8892c5d2a495705b5bf4e4c}} 
+\index{Lib@{Lib}!d3d@{d3d}}
+\index{d3d@{d3d}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{d3d}{d3d}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D9 Lib\+::d3d = nullptr}
+
+\mbox{\Hypertarget{namespace_lib_a8391f9bcf41c4c833c2172c17a99405d}\label{namespace_lib_a8391f9bcf41c4c833c2172c17a99405d}} 
+\index{Lib@{Lib}!dev@{dev}}
+\index{dev@{dev}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{dev}{dev}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 Lib\+::dev = nullptr}
+
+\mbox{\Hypertarget{namespace_lib_ae3f323808fb8b7b552d8e1bdac9756ab}\label{namespace_lib_ae3f323808fb8b7b552d8e1bdac9756ab}} 
+\index{Lib@{Lib}!hWnd@{hWnd}}
+\index{hWnd@{hWnd}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{hWnd}{hWnd}}
+{\footnotesize\ttfamily H\+W\+ND Lib\+::h\+Wnd = nullptr}
+
+\mbox{\Hypertarget{namespace_lib_ae176367b0362756a612e31e5d01548c3}\label{namespace_lib_ae176367b0362756a612e31e5d01548c3}} 
+\index{Lib@{Lib}!tex\_list@{tex\_list}}
+\index{tex\_list@{tex\_list}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{tex\_list}{tex\_list}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{class_lib_1_1_texture}{Texture}}$>$ Lib\+::tex\+\_\+list}
+

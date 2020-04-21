@@ -1,0 +1,81 @@
+\hypertarget{_opening_scene_8cpp}{}\doxysection{Src/\+Scene/\+Opening\+Scene.cpp ファイル}
+\label{_opening_scene_8cpp}\index{Src/Scene/OpeningScene.cpp@{Src/Scene/OpeningScene.cpp}}
+{\ttfamily \#include \char`\"{}../\+Engine/\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Texture/\+Texture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Opening\+Scene.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Calculation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..//\+Timer/\+Timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Player/\+Player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Character\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Character\+I\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Engine/\+Audio/\+Audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Data/\+Days/\+Day\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Object/\+Object\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Texture/\+Load\+Tex.\+h\char`\"{}}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_op_controller}{Op\+Controller}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_opening_scene_8cpp_a8394103e62627e97087b394d78ebe261}{Init\+Opening\+Scene}} ()
+\item 
+void \mbox{\hyperlink{_opening_scene_8cpp_a20db958d76742e662cf4c24efc1022dd}{Main\+Opening\+Scene}} ()
+\item 
+\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_opening_scene_8cpp_a6d5d359869a9a22dcfa3b4615dcaa20e}{Finish\+Opening\+Scene}} ()
+\item 
+\mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} \mbox{\hyperlink{_opening_scene_8cpp_a130a9d710956b3d6031a82fd31ac5c9e}{Update\+Opening\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em ゲームオーバーシーンの更新関数~\newline
+ゲームオーバーシーンの仕様が実行される \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_opening_scene_8cpp_afafa0ea856d6013bbf2a3f749f5fab45}{Draw\+Opening\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em ゲームオーバーシーンの描画関数~\newline
+ゲームオーバーシーンのオブジェクトを描画するための関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_opening_scene_8cpp_afafa0ea856d6013bbf2a3f749f5fab45}\label{_opening_scene_8cpp_afafa0ea856d6013bbf2a3f749f5fab45}} 
+\index{OpeningScene.cpp@{OpeningScene.cpp}!DrawOpeningScene@{DrawOpeningScene}}
+\index{DrawOpeningScene@{DrawOpeningScene}!OpeningScene.cpp@{OpeningScene.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawOpeningScene()}{DrawOpeningScene()}}
+{\footnotesize\ttfamily void Draw\+Opening\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ゲームオーバーシーンの描画関数~\newline
+ゲームオーバーシーンのオブジェクトを描画するための関数 
+
+\mbox{\Hypertarget{_opening_scene_8cpp_a6d5d359869a9a22dcfa3b4615dcaa20e}\label{_opening_scene_8cpp_a6d5d359869a9a22dcfa3b4615dcaa20e}} 
+\index{OpeningScene.cpp@{OpeningScene.cpp}!FinishOpeningScene@{FinishOpeningScene}}
+\index{FinishOpeningScene@{FinishOpeningScene}!OpeningScene.cpp@{OpeningScene.cpp}}
+\doxysubsubsection{\texorpdfstring{FinishOpeningScene()}{FinishOpeningScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} Finish\+Opening\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_opening_scene_8cpp_a8394103e62627e97087b394d78ebe261}\label{_opening_scene_8cpp_a8394103e62627e97087b394d78ebe261}} 
+\index{OpeningScene.cpp@{OpeningScene.cpp}!InitOpeningScene@{InitOpeningScene}}
+\index{InitOpeningScene@{InitOpeningScene}!OpeningScene.cpp@{OpeningScene.cpp}}
+\doxysubsubsection{\texorpdfstring{InitOpeningScene()}{InitOpeningScene()}}
+{\footnotesize\ttfamily void Init\+Opening\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_opening_scene_8cpp_a20db958d76742e662cf4c24efc1022dd}\label{_opening_scene_8cpp_a20db958d76742e662cf4c24efc1022dd}} 
+\index{OpeningScene.cpp@{OpeningScene.cpp}!MainOpeningScene@{MainOpeningScene}}
+\index{MainOpeningScene@{MainOpeningScene}!OpeningScene.cpp@{OpeningScene.cpp}}
+\doxysubsubsection{\texorpdfstring{MainOpeningScene()}{MainOpeningScene()}}
+{\footnotesize\ttfamily void Main\+Opening\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_opening_scene_8cpp_a130a9d710956b3d6031a82fd31ac5c9e}\label{_opening_scene_8cpp_a130a9d710956b3d6031a82fd31ac5c9e}} 
+\index{OpeningScene.cpp@{OpeningScene.cpp}!UpdateOpeningScene@{UpdateOpeningScene}}
+\index{UpdateOpeningScene@{UpdateOpeningScene}!OpeningScene.cpp@{OpeningScene.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateOpeningScene()}{UpdateOpeningScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_scene_8h_a47984f18d93075259bace5586a2d0423}{Scene\+Id}} Update\+Opening\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ゲームオーバーシーンの更新関数~\newline
+ゲームオーバーシーンの仕様が実行される 
+
+\begin{DoxyReturn}{戻り値}
+遷移先シーン\+ID(基本は\+Scene\+Id\+::\+Game\+Over\+Sceneが返る) 
+\end{DoxyReturn}

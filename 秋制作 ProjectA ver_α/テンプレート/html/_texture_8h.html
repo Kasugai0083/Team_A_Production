@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Texture/Texture.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_de6d28e78d50d11862011f8f40d704f3.html">Texture</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">Texture.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>テクスチャの読み込み、解放など、テクスチャに関する関数、定数の宣言  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_scene_8h_source.html">../Scene/Scene.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_graphics_8h_source.html">../Engine/Graphics.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_enemy_tex_8h_source.html">EnemyTex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_title_object_tex_8h_source.html">TitleObjectTex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_game_object_tex_8h_source.html">GameObjectTex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_title_scene_tex_8h_source.html">TitleSceneTex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_game_scene_tex_8h_source.html">GameSceneTex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_result_scene_tex_8h_source.html">ResultSceneTex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_opening_scene_tex_8h_source.html">OpeningSceneTex.h</a>&quot;</code><br />
+</div>
+<p><a href="_texture_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a42477f314fae4e6db57014c0f554b0d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_texture_8h.html#a42477f314fae4e6db57014c0f554b0d6">MAX_TEXTURE_CATEGORY</a>&#160;&#160;&#160;(<a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf">SceneId::SceneIdMax</a>)</td></tr>
+<tr class="memdesc:a42477f314fae4e6db57014c0f554b0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">カテゴリー最大  <a href="_texture_8h.html#a42477f314fae4e6db57014c0f554b0d6">[詳解]</a><br /></td></tr>
+<tr class="separator:a42477f314fae4e6db57014c0f554b0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ad684ebdecadeaa3a348be34505a8f68a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_texture_8h.html#ad684ebdecadeaa3a348be34505a8f68a">InitTexture</a> ()</td></tr>
+<tr class="memdesc:ad684ebdecadeaa3a348be34505a8f68a"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャデータ初期化関数<br  />
+ゲームで使用するテクスチャデータを保存出来るようにする  <a href="_texture_8h.html#ad684ebdecadeaa3a348be34505a8f68a">[詳解]</a><br /></td></tr>
+<tr class="separator:ad684ebdecadeaa3a348be34505a8f68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3308f207820dd8cf2964fffeb2a34cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_texture_8h.html#a3308f207820dd8cf2964fffeb2a34cb8">ReleaseCategoryTexture</a> (int category_id)</td></tr>
+<tr class="memdesc:a3308f207820dd8cf2964fffeb2a34cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">カテゴリー単位のテクスチャ解放関数<br  />
+引数で指定されたカテゴリーのテクスチャを全て解放する  <a href="_texture_8h.html#a3308f207820dd8cf2964fffeb2a34cb8">[詳解]</a><br /></td></tr>
+<tr class="separator:a3308f207820dd8cf2964fffeb2a34cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7bc429a7737bcf34789952fa0f8b90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_texture_8h.html#adf7bc429a7737bcf34789952fa0f8b90">AllReleaseTexture</a> ()</td></tr>
+<tr class="memdesc:adf7bc429a7737bcf34789952fa0f8b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャの全解放<br  />
+読み込んでいるすべてのテクスチャを解放する<br  />
+※この関数はEndEngineで使用されているので開発側で呼ぶ必要はない  <a href="_texture_8h.html#adf7bc429a7737bcf34789952fa0f8b90">[詳解]</a><br /></td></tr>
+<tr class="separator:adf7bc429a7737bcf34789952fa0f8b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765e9a08f1a6a5b0ee1cdf44d67037e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_texture_8h.html#a765e9a08f1a6a5b0ee1cdf44d67037e6">LoadTexture</a> (const char *file_name, int category_id, int texture_id)</td></tr>
+<tr class="memdesc:a765e9a08f1a6a5b0ee1cdf44d67037e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャの読み込み<br  />
+指定したされたパスのテクスチャを読み込み、カテゴリに登録する  <a href="_texture_8h.html#a765e9a08f1a6a5b0ee1cdf44d67037e6">[詳解]</a><br /></td></tr>
+<tr class="separator:a765e9a08f1a6a5b0ee1cdf44d67037e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8389a24369e4f9beb1d4f21e344e885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_texture_8h.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a> (int category_id, int texture_id)</td></tr>
+<tr class="memdesc:ab8389a24369e4f9beb1d4f21e344e885"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャデータの取得<br  />
+指定されたカテゴリのテクスチャデータを取得する  <a href="_texture_8h.html#ab8389a24369e4f9beb1d4f21e344e885">[詳解]</a><br /></td></tr>
+<tr class="separator:ab8389a24369e4f9beb1d4f21e344e885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>テクスチャの読み込み、解放など、テクスチャに関する関数、定数の宣言 </p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a42477f314fae4e6db57014c0f554b0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42477f314fae4e6db57014c0f554b0d6">&#9670;&nbsp;</a></span>MAX_TEXTURE_CATEGORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_TEXTURE_CATEGORY&#160;&#160;&#160;(<a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf">SceneId::SceneIdMax</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カテゴリー最大 </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="adf7bc429a7737bcf34789952fa0f8b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7bc429a7737bcf34789952fa0f8b90">&#9670;&nbsp;</a></span>AllReleaseTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AllReleaseTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャの全解放<br  />
+読み込んでいるすべてのテクスチャを解放する<br  />
+※この関数はEndEngineで使用されているので開発側で呼ぶ必要はない </p>
+
+</div>
+</div>
+<a id="ab8389a24369e4f9beb1d4f21e344e885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8389a24369e4f9beb1d4f21e344e885">&#9670;&nbsp;</a></span>GetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_texture.html">Texture</a>* GetTexture </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>texture_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャデータの取得<br  />
+指定されたカテゴリのテクスチャデータを取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>テクスチャデータ(取得失敗時はnullptr) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">取得したいテクスチャのカテゴリ</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">取得したいテクスチャのID</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad684ebdecadeaa3a348be34505a8f68a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad684ebdecadeaa3a348be34505a8f68a">&#9670;&nbsp;</a></span>InitTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャデータ初期化関数<br  />
+ゲームで使用するテクスチャデータを保存出来るようにする </p>
+
+</div>
+</div>
+<a id="a765e9a08f1a6a5b0ee1cdf44d67037e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765e9a08f1a6a5b0ee1cdf44d67037e6">&#9670;&nbsp;</a></span>LoadTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LoadTexture </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>texture_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャの読み込み<br  />
+指定したされたパスのテクスチャを読み込み、カテゴリに登録する </p>
+<dl class="section return"><dt>戻り値</dt><dd>読み込み結果(成功はtrue) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>読み込むテクスチャ名(パス込み) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">category_id</td><td>登録するカテゴリー </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture_id</td><td>カテゴリー内のテクスチャID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3308f207820dd8cf2964fffeb2a34cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3308f207820dd8cf2964fffeb2a34cb8">&#9670;&nbsp;</a></span>ReleaseCategoryTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReleaseCategoryTexture </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>category_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カテゴリー単位のテクスチャ解放関数<br  />
+引数で指定されたカテゴリーのテクスチャを全て解放する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">category_id</td><td>解放カテゴリー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

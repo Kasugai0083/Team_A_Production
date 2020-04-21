@@ -1,0 +1,186 @@
+\hypertarget{class_player}{}\doxysection{Player クラス}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+\mbox{\hyperlink{class_character}{Character}}を継承しています。
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\item 
+\mbox{\hyperlink{class_player_a8ed544987af18de0e6b2932206bf1186}{$\sim$\+Player}} () override
+\item 
+void \mbox{\hyperlink{class_player_a4eaaeb9d0967fef59baac319b9cc8d60}{Init}} () override
+\item 
+void \mbox{\hyperlink{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}{Update}} () override
+\item 
+void \mbox{\hyperlink{class_player_a5b60ad157bb1e8debca89ed6903ca2a4}{Draw}} () override
+\item 
+bool \mbox{\hyperlink{class_player_a5ddd7cb248e9df3ab709b380cd55a6d7}{Has\+Mask}} () const override
+\item 
+void \mbox{\hyperlink{class_player_a804f5eb8a22b937f15cd954f576bf245}{Load\+Tex}} () override
+\item 
+bool \mbox{\hyperlink{class_player_a62494252632d69105bcc774d08265814}{Has\+Monitor}} () const override
+\item 
+bool \mbox{\hyperlink{class_player_a4ec9eb479cf249fe8dc2e7613b09d437}{Is\+Active}} () override
+\item 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} \mbox{\hyperlink{class_player_a777721bf0063a23d9b76614924e45c77}{Current\+View\+ID}} () const override
+\item 
+bool \mbox{\hyperlink{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b}{Control\+Monitor}} () override
+\item 
+bool \mbox{\hyperlink{class_player_ab1961f4cf35c15516d1f19372586e197}{Control\+Game\+Scene}} () override
+\item 
+bool \mbox{\hyperlink{class_player_a02d7ccd26184ddceec7162756b49a0e6}{Has\+G\+Freddy\+Spown}} () override
+\item 
+const bool \mbox{\hyperlink{class_player_a0a74b4d9c44d4b027baee4c8fac20592}{Current\+View\+ID}} (const \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} scene\+Id\+\_\+) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a8ed544987af18de0e6b2932206bf1186}\label{class_player_a8ed544987af18de0e6b2932206bf1186}} 
+\index{Player@{Player}!````~Player@{$\sim$Player}}
+\index{````~Player@{$\sim$Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{$\sim$Player()}{~Player()}}
+{\footnotesize\ttfamily Player\+::$\sim$\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_player_ab1961f4cf35c15516d1f19372586e197}\label{class_player_ab1961f4cf35c15516d1f19372586e197}} 
+\index{Player@{Player}!ControlGameScene@{ControlGameScene}}
+\index{ControlGameScene@{ControlGameScene}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ControlGameScene()}{ControlGameScene()}}
+{\footnotesize\ttfamily bool Player\+::\+Control\+Game\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a7f64f261c8d7eda3895df7f1d083eb4c}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b}\label{class_player_a99b56ee3bc81fa207b1b15f9397e5c2b}} 
+\index{Player@{Player}!ControlMonitor@{ControlMonitor}}
+\index{ControlMonitor@{ControlMonitor}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ControlMonitor()}{ControlMonitor()}}
+{\footnotesize\ttfamily bool Player\+::\+Control\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_aa7db1f1fbceb865d5e3905c3f4f0ae54}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a777721bf0063a23d9b76614924e45c77}\label{class_player_a777721bf0063a23d9b76614924e45c77}} 
+\index{Player@{Player}!CurrentViewID@{CurrentViewID}}
+\index{CurrentViewID@{CurrentViewID}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{CurrentViewID()}{CurrentViewID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} Player\+::\+Current\+View\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a0c4dd839871956bd5e4e61aba225a524}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a0a74b4d9c44d4b027baee4c8fac20592}\label{class_player_a0a74b4d9c44d4b027baee4c8fac20592}} 
+\index{Player@{Player}!CurrentViewID@{CurrentViewID}}
+\index{CurrentViewID@{CurrentViewID}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{CurrentViewID()}{CurrentViewID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const bool Player\+::\+Current\+View\+ID (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}}}]{scene\+Id\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a3c17c297de9f775fdcfc386df408a635}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a5b60ad157bb1e8debca89ed6903ca2a4}\label{class_player_a5b60ad157bb1e8debca89ed6903ca2a4}} 
+\index{Player@{Player}!Draw@{Draw}}
+\index{Draw@{Draw}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Player\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a051c409115c689480f0246f6a4743474}{Character}}を実装しています。
+
+\mbox{\Hypertarget{class_player_a02d7ccd26184ddceec7162756b49a0e6}\label{class_player_a02d7ccd26184ddceec7162756b49a0e6}} 
+\index{Player@{Player}!HasGFreddySpown@{HasGFreddySpown}}
+\index{HasGFreddySpown@{HasGFreddySpown}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{HasGFreddySpown()}{HasGFreddySpown()}}
+{\footnotesize\ttfamily bool Player\+::\+Has\+G\+Freddy\+Spown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_aede2cfdfe20b765329f14773803c4363}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a5ddd7cb248e9df3ab709b380cd55a6d7}\label{class_player_a5ddd7cb248e9df3ab709b380cd55a6d7}} 
+\index{Player@{Player}!HasMask@{HasMask}}
+\index{HasMask@{HasMask}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{HasMask()}{HasMask()}}
+{\footnotesize\ttfamily bool Player\+::\+Has\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a77ebebf9e06dbb8edf710f52c7e1b237}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a62494252632d69105bcc774d08265814}\label{class_player_a62494252632d69105bcc774d08265814}} 
+\index{Player@{Player}!HasMonitor@{HasMonitor}}
+\index{HasMonitor@{HasMonitor}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{HasMonitor()}{HasMonitor()}}
+{\footnotesize\ttfamily bool Player\+::\+Has\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a4f08c22210951f1af772f589658593f2}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a4eaaeb9d0967fef59baac319b9cc8d60}\label{class_player_a4eaaeb9d0967fef59baac319b9cc8d60}} 
+\index{Player@{Player}!Init@{Init}}
+\index{Init@{Init}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Player\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_ac3776b55752f328ee74fd1282331f872}{Character}}を実装しています。
+
+\mbox{\Hypertarget{class_player_a4ec9eb479cf249fe8dc2e7613b09d437}\label{class_player_a4ec9eb479cf249fe8dc2e7613b09d437}} 
+\index{Player@{Player}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily bool Player\+::\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a10ef1a073e930eda4cab2c555d05c52f}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a804f5eb8a22b937f15cd954f576bf245}\label{class_player_a804f5eb8a22b937f15cd954f576bf245}} 
+\index{Player@{Player}!LoadTex@{LoadTex}}
+\index{LoadTex@{LoadTex}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
+{\footnotesize\ttfamily void Player\+::\+Load\+Tex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a4ef4bcb5a8b89d05177f42102a1d4c75}{Character}}を再実装しています。
+
+\mbox{\Hypertarget{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}\label{class_player_a5e17be3418fa0ac0192c05efaf3dc8bd}} 
+\index{Player@{Player}!Update@{Update}}
+\index{Update@{Update}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_character_a554d31593b3eee38178bd7c7804ef7fb}{Character}}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Src/\+Character/\+Player/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+Src/\+Character/\+Player/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

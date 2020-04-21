@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Object/Object.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_a1b83057247c09cdb8dec7926d827fb9.html">Object</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Object.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_object_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Utility/Vec.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../Utility/Size.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../Texture/Texture.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_object_i_d_8h.html">ObjectID.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_object.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_object.html">Object</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_object.html#a40860402e64d8008fb42329df7097cdb">   19</a></span>&#160;    <a class="code" href="class_object.html#a40860402e64d8008fb42329df7097cdb">Object</a>() {};    </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_object.html#ae8f5483f459e46687bd01e6f9977afd3">   21</a></span>&#160;    <a class="code" href="class_object.html#ae8f5483f459e46687bd01e6f9977afd3">~Object</a>() {};   </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_object.html#a7254c74e9926c9c9e5076b606dbfc962">Init</a>() = 0;        </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_object.html#a5ee5c17a09981cbd7c469370e210b4ff">Update</a>() = 0;      </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_object.html#af936fbfd0a49fbc6311205cd7d8eff19">HasOnMouse</a>() = 0;  </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_object.html#acbd787db750bc1be296d152b324acf20">Draw</a>() = 0;        </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_object.html#a67dac0d49f2c9a8e4b86b2572238adb2">   40</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_object.html#a67dac0d49f2c9a8e4b86b2572238adb2">GetHp</a>() { <span class="keywordflow">return</span> 0; }; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_object.html#af6c3ba6ab9e42e35162e39d4fd9172ca">   47</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_object.html#af6c3ba6ab9e42e35162e39d4fd9172ca">GetRatio</a>() { <span class="keywordflow">return</span> 0; };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_object.html#a56b5956cea5204d55183a444a01a30d6">   54</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_object.html#a56b5956cea5204d55183a444a01a30d6">HasCaLight</a>() { <span class="keywordflow">return</span> 0; };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7">   61</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7">HasMask</a>() { <span class="keywordflow">return</span> 0; };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_object.html#a9c01db131509235804689e9da5af6ad5">   63</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_object.html#a9c01db131509235804689e9da5af6ad5">LoadTex</a>() { return ; }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">   67</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">   69</a></span>&#160;    <a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> <a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a>;     </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_object_html_af936fbfd0a49fbc6311205cd7d8eff19"><div class="ttname"><a href="class_object.html#af936fbfd0a49fbc6311205cd7d8eff19">Object::HasOnMouse</a></div><div class="ttdeci">virtual bool HasOnMouse()=0</div><div class="ttdoc">HasOnMouse の純仮想関数</div></div>
+<div class="ttc" id="aclass_object_html_a9c01db131509235804689e9da5af6ad5"><div class="ttname"><a href="class_object.html#a9c01db131509235804689e9da5af6ad5">Object::LoadTex</a></div><div class="ttdeci">virtual void LoadTex()</div><div class="ttdef"><b>Definition:</b> Object.h:63</div></div>
+<div class="ttc" id="aclass_object_html_a3fd4b731f381df03c9aa9f5afcbd73c7"><div class="ttname"><a href="class_object.html#a3fd4b731f381df03c9aa9f5afcbd73c7">Object::HasMask</a></div><div class="ttdeci">virtual bool HasMask()</div><div class="ttdef"><b>Definition:</b> Object.h:61</div></div>
+<div class="ttc" id="aclass_object_html_ae8f5483f459e46687bd01e6f9977afd3"><div class="ttname"><a href="class_object.html#ae8f5483f459e46687bd01e6f9977afd3">Object::~Object</a></div><div class="ttdeci">~Object()</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> Object.h:21</div></div>
+<div class="ttc" id="a_object_i_d_8h_html"><div class="ttname"><a href="_object_i_d_8h.html">ObjectID.h</a></div></div>
+<div class="ttc" id="aclass_object_html_acbd787db750bc1be296d152b324acf20"><div class="ttname"><a href="class_object.html#acbd787db750bc1be296d152b324acf20">Object::Draw</a></div><div class="ttdeci">virtual void Draw()=0</div><div class="ttdoc">Draw の純仮想関数</div></div>
+<div class="ttc" id="aclass_object_html_a7a93bec1c230d962620b5ae62e581f91"><div class="ttname"><a href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">Object::m_IsDeath</a></div><div class="ttdeci">bool m_IsDeath</div><div class="ttdoc">オブジェクトの生存情報</div><div class="ttdef"><b>Definition:</b> Object.h:67</div></div>
+<div class="ttc" id="aclass_object_html_a67dac0d49f2c9a8e4b86b2572238adb2"><div class="ttname"><a href="class_object.html#a67dac0d49f2c9a8e4b86b2572238adb2">Object::GetHp</a></div><div class="ttdeci">virtual float GetHp()</div><div class="ttdoc">Candle クラスで使用する GaetHp() の仮想関数 Candle をインスタンス化して使用する</div><div class="ttdef"><b>Definition:</b> Object.h:40</div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">オブジェクトを管理するクラス</div><div class="ttdef"><b>Definition:</b> Object.h:16</div></div>
+<div class="ttc" id="aclass_object_html_af6c3ba6ab9e42e35162e39d4fd9172ca"><div class="ttname"><a href="class_object.html#af6c3ba6ab9e42e35162e39d4fd9172ca">Object::GetRatio</a></div><div class="ttdeci">virtual float GetRatio()</div><div class="ttdef"><b>Definition:</b> Object.h:47</div></div>
+<div class="ttc" id="aclass_object_html_a7254c74e9926c9c9e5076b606dbfc962"><div class="ttname"><a href="class_object.html#a7254c74e9926c9c9e5076b606dbfc962">Object::Init</a></div><div class="ttdeci">virtual void Init()=0</div><div class="ttdoc">Init の純仮想関数</div></div>
+<div class="ttc" id="aclass_object_html_a5ee5c17a09981cbd7c469370e210b4ff"><div class="ttname"><a href="class_object.html#a5ee5c17a09981cbd7c469370e210b4ff">Object::Update</a></div><div class="ttdeci">virtual void Update()=0</div><div class="ttdoc">Update の純仮想関数</div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a></div><div class="ttdeci">ObjID</div><div class="ttdef"><b>Definition:</b> ObjectID.h:8</div></div>
+<div class="ttc" id="aclass_object_html_a9f06f75335ce0023e49bd4b79afcc1a4"><div class="ttname"><a href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">Object::m_Id</a></div><div class="ttdeci">ObjID m_Id</div><div class="ttdoc">オブジェクトの識別番号</div><div class="ttdef"><b>Definition:</b> Object.h:69</div></div>
+<div class="ttc" id="aclass_object_html_a40860402e64d8008fb42329df7097cdb"><div class="ttname"><a href="class_object.html#a40860402e64d8008fb42329df7097cdb">Object::Object</a></div><div class="ttdeci">Object()</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Object.h:19</div></div>
+<div class="ttc" id="aclass_object_html_a56b5956cea5204d55183a444a01a30d6"><div class="ttname"><a href="class_object.html#a56b5956cea5204d55183a444a01a30d6">Object::HasCaLight</a></div><div class="ttdeci">virtual bool HasCaLight()</div><div class="ttdoc">Candle クラスで使用する HasCaLight() の仮想関数 Candle をインスタンス化して使用する</div><div class="ttdef"><b>Definition:</b> Object.h:54</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,7 +1,11 @@
 ﻿/**
-* @file Scene.h
-* @brief シーン全体を実行、描画する関数の宣言
+*	@file Botan.h
+*	@author 中地
+*			春日井
+*			中本
+*	@brief キャラクター「牡丹」を管理するクラスを処理
 */
+
 #ifndef SCENE_H_
 #define SCENE_H_
 

@@ -1,0 +1,78 @@
+\hypertarget{_game_data_8h}{}\doxysection{Src/\+Data/\+Game\+Data.h ファイル}
+\label{_game_data_8h}\index{Src/Data/GameData.h@{Src/Data/GameData.h}}
+{\ttfamily \#include \char`\"{}Days/\+Day\+Controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Utility/\+Singleton\+Template.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Character/\+Character\+I\+D.\+h\char`\"{}}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_enemy_data}{Enemy\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_game_param}{Game\+Param}}
+\item 
+class \mbox{\hyperlink{class_game_data}{Game\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}} \{ \newline
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1}{Sub\+Game\+Scene\+::\+C\+E\+N\+T\+E\+R\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b}{Sub\+Game\+Scene\+::\+L\+E\+F\+T\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee}{Sub\+Game\+Scene\+::\+R\+I\+G\+H\+T\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595}{Sub\+Game\+Scene\+::\+W\+O\+R\+K\+S\+H\+O\+P\+\_\+\+V\+I\+EW}}, 
+\newline
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99}{Sub\+Game\+Scene\+::\+S\+T\+O\+R\+E\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89}{Sub\+Game\+Scene\+::\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886}{Sub\+Game\+Scene\+::\+C\+H\+I\+L\+D\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW}}, 
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed}{Sub\+Game\+Scene\+::\+R\+I\+G\+H\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW}}, 
+\newline
+\mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec}{Sub\+Game\+Scene\+::\+L\+E\+F\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{列挙型詳解}
+\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}} 
+\index{GameData.h@{GameData.h}!SubGameScene@{SubGameScene}}
+\index{SubGameScene@{SubGameScene}!GameData.h@{GameData.h}}
+\doxysubsubsection{\texorpdfstring{SubGameScene}{SubGameScene}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_game_data_8h_a6c79023c60fe642dce1e84201cdba34c}{Sub\+Game\+Scene}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CENTER\_VIEW@{CENTER\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!CENTER\_VIEW@{CENTER\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1}} 
+C\+E\+N\+T\+E\+R\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_VIEW@{LEFT\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!LEFT\_VIEW@{LEFT\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b}} 
+L\+E\+F\+T\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_VIEW@{RIGHT\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RIGHT\_VIEW@{RIGHT\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee}} 
+R\+I\+G\+H\+T\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WORKSHOP\_VIEW@{WORKSHOP\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!WORKSHOP\_VIEW@{WORKSHOP\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595}} 
+W\+O\+R\+K\+S\+H\+O\+P\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STORE\_ROOM\_VIEW@{STORE\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!STORE\_ROOM\_VIEW@{STORE\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99}} 
+S\+T\+O\+R\+E\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RECEPTION\_ROOM\_VIEW@{RECEPTION\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RECEPTION\_ROOM\_VIEW@{RECEPTION\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89}} 
+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHILD\_ROOM\_VIEW@{CHILD\_ROOM\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!CHILD\_ROOM\_VIEW@{CHILD\_ROOM\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886}} 
+C\+H\+I\+L\+D\+\_\+\+R\+O\+O\+M\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT\_CORRIDOR\_VIEW@{RIGHT\_CORRIDOR\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!RIGHT\_CORRIDOR\_VIEW@{RIGHT\_CORRIDOR\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed}} 
+R\+I\+G\+H\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT\_CORRIDOR\_VIEW@{LEFT\_CORRIDOR\_VIEW}!GameData.h@{GameData.h}}\index{GameData.h@{GameData.h}!LEFT\_CORRIDOR\_VIEW@{LEFT\_CORRIDOR\_VIEW}}}\mbox{\Hypertarget{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec}\label{_game_data_8h_a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec}} 
+L\+E\+F\+T\+\_\+\+C\+O\+R\+R\+I\+D\+O\+R\+\_\+\+V\+I\+EW&\\
+\hline
+
+\end{DoxyEnumFields}

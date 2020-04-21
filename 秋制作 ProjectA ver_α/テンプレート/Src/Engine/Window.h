@@ -1,6 +1,7 @@
 ﻿/**
 * @file Window.h
 * @brief ウィンドウに関する外部公開関数、定数の宣言
+* @author 中地
 */
 #ifndef WINDOW_H_
 #define WINDOW_H_

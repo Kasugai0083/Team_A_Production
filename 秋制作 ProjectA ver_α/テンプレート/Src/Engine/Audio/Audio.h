@@ -1,6 +1,10 @@
 #ifndef AUDIO_H_
 #define AUDIO_H_
-
+/**
+*	@file Botan.h
+*	@author 中本
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
 #include <string>
 #include <unordered_map>
 #include "Sound.h"

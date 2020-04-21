@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Data/GameData.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_421c95b13c9661f837c8be4f4306f045.html">Data</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameData.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_data_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEDATA_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEDATA_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_day_controller_8h.html">Days/DayController.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Utility/SingletonTemplate.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Character/CharacterID.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span>CSV;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34c">   10</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34c">SubGameScene</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1">CENTER_VIEW</a>,            <span class="comment">//プレイヤールーム中央</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b">LEFT_VIEW</a>,              <span class="comment">//プレイヤールーム左</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee">RIGHT_VIEW</a>,             <span class="comment">//プレイヤールーム右</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595">WORKSHOP_VIEW</a>,          <span class="comment">//工房</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99">STORE_ROOM_VIEW</a>,        <span class="comment">//物置</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89">RECEPTION_ROOM_VIEW</a>,    <span class="comment">//客間</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886">CHILD_ROOM_VIEW</a>,        <span class="comment">//子供部屋</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed">RIGHT_CORRIDOR_VIEW</a>,    <span class="comment">//右廊下</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec">LEFT_CORRIDOR_VIEW</a>,     <span class="comment">//左廊下</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_enemy_data.html">   22</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_enemy_data.html">EnemyData</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_enemy_data.html#a1ad316746c73d1bc15b905c44f7896c0">   23</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_enemy_data.html#a1ad316746c73d1bc15b905c44f7896c0">m_SpownJudge</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_enemy_data.html#ae27b50c49ea33309cdb7dfa4faed5b11">   24</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_enemy_data.html#ae27b50c49ea33309cdb7dfa4faed5b11">m_MovementSpeed</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_game_param.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_game_param.html">GameParam</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_game_param.html#a4ea98e7461e6b59654daaea9745343e3">   28</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_game_param.html#a4ea98e7461e6b59654daaea9745343e3">m_MeltRatio</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_game_param.html#a254a62029b62c71e02f2f49de098bf97">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_param.html#a254a62029b62c71e02f2f49de098bf97">m_TimeMagnification</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_game_data.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_game_data.html">GameData</a> : <span class="keyword">public</span> <a class="code" href="class_singleton.html">Singleton</a>&lt;GameData&gt; {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// データを送信する関数(GameData を Accesor にしない場合)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_game_data.html#a61a802b095275ed3118c1be0bada1740">   36</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_data.html#a61a802b095275ed3118c1be0bada1740">SendEnemyData</a>(<a class="code" href="struct_enemy_data.html">EnemyData</a>* edata_, <span class="keywordtype">int</span> i) { *edata_ = m_EData[i]; }</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_game_data.html#aa4bd6ab53f2a49a8875dfebe404a0b3a">   37</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_data.html#aa4bd6ab53f2a49a8875dfebe404a0b3a">SendGameParam</a>(<a class="code" href="struct_game_param.html">GameParam</a>* gameparam_) { *gameparam_ = m_GameParam; }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// ゲット関数</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_game_data.html#ae2c00ff1c39a156dd9e6175b95c32183">   39</a></span>&#160;    <a class="code" href="struct_enemy_data.html">EnemyData</a> <a class="code" href="class_game_data.html#ae2c00ff1c39a156dd9e6175b95c32183">GetEnemyData</a>(<a class="code" href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32b">EnemyID</a> enemyId_)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_EData[static_cast&lt;int&gt;(enemyId_)]; }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_game_data.html#aa9cabee58bb6d82be2de203fd830e889">   40</a></span>&#160;    <a class="code" href="struct_game_param.html">GameParam</a> <a class="code" href="class_game_data.html#aa9cabee58bb6d82be2de203fd830e889">GetGameParam</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_GameParam; }</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_game_data.html#aacfde291e648c610c55c977a74b68d45">   41</a></span>&#160;    <a class="code" href="_day_controller_8h.html#a3b3e547cfc41fcb2479d1a7e56c51990">Days</a> <a class="code" href="class_game_data.html#aacfde291e648c610c55c977a74b68d45">GetDays</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_Days; }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// データを受け取る関数(GameData を Accesor にする場合)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_game_data.html#aaecadac5b0ccc03351b128e89e47c8b4">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_data.html#aaecadac5b0ccc03351b128e89e47c8b4">SetEnemyData</a>(<a class="code" href="struct_enemy_data.html">EnemyData</a> edata_, <a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7f">CharacterID</a> charid_) { m_EData[charid_] = edata_; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_game_data.html#a75614fec6d64fd568a214233a634c055">   45</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_data.html#a75614fec6d64fd568a214233a634c055">SetGameParam</a>(<a class="code" href="struct_game_param.html">GameParam</a> param_) { m_GameParam = param_; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// 値を読み込むメソッド</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_data.html#ab581772be851bdf509d7c48666f75312">LoadDay</a>(<a class="code" href="_day_controller_8h.html#a3b3e547cfc41fcb2479d1a7e56c51990">Days</a> day_);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_data.html#a7eb458c129058b1e5d27e769130dc34a">LoadParam</a>(<a class="code" href="struct_game_param.html">GameParam</a> param_);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_game_data.html#aa9d212064ff0ecc8642944023c19e2c7">LoadGameData</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="struct_enemy_data.html">EnemyData</a> m_EData[6];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="struct_game_param.html">GameParam</a> m_GameParam;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="_day_controller_8h.html#a3b3e547cfc41fcb2479d1a7e56c51990">Days</a> m_Days;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">friend</span> <a class="code" href="class_singleton.html">Singleton&lt;GameData&gt;</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_game_data.html">GameData</a>() {};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_game_data.html">GameData</a>() {};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//コピーコンストラクタの禁止</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_game_data.html">GameData</a>(<span class="keyword">const</span> <a class="code" href="class_game_data.html">GameData</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_game_data.html">GameData</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_game_data.html">GameData</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//ムーブコンストラクタの禁止</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_game_data.html">GameData</a>(<span class="keyword">const</span> <a class="code" href="class_game_data.html">GameData</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="class_game_data.html">GameData</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_game_data.html">GameData</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_game_data_html_a61a802b095275ed3118c1be0bada1740"><div class="ttname"><a href="class_game_data.html#a61a802b095275ed3118c1be0bada1740">GameData::SendEnemyData</a></div><div class="ttdeci">void SendEnemyData(EnemyData *edata_, int i)</div><div class="ttdef"><b>Definition:</b> GameData.h:36</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34cadf61dde18090e76135f77e920f7aa595">SubGameScene::WORKSHOP_VIEW</a></div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34cae17372c93ff777476fd9d14408d8fcec">SubGameScene::LEFT_CORRIDOR_VIEW</a></div></div>
+<div class="ttc" id="aclass_game_data_html_aaecadac5b0ccc03351b128e89e47c8b4"><div class="ttname"><a href="class_game_data.html#aaecadac5b0ccc03351b128e89e47c8b4">GameData::SetEnemyData</a></div><div class="ttdeci">void SetEnemyData(EnemyData edata_, CharacterID charid_)</div><div class="ttdef"><b>Definition:</b> GameData.h:44</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7f"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7f">CharacterID</a></div><div class="ttdeci">CharacterID</div><div class="ttdef"><b>Definition:</b> CharacterID.h:4</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca2f052f8e70fa319d3ed6f5f99d5e4886">SubGameScene::CHILD_ROOM_VIEW</a></div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34cad177a8e479adc95a263a3d3823399aed">SubGameScene::RIGHT_CORRIDOR_VIEW</a></div></div>
+<div class="ttc" id="astruct_enemy_data_html"><div class="ttname"><a href="struct_enemy_data.html">EnemyData</a></div><div class="ttdef"><b>Definition:</b> GameData.h:22</div></div>
+<div class="ttc" id="aclass_game_data_html_aa4bd6ab53f2a49a8875dfebe404a0b3a"><div class="ttname"><a href="class_game_data.html#aa4bd6ab53f2a49a8875dfebe404a0b3a">GameData::SendGameParam</a></div><div class="ttdeci">void SendGameParam(GameParam *gameparam_)</div><div class="ttdef"><b>Definition:</b> GameData.h:37</div></div>
+<div class="ttc" id="aclass_singleton_html"><div class="ttname"><a href="class_singleton.html">Singleton</a></div><div class="ttdef"><b>Definition:</b> SingletonTemplate.h:5</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1">SubGameScene::CENTER_VIEW</a></div></div>
+<div class="ttc" id="aclass_game_data_html_aa9d212064ff0ecc8642944023c19e2c7"><div class="ttname"><a href="class_game_data.html#aa9d212064ff0ecc8642944023c19e2c7">GameData::LoadGameData</a></div><div class="ttdeci">void LoadGameData()</div><div class="ttdef"><b>Definition:</b> GameData.cpp:10</div></div>
+<div class="ttc" id="aclass_game_data_html_a7eb458c129058b1e5d27e769130dc34a"><div class="ttname"><a href="class_game_data.html#a7eb458c129058b1e5d27e769130dc34a">GameData::LoadParam</a></div><div class="ttdeci">void LoadParam(GameParam param_)</div><div class="ttdef"><b>Definition:</b> GameData.cpp:5</div></div>
+<div class="ttc" id="a_day_controller_8h_html_a3b3e547cfc41fcb2479d1a7e56c51990"><div class="ttname"><a href="_day_controller_8h.html#a3b3e547cfc41fcb2479d1a7e56c51990">Days</a></div><div class="ttdeci">Days</div><div class="ttdef"><b>Definition:</b> DayController.h:6</div></div>
+<div class="ttc" id="aclass_game_data_html_a75614fec6d64fd568a214233a634c055"><div class="ttname"><a href="class_game_data.html#a75614fec6d64fd568a214233a634c055">GameData::SetGameParam</a></div><div class="ttdeci">void SetGameParam(GameParam param_)</div><div class="ttdef"><b>Definition:</b> GameData.h:45</div></div>
+<div class="ttc" id="astruct_game_param_html_a4ea98e7461e6b59654daaea9745343e3"><div class="ttname"><a href="struct_game_param.html#a4ea98e7461e6b59654daaea9745343e3">GameParam::m_MeltRatio</a></div><div class="ttdeci">float m_MeltRatio</div><div class="ttdef"><b>Definition:</b> GameData.h:28</div></div>
+<div class="ttc" id="aclass_game_data_html_aa9cabee58bb6d82be2de203fd830e889"><div class="ttname"><a href="class_game_data.html#aa9cabee58bb6d82be2de203fd830e889">GameData::GetGameParam</a></div><div class="ttdeci">GameParam GetGameParam() const</div><div class="ttdef"><b>Definition:</b> GameData.h:40</div></div>
+<div class="ttc" id="aclass_game_data_html_aacfde291e648c610c55c977a74b68d45"><div class="ttname"><a href="class_game_data.html#aacfde291e648c610c55c977a74b68d45">GameData::GetDays</a></div><div class="ttdeci">Days GetDays() const</div><div class="ttdef"><b>Definition:</b> GameData.h:41</div></div>
+<div class="ttc" id="aclass_game_data_html_ae2c00ff1c39a156dd9e6175b95c32183"><div class="ttname"><a href="class_game_data.html#ae2c00ff1c39a156dd9e6175b95c32183">GameData::GetEnemyData</a></div><div class="ttdeci">EnemyData GetEnemyData(EnemyID enemyId_) const</div><div class="ttdef"><b>Definition:</b> GameData.h:39</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_acb05422f600e20c88d7c75432fe2d32b"><div class="ttname"><a href="_character_i_d_8h.html#acb05422f600e20c88d7c75432fe2d32b">EnemyID</a></div><div class="ttdeci">EnemyID</div><div class="ttdef"><b>Definition:</b> CharacterID.h:19</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca50222e086f9b4465d07efa7b18ef1a89">SubGameScene::RECEPTION_ROOM_VIEW</a></div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34c"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34c">SubGameScene</a></div><div class="ttdeci">SubGameScene</div><div class="ttdef"><b>Definition:</b> GameData.h:10</div></div>
+<div class="ttc" id="astruct_game_param_html_a254a62029b62c71e02f2f49de098bf97"><div class="ttname"><a href="struct_game_param.html#a254a62029b62c71e02f2f49de098bf97">GameParam::m_TimeMagnification</a></div><div class="ttdeci">int m_TimeMagnification</div><div class="ttdef"><b>Definition:</b> GameData.h:29</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca7adbd36bf47b14bb6f28a51a5c7863ee">SubGameScene::RIGHT_VIEW</a></div></div>
+<div class="ttc" id="a_day_controller_8h_html"><div class="ttname"><a href="_day_controller_8h.html">DayController.h</a></div></div>
+<div class="ttc" id="astruct_enemy_data_html_a1ad316746c73d1bc15b905c44f7896c0"><div class="ttname"><a href="struct_enemy_data.html#a1ad316746c73d1bc15b905c44f7896c0">EnemyData::m_SpownJudge</a></div><div class="ttdeci">int m_SpownJudge</div><div class="ttdef"><b>Definition:</b> GameData.h:23</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca60ba94375edfa1592977b2998f050b99">SubGameScene::STORE_ROOM_VIEW</a></div></div>
+<div class="ttc" id="astruct_game_param_html"><div class="ttname"><a href="struct_game_param.html">GameParam</a></div><div class="ttdef"><b>Definition:</b> GameData.h:27</div></div>
+<div class="ttc" id="astruct_enemy_data_html_ae27b50c49ea33309cdb7dfa4faed5b11"><div class="ttname"><a href="struct_enemy_data.html#ae27b50c49ea33309cdb7dfa4faed5b11">EnemyData::m_MovementSpeed</a></div><div class="ttdeci">int m_MovementSpeed</div><div class="ttdef"><b>Definition:</b> GameData.h:24</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34caa34b9ace047a0dd63b26eff30759978b">SubGameScene::LEFT_VIEW</a></div></div>
+<div class="ttc" id="aclass_game_data_html"><div class="ttname"><a href="class_game_data.html">GameData</a></div><div class="ttdef"><b>Definition:</b> GameData.h:32</div></div>
+<div class="ttc" id="aclass_game_data_html_ab581772be851bdf509d7c48666f75312"><div class="ttname"><a href="class_game_data.html#ab581772be851bdf509d7c48666f75312">GameData::LoadDay</a></div><div class="ttdeci">void LoadDay(Days day_)</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

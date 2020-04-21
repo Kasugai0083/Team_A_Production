@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Engine/Input.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_7f18efbdeab9977140246e0a5a68c185.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">Input.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;dinput.h&gt;</code><br />
+<code>#include &lt;Windows.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_vec_8h_source.html">../Utility/Vec.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_window_8h_source.html">Window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_input_8h_source.html">Input.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_a_t_e.html">INPUTSTATE</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a1d7ab29fdefabdb4e7e7cd27ac4c9934"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#a1d7ab29fdefabdb4e7e7cd27ac4c9934">DIRECTINPUT_VERSION</a>&#160;&#160;&#160;0x0800</td></tr>
+<tr class="separator:a1d7ab29fdefabdb4e7e7cd27ac4c9934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae63a0d5c5e53a3ac8a2cc895c53f1cf6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#ae63a0d5c5e53a3ac8a2cc895c53f1cf6">MOUSE_ON_VALUE</a>&#160;&#160;&#160;(0x80)</td></tr>
+<tr class="separator:ae63a0d5c5e53a3ac8a2cc895c53f1cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ac1b4eea14729ef7586753b5c90a7f3ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#ac1b4eea14729ef7586753b5c90a7f3ef">CreateInputInterface</a> ()</td></tr>
+<tr class="separator:ac1b4eea14729ef7586753b5c90a7f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be7744a512c69e5f232644d7aeb0c99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#a7be7744a512c69e5f232644d7aeb0c99">CreateMouseDevice</a> ()</td></tr>
+<tr class="separator:a7be7744a512c69e5f232644d7aeb0c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb46ae8fc1c5f23e2923283b0a6dfc7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#adb46ae8fc1c5f23e2923283b0a6dfc7d">CreateKeyboardDevice</a> ()</td></tr>
+<tr class="separator:adb46ae8fc1c5f23e2923283b0a6dfc7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e3f1d462afafd7777019240509a21e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#af4e3f1d462afafd7777019240509a21e">UpdateMouse</a> ()</td></tr>
+<tr class="separator:af4e3f1d462afafd7777019240509a21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38988ebf6ab3808447c491d4f5874e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#ab38988ebf6ab3808447c491d4f5874e0">InitInput</a> ()</td></tr>
+<tr class="memdesc:ab38988ebf6ab3808447c491d4f5874e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input機能初期化関数<br  />
+デバイスの入力取得に必要な初期化を行う ※InitEngineで実行されるので開発側が実行する必要はない  <a href="_input_8cpp.html#ab38988ebf6ab3808447c491d4f5874e0">[詳解]</a><br /></td></tr>
+<tr class="separator:ab38988ebf6ab3808447c491d4f5874e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fdd03168a7e6952059fcf83e88c70f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#a4fdd03168a7e6952059fcf83e88c70f7">EndInput</a> ()</td></tr>
+<tr class="memdesc:a4fdd03168a7e6952059fcf83e88c70f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input機能終了関数<br  />
+Input機能を終了させる<br  />
+※EndEngineで実行されるので開発側が実行する必要はない  <a href="_input_8cpp.html#a4fdd03168a7e6952059fcf83e88c70f7">[詳解]</a><br /></td></tr>
+<tr class="separator:a4fdd03168a7e6952059fcf83e88c70f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57107136b39d15829122034f9a40a20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#ae57107136b39d15829122034f9a40a20">UpdateKey</a> ()</td></tr>
+<tr class="separator:ae57107136b39d15829122034f9a40a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17360113bb2f13cab915ee42df89caa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#a17360113bb2f13cab915ee42df89caa3">UpdateInput</a> ()</td></tr>
+<tr class="memdesc:a17360113bb2f13cab915ee42df89caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">入力情報の更新<br  />
+デバイスの入力情報の更新を行う<br  />
+毎フレームに１度必ず実行する必要がある  <a href="_input_8cpp.html#a17360113bb2f13cab915ee42df89caa3">[詳解]</a><br /></td></tr>
+<tr class="separator:a17360113bb2f13cab915ee42df89caa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f135e5f514d0fef704afaec9be02c02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02">OnMouseDown</a> (<a class="el" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a> button_type)</td></tr>
+<tr class="memdesc:a4f135e5f514d0fef704afaec9be02c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリックした瞬間判定関数<br  />
+指定したマウスのボタンがクリックされた瞬間かどうかを判定する  <a href="_input_8cpp.html#a4f135e5f514d0fef704afaec9be02c02">[詳解]</a><br /></td></tr>
+<tr class="separator:a4f135e5f514d0fef704afaec9be02c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af896c535cd0c69ae56fdf3d71564fb92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#af896c535cd0c69ae56fdf3d71564fb92">OnMousePush</a> (<a class="el" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a> button_type)</td></tr>
+<tr class="memdesc:af896c535cd0c69ae56fdf3d71564fb92"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリック中判定関数<br  />
+指定したマウスのボタンがクリック中かどうかを判定する  <a href="_input_8cpp.html#af896c535cd0c69ae56fdf3d71564fb92">[詳解]</a><br /></td></tr>
+<tr class="separator:af896c535cd0c69ae56fdf3d71564fb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeddeb4717c1230878da5162e69876972"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#aeddeb4717c1230878da5162e69876972">OnMouseUp</a> (<a class="el" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a> button_type)</td></tr>
+<tr class="memdesc:aeddeb4717c1230878da5162e69876972"><td class="mdescLeft">&#160;</td><td class="mdescRight">クリック終了判定関数<br  />
+指定したマウスのボタンがクリックを終了した瞬間かどうかを判定する  <a href="_input_8cpp.html#aeddeb4717c1230878da5162e69876972">[詳解]</a><br /></td></tr>
+<tr class="separator:aeddeb4717c1230878da5162e69876972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa276e0dd5c42af1f1baa54558df126ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a> ()</td></tr>
+<tr class="memdesc:aa276e0dd5c42af1f1baa54558df126ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスの座標取得関数  <a href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">[詳解]</a><br /></td></tr>
+<tr class="separator:aa276e0dd5c42af1f1baa54558df126ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dac7d6291b5adaef424f722ca35c786"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#a3dac7d6291b5adaef424f722ca35c786">GetKey</a> (DWORD key_code)</td></tr>
+<tr class="separator:a3dac7d6291b5adaef424f722ca35c786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a328c0a63f02a90c4548f60f9456873b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#a328c0a63f02a90c4548f60f9456873b1">GetKeyDown</a> (DWORD key_code)</td></tr>
+<tr class="separator:a328c0a63f02a90c4548f60f9456873b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ecf995be39f5bf4dc7e0a8ad3f0c34"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8cpp.html#aa6ecf995be39f5bf4dc7e0a8ad3f0c34">GetKeyUp</a> (DWORD key_code)</td></tr>
+<tr class="separator:aa6ecf995be39f5bf4dc7e0a8ad3f0c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a1d7ab29fdefabdb4e7e7cd27ac4c9934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7ab29fdefabdb4e7e7cd27ac4c9934">&#9670;&nbsp;</a></span>DIRECTINPUT_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIRECTINPUT_VERSION&#160;&#160;&#160;0x0800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae63a0d5c5e53a3ac8a2cc895c53f1cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae63a0d5c5e53a3ac8a2cc895c53f1cf6">&#9670;&nbsp;</a></span>MOUSE_ON_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOUSE_ON_VALUE&#160;&#160;&#160;(0x80)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac1b4eea14729ef7586753b5c90a7f3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b4eea14729ef7586753b5c90a7f3ef">&#9670;&nbsp;</a></span>CreateInputInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateInputInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb46ae8fc1c5f23e2923283b0a6dfc7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb46ae8fc1c5f23e2923283b0a6dfc7d">&#9670;&nbsp;</a></span>CreateKeyboardDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateKeyboardDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7be7744a512c69e5f232644d7aeb0c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be7744a512c69e5f232644d7aeb0c99">&#9670;&nbsp;</a></span>CreateMouseDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateMouseDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fdd03168a7e6952059fcf83e88c70f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fdd03168a7e6952059fcf83e88c70f7">&#9670;&nbsp;</a></span>EndInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EndInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input機能終了関数<br  />
+Input機能を終了させる<br  />
+※EndEngineで実行されるので開発側が実行する必要はない </p>
+
+</div>
+</div>
+<a id="a3dac7d6291b5adaef424f722ca35c786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dac7d6291b5adaef424f722ca35c786">&#9670;&nbsp;</a></span>GetKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetKey </td>
+          <td>(</td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>key_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a328c0a63f02a90c4548f60f9456873b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a328c0a63f02a90c4548f60f9456873b1">&#9670;&nbsp;</a></span>GetKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>key_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6ecf995be39f5bf4dc7e0a8ad3f0c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ecf995be39f5bf4dc7e0a8ad3f0c34">&#9670;&nbsp;</a></span>GetKeyUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetKeyUp </td>
+          <td>(</td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>key_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa276e0dd5c42af1f1baa54558df126ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa276e0dd5c42af1f1baa54558df126ee">&#9670;&nbsp;</a></span>GetMousePos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_vec2.html">Vec2</a> GetMousePos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>マウスの座標取得関数 </p>
+
+</div>
+</div>
+<a id="ab38988ebf6ab3808447c491d4f5874e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38988ebf6ab3808447c491d4f5874e0">&#9670;&nbsp;</a></span>InitInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InitInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Input機能初期化関数<br  />
+デバイスの入力取得に必要な初期化を行う ※InitEngineで実行されるので開発側が実行する必要はない </p>
+<dl class="section return"><dt>戻り値</dt><dd>初期化結果(成功はtrue) </dd></dl>
+
+</div>
+</div>
+<a id="a4f135e5f514d0fef704afaec9be02c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f135e5f514d0fef704afaec9be02c02">&#9670;&nbsp;</a></span>OnMouseDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OnMouseDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a>&#160;</td>
+          <td class="paramname"><em>button_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>クリックした瞬間判定関数<br  />
+指定したマウスのボタンがクリックされた瞬間かどうかを判定する </p>
+<dl class="section return"><dt>戻り値</dt><dd>判定結果(押された瞬間ならtrue) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">button_type</td><td>判定したいボタンの種類 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af896c535cd0c69ae56fdf3d71564fb92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af896c535cd0c69ae56fdf3d71564fb92">&#9670;&nbsp;</a></span>OnMousePush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OnMousePush </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a>&#160;</td>
+          <td class="paramname"><em>button_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>クリック中判定関数<br  />
+指定したマウスのボタンがクリック中かどうかを判定する </p>
+<dl class="section return"><dt>戻り値</dt><dd>判定結果(クリック中瞬間ならtrue) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">button_type</td><td>判定したいボタンの種類 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeddeb4717c1230878da5162e69876972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeddeb4717c1230878da5162e69876972">&#9670;&nbsp;</a></span>OnMouseUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OnMouseUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_input_8h.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a>&#160;</td>
+          <td class="paramname"><em>button_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>クリック終了判定関数<br  />
+指定したマウスのボタンがクリックを終了した瞬間かどうかを判定する </p>
+<dl class="section return"><dt>戻り値</dt><dd>判定結果(クリックをやめた瞬間ならtrue) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">button_type</td><td>判定したいボタンの種類 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a17360113bb2f13cab915ee42df89caa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17360113bb2f13cab915ee42df89caa3">&#9670;&nbsp;</a></span>UpdateInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>入力情報の更新<br  />
+デバイスの入力情報の更新を行う<br  />
+毎フレームに１度必ず実行する必要がある </p>
+
+</div>
+</div>
+<a id="ae57107136b39d15829122034f9a40a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57107136b39d15829122034f9a40a20">&#9670;&nbsp;</a></span>UpdateKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4e3f1d462afafd7777019240509a21e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e3f1d462afafd7777019240509a21e">&#9670;&nbsp;</a></span>UpdateMouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateMouse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,3 +1,9 @@
+/**
+*	@file Botan.h
+*	@author 春日井
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
 #pragma once
 
 /**

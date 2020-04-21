@@ -1,6 +1,13 @@
 #ifndef CHARACTERID_H_
 #define CHARACTERID_H_
 
+/**
+*	@file Botan.h
+*	@author 春日井
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
+
 enum CharacterID {
 	PLAYER,		// プレイヤー
 

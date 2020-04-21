@@ -1,6 +1,13 @@
 #ifndef  DAY_CONTROLLER_H_
 #define  DAY_CONTROLLER_H_
 
+/**
+*	@file Botan.h
+*	@author 春日井
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
+
 class Character;
 
 enum class Days {

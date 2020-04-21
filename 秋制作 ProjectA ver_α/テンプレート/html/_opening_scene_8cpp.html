@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Scene/OpeningScene.cpp ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_bb4b684037018be5ca8f0f26e1152e7c.html">Scene</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">OpeningScene.cpp ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_graphics_8h_source.html">../Engine/Graphics.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_input_8h_source.html">../Engine/Input.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_texture_8h_source.html">../Texture/Texture.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_opening_scene_8h_source.html">OpeningScene.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_calculation_8h_source.html">../Engine/Calculation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_timer_8h_source.html">..//Timer/Timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_player_8h_source.html">../Character/Player/Player.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_character_manager_8h_source.html">../Character/CharacterManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_character_i_d_8h_source.html">../Character/CharacterID.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_audio_8h_source.html">../Engine/Audio/Audio.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_day_controller_8h_source.html">../Data/Days/DayController.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_object_manager_8h_source.html">../Object/ObjectManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_load_tex_8h_source.html">../Texture/LoadTex.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_op_controller.html">OpController</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a8394103e62627e97087b394d78ebe261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_opening_scene_8cpp.html#a8394103e62627e97087b394d78ebe261">InitOpeningScene</a> ()</td></tr>
+<tr class="separator:a8394103e62627e97087b394d78ebe261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20db958d76742e662cf4c24efc1022dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_opening_scene_8cpp.html#a20db958d76742e662cf4c24efc1022dd">MainOpeningScene</a> ()</td></tr>
+<tr class="separator:a20db958d76742e662cf4c24efc1022dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5d359869a9a22dcfa3b4615dcaa20e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_opening_scene_8cpp.html#a6d5d359869a9a22dcfa3b4615dcaa20e">FinishOpeningScene</a> ()</td></tr>
+<tr class="separator:a6d5d359869a9a22dcfa3b4615dcaa20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130a9d710956b3d6031a82fd31ac5c9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_opening_scene_8cpp.html#a130a9d710956b3d6031a82fd31ac5c9e">UpdateOpeningScene</a> ()</td></tr>
+<tr class="memdesc:a130a9d710956b3d6031a82fd31ac5c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオーバーシーンの更新関数<br  />
+ゲームオーバーシーンの仕様が実行される  <a href="_opening_scene_8cpp.html#a130a9d710956b3d6031a82fd31ac5c9e">[詳解]</a><br /></td></tr>
+<tr class="separator:a130a9d710956b3d6031a82fd31ac5c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafa0ea856d6013bbf2a3f749f5fab45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_opening_scene_8cpp.html#afafa0ea856d6013bbf2a3f749f5fab45">DrawOpeningScene</a> ()</td></tr>
+<tr class="memdesc:afafa0ea856d6013bbf2a3f749f5fab45"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームオーバーシーンの描画関数<br  />
+ゲームオーバーシーンのオブジェクトを描画するための関数  <a href="_opening_scene_8cpp.html#afafa0ea856d6013bbf2a3f749f5fab45">[詳解]</a><br /></td></tr>
+<tr class="separator:afafa0ea856d6013bbf2a3f749f5fab45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="afafa0ea856d6013bbf2a3f749f5fab45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afafa0ea856d6013bbf2a3f749f5fab45">&#9670;&nbsp;</a></span>DrawOpeningScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawOpeningScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ゲームオーバーシーンの描画関数<br  />
+ゲームオーバーシーンのオブジェクトを描画するための関数 </p>
+
+</div>
+</div>
+<a id="a6d5d359869a9a22dcfa3b4615dcaa20e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5d359869a9a22dcfa3b4615dcaa20e">&#9670;&nbsp;</a></span>FinishOpeningScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> FinishOpeningScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8394103e62627e97087b394d78ebe261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8394103e62627e97087b394d78ebe261">&#9670;&nbsp;</a></span>InitOpeningScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitOpeningScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20db958d76742e662cf4c24efc1022dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20db958d76742e662cf4c24efc1022dd">&#9670;&nbsp;</a></span>MainOpeningScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainOpeningScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a130a9d710956b3d6031a82fd31ac5c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a130a9d710956b3d6031a82fd31ac5c9e">&#9670;&nbsp;</a></span>UpdateOpeningScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> UpdateOpeningScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ゲームオーバーシーンの更新関数<br  />
+ゲームオーバーシーンの仕様が実行される </p>
+<dl class="section return"><dt>戻り値</dt><dd>遷移先シーンID(基本はSceneId::GameOverSceneが返る) </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Object/Item/Id/PlayerItem.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_a1b83057247c09cdb8dec7926d827fb9.html">Object</a></li><li class="navelem"><a class="el" href="dir_dac628b53bacca635db8af31ad04590e.html">Item</a></li><li class="navelem"><a class="el" href="dir_520a77a6ef4591b625d74b2dc33694a8.html">Id</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PlayerItem.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_item_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Item.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../../Scene/Scene.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../../Engine/Calculation.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../../Timer/Timer.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../../Engine/Input.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../..//..//Data/GameData.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../../../Character/CharacterManager.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_crystal.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_crystal.html">Crystal</a> : <span class="keyword">public</span> <a class="code" href="class_item.html">Item</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_crystal.html#a7de88d9998696dca4ee346c673a55b7c">   22</a></span>&#160;    <a class="code" href="class_crystal.html#a7de88d9998696dca4ee346c673a55b7c">Crystal</a>() { <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>; };</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_crystal.html#a79aa0bafbe74ad194781c3afd3effea0">   24</a></span>&#160;    <a class="code" href="class_crystal.html#a79aa0bafbe74ad194781c3afd3effea0">~Crystal</a>() {};                      </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_crystal.html#ae53513bca380eedc662918a7164dbd68">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_crystal.html#ae53513bca380eedc662918a7164dbd68">Init</a>()<span class="keyword">override </span>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_object_tex_8h.html#adb3a3818ad3802ee3d7fece77c0e87c0">TEXTURE_CATEGORY_GAME_OBJECT</a>, <a class="code" href="_game_object_tex_8h.html#a114f1da1c070b7d5c7942ce8772f831dac8fd5c8b181ee946f16d00c7d2f82203">GameObjectCategoryTextureList::OBJECT_CRYSTAL_TEX</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#af56b69ee5392ef03961f550b025f34f0">CRYSTAL_POS</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#a90821d66741fdceae097ae1c7b92f829">CRYSTAL_SIZE</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_crystal.html#ab48cd1bfbae2b0b10454edf2aec45e22">   53</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_crystal.html#ab48cd1bfbae2b0b10454edf2aec45e22">Update</a>()<span class="keyword">override </span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_character.html">Character</a>* pPlayer = <a class="code" href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a>.<a class="code" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">GetCharacter</a>(<a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (pPlayer-&gt;<a class="code" href="class_character.html#a4f08c22210951f1af772f589658593f2">HasMonitor</a>() == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746">GetCurrentSceneId</a>() == <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">GameScene</a>) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (pPlayer-&gt;<a class="code" href="class_character.html#a0c4dd839871956bd5e4e61aba225a524">CurrentViewID</a>() == <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1">SubGameScene::CENTER_VIEW</a>) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac">HasRectangleHit</a>(<a class="code" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a>().X, <a class="code" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a>().Y, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>, (<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> + <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a>), (<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a>)) == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_crystal.html#aaf8b7a71371dddc43e0d3e86a85df252">   92</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_crystal.html#aaf8b7a71371dddc43e0d3e86a85df252">Draw</a>()<span class="keyword">override </span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="comment">/*if (m_OnMouse == true) {</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">                DrawTexture(m_Pos, m_pOnHitTex);</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">            }*/</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="_graphics_8cpp.html#af463eeaf83c0332c15af5af0f059f543">DrawTexture</a>(<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>, <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="struct_texture.html">Texture</a>* m_pOnHitTex;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_watch.html">  110</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_watch.html">Watch</a> : <span class="keyword">public</span> <a class="code" href="class_item.html">Item</a> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_watch.html#ad89783cfa9feb47c0b7242adf635cebb">  113</a></span>&#160;    <a class="code" href="class_watch.html#ad89783cfa9feb47c0b7242adf635cebb">Watch</a>() { <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>; };</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_watch.html#a738126c910663ee9ba62792c411b4166">  115</a></span>&#160;    <a class="code" href="class_watch.html#a738126c910663ee9ba62792c411b4166">~Watch</a>() {};                    </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_watch.html#a92a6fe78df72c5dfa66b1d672af9c284">  124</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_watch.html#a92a6fe78df72c5dfa66b1d672af9c284">Init</a>()<span class="keyword">override </span>{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_object_tex_8h.html#adb3a3818ad3802ee3d7fece77c0e87c0">TEXTURE_CATEGORY_GAME_OBJECT</a>, <a class="code" href="_game_object_tex_8h.html#a114f1da1c070b7d5c7942ce8772f831daf87846d0a18ccdbbdff33db535df59d6">GameObjectCategoryTextureList::OBJECT_WATCH_TEX</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        m_pOnHitTex = <a class="code" href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a>(<a class="code" href="_game_object_tex_8h.html#adb3a3818ad3802ee3d7fece77c0e87c0">TEXTURE_CATEGORY_GAME_OBJECT</a>, <a class="code" href="_game_object_tex_8h.html#a114f1da1c070b7d5c7942ce8772f831da15914667849d2b2baa117208d6b07a52">GameObjectCategoryTextureList::OBJECT_ONHITWATCH_TEX</a>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a> = <a class="code" href="_item_value_8h.html#af3f21d77ace76c8476ec530a87c1a3e0">WATCH_POS</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a> = <a class="code" href="_item_value_8h.html#a2bdf59a9e0d51457b6562447ae92dfb6">WATCH_SIZE</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    };</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="class_watch.html#af9d38be1512f05cad910968e7e8aba5d">  145</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_watch.html#af9d38be1512f05cad910968e7e8aba5d">Update</a>()<span class="keyword">override </span>{</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="class_character.html">Character</a>* pPlayer = <a class="code" href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a>.<a class="code" href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">GetCharacter</a>(<a class="code" href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span> (pPlayer-&gt;<a class="code" href="class_character.html#a4f08c22210951f1af772f589658593f2">HasMonitor</a>() == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746">GetCurrentSceneId</a>() == <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">GameScene</a>) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">if</span> (pPlayer-&gt;<a class="code" href="class_character.html#a0c4dd839871956bd5e4e61aba225a524">CurrentViewID</a>() == <a class="code" href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1">SubGameScene::CENTER_VIEW</a>) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac">HasRectangleHit</a>(<a class="code" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a>().X, <a class="code" href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a>().Y, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>, (<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a> + <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a>), (<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a> + <a class="code" href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">m_Size</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a>)) == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span> (pPlayer-&gt;<a class="code" href="class_character.html#a77ebebf9e06dbb8edf710f52c7e1b237">HasMask</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="class_watch.html#a69bfb791c78e56c1b145161442af887f">  192</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_watch.html#a69bfb791c78e56c1b145161442af887f">Draw</a>()<span class="keyword">override </span>{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">m_OnMouse</a> == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <a class="code" href="_graphics_8cpp.html#af463eeaf83c0332c15af5af0f059f543">DrawTexture</a>(<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>, m_pOnHitTex);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="_graphics_8cpp.html#af463eeaf83c0332c15af5af0f059f543">DrawTexture</a>(<a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">X</a>, <a class="code" href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">m_Pos</a>.<a class="code" href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Y</a>, <a class="code" href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">m_pTex</a>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="struct_texture.html">Texture</a>* m_pOnHitTex;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;};</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_vec2_html_a9538442ffef888d4cd3008a4533b029a"><div class="ttname"><a href="struct_vec2.html#a9538442ffef888d4cd3008a4533b029a">Vec2::X</a></div><div class="ttdeci">float X</div><div class="ttdoc">X値</div><div class="ttdef"><b>Definition:</b> Vec.h:41</div></div>
+<div class="ttc" id="aclass_character_manager_html_a2db27469d39061f5e9cb4e55359d8777"><div class="ttname"><a href="class_character_manager.html#a2db27469d39061f5e9cb4e55359d8777">CharacterManager::GetCharacter</a></div><div class="ttdeci">Character * GetCharacter(int id)</div><div class="ttdef"><b>Definition:</b> CharacterManager.h:34</div></div>
+<div class="ttc" id="aclass_watch_html_a69bfb791c78e56c1b145161442af887f"><div class="ttname"><a href="class_watch.html#a69bfb791c78e56c1b145161442af887f">Watch::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdoc">時計の描画 死亡していなければ描画 マウスオーバーでエフェクトの追加</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:192</div></div>
+<div class="ttc" id="a_texture_8cpp_html_ab8389a24369e4f9beb1d4f21e344e885"><div class="ttname"><a href="_texture_8cpp.html#ab8389a24369e4f9beb1d4f21e344e885">GetTexture</a></div><div class="ttdeci">Texture * GetTexture(int category_id, int texture_id)</div><div class="ttdoc">テクスチャデータの取得 指定されたカテゴリのテクスチャデータを取得する</div><div class="ttdef"><b>Definition:</b> Texture.cpp:92</div></div>
+<div class="ttc" id="a_item_value_8h_html_af56b69ee5392ef03961f550b025f34f0"><div class="ttname"><a href="_item_value_8h.html#af56b69ee5392ef03961f550b025f34f0">CRYSTAL_POS</a></div><div class="ttdeci">const Vec2 CRYSTAL_POS</div><div class="ttdoc">時計</div><div class="ttdef"><b>Definition:</b> ItemValue.h:65</div></div>
+<div class="ttc" id="a_item_value_8h_html_a90821d66741fdceae097ae1c7b92f829"><div class="ttname"><a href="_item_value_8h.html#a90821d66741fdceae097ae1c7b92f829">CRYSTAL_SIZE</a></div><div class="ttdeci">const Size CRYSTAL_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:63</div></div>
+<div class="ttc" id="aclass_watch_html_af9d38be1512f05cad910968e7e8aba5d"><div class="ttname"><a href="class_watch.html#af9d38be1512f05cad910968e7e8aba5d">Watch::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">時計の更新 ゲームシーン以外では死亡 死んでいなければ当たり判定を取る</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:145</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">GameScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:17</div></div>
+<div class="ttc" id="aclass_character_html_a0c4dd839871956bd5e4e61aba225a524"><div class="ttname"><a href="class_character.html#a0c4dd839871956bd5e4e61aba225a524">Character::CurrentViewID</a></div><div class="ttdeci">virtual SubGameScene CurrentViewID() const</div><div class="ttdef"><b>Definition:</b> Character.h:41</div></div>
+<div class="ttc" id="aclass_character_html"><div class="ttname"><a href="class_character.html">Character</a></div><div class="ttdef"><b>Definition:</b> Character.h:10</div></div>
+<div class="ttc" id="astruct_size_html_a47cc60893b761b6d96be2d979be7e136"><div class="ttname"><a href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Size::Height</a></div><div class="ttdeci">float Height</div><div class="ttdoc">縦幅</div><div class="ttdef"><b>Definition:</b> Size.h:42</div></div>
+<div class="ttc" id="a_scene_8cpp_html_a9900ed42962250f87c2a65188751c746"><div class="ttname"><a href="_scene_8cpp.html#a9900ed42962250f87c2a65188751c746">GetCurrentSceneId</a></div><div class="ttdeci">SceneId GetCurrentSceneId()</div><div class="ttdoc">現在実行中のシーンIDの取得関数</div><div class="ttdef"><b>Definition:</b> Scene.cpp:105</div></div>
+<div class="ttc" id="a_character_manager_8cpp_html_a95d8eb3e05890c267a200c30fd25791a"><div class="ttname"><a href="_character_manager_8cpp.html#a95d8eb3e05890c267a200c30fd25791a">g_Manager</a></div><div class="ttdeci">CharacterManager g_Manager</div><div class="ttdef"><b>Definition:</b> CharacterManager.cpp:12</div></div>
+<div class="ttc" id="aclass_crystal_html_aaf8b7a71371dddc43e0d3e86a85df252"><div class="ttname"><a href="class_crystal.html#aaf8b7a71371dddc43e0d3e86a85df252">Crystal::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdoc">水晶の描画 死亡していなければ描画 マウスオーバーでエフェクトの追加</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:92</div></div>
+<div class="ttc" id="a_game_data_8h_html_a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1"><div class="ttname"><a href="_game_data_8h.html#a6c79023c60fe642dce1e84201cdba34ca9efeedf519e3795b6ce88a00bdc5c5d1">SubGameScene::CENTER_VIEW</a></div></div>
+<div class="ttc" id="aclass_watch_html_ad89783cfa9feb47c0b7242adf635cebb"><div class="ttname"><a href="class_watch.html#ad89783cfa9feb47c0b7242adf635cebb">Watch::Watch</a></div><div class="ttdeci">Watch()</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:113</div></div>
+<div class="ttc" id="aclass_watch_html_a738126c910663ee9ba62792c411b4166"><div class="ttname"><a href="class_watch.html#a738126c910663ee9ba62792c411b4166">Watch::~Watch</a></div><div class="ttdeci">~Watch()</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:115</div></div>
+<div class="ttc" id="a_item_value_8h_html_af3f21d77ace76c8476ec530a87c1a3e0"><div class="ttname"><a href="_item_value_8h.html#af3f21d77ace76c8476ec530a87c1a3e0">WATCH_POS</a></div><div class="ttdeci">const Vec2 WATCH_POS</div><div class="ttdef"><b>Definition:</b> ItemValue.h:70</div></div>
+<div class="ttc" id="aclass_crystal_html_a79aa0bafbe74ad194781c3afd3effea0"><div class="ttname"><a href="class_crystal.html#a79aa0bafbe74ad194781c3afd3effea0">Crystal::~Crystal</a></div><div class="ttdeci">~Crystal()</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:24</div></div>
+<div class="ttc" id="aclass_item_html_a4d4d0ce9428fdf80b009eef5e3e1fbc0"><div class="ttname"><a href="class_item.html#a4d4d0ce9428fdf80b009eef5e3e1fbc0">Item::m_Size</a></div><div class="ttdeci">Size m_Size</div><div class="ttdoc">サイズ情報</div><div class="ttdef"><b>Definition:</b> Item.h:55</div></div>
+<div class="ttc" id="aclass_item_html_af4b2ff8eb3a824b5e134a3285beca8d3"><div class="ttname"><a href="class_item.html#af4b2ff8eb3a824b5e134a3285beca8d3">Item::m_OnMouse</a></div><div class="ttdeci">bool m_OnMouse</div><div class="ttdoc">マウスが重なったとき true</div><div class="ttdef"><b>Definition:</b> Item.h:51</div></div>
+<div class="ttc" id="aclass_item_html_a9795d2dcfff5c45255cb4136d82f1d0a"><div class="ttname"><a href="class_item.html#a9795d2dcfff5c45255cb4136d82f1d0a">Item::m_pTex</a></div><div class="ttdeci">Texture * m_pTex</div><div class="ttdoc">テクスチャの情報を格納</div><div class="ttdef"><b>Definition:</b> Item.h:45</div></div>
+<div class="ttc" id="aclass_character_html_a77ebebf9e06dbb8edf710f52c7e1b237"><div class="ttname"><a href="class_character.html#a77ebebf9e06dbb8edf710f52c7e1b237">Character::HasMask</a></div><div class="ttdeci">virtual bool HasMask() const</div><div class="ttdef"><b>Definition:</b> Character.h:28</div></div>
+<div class="ttc" id="aclass_character_html_a4f08c22210951f1af772f589658593f2"><div class="ttname"><a href="class_character.html#a4f08c22210951f1af772f589658593f2">Character::HasMonitor</a></div><div class="ttdeci">virtual bool HasMonitor() const</div><div class="ttdef"><b>Definition:</b> Character.h:32</div></div>
+<div class="ttc" id="a_game_object_tex_8h_html_a114f1da1c070b7d5c7942ce8772f831dac8fd5c8b181ee946f16d00c7d2f82203"><div class="ttname"><a href="_game_object_tex_8h.html#a114f1da1c070b7d5c7942ce8772f831dac8fd5c8b181ee946f16d00c7d2f82203">OBJECT_CRYSTAL_TEX</a></div><div class="ttdef"><b>Definition:</b> GameObjectTex.h:32</div></div>
+<div class="ttc" id="astruct_texture_html"><div class="ttname"><a href="struct_texture.html">Texture</a></div><div class="ttdoc">テクスチャデータやサイズを保持する構造体</div><div class="ttdef"><b>Definition:</b> Graphics.h:39</div></div>
+<div class="ttc" id="aclass_watch_html"><div class="ttname"><a href="class_watch.html">Watch</a></div><div class="ttdoc">時計を管理するクラス</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:110</div></div>
+<div class="ttc" id="aclass_object_html_a7a93bec1c230d962620b5ae62e581f91"><div class="ttname"><a href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">Object::m_IsDeath</a></div><div class="ttdeci">bool m_IsDeath</div><div class="ttdoc">オブジェクトの生存情報</div><div class="ttdef"><b>Definition:</b> Object.h:67</div></div>
+<div class="ttc" id="astruct_vec2_html_a38e42d6a69d43b831e2a434acd41d5af"><div class="ttname"><a href="struct_vec2.html#a38e42d6a69d43b831e2a434acd41d5af">Vec2::Y</a></div><div class="ttdeci">float Y</div><div class="ttdoc">Y値</div><div class="ttdef"><b>Definition:</b> Vec.h:42</div></div>
+<div class="ttc" id="a_calculation_8cpp_html_a676a15e82a69de27580e90985f2de4ac"><div class="ttname"><a href="_calculation_8cpp.html#a676a15e82a69de27580e90985f2de4ac">HasRectangleHit</a></div><div class="ttdeci">bool HasRectangleHit(Texture *texture_data_, float x1_, float x2_, float y1_, float y2_)</div><div class="ttdef"><b>Definition:</b> Calculation.cpp:89</div></div>
+<div class="ttc" id="aclass_crystal_html_ae53513bca380eedc662918a7164dbd68"><div class="ttname"><a href="class_crystal.html#ae53513bca380eedc662918a7164dbd68">Crystal::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">水晶の初期化 テクスチャの読み込み 座標の指定 オブジェクトサイズの指定</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:33</div></div>
+<div class="ttc" id="a_game_object_tex_8h_html_a114f1da1c070b7d5c7942ce8772f831daf87846d0a18ccdbbdff33db535df59d6"><div class="ttname"><a href="_game_object_tex_8h.html#a114f1da1c070b7d5c7942ce8772f831daf87846d0a18ccdbbdff33db535df59d6">OBJECT_WATCH_TEX</a></div><div class="ttdef"><b>Definition:</b> GameObjectTex.h:35</div></div>
+<div class="ttc" id="aclass_item_html"><div class="ttname"><a href="class_item.html">Item</a></div><div class="ttdoc">最終継承先に使えそうな関数や変数を格納するクラス</div><div class="ttdef"><b>Definition:</b> Item.h:19</div></div>
+<div class="ttc" id="aclass_watch_html_a92a6fe78df72c5dfa66b1d672af9c284"><div class="ttname"><a href="class_watch.html#a92a6fe78df72c5dfa66b1d672af9c284">Watch::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">時計の初期化 テクスチャの読み込み 座標の指定 オブジェクトサイズの指定</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:124</div></div>
+<div class="ttc" id="aclass_crystal_html_a7de88d9998696dca4ee346c673a55b7c"><div class="ttname"><a href="class_crystal.html#a7de88d9998696dca4ee346c673a55b7c">Crystal::Crystal</a></div><div class="ttdeci">Crystal()</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:22</div></div>
+<div class="ttc" id="a_game_object_tex_8h_html_a114f1da1c070b7d5c7942ce8772f831da15914667849d2b2baa117208d6b07a52"><div class="ttname"><a href="_game_object_tex_8h.html#a114f1da1c070b7d5c7942ce8772f831da15914667849d2b2baa117208d6b07a52">OBJECT_ONHITWATCH_TEX</a></div><div class="ttdef"><b>Definition:</b> GameObjectTex.h:36</div></div>
+<div class="ttc" id="a_input_8cpp_html_aa276e0dd5c42af1f1baa54558df126ee"><div class="ttname"><a href="_input_8cpp.html#aa276e0dd5c42af1f1baa54558df126ee">GetMousePos</a></div><div class="ttdeci">Vec2 GetMousePos()</div><div class="ttdoc">マウスの座標取得関数</div><div class="ttdef"><b>Definition:</b> Input.cpp:269</div></div>
+<div class="ttc" id="a_game_object_tex_8h_html_adb3a3818ad3802ee3d7fece77c0e87c0"><div class="ttname"><a href="_game_object_tex_8h.html#adb3a3818ad3802ee3d7fece77c0e87c0">TEXTURE_CATEGORY_GAME_OBJECT</a></div><div class="ttdeci">#define TEXTURE_CATEGORY_GAME_OBJECT</div><div class="ttdoc">ゲーム本編カテゴリー</div><div class="ttdef"><b>Definition:</b> GameObjectTex.h:51</div></div>
+<div class="ttc" id="a_graphics_8cpp_html_af463eeaf83c0332c15af5af0f059f543"><div class="ttname"><a href="_graphics_8cpp.html#af463eeaf83c0332c15af5af0f059f543">DrawTexture</a></div><div class="ttdeci">void DrawTexture(float x, float y, Texture *texture_data, float z_, float tu_, float tv_)</div><div class="ttdoc">テクスチャ描画関数 指定された位置にテクスチャを描画する ※texture_dataはFile.hのGetTextureDataを使用してください。</div><div class="ttdef"><b>Definition:</b> Graphics.cpp:118</div></div>
+<div class="ttc" id="a_character_i_d_8h_html_a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e"><div class="ttname"><a href="_character_i_d_8h.html#a240fc5bdcc6e0907d0383be7cf046b7fade5dc3e0dbd007d995ed3e37bde5ce7e">PLAYER</a></div><div class="ttdef"><b>Definition:</b> CharacterID.h:5</div></div>
+<div class="ttc" id="astruct_size_html_a2d7b2c630483f984447eb428002fff44"><div class="ttname"><a href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Size::Width</a></div><div class="ttdeci">float Width</div><div class="ttdoc">横幅</div><div class="ttdef"><b>Definition:</b> Size.h:41</div></div>
+<div class="ttc" id="a_item_value_8h_html_a2bdf59a9e0d51457b6562447ae92dfb6"><div class="ttname"><a href="_item_value_8h.html#a2bdf59a9e0d51457b6562447ae92dfb6">WATCH_SIZE</a></div><div class="ttdeci">const Size WATCH_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:68</div></div>
+<div class="ttc" id="aclass_item_html_ad6dc1fe14c2a56351fe35fb32b322b0f"><div class="ttname"><a href="class_item.html#ad6dc1fe14c2a56351fe35fb32b322b0f">Item::m_Pos</a></div><div class="ttdeci">Vec2 m_Pos</div><div class="ttdoc">座標情報</div><div class="ttdef"><b>Definition:</b> Item.h:53</div></div>
+<div class="ttc" id="aclass_crystal_html"><div class="ttname"><a href="class_crystal.html">Crystal</a></div><div class="ttdoc">水晶を管理するクラス</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:19</div></div>
+<div class="ttc" id="aclass_crystal_html_ab48cd1bfbae2b0b10454edf2aec45e22"><div class="ttname"><a href="class_crystal.html#ab48cd1bfbae2b0b10454edf2aec45e22">Crystal::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">水晶の更新 ゲームシーン以外では死亡 死んでいなければ当たり判定を取る</div><div class="ttdef"><b>Definition:</b> PlayerItem.h:53</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

@@ -1,6 +1,7 @@
 ﻿/**
 * @file Engine.h
 * @brief エンジン処理(描画、入力)に関する関数、定数の宣言
+* @author 中地
 */
 #ifndef ENGINE_H_
 #define ENGINE_H_

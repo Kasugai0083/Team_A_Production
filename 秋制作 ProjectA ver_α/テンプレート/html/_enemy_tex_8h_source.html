@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Src/Texture/EnemyTex.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_de6d28e78d50d11862011f8f40d704f3.html">Texture</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">EnemyTex.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_enemy_tex_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ENEMYTEX_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ENEMYTEX_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_game_scene_tex_8h.html">GameSceneTex.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7">    6</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7">EnemyCategoryTextureList</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">// オハギ</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ac8a9133801104042b2088f55cb2b0c4d">    9</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ac8a9133801104042b2088f55cb2b0c4d">OHAGI_SPAWN_TEX</a>,</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a48ebbba011d69780adc97e042d42b7f4">   10</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a48ebbba011d69780adc97e042d42b7f4">OHAGI_FAR_TEX</a>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a2efe421d9423e3c63cc14517e8d26b2d">   11</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a2efe421d9423e3c63cc14517e8d26b2d">OHAGI_NEAR_TEX</a>, </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a368be59f8e3aa4c3327027cb45da2f77">   12</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a368be59f8e3aa4c3327027cb45da2f77">OHAGI_PLAYER_TEX</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9860895a01c3190ade8df4168e028d6d">   13</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9860895a01c3190ade8df4168e028d6d">OHAGI_KILLANIME_TEX</a>,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// ウメ</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7abecc0cf493f6274fc34a398d3c3d15fc">   16</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7abecc0cf493f6274fc34a398d3c3d15fc">UME_SPAWN_TEX</a>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a7ce135bf82daaa0f51f7c9c188fcba7f">   17</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a7ce135bf82daaa0f51f7c9c188fcba7f">UME_WALK_TEX</a>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ada672b17d07ee56bfca4f3fc847d4da6">   18</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ada672b17d07ee56bfca4f3fc847d4da6">UME_LOOK_TEX</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a53bb9b8faea20d7670f28b8d7b0d8a5d">   19</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a53bb9b8faea20d7670f28b8d7b0d8a5d">UME_PLAYER_TEX</a>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ad536d3816ea961c2545a65a415a00e4e">   20</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ad536d3816ea961c2545a65a415a00e4e">UME_KILLANIME_TEX</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// サクラ</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9b0386e51b27090268bbf92fbc1710f2">   23</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9b0386e51b27090268bbf92fbc1710f2">SAKURA_SPAWN_TEX</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a92a9e05a4cc20c20e78d4046e8f134d8">   24</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a92a9e05a4cc20c20e78d4046e8f134d8">SAKURA_WALK_TEX</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5fad49193bcb15d822c8f2488005b422">   25</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5fad49193bcb15d822c8f2488005b422">SAKURA_LOOK_TEX</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ac958ab852c87f88970bb4de3018e3668">   26</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ac958ab852c87f88970bb4de3018e3668">SAKURA_PLAYER_TEX</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a308ba7a11e5ecdc73965aa340cbc6155">   27</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a308ba7a11e5ecdc73965aa340cbc6155">SAKURA_KILLANIME_TEX</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// オラン</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ae039cdb68ec891b41d5e14bf1d071c1b">   30</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ae039cdb68ec891b41d5e14bf1d071c1b">ORAN_SPAWN_TEX</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a76f8dac1797b4bb3ccdf8928624de89a">   31</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a76f8dac1797b4bb3ccdf8928624de89a">ORAN_FAR_TEX</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a26475467f65d6035a726f8559357165f">   32</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a26475467f65d6035a726f8559357165f">ORAN_NEAR_TEX</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a615bec5b2f5a0858a3a329c20daf2493">   33</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a615bec5b2f5a0858a3a329c20daf2493">ORAN_PLAYER_TEX</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a640a9e896078de8f9ae5b1ee712532dc">   34</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a640a9e896078de8f9ae5b1ee712532dc">ORAN_KILLANIME_TEX</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// ボタン</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a89e71d8723f5af112ca5889971cb00fa">   37</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a89e71d8723f5af112ca5889971cb00fa">BOTAN_PLAYER_TEX</a>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a453f8cd75e24cc86bdbd816901ad08de">   38</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a453f8cd75e24cc86bdbd816901ad08de">BOTAN_KILLANIME_TEX</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// マーガレット</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a7b32707b241ab4d79f8199f98d30794c">   41</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a7b32707b241ab4d79f8199f98d30794c">MARGARET_SPAWN_BASE_TEX</a>,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5e458fe8da2daa451ee5aa6e3be13e9e">   42</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5e458fe8da2daa451ee5aa6e3be13e9e">MARGARET_SPAWN_EYE_TEX</a>,</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5cb46a14d3071b3f10741cf9eee6e5ed">   43</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5cb46a14d3071b3f10741cf9eee6e5ed">MARGARET_KILLANIME_TEX</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// マーガレットの目のUI</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a47c1c049b29039de978cd73b2a5c2295">   45</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a47c1c049b29039de978cd73b2a5c2295">MARGARET_EYE_TEX</a>,</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7aba88614c71cbad05f25d38d00556665c">   46</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7aba88614c71cbad05f25d38d00556665c">MARGARET_PIZA_1</a>,</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7aacd492b90f303ad0aa4311917a6b9057">   47</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7aacd492b90f303ad0aa4311917a6b9057">MARGARET_PIZA_2</a>,</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af7ce938a898e88a22d258fc91e87acb3">   48</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af7ce938a898e88a22d258fc91e87acb3">MARGARET_PIZA_3</a>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a68ae9df64a90a4ef1a57ac8007da2672">   49</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a68ae9df64a90a4ef1a57ac8007da2672">MARGARET_PIZA_4</a>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7acc024b65442e1c9bd0edcc3b9f81b182">   50</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7acc024b65442e1c9bd0edcc3b9f81b182">MARGARET_PIZA_5</a>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a24ea3b4fce28b6b7b03dd4ce48b50492">   51</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a24ea3b4fce28b6b7b03dd4ce48b50492">MARGARET_PIZA_6</a>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7afea6d37e9ea6cfbfadec66beed0bb649">   52</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7afea6d37e9ea6cfbfadec66beed0bb649">MARGARET_PIZA_7</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9ef0e5527810eb44a862f9f71ebfefc6">   53</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9ef0e5527810eb44a862f9f71ebfefc6">MARGARET_PIZA_8</a>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af529e9955c8c4b975e61f0c453f8d1f2">   54</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af529e9955c8c4b975e61f0c453f8d1f2">MARGARET_PIZA_9</a>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// エネミー最大</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a232ee9b075578472a664a5752e48e169">   57</a></span>&#160;    <a class="code" href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a232ee9b075578472a664a5752e48e169">ENEMY_TEXTURE_MAX</a>,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="_enemy_tex_8h.html#ac8f6629f1ba523a5c94de6d4ab28f4ed">   60</a></span>&#160;<span class="preprocessor">#define TEXTURE_CATEGORY_ENEMY (SceneId::EnemyScene)                </span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7aacd492b90f303ad0aa4311917a6b9057"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7aacd492b90f303ad0aa4311917a6b9057">MARGARET_PIZA_2</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:47</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a89e71d8723f5af112ca5889971cb00fa"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a89e71d8723f5af112ca5889971cb00fa">BOTAN_PLAYER_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:37</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a7ce135bf82daaa0f51f7c9c188fcba7f"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a7ce135bf82daaa0f51f7c9c188fcba7f">UME_WALK_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:17</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a5e458fe8da2daa451ee5aa6e3be13e9e"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5e458fe8da2daa451ee5aa6e3be13e9e">MARGARET_SPAWN_EYE_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:42</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7acc024b65442e1c9bd0edcc3b9f81b182"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7acc024b65442e1c9bd0edcc3b9f81b182">MARGARET_PIZA_5</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:50</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a7b32707b241ab4d79f8199f98d30794c"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a7b32707b241ab4d79f8199f98d30794c">MARGARET_SPAWN_BASE_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:41</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7">EnemyCategoryTextureList</a></div><div class="ttdeci">EnemyCategoryTextureList</div><div class="ttdef"><b>Definition:</b> EnemyTex.h:6</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a26475467f65d6035a726f8559357165f"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a26475467f65d6035a726f8559357165f">ORAN_NEAR_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:32</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a9860895a01c3190ade8df4168e028d6d"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9860895a01c3190ade8df4168e028d6d">OHAGI_KILLANIME_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:13</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a9b0386e51b27090268bbf92fbc1710f2"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9b0386e51b27090268bbf92fbc1710f2">SAKURA_SPAWN_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:23</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a453f8cd75e24cc86bdbd816901ad08de"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a453f8cd75e24cc86bdbd816901ad08de">BOTAN_KILLANIME_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:38</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7af529e9955c8c4b975e61f0c453f8d1f2"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af529e9955c8c4b975e61f0c453f8d1f2">MARGARET_PIZA_9</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:54</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a615bec5b2f5a0858a3a329c20daf2493"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a615bec5b2f5a0858a3a329c20daf2493">ORAN_PLAYER_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:33</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a53bb9b8faea20d7670f28b8d7b0d8a5d"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a53bb9b8faea20d7670f28b8d7b0d8a5d">UME_PLAYER_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:19</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a24ea3b4fce28b6b7b03dd4ce48b50492"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a24ea3b4fce28b6b7b03dd4ce48b50492">MARGARET_PIZA_6</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:51</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7af7ce938a898e88a22d258fc91e87acb3"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7af7ce938a898e88a22d258fc91e87acb3">MARGARET_PIZA_3</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:48</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a48ebbba011d69780adc97e042d42b7f4"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a48ebbba011d69780adc97e042d42b7f4">OHAGI_FAR_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:10</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a232ee9b075578472a664a5752e48e169"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a232ee9b075578472a664a5752e48e169">ENEMY_TEXTURE_MAX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:57</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a92a9e05a4cc20c20e78d4046e8f134d8"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a92a9e05a4cc20c20e78d4046e8f134d8">SAKURA_WALK_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:24</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7aba88614c71cbad05f25d38d00556665c"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7aba88614c71cbad05f25d38d00556665c">MARGARET_PIZA_1</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:46</div></div>
+<div class="ttc" id="a_game_scene_tex_8h_html"><div class="ttname"><a href="_game_scene_tex_8h.html">GameSceneTex.h</a></div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7ac958ab852c87f88970bb4de3018e3668"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ac958ab852c87f88970bb4de3018e3668">SAKURA_PLAYER_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:26</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a2efe421d9423e3c63cc14517e8d26b2d"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a2efe421d9423e3c63cc14517e8d26b2d">OHAGI_NEAR_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:11</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7ada672b17d07ee56bfca4f3fc847d4da6"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ada672b17d07ee56bfca4f3fc847d4da6">UME_LOOK_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:18</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7afea6d37e9ea6cfbfadec66beed0bb649"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7afea6d37e9ea6cfbfadec66beed0bb649">MARGARET_PIZA_7</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:52</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7ae039cdb68ec891b41d5e14bf1d071c1b"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ae039cdb68ec891b41d5e14bf1d071c1b">ORAN_SPAWN_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:30</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7ad536d3816ea961c2545a65a415a00e4e"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ad536d3816ea961c2545a65a415a00e4e">UME_KILLANIME_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:20</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a5cb46a14d3071b3f10741cf9eee6e5ed"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5cb46a14d3071b3f10741cf9eee6e5ed">MARGARET_KILLANIME_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:43</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7abecc0cf493f6274fc34a398d3c3d15fc"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7abecc0cf493f6274fc34a398d3c3d15fc">UME_SPAWN_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:16</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a9ef0e5527810eb44a862f9f71ebfefc6"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a9ef0e5527810eb44a862f9f71ebfefc6">MARGARET_PIZA_8</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:53</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a68ae9df64a90a4ef1a57ac8007da2672"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a68ae9df64a90a4ef1a57ac8007da2672">MARGARET_PIZA_4</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:49</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a47c1c049b29039de978cd73b2a5c2295"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a47c1c049b29039de978cd73b2a5c2295">MARGARET_EYE_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:45</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a76f8dac1797b4bb3ccdf8928624de89a"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a76f8dac1797b4bb3ccdf8928624de89a">ORAN_FAR_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:31</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a308ba7a11e5ecdc73965aa340cbc6155"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a308ba7a11e5ecdc73965aa340cbc6155">SAKURA_KILLANIME_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:27</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a640a9e896078de8f9ae5b1ee712532dc"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a640a9e896078de8f9ae5b1ee712532dc">ORAN_KILLANIME_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:34</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7ac8a9133801104042b2088f55cb2b0c4d"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7ac8a9133801104042b2088f55cb2b0c4d">OHAGI_SPAWN_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:9</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a368be59f8e3aa4c3327027cb45da2f77"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a368be59f8e3aa4c3327027cb45da2f77">OHAGI_PLAYER_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:12</div></div>
+<div class="ttc" id="a_enemy_tex_8h_html_a79ed6815b2d0e9d35b13096339d85ab7a5fad49193bcb15d822c8f2488005b422"><div class="ttname"><a href="_enemy_tex_8h.html#a79ed6815b2d0e9d35b13096339d85ab7a5fad49193bcb15d822c8f2488005b422">SAKURA_LOOK_TEX</a></div><div class="ttdef"><b>Definition:</b> EnemyTex.h:25</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

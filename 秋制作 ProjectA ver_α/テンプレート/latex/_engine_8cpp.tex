@@ -1,0 +1,57 @@
+\hypertarget{_engine_8cpp}{}\doxysection{Src/\+Engine/\+Engine.cpp ファイル}
+\label{_engine_8cpp}\index{Src/Engine/Engine.cpp@{Src/Engine/Engine.cpp}}
+{\ttfamily \#include \char`\"{}Window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Texture/\+Texture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Engine.\+h\char`\"{}}\newline
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_engine_8cpp_a793ba90ca8458f8323c7cee0eb545d60}{Init\+Engine}} (int width\+\_\+, int height\+\_\+, const char $\ast$title\+Name\+\_\+, bool is\+Full\+\_\+)
+\begin{DoxyCompactList}\small\item\em エンジン初期化関数~\newline
+ゲームで使うエンジン部分(描画、入力)の初期化とウィンドウの作成を行う~\newline
+※この関数はゲームループ開始前に１度だけ実行する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_engine_8cpp_af4b15df747f927b772f15ef93493aad7}{End\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em エンジン終了関数~\newline
+ゲーム終了後にエンジン部分の終了を行う~\newline
+※この関数はゲームループ終了後に１度だけ実行する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{_engine_8cpp_af4b15df747f927b772f15ef93493aad7}\label{_engine_8cpp_af4b15df747f927b772f15ef93493aad7}} 
+\index{Engine.cpp@{Engine.cpp}!EndEngine@{EndEngine}}
+\index{EndEngine@{EndEngine}!Engine.cpp@{Engine.cpp}}
+\doxysubsubsection{\texorpdfstring{EndEngine()}{EndEngine()}}
+{\footnotesize\ttfamily void End\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+エンジン終了関数~\newline
+ゲーム終了後にエンジン部分の終了を行う~\newline
+※この関数はゲームループ終了後に１度だけ実行する 
+
+\mbox{\Hypertarget{_engine_8cpp_a793ba90ca8458f8323c7cee0eb545d60}\label{_engine_8cpp_a793ba90ca8458f8323c7cee0eb545d60}} 
+\index{Engine.cpp@{Engine.cpp}!InitEngine@{InitEngine}}
+\index{InitEngine@{InitEngine}!Engine.cpp@{Engine.cpp}}
+\doxysubsubsection{\texorpdfstring{InitEngine()}{InitEngine()}}
+{\footnotesize\ttfamily bool Init\+Engine (\begin{DoxyParamCaption}\item[{int}]{width\+\_\+,  }\item[{int}]{height\+\_\+,  }\item[{const char $\ast$}]{title\+Name\+\_\+,  }\item[{bool}]{is\+Full\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+エンジン初期化関数~\newline
+ゲームで使うエンジン部分(描画、入力)の初期化とウィンドウの作成を行う~\newline
+※この関数はゲームループ開始前に１度だけ実行する 
+
+\begin{DoxyReturn}{戻り値}
+初期化結果 (trueが成功) 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em width} & ウィンドウの横幅 \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & ウィンドウの縦幅 \\
+\hline
+\mbox{\texttt{ in}}  & {\em title\+\_\+name} & タイトルバーに表示する文字列 \\
+\hline
+\end{DoxyParams}

@@ -2,6 +2,7 @@
 /**
 * @file Input.h
 * @brief 入力に関する関数、定数の宣言
+* @author 中地
 */
 #ifndef INPUT_H_
 #define INPUT_H_

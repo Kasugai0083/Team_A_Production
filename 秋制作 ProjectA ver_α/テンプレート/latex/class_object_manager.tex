@@ -1,0 +1,197 @@
+\hypertarget{class_object_manager}{}\doxysection{Object\+Manager クラス}
+\label{class_object_manager}\index{ObjectManager@{ObjectManager}}
+
+
+オブジェクトを管理するマネージャークラス  
+
+
+
+
+{\ttfamily \#include $<$Object\+Manager.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_manager_a6fa9372c7c3a8da88412f4158ca3dfd9}{Object\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ~\newline
+m\+\_\+p\+Objects に各種オブジェクトをインスタンス化~\newline
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c}{$\sim$\+Object\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ@nm\+\_\+p\+Objects を delete する \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object}{Object}} $\ast$ \mbox{\hyperlink{class_object_manager_acb889688c7374c0ed461dfcbabd4a1e0}{Get\+Obj}} (\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}} id\+\_\+)
+\begin{DoxyCompactList}\small\item\em m\+\_\+p\+Objects の インスタンス情報を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_manager_a9771f5f3c34b9ce12c50dfd9900de191}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 全ての m\+\_\+p\+Objects を初期化する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_manager_a43507b10b7356870fc39147a259b97fa}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 全ての m\+\_\+p\+Objects を更新する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_manager_a81ab616ed15c75581c27f6e3ac77ee24}{Release}} ()
+\begin{DoxyCompactList}\small\item\em 全ての m\+\_\+p\+Objects を解放する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_manager_ad81155d5fbe8c75e17bd0c2befdecb28}{Release}} (\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}} id\+\_\+)
+\item 
+void \mbox{\hyperlink{class_object_manager_ac7363863db59cc2dd0f7b177012fe68d}{Release\+Title\+Obj}} ()
+\item 
+void \mbox{\hyperlink{class_object_manager_a9208ef8774e16fe13396960cb0fa9bfa}{Release\+Game\+Obj}} ()
+\item 
+void \mbox{\hyperlink{class_object_manager_aa7469619818e2902b23b0ccfbc7f8a66}{Create\+Title\+Obj}} ()
+\item 
+void \mbox{\hyperlink{class_object_manager_a425bb786c1e06baa95939df5cc4739f0}{Create\+Game\+Obj}} ()
+\item 
+void \mbox{\hyperlink{class_object_manager_ad30e438f05942a753d4eb7770ad069f3}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 全ての m\+\_\+p\+Objects を描画する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_object_manager_abb5e7ea962ab0200b87077775e111ada}{Has\+On\+Mouse}} (\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}} id\+\_\+)
+\begin{DoxyCompactList}\small\item\em 指定された m\+\_\+p\+Objects の Has\+On\+Mouse を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_manager_a52419a20607f173e5ed6b7fa98cee747}{Load\+Tex}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+オブジェクトを管理するマネージャークラス 
+
+オブジェクトを管理するマネージャークラスを定義 
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_object_manager_a6fa9372c7c3a8da88412f4158ca3dfd9}\label{class_object_manager_a6fa9372c7c3a8da88412f4158ca3dfd9}} 
+\index{ObjectManager@{ObjectManager}!ObjectManager@{ObjectManager}}
+\index{ObjectManager@{ObjectManager}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{ObjectManager()}{ObjectManager()}}
+{\footnotesize\ttfamily Object\+Manager\+::\+Object\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ~\newline
+m\+\_\+p\+Objects に各種オブジェクトをインスタンス化~\newline
+
+
+\mbox{\Hypertarget{class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c}\label{class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c}} 
+\index{ObjectManager@{ObjectManager}!````~ObjectManager@{$\sim$ObjectManager}}
+\index{````~ObjectManager@{$\sim$ObjectManager}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ObjectManager()}{~ObjectManager()}}
+{\footnotesize\ttfamily Object\+Manager\+::$\sim$\+Object\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ@nm\+\_\+p\+Objects を delete する 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_object_manager_a425bb786c1e06baa95939df5cc4739f0}\label{class_object_manager_a425bb786c1e06baa95939df5cc4739f0}} 
+\index{ObjectManager@{ObjectManager}!CreateGameObj@{CreateGameObj}}
+\index{CreateGameObj@{CreateGameObj}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{CreateGameObj()}{CreateGameObj()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Create\+Game\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_object_manager_aa7469619818e2902b23b0ccfbc7f8a66}\label{class_object_manager_aa7469619818e2902b23b0ccfbc7f8a66}} 
+\index{ObjectManager@{ObjectManager}!CreateTitleObj@{CreateTitleObj}}
+\index{CreateTitleObj@{CreateTitleObj}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{CreateTitleObj()}{CreateTitleObj()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Create\+Title\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_object_manager_ad30e438f05942a753d4eb7770ad069f3}\label{class_object_manager_ad30e438f05942a753d4eb7770ad069f3}} 
+\index{ObjectManager@{ObjectManager}!Draw@{Draw}}
+\index{Draw@{Draw}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily Object\+Manager\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+全ての m\+\_\+p\+Objects を描画する 
+
+\mbox{\Hypertarget{class_object_manager_acb889688c7374c0ed461dfcbabd4a1e0}\label{class_object_manager_acb889688c7374c0ed461dfcbabd4a1e0}} 
+\index{ObjectManager@{ObjectManager}!GetObj@{GetObj}}
+\index{GetObj@{GetObj}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{GetObj()}{GetObj()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_object}{Object}} $\ast$ Object\+Manager\+::\+Get\+Obj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}}}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+m\+\_\+p\+Objects の インスタンス情報を取得する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em id\+\_\+} & m\+\_\+p\+Objects の識別番号を指定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定されたインスタンスのアドレスが取得される 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_manager_abb5e7ea962ab0200b87077775e111ada}\label{class_object_manager_abb5e7ea962ab0200b87077775e111ada}} 
+\index{ObjectManager@{ObjectManager}!HasOnMouse@{HasOnMouse}}
+\index{HasOnMouse@{HasOnMouse}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{HasOnMouse()}{HasOnMouse()}}
+{\footnotesize\ttfamily Object\+Manager\+::\+Has\+On\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}}}]{id\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+指定された m\+\_\+p\+Objects の Has\+On\+Mouse を取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em id\+\_\+　m\+\_\+p\+Objects} & の識別番号を指定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+m\+\_\+p\+Objects にマウスが触れている場合 true~\newline
+m\+\_\+p\+Objects にマウスが触れていない場合 false~\newline
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_object_manager_a9771f5f3c34b9ce12c50dfd9900de191}\label{class_object_manager_a9771f5f3c34b9ce12c50dfd9900de191}} 
+\index{ObjectManager@{ObjectManager}!Init@{Init}}
+\index{Init@{Init}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily Object\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+全ての m\+\_\+p\+Objects を初期化する 
+
+\mbox{\Hypertarget{class_object_manager_a52419a20607f173e5ed6b7fa98cee747}\label{class_object_manager_a52419a20607f173e5ed6b7fa98cee747}} 
+\index{ObjectManager@{ObjectManager}!LoadTex@{LoadTex}}
+\index{LoadTex@{LoadTex}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{LoadTex()}{LoadTex()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Load\+Tex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_object_manager_a81ab616ed15c75581c27f6e3ac77ee24}\label{class_object_manager_a81ab616ed15c75581c27f6e3ac77ee24}} 
+\index{ObjectManager@{ObjectManager}!Release@{Release}}
+\index{Release@{Release}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Object\+Manager\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+全ての m\+\_\+p\+Objects を解放する 
+
+\mbox{\Hypertarget{class_object_manager_ad81155d5fbe8c75e17bd0c2befdecb28}\label{class_object_manager_ad81155d5fbe8c75e17bd0c2befdecb28}} 
+\index{ObjectManager@{ObjectManager}!Release@{Release}}
+\index{Release@{Release}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}}}]{id\+\_\+ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_object_manager_a9208ef8774e16fe13396960cb0fa9bfa}\label{class_object_manager_a9208ef8774e16fe13396960cb0fa9bfa}} 
+\index{ObjectManager@{ObjectManager}!ReleaseGameObj@{ReleaseGameObj}}
+\index{ReleaseGameObj@{ReleaseGameObj}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{ReleaseGameObj()}{ReleaseGameObj()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Release\+Game\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_object_manager_ac7363863db59cc2dd0f7b177012fe68d}\label{class_object_manager_ac7363863db59cc2dd0f7b177012fe68d}} 
+\index{ObjectManager@{ObjectManager}!ReleaseTitleObj@{ReleaseTitleObj}}
+\index{ReleaseTitleObj@{ReleaseTitleObj}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{ReleaseTitleObj()}{ReleaseTitleObj()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Release\+Title\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_object_manager_a43507b10b7356870fc39147a259b97fa}\label{class_object_manager_a43507b10b7356870fc39147a259b97fa}} 
+\index{ObjectManager@{ObjectManager}!Update@{Update}}
+\index{Update@{Update}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily Object\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+全ての m\+\_\+p\+Objects を更新する 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Src/\+Object/\mbox{\hyperlink{_object_manager_8h}{Object\+Manager.\+h}}\item 
+Src/\+Object/\mbox{\hyperlink{_object_manager_8cpp}{Object\+Manager.\+cpp}}\end{DoxyCompactItemize}

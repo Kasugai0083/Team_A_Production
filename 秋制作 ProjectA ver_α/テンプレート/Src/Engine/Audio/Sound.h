@@ -1,6 +1,12 @@
 #ifndef SOUND_H_
 #define SOUND_H_
 
+/**
+*	@file Botan.h
+*	@author 中本
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
 #include <dsound.h>
 #include <string>
 

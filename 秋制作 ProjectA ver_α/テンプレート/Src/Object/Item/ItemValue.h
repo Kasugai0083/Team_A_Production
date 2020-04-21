@@ -1,3 +1,9 @@
+/**
+*	@file Botan.h
+*	@author 春日井
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
 #ifndef ITEM_VALUE_H_
 #define ITEM_VALUE_H_
 

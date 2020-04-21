@@ -1,0 +1,43 @@
+\hypertarget{_device_8cpp}{}\doxysection{Src/\+Engine/\+Lib/\+Device.cpp ファイル}
+\label{_device_8cpp}\index{Src/Engine/Lib/Device.cpp@{Src/Engine/Lib/Device.cpp}}
+{\ttfamily \#include \char`\"{}Lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+Scene/\+Scene.\+h\char`\"{}}\newline
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_lib}{Lib}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{namespace_lib_a7b0236323559a75e0739494b888f05d5}{Lib\+::\+Win\+Proc}} (H\+W\+ND hwnd, U\+I\+NT msg, W\+P\+A\+R\+AM wp, L\+P\+A\+R\+AM lp)
+\item 
+void \mbox{\hyperlink{namespace_lib_abe5200e7702b56015fbfc1786d5bb14a}{Lib\+::\+Init}} (int w, int h, const char $\ast$title)
+\item 
+void \mbox{\hyperlink{namespace_lib_a6b4f68f6d49e2413998abb1c4cc60ee9}{Lib\+::\+Set\+Win\+Device}} (H\+I\+N\+S\+T\+A\+N\+CE h\+\_\+instance, const char $\ast$class\+\_\+name, W\+N\+D\+C\+L\+A\+S\+S\+EX $\ast$wc)
+\item 
+void \mbox{\hyperlink{namespace_lib_a89f5bdfcb5db39b1e9dfe20040986a52}{Lib\+::\+Make\+Window}} (H\+I\+N\+S\+T\+A\+N\+CE h\+\_\+instance, const char $\ast$class\+\_\+name, const char $\ast$title, int w, int h)
+\item 
+void \mbox{\hyperlink{namespace_lib_af28cc92bcf19288af24d8025437f9b91}{Lib\+::\+Init\+D3\+D9}} ()
+\item 
+void \mbox{\hyperlink{namespace_lib_a4bae75601d988f6a1c96ab618ffd0128}{Lib\+::\+App\+End}} ()
+\item 
+bool \mbox{\hyperlink{namespace_lib_a1532ad799f274656fb639531e339acc7}{Lib\+::\+Process\+Message}} ()
+\item 
+void \mbox{\hyperlink{namespace_lib_a8474d534efd67c2ca0859fc3965a548c}{Lib\+::\+Draw\+Begin}} (D\+W\+O\+RD back\+\_\+color)
+\item 
+void \mbox{\hyperlink{namespace_lib_a81e20eb28077625bfb5c78ca804a8f73}{Lib\+::\+Draw\+End}} ()
+\begin{DoxyCompactList}\small\item\em 描画終了関数~\newline
+描画の終了を宣言し、バックバッファとフロントバッファを入れ替える~\newline
+※この関数は必ず\+Draw\+Startの後に実行されるようにしてください。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_lib_a078f22727c83b249c6de32671599228b}{Lib\+::\+Err\+Msg}} (std\+::string msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+H\+W\+ND \mbox{\hyperlink{namespace_lib_ae3f323808fb8b7b552d8e1bdac9756ab}{Lib\+::h\+Wnd}} = nullptr
+\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D9 \mbox{\hyperlink{namespace_lib_a0427e834d8892c5d2a495705b5bf4e4c}{Lib\+::d3d}} = nullptr
+\item 
+L\+P\+D\+I\+R\+E\+C\+T3\+D\+D\+E\+V\+I\+C\+E9 \mbox{\hyperlink{namespace_lib_a8391f9bcf41c4c833c2172c17a99405d}{Lib\+::dev}} = nullptr
+\end{DoxyCompactItemize}

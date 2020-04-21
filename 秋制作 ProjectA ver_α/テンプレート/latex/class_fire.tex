@@ -1,0 +1,124 @@
+\hypertarget{class_fire}{}\doxysection{Fire クラス}
+\label{class_fire}\index{Fire@{Fire}}
+
+
+蝋燭の火を管理するクラス~\newline
+ 
+
+
+
+
+{\ttfamily \#include $<$Fire.\+h$>$}
+
+
+
+\mbox{\hyperlink{class_item}{Item}}を継承しています。
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fire_aa469382f054a1fb7258482b932f03d2f}{Fire}} (\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}} id\+\_\+)
+\begin{DoxyCompactList}\small\item\em コンストラクタ~\newline
+メンバ変数の初期化~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 各種データを m\+\_\+\+Id に基づいて初期化~\newline
+画像読み込み~\newline
+座標の指定~\newline
+アイテムの大きさを設定~\newline
+画像の大きさを設定~\newline
+m\+\_\+\+Id に基づいて \mbox{\hyperlink{class_candle}{Candle}} をインスタンス化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 蝋燭の点灯情報に基づいて、火を更新~\newline
+火の生死管理~\newline
+蝋燭が溶けて火の座標が下がる処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fire_ad079ebe0f50929022b4e33ea406e4412}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 蝋燭の点灯情報と自身の生存情報に基づいて描画~\newline
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{その他の継承メンバ}
+
+
+\doxysubsection{詳解}
+蝋燭の火を管理するクラス~\newline
+
+
+オブジェクトの葉（最終継承先）~\newline
+蝋燭の火を管理するクラスを格納 
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_fire_aa469382f054a1fb7258482b932f03d2f}\label{class_fire_aa469382f054a1fb7258482b932f03d2f}} 
+\index{Fire@{Fire}!Fire@{Fire}}
+\index{Fire@{Fire}!Fire@{Fire}}
+\doxysubsubsection{\texorpdfstring{Fire()}{Fire()}}
+{\footnotesize\ttfamily Fire\+::\+Fire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_object_i_d_8h_a5a7b5927f9c2e9abfba9ed6bc0fad221}{Obj\+ID}}}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンストラクタ~\newline
+メンバ変数の初期化~\newline
+
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em id\+\_\+} & で指定された Obj\+ID を代入 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_fire_ad079ebe0f50929022b4e33ea406e4412}\label{class_fire_ad079ebe0f50929022b4e33ea406e4412}} 
+\index{Fire@{Fire}!Draw@{Draw}}
+\index{Draw@{Draw}!Fire@{Fire}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Fire\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+蝋燭の点灯情報と自身の生存情報に基づいて描画~\newline
+
+
+
+
+\mbox{\hyperlink{class_object_acbd787db750bc1be296d152b324acf20}{Object}}を実装しています。
+
+\mbox{\Hypertarget{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870}\label{class_fire_a8097c9cbafd7d794fa4dfd8fc996f870}} 
+\index{Fire@{Fire}!Init@{Init}}
+\index{Init@{Init}!Fire@{Fire}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Fire\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+各種データを m\+\_\+\+Id に基づいて初期化~\newline
+画像読み込み~\newline
+座標の指定~\newline
+アイテムの大きさを設定~\newline
+画像の大きさを設定~\newline
+m\+\_\+\+Id に基づいて \mbox{\hyperlink{class_candle}{Candle}} をインスタンス化 
+
+
+
+\mbox{\hyperlink{class_object_a7254c74e9926c9c9e5076b606dbfc962}{Object}}を実装しています。
+
+\mbox{\Hypertarget{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}\label{class_fire_a98dc82aa5d04562e3f298deda6c37a9a}} 
+\index{Fire@{Fire}!Update@{Update}}
+\index{Update@{Update}!Fire@{Fire}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Fire\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+蝋燭の点灯情報に基づいて、火を更新~\newline
+火の生死管理~\newline
+蝋燭が溶けて火の座標が下がる処理 
+
+
+
+\mbox{\hyperlink{class_object_a5ee5c17a09981cbd7c469370e210b4ff}{Object}}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_fire_8h}{Fire.\+h}}\item 
+Src/\+Object/\+Item/\+Id/\mbox{\hyperlink{_fire_8cpp}{Fire.\+cpp}}\end{DoxyCompactItemize}

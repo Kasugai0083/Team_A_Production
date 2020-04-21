@@ -1,6 +1,13 @@
 #ifndef BOTAN_H_
 #define BOTAN_H_
 
+/**
+*	@file Botan.h
+*	@author 中本
+*	@brief キャラクター「牡丹」を管理するクラスを処理
+*/
+
+
 #include "../../Enemy/Enemy.h"
 #include "../../../Utility/RoomID.h"
 #include "../../../Scene/Scene.h"
