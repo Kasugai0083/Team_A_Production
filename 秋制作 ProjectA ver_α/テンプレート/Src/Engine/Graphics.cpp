@@ -59,21 +59,28 @@ bool InitGraphics(bool isFull)
 
 	if (CreateGraphicsInterface() == false)
 	{
+		MessageBox(NULL, "グラフィックインターフェースの作成に失敗", NULL, MB_OK);
+
 		return false;
 	}
 
 	if (CreateGraphicsDevice(&present_param, isFull) == false)
 	{
+
 		return false;
 	}
 
 	if (SetUpViewPort(&present_param) == false)
 	{
+		MessageBox(NULL, "ビューポートの作成に失敗", NULL, MB_OK);
+
 		return false;
 	}
 
 	if (CreateFontDevice() == false)
 	{
+		MessageBox(NULL, "フォントの作成に失敗", NULL, MB_OK);
+
 		return false;
 	}
 
@@ -416,7 +423,6 @@ bool CreateTexture(const char* file_name, Texture* texture_data)
 		nullptr,
 		&texture_data->TexutreData)))
 	{
-		//MessageBox(NULL, "中本予想", NULL, MB_OK);
 		return false;
 	}
 	else
@@ -500,13 +506,20 @@ bool CreateGraphicsDevice(D3DPRESENT_PARAMETERS* present_param, bool isFullScree
 	present_param->SwapEffect = D3DSWAPEFFECT_DISCARD;
 
 	// DirectDeviceの作成
-	if (FAILED(g_D3DInterface->CreateDevice(D3DADAPTER_DEFAULT,
-		D3DDEVTYPE_HAL,
-		FindWindowA(WINDOW_CLASS_NAME, nullptr),
-		D3DCREATE_HARDWARE_VERTEXPROCESSING | D3DCREATE_MULTITHREADED,
-		present_param,
-		&g_D3DDevice)))
+
+	HWND window_handle = FindWindowA(WINDOW_CLASS_NAME, nullptr);
+
+	if (!window_handle) { MessageBox(NULL, "ウィンドウハンドルの取得に失敗", NULL, MB_OK); }
+
+	if (FAILED(g_D3DInterface->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, window_handle, D3DCREATE_HARDWARE_VERTEXPROCESSING , present_param, &g_D3DDevice)))
+	if (FAILED(g_D3DInterface->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, window_handle, D3DCREATE_SOFTWARE_VERTEXPROCESSING , present_param, &g_D3DDevice)))
+	if (FAILED(g_D3DInterface->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_REF, window_handle, D3DCREATE_HARDWARE_VERTEXPROCESSING , present_param, &g_D3DDevice)))
+	if (FAILED(g_D3DInterface->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_REF, window_handle, D3DCREATE_SOFTWARE_VERTEXPROCESSING , present_param, &g_D3DDevice)))
+	if (FAILED(g_D3DInterface->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_SW, window_handle, D3DCREATE_HARDWARE_VERTEXPROCESSING , present_param, &g_D3DDevice)))
+	if (FAILED(g_D3DInterface->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_SW, window_handle, D3DCREATE_SOFTWARE_VERTEXPROCESSING , present_param, &g_D3DDevice)))
 	{
+		//MessageBox(NULL, "グラフィックデバイスの作成に失敗３３３", NULL, MB_OK);
+
 		return false;
 	}
 

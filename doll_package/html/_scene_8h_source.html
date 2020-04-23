@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Scene/Scene.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_64c391de6b6ab3e64108d2343a50efff.html">Scene</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Scene.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_scene_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef SCENE_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define SCENE_H_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_scene_8h.html#a6a1bcb7d647d366ec515222e2df1b2b7">   12</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_scene_8h.html#a6a1bcb7d647d366ec515222e2df1b2b7">SCENE_WAIT</a> = 5;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_scene_8h.html#a9f5ef62bd3141e988f437770b3f59433">   13</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_scene_8h.html#a9f5ef62bd3141e988f437770b3f59433">CLEAR_TIME</a> = 6;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// 現在は画像管理を行っている</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">   17</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168">   19</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168">TitleScene</a>,         </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423aa7d30e55fd930a20e97c9180b3000e03">   20</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423aa7d30e55fd930a20e97c9180b3000e03">OpeningScene</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">   21</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">GameScene</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a0279e07d2135a91db55c5e7dfa39e751">   22</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a0279e07d2135a91db55c5e7dfa39e751">EnemyScene</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accb7b2c81a0f090b044718364ece2bad">   23</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accb7b2c81a0f090b044718364ece2bad">TitleObjectScene</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a393eb721db3ce919d47d92188dca2890">   24</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a393eb721db3ce919d47d92188dca2890">GameObjectScene</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a1c5ed29cf100a2b100c0b4f46de807f1">   25</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a1c5ed29cf100a2b100c0b4f46de807f1">CenterScene</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a5da7b0da009c5e40deab2ebb3a584161">   26</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a5da7b0da009c5e40deab2ebb3a584161">LeftScene</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a4c5c4f6a8504d712649fb85e3ecc627d">   27</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a4c5c4f6a8504d712649fb85e3ecc627d">RightScene</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a647d9cc590292b46269f1d8765d77236">   28</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a647d9cc590292b46269f1d8765d77236">MonitorScene</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423ae99b265f95d22fcdb3ffedb6d482d261">   29</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423ae99b265f95d22fcdb3ffedb6d482d261">ClearScene</a>,     </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf">   30</a></span>&#160;    <a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf">SceneIdMax</a>          </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//ゲームメイン間のシーン遷移で使用するスイッチ</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_scene_transition.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene_transition.html">SceneTransition</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fd">   37</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fd">Id</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda94853408210a2e3c5ae19a07eec1221a">   38</a></span>&#160;        <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda94853408210a2e3c5ae19a07eec1221a">Game</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda74ded078159643f40a35b3ff7b0cea54">   39</a></span>&#160;        <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda74ded078159643f40a35b3ff7b0cea54">Left</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fdacc20f0d61ba68fb4fe327da9157a0315">   40</a></span>&#160;        <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fdacc20f0d61ba68fb4fe327da9157a0315">Right</a>,</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda9a882913515e23981db2b56c2bf2ddb9">   41</a></span>&#160;        <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda9a882913515e23981db2b56c2bf2ddb9">Center</a>,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda349849479edbefac5eb376c72b162e71">   42</a></span>&#160;        <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda349849479edbefac5eb376c72b162e71">Monitor</a>,</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda58ebeb4b9abc7dbd38a8b154d1ce2d7f">   43</a></span>&#160;        <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda58ebeb4b9abc7dbd38a8b154d1ce2d7f">Clear</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda8b553ae3d43f38c5b97d7655551fec5c">   44</a></span>&#160;        <a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda8b553ae3d43f38c5b97d7655551fec5c">Finish</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_scene_transition.html#ad394e3987f1e4c81dea72d6a44d0517b">   47</a></span>&#160;    <a class="code" href="class_scene_transition.html#ad394e3987f1e4c81dea72d6a44d0517b">SceneTransition</a>() :</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        m_CanGame(false),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        m_CanLeft(false),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        m_CanRight(false),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        m_CanCenter(false),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        m_CanMonitor(false),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        m_CanClear(false),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        m_CanFinish(false)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_transition.html#aebcdfddd31193d3dadc50049723336df">SetID</a>(<a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fd">Id</a> id_, <span class="keywordtype">bool</span> go_);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_scene_transition.html#a866271737d13ca78accf40a0b5accb74">IsGetID</a>(<a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fd">Id</a> id_);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene_transition.html#a24fd0d8bf1dc606777a8e63b0b02df00">GameEnd</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_scene_transition.html#a609981588921cc0a40c495e650550a73">ChangeStep</a>(<a class="code" href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fd">Id</a> id_, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> key_);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">bool</span> m_CanGame;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> m_CanLeft;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">bool</span> m_CanRight;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> m_CanCenter;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">bool</span> m_CanMonitor;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> m_CanClear;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span> m_CanFinish;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="class_scene_transition.html">SceneTransition</a>* <a class="code" href="_scene_8h.html#a9abc5a8b2132504a6a3abae9a46cc228">SceneController</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7">   75</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7">SceneStep</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1">   77</a></span>&#160;    <a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1">InitStep</a>,           </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13">   78</a></span>&#160;    <a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13">MainStep</a>,           </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09">   79</a></span>&#160;    <a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09">EndStep</a>,            </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a> <a class="code" href="_scene_8h.html#a9900ed42962250f87c2a65188751c746">GetCurrentSceneId</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7">SceneStep</a> <a class="code" href="_scene_8h.html#a9127a02a504755a923f76ef9108d53b0">GetCurrentSceneStep</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_scene_8h.html#a9124bba4e4cb32fe152389f21623d827">ChangeSceneStep</a>(<a class="code" href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7">SceneStep</a> next_step);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684">UpdateScene</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab">DrawScene</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fda8b553ae3d43f38c5b97d7655551fec5c"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda8b553ae3d43f38c5b97d7655551fec5c">SceneTransition::Finish</a></div><div class="ttdef"><b>Definition:</b> Scene.h:44</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fda9a882913515e23981db2b56c2bf2ddb9"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda9a882913515e23981db2b56c2bf2ddb9">SceneTransition::Center</a></div><div class="ttdef"><b>Definition:</b> Scene.h:41</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423a1c5ed29cf100a2b100c0b4f46de807f1"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a1c5ed29cf100a2b100c0b4f46de807f1">CenterScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:25</div></div>
+<div class="ttc" id="a_scene_8h_html_a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13"><div class="ttname"><a href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a9ce380941a76c597b5634fe00fa3ca13">MainStep</a></div><div class="ttdoc">メイン</div><div class="ttdef"><b>Definition:</b> Scene.h:78</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423adb2bf1250d0d38341a08956b63dbfc92">GameScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:21</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423">SceneId</a></div><div class="ttdeci">SceneId</div><div class="ttdoc">シーンID</div><div class="ttdef"><b>Definition:</b> Scene.h:17</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fd"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fd">SceneTransition::Id</a></div><div class="ttdeci">Id</div><div class="ttdef"><b>Definition:</b> Scene.h:37</div></div>
+<div class="ttc" id="a_scene_8h_html_a9900ed42962250f87c2a65188751c746"><div class="ttname"><a href="_scene_8h.html#a9900ed42962250f87c2a65188751c746">GetCurrentSceneId</a></div><div class="ttdeci">SceneId GetCurrentSceneId()</div><div class="ttdoc">現在実行中のシーンIDの取得関数</div><div class="ttdef"><b>Definition:</b> Scene.cpp:88</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accd1b0f2d0c5c81b2bcfea988ae79168">TitleScene</a></div><div class="ttdoc">タイトルシーン</div><div class="ttdef"><b>Definition:</b> Scene.h:19</div></div>
+<div class="ttc" id="a_scene_8h_html_a9127a02a504755a923f76ef9108d53b0"><div class="ttname"><a href="_scene_8h.html#a9127a02a504755a923f76ef9108d53b0">GetCurrentSceneStep</a></div><div class="ttdeci">SceneStep GetCurrentSceneStep()</div><div class="ttdoc">現在実行中のシーンステップの取得関数</div><div class="ttdef"><b>Definition:</b> Scene.cpp:93</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a428248219b69525a2a1fd9f30bfbbebf">SceneIdMax</a></div><div class="ttdoc">シーンID最大</div><div class="ttdef"><b>Definition:</b> Scene.h:30</div></div>
+<div class="ttc" id="a_scene_8h_html_a9f5ef62bd3141e988f437770b3f59433"><div class="ttname"><a href="_scene_8h.html#a9f5ef62bd3141e988f437770b3f59433">CLEAR_TIME</a></div><div class="ttdeci">const int CLEAR_TIME</div><div class="ttdef"><b>Definition:</b> Scene.h:13</div></div>
+<div class="ttc" id="a_scene_8h_html_a6442d594f91045b596245578f0a6d6f7"><div class="ttname"><a href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7">SceneStep</a></div><div class="ttdeci">SceneStep</div><div class="ttdoc">シーンステップ</div><div class="ttdef"><b>Definition:</b> Scene.h:75</div></div>
+<div class="ttc" id="a_scene_8h_html_a9abc5a8b2132504a6a3abae9a46cc228"><div class="ttname"><a href="_scene_8h.html#a9abc5a8b2132504a6a3abae9a46cc228">SceneController</a></div><div class="ttdeci">SceneTransition * SceneController()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:14</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a24fd0d8bf1dc606777a8e63b0b02df00"><div class="ttname"><a href="class_scene_transition.html#a24fd0d8bf1dc606777a8e63b0b02df00">SceneTransition::GameEnd</a></div><div class="ttdeci">void GameEnd()</div><div class="ttdef"><b>Definition:</b> Scene.cpp:72</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a866271737d13ca78accf40a0b5accb74"><div class="ttname"><a href="class_scene_transition.html#a866271737d13ca78accf40a0b5accb74">SceneTransition::IsGetID</a></div><div class="ttdeci">bool IsGetID(Id id_)</div><div class="ttdef"><b>Definition:</b> Scene.cpp:44</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fda94853408210a2e3c5ae19a07eec1221a"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda94853408210a2e3c5ae19a07eec1221a">SceneTransition::Game</a></div><div class="ttdef"><b>Definition:</b> Scene.h:38</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423a393eb721db3ce919d47d92188dca2890"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a393eb721db3ce919d47d92188dca2890">GameObjectScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:24</div></div>
+<div class="ttc" id="aclass_scene_transition_html_ad394e3987f1e4c81dea72d6a44d0517b"><div class="ttname"><a href="class_scene_transition.html#ad394e3987f1e4c81dea72d6a44d0517b">SceneTransition::SceneTransition</a></div><div class="ttdeci">SceneTransition()</div><div class="ttdef"><b>Definition:</b> Scene.h:47</div></div>
+<div class="ttc" id="a_scene_8h_html_ad3af99165d3fa882579d67cea83e9eab"><div class="ttname"><a href="_scene_8h.html#ad3af99165d3fa882579d67cea83e9eab">DrawScene</a></div><div class="ttdeci">void DrawScene()</div><div class="ttdoc">シーン描画関数 シーンのオブジェクトを描画する 内部で各シーン毎の描画を行うので使用者がDrawTitleScene等を実行する必要はない</div><div class="ttdef"><b>Definition:</b> Scene.cpp:133</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423a4c5c4f6a8504d712649fb85e3ecc627d"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a4c5c4f6a8504d712649fb85e3ecc627d">RightScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:27</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fdacc20f0d61ba68fb4fe327da9157a0315"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fdacc20f0d61ba68fb4fe327da9157a0315">SceneTransition::Right</a></div><div class="ttdef"><b>Definition:</b> Scene.h:40</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fda74ded078159643f40a35b3ff7b0cea54"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda74ded078159643f40a35b3ff7b0cea54">SceneTransition::Left</a></div><div class="ttdef"><b>Definition:</b> Scene.h:39</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423a647d9cc590292b46269f1d8765d77236"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a647d9cc590292b46269f1d8765d77236">MonitorScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:28</div></div>
+<div class="ttc" id="a_scene_8h_html_a9124bba4e4cb32fe152389f21623d827"><div class="ttname"><a href="_scene_8h.html#a9124bba4e4cb32fe152389f21623d827">ChangeSceneStep</a></div><div class="ttdeci">void ChangeSceneStep(SceneStep next_step)</div><div class="ttdoc">シーンステップ変更関数 引数で指定したステップに切り替える</div><div class="ttdef"><b>Definition:</b> Scene.cpp:98</div></div>
+<div class="ttc" id="a_scene_8h_html_acfe836cd67330b4856bb8feff6d94684"><div class="ttname"><a href="_scene_8h.html#acfe836cd67330b4856bb8feff6d94684">UpdateScene</a></div><div class="ttdeci">void UpdateScene()</div><div class="ttdoc">シーン実行関数 シーン処理を実行する 内部で各シーンを動かすので使用者がUpdateTitleScene等を実行する必要はない</div><div class="ttdef"><b>Definition:</b> Scene.cpp:103</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423aa7d30e55fd930a20e97c9180b3000e03"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423aa7d30e55fd930a20e97c9180b3000e03">OpeningScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:20</div></div>
+<div class="ttc" id="a_scene_8h_html_a6a1bcb7d647d366ec515222e2df1b2b7"><div class="ttname"><a href="_scene_8h.html#a6a1bcb7d647d366ec515222e2df1b2b7">SCENE_WAIT</a></div><div class="ttdeci">const int SCENE_WAIT</div><div class="ttdef"><b>Definition:</b> Scene.h:12</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423a5da7b0da009c5e40deab2ebb3a584161"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a5da7b0da009c5e40deab2ebb3a584161">LeftScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:26</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a609981588921cc0a40c495e650550a73"><div class="ttname"><a href="class_scene_transition.html#a609981588921cc0a40c495e650550a73">SceneTransition::ChangeStep</a></div><div class="ttdeci">bool ChangeStep(Id id_, unsigned long key_)</div><div class="ttdef"><b>Definition:</b> Scene.cpp:78</div></div>
+<div class="ttc" id="a_scene_8h_html_a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09"><div class="ttname"><a href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7aa7106d1c967b55b4eec4e2ca9a3d0c09">EndStep</a></div><div class="ttdoc">終了</div><div class="ttdef"><b>Definition:</b> Scene.h:79</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423ae99b265f95d22fcdb3ffedb6d482d261"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423ae99b265f95d22fcdb3ffedb6d482d261">ClearScene</a></div><div class="ttdoc">ゲームオーバーシーン</div><div class="ttdef"><b>Definition:</b> Scene.h:29</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423a0279e07d2135a91db55c5e7dfa39e751"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423a0279e07d2135a91db55c5e7dfa39e751">EnemyScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:22</div></div>
+<div class="ttc" id="a_scene_8h_html_a47984f18d93075259bace5586a2d0423accb7b2c81a0f090b044718364ece2bad"><div class="ttname"><a href="_scene_8h.html#a47984f18d93075259bace5586a2d0423accb7b2c81a0f090b044718364ece2bad">TitleObjectScene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:23</div></div>
+<div class="ttc" id="a_scene_8h_html_a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1"><div class="ttname"><a href="_scene_8h.html#a6442d594f91045b596245578f0a6d6f7a452b0a73a3496ca15ca9bccd122c55e1">InitStep</a></div><div class="ttdoc">初期化</div><div class="ttdef"><b>Definition:</b> Scene.h:77</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fda349849479edbefac5eb376c72b162e71"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda349849479edbefac5eb376c72b162e71">SceneTransition::Monitor</a></div><div class="ttdef"><b>Definition:</b> Scene.h:42</div></div>
+<div class="ttc" id="aclass_scene_transition_html"><div class="ttname"><a href="class_scene_transition.html">SceneTransition</a></div><div class="ttdef"><b>Definition:</b> Scene.h:35</div></div>
+<div class="ttc" id="aclass_scene_transition_html_a30290d354afd26a51edc968bffcc10fda58ebeb4b9abc7dbd38a8b154d1ce2d7f"><div class="ttname"><a href="class_scene_transition.html#a30290d354afd26a51edc968bffcc10fda58ebeb4b9abc7dbd38a8b154d1ce2d7f">SceneTransition::Clear</a></div><div class="ttdef"><b>Definition:</b> Scene.h:43</div></div>
+<div class="ttc" id="aclass_scene_transition_html_aebcdfddd31193d3dadc50049723336df"><div class="ttname"><a href="class_scene_transition.html#aebcdfddd31193d3dadc50049723336df">SceneTransition::SetID</a></div><div class="ttdeci">void SetID(Id id_, bool go_)</div><div class="ttdef"><b>Definition:</b> Scene.cpp:16</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

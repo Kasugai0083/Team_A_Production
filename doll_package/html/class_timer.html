@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Timer クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_timer-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Timer クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_timer_8h_source.html">Timer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_timer_1_1_t_i_m_e_r_s.html">TIMERS</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマー変数をまとめた構造体  <a href="struct_timer_1_1_t_i_m_e_r_s.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a8e68d73b43cbc6fd3f335fbc6fef026c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Id</a> { <a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698">Id::SCENE</a>, 
+<a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec">Id::CLEAR</a>, 
+<a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c">Id::MUSICBOX</a>, 
+<a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026ca39927116a38955fbcf1ee79fc8943c3d">Id::MAX_TIMERS</a>
+ }</td></tr>
+<tr class="separator:a8e68d73b43cbc6fd3f335fbc6fef026c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae2ada8383290c09b3101be48f7e0016e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">Init</a> ()</td></tr>
+<tr class="memdesc:ae2ada8383290c09b3101be48f7e0016e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_timer_1_1_t_i_m_e_r_s.html" title="タイマー変数をまとめた構造体">TIMERS</a> と m_HourCount を初期化  <a href="class_timer.html#ae2ada8383290c09b3101be48f7e0016e">[詳解]</a><br /></td></tr>
+<tr class="separator:ae2ada8383290c09b3101be48f7e0016e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670a5a366b4ec3091d70fa6a97e347f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a670a5a366b4ec3091d70fa6a97e347f0">Init</a> (<a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Id</a> id_)</td></tr>
+<tr class="memdesc:a670a5a366b4ec3091d70fa6a97e347f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別番号で指定されたメンバ変数を初期化 param[in] id_ 識別番号  <a href="class_timer.html#a670a5a366b4ec3091d70fa6a97e347f0">[詳解]</a><br /></td></tr>
+<tr class="separator:a670a5a366b4ec3091d70fa6a97e347f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07492f9694ecb54ac6c04ccc0408b9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#af07492f9694ecb54ac6c04ccc0408b9d">GetTime</a> (<a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Id</a> id_)</td></tr>
+<tr class="memdesc:af07492f9694ecb54ac6c04ccc0408b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">識別番号で指定されたメンバ変数を取得  <a href="class_timer.html#af07492f9694ecb54ac6c04ccc0408b9d">[詳解]</a><br /></td></tr>
+<tr class="separator:af07492f9694ecb54ac6c04ccc0408b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1ad0dc8e82d81bca9271b577cd9f78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#aaf1ad0dc8e82d81bca9271b577cd9f78">Draw</a> ()</td></tr>
+<tr class="memdesc:aaf1ad0dc8e82d81bca9271b577cd9f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_Clear を描画@npocket_watchをマウスオーバーしている場合に時間が表示される  <a href="class_timer.html#aaf1ad0dc8e82d81bca9271b577cd9f78">[詳解]</a><br /></td></tr>
+<tr class="separator:aaf1ad0dc8e82d81bca9271b577cd9f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a6595649759e7236d1b43c2c10e16b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a77a6595649759e7236d1b43c2c10e16b">Update</a> ()</td></tr>
+<tr class="memdesc:a77a6595649759e7236d1b43c2c10e16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">メンバ変数の更新@nDraw 用に m_Minute, m_Hour, m_Sample に文字列を代入  <a href="class_timer.html#a77a6595649759e7236d1b43c2c10e16b">[詳解]</a><br /></td></tr>
+<tr class="separator:a77a6595649759e7236d1b43c2c10e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546bcc8cb8606044f528a75953836f93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a546bcc8cb8606044f528a75953836f93">GetClearTime</a> ()</td></tr>
+<tr class="memdesc:a546bcc8cb8606044f528a75953836f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン遷移に必要な値を取得  <a href="class_timer.html#a546bcc8cb8606044f528a75953836f93">[詳解]</a><br /></td></tr>
+<tr class="separator:a546bcc8cb8606044f528a75953836f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae1512242c972be0676f39323ad26989f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#ae1512242c972be0676f39323ad26989f">CreateInstance</a> ()</td></tr>
+<tr class="separator:ae1512242c972be0676f39323ad26989f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06eae1c66c8f64982ddf0fc0a93147ed"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a06eae1c66c8f64982ddf0fc0a93147ed">DestroyInstance</a> ()</td></tr>
+<tr class="separator:a06eae1c66c8f64982ddf0fc0a93147ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c46ceb692e55250110201387b797a0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#a81c46ceb692e55250110201387b797a0">IsNull</a> ()</td></tr>
+<tr class="separator:a81c46ceb692e55250110201387b797a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa415b575ccc6e9cac69d0f8ed541b082"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_timer.html#aa415b575ccc6e9cac69d0f8ed541b082">GetInstance</a> ()</td></tr>
+<tr class="separator:aa415b575ccc6e9cac69d0f8ed541b082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a8e68d73b43cbc6fd3f335fbc6fef026c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e68d73b43cbc6fd3f335fbc6fef026c">&#9670;&nbsp;</a></span>Id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Timer::Id</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>構造体 <a class="el" href="struct_timer_1_1_t_i_m_e_r_s.html" title="タイマー変数をまとめた構造体">TIMERS</a> の識別番号 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8e68d73b43cbc6fd3f335fbc6fef026caf151a543099185593a5a87339c552698"></a>SCENE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e68d73b43cbc6fd3f335fbc6fef026ca813461e0c58e7ad59a2fd83ca2237fec"></a>CLEAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e68d73b43cbc6fd3f335fbc6fef026cabae258fddaf547267c44706b545f539c"></a>MUSICBOX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8e68d73b43cbc6fd3f335fbc6fef026ca39927116a38955fbcf1ee79fc8943c3d"></a>MAX_TIMERS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae1512242c972be0676f39323ad26989f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1512242c972be0676f39323ad26989f">&#9670;&nbsp;</a></span>CreateInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Timer::CreateInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06eae1c66c8f64982ddf0fc0a93147ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06eae1c66c8f64982ddf0fc0a93147ed">&#9670;&nbsp;</a></span>DestroyInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Timer::DestroyInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf1ad0dc8e82d81bca9271b577cd9f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1ad0dc8e82d81bca9271b577cd9f78">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>m_Clear を描画@npocket_watchをマウスオーバーしている場合に時間が表示される </p>
+
+</div>
+</div>
+<a id="a546bcc8cb8606044f528a75953836f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546bcc8cb8606044f528a75953836f93">&#9670;&nbsp;</a></span>GetClearTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Timer::GetClearTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シーン遷移に必要な値を取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>m_HourCount の値を取得 </dd></dl>
+
+</div>
+</div>
+<a id="aa415b575ccc6e9cac69d0f8ed541b082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa415b575ccc6e9cac69d0f8ed541b082">&#9670;&nbsp;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_timer.html">Timer</a>* Timer::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af07492f9694ecb54ac6c04ccc0408b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07492f9694ecb54ac6c04ccc0408b9d">&#9670;&nbsp;</a></span>GetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Timer::GetTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Id</a>&#160;</td>
+          <td class="paramname"><em>id_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>識別番号で指定されたメンバ変数を取得 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id_</td><td>識別番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>識別番号で指定されたメンバ変数の値 </dd></dl>
+
+</div>
+</div>
+<a id="ae2ada8383290c09b3101be48f7e0016e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ada8383290c09b3101be48f7e0016e">&#9670;&nbsp;</a></span>Init() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_timer_1_1_t_i_m_e_r_s.html" title="タイマー変数をまとめた構造体">TIMERS</a> と m_HourCount を初期化 </p>
+
+</div>
+</div>
+<a id="a670a5a366b4ec3091d70fa6a97e347f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a670a5a366b4ec3091d70fa6a97e347f0">&#9670;&nbsp;</a></span>Init() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_timer.html#a8e68d73b43cbc6fd3f335fbc6fef026c">Id</a>&#160;</td>
+          <td class="paramname"><em>id_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>識別番号で指定されたメンバ変数を初期化 param[in] id_ 識別番号 </p>
+
+</div>
+</div>
+<a id="a81c46ceb692e55250110201387b797a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c46ceb692e55250110201387b797a0">&#9670;&nbsp;</a></span>IsNull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Timer::IsNull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77a6595649759e7236d1b43c2c10e16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a6595649759e7236d1b43c2c10e16b">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Timer::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>メンバ変数の更新@nDraw 用に m_Minute, m_Hour, m_Sample に文字列を代入 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Timer/<a class="el" href="_timer_8h_source.html">Timer.h</a></li>
+<li>Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Timer/<a class="el" href="_timer_8cpp.html">Timer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

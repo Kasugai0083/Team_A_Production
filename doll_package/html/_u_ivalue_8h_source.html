@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/UI/UIvalue.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_42d363da389cf5682b7a800689646556.html">Object</a></li><li class="navelem"><a class="el" href="dir_aad01d31b6147a237379cf40c4a9b6ed.html">UI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">UIvalue.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_u_ivalue_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../Utility/Vec.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../Utility/Size.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma region タイトルシーンのUI</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//ゲームタイトルの値</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a1378c7e8f770f782c263b90ac5bdc094">   15</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a1378c7e8f770f782c263b90ac5bdc094">TITLE_LOGO_POS</a> = { 1564.f,28.f };</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a4b50dafdbebf4c95a32d687b1e4340c3">   16</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a4b50dafdbebf4c95a32d687b1e4340c3">TITLE_LOGO_SIZE</a> = { 256.f,1024.f };</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//ニューゲームUIの値</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#ac91d80492bf1333cbcaf8ffcd6ecd899">   19</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#ac91d80492bf1333cbcaf8ffcd6ecd899">NEWGAME_UI_POS</a> = { 456.f, 284.f };</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a60e7869f485b42031dfe63a29c00e4f9">   20</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a60e7869f485b42031dfe63a29c00e4f9">NEWGAME_UI_SIZE</a> = { 256.f, 512.f };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//コンテニューUIの値</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#ad0988c636387606c7c993df9ea8ba5ee">   23</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#ad0988c636387606c7c993df9ea8ba5ee">CONTINUE_UI_POS</a> = { 200.f, 284.f };</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a35402474affc2f9b1a7840bfb04efa51">   24</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a35402474affc2f9b1a7840bfb04efa51">CONTINUE_UI_SIZE</a> = { 256.f, 512.f };</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//コンテニューUIの値</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a50186ee5cd66298931c84c24f9f0ce3d">   27</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a50186ee5cd66298931c84c24f9f0ce3d">DAYS_UI_POS</a> = { 200.f, 220.f };</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a3da4f48a41f0d33176c398faef70d871">   28</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a3da4f48a41f0d33176c398faef70d871">DAYS_UI_SIZE</a> = { 256.f, 64.f };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#pragma region ゲームシーンのUI</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">//ゲームUIのベース</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a68724cab0241e8285af86ab9b8cde62c">   37</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a68724cab0241e8285af86ab9b8cde62c">GAME_BASE_UI_SIZE</a> = { 1920.f, 64.f };</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a311dc8eaa7f0736600a9d61dfc36dea6">   38</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a311dc8eaa7f0736600a9d61dfc36dea6">GAME_BASE_UI_POS</a> = {1920.f - <a class="code" href="_u_ivalue_8h.html#a68724cab0241e8285af86ab9b8cde62c">GAME_BASE_UI_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a>, 1072.f - <a class="code" href="_u_ivalue_8h.html#a68724cab0241e8285af86ab9b8cde62c">GAME_BASE_UI_SIZE</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a>};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//マスクUI</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a925f4cdd7f017aa8267516f9e47bb139">   41</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a925f4cdd7f017aa8267516f9e47bb139">GAME_MASK_UI_SIZE</a> = { 1024.f, 80.f };</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a2703e93b1b2471cca7709aae830a3fe0">   42</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a2703e93b1b2471cca7709aae830a3fe0">GAME_MASK_UI_POS</a> = {(1920.f / 2.f) - (<a class="code" href="_u_ivalue_8h.html#a925f4cdd7f017aa8267516f9e47bb139">GAME_MASK_UI_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2.f), 1008.f};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//操作ボタン</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a1a048aa8626757cbed5e85652e89dee0">   45</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a1a048aa8626757cbed5e85652e89dee0">GAME_CONTROL_UI_SIZE</a> = { 256.f, 64.f };</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a514c09c093173f61276e19112186f3e4">   46</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a514c09c093173f61276e19112186f3e4">GAME_CONTROL_UI_POS</a> = {1920.f - (<a class="code" href="_u_ivalue_8h.html#a1a048aa8626757cbed5e85652e89dee0">GAME_CONTROL_UI_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> + 32.f), 1072.f - <a class="code" href="_u_ivalue_8h.html#a1a048aa8626757cbed5e85652e89dee0">GAME_CONTROL_UI_SIZE</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a>};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//操作説明</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a0e8117394a4e42602f9566d365752f8d">   49</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#a0e8117394a4e42602f9566d365752f8d">GAME_DESCRIPTION_UI_SIZE</a> = { 1920.f, 1080.f };</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#aec54aed84f26489dd318a9a0bf9a153e">   50</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#aec54aed84f26489dd318a9a0bf9a153e">GAME_DESCRIPTION_UI_POS</a> = {0.f, 0.f };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#pragma region モニターシーンのUI</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//モニタールームのUIサイズ</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#aede5acba2b9ce074c208826cf1258bd8">   57</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_u_ivalue_8h.html#aede5acba2b9ce074c208826cf1258bd8">MONITOR_BUTTON_SIZE</a> = { 32.f,32.f };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//モニタールームのマップ</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a44f94023d3680e8158f462a15fd35142">   60</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a44f94023d3680e8158f462a15fd35142">MAP_UI_POS</a> = {1350.f, 400.f};</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#ae599a7e987edd8ec1660dbf542297f81">   61</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#ae599a7e987edd8ec1660dbf542297f81">MAP_PLAYER_UI_POS</a> = {1580.f, 920.f};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//モニタールームの各種ボタン座標</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a5b95699a4be0658161e0ff9aa892bc9d">   64</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a5b95699a4be0658161e0ff9aa892bc9d">WORKSHOP_BUTTON_POS</a> = {1585.f, 445.f};</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a92b85d77f749537ac3fc93706f21246a">   65</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a92b85d77f749537ac3fc93706f21246a">STORE_ROOM_BUTTON_POS</a> = {1415.f, 565.f};</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a1fe283d2e93e7766cc623c963919bef3">   66</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a1fe283d2e93e7766cc623c963919bef3">RECEPTION_ROOM_BUTTON_POS</a> = {1585.f, 565.f};</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#adbf91f3290e4bdd3f342f0788bf9c4da">   67</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#adbf91f3290e4bdd3f342f0788bf9c4da">CHILD_ROOM_BUTTON_POS</a> = {1750.f, 565.f};</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a8957200721a2c9349ebca16cbacb7016">   68</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a8957200721a2c9349ebca16cbacb7016">LEFT_CORRIDOR_BUTTON_POS</a> = {1465.f, 800.f};</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="_u_ivalue_8h.html#a2322462782f45f0ec557a851d2a3eefb">   69</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_u_ivalue_8h.html#a2322462782f45f0ec557a851d2a3eefb">RIGHT_CORRIDOR_BUTTON_POS</a> = {1705.f, 800.f};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#pragma endregion</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_u_ivalue_8h_html_adbf91f3290e4bdd3f342f0788bf9c4da"><div class="ttname"><a href="_u_ivalue_8h.html#adbf91f3290e4bdd3f342f0788bf9c4da">CHILD_ROOM_BUTTON_POS</a></div><div class="ttdeci">const Vec2 CHILD_ROOM_BUTTON_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:67</div></div>
+<div class="ttc" id="astruct_size_html_a47cc60893b761b6d96be2d979be7e136"><div class="ttname"><a href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Size::Height</a></div><div class="ttdeci">float Height</div><div class="ttdoc">縦幅</div><div class="ttdef"><b>Definition:</b> Size.h:43</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a50186ee5cd66298931c84c24f9f0ce3d"><div class="ttname"><a href="_u_ivalue_8h.html#a50186ee5cd66298931c84c24f9f0ce3d">DAYS_UI_POS</a></div><div class="ttdeci">const Vec2 DAYS_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:27</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_aede5acba2b9ce074c208826cf1258bd8"><div class="ttname"><a href="_u_ivalue_8h.html#aede5acba2b9ce074c208826cf1258bd8">MONITOR_BUTTON_SIZE</a></div><div class="ttdeci">const Size MONITOR_BUTTON_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:57</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a514c09c093173f61276e19112186f3e4"><div class="ttname"><a href="_u_ivalue_8h.html#a514c09c093173f61276e19112186f3e4">GAME_CONTROL_UI_POS</a></div><div class="ttdeci">const Vec2 GAME_CONTROL_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:46</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a5b95699a4be0658161e0ff9aa892bc9d"><div class="ttname"><a href="_u_ivalue_8h.html#a5b95699a4be0658161e0ff9aa892bc9d">WORKSHOP_BUTTON_POS</a></div><div class="ttdeci">const Vec2 WORKSHOP_BUTTON_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:64</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a8957200721a2c9349ebca16cbacb7016"><div class="ttname"><a href="_u_ivalue_8h.html#a8957200721a2c9349ebca16cbacb7016">LEFT_CORRIDOR_BUTTON_POS</a></div><div class="ttdeci">const Vec2 LEFT_CORRIDOR_BUTTON_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:68</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a1fe283d2e93e7766cc623c963919bef3"><div class="ttname"><a href="_u_ivalue_8h.html#a1fe283d2e93e7766cc623c963919bef3">RECEPTION_ROOM_BUTTON_POS</a></div><div class="ttdeci">const Vec2 RECEPTION_ROOM_BUTTON_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:66</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a311dc8eaa7f0736600a9d61dfc36dea6"><div class="ttname"><a href="_u_ivalue_8h.html#a311dc8eaa7f0736600a9d61dfc36dea6">GAME_BASE_UI_POS</a></div><div class="ttdeci">const Vec2 GAME_BASE_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:38</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_ad0988c636387606c7c993df9ea8ba5ee"><div class="ttname"><a href="_u_ivalue_8h.html#ad0988c636387606c7c993df9ea8ba5ee">CONTINUE_UI_POS</a></div><div class="ttdeci">const Vec2 CONTINUE_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:23</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a1a048aa8626757cbed5e85652e89dee0"><div class="ttname"><a href="_u_ivalue_8h.html#a1a048aa8626757cbed5e85652e89dee0">GAME_CONTROL_UI_SIZE</a></div><div class="ttdeci">const Size GAME_CONTROL_UI_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:45</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a92b85d77f749537ac3fc93706f21246a"><div class="ttname"><a href="_u_ivalue_8h.html#a92b85d77f749537ac3fc93706f21246a">STORE_ROOM_BUTTON_POS</a></div><div class="ttdeci">const Vec2 STORE_ROOM_BUTTON_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:65</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_ac91d80492bf1333cbcaf8ffcd6ecd899"><div class="ttname"><a href="_u_ivalue_8h.html#ac91d80492bf1333cbcaf8ffcd6ecd899">NEWGAME_UI_POS</a></div><div class="ttdeci">const Vec2 NEWGAME_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:19</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a68724cab0241e8285af86ab9b8cde62c"><div class="ttname"><a href="_u_ivalue_8h.html#a68724cab0241e8285af86ab9b8cde62c">GAME_BASE_UI_SIZE</a></div><div class="ttdeci">const Size GAME_BASE_UI_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:37</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a2703e93b1b2471cca7709aae830a3fe0"><div class="ttname"><a href="_u_ivalue_8h.html#a2703e93b1b2471cca7709aae830a3fe0">GAME_MASK_UI_POS</a></div><div class="ttdeci">const Vec2 GAME_MASK_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:42</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a44f94023d3680e8158f462a15fd35142"><div class="ttname"><a href="_u_ivalue_8h.html#a44f94023d3680e8158f462a15fd35142">MAP_UI_POS</a></div><div class="ttdeci">const Vec2 MAP_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:60</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a35402474affc2f9b1a7840bfb04efa51"><div class="ttname"><a href="_u_ivalue_8h.html#a35402474affc2f9b1a7840bfb04efa51">CONTINUE_UI_SIZE</a></div><div class="ttdeci">const Size CONTINUE_UI_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:24</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a925f4cdd7f017aa8267516f9e47bb139"><div class="ttname"><a href="_u_ivalue_8h.html#a925f4cdd7f017aa8267516f9e47bb139">GAME_MASK_UI_SIZE</a></div><div class="ttdeci">const Size GAME_MASK_UI_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:41</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a1378c7e8f770f782c263b90ac5bdc094"><div class="ttname"><a href="_u_ivalue_8h.html#a1378c7e8f770f782c263b90ac5bdc094">TITLE_LOGO_POS</a></div><div class="ttdeci">const Vec2 TITLE_LOGO_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:15</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a3da4f48a41f0d33176c398faef70d871"><div class="ttname"><a href="_u_ivalue_8h.html#a3da4f48a41f0d33176c398faef70d871">DAYS_UI_SIZE</a></div><div class="ttdeci">const Size DAYS_UI_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:28</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_ae599a7e987edd8ec1660dbf542297f81"><div class="ttname"><a href="_u_ivalue_8h.html#ae599a7e987edd8ec1660dbf542297f81">MAP_PLAYER_UI_POS</a></div><div class="ttdeci">const Vec2 MAP_PLAYER_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:61</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a4b50dafdbebf4c95a32d687b1e4340c3"><div class="ttname"><a href="_u_ivalue_8h.html#a4b50dafdbebf4c95a32d687b1e4340c3">TITLE_LOGO_SIZE</a></div><div class="ttdeci">const Size TITLE_LOGO_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:16</div></div>
+<div class="ttc" id="astruct_size_html"><div class="ttname"><a href="struct_size.html">Size</a></div><div class="ttdoc">サイズデータ用構造体</div><div class="ttdef"><b>Definition:</b> Size.h:12</div></div>
+<div class="ttc" id="astruct_size_html_a2d7b2c630483f984447eb428002fff44"><div class="ttname"><a href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Size::Width</a></div><div class="ttdeci">float Width</div><div class="ttdoc">横幅</div><div class="ttdef"><b>Definition:</b> Size.h:42</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_aec54aed84f26489dd318a9a0bf9a153e"><div class="ttname"><a href="_u_ivalue_8h.html#aec54aed84f26489dd318a9a0bf9a153e">GAME_DESCRIPTION_UI_POS</a></div><div class="ttdeci">const Vec2 GAME_DESCRIPTION_UI_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:50</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a2322462782f45f0ec557a851d2a3eefb"><div class="ttname"><a href="_u_ivalue_8h.html#a2322462782f45f0ec557a851d2a3eefb">RIGHT_CORRIDOR_BUTTON_POS</a></div><div class="ttdeci">const Vec2 RIGHT_CORRIDOR_BUTTON_POS</div><div class="ttdef"><b>Definition:</b> UIvalue.h:69</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a0e8117394a4e42602f9566d365752f8d"><div class="ttname"><a href="_u_ivalue_8h.html#a0e8117394a4e42602f9566d365752f8d">GAME_DESCRIPTION_UI_SIZE</a></div><div class="ttdeci">const Size GAME_DESCRIPTION_UI_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:49</div></div>
+<div class="ttc" id="a_u_ivalue_8h_html_a60e7869f485b42031dfe63a29c00e4f9"><div class="ttname"><a href="_u_ivalue_8h.html#a60e7869f485b42031dfe63a29c00e4f9">NEWGAME_UI_SIZE</a></div><div class="ttdeci">const Size NEWGAME_UI_SIZE</div><div class="ttdef"><b>Definition:</b> UIvalue.h:20</div></div>
+<div class="ttc" id="astruct_vec2_html"><div class="ttname"><a href="struct_vec2.html">Vec2</a></div><div class="ttdoc">Vector用構造体(2D版)</div><div class="ttdef"><b>Definition:</b> Vec.h:12</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

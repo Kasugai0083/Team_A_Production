@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/Item/Id/Fire.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_42d363da389cf5682b7a800689646556.html">Object</a></li><li class="navelem"><a class="el" href="dir_b9f27b5a8dc601463a1ab345485aabd6.html">Item</a></li><li class="navelem"><a class="el" href="dir_229325f18f3e6140f1ed3bd715a1af7c.html">Id</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Fire.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_fire_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../Item.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../../Scene/Scene.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_candle_8h.html">Candle.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../../ObjectManager.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_fire.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fire.html">Fire</a> : <span class="keyword">public</span> <a class="code" href="class_item.html">Item</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_fire.html#aa469382f054a1fb7258482b932f03d2f">   26</a></span>&#160;    <a class="code" href="class_fire.html#aa469382f054a1fb7258482b932f03d2f">Fire</a>(<a class="code" href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a> id_) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">m_Id</a> = id_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">m_IsDeath</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fire.html#a8097c9cbafd7d794fa4dfd8fc996f870">Init</a>()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fire.html#a98dc82aa5d04562e3f298deda6c37a9a">Update</a>()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fire.html#ad079ebe0f50929022b4e33ea406e4412">Draw</a>()<span class="keyword">override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> SceneDeath();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> FireSwitch(<span class="keywordtype">bool</span> center_switch_, <span class="keywordtype">bool</span> left_switch_, <span class="keywordtype">bool</span> right_switch_);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_object.html">Object</a>* m_pObject;  </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_fire_html_ad079ebe0f50929022b4e33ea406e4412"><div class="ttname"><a href="class_fire.html#ad079ebe0f50929022b4e33ea406e4412">Fire::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdoc">蝋燭の点灯情報と自身の生存情報に基づいて描画</div><div class="ttdef"><b>Definition:</b> Fire.cpp:157</div></div>
+<div class="ttc" id="aclass_fire_html_a8097c9cbafd7d794fa4dfd8fc996f870"><div class="ttname"><a href="class_fire.html#a8097c9cbafd7d794fa4dfd8fc996f870">Fire::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">各種データを m_Id に基づいて初期化 画像読み込み 座標の指定 アイテムの大きさを設定 画像の大きさを設定 m_Id に基づいて Candle をインスタンス化</div><div class="ttdef"><b>Definition:</b> Fire.cpp:5</div></div>
+<div class="ttc" id="a_candle_8h_html"><div class="ttname"><a href="_candle_8h.html">Candle.h</a></div><div class="ttdoc">オブジェクトの葉（最終継承先）  「キャンドル」を管理するクラスを処理</div></div>
+<div class="ttc" id="aclass_object_html_a7a93bec1c230d962620b5ae62e581f91"><div class="ttname"><a href="class_object.html#a7a93bec1c230d962620b5ae62e581f91">Object::m_IsDeath</a></div><div class="ttdeci">bool m_IsDeath</div><div class="ttdoc">オブジェクトの生存情報</div><div class="ttdef"><b>Definition:</b> Object.h:69</div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">オブジェクトを管理するクラス</div><div class="ttdef"><b>Definition:</b> Object.h:18</div></div>
+<div class="ttc" id="aclass_fire_html_aa469382f054a1fb7258482b932f03d2f"><div class="ttname"><a href="class_fire.html#aa469382f054a1fb7258482b932f03d2f">Fire::Fire</a></div><div class="ttdeci">Fire(ObjID id_)</div><div class="ttdoc">コンストラクタ メンバ変数の初期化</div><div class="ttdef"><b>Definition:</b> Fire.h:26</div></div>
+<div class="ttc" id="aclass_item_html"><div class="ttname"><a href="class_item.html">Item</a></div><div class="ttdoc">最終継承先に使えそうな関数や変数を格納するクラス</div><div class="ttdef"><b>Definition:</b> Item.h:20</div></div>
+<div class="ttc" id="aclass_fire_html_a98dc82aa5d04562e3f298deda6c37a9a"><div class="ttname"><a href="class_fire.html#a98dc82aa5d04562e3f298deda6c37a9a">Fire::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">蝋燭の点灯情報に基づいて、火を更新 火の生死管理 蝋燭が溶けて火の座標が下がる処理</div><div class="ttdef"><b>Definition:</b> Fire.cpp:97</div></div>
+<div class="ttc" id="a_object_i_d_8h_html_a5a7b5927f9c2e9abfba9ed6bc0fad221"><div class="ttname"><a href="_object_i_d_8h.html#a5a7b5927f9c2e9abfba9ed6bc0fad221">ObjID</a></div><div class="ttdeci">ObjID</div><div class="ttdef"><b>Definition:</b> ObjectID.h:10</div></div>
+<div class="ttc" id="aclass_object_html_a9f06f75335ce0023e49bd4b79afcc1a4"><div class="ttname"><a href="class_object.html#a9f06f75335ce0023e49bd4b79afcc1a4">Object::m_Id</a></div><div class="ttdeci">ObjID m_Id</div><div class="ttdoc">オブジェクトの識別番号</div><div class="ttdef"><b>Definition:</b> Object.h:71</div></div>
+<div class="ttc" id="aclass_fire_html"><div class="ttname"><a href="class_fire.html">Fire</a></div><div class="ttdoc">蝋燭の火を管理するクラス</div><div class="ttdef"><b>Definition:</b> Fire.h:18</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

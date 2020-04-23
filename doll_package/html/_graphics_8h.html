@@ -1,0 +1,1282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Engine/Graphics.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_ef1c8121e95e3082791384a5d73d53e0.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">Graphics.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>描画に関する関数、定数の宣言  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;Windows.h&gt;</code><br />
+<code>#include &lt;d3d9.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_lib_8h_source.html">Lib/Lib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_common_8h_source.html">../Utility/Common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_size_8h_source.html">../Utility/Size.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_vec_8h_source.html">../Utility/Vec.h</a>&quot;</code><br />
+</div>
+<p><a href="_graphics_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_texture.html">Texture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャデータやサイズを保持する構造体  <a href="struct_texture.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_animation_texture.html">AnimationTexture</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a773fc8bee89c59317682b3eb780dbab2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a773fc8bee89c59317682b3eb780dbab2">SMALL_FONT_SIZE</a>&#160;&#160;&#160;(16)</td></tr>
+<tr class="memdesc:a773fc8bee89c59317682b3eb780dbab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントサイズ(小)  <a href="_graphics_8h.html#a773fc8bee89c59317682b3eb780dbab2">[詳解]</a><br /></td></tr>
+<tr class="separator:a773fc8bee89c59317682b3eb780dbab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae4cf3bad8e63b004bac0345a91c52c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#aaae4cf3bad8e63b004bac0345a91c52c">REGULAR_FONT_SIZE</a>&#160;&#160;&#160;(24)</td></tr>
+<tr class="memdesc:aaae4cf3bad8e63b004bac0345a91c52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントサイズ(中)  <a href="_graphics_8h.html#aaae4cf3bad8e63b004bac0345a91c52c">[詳解]</a><br /></td></tr>
+<tr class="separator:aaae4cf3bad8e63b004bac0345a91c52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd26dfbb17772b4314d0b41d18d235d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#abd26dfbb17772b4314d0b41d18d235d1">LARGE_FONT_SIZE</a>&#160;&#160;&#160;(64)</td></tr>
+<tr class="memdesc:abd26dfbb17772b4314d0b41d18d235d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントサイズ(大)  <a href="_graphics_8h.html#abd26dfbb17772b4314d0b41d18d235d1">[詳解]</a><br /></td></tr>
+<tr class="separator:abd26dfbb17772b4314d0b41d18d235d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a38781c7178610f85215f87793e99ed51"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51">FontColor</a> { <a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd">Black</a>, 
+<a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ab548046646b36c12aa6ba841de500094">White</a>, 
+<a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51ad3163c1fcda01965b692ec2c3122b743">Red</a>, 
+<a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51abf28513245738599d13e3ce36bd16c82">Yellow</a>
+ }</td></tr>
+<tr class="memdesc:a38781c7178610f85215f87793e99ed51"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントカラー  <a href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51">[詳解]</a><br /></td></tr>
+<tr class="separator:a38781c7178610f85215f87793e99ed51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cff078229df1c0803a690e4826b5f1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1">FontSize</a> { <a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1ad701591531ebfe0abdf21101ddaf6abe">Small</a>, 
+<a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a66dfad2fc66aab9e6bb47cfad78b4b6b">Regular</a>, 
+<a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38">Large</a>, 
+<a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1a382ceab362b58ba89cc226f2399e69d8">FontSizeMax</a>
+ }</td></tr>
+<tr class="separator:a88cff078229df1c0803a690e4826b5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ace3c754311ada58c64c01066ea702b13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#ace3c754311ada58c64c01066ea702b13">InitGraphics</a> (bool isFull)</td></tr>
+<tr class="memdesc:ace3c754311ada58c64c01066ea702b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphics機能初期化関数<br  />
+描画関連を使用可能にするための初期化を行う<br  />
+※Engine.cppのInitEngineで実行しているので<br  />
+　使用者は自分たちで使う必要はない  <a href="_graphics_8h.html#ace3c754311ada58c64c01066ea702b13">[詳解]</a><br /></td></tr>
+<tr class="separator:ace3c754311ada58c64c01066ea702b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bffad4f07810aa3753158897d9a8e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a8bffad4f07810aa3753158897d9a8e8b">EndGraphics</a> ()</td></tr>
+<tr class="memdesc:a8bffad4f07810aa3753158897d9a8e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphics機能終了関数<br  />
+描画関連の処理の後始末を行う処理<br  />
+※Engine.cppのEndEngineで実行しているので<br  />
+　使用者は自分たちで使う必要はない  <a href="_graphics_8h.html#a8bffad4f07810aa3753158897d9a8e8b">[詳解]</a><br /></td></tr>
+<tr class="separator:a8bffad4f07810aa3753158897d9a8e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2732194412d16de3230df806698af86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#ac2732194412d16de3230df806698af86">DrawStart</a> ()</td></tr>
+<tr class="memdesc:ac2732194412d16de3230df806698af86"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画開始関数<br  />
+描画開始を宣言し、バックバッファのクリアを行う  <a href="_graphics_8h.html#ac2732194412d16de3230df806698af86">[詳解]</a><br /></td></tr>
+<tr class="separator:ac2732194412d16de3230df806698af86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c451f1cdb5a9103fe81d6495940b96d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a1c451f1cdb5a9103fe81d6495940b96d">DrawEnd</a> ()</td></tr>
+<tr class="memdesc:a1c451f1cdb5a9103fe81d6495940b96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画終了関数<br  />
+描画の終了を宣言し、バックバッファとフロントバッファを入れ替える<br  />
+※この関数は必ずDrawStartの後に実行されるようにしてください。  <a href="_graphics_8h.html#a1c451f1cdb5a9103fe81d6495940b96d">[詳解]</a><br /></td></tr>
+<tr class="separator:a1c451f1cdb5a9103fe81d6495940b96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622badb40e0fa413caf81956cd938882"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a622badb40e0fa413caf81956cd938882">DrawTexture</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, float z_=0.f, float tu_=1.f, float tv_=1.f)</td></tr>
+<tr class="memdesc:a622badb40e0fa413caf81956cd938882"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ描画関数<br  />
+指定された位置にテクスチャを描画する<br  />
+※texture_dataはFile.hのGetTextureDataを使用してください。  <a href="_graphics_8h.html#a622badb40e0fa413caf81956cd938882">[詳解]</a><br /></td></tr>
+<tr class="separator:a622badb40e0fa413caf81956cd938882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a8f5b9f18fda5eb2d15d8ef4a63b5b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a2a8f5b9f18fda5eb2d15d8ef4a63b5b5">DrawTexture</a> (<a class="el" href="struct_vec2.html">Vec2</a> pos_, <a class="el" href="struct_texture.html">Texture</a> *texture_data)</td></tr>
+<tr class="separator:a2a8f5b9f18fda5eb2d15d8ef4a63b5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f6d31faf6f85547dd3b273a6d22166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a34f6d31faf6f85547dd3b273a6d22166">DrawTexture</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, float width_, float height_)</td></tr>
+<tr class="separator:a34f6d31faf6f85547dd3b273a6d22166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6182caf2250f3cfeb8849714704de8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#ac6182caf2250f3cfeb8849714704de8d">DrawTexture</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, <a class="el" href="struct_size.html">Size</a> size_)</td></tr>
+<tr class="separator:ac6182caf2250f3cfeb8849714704de8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61dd9d1b71c35e0486dd004e99021a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#ad61dd9d1b71c35e0486dd004e99021a1">CandleDraw</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, <a class="el" href="struct_size.html">Size</a> size_, float hp_)</td></tr>
+<tr class="separator:ad61dd9d1b71c35e0486dd004e99021a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941268bf34d964be9a6d93bbd5ff08a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a941268bf34d964be9a6d93bbd5ff08a8">CandleDraw</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, <a class="el" href="struct_size.html">Size</a> size_, <a class="el" href="struct_size.html">Size</a> flame_, float hp_)</td></tr>
+<tr class="separator:a941268bf34d964be9a6d93bbd5ff08a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac485d287182632704b220d01e7fea42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#aac485d287182632704b220d01e7fea42">DrawUVMappingTexture</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, float texture_x, float texture_y, float rect_width, float rect_height)</td></tr>
+<tr class="separator:aac485d287182632704b220d01e7fea42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae2a02cc1037867ead7f9318b195af0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a8ae2a02cc1037867ead7f9318b195af0">DrawAnimation</a> (float x_, float y_, <a class="el" href="struct_animation_texture.html">AnimationTexture</a> *animatinon_)</td></tr>
+<tr class="separator:a8ae2a02cc1037867ead7f9318b195af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08fa7ed49ac1bef24c7a18106fcf114"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#af08fa7ed49ac1bef24c7a18106fcf114">DrawBlood</a> (float x_, float y_)</td></tr>
+<tr class="separator:af08fa7ed49ac1bef24c7a18106fcf114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7bd411ab349ba6722bb712ac80dac08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#ab7bd411ab349ba6722bb712ac80dac08">DrawFade</a> (bool in_, D3DXCOLOR color_)</td></tr>
+<tr class="separator:ab7bd411ab349ba6722bb712ac80dac08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53efa63942faa570929b7b404b4e372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#aa53efa63942faa570929b7b404b4e372">DrawUVScrollTexture</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, float tu, float tv)</td></tr>
+<tr class="memdesc:aa53efa63942faa570929b7b404b4e372"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャのUVスクロール描画関数<br  />
+指定された情報でテクスチャをUVスクロールして描画する<br  />
+※texture_dataはFile.hのGetTextureDataを使用してください。  <a href="_graphics_8h.html#aa53efa63942faa570929b7b404b4e372">[詳解]</a><br /></td></tr>
+<tr class="separator:aa53efa63942faa570929b7b404b4e372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f3e35ac7fae6ecda7841adcbe1a1a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a3f3e35ac7fae6ecda7841adcbe1a1a27">DrawFont</a> (float pos_x, float pos_y, const char *text, <a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1">FontSize</a> size, <a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51">FontColor</a> color)</td></tr>
+<tr class="memdesc:a3f3e35ac7fae6ecda7841adcbe1a1a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォント描画関数<br  />
+指定された位置にフォントを描画する<br  />
+ <a href="_graphics_8h.html#a3f3e35ac7fae6ecda7841adcbe1a1a27">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f3e35ac7fae6ecda7841adcbe1a1a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23eb2b43afea51b17b043323ac582b21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a23eb2b43afea51b17b043323ac582b21">CreateTexture</a> (const char *file_name, <a class="el" href="struct_texture.html">Texture</a> *texture_data)</td></tr>
+<tr class="memdesc:a23eb2b43afea51b17b043323ac582b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ作成<br  />
+指定された情報から読み込み、テクスチャを作成する<br  />
+※開発側はFile.hのLoadTextureを使用してください。  <a href="_graphics_8h.html#a23eb2b43afea51b17b043323ac582b21">[詳解]</a><br /></td></tr>
+<tr class="separator:a23eb2b43afea51b17b043323ac582b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b999afae29e2c3afef8c54478888af4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a3b999afae29e2c3afef8c54478888af4">DrawIntegratedTexture</a> (float x, float y, <a class="el" href="struct_texture.html">Texture</a> *texture_data, float tu, float tv, float spriteX, float spriteY, int spriteNumX, int spriteNumY)</td></tr>
+<tr class="separator:a3b999afae29e2c3afef8c54478888af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a04127f47dd5bc22fce5796e3b3a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a76a04127f47dd5bc22fce5796e3b3a52">CreateVertex</a> (<a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a> pos, <a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a> offset, <a class="el" href="struct_vertex.html">Vertex</a> vtx[4], D3DXCOLOR color=0x00ffffff)</td></tr>
+<tr class="separator:a76a04127f47dd5bc22fce5796e3b3a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa275e0d51776998145b407622368fa7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#aa275e0d51776998145b407622368fa7a">CreateVertex</a> (<a class="el" href="struct_vec2.html">Vec2</a> pos, <a class="el" href="struct_size.html">Size</a> offset, <a class="el" href="struct_vertex.html">Vertex</a> vtx[4], D3DXCOLOR color=0x00ffffff)</td></tr>
+<tr class="separator:aa275e0d51776998145b407622368fa7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c10a68a368ddfaa51ca82aa0546ce82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a6c10a68a368ddfaa51ca82aa0546ce82">DrawBox2D</a> (const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;tex, <a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a> pos)</td></tr>
+<tr class="separator:a6c10a68a368ddfaa51ca82aa0546ce82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeba9e9ebe427ca7b666b26c04a6f119"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#afeba9e9ebe427ca7b666b26c04a6f119">DrawAlphaBox2D</a> (const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;tex, <a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a> pos, <a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a> size, D3DXCOLOR col=0x00ffffff)</td></tr>
+<tr class="separator:afeba9e9ebe427ca7b666b26c04a6f119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605f4cb8b1829e08323eca4219e35ae6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#a605f4cb8b1829e08323eca4219e35ae6">DrawAlphaBox2D</a> (const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;tex, <a class="el" href="struct_vec2.html">Vec2</a> pos, <a class="el" href="struct_size.html">Size</a> size, D3DXCOLOR col)</td></tr>
+<tr class="separator:a605f4cb8b1829e08323eca4219e35ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90034a42e168b843a5b09a82ff668fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_8h.html#ae90034a42e168b843a5b09a82ff668fa">DrawAlphaTex2D</a> (const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;tex, <a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a> pos, <a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a> size, D3DXCOLOR col=0x00ffffff)</td></tr>
+<tr class="separator:ae90034a42e168b843a5b09a82ff668fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>描画に関する関数、定数の宣言 </p>
+<dl class="section author"><dt>著者</dt><dd>中地 松本 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="abd26dfbb17772b4314d0b41d18d235d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd26dfbb17772b4314d0b41d18d235d1">&#9670;&nbsp;</a></span>LARGE_FONT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LARGE_FONT_SIZE&#160;&#160;&#160;(64)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォントサイズ(大) </p>
+
+</div>
+</div>
+<a id="aaae4cf3bad8e63b004bac0345a91c52c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae4cf3bad8e63b004bac0345a91c52c">&#9670;&nbsp;</a></span>REGULAR_FONT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGULAR_FONT_SIZE&#160;&#160;&#160;(24)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォントサイズ(中) </p>
+
+</div>
+</div>
+<a id="a773fc8bee89c59317682b3eb780dbab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a773fc8bee89c59317682b3eb780dbab2">&#9670;&nbsp;</a></span>SMALL_FONT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SMALL_FONT_SIZE&#160;&#160;&#160;(16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォントサイズ(小) </p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a38781c7178610f85215f87793e99ed51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38781c7178610f85215f87793e99ed51">&#9670;&nbsp;</a></span>FontColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51">FontColor</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォントカラー </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a38781c7178610f85215f87793e99ed51ac1e9bce8242f443c54c7405223d616cd"></a>Black&#160;</td><td class="fielddoc"><p>黒 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a38781c7178610f85215f87793e99ed51ab548046646b36c12aa6ba841de500094"></a>White&#160;</td><td class="fielddoc"><p>白 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a38781c7178610f85215f87793e99ed51ad3163c1fcda01965b692ec2c3122b743"></a>Red&#160;</td><td class="fielddoc"><p>赤 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a38781c7178610f85215f87793e99ed51abf28513245738599d13e3ce36bd16c82"></a>Yellow&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a88cff078229df1c0803a690e4826b5f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88cff078229df1c0803a690e4826b5f1">&#9670;&nbsp;</a></span>FontSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1">FontSize</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a88cff078229df1c0803a690e4826b5f1ad701591531ebfe0abdf21101ddaf6abe"></a>Small&#160;</td><td class="fielddoc"><p>小 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88cff078229df1c0803a690e4826b5f1a66dfad2fc66aab9e6bb47cfad78b4b6b"></a>Regular&#160;</td><td class="fielddoc"><p>中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88cff078229df1c0803a690e4826b5f1a453e3722bbf55ee0aae801a69be04d38"></a>Large&#160;</td><td class="fielddoc"><p>大 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a88cff078229df1c0803a690e4826b5f1a382ceab362b58ba89cc226f2399e69d8"></a>FontSizeMax&#160;</td><td class="fielddoc"><p>サイズ最大数 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ad61dd9d1b71c35e0486dd004e99021a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61dd9d1b71c35e0486dd004e99021a1">&#9670;&nbsp;</a></span>CandleDraw() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CandleDraw </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_size.html">Size</a>&#160;</td>
+          <td class="paramname"><em>size_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>hp_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a941268bf34d964be9a6d93bbd5ff08a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941268bf34d964be9a6d93bbd5ff08a8">&#9670;&nbsp;</a></span>CandleDraw() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CandleDraw </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_size.html">Size</a>&#160;</td>
+          <td class="paramname"><em>size_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_size.html">Size</a>&#160;</td>
+          <td class="paramname"><em>flame_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>hp_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23eb2b43afea51b17b043323ac582b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23eb2b43afea51b17b043323ac582b21">&#9670;&nbsp;</a></span>CreateTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateTexture </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャ作成<br  />
+指定された情報から読み込み、テクスチャを作成する<br  />
+※開発側はFile.hのLoadTextureを使用してください。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>作成結果(成功はtrue) </dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>読み込むテクスチャの名前(パス込み) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">texture_data</td><td>読み込まれたテクスチャを反映するデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a76a04127f47dd5bc22fce5796e3b3a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a04127f47dd5bc22fce5796e3b3a52">&#9670;&nbsp;</a></span>CreateVertex() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateVertex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_vertex.html">Vertex</a>&#160;</td>
+          <td class="paramname"><em>vtx</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXCOLOR&#160;</td>
+          <td class="paramname"><em>color</em> = <code>0x00ffffff</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa275e0d51776998145b407622368fa7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa275e0d51776998145b407622368fa7a">&#9670;&nbsp;</a></span>CreateVertex() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateVertex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_vec2.html">Vec2</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_size.html">Size</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_vertex.html">Vertex</a>&#160;</td>
+          <td class="paramname"><em>vtx</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXCOLOR&#160;</td>
+          <td class="paramname"><em>color</em> = <code>0x00ffffff</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afeba9e9ebe427ca7b666b26c04a6f119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeba9e9ebe427ca7b666b26c04a6f119">&#9670;&nbsp;</a></span>DrawAlphaBox2D() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawAlphaBox2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;&#160;</td>
+          <td class="paramname"><em>tex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXCOLOR&#160;</td>
+          <td class="paramname"><em>col</em> = <code>0x00ffffff</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a605f4cb8b1829e08323eca4219e35ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a605f4cb8b1829e08323eca4219e35ae6">&#9670;&nbsp;</a></span>DrawAlphaBox2D() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawAlphaBox2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;&#160;</td>
+          <td class="paramname"><em>tex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_vec2.html">Vec2</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_size.html">Size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXCOLOR&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae90034a42e168b843a5b09a82ff668fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90034a42e168b843a5b09a82ff668fa">&#9670;&nbsp;</a></span>DrawAlphaTex2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawAlphaTex2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;&#160;</td>
+          <td class="paramname"><em>tex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXCOLOR&#160;</td>
+          <td class="paramname"><em>col</em> = <code>0x00ffffff</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ae2a02cc1037867ead7f9318b195af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae2a02cc1037867ead7f9318b195af0">&#9670;&nbsp;</a></span>DrawAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawAnimation </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_animation_texture.html">AnimationTexture</a> *&#160;</td>
+          <td class="paramname"><em>animatinon_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af08fa7ed49ac1bef24c7a18106fcf114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08fa7ed49ac1bef24c7a18106fcf114">&#9670;&nbsp;</a></span>DrawBlood()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrawBlood </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c10a68a368ddfaa51ca82aa0546ce82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c10a68a368ddfaa51ca82aa0546ce82">&#9670;&nbsp;</a></span>DrawBox2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawBox2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_lib_1_1_texture.html">Lib::Texture</a> &amp;&#160;</td>
+          <td class="paramname"><em>tex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mastumoto_1_1_vec2.html">Mastumoto::Vec2</a>&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c451f1cdb5a9103fe81d6495940b96d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c451f1cdb5a9103fe81d6495940b96d">&#9670;&nbsp;</a></span>DrawEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画終了関数<br  />
+描画の終了を宣言し、バックバッファとフロントバッファを入れ替える<br  />
+※この関数は必ずDrawStartの後に実行されるようにしてください。 </p>
+
+</div>
+</div>
+<a id="ab7bd411ab349ba6722bb712ac80dac08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7bd411ab349ba6722bb712ac80dac08">&#9670;&nbsp;</a></span>DrawFade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawFade </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>in_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3DXCOLOR&#160;</td>
+          <td class="paramname"><em>color_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f3e35ac7fae6ecda7841adcbe1a1a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f3e35ac7fae6ecda7841adcbe1a1a27">&#9670;&nbsp;</a></span>DrawFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawFont </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_graphics_8h.html#a88cff078229df1c0803a690e4826b5f1">FontSize</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_graphics_8h.html#a38781c7178610f85215f87793e99ed51">FontColor</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フォント描画関数<br  />
+指定された位置にフォントを描画する<br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>X軸描画座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Y軸描画座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>描画するテキスト </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>フォントサイズの種類 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>フォントの色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3b999afae29e2c3afef8c54478888af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b999afae29e2c3afef8c54478888af4">&#9670;&nbsp;</a></span>DrawIntegratedTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawIntegratedTexture </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>spriteX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>spriteY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spriteNumX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spriteNumY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2732194412d16de3230df806698af86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2732194412d16de3230df806698af86">&#9670;&nbsp;</a></span>DrawStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrawStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描画開始関数<br  />
+描画開始を宣言し、バックバッファのクリアを行う </p>
+<dl class="section return"><dt>戻り値</dt><dd>描画開始の成否 (成功はtrue) </dd></dl>
+
+</div>
+</div>
+<a id="a34f6d31faf6f85547dd3b273a6d22166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f6d31faf6f85547dd3b273a6d22166">&#9670;&nbsp;</a></span>DrawTexture() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawTexture </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a622badb40e0fa413caf81956cd938882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622badb40e0fa413caf81956cd938882">&#9670;&nbsp;</a></span>DrawTexture() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawTexture </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>z_</em> = <code>0.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tu_</em> = <code>1.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tv_</em> = <code>1.f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャ描画関数<br  />
+指定された位置にテクスチャを描画する<br  />
+※texture_dataはFile.hのGetTextureDataを使用してください。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>X軸描画座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Y軸描画座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture_data</td><td>描画で使用するテクスチャのデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac6182caf2250f3cfeb8849714704de8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6182caf2250f3cfeb8849714704de8d">&#9670;&nbsp;</a></span>DrawTexture() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawTexture </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_size.html">Size</a>&#160;</td>
+          <td class="paramname"><em>size_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a8f5b9f18fda5eb2d15d8ef4a63b5b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8f5b9f18fda5eb2d15d8ef4a63b5b5">&#9670;&nbsp;</a></span>DrawTexture() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_vec2.html">Vec2</a>&#160;</td>
+          <td class="paramname"><em>pos_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac485d287182632704b220d01e7fea42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac485d287182632704b220d01e7fea42">&#9670;&nbsp;</a></span>DrawUVMappingTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawUVMappingTexture </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>texture_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>texture_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rect_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rect_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa53efa63942faa570929b7b404b4e372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53efa63942faa570929b7b404b4e372">&#9670;&nbsp;</a></span>DrawUVScrollTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawUVScrollTexture </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>tv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャのUVスクロール描画関数<br  />
+指定された情報でテクスチャをUVスクロールして描画する<br  />
+※texture_dataはFile.hのGetTextureDataを使用してください。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>X軸描画座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Y軸描画座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture_data</td><td>描画で使用するテクスチャのデータ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tu</td><td>テクスチャU座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tv</td><td>テクスチャV座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8bffad4f07810aa3753158897d9a8e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bffad4f07810aa3753158897d9a8e8b">&#9670;&nbsp;</a></span>EndGraphics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EndGraphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Graphics機能終了関数<br  />
+描画関連の処理の後始末を行う処理<br  />
+※Engine.cppのEndEngineで実行しているので<br  />
+　使用者は自分たちで使う必要はない </p>
+
+</div>
+</div>
+<a id="ace3c754311ada58c64c01066ea702b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3c754311ada58c64c01066ea702b13">&#9670;&nbsp;</a></span>InitGraphics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InitGraphics </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFull</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Graphics機能初期化関数<br  />
+描画関連を使用可能にするための初期化を行う<br  />
+※Engine.cppのInitEngineで実行しているので<br  />
+　使用者は自分たちで使う必要はない </p>
+<dl class="section return"><dt>戻り値</dt><dd>初期化結果 (trueが成功) </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

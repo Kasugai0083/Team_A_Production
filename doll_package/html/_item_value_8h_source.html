@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Team_A_Production/秋制作 ProjectA ver_α/テンプレート/Src/Object/Item/ItemValue.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f1f14c946e9ff8225d0f962843297f7f.html">Team_A_Production</a></li><li class="navelem"><a class="el" href="dir_9a155a4a96df6987c2d0d62e047c9f1a.html">秋制作 ProjectA ver_α</a></li><li class="navelem"><a class="el" href="dir_fc741e4787df33688ba58c532f6c3493.html">テンプレート</a></li><li class="navelem"><a class="el" href="dir_16efcd5e3c5a03a81ffe2a918ca3a195.html">Src</a></li><li class="navelem"><a class="el" href="dir_42d363da389cf5682b7a800689646556.html">Object</a></li><li class="navelem"><a class="el" href="dir_b9f27b5a8dc601463a1ab345485aabd6.html">Item</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ItemValue.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_item_value_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef ITEM_VALUE_H_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define ITEM_VALUE_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../Utility/Vec.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../Utility/Size.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma region ゲーム内オブジェクト</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ae13e010128cfb9bfe21059322ce2a852">   16</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#ae13e010128cfb9bfe21059322ce2a852">VOID_POS</a> = { 9999.f, 9999.f };</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">   19</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">CANDLE_BIG_SIZE</a> = { 46.f,256.f };</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ab6d4d86af247ac7e70cc5c176ba623a3">   20</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#ab6d4d86af247ac7e70cc5c176ba623a3">CANDLE_BIG_FRAME</a> = { 256.f,256.f };</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a1f7d2ce4250367020a0976c2fbc42468">   21</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#a1f7d2ce4250367020a0976c2fbc42468">CANDLE_BIG_LEFT_POS</a> = { (1265.f - <a class="code" href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">CANDLE_BIG_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), (612.5f) };</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ab1e9a20412ffa62b41184d85e722acc2">   22</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#ab1e9a20412ffa62b41184d85e722acc2">CANDLE_BIG_RIGHT_POS</a> = { (705.f - <a class="code" href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">CANDLE_BIG_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), (612.5f) };</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a836fb70628abbc3f01523e99767dfc50">   26</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a836fb70628abbc3f01523e99767dfc50">CANDLE_SMALL_SIZE</a> = { 12.f,77.f };</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_item_value_8h.html#aee1d04a6a8d6caa039879e5bf86d31c6">   27</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#aee1d04a6a8d6caa039879e5bf86d31c6">CANDLE_SMALL_FRAME</a> = { 32.f,128.f };</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_item_value_8h.html#adc638530b534bc7076dc4493ec0562cc">   28</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#adc638530b534bc7076dc4493ec0562cc">CANDLE_SMALL_POS</a> = { (960.f - <a class="code" href="_item_value_8h.html#a836fb70628abbc3f01523e99767dfc50">CANDLE_SMALL_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), 640.f };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">   31</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">CANDLE_EFFECT_SIZE</a> = { 118.f,118.f };</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a9a2a95a07fe25ca2aae4f85d33687901">   32</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a9a2a95a07fe25ca2aae4f85d33687901">CANDLE_EFFECT_FRAME</a> = { 128.f,128.f };</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a78f36bdcc1027b2e4dfb71d470428987">   33</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#a78f36bdcc1027b2e4dfb71d470428987">BIG_CANDLE_EFFECT_POS</a> = { (960.f - <a class="code" href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">CANDLE_EFFECT_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), 60.f };</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a327ff909d1c5eb6f4b30eb01db5f1f28">   34</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#a327ff909d1c5eb6f4b30eb01db5f1f28">SMALL_CANDLE_EFFECT_POS</a> = { (960.f - <a class="code" href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">CANDLE_EFFECT_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), 250.f };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ae18fb650085cfe28629fb02c1a8bb7f5">   37</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#ae18fb650085cfe28629fb02c1a8bb7f5">CANDLE_STAND_CENTER_SIZE</a> = { 84.f,162.f };</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_item_value_8h.html#af766006f07882067d3e28226d7eed7d6">   38</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#af766006f07882067d3e28226d7eed7d6">CANDLE_STAND_CENTER_FRAME</a> = { 128.f,256.f };</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a9f396e638c8d2202c67415f5a87365bc">   39</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#a9f396e638c8d2202c67415f5a87365bc">CANDLE_STAND_CENTER_POS</a> = { (960.f - 35.f), (790.f - (<a class="code" href="_item_value_8h.html#ae18fb650085cfe28629fb02c1a8bb7f5">CANDLE_STAND_CENTER_SIZE</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> / 2)) };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a83d1c77ec0158fb9fcd0e4efab899254">   42</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a83d1c77ec0158fb9fcd0e4efab899254">CANDLE_STAND_RIGHT_SIZE</a> = { 70.f, 135.f };</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="_item_value_8h.html#acdeabbf799cf455de743143220b6f62e">   43</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#acdeabbf799cf455de743143220b6f62e">CANDLE_STAND_RIGHT_FRAME</a> = { 128.f, 256.f };</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ad4e70a4bd3e18f4e8bbb39abec10d45f">   44</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#ad4e70a4bd3e18f4e8bbb39abec10d45f">CANDLE_STAND_RIGHT_POS</a> = { (720.f - (<a class="code" href="_item_value_8h.html#a83d1c77ec0158fb9fcd0e4efab899254">CANDLE_STAND_RIGHT_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2)), (930.f - (<a class="code" href="_item_value_8h.html#a83d1c77ec0158fb9fcd0e4efab899254">CANDLE_STAND_RIGHT_SIZE</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> / 2)) };</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a48f1dd64964e0f1fdbf8faab9485bfee">   46</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a48f1dd64964e0f1fdbf8faab9485bfee">CANDLE_STAND_LEFT_SIZE</a> = { 70.f, 135.f };</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a6e0f655a84a26a63554b20ab5f136611">   47</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a6e0f655a84a26a63554b20ab5f136611">CANDLE_STAND_LEFT_FRAME</a> = { 128.f, 256.f };</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ad6e6178b391918c37eabb4d913b91cc5">   48</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#ad6e6178b391918c37eabb4d913b91cc5">CANDLE_STAND_LEFT_POS</a> = { (1250.f - (<a class="code" href="_item_value_8h.html#a48f1dd64964e0f1fdbf8faab9485bfee">CANDLE_STAND_LEFT_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2)), (930.f - (<a class="code" href="_item_value_8h.html#a48f1dd64964e0f1fdbf8faab9485bfee">CANDLE_STAND_LEFT_SIZE</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> / 2)) };</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">   51</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">FIRE_SIZE</a> = { 12.f, 32.f };</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="_item_value_8h.html#af03168166e8c490f0b921b208f35620b">   52</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#af03168166e8c490f0b921b208f35620b">FIRE_FRAME</a> = { 32.f, 32.f };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ae7456f4ca411b4835bef62bf4d18baa5">   54</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#ae7456f4ca411b4835bef62bf4d18baa5">FIRE_SIDE_SIZE</a> = { 18.f, 44.f };</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a4e588c59fc27359532c99522cc5112ab">   55</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a4e588c59fc27359532c99522cc5112ab">FIRE_SIDE_FRAME</a> = { 32.f, 128.f };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a1937f9af393652d7bd4c2ee22099781e">   58</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#a1937f9af393652d7bd4c2ee22099781e">FIRE_BIG_RIGHT_POS</a> = { (730.f - (<a class="code" href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">FIRE_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2)), (565.f) };</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a1edd8262f5f49f3f715010856011331c">   60</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#a1edd8262f5f49f3f715010856011331c">FIRE_BIG_LEFT_POS</a> = { (1260.f - (<a class="code" href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">FIRE_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2)), (565.f) };</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ab6dd6a58240aaf54c856ce4497b97539">   62</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#ab6dd6a58240aaf54c856ce4497b97539">FIRE_SMALL_POS</a> = { (960.f - <a class="code" href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">FIRE_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), 632.5f - <a class="code" href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">FIRE_SIZE</a>.<a class="code" href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Height</a> };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a90821d66741fdceae097ae1c7b92f829">   65</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a90821d66741fdceae097ae1c7b92f829">CRYSTAL_SIZE</a> = { 256.f, 256.f };</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a52cf00772367c57368b09ed482647f11">   66</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a52cf00772367c57368b09ed482647f11">CRYSTAL_FRAME</a> = { 256.f,256.f };</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="_item_value_8h.html#af56b69ee5392ef03961f550b025f34f0">   67</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#af56b69ee5392ef03961f550b025f34f0">CRYSTAL_POS</a> = { (710.f - <a class="code" href="_item_value_8h.html#a90821d66741fdceae097ae1c7b92f829">CRYSTAL_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), (770.f) };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="_item_value_8h.html#a2bdf59a9e0d51457b6562447ae92dfb6">   70</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#a2bdf59a9e0d51457b6562447ae92dfb6">WATCH_SIZE</a> = { 256.f, 256.f };</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="_item_value_8h.html#ae705ef6c968198c1c443dd9ae57ec834">   71</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_size.html">Size</a> <a class="code" href="_item_value_8h.html#ae705ef6c968198c1c443dd9ae57ec834">WATCH_FRAME</a> = { 256.f,256.f };</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_item_value_8h.html#af3f21d77ace76c8476ec530a87c1a3e0">   72</a></span>&#160;<span class="keyword">const</span> <a class="code" href="struct_vec2.html">Vec2</a> <a class="code" href="_item_value_8h.html#af3f21d77ace76c8476ec530a87c1a3e0">WATCH_POS</a> = { (1210.f - <a class="code" href="_item_value_8h.html#a90821d66741fdceae097ae1c7b92f829">CRYSTAL_SIZE</a>.<a class="code" href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Width</a> / 2), (770.f) };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_item_value_8h_html_aa7a0af99cd860c5313966c41a70336a6"><div class="ttname"><a href="_item_value_8h.html#aa7a0af99cd860c5313966c41a70336a6">CANDLE_BIG_SIZE</a></div><div class="ttdeci">const Size CANDLE_BIG_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:19</div></div>
+<div class="ttc" id="a_item_value_8h_html_af56b69ee5392ef03961f550b025f34f0"><div class="ttname"><a href="_item_value_8h.html#af56b69ee5392ef03961f550b025f34f0">CRYSTAL_POS</a></div><div class="ttdeci">const Vec2 CRYSTAL_POS</div><div class="ttdoc">時計</div><div class="ttdef"><b>Definition:</b> ItemValue.h:67</div></div>
+<div class="ttc" id="a_item_value_8h_html_a90821d66741fdceae097ae1c7b92f829"><div class="ttname"><a href="_item_value_8h.html#a90821d66741fdceae097ae1c7b92f829">CRYSTAL_SIZE</a></div><div class="ttdeci">const Size CRYSTAL_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:65</div></div>
+<div class="ttc" id="a_item_value_8h_html_ad4e70a4bd3e18f4e8bbb39abec10d45f"><div class="ttname"><a href="_item_value_8h.html#ad4e70a4bd3e18f4e8bbb39abec10d45f">CANDLE_STAND_RIGHT_POS</a></div><div class="ttdeci">const Vec2 CANDLE_STAND_RIGHT_POS</div><div class="ttdoc">ろうそく(燭台左)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:44</div></div>
+<div class="ttc" id="astruct_size_html_a47cc60893b761b6d96be2d979be7e136"><div class="ttname"><a href="struct_size.html#a47cc60893b761b6d96be2d979be7e136">Size::Height</a></div><div class="ttdeci">float Height</div><div class="ttdoc">縦幅</div><div class="ttdef"><b>Definition:</b> Size.h:43</div></div>
+<div class="ttc" id="a_item_value_8h_html_a001b09417d2ae4943177e4e8025dd0b4"><div class="ttname"><a href="_item_value_8h.html#a001b09417d2ae4943177e4e8025dd0b4">CANDLE_EFFECT_SIZE</a></div><div class="ttdeci">const Size CANDLE_EFFECT_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:31</div></div>
+<div class="ttc" id="a_item_value_8h_html_adc638530b534bc7076dc4493ec0562cc"><div class="ttname"><a href="_item_value_8h.html#adc638530b534bc7076dc4493ec0562cc">CANDLE_SMALL_POS</a></div><div class="ttdeci">const Vec2 CANDLE_SMALL_POS</div><div class="ttdoc">ろうそく(灯)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:28</div></div>
+<div class="ttc" id="a_item_value_8h_html_a1f7d2ce4250367020a0976c2fbc42468"><div class="ttname"><a href="_item_value_8h.html#a1f7d2ce4250367020a0976c2fbc42468">CANDLE_BIG_LEFT_POS</a></div><div class="ttdeci">const Vec2 CANDLE_BIG_LEFT_POS</div><div class="ttdef"><b>Definition:</b> ItemValue.h:21</div></div>
+<div class="ttc" id="a_item_value_8h_html_a48f1dd64964e0f1fdbf8faab9485bfee"><div class="ttname"><a href="_item_value_8h.html#a48f1dd64964e0f1fdbf8faab9485bfee">CANDLE_STAND_LEFT_SIZE</a></div><div class="ttdeci">const Size CANDLE_STAND_LEFT_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:46</div></div>
+<div class="ttc" id="a_item_value_8h_html_a6e0f655a84a26a63554b20ab5f136611"><div class="ttname"><a href="_item_value_8h.html#a6e0f655a84a26a63554b20ab5f136611">CANDLE_STAND_LEFT_FRAME</a></div><div class="ttdeci">const Size CANDLE_STAND_LEFT_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:47</div></div>
+<div class="ttc" id="a_item_value_8h_html_af3f21d77ace76c8476ec530a87c1a3e0"><div class="ttname"><a href="_item_value_8h.html#af3f21d77ace76c8476ec530a87c1a3e0">WATCH_POS</a></div><div class="ttdeci">const Vec2 WATCH_POS</div><div class="ttdef"><b>Definition:</b> ItemValue.h:72</div></div>
+<div class="ttc" id="a_item_value_8h_html_a3b9896c907ed98ac205d90cac16a9d76"><div class="ttname"><a href="_item_value_8h.html#a3b9896c907ed98ac205d90cac16a9d76">FIRE_SIZE</a></div><div class="ttdeci">const Size FIRE_SIZE</div><div class="ttdoc">炎(共通)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:51</div></div>
+<div class="ttc" id="a_item_value_8h_html_a83d1c77ec0158fb9fcd0e4efab899254"><div class="ttname"><a href="_item_value_8h.html#a83d1c77ec0158fb9fcd0e4efab899254">CANDLE_STAND_RIGHT_SIZE</a></div><div class="ttdeci">const Size CANDLE_STAND_RIGHT_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:42</div></div>
+<div class="ttc" id="a_item_value_8h_html_a9f396e638c8d2202c67415f5a87365bc"><div class="ttname"><a href="_item_value_8h.html#a9f396e638c8d2202c67415f5a87365bc">CANDLE_STAND_CENTER_POS</a></div><div class="ttdeci">const Vec2 CANDLE_STAND_CENTER_POS</div><div class="ttdoc">ろうそく(燭台右)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:39</div></div>
+<div class="ttc" id="a_item_value_8h_html_ae13e010128cfb9bfe21059322ce2a852"><div class="ttname"><a href="_item_value_8h.html#ae13e010128cfb9bfe21059322ce2a852">VOID_POS</a></div><div class="ttdeci">const Vec2 VOID_POS</div><div class="ttdoc">&lt;亜空間座標</div><div class="ttdef"><b>Definition:</b> ItemValue.h:16</div></div>
+<div class="ttc" id="a_item_value_8h_html_af03168166e8c490f0b921b208f35620b"><div class="ttname"><a href="_item_value_8h.html#af03168166e8c490f0b921b208f35620b">FIRE_FRAME</a></div><div class="ttdeci">const Size FIRE_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:52</div></div>
+<div class="ttc" id="a_item_value_8h_html_ae18fb650085cfe28629fb02c1a8bb7f5"><div class="ttname"><a href="_item_value_8h.html#ae18fb650085cfe28629fb02c1a8bb7f5">CANDLE_STAND_CENTER_SIZE</a></div><div class="ttdeci">const Size CANDLE_STAND_CENTER_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:37</div></div>
+<div class="ttc" id="a_item_value_8h_html_a52cf00772367c57368b09ed482647f11"><div class="ttname"><a href="_item_value_8h.html#a52cf00772367c57368b09ed482647f11">CRYSTAL_FRAME</a></div><div class="ttdeci">const Size CRYSTAL_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:66</div></div>
+<div class="ttc" id="a_item_value_8h_html_af766006f07882067d3e28226d7eed7d6"><div class="ttname"><a href="_item_value_8h.html#af766006f07882067d3e28226d7eed7d6">CANDLE_STAND_CENTER_FRAME</a></div><div class="ttdeci">const Size CANDLE_STAND_CENTER_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:38</div></div>
+<div class="ttc" id="a_item_value_8h_html_a4e588c59fc27359532c99522cc5112ab"><div class="ttname"><a href="_item_value_8h.html#a4e588c59fc27359532c99522cc5112ab">FIRE_SIDE_FRAME</a></div><div class="ttdeci">const Size FIRE_SIDE_FRAME</div><div class="ttdoc">炎(右)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:55</div></div>
+<div class="ttc" id="a_item_value_8h_html_ab6dd6a58240aaf54c856ce4497b97539"><div class="ttname"><a href="_item_value_8h.html#ab6dd6a58240aaf54c856ce4497b97539">FIRE_SMALL_POS</a></div><div class="ttdeci">const Vec2 FIRE_SMALL_POS</div><div class="ttdoc">水晶</div><div class="ttdef"><b>Definition:</b> ItemValue.h:62</div></div>
+<div class="ttc" id="a_item_value_8h_html_ae705ef6c968198c1c443dd9ae57ec834"><div class="ttname"><a href="_item_value_8h.html#ae705ef6c968198c1c443dd9ae57ec834">WATCH_FRAME</a></div><div class="ttdeci">const Size WATCH_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:71</div></div>
+<div class="ttc" id="a_item_value_8h_html_a327ff909d1c5eb6f4b30eb01db5f1f28"><div class="ttname"><a href="_item_value_8h.html#a327ff909d1c5eb6f4b30eb01db5f1f28">SMALL_CANDLE_EFFECT_POS</a></div><div class="ttdeci">const Vec2 SMALL_CANDLE_EFFECT_POS</div><div class="ttdoc">ろうそく(燭台小)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:34</div></div>
+<div class="ttc" id="a_item_value_8h_html_ab1e9a20412ffa62b41184d85e722acc2"><div class="ttname"><a href="_item_value_8h.html#ab1e9a20412ffa62b41184d85e722acc2">CANDLE_BIG_RIGHT_POS</a></div><div class="ttdeci">const Vec2 CANDLE_BIG_RIGHT_POS</div><div class="ttdoc">ろうそく(小)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:22</div></div>
+<div class="ttc" id="a_item_value_8h_html_acdeabbf799cf455de743143220b6f62e"><div class="ttname"><a href="_item_value_8h.html#acdeabbf799cf455de743143220b6f62e">CANDLE_STAND_RIGHT_FRAME</a></div><div class="ttdeci">const Size CANDLE_STAND_RIGHT_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:43</div></div>
+<div class="ttc" id="a_item_value_8h_html_ad6e6178b391918c37eabb4d913b91cc5"><div class="ttname"><a href="_item_value_8h.html#ad6e6178b391918c37eabb4d913b91cc5">CANDLE_STAND_LEFT_POS</a></div><div class="ttdeci">const Vec2 CANDLE_STAND_LEFT_POS</div><div class="ttdef"><b>Definition:</b> ItemValue.h:48</div></div>
+<div class="ttc" id="a_item_value_8h_html_ae7456f4ca411b4835bef62bf4d18baa5"><div class="ttname"><a href="_item_value_8h.html#ae7456f4ca411b4835bef62bf4d18baa5">FIRE_SIDE_SIZE</a></div><div class="ttdeci">const Size FIRE_SIDE_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:54</div></div>
+<div class="ttc" id="a_item_value_8h_html_a78f36bdcc1027b2e4dfb71d470428987"><div class="ttname"><a href="_item_value_8h.html#a78f36bdcc1027b2e4dfb71d470428987">BIG_CANDLE_EFFECT_POS</a></div><div class="ttdeci">const Vec2 BIG_CANDLE_EFFECT_POS</div><div class="ttdef"><b>Definition:</b> ItemValue.h:33</div></div>
+<div class="ttc" id="a_item_value_8h_html_ab6d4d86af247ac7e70cc5c176ba623a3"><div class="ttname"><a href="_item_value_8h.html#ab6d4d86af247ac7e70cc5c176ba623a3">CANDLE_BIG_FRAME</a></div><div class="ttdeci">const Size CANDLE_BIG_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:20</div></div>
+<div class="ttc" id="a_item_value_8h_html_a836fb70628abbc3f01523e99767dfc50"><div class="ttname"><a href="_item_value_8h.html#a836fb70628abbc3f01523e99767dfc50">CANDLE_SMALL_SIZE</a></div><div class="ttdeci">const Size CANDLE_SMALL_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:26</div></div>
+<div class="ttc" id="a_item_value_8h_html_aee1d04a6a8d6caa039879e5bf86d31c6"><div class="ttname"><a href="_item_value_8h.html#aee1d04a6a8d6caa039879e5bf86d31c6">CANDLE_SMALL_FRAME</a></div><div class="ttdeci">const Size CANDLE_SMALL_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:27</div></div>
+<div class="ttc" id="a_item_value_8h_html_a1edd8262f5f49f3f715010856011331c"><div class="ttname"><a href="_item_value_8h.html#a1edd8262f5f49f3f715010856011331c">FIRE_BIG_LEFT_POS</a></div><div class="ttdeci">const Vec2 FIRE_BIG_LEFT_POS</div><div class="ttdoc">炎(小)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:60</div></div>
+<div class="ttc" id="astruct_size_html"><div class="ttname"><a href="struct_size.html">Size</a></div><div class="ttdoc">サイズデータ用構造体</div><div class="ttdef"><b>Definition:</b> Size.h:12</div></div>
+<div class="ttc" id="astruct_size_html_a2d7b2c630483f984447eb428002fff44"><div class="ttname"><a href="struct_size.html#a2d7b2c630483f984447eb428002fff44">Size::Width</a></div><div class="ttdeci">float Width</div><div class="ttdoc">横幅</div><div class="ttdef"><b>Definition:</b> Size.h:42</div></div>
+<div class="ttc" id="a_item_value_8h_html_a9a2a95a07fe25ca2aae4f85d33687901"><div class="ttname"><a href="_item_value_8h.html#a9a2a95a07fe25ca2aae4f85d33687901">CANDLE_EFFECT_FRAME</a></div><div class="ttdeci">const Size CANDLE_EFFECT_FRAME</div><div class="ttdef"><b>Definition:</b> ItemValue.h:32</div></div>
+<div class="ttc" id="a_item_value_8h_html_a2bdf59a9e0d51457b6562447ae92dfb6"><div class="ttname"><a href="_item_value_8h.html#a2bdf59a9e0d51457b6562447ae92dfb6">WATCH_SIZE</a></div><div class="ttdeci">const Size WATCH_SIZE</div><div class="ttdef"><b>Definition:</b> ItemValue.h:70</div></div>
+<div class="ttc" id="astruct_vec2_html"><div class="ttname"><a href="struct_vec2.html">Vec2</a></div><div class="ttdoc">Vector用構造体(2D版)</div><div class="ttdef"><b>Definition:</b> Vec.h:12</div></div>
+<div class="ttc" id="a_item_value_8h_html_a1937f9af393652d7bd4c2ee22099781e"><div class="ttname"><a href="_item_value_8h.html#a1937f9af393652d7bd4c2ee22099781e">FIRE_BIG_RIGHT_POS</a></div><div class="ttdeci">const Vec2 FIRE_BIG_RIGHT_POS</div><div class="ttdoc">炎(左)</div><div class="ttdef"><b>Definition:</b> ItemValue.h:58</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>
